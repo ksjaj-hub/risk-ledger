@@ -1,6 +1,6 @@
 {
   "rule_version": "v1",
-  "generated_at_utc": "2026-11-26T05:30:58Z",
+  "generated_at_utc": "2026-11-26T12:17:25Z",
   "warning": "Hindsight backtest on revised data. Not part of the ledger and not evidence of future results.",
   "data_availability": {
     "equity_volatility": {
