@@ -1,0 +1,593 @@
+{
+  "rule_version": "v1",
+  "generated_at_utc": "2026-11-26T03:52:51Z",
+  "warning": "Hindsight backtest on revised data. Not part of the ledger and not evidence of future results.",
+  "data_availability": {
+    "equity_volatility": {
+      "series": "VIXCLS",
+      "first": "1990-01-02",
+      "last": "2026-11-24",
+      "observations": 9324
+    },
+    "credit_stress": {
+      "series": "BAMLH0A0HYM2",
+      "first": "2023-11-27",
+      "last": "2026-11-24",
+      "observations": 785
+    },
+    "yield_curve": {
+      "series": "T10Y3M",
+      "first": "1990-01-02",
+      "last": "2026-11-25",
+      "observations": 9231
+    },
+    "financial_conditions": {
+      "series": "NFCI",
+      "first": "1990-01-05",
+      "last": "2026-11-20",
+      "observations": 1925
+    },
+    "equity_drawdown": {
+      "series": "SP500",
+      "first": "2016-11-28",
+      "last": "2026-11-24",
+      "observations": 2512
+    }
+  },
+  "days": 9352,
+  "first_day": "1990-01-02",
+  "last_day": "2026-11-25",
+  "days_by_state": {
+    "Calm": 5664,
+    "Watch": 1924,
+    "Elevated": 1525,
+    "Stress": 239
+  },
+  "days_by_state_by_year": {
+    "1990": {
+      "Calm": 27,
+      "Watch": 154,
+      "Elevated": 72,
+      "Stress": 0
+    },
+    "1991": {
+      "Calm": 203,
+      "Watch": 39,
+      "Elevated": 8,
+      "Stress": 3
+    },
+    "1992": {
+      "Calm": 254,
+      "Watch": 0,
+      "Elevated": 0,
+      "Stress": 0
+    },
+    "1993": {
+      "Calm": 253,
+      "Watch": 0,
+      "Elevated": 0,
+      "Stress": 0
+    },
+    "1994": {
+      "Calm": 252,
+      "Watch": 0,
+      "Elevated": 0,
+      "Stress": 0
+    },
+    "1995": {
+      "Calm": 252,
+      "Watch": 0,
+      "Elevated": 0,
+      "Stress": 0
+    },
+    "1996": {
+      "Calm": 255,
+      "Watch": 0,
+      "Elevated": 0,
+      "Stress": 0
+    },
+    "1997": {
+      "Calm": 207,
+      "Watch": 28,
+      "Elevated": 18,
+      "Stress": 0
+    },
+    "1998": {
+      "Calm": 77,
+      "Watch": 120,
+      "Elevated": 55,
+      "Stress": 0
+    },
+    "1999": {
+      "Calm": 13,
+      "Watch": 230,
+      "Elevated": 10,
+      "Stress": 0
+    },
+    "2000": {
+      "Calm": 2,
+      "Watch": 129,
+      "Elevated": 120,
+      "Stress": 1
+    },
+    "2001": {
+      "Calm": 9,
+      "Watch": 179,
+      "Elevated": 62,
+      "Stress": 0
+    },
+    "2002": {
+      "Calm": 85,
+      "Watch": 83,
+      "Elevated": 84,
+      "Stress": 0
+    },
+    "2003": {
+      "Calm": 202,
+      "Watch": 11,
+      "Elevated": 39,
+      "Stress": 0
+    },
+    "2004": {
+      "Calm": 253,
+      "Watch": 0,
+      "Elevated": 0,
+      "Stress": 0
+    },
+    "2005": {
+      "Calm": 252,
+      "Watch": 0,
+      "Elevated": 0,
+      "Stress": 0
+    },
+    "2006": {
+      "Calm": 230,
+      "Watch": 11,
+      "Elevated": 10,
+      "Stress": 0
+    },
+    "2007": {
+      "Calm": 115,
+      "Watch": 77,
+      "Elevated": 61,
+      "Stress": 0
+    },
+    "2008": {
+      "Calm": 0,
+      "Watch": 32,
+      "Elevated": 143,
+      "Stress": 78
+    },
+    "2009": {
+      "Calm": 5,
+      "Watch": 106,
+      "Elevated": 31,
+      "Stress": 110
+    },
+    "2010": {
+      "Calm": 97,
+      "Watch": 133,
+      "Elevated": 23,
+      "Stress": 0
+    },
+    "2011": {
+      "Calm": 139,
+      "Watch": 38,
+      "Elevated": 75,
+      "Stress": 0
+    },
+    "2012": {
+      "Calm": 208,
+      "Watch": 44,
+      "Elevated": 0,
+      "Stress": 0
+    },
+    "2013": {
+      "Calm": 252,
+      "Watch": 0,
+      "Elevated": 0,
+      "Stress": 0
+    },
+    "2014": {
+      "Calm": 252,
+      "Watch": 0,
+      "Elevated": 0,
+      "Stress": 0
+    },
+    "2015": {
+      "Calm": 218,
+      "Watch": 31,
+      "Elevated": 4,
+      "Stress": 0
+    },
+    "2016": {
+      "Calm": 210,
+      "Watch": 42,
+      "Elevated": 0,
+      "Stress": 0
+    },
+    "2017": {
+      "Calm": 251,
+      "Watch": 0,
+      "Elevated": 0,
+      "Stress": 0
+    },
+    "2018": {
+      "Calm": 186,
+      "Watch": 50,
+      "Elevated": 15,
+      "Stress": 0
+    },
+    "2019": {
+      "Calm": 146,
+      "Watch": 98,
+      "Elevated": 8,
+      "Stress": 0
+    },
+    "2020": {
+      "Calm": 79,
+      "Watch": 92,
+      "Elevated": 64,
+      "Stress": 18
+    },
+    "2021": {
+      "Calm": 245,
+      "Watch": 2,
+      "Elevated": 6,
+      "Stress": 0
+    },
+    "2022": {
+      "Calm": 17,
+      "Watch": 82,
+      "Elevated": 130,
+      "Stress": 27
+    },
+    "2023": {
+      "Calm": 0,
+      "Watch": 0,
+      "Elevated": 258,
+      "Stress": 1
+    },
+    "2024": {
+      "Calm": 30,
+      "Watch": 20,
+      "Elevated": 212,
+      "Stress": 1
+    },
+    "2025": {
+      "Calm": 180,
+      "Watch": 67,
+      "Elevated": 14,
+      "Stress": 0
+    },
+    "2026": {
+      "Calm": 208,
+      "Watch": 26,
+      "Elevated": 3,
+      "Stress": 0
+    }
+  },
+  "state_changes": 543,
+  "episodes_elevated_or_stress": [
+    {
+      "start": "1990-01-05",
+      "end": "1990-03-27",
+      "days_elevated_or_stress": 37,
+      "days_stress": 0,
+      "first_stress": null,
+      "peak_score": 56,
+      "peak_score_date": "1990-01-05",
+      "components_used": 3
+    },
+    {
+      "start": "1990-08-06",
+      "end": "1990-11-08",
+      "days_elevated_or_stress": 24,
+      "days_stress": 0,
+      "first_stress": null,
+      "peak_score": 56,
+      "peak_score_date": "1990-08-22",
+      "components_used": 3
+    },
+    {
+      "start": "1990-12-14",
+      "end": "1991-01-16",
+      "days_elevated_or_stress": 22,
+      "days_stress": 3,
+      "first_stress": "1991-01-08",
+      "peak_score": 67,
+      "peak_score_date": "1991-01-08",
+      "components_used": 3
+    },
+    {
+      "start": "1997-10-27",
+      "end": "1997-11-18",
+      "days_elevated_or_stress": 17,
+      "days_stress": 0,
+      "first_stress": null,
+      "peak_score": 44,
+      "peak_score_date": "1997-11-07",
+      "components_used": 3
+    },
+    {
+      "start": "1997-12-24",
+      "end": "1997-12-24",
+      "days_elevated_or_stress": 1,
+      "days_stress": 0,
+      "first_stress": null,
+      "peak_score": 56,
+      "peak_score_date": "1997-12-24",
+      "components_used": 3
+    },
+    {
+      "start": "1998-08-04",
+      "end": "1998-10-29",
+      "days_elevated_or_stress": 54,
+      "days_stress": 0,
+      "first_stress": null,
+      "peak_score": 67,
+      "peak_score_date": "1998-09-10",
+      "components_used": 3
+    },
+    {
+      "start": "1998-12-14",
+      "end": "1999-02-18",
+      "days_elevated_or_stress": 11,
+      "days_stress": 0,
+      "first_stress": null,
+      "peak_score": 56,
+      "peak_score_date": "1998-12-14",
+      "components_used": 3
+    },
+    {
+      "start": "2000-04-07",
+      "end": "2001-04-09",
+      "days_elevated_or_stress": 145,
+      "days_stress": 1,
+      "first_stress": "2000-12-20",
+      "peak_score": 78,
+      "peak_score_date": "2000-12-20",
+      "components_used": 3
+    },
+    {
+      "start": "2001-09-07",
+      "end": "2001-11-05",
+      "days_elevated_or_stress": 38,
+      "days_stress": 0,
+      "first_stress": null,
+      "peak_score": 44,
+      "peak_score_date": "2001-09-07",
+      "components_used": 3
+    },
+    {
+      "start": "2002-07-09",
+      "end": "2002-12-19",
+      "days_elevated_or_stress": 84,
+      "days_stress": 0,
+      "first_stress": null,
+      "peak_score": 44,
+      "peak_score_date": "2002-07-12",
+      "components_used": 3
+    },
+    {
+      "start": "2003-01-24",
+      "end": "2003-03-24",
+      "days_elevated_or_stress": 39,
+      "days_stress": 0,
+      "first_stress": null,
+      "peak_score": 33,
+      "peak_score_date": "2003-01-24",
+      "components_used": 3
+    },
+    {
+      "start": "2006-11-10",
+      "end": "2006-12-06",
+      "days_elevated_or_stress": 10,
+      "days_stress": 0,
+      "first_stress": null,
+      "peak_score": 33,
+      "peak_score_date": "2006-11-10",
+      "components_used": 3
+    },
+    {
+      "start": "2007-02-20",
+      "end": "2007-03-21",
+      "days_elevated_or_stress": 16,
+      "days_stress": 0,
+      "first_stress": null,
+      "peak_score": 44,
+      "peak_score_date": "2007-02-27",
+      "components_used": 3
+    },
+    {
+      "start": "2007-07-26",
+      "end": "2007-09-18",
+      "days_elevated_or_stress": 27,
+      "days_stress": 0,
+      "first_stress": null,
+      "peak_score": 67,
+      "peak_score_date": "2007-08-27",
+      "components_used": 3
+    },
+    {
+      "start": "2007-10-30",
+      "end": "2009-07-23",
+      "days_elevated_or_stress": 379,
+      "days_stress": 188,
+      "first_stress": "2008-03-14",
+      "peak_score": 67,
+      "peak_score_date": "2008-03-14",
+      "components_used": 3
+    },
+    {
+      "start": "2009-10-30",
+      "end": "2009-10-30",
+      "days_elevated_or_stress": 1,
+      "days_stress": 0,
+      "first_stress": null,
+      "peak_score": 56,
+      "peak_score_date": "2009-10-30",
+      "components_used": 3
+    },
+    {
+      "start": "2010-05-06",
+      "end": "2010-07-02",
+      "days_elevated_or_stress": 23,
+      "days_stress": 0,
+      "first_stress": null,
+      "peak_score": 44,
+      "peak_score_date": "2010-05-06",
+      "components_used": 3
+    },
+    {
+      "start": "2011-08-04",
+      "end": "2011-12-08",
+      "days_elevated_or_stress": 75,
+      "days_stress": 0,
+      "first_stress": null,
+      "peak_score": 44,
+      "peak_score_date": "2011-08-04",
+      "components_used": 3
+    },
+    {
+      "start": "2015-08-24",
+      "end": "2015-09-01",
+      "days_elevated_or_stress": 4,
+      "days_stress": 0,
+      "first_stress": null,
+      "peak_score": 44,
+      "peak_score_date": "2015-08-24",
+      "components_used": 3
+    },
+    {
+      "start": "2018-02-05",
+      "end": "2018-02-08",
+      "days_elevated_or_stress": 2,
+      "days_stress": 0,
+      "first_stress": null,
+      "peak_score": 42,
+      "peak_score_date": "2018-02-08",
+      "components_used": 4
+    },
+    {
+      "start": "2018-12-07",
+      "end": "2019-01-22",
+      "days_elevated_or_stress": 19,
+      "days_stress": 0,
+      "first_stress": null,
+      "peak_score": 58,
+      "peak_score_date": "2018-12-21",
+      "components_used": 4
+    },
+    {
+      "start": "2019-08-28",
+      "end": "2019-09-03",
+      "days_elevated_or_stress": 2,
+      "days_stress": 0,
+      "first_stress": null,
+      "peak_score": 33,
+      "peak_score_date": "2019-08-28",
+      "components_used": 4
+    },
+    {
+      "start": "2020-02-25",
+      "end": "2020-07-13",
+      "days_elevated_or_stress": 72,
+      "days_stress": 18,
+      "first_stress": "2020-03-12",
+      "peak_score": 75,
+      "peak_score_date": "2020-03-16",
+      "components_used": 4
+    },
+    {
+      "start": "2020-09-03",
+      "end": "2020-09-08",
+      "days_elevated_or_stress": 3,
+      "days_stress": 0,
+      "first_stress": null,
+      "peak_score": 33,
+      "peak_score_date": "2020-09-08",
+      "components_used": 4
+    },
+    {
+      "start": "2020-10-26",
+      "end": "2020-11-03",
+      "days_elevated_or_stress": 7,
+      "days_stress": 0,
+      "first_stress": null,
+      "peak_score": 42,
+      "peak_score_date": "2020-10-26",
+      "components_used": 4
+    },
+    {
+      "start": "2021-01-27",
+      "end": "2021-02-01",
+      "days_elevated_or_stress": 4,
+      "days_stress": 0,
+      "first_stress": null,
+      "peak_score": 25,
+      "peak_score_date": "2021-01-27",
+      "components_used": 4
+    },
+    {
+      "start": "2021-12-01",
+      "end": "2021-12-03",
+      "days_elevated_or_stress": 2,
+      "days_stress": 0,
+      "first_stress": null,
+      "peak_score": 25,
+      "peak_score_date": "2021-12-01",
+      "components_used": 4
+    },
+    {
+      "start": "2022-01-25",
+      "end": "2022-03-14",
+      "days_elevated_or_stress": 16,
+      "days_stress": 0,
+      "first_stress": null,
+      "peak_score": 50,
+      "peak_score_date": "2022-02-23",
+      "components_used": 4
+    },
+    {
+      "start": "2022-04-26",
+      "end": "2024-10-22",
+      "days_elevated_or_stress": 613,
+      "days_stress": 29,
+      "first_stress": "2022-06-13",
+      "peak_score": 75,
+      "peak_score_date": "2022-10-18",
+      "components_used": 4
+    },
+    {
+      "start": "2025-04-03",
+      "end": "2025-04-28",
+      "days_elevated_or_stress": 14,
+      "days_stress": 0,
+      "first_stress": null,
+      "peak_score": 60,
+      "peak_score_date": "2025-04-03",
+      "components_used": 5
+    },
+    {
+      "start": "2026-03-27",
+      "end": "2026-03-30",
+      "days_elevated_or_stress": 2,
+      "days_stress": 0,
+      "first_stress": null,
+      "peak_score": 33,
+      "peak_score_date": "2026-03-27",
+      "components_used": 5
+    },
+    {
+      "start": "2026-11-20",
+      "end": "2026-11-20",
+      "days_elevated_or_stress": 1,
+      "days_stress": 0,
+      "first_stress": null,
+      "peak_score": 47,
+      "peak_score_date": "2026-11-20",
+      "components_used": 5
+    }
+  ]
+}
