@@ -1,0 +1,44 @@
+{
+  "schema": 1,
+  "id": "2026-fed-rate-hikes",
+  "title": "Fed expected to raise rates as inflation re-accelerates",
+  "category": "monetary policy",
+  "markets": [
+    "US"
+  ],
+  "first_recorded": "2026-11-26",
+  "event_started": "2026-11 (hawkish minutes released week of 2026-11-16)",
+  "status": "open",
+  "what_happened": "A strong October jobs report, hot inflation data and hawkish Fed minutes pushed markets to price a rate hike in December 2026 and further hikes in the first half of 2027.",
+  "how_it_reaches_markets": "Higher discount rates for equities; tighter financing conditions; pressure on highly indebted borrowers.",
+  "sourced_facts": [
+    "2026-11-20: CME FedWatch priced a 92% chance of a December hike; odds of two or more hikes by June 2027 above 80% (Schwab)",
+    "2026-11-25: October inflation reported as having 'increased further'; Q3 growth revised up (ABC)"
+  ],
+  "resolution_conditions": {
+    "written_on": "2026-11-26",
+    "resolved_when_all": [
+      "The Fed's statement or projections signal no further hikes, AND the two most recent monthly CPI readings show year-over-year inflation falling"
+    ],
+    "worsened_when_any": [
+      "The Fed raises by more than 0.25 percentage points at one meeting",
+      "Financial conditions component of this ledger reaches High"
+    ]
+  },
+  "relief_headlines_that_do_not_resolve_it": [
+    "A single softer inflation reading",
+    "A hike that was fully priced in being delivered as expected"
+  ],
+  "sources": [
+    "https://www.schwab.com/learn/story/market-volatility",
+    "https://www.abc.net.au/news/2026-11-26/nasdaq-ai-tariffs-rattle-markets/107428016"
+  ],
+  "history": [
+    {
+      "date": "2026-11-26",
+      "status": "open",
+      "note": "Card opened. Resolution conditions written before the outcome is known."
+    }
+  ],
+  "note": "Risk state only. Not a forecast and not investment advice."
+}

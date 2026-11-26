@@ -1,0 +1,23 @@
+name: append-only guard
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Published records, alerts and rule versions may be added but never changed or removed
+        run: |
+          base="${{ github.event.before }}"
+          [ "${{ github.event_name }}" = "pull_request" ] && base="origin/${{ github.base_ref }}"
+          if [ -z "$base" ] || ! git cat-file -e "$base^{commit}" 2>/dev/null; then echo "no base commit; skipping"; exit 0; fi
+          changed=$(git diff --name-only --diff-filter=MDRT "$base" HEAD -- records alerts 'rules/v*')
+          if [ -n "$changed" ]; then echo "Changed or removed:"; echo "$changed"; exit 1; fi
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/verify.py

@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "id": "2026-us-excess-capacity-tariffs",
+  "title": "Proposed US tariffs on 'excess industrial capacity'",
+  "category": "trade policy",
+  "markets": [
+    "US"
+  ],
+  "first_recorded": "2026-11-26",
+  "event_started": "2026-11-24",
+  "status": "open",
+  "what_happened": "The US proposed new tariffs on major trading partners over what it calls structural excess industrial capacity. Reports differ on the count (14 partners per ABC, 16 per Reuters). China faces the highest proposed rate, 20% on top of existing duties of roughly 25%.",
+  "how_it_reaches_markets": "Higher import costs feed inflation while rates are already expected to rise; retaliation risk for US exporters; direct hit to Asian and European equity markets.",
+  "sourced_facts": [
+    "2026-11-24/25: proposal reported; effective date not stated in sources",
+    "2026-11-25: MSCI Asia-Pacific ex-Japan -2.3%; South Korea down as much as 5.3% intraday (Reuters)"
+  ],
+  "resolution_conditions": {
+    "written_on": "2026-11-26",
+    "resolved_when_all": [
+      "Final rates and effective dates are published, AND either the measures are withdrawn or agreements are announced with China and the EU covering them"
+    ],
+    "worsened_when_any": [
+      "Tariffs take effect at or above the proposed rates",
+      "A named trading partner announces retaliation"
+    ]
+  },
+  "relief_headlines_that_do_not_resolve_it": [
+    "Reports of talks or delays without a published change to the proposed rates"
+  ],
+  "sources": [
+    "https://www.abc.net.au/news/2026-11-26/nasdaq-ai-tariffs-rattle-markets/107428016",
+    "https://finance.yahoo.com/markets/stocks/articles/stocks-retreat-ai-rebound-stumbles-015155560.html"
+  ],
+  "history": [
+    {
+      "date": "2026-11-26",
+      "status": "open",
+      "note": "Card opened. Resolution conditions written before the outcome is known."
+    }
+  ],
+  "note": "Risk state only. Not a forecast and not investment advice."
+}

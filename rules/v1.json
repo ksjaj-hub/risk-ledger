@@ -1,0 +1,70 @@
+{
+  "version": "v1",
+  "effective_from": "2026-11-26",
+  "market": "US",
+  "level_labels": ["Low", "Moderate", "High", "Extreme"],
+  "components": [
+    {
+      "id": "equity_volatility",
+      "name": "Equity volatility",
+      "series": "VIXCLS",
+      "source": "Cboe Volatility Index (VIX), daily close, via FRED",
+      "transform": "latest",
+      "publish_value": true,
+      "direction": "higher_is_riskier",
+      "thresholds": [15, 20, 30]
+    },
+    {
+      "id": "credit_stress",
+      "name": "Credit stress",
+      "series": "BAMLH0A0HYM2",
+      "source": "ICE BofA US High Yield Index option-adjusted spread, via FRED",
+      "transform": "latest",
+      "publish_value": false,
+      "direction": "higher_is_riskier",
+      "thresholds": [3.5, 5, 7]
+    },
+    {
+      "id": "yield_curve",
+      "name": "Yield curve",
+      "series": "T10Y3M",
+      "source": "10-year minus 3-month US Treasury yield, via FRED",
+      "transform": "latest",
+      "publish_value": true,
+      "direction": "lower_is_riskier",
+      "thresholds": [0.5, 0, -0.5]
+    },
+    {
+      "id": "financial_conditions",
+      "name": "Financial conditions",
+      "series": "NFCI",
+      "source": "Chicago Fed National Financial Conditions Index (weekly), via FRED",
+      "transform": "latest",
+      "publish_value": true,
+      "direction": "higher_is_riskier",
+      "thresholds": [-0.5, 0, 0.5]
+    },
+    {
+      "id": "equity_drawdown",
+      "name": "Equity drawdown",
+      "series": "SP500",
+      "source": "S&P 500 daily close, via FRED",
+      "transform": "drawdown_pct_from_252d_high",
+      "publish_value": false,
+      "direction": "higher_is_riskier",
+      "thresholds": [5, 10, 20]
+    }
+  ],
+  "score": "round(100 * sum(levels) / (3 * number_of_components))",
+  "states": [
+    {"name": "Calm", "min_score": 0},
+    {"name": "Watch", "min_score": 25},
+    {"name": "Elevated", "min_score": 50},
+    {"name": "Stress", "min_score": 75}
+  ],
+  "floors": [
+    {"if_components_at_extreme_at_least": 1, "state_at_least": "Elevated"},
+    {"if_components_at_extreme_at_least": 2, "state_at_least": "Stress"}
+  ],
+  "alert_on": ["state_change", "component_level_change"]
+}
