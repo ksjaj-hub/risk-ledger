@@ -14,7 +14,9 @@ jobs:
       - name: Run the rule over past data
         env:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
-        run: python scripts/backtest.py
+        run: |
+          python scripts/backtest.py
+          python scripts/backtest.py --rule rules/candidates/v2-candidate.json
       - name: Commit
         run: |
           git config user.name "risk-ledger-bot"

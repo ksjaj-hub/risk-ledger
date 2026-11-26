@@ -20,10 +20,11 @@ MIN_WINDOW = 252  # the drawdown component needs a full year of prices before it
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--fixture")
-    ap.add_argument("--rule", default="v1")
+    ap.add_argument("--rule", default="v1", help="version name in rules/, or a path to a rule JSON file")
     ap.add_argument("--out", default=str(ROOT / "backtest"))
     a = ap.parse_args()
-    rule = json.loads((ROOT / "rules" / f"{a.rule}.json").read_text())
+    rp = pathlib.Path(a.rule)
+    rule = json.loads((rp if rp.suffix == ".json" else ROOT / "rules" / f"{a.rule}.json").read_text())
     comps = rule["components"]
     series, avail = {}, {}
     for c in comps:
@@ -39,7 +40,9 @@ def main():
     days = sorted(set().union(*[set(series[c["id"]][0]) for c in comps if c["transform"] == "latest"
                                 and c["series"] != "NFCI"]))
     names = [s["name"] for s in rule["states"]]
-    rows = []
+    conf = rule.get("confirmation", {})
+    esc, de = conf.get("escalate_after_days", 1), conf.get("deescalate_after_days", 1)
+    rows, hist, pub = [], [], None
     for day in days:
         levels = {}
         for c in comps:
@@ -59,11 +62,18 @@ def main():
         lv = list(levels.values())
         score = round(100 * sum(lv) / (3 * len(lv)))
         idx = max(k for k, s in enumerate(rule["states"]) if score >= s["min_score"])
-        ext = sum(l == 3 for l in lv)
         for f in rule["floors"]:
+            ext = sum(l == 3 for k, l in levels.items() if k not in f.get("not_counting", []))
             if ext >= f["if_components_at_extreme_at_least"]:
                 idx = max(idx, names.index(f["state_at_least"]))
-        rows.append((day, names[idx], score, len(lv), levels))
+        hist.append(idx)
+        if pub is None:
+            pub = idx
+        elif len(hist) >= esc and all(h > pub for h in hist[-esc:]):
+            pub = min(hist[-esc:])
+        elif len(hist) >= de and all(h < pub for h in hist[-de:]):
+            pub = max(hist[-de:])
+        rows.append((day, names[pub], score, len(lv), levels))
 
     out = pathlib.Path(a.out) / rule["version"]
     out.mkdir(parents=True, exist_ok=True)
