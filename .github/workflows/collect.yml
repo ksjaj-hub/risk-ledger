@@ -29,11 +29,13 @@ jobs:
           git ls-files --others --exclude-standard -- records alerts | grep '\.json$' | while read -r f; do
             ots stamp "$f"
           done
+      - name: Rebuild the public page data
+        run: python scripts/build_site.py
       - name: Commit
         run: |
           git config user.name "risk-ledger-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add records alerts
+          git add records alerts docs
           git diff --cached --quiet && { echo "nothing new"; exit 0; }
           git commit -m "record: $(date -u +%Y-%m-%dT%H:%MZ)"
           git push

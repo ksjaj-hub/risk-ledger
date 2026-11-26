@@ -17,6 +17,7 @@ anything, and not investment advice.**
 | `records/us/` | One file per day with new data: the state, the score, and each component's level. |
 | `alerts/us/` | One file each time the state or a component level changes. |
 | `events/` | Event risk cards with resolution conditions written in advance. |
+| `docs/` | The public page (served by GitHub Pages). `data.json` is rebuilt from the files above. |
 | `scripts/` | `collect.py` produces records. `verify.py` checks the chain. |
 
 ## How you can check that nothing was changed

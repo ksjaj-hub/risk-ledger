@@ -1,0 +1,648 @@
+{
+ "rule": {
+  "version": "v1",
+  "components": {
+   "equity_volatility": "Equity volatility",
+   "credit_stress": "Credit stress",
+   "yield_curve": "Yield curve",
+   "financial_conditions": "Financial conditions",
+   "equity_drawdown": "Equity drawdown"
+  },
+  "labels": [
+   "Low",
+   "Moderate",
+   "High",
+   "Extreme"
+  ]
+ },
+ "latest": {
+  "schema": 1,
+  "market": "US",
+  "recorded_at_utc": "2026-11-26T02:17:16Z",
+  "rule_version": "v1",
+  "rule_sha256": "f5cd0182549bb5b0f65d7dda43fd4ec63938669b69c0f72eed26626389d58808",
+  "state": "Watch",
+  "score": 33,
+  "components": {
+   "equity_volatility": {
+    "observation_date": "2026-11-24",
+    "level": 2,
+    "label": "High",
+    "value": 26.36
+   },
+   "credit_stress": {
+    "observation_date": "2026-11-24",
+    "level": 1,
+    "label": "Moderate",
+    "value_withheld": "source license does not allow republishing"
+   },
+   "yield_curve": {
+    "observation_date": "2026-11-25",
+    "level": 0,
+    "label": "Low",
+    "value": 0.51
+   },
+   "financial_conditions": {
+    "observation_date": "2026-11-20",
+    "level": 1,
+    "label": "Moderate",
+    "value": -0.444
+   },
+   "equity_drawdown": {
+    "observation_date": "2026-11-24",
+    "level": 1,
+    "label": "Moderate",
+    "value_withheld": "source license does not allow republishing"
+   }
+  },
+  "previous_record": null,
+  "note": "Risk state only. Not a forecast and not investment advice.",
+  "_path": "records/us/2026/2026-11-26.json"
+ },
+ "history": [
+  {
+   "date": "2026-11-26",
+   "state": "Watch",
+   "score": 33
+  }
+ ],
+ "alerts": [
+  {
+   "schema": 1,
+   "market": "US",
+   "issued_at_utc": "2026-11-26T02:17:16Z",
+   "type": "baseline",
+   "rule_version": "v1",
+   "state": "Watch",
+   "score": 33,
+   "changes": [],
+   "record": "records/us/2026/2026-11-26.json",
+   "note": "Risk state only. Not a forecast and not investment advice.",
+   "_path": "alerts/us/2026/2026-11-26.json"
+  }
+ ],
+ "events": [
+  {
+   "schema": 1,
+   "id": "2026-ai-buildout-financing",
+   "title": "Doubts about financing of the AI buildout",
+   "category": "sector",
+   "markets": [
+    "US"
+   ],
+   "first_recorded": "2026-11-26",
+   "event_started": "2026-11 (exact start not established)",
+   "status": "open",
+   "what_happened": "A sell-off concentrated in AI and semiconductor shares, attributed in press reports to doubts about whether the debt-financed AI buildout can earn sufficient returns and to signs of moderating AI spending.",
+   "how_it_reaches_markets": "Large index weight of AI-linked companies; debt used to fund data centers; possible regulatory opposition to data center construction.",
+   "sourced_facts": [
+    "2026-11-20: S&P 500 -3.70% to 6,910.39; Nasdaq Composite -5.28%; seventh straight S&P 500 decline (Schwab)",
+    "2026-11-20: Nvidia -14%, AMD -13.3% (Schwab)",
+    "2026-11-25: Nasdaq 100 briefly 20% below its record closing high (ABC/Reuters)"
+   ],
+   "resolution_conditions": {
+    "written_on": "2026-11-26",
+    "resolved_when_all": [
+     "Nasdaq Composite closes above its close of the day before the losing streak began for 20 consecutive trading days",
+     "Equity volatility component of this ledger is Moderate or lower for 20 consecutive trading days",
+     "At least two of the largest AI infrastructure spenders reaffirm or raise capital spending plans in a quarterly report"
+    ],
+    "worsened_when_any": [
+     "A large AI-linked borrower misses a debt payment or cancels a publicly announced financing",
+     "A major AI infrastructure spender publicly cuts its capital spending plan"
+    ]
+   },
+   "relief_headlines_that_do_not_resolve_it": [
+    "Single-day rebounds in AI shares",
+    "One company beating earnings forecasts (Dell beat forecasts on 2026-11-24 and its shares still fell about 7% the next day)"
+   ],
+   "sources": [
+    "https://www.schwab.com/learn/story/market-volatility",
+    "https://www.abc.net.au/news/2026-11-26/nasdaq-ai-tariffs-rattle-markets/107428016",
+    "https://finance.yahoo.com/markets/stocks/articles/stocks-retreat-ai-rebound-stumbles-015155560.html"
+   ],
+   "history": [
+    {
+     "date": "2026-11-26",
+     "status": "open",
+     "note": "Card opened. Resolution conditions written before the outcome is known."
+    }
+   ],
+   "note": "Risk state only. Not a forecast and not investment advice.",
+   "_path": "events/2026-ai-buildout-financing.json"
+  },
+  {
+   "schema": 1,
+   "id": "2026-china-domestic-demand-property",
+   "title": "China: weak domestic demand and property investment slump",
+   "category": "macro",
+   "markets": [
+    "CN"
+   ],
+   "first_recorded": "2026-11-26",
+   "event_started": "2026 (ongoing)",
+   "status": "open",
+   "what_happened": "October 2026 data showed retail sales growth of 0.4% year over year, fixed-asset investment down 8.1% for January to October, and property development investment down 21.6%.",
+   "how_it_reaches_markets": "Weaker demand for commodities and for foreign companies selling into China; pressure on Chinese and Hong Kong shares; deflationary pressure exported through cheap goods, which also feeds the tariff dispute.",
+   "sourced_facts": [
+    "October 2026: industrial output +4.8% y/y (from 5.5%); retail sales +0.4% (from 1.1%) (T. Rowe Price)",
+    "January to October 2026: fixed-asset investment -8.1%; property development investment -21.6% (T. Rowe Price)",
+    "Week ending 2026-11-20: Hang Seng -5.19%, CSI 300 -1.54% (T. Rowe Price)"
+   ],
+   "resolution_conditions": {
+    "written_on": "2026-11-26",
+    "resolved_when_all": [
+     "Retail sales growth above 3% year over year for three consecutive months",
+     "Year-to-date property development investment decline narrower than 10%"
+    ],
+    "worsened_when_any": [
+     "Retail sales fall year over year",
+     "A large developer or local-government financing vehicle defaults on a public bond"
+    ]
+   },
+   "relief_headlines_that_do_not_resolve_it": [
+    "Announcements of stimulus without subsequent improvement in the monthly data"
+   ],
+   "sources": [
+    "https://www.troweprice.com/personal-investing/resources/insights/global-markets-weekly-update.html"
+   ],
+   "history": [
+    {
+     "date": "2026-11-26",
+     "status": "open",
+     "note": "Card opened. Resolution conditions written before the outcome is known."
+    }
+   ],
+   "note": "Risk state only. Not a forecast and not investment advice.",
+   "_path": "events/2026-china-domestic-demand-property.json"
+  },
+  {
+   "schema": 1,
+   "id": "2026-eurozone-inflation-ecb",
+   "title": "Eurozone inflation at 4% and further ECB rate rises",
+   "category": "monetary policy",
+   "markets": [
+    "EU"
+   ],
+   "first_recorded": "2026-11-26",
+   "event_started": "2026-11",
+   "status": "open",
+   "what_happened": "Eurozone inflation rose to 4.0% year over year in October 2026 from 3.8%. The ECB is expected to raise rates again in December. European shares had their steepest weekly fall since March in the week ending 2026-11-20.",
+   "how_it_reaches_markets": "Higher rates in Europe at the same time as in the US and Japan tighten global financing conditions; pressure on highly indebted euro governments ahead of elections in Spain, France and Italy.",
+   "sourced_facts": [
+    "October 2026 eurozone inflation 4.0% y/y (from 3.8%); core revised to 2.6% (T. Rowe Price)",
+    "Goldman Sachs Asset Management (2026-11-05) expects one more ECB hike in December, to a peak policy rate of 2.75%",
+    "Week ending 2026-11-20: STOXX 600 -5.80%, DAX -7.28% (T. Rowe Price)"
+   ],
+   "resolution_conditions": {
+    "written_on": "2026-11-26",
+    "resolved_when_all": [
+     "Eurozone headline inflation falls for three consecutive monthly readings",
+     "The ECB signals at a policy meeting that it does not expect further rises"
+    ],
+    "worsened_when_any": [
+     "Eurozone headline inflation reaches 4.5% or more",
+     "The ECB raises by more than 0.25 percentage points at one meeting"
+    ]
+   },
+   "relief_headlines_that_do_not_resolve_it": [
+    "A hike that was fully expected being delivered",
+    "A single lower inflation reading"
+   ],
+   "sources": [
+    "https://www.troweprice.com/personal-investing/resources/insights/global-markets-weekly-update.html",
+    "https://am.gs.com/en-us/advisors/insights/article/market-pulse"
+   ],
+   "history": [
+    {
+     "date": "2026-11-26",
+     "status": "open",
+     "note": "Card opened. Resolution conditions written before the outcome is known."
+    }
+   ],
+   "note": "Risk state only. Not a forecast and not investment advice.",
+   "_path": "events/2026-eurozone-inflation-ecb.json"
+  },
+  {
+   "schema": 1,
+   "id": "2026-fed-rate-hikes",
+   "title": "Fed expected to raise rates as inflation re-accelerates",
+   "category": "monetary policy",
+   "markets": [
+    "US"
+   ],
+   "first_recorded": "2026-11-26",
+   "event_started": "2026-11 (hawkish minutes released week of 2026-11-16)",
+   "status": "open",
+   "what_happened": "A strong October jobs report, hot inflation data and hawkish Fed minutes pushed markets to price a rate hike in December 2026 and further hikes in the first half of 2027.",
+   "how_it_reaches_markets": "Higher discount rates for equities; tighter financing conditions; pressure on highly indebted borrowers.",
+   "sourced_facts": [
+    "2026-11-20: CME FedWatch priced a 92% chance of a December hike; odds of two or more hikes by June 2027 above 80% (Schwab)",
+    "2026-11-25: October inflation reported as having 'increased further'; Q3 growth revised up (ABC)"
+   ],
+   "resolution_conditions": {
+    "written_on": "2026-11-26",
+    "resolved_when_all": [
+     "The Fed's statement or projections signal no further hikes, AND the two most recent monthly CPI readings show year-over-year inflation falling"
+    ],
+    "worsened_when_any": [
+     "The Fed raises by more than 0.25 percentage points at one meeting",
+     "Financial conditions component of this ledger reaches High"
+    ]
+   },
+   "relief_headlines_that_do_not_resolve_it": [
+    "A single softer inflation reading",
+    "A hike that was fully priced in being delivered as expected"
+   ],
+   "sources": [
+    "https://www.schwab.com/learn/story/market-volatility",
+    "https://www.abc.net.au/news/2026-11-26/nasdaq-ai-tariffs-rattle-markets/107428016"
+   ],
+   "history": [
+    {
+     "date": "2026-11-26",
+     "status": "open",
+     "note": "Card opened. Resolution conditions written before the outcome is known."
+    }
+   ],
+   "note": "Risk state only. Not a forecast and not investment advice.",
+   "_path": "events/2026-fed-rate-hikes.json"
+  },
+  {
+   "schema": 1,
+   "id": "2026-japan-boj-tightening-yen",
+   "title": "Japan: Bank of Japan rate rises, weak yen and equity sell-off",
+   "category": "monetary policy",
+   "markets": [
+    "JP",
+    "US"
+   ],
+   "first_recorded": "2026-11-26",
+   "event_started": "2026-11",
+   "status": "open",
+   "what_happened": "The Bank of Japan raised its policy rate to 1.25% in September 2026 and its governor said on 2026-11-19 that it should keep raising rates. The yen briefly weakened past 160 per dollar on 2026-11-12. The Nikkei 225 fell about 5.1% on 2026-11-20 in what was described as one of the largest declines in its history.",
+   "how_it_reaches_markets": "Higher Japanese yields can pull Japanese capital home from US and other foreign bonds; sharp yen moves can force unwinding of yen-funded positions; possible currency intervention.",
+   "sourced_facts": [
+    "2026-11-20: Nikkei 225 -3,007.81 points (about -5.1%) to 56,436.65 (News On Japan)",
+    "2026-11-12: USD/JPY briefly above 160 in New York (MUFG)",
+    "Policy rate 1.25% since September; a majority in a Reuters survey released 2026-11-20 expect 1.5% in December (News On Japan)",
+    "10-year JGB yield about 2.80% (T. Rowe Price, News On Japan)",
+    "Q3 GDP annualised -0.1% against +0.2% expected (T. Rowe Price)"
+   ],
+   "resolution_conditions": {
+    "written_on": "2026-11-26",
+    "resolved_when_all": [
+     "USD/JPY stays below 155 for 20 consecutive trading days without reported intervention",
+     "The Bank of Japan completes a policy meeting whose decision matches the majority forecast and the Nikkei 225 does not fall more than 3% on that day or the next"
+    ],
+    "worsened_when_any": [
+     "Japanese authorities confirm currency intervention",
+     "The Nikkei 225 falls more than 5% in a day again",
+     "Japan's 10-year government bond yield closes above 3.0%"
+    ]
+   },
+   "relief_headlines_that_do_not_resolve_it": [
+    "Single-day rebounds (the Nikkei rose 3.91% on 2026-11-24 and fell 2.78% on 2026-11-25)",
+    "Verbal warnings by officials against excessive currency moves"
+   ],
+   "sources": [
+    "https://newsonjapan.com/article/151493.php",
+    "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-16-november-2026",
+    "https://www.troweprice.com/personal-investing/resources/insights/global-markets-weekly-update.html"
+   ],
+   "history": [
+    {
+     "date": "2026-11-26",
+     "status": "open",
+     "note": "Card opened. Resolution conditions written before the outcome is known."
+    }
+   ],
+   "note": "Risk state only. Not a forecast and not investment advice.",
+   "_path": "events/2026-japan-boj-tightening-yen.json"
+  },
+  {
+   "schema": 1,
+   "id": "2026-nvidia-sec-and-leadership",
+   "title": "Nvidia: reported SEC accounting inquiry and CEO turmoil",
+   "category": "company",
+   "markets": [
+    "US"
+   ],
+   "first_recorded": "2026-11-26",
+   "event_started": "2026-11-20",
+   "status": "open",
+   "what_happened": "Reuters reported late on 2026-11-20 that the SEC is investigating Nvidia's accounting practices. Jensen Huang's sudden departure was reported the same week; his return as CEO was reported in the week of 2026-11-23.",
+   "how_it_reaches_markets": "Nvidia's index weight and its role as a bellwether for AI demand; uncertainty about reported results; possible chip-export restrictions.",
+   "sourced_facts": [
+    "2026-11-20: Reuters report of SEC inquiry into Nvidia accounting, as cited by Schwab",
+    "Week of 2026-11-23: Huang's return as CEO reported; described as a 'temporary reprieve' (ABC/Reuters)",
+    "2026-11-25: Nvidia -8.7% in early trading (ABC)"
+   ],
+   "resolution_conditions": {
+    "written_on": "2026-11-26",
+    "resolved_when_all": [
+     "The SEC inquiry is publicly closed without enforcement action, or settled with terms disclosed",
+     "Nvidia files its next periodic report on time with no restatement of prior results"
+    ],
+    "worsened_when_any": [
+     "Nvidia announces a restatement or delays a periodic filing",
+     "The SEC or DOJ announces formal charges"
+    ]
+   },
+   "relief_headlines_that_do_not_resolve_it": [
+    "The CEO's return: the reported accounting inquiry is unchanged by it (press described the return as a temporary reprieve)"
+   ],
+   "sources": [
+    "https://www.schwab.com/learn/story/market-volatility",
+    "https://www.abc.net.au/news/2026-11-26/nasdaq-ai-tariffs-rattle-markets/107428016",
+    "https://finance.yahoo.com/markets/stocks/articles/stocks-retreat-ai-rebound-stumbles-015155560.html"
+   ],
+   "history": [
+    {
+     "date": "2026-11-26",
+     "status": "open",
+     "note": "Card opened. Resolution conditions written before the outcome is known."
+    }
+   ],
+   "note": "Risk state only. Not a forecast and not investment advice.",
+   "_path": "events/2026-nvidia-sec-and-leadership.json"
+  },
+  {
+   "schema": 1,
+   "id": "2026-us-ai-chip-export-rules",
+   "title": "New US licence rules on advanced AI chip shipments",
+   "category": "trade policy",
+   "markets": [
+    "US",
+    "TW",
+    "KR",
+    "EU",
+    "CN"
+   ],
+   "first_recorded": "2026-11-26",
+   "event_started": "2026-11 (week ending 2026-11-20)",
+   "status": "open",
+   "what_happened": "The US Commerce Department announced rules requiring licences for certain shipments of advanced AI chips to overseas data centers that provide substantial computing power to specified Chinese entities. Press reports say TSMC and Samsung Electronics suspended some shipments to Chinese customers pending licences.",
+   "how_it_reaches_markets": "Lost or delayed sales for chip makers and equipment makers; retaliation risk; adds to pressure on AI-linked shares.",
+   "sourced_facts": [
+    "Commerce Department announcement in the week ending 2026-11-20; exact date not stated in source (T. Rowe Price)",
+    "FT: TSMC and Samsung suspended some chip shipments to Chinese customers pending US licences; Reuters: TSMC halting certain advanced-node orders (both as cited by T. Rowe Price)",
+    "ASML and Infineon shares fell on concerns over tighter US chip export restrictions (T. Rowe Price)"
+   ],
+   "resolution_conditions": {
+    "written_on": "2026-11-26",
+    "resolved_when_all": [
+     "The rules are published in final form with licence criteria, AND at least one major supplier publicly confirms that suspended shipments have resumed under licence"
+    ],
+    "worsened_when_any": [
+     "China announces retaliatory export or import restrictions citing the rules",
+     "The rules are widened to cover additional chip categories or countries"
+    ]
+   },
+   "relief_headlines_that_do_not_resolve_it": [
+    "Reports that licences 'will be granted' without confirmed resumed shipments"
+   ],
+   "sources": [
+    "https://www.troweprice.com/personal-investing/resources/insights/global-markets-weekly-update.html"
+   ],
+   "history": [
+    {
+     "date": "2026-11-26",
+     "status": "open",
+     "note": "Card opened. Resolution conditions written before the outcome is known."
+    }
+   ],
+   "note": "Risk state only. Not a forecast and not investment advice.",
+   "_path": "events/2026-us-ai-chip-export-rules.json"
+  },
+  {
+   "schema": 1,
+   "id": "2026-us-appropriations-lapse",
+   "title": "US government funding expires on 11 December 2026",
+   "category": "fiscal policy",
+   "markets": [
+    "US"
+   ],
+   "first_recorded": "2026-11-26",
+   "event_started": "2026-11",
+   "status": "open",
+   "what_happened": "Current federal appropriations run out on 2026-12-11, during the lame-duck session before the new Congress convenes in January 2027. A funding bill needs 60 votes in the Senate.",
+   "how_it_reaches_markets": "A lapse in funding would shut parts of the federal government, delay official economic data used by the Fed and markets, and weigh on confidence.",
+   "sourced_facts": [
+    "2026-12-11: current appropriations expire (Fortune)",
+    "A funding bill needs 60 Senate votes (Fortune)"
+   ],
+   "resolution_conditions": {
+    "written_on": "2026-11-26",
+    "resolved_when_all": [
+     "A funding law covering the period beyond 2026-12-11 is signed"
+    ],
+    "worsened_when_any": [
+     "Funding lapses and a shutdown begins",
+     "A shutdown lasts more than 14 days"
+    ]
+   },
+   "relief_headlines_that_do_not_resolve_it": [
+    "A short stopgap of under 30 days (the deadline moves, the risk stays open; record the new date in history)"
+   ],
+   "sources": [
+    "https://fortune.com/2026/11/09/us-debt-limit-outlook-xdate-deadline-default-congress-summer-recess/"
+   ],
+   "history": [
+    {
+     "date": "2026-11-26",
+     "status": "open",
+     "note": "Card opened. Resolution conditions written before the outcome is known."
+    }
+   ],
+   "note": "Risk state only. Not a forecast and not investment advice.",
+   "_path": "events/2026-us-appropriations-lapse.json"
+  },
+  {
+   "schema": 1,
+   "id": "2026-us-excess-capacity-tariffs",
+   "title": "Proposed US tariffs on 'excess industrial capacity'",
+   "category": "trade policy",
+   "markets": [
+    "US"
+   ],
+   "first_recorded": "2026-11-26",
+   "event_started": "2026-11-24",
+   "status": "open",
+   "what_happened": "The US proposed new tariffs on major trading partners over what it calls structural excess industrial capacity. Reports differ on the count (14 partners per ABC, 16 per Reuters). China faces the highest proposed rate, 20% on top of existing duties of roughly 25%.",
+   "how_it_reaches_markets": "Higher import costs feed inflation while rates are already expected to rise; retaliation risk for US exporters; direct hit to Asian and European equity markets.",
+   "sourced_facts": [
+    "2026-11-24/25: proposal reported; effective date not stated in sources",
+    "2026-11-25: MSCI Asia-Pacific ex-Japan -2.3%; South Korea down as much as 5.3% intraday (Reuters)"
+   ],
+   "resolution_conditions": {
+    "written_on": "2026-11-26",
+    "resolved_when_all": [
+     "Final rates and effective dates are published, AND either the measures are withdrawn or agreements are announced with China and the EU covering them"
+    ],
+    "worsened_when_any": [
+     "Tariffs take effect at or above the proposed rates",
+     "A named trading partner announces retaliation"
+    ]
+   },
+   "relief_headlines_that_do_not_resolve_it": [
+    "Reports of talks or delays without a published change to the proposed rates"
+   ],
+   "sources": [
+    "https://www.abc.net.au/news/2026-11-26/nasdaq-ai-tariffs-rattle-markets/107428016",
+    "https://finance.yahoo.com/markets/stocks/articles/stocks-retreat-ai-rebound-stumbles-015155560.html"
+   ],
+   "history": [
+    {
+     "date": "2026-11-26",
+     "status": "open",
+     "note": "Card opened. Resolution conditions written before the outcome is known."
+    }
+   ],
+   "note": "Risk state only. Not a forecast and not investment advice.",
+   "_path": "events/2026-us-excess-capacity-tariffs.json"
+  },
+  {
+   "schema": 1,
+   "id": "2026-us-iran-war-oil",
+   "title": "US-Iran war and shipping attacks around the Strait of Hormuz",
+   "category": "geopolitical",
+   "markets": [
+    "US"
+   ],
+   "first_recorded": "2026-11-26",
+   "event_started": "2026-03",
+   "status": "open",
+   "what_happened": "The US-Iran war that began in March 2026 has driven a sustained rise in oil prices. New attacks on vessels in and around the Strait of Hormuz were reported on 2026-11-24.",
+   "how_it_reaches_markets": "Oil prices feed inflation and therefore rate expectations; shipping disruption; risk-off moves on escalation.",
+   "sourced_facts": [
+    "War began March 2026; VIX closing high during that episode 31.05 on 2026-03-27 (ceoeconomy)",
+    "2026-11-24: Brent settled more than 2% higher after reported attacks on vessels; opened at 90.97 in Asia on 2026-11-25 (Reuters)"
+   ],
+   "resolution_conditions": {
+    "written_on": "2026-11-26",
+    "resolved_when_all": [
+     "A ceasefire or agreement is publicly announced by both governments",
+     "No reported attack on commercial shipping in or around the Strait of Hormuz for 60 consecutive days",
+     "Brent settles below 80 dollars for 20 consecutive trading days"
+    ],
+    "worsened_when_any": [
+     "Strait of Hormuz closed to commercial traffic",
+     "Brent settles above 110 dollars"
+    ]
+   },
+   "relief_headlines_that_do_not_resolve_it": [
+    "Announcements of talks without a ceasefire",
+    "Single-day falls in oil prices"
+   ],
+   "sources": [
+    "https://www.abc.net.au/news/2026-11-26/nasdaq-ai-tariffs-rattle-markets/107428016",
+    "https://finance.yahoo.com/markets/stocks/articles/stocks-retreat-ai-rebound-stumbles-015155560.html",
+    "https://ceoeconomy.com/article/vix-closes-at-2026-high-35-89-wall-street-fear-gauge-nov-2026"
+   ],
+   "history": [
+    {
+     "date": "2026-11-26",
+     "status": "open",
+     "note": "Card opened. Resolution conditions written before the outcome is known."
+    }
+   ],
+   "note": "Risk state only. Not a forecast and not investment advice.",
+   "_path": "events/2026-us-iran-war-oil.json"
+  },
+  {
+   "schema": 1,
+   "id": "2026-us-private-credit-defaults",
+   "title": "Rising defaults in US private credit",
+   "category": "credit",
+   "markets": [
+    "US"
+   ],
+   "first_recorded": "2026-11-26",
+   "event_started": "2026 (default rate at a record 6.0% in April 2026)",
+   "status": "open",
+   "what_happened": "The Fitch trailing-12-month US private credit default rate stood at 6.2% in October 2026. Most default events are payment deferrals and maturity extensions rather than bankruptcies, and smaller borrowers default far more often. Banks and life insurers have large exposures to private credit funds.",
+   "how_it_reaches_markets": "Losses at business development companies, banks and insurers that lend to or hold private credit; redemption pressure on non-traded funds; tighter credit for mid-sized companies.",
+   "sourced_facts": [
+    "Fitch: 6.2% trailing-12-month default rate to October 2026, 6.3% in September; 90 unique defaulters; 10.7% for issuers under 25 million dollars EBITDA versus 2.4% above 100 million (Max's Digest, 2026-11-18)",
+    "JPMorgan forecasts leveraged-loan defaults of 4.5% in 2027 and 4.75% in 2028 (Max's Digest)",
+    "Moody's: banks had extended nearly 300 billion dollars to private credit funds, BDCs and CLOs as of October 2025 (Forbes, 2026-05-24)",
+    "No fund redemption gate in November 2026 is stated in these sources"
+   ],
+   "resolution_conditions": {
+    "written_on": "2026-11-26",
+    "resolved_when_all": [
+     "Fitch trailing-12-month private credit default rate below 4.0% for three consecutive monthly readings",
+     "Credit stress component of this ledger is Moderate or lower throughout the same period"
+    ],
+    "worsened_when_any": [
+     "Fitch default rate above 8.0%",
+     "A large private credit fund suspends or limits redemptions, or a bank discloses a private-credit-related loss above 1 billion dollars",
+     "Credit stress component of this ledger reaches High"
+    ]
+   },
+   "relief_headlines_that_do_not_resolve_it": [
+    "Record fundraising by private credit managers (new money raised says nothing about existing loans)",
+    "A one-month dip in the default rate (6.3% to 6.2% from September to October 2026)"
+   ],
+   "sources": [
+    "https://maxsdigest.substack.com/p/maxs-digest-wednesday-november-18",
+    "https://www.forbes.com/sites/mayrarodriguezvalladares/2026/05/24/rising-private-credit-defaults-are-testing-banks-and-insurers/"
+   ],
+   "history": [
+    {
+     "date": "2026-11-26",
+     "status": "open",
+     "note": "Card opened. Resolution conditions written before the outcome is known."
+    }
+   ],
+   "note": "Risk state only. Not a forecast and not investment advice.",
+   "_path": "events/2026-us-private-credit-defaults.json"
+  },
+  {
+   "schema": 1,
+   "id": "2027-us-debt-limit",
+   "title": "US federal debt limit standoff",
+   "category": "fiscal policy",
+   "markets": [
+    "US"
+   ],
+   "first_recorded": "2026-11-26",
+   "event_started": "2026-11",
+   "status": "open",
+   "what_happened": "The federal borrowing limit of 41.1 trillion dollars is close to being reached. Bank of America analysts estimate it could be reached as early as February (2027 implied), with a central X-date forecast of November 2027 and risk of getting uncomfortably close as early as August 2027. After the midterm elections Democrats will control both chambers of the next Congress and therefore the vote.",
+   "how_it_reaches_markets": "Risk of delayed Treasury payments; distortions in Treasury bill and repo markets near the X-date; sovereign rating downgrade risk.",
+   "sourced_facts": [
+    "2026-11-09: limit 41.1 trillion dollars; about 557 billion dollars of room left (Fortune, citing BofA)",
+    "BofA: limit reached as early as February; X-date forecast November 2027, risk from August 2027 (Fortune)",
+    "BMO warns of a protracted 2027 standoff with downgrade risk (Fortune)"
+   ],
+   "resolution_conditions": {
+    "written_on": "2026-11-26",
+    "resolved_when_all": [
+     "A law raising or suspending the debt limit is signed"
+    ],
+    "worsened_when_any": [
+     "Treasury announces an X-date less than 60 days away with no law passed",
+     "A major rating agency downgrades the US sovereign rating or places it on negative watch citing the debt limit"
+    ]
+   },
+   "relief_headlines_that_do_not_resolve_it": [
+    "Statements that leaders are 'close to a deal' without a signed law",
+    "Treasury starting extraordinary measures (this postpones the X-date, it does not remove it)"
+   ],
+   "sources": [
+    "https://fortune.com/2026/11/09/us-debt-limit-outlook-xdate-deadline-default-congress-summer-recess/"
+   ],
+   "history": [
+    {
+     "date": "2026-11-26",
+     "status": "open",
+     "note": "Card opened. Resolution conditions written before the outcome is known."
+    }
+   ],
+   "note": "Risk state only. Not a forecast and not investment advice.",
+   "_path": "events/2027-us-debt-limit.json"
+  }
+ ]
+}
