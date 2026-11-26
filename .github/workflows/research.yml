@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches: ["claude/**"]
-    paths: ["scripts/research_v4d.py", ".github/workflows/research.yml"]
+    paths: ["scripts/research_v4e.py", ".github/workflows/research.yml"]
 permissions:
   contents: write
 jobs:
@@ -19,8 +19,8 @@ jobs:
       - name: Compute
         env:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
-        # rounds 1 to 3 (research_v4.py, _v4b.py, _v4c.py) are finished; run them by hand if their inputs change
-        run: python scripts/research_v4d.py
+        # rounds 1 to 4 (research_v4.py, _v4b.py, _v4c.py, _v4d.py) are finished; run them by hand if their inputs change
+        run: python scripts/research_v4e.py
       - name: Commit
         run: |
           git config user.name "risk-ledger-bot"
