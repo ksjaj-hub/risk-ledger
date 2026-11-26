@@ -18,11 +18,34 @@
  "latest": {
   "schema": 1,
   "market": "US",
-  "recorded_at_utc": "2026-11-26T02:17:16Z",
-  "rule_version": "v1",
-  "rule_sha256": "f5cd0182549bb5b0f65d7dda43fd4ec63938669b69c0f72eed26626389d58808",
+  "recorded_at_utc": "2026-11-26T05:29:37Z",
+  "rule_version": "v2",
+  "rule_sha256": "9fe03ce216f6699b6c50ade855523c06e0572aaf205adcedb15f986c364fc64b",
   "state": "Watch",
   "score": 33,
+  "indicated_state": "Watch",
+  "recent_indicated_states": [
+   {
+    "date": "2026-11-19",
+    "indicated": "Watch"
+   },
+   {
+    "date": "2026-11-20",
+    "indicated": "Elevated"
+   },
+   {
+    "date": "2026-11-23",
+    "indicated": "Watch"
+   },
+   {
+    "date": "2026-11-24",
+    "indicated": "Watch"
+   },
+   {
+    "date": "2026-11-25",
+    "indicated": "Watch"
+   }
+  ],
   "components": {
    "equity_volatility": {
     "observation_date": "2026-11-24",
@@ -55,11 +78,19 @@
     "value_withheld": "source license does not allow republishing"
    }
   },
-  "previous_record": null,
+  "previous_record": {
+   "path": "records/us/2026/2026-11-26.json",
+   "sha256": "71f5eb90aa75d15a8aa68a9efd15d56446a310938cf5094d139d3279b697f221"
+  },
   "note": "Risk state only. Not a forecast and not investment advice.",
-  "_path": "records/us/2026/2026-11-26.json"
+  "_path": "records/us/2026/2026-11-26T0529Z.json"
  },
  "history": [
+  {
+   "date": "2026-11-26",
+   "state": "Watch",
+   "score": 33
+  },
   {
    "date": "2026-11-26",
    "state": "Watch",
@@ -79,6 +110,25 @@
    "record": "records/us/2026/2026-11-26.json",
    "note": "Risk state only. Not a forecast and not investment advice.",
    "_path": "alerts/us/2026/2026-11-26.json"
+  },
+  {
+   "schema": 1,
+   "market": "US",
+   "issued_at_utc": "2026-11-26T05:29:37Z",
+   "type": "change",
+   "rule_version": "v2",
+   "state": "Watch",
+   "score": 33,
+   "changes": [
+    {
+     "what": "rule_version",
+     "from": "v1",
+     "to": "v2"
+    }
+   ],
+   "record": "records/us/2026/2026-11-26T0529Z.json",
+   "note": "Risk state only. Not a forecast and not investment advice.",
+   "_path": "alerts/us/2026/2026-11-26T0529Z.json"
   }
  ],
  "events": [
