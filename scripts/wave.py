@@ -17,6 +17,10 @@ Definitions (the same for every episode)
     half of that extreme ("arrival day"). Series are listed by arrival day.
   - Half-life: trading days from the extreme until half of the move had been given back, searched up to the
     half-life window. "None" means it was not given back inside that window.
+  - Back at baseline: the first day after the extreme on which the series was back at or through its
+    baseline level.
+  - Background: the same market measurements taken from every trading day since 1990, so that a number after
+    a shock can be compared with an ordinary period.
   - Rule-based oil episodes: see oil_rule in waves/episodes.json. For those, day 0 is the day the rule fired
     and the pre-shock oil price is the close 20 trading days earlier.
 Standard library only. Needs FRED_API_KEY.
@@ -57,8 +61,9 @@ def wave_w(path, window):
         return None
     arrive = next(k for k, v in enumerate(head) if abs(v) >= abs(ext) / 2 and (v > 0) == (ext > 0))
     half = next((k - i for k in range(i + 1, len(path)) if abs(path[k]) <= abs(ext) / 2 or (path[k] > 0) != (ext > 0)), None)
+    back = next((k + 1 for k in range(i + 1, len(path)) if path[k] == 0 or (path[k] > 0) != (ext > 0)), None)
     return {"extreme": round(ext, 2), "extreme_day": i + 1, "arrival_day": arrive + 1,
-            "half_life_days": half, "days_observed_after_extreme": len(path) - 1 - i}
+            "half_life_days": half, "back_at_baseline_day": back, "days_observed_after_extreme": len(path) - 1 - i}
 
 
 def main():
@@ -166,7 +171,13 @@ def main():
             oil = [100 * (v / pre - 1) for v in vs[k: k + 1 + HL]]  # index 0 = day 0, measured from pre-shock price
             pk = max(range(min(W + 1, len(oil))), key=lambda j: oil[j])
             half = next((j - pk for j in range(pk + 1, len(oil)) if oil[j] <= oil[pk] / 2), None)
-            e = {"day_0": ds[k], "pre_shock_date": ds[k - L], "pre_shock_price": pre, "price_day_0": vs[k],
+            back = next((j for j in range(pk + 1, len(oil)) if oil[j] <= 0), None)
+            again = None if half is None else next((j for j in range(pk + half + 1, len(oil)) if oil[j] > oil[pk]), None)
+            e = {"current": ds[k] >= cfg.get("current_from", "9999"),
+                 "back_at_pre_shock_day": back, "new_high_after_half_day": again,
+                 "rise_at": {str(h): r1(oil[h]) for h in (63, 126, 252) if len(oil) > h},
+                 "latest_rise_pct": r1(oil[-1]), "latest_day": len(oil) - 1,
+                 "day_0": ds[k], "pre_shock_date": ds[k - L], "pre_shock_price": pre, "price_day_0": vs[k],
                  "rise_at_day_0_pct": r1(oil[0]), "peak_rise_pct": r1(oil[pk]), "peak_day": pk,
                  "half_life_days": half, "days_observed_after_peak": len(oil) - 1 - pk,
                  "oil_path": [round(x, 1) for x in oil]}
@@ -188,16 +199,34 @@ def main():
         return {"n": len(vals), "median": r1(statistics.median(vals)), "min": r1(vals[0]), "max": r1(vals[-1]),
                 "q1": r1(vals[(len(vals) - 1) // 4]), "q3": r1(vals[(3 * (len(vals) - 1) + 3) // 4]),
                 "negative": sum(v < 0 for v in vals)}
-    full = [e for e in result["oil_rule_episodes"] if e.get("equity", {}).get("equity_days", 0) >= W]
-    S = {"episodes_with_full_window": len(full), "episodes_total": len(result["oil_rule_episodes"]),
+    past = [e for e in result["oil_rule_episodes"] if not e["current"]]
+    full = [e for e in past if e.get("equity", {}).get("equity_days", 0) >= W]
+    # the same market measurements from every trading day since 1990, as the ordinary background
+    cum = [0.0]
+    for d in days:
+        cum.append(cum[-1] + math.log(1 + mkt[d] / 100))
+    i0 = bisect.bisect_left(days, "1990-01-01")
+    starts = range(i0, len(days) - W)
+    base_at = {str(h): summ([100 * (math.exp(cum[i + 1 + h] - cum[i + 1]) - 1) for i in starts]) for h in HZ}
+    falls = []
+    for i in starts:
+        lo = min(cum[i + 2: i + 2 + W]) - cum[i + 1]
+        falls.append(100 * (math.exp(min(0.0, lo)) - 1))
+    base_fall = summ(falls)
+    S = {"episodes_with_full_window": len(full), "episodes_total": len(past),
+         "any_day_since_1990": {"market_at": base_at, "market_largest_fall_pct": base_fall},
+         "oil_peak_before_market_low": sum(e["peak_day"] < e["equity"]["market"]["largest_fall_day"] for e in full),
+         "oil_back_at_pre_shock_day": summ([e["back_at_pre_shock_day"] for e in past]),
+         "oil_not_back_at_pre_shock_within_window": sum(e["back_at_pre_shock_day"] is None for e in past),
+         "oil_still_above_pre_shock_at": {h: sum(e["rise_at"].get(h, 0) > 0 for e in past) for h in ("63", "126", "252")},
+         "oil_new_high_after_half": sum(e["new_high_after_half_day"] is not None for e in past),
          "market_at": {str(h): summ([e["equity"]["market"]["at"].get(str(h)) for e in full]) for h in HZ},
          "market_largest_fall_pct": summ([e["equity"]["market"]["largest_fall_pct"] for e in full]),
          "sector_excess_at": {s: {str(h): summ([e["equity"]["sectors"][s]["at"].get(str(h)) for e in full]) for h in HZ} for s in SECTORS},
-         "oil_peak_rise_pct": summ([e["peak_rise_pct"] for e in result["oil_rule_episodes"] if e["days_observed_after_peak"] >= 1]),
-         "oil_peak_day": summ([e["peak_day"] for e in result["oil_rule_episodes"]]),
-         "oil_half_life_days": summ([e["half_life_days"] for e in result["oil_rule_episodes"]]),
-         "oil_half_life_not_reached": sum(e["half_life_days"] is None and e["days_observed_after_peak"] >= HL - W for e in result["oil_rule_episodes"]),
-         "oil_half_life_still_open": sum(e["half_life_days"] is None and e["days_observed_after_peak"] < HL - W for e in result["oil_rule_episodes"])}
+         "oil_peak_rise_pct": summ([e["peak_rise_pct"] for e in past if e["days_observed_after_peak"] >= 1]),
+         "oil_peak_day": summ([e["peak_day"] for e in past]),
+         "oil_half_life_days": summ([e["half_life_days"] for e in past]),
+         "oil_half_life_not_reached": sum(e["half_life_days"] is None for e in past)}
     result["oil_rule_summary"] = S
     print(json.dumps(S)[:3000])
     result["meta"] = {
