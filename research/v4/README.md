@@ -171,3 +171,78 @@ What it shows:
 Caution, same as round 3: the 200-day rule's lead is a 2007-2026 result. On 1990-2006 it was behind AFMX (0.744 against 0.835, and 0.49 against 0.89 near highs). It is a lead worth a pre-registered test, not a reason to change the rule.
 
 Not testable from primary sources: CNN Fear & Greed, MOVE, SKEW. The Fed-bank indexes and CISS are re-estimated over time, so their numbers here are flattered. The `episodes_trading_days_from_peak` block in the results file was an extra outside the pre-registration; its 2020 and 2025 windows pick the wrong peak and it is not used.
+
+## Round 5: five directions for raising the score
+
+The owner chose to follow up round 4. Fixed beforehand in `preregistration5.json` (and `preregistration5b.json` for the follow-up); numbers in `results5.json` and `results5b.json`; script `scripts/research_v4e.py`. Hindsight, not a forecast.
+
+**Outcome: nothing clears the pre-registered bar, so there is no v4. One lead is worth recording live: industry breadth.**
+
+### A. Trend and the yield curve
+
+| Candidate | 1990-2006 | 2007 on | minus v3, 90% | Near highs, 2007 on | Fails on |
+|---|---|---|---|---|---|
+| v3 | 0.835 | 0.625 |  | 0.515 |  |
+| A1 no yield curve | 0.810 | 0.660 | -0.001 to +0.068 | 0.568 | test_gain_at_least_0.02_and_interval_above_zero, train_not_more_than_0.02_below, ladder_rises |
+| A2 plus trend | 0.838 | 0.636 | +0.003 to +0.019 | 0.521 | test_gain_at_least_0.02_and_interval_above_zero, clean_check_1927_1985 |
+| A3 no curve, plus trend | 0.815 | 0.666 | +0.003 to +0.077 | 0.572 | ladder_rises, clean_check_1927_1985 |
+
+- Trend fails the clean check. On 1927-1985, which no earlier round had used for a 200-day measure, adding the trend level to the drawdown level made it worse (0.709 against 0.717, difference -0.018 to -0.001). The 200-day rule's lead in round 4 was a 2007-2026 result.
+- The yield curve: for a recession 6-18 months later its AUROC is 0.888 and 0.654; for a 10% fall within 63 days it is 0.619 and 0.388. Taking it out of the score helps after 2007 and hurts before, as in rounds 1 and 3. It stays in the score; showing it also as a separate recession reading is a presentation choice.
+
+### B. Information near market highs
+
+Days within 5% of the 252-day high; 11.1% of them were followed by a 10% fall after 2007. v3 scores 0.515 there. Thirteen candidates, each with its direction fixed beforehand.
+
+| Candidate | From | 1990-2006 | 2007 on | 90% interval | Lower end widened for 13 tries | Earlier period (to 1985) |
+|---|---|---|---|---|---|---|
+| breadth | 1927 | 0.784 | 0.679 | 0.535 to 0.811 | 0.464 | 0.589 |
+| dispersion | 1927 | 0.720 | 0.603 | 0.489 to 0.716 | 0.430 | 0.579 |
+| margin_growth | 1953 | 0.610 | 0.591 | 0.457 to 0.741 | 0.391 | 0.541 |
+| rate_rise | 1976 | 0.606 | 0.564 | 0.434 to 0.701 | 0.370 | 0.821 |
+| valuation | 1951 | 0.577 | 0.549 | 0.402 to 0.692 | 0.328 | 0.437 |
+| run_up | 1927 | 0.516 | 0.528 | 0.373 to 0.679 | 0.286 | 0.545 |
+| vix_term | 2007 |  | 0.528 | 0.437 to 0.610 | 0.387 |  |
+| skew | 1990 | 0.588 | 0.510 | 0.374 to 0.647 | 0.302 |  |
+| correlation | 1927 | 0.463 | 0.509 | 0.347 to 0.661 | 0.295 | 0.514 |
+| oil_rise | 1986 | 0.329 | 0.478 | 0.364 to 0.608 | 0.309 |  |
+| tight_credit | 1986 | 0.484 | 0.472 | 0.328 to 0.638 | 0.258 |  |
+| low_vol | 1990 | 0.244 | 0.417 | 0.310 to 0.523 | 0.269 |  |
+| policy_rate_rise | 1955 | 0.461 | 0.349 | 0.234 to 0.468 | 0.186 | 0.762 |
+
+- None passes: the bar needed 0.58 on both periods and a widened lower end above 0.50.
+- Breadth (share of the 49 industries below their own 200-day average) is the only one above 0.58 on both periods and above 0.55 on 1927-1985. It fails only on the widened interval.
+- Options skew, low volatility, tight credit spreads, a strong run-up, oil and policy-rate rises do not separate the days. Rate rises worked before 1985 and not since.
+
+### C. Verifiable inputs
+
+| Candidate | 1990-2006 | 2007 on | minus v3, 90% | Acceptable swap |
+|---|---|---|---|---|
+| C1 credit from Baa spread | 0.838 | 0.627 | -0.046 to +0.050 | yes |
+| C2 and NFCI replaced by CISS | 0.808 | 0.633 | -0.043 to +0.058 | no |
+| C3 Baa spread, CISS as a sixth | 0.817 | 0.639 | -0.033 to +0.059 | no |
+
+- Reading credit stress from the Baa spread (downloadable from 1986) costs nothing in accuracy and makes the rule checkable on the past. It is not an improvement, and its state ladder is not clean (Watch 18.7%, Elevated 17.8%).
+- Replacing NFCI with CISS loses too much on 1990-2006.
+
+### D. How long each state has lasted (v3, 1990 on, trading days)
+
+| State | Spells | Median | Upper quartile | Longest | Ended by moving up | Share of days |
+|---|---|---|---|---|---|---|
+| Calm | 85 | 16 | 49 | 306 (from 1994-12-21) | 100% | 36% |
+| Guarded | 142 | 10 | 19 | 132 (from 2006-08-16) | 39% | 27% |
+| Watch | 94 | 9 | 19 | 102 (from 2001-11-19) | 47% | 15% |
+| Elevated | 74 | 11 | 29 | 77 (from 2023-01-11) | 30% | 15% |
+| Stress | 24 | 8 | 22 | 225 (from 2008-09-15) | 0% | 6% |
+
+### E. Follow-up on breadth (exploratory, chosen after seeing B)
+
+| Candidate | 1990-2006 | 2007 on | minus v3, 90% | Near highs, 2007 on | minus v3, 90% | State changes | Clears part A bar |
+|---|---|---|---|---|---|---|---|
+| E1 v3 plus breadth | 0.818 | 0.662 | +0.015 to +0.065 | 0.590 | +0.018 to +0.134 | 267 (v3 244) | yes |
+| E2 and no yield curve | 0.798 | 0.692 | +0.023 to +0.115 | 0.644 | +0.010 to +0.235 | 293 (v3 244) | no |
+
+- v3 plus breadth clears every item of the part A bar, and its state ladder is clean (Calm 9.4%, Guarded 14.0%, Watch 20.5%, Elevated 22.9%, Stress 38.5%).
+- On 1927-1985, adding the breadth level to the drawdown level does nothing on all days (-0.016 to +0.019) and helps on near-high days (0.57 against 0.5, +0.005 to +0.137).
+- By the reading fixed beforehand this is **worth recording, not a rule change**: breadth was picked after seeing the data, so these numbers are flattered. The honest next step is to record it live next to the rule and judge it on days that have not happened yet.
+- Open practical point: the 49-industry file is published with a lag of weeks. A live record needs a daily source for industry or sector prices.

@@ -406,8 +406,8 @@ def main():
                             "both_minus_drawdown_90": da[0] if da else None},
                "near_high_days": {"drawdown_level": r3(auc(ld, O1, old & near)), "breadth_level": r3(auc(lb, O1, old & near)),
                                   "average_of_both": r3(auc(bb, O1, old & near)), "both_minus_drawdown_90": dnh[0] if dnh else None}}
-        pos_all = bool(da and da[0][0] > 0)
-        pos_nh = bool(dnh and dnh[0][0] > 0)
+        pos_all = bool(da and da[0][0] is not None and da[0][0] > 0)
+        pos_nh = bool(dnh and dnh[0][0] is not None and dnh[0][0] > 0)
         strong = pos_all and any(E[k]["passes_bar"] for k in E)
         outE = {"warning": "Exploratory. Breadth was chosen after seeing round 5. Hindsight; not a forecast.", "levels": [r3(c) for c in cuts],
                 "candidates": E, "check_1927_1985": chk, "reading": "strong" if strong else "worth_recording" if (pos_all or pos_nh) else "drop",
