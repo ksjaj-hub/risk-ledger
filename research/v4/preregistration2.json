@@ -1,0 +1,42 @@
+{
+ "written": "2026-11-26",
+ "status": "Round 2. Written and committed after round 1's results.json was read and before scripts/research_v4b.py produced any number.",
+ "what_round_1_showed": [
+  "The bar was not met. The candidate chosen on the train period (C6, with the excess bond premium) gained 0.012 AUROC on O1 in the test period, interval -0.039 to 0.059. No candidate's interval lay above zero. v3 stays.",
+  "Percentile transforms, principal-component weights and correlation weighting did not separate days better than v3's hand-set levels. First-component weights were close to equal except the yield curve (0.07).",
+  "Separation was much lower after 2007 than before: v3_long's AUROC on O1 was 0.835 in 1990-2006 and 0.625 in 2007-2026. In 1990-2006 no Calm day was followed by a 10% fall within 63 trading days; in 2007-2026, 10.3% of Calm days were.",
+  "In 1986-1989 no score was better than chance on O1: October 1987 came out of low readings.",
+  "Leaving the yield curve out raised AUROC on O1 after 2007 (0.625 to 0.660, interval of the difference -0.001 to 0.068) and lowered it before 2007 (0.835 to 0.810). It lowered AUROC on the recession-horizon check in both periods (0.668 to 0.580 and 0.813 to 0.719)."
+ ],
+ "question": "Round 1 says the weakness is not how the inputs are weighted. It is that the score moves with the market and says little while things are calm. Do slow indicators named in the literature say anything, over one to two years, that the daily state does not? And does the daily-state idea itself hold on 60 years of data that no version of the rule has seen?",
+ "honesty_note": "The 1990-2026 period has now been looked at with seven scores. Round 2 therefore puts its weight on periods before 1986 that nothing in this repository's rule work has touched, and reports 1990-2006 and 2007-2026 beside them without using them to choose.",
+ "data_added": {
+  "market_long": "French daily market return from July 1926.",
+  "NFCINONFINLEVERAGE": "FRED, Chicago Fed NFCI nonfinancial leverage subindex, weekly from 1971, lagged 5 trading days. Like NFCI it is re-estimated on the full sample, so its past values contain hindsight. That is a reason to distrust a good result.",
+  "EBP": "as in round 1, from 1973",
+  "T10Y3M": "from 1982"
+ },
+ "outcomes": {
+  "O5_primary": "Within the next 504 trading days (about two years) the market closes 20% or more below today's close.",
+  "O1": "as in round 1 (10% within 63 trading days)",
+  "R1": "as in round 1 (a recession day 126 to 378 trading days ahead), 1971 onward"
+ },
+ "part_A_slow_indicators": {
+  "S1_curve": {"what": "minus the 10-year minus 3-month spread", "from": "Estrella and Mishkin (1996)", "untouched": "1982-1989 (short)"},
+  "S2_nonfinancial_leverage": {"what": "NFCI nonfinancial leverage subindex, higher = riskier", "from": "Chicago Fed NFCI FAQ, citing Brave and Butters (2012): leverage measures tend to lead financial stress, and the nonfinancial leverage subindex best exemplifies the early-warning signal.", "untouched": "1971-1989"},
+  "S3_low_volatility": {"what": "minus the ratio of 252-day realized market volatility to its own median over the previous 2,520 trading days. Higher = volatility unusually low.", "from": "Danielsson, Valenzuela and Zer (FEDS 2016-093): the level of volatility does not predict crises, unusually low volatility does.", "untouched": "1937-1989"},
+  "S4_ebp": {"what": "excess bond premium, lagged, higher = riskier", "from": "Favara, Gilchrist, Lewis and Zakrajsek (2016)", "untouched": "1973-1989"},
+  "reference": "v3_long's daily score against O5, 1990 onward, to show what the daily state already says about the two-year horizon.",
+  "measure": "AUROC against O5 in three periods: the indicator's untouched period, 1990-2006, 2007 to the last day with 504 trading days after it. Block bootstrap with 504-day blocks, 2,000 draws, seed 20261126. Also AUROC against R1.",
+  "from_calm": "Secondary: among days when v3_long's published state is Calm or Guarded (1990 onward), AUROC of each slow indicator against O1 and O5. This is the question round 1 raised: can anything tell calm days apart?",
+  "bar_for_a_slow_warning_reading": "An indicator is proposed as a separate 'slow warning' line (not part of the daily state) only if its AUROC on O5 is 0.60 or more in all three periods and the lower end of its 90% interval is above 0.50 in the untouched period. Otherwise it is not proposed."
+ },
+ "part_B_replication_of_the_daily_state": {
+  "what": "A market-only score M: the plain average of two percentile-transformed components, drawdown from the 252-day high and 21-day realized volatility, with cutpoints frozen on 1990-2006.",
+  "untouched": "1927-07 to 1985-12",
+  "measure": "AUROC of M against O1 and O2 in 1927-1985, by two halves, with 63-day block bootstrap intervals. And the share of days with O1 by fifth of M.",
+  "reported_beside": "AUROC of M and of v3_long in 1990-2006 and 2007-2026, to show how much the VIX and NFCI add to prices alone.",
+  "bar": "None. This is a replication, reported whether it agrees or not. It changes no rule."
+ },
+ "what_can_come_out_of_round_2": "At most a proposal to add a separate slow-warning line beside the state, and wording for what Calm has and has not meant. Round 2 cannot change the state rule: round 1 settled that for now."
+}
