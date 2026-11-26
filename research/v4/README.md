@@ -246,3 +246,41 @@ Days within 5% of the 252-day high; 11.1% of them were followed by a 10% fall af
 - On 1927-1985, adding the breadth level to the drawdown level does nothing on all days (-0.016 to +0.019) and helps on near-high days (0.57 against 0.5, +0.005 to +0.137).
 - By the reading fixed beforehand this is **worth recording, not a rule change**: breadth was picked after seeing the data, so these numbers are flattered. The honest next step is to record it live next to the rule and judge it on days that have not happened yet.
 - Open practical point: the 49-industry file is published with a lag of weeks. A live record needs a daily source for industry or sector prices.
+
+## Round 6: can breadth be collected every day?
+
+Fixed beforehand in `preregistration6.json`; numbers in `results6.json` (part F of `scripts/research_v4e.py`).
+
+The 49-industry file is published weeks late. The 11 Select Sector SPDR funds publish a NAV history every day (issuer files, reachable from GitHub Actions; history from 2003-12, nine funds with a 200-day history from 2004-09).
+
+| Check | Needed | Got |
+|---|---|---|
+| Rank correlation with the 49-industry breadth | 0.80 | 0.874 |
+| Near-high AUROC, 2007 on | 0.58 | 0.610 (49 industries on the same days: 0.679) |
+| v3 plus the proxy, gain over v3 | 0.02 | +0.013 (-0.006 to +0.038) |
+
+Two of three. Eleven sectors carry most of the signal but less of it: on all days the proxy scores 0.675 against 0.723. By the reading fixed beforehand the 49-industry measure is the one to record, when its file comes out, and that record is late. The sector-fund measure can be recorded daily beside it as the weaker, timely version.
+
+## Round 7: a second look at the near misses (exploratory)
+
+Asked by the owner. Fixed beforehand in `preregistration7.json`; numbers in `results7.json` (part G). Every candidate was picked because it came close in round 5, so these numbers are flattered.
+
+For reference, v3 scores 0.835 / 0.625 and v3 plus breadth (E1) 0.818 / 0.662, near highs 0.590.
+
+| Candidate | 1990-2006 | 2007 on | Near highs | minus v3, 90% | minus E1, 90% | Fails on |
+|---|---|---|---|---|---|---|
+| G1 v3 + dispersion | 0.837 | 0.645 | 0.553 | -0.003 to +0.046 | -0.047 to +0.014 | test_gain_at_least_0.02_and_interval_above_zero, ladder_rises |
+| G2 v3 + margin-loan growth | 0.820 | 0.651 | 0.555 | -0.007 to +0.067 | -0.058 to +0.035 | test_gain_at_least_0.02_and_interval_above_zero |
+| G3 v3 + 2-year yield rise | 0.816 | 0.631 | 0.506 | -0.020 to +0.032 | -0.058 to -0.005 | test_gain_at_least_0.02_and_interval_above_zero |
+| G4 v3 + breadth + dispersion | 0.825 | 0.675 | 0.608 | +0.019 to +0.084 | -0.006 to +0.031 |  |
+| G5 v3 + breadth + margin-loan growth | 0.805 | 0.680 | 0.620 | +0.020 to +0.096 | -0.011 to +0.049 | train_not_more_than_0.02_below, ladder_rises |
+| G6 v3 + breadth, credit from Baa spread | 0.826 | 0.656 | 0.576 | -0.013 to +0.075 | -0.043 to +0.026 | test_gain_at_least_0.02_and_interval_above_zero, ladder_rises |
+| G7 v3 + breadth + trend | 0.821 | 0.666 | 0.592 | +0.016 to +0.070 | -0.001 to +0.009 | ladder_rises |
+
+- Alone, none of dispersion, margin-loan growth or the rate rise clears the bar. Each is weaker than breadth alone.
+- On top of breadth, nothing is distinguishable from breadth alone. Dispersion comes nearest: -0.006 to +0.031 after 2007 and +0.000 to +0.043 on 1927-1985. It is computed from the same file as breadth, so it costs nothing to record with it.
+- Trend adds nothing to breadth (-0.008 to -0.000 on 1927-1985).
+- Reading credit stress from the Baa spread leaves v3 plus breadth where it was (within 0.01 on both periods), so the verifiable input can be used in whatever is recorded.
+- Rank correlation with breadth since 1990: dispersion 0.33, margin-loan growth 0.089, rate rise -0.063.
+
+**Where this leaves things:** breadth is the one lead. Record it live outside the rule (49 industries when published, sector funds daily, dispersion alongside) and judge it on days that have not happened yet.
