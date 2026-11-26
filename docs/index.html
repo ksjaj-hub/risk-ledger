@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Risk Ledger</title>
+<title>AFMX: what is left after the news</title>
 <meta name="description" content="A public, dated record of market risk states and of the events behind them. Written down before the outcome is known.">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..700&display=swap">
 <style>
@@ -64,19 +64,19 @@ button.row:hover{background:var(--hover)}
 </head>
 <body>
 <header class="bar"><div class="wrap">
-  <div class="brand"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect x=".5" y=".5" width="15" height="15" fill="none" stroke="#e9ebee"/><rect x="0" y="9" width="7" height="7" fill="#e9ebee"/></svg>RISK LEDGER</div>
+  <div class="brand"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect x=".5" y=".5" width="15" height="15" fill="none" stroke="#e9ebee"/><rect x="0" y="9" width="7" height="7" fill="#e9ebee"/></svg>AFMX</div>
   <a href="https://github.com/ksjaj-hub/risk-ledger">Source and full history</a>
 </div></header>
 <main class="wrap">
   <section class="now" aria-live="polite">
-    <div class="lbl">US market risk state</div>
+    <div class="lbl">AFMX · US market risk state</div>
     <div class="state"><span class="name" id="state">…</span><span class="score" id="score"></span></div>
     <div class="scale" id="scale" aria-hidden="true"></div>
     <div class="asof" id="asof"></div>
   </section>
   <section class="comps" id="comps" aria-label="Components"></section>
   <section class="sec"><h2>State changes</h2><p>Recorded automatically each time the state or a component level changes.</p><div id="alerts"></div></section>
-  <section class="sec"><h2>Open event risks</h2><p>Each card says what would have to be true for the risk to count as resolved. Those conditions were written on the date shown, before the outcome was known. Good news that does not meet them is listed too.</p><div id="events"></div></section>
+  <section class="sec"><h2>Open event risks</h2><p>AFMX tracks what is still unresolved after the headlines move on. Each card says what would have to be true for the risk to count as resolved. Those conditions were written on the date shown, before the outcome was known. Good news that does not meet them is listed too.</p><div id="events"></div></section>
   <section class="verify"><h2>How to check that nothing here was changed afterwards</h2>
     <ol><li>Every record is its own dated commit in a <a href="https://github.com/ksjaj-hub/risk-ledger/commits/main">public history</a>.</li>
     <li>Each record contains the fingerprint (SHA-256) of the record before it, so one edit would break the chain.</li>
@@ -95,7 +95,7 @@ fetch("data.json").then(r=>r.json()).then(D=>{
   if(L){
     const si=STATES.indexOf(L.state);
     const st=document.getElementById("state");st.textContent=L.state;st.style.color=COLORS[si];
-    document.getElementById("score").textContent="score "+L.score+" of 100";
+    document.getElementById("score").textContent="AFMX "+L.score+" of 100";
     const sc=document.getElementById("scale");
     STATES.forEach((s,i)=>{const b=$("span");if(i<=si)b.style.background=COLORS[si];sc.append(b)});
     STATES.forEach((s,i)=>sc.append($("small",i===si?"on":"",s)));

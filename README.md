@@ -1,6 +1,8 @@
-# Risk Ledger
+# AFMX risk ledger
 
-A public, dated record of market **risk states**. Started 2026-11-26.
+A public, dated record of market **risk states** and of the events behind them. The score is called AFMX. Started 2026-11-26.
+
+Public page: https://ksjaj-hub.github.io/risk-ledger/
 
 Every day a script reads a small set of public indicators, applies a published, versioned rule, and
 commits the result here. Nothing in `records/`, `alerts/` or a published rule version is ever edited
