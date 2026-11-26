@@ -3,12 +3,13 @@ on:
   workflow_dispatch:
   push:
     branches: ["claude/**"]
-    paths: ["scripts/research_v4.py", "scripts/research_v4b.py", ".github/workflows/research.yml"]
+    paths: ["scripts/research_v4c.py", ".github/workflows/research.yml"]
 permissions:
   contents: write
 jobs:
   run:
     runs-on: ubuntu-latest
+    timeout-minutes: 180
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -18,9 +19,8 @@ jobs:
       - name: Compute
         env:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
-        run: |
-          python scripts/research_v4.py
-          if [ -f scripts/research_v4b.py ]; then python scripts/research_v4b.py; fi
+        # rounds 1 and 2 (research_v4.py, research_v4b.py) are finished; run them by hand if their inputs change
+        run: python scripts/research_v4c.py
       - name: Commit
         run: |
           git config user.name "risk-ledger-bot"
