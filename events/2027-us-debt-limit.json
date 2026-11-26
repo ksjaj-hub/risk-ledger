@@ -1,44 +1,80 @@
 {
-  "schema": 1,
-  "id": "2027-us-debt-limit",
-  "title": "US federal debt limit standoff",
-  "category": "fiscal policy",
-  "markets": [
-    "US"
-  ],
-  "first_recorded": "2026-11-26",
-  "event_started": "2026-11",
-  "status": "open",
-  "what_happened": "The federal borrowing limit of 41.1 trillion dollars is close to being reached. Bank of America analysts estimate it could be reached as early as February (2027 implied), with a central X-date forecast of November 2027 and risk of getting uncomfortably close as early as August 2027. After the midterm elections Democrats will control both chambers of the next Congress and therefore the vote.",
-  "how_it_reaches_markets": "Risk of delayed Treasury payments; distortions in Treasury bill and repo markets near the X-date; sovereign rating downgrade risk.",
-  "sourced_facts": [
-    "2026-11-09: limit 41.1 trillion dollars; about 557 billion dollars of room left (Fortune, citing BofA)",
-    "BofA: limit reached as early as February; X-date forecast November 2027, risk from August 2027 (Fortune)",
-    "BMO warns of a protracted 2027 standoff with downgrade risk (Fortune)"
-  ],
-  "resolution_conditions": {
-    "written_on": "2026-11-26",
-    "resolved_when_all": [
-      "A law raising or suspending the debt limit is signed"
-    ],
-    "worsened_when_any": [
-      "Treasury announces an X-date less than 60 days away with no law passed",
-      "A major rating agency downgrades the US sovereign rating or places it on negative watch citing the debt limit"
-    ]
+ "schema": 1,
+ "id": "2027-us-debt-limit",
+ "title": "US federal debt limit standoff",
+ "category": "fiscal policy",
+ "markets": [
+  "US"
+ ],
+ "first_recorded": "2026-11-26",
+ "event_started": "2026-11",
+ "status": "open",
+ "what_happened": "The federal borrowing limit of 41.1 trillion dollars is close to being reached. Bank of America analysts estimate it could be reached as early as February (2027 implied), with a central X-date forecast of November 2027 and risk of getting uncomfortably close as early as August 2027. After the midterm elections Democrats will control both chambers of the next Congress and therefore the vote.",
+ "how_it_reaches_markets": "Risk of delayed Treasury payments; distortions in Treasury bill and repo markets near the X-date; sovereign rating downgrade risk.",
+ "sourced_facts": [
+  {
+   "text": "The statutory debt limit was raised by $5.0 trillion to $41.1 trillion in July 2025 by P.L. 119-21 (Congressional Research Service, IF10292, updated 2025-12-05)",
+   "url": "https://www.congress.gov/crs_external_products/IF/PDF/IF10292/IF10292.21.pdf",
+   "tier": "primary",
+   "checked": "2026-11-26"
   },
-  "relief_headlines_that_do_not_resolve_it": [
-    "Statements that leaders are 'close to a deal' without a signed law",
-    "Treasury starting extraordinary measures (this postpones the X-date, it does not remove it)"
+  {
+   "text": "2026-11-19: debt subject to limit $40,507,450 million against a statutory limit of $41,103,996 million, leaving about $597 billion (our subtraction) (Daily Treasury Statement, Table III-C)",
+   "url": "https://fiscaldata.treasury.gov/static-data/published-reports/dts/DailyTreasuryStatement_20261119.pdf",
+   "tier": "primary",
+   "checked": "2026-11-26"
+  },
+  {
+   "text": "CRS: projections suggest borrowing will approach the limit sometime in fiscal year 2027, with considerable uncertainty; no date is given",
+   "url": "https://www.congress.gov/crs_external_products/IF/PDF/IF10292/IF10292.21.pdf",
+   "tier": "primary",
+   "checked": "2026-11-26"
+  }
+ ],
+ "resolution_conditions": {
+  "written_on": "2026-11-26",
+  "resolved_when_all": [
+   "A law raising or suspending the debt limit is signed"
   ],
+  "worsened_when_any": [
+   "Treasury announces an X-date less than 60 days away with no law passed",
+   "A major rating agency downgrades the US sovereign rating or places it on negative watch citing the debt limit"
+  ]
+ },
+ "relief_headlines_that_do_not_resolve_it": [
+  "Statements that leaders are 'close to a deal' without a signed law",
+  "Treasury starting extraordinary measures (this postpones the X-date, it does not remove it)"
+ ],
+ "sources": [
+  "https://www.congress.gov/crs_external_products/IF/PDF/IF10292/IF10292.21.pdf",
+  "https://fiscaldata.treasury.gov/static-data/published-reports/dts/DailyTreasuryStatement_20261119.pdf"
+ ],
+ "history": [
+  {
+   "date": "2026-11-26",
+   "status": "open",
+   "note": "Card opened. Resolution conditions written before the outcome is known."
+  },
+  {
+   "date": "2026-11-26",
+   "status": "open",
+   "note": "Sources upgraded. The limit and the remaining room now come from the Congressional Research Service and the Daily Treasury Statement. The room figure changes from about $557 billion (a bank estimate dated 2026-11-09) to about $597 billion (Treasury, 2026-11-19); the dates differ, so this is an update rather than a contradiction. Bank forecasts of the timing were moved to unconfirmed_facts."
+  }
+ ],
+ "note": "Risk state only. Not a forecast and not investment advice.",
+ "unconfirmed_facts": [
+  "Bank forecasts (limit reached as early as February 2027; X-date November 2027 with risk from August) and the downgrade warning: from a magazine article citing bank research; originals not read. Treasury has not published a date in the sources read"
+ ],
+ "superseded_sources": {
+  "replaced_on": "2026-11-26",
+  "reason": "Source rule of 2026-11-26: at least one primary source per card; commentary, blogs and reposts are not used as support",
   "sources": [
-    "https://fortune.com/2026/11/09/us-debt-limit-outlook-xdate-deadline-default-congress-summer-recess/"
+   "https://fortune.com/2026/11/09/us-debt-limit-outlook-xdate-deadline-default-congress-summer-recess/"
   ],
-  "history": [
-    {
-      "date": "2026-11-26",
-      "status": "open",
-      "note": "Card opened. Resolution conditions written before the outcome is known."
-    }
-  ],
-  "note": "Risk state only. Not a forecast and not investment advice."
+  "facts_as_first_written": [
+   "2026-11-09: limit 41.1 trillion dollars; about 557 billion dollars of room left (Fortune, citing BofA)",
+   "BofA: limit reached as early as February; X-date forecast November 2027, risk from August 2027 (Fortune)",
+   "BMO warns of a protracted 2027 standoff with downgrade risk (Fortune)"
+  ]
+ }
 }

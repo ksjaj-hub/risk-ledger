@@ -195,9 +195,18 @@
    "what_happened": "October 2026 data showed retail sales growth of 0.4% year over year, fixed-asset investment down 8.1% for January to October, and property development investment down 21.6%.",
    "how_it_reaches_markets": "Weaker demand for commodities and for foreign companies selling into China; pressure on Chinese and Hong Kong shares; deflationary pressure exported through cheap goods, which also feeds the tariff dispute.",
    "sourced_facts": [
-    "October 2026: industrial output +4.8% y/y (from 5.5%); retail sales +0.4% (from 1.1%) (T. Rowe Price)",
-    "January to October 2026: fixed-asset investment -8.1%; property development investment -21.6% (T. Rowe Price)",
-    "Week ending 2026-11-20: Hang Seng -5.19%, CSI 300 -1.54% (T. Rowe Price)"
+    {
+     "text": "October 2026: value added of industry above designated size +4.8% y/y; retail sales of consumer goods +0.4% y/y (National Bureau of Statistics, released 2026-11-16)",
+     "url": "https://www.stats.gov.cn/english/PressRelease//202611/t20261116_1965843.html",
+     "tier": "primary",
+     "checked": "2026-11-26"
+    },
+    {
+     "text": "January to October 2026: fixed-asset investment -8.1% y/y; real estate development investment -21.6% y/y (National Bureau of Statistics)",
+     "url": "https://www.stats.gov.cn/english/PressRelease//202611/t20261116_1965843.html",
+     "tier": "primary",
+     "checked": "2026-11-26"
+    }
    ],
    "resolution_conditions": {
     "written_on": "2026-11-26",
@@ -214,16 +223,37 @@
     "Announcements of stimulus without subsequent improvement in the monthly data"
    ],
    "sources": [
-    "https://www.troweprice.com/personal-investing/resources/insights/global-markets-weekly-update.html"
+    "https://www.stats.gov.cn/english/PressRelease//202611/t20261116_1965843.html"
    ],
    "history": [
     {
      "date": "2026-11-26",
      "status": "open",
      "note": "Card opened. Resolution conditions written before the outcome is known."
+    },
+    {
+     "date": "2026-11-26",
+     "status": "open",
+     "note": "Sources upgraded. The four October activity figures were confirmed on the National Bureau of Statistics release. The September comparison figures and the weekly index moves are not yet confirmed at an accepted source and were moved to unconfirmed_facts."
     }
    ],
    "note": "Risk state only. Not a forecast and not investment advice.",
+   "unconfirmed_facts": [
+    "September comparison figures (industrial output 5.5%, retail sales 1.1%): not stated in the NBS October release; not yet checked against the September release",
+    "Week ending 2026-11-20: Hang Seng -5.19%, CSI 300 -1.54%: originally from a fund manager's weekly note; not yet confirmed at a primary or wire source"
+   ],
+   "superseded_sources": {
+    "replaced_on": "2026-11-26",
+    "reason": "Source rule of 2026-11-26: at least one primary source per card; commentary, blogs and reposts are not used as support",
+    "sources": [
+     "https://www.troweprice.com/personal-investing/resources/insights/global-markets-weekly-update.html"
+    ],
+    "facts_as_first_written": [
+     "October 2026: industrial output +4.8% y/y (from 5.5%); retail sales +0.4% (from 1.1%) (T. Rowe Price)",
+     "January to October 2026: fixed-asset investment -8.1%; property development investment -21.6% (T. Rowe Price)",
+     "Week ending 2026-11-20: Hang Seng -5.19%, CSI 300 -1.54% (T. Rowe Price)"
+    ]
+   },
    "_path": "events/2026-china-domestic-demand-property.json"
   },
   {
@@ -287,8 +317,18 @@
    "what_happened": "A strong October jobs report, hot inflation data and hawkish Fed minutes pushed markets to price a rate hike in December 2026 and further hikes in the first half of 2027.",
    "how_it_reaches_markets": "Higher discount rates for equities; tighter financing conditions; pressure on highly indebted borrowers.",
    "sourced_facts": [
-    "2026-11-20: CME FedWatch priced a 92% chance of a December hike; odds of two or more hikes by June 2027 above 80% (Schwab)",
-    "2026-11-25: October inflation reported as having 'increased further'; Q3 growth revised up (ABC)"
+    {
+     "text": "2026-10-28: the FOMC kept the federal funds target range at 3-3/4 to 4 percent by a 10-2 vote; the two dissenters preferred a quarter-point increase; the statement says inflation remains elevated",
+     "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+     "tier": "primary",
+     "checked": "2026-11-26"
+    },
+    {
+     "text": "October 2026 CPI (released 2026-11-10): all items +0.4% on the month, core +0.3%, seasonally adjusted. BLS did not publish 12-month changes for October because October 2025 data are missing after the 2025 appropriations lapse",
+     "url": "https://www.bls.gov/news.release/cpi.nr0.htm",
+     "tier": "primary",
+     "checked": "2026-11-26"
+    }
    ],
    "resolution_conditions": {
     "written_on": "2026-11-26",
@@ -305,17 +345,38 @@
     "A hike that was fully priced in being delivered as expected"
    ],
    "sources": [
-    "https://www.schwab.com/learn/story/market-volatility",
-    "https://www.abc.net.au/news/2026-11-26/nasdaq-ai-tariffs-rattle-markets/107428016"
+    "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+    "https://www.bls.gov/news.release/cpi.nr0.htm"
    ],
    "history": [
     {
      "date": "2026-11-26",
      "status": "open",
      "note": "Card opened. Resolution conditions written before the outcome is known."
+    },
+    {
+     "date": "2026-11-26",
+     "status": "open",
+     "note": "Sources upgraded. The policy rate and the dissents now come from the Federal Reserve statement and the monthly price change from the Bureau of Labor Statistics. Market-implied odds and the 2026-11-25 data wording were moved to unconfirmed_facts."
     }
    ],
    "note": "Risk state only. Not a forecast and not investment advice.",
+   "unconfirmed_facts": [
+    "2026-11-20: CME FedWatch 92% chance of a December hike and above 80% for two or more by June 2027: taken from a broker commentary; CME itself not read",
+    "2026-11-25: October inflation 'increased further' and Q3 growth revised up: the data release behind this wording has not been identified (likely the PCE and GDP releases from the Bureau of Economic Analysis)"
+   ],
+   "superseded_sources": {
+    "replaced_on": "2026-11-26",
+    "reason": "Source rule of 2026-11-26: at least one primary source per card; commentary, blogs and reposts are not used as support",
+    "sources": [
+     "https://www.schwab.com/learn/story/market-volatility",
+     "https://www.abc.net.au/news/2026-11-26/nasdaq-ai-tariffs-rattle-markets/107428016"
+    ],
+    "facts_as_first_written": [
+     "2026-11-20: CME FedWatch priced a 92% chance of a December hike; odds of two or more hikes by June 2027 above 80% (Schwab)",
+     "2026-11-25: October inflation reported as having 'increased further'; Q3 growth revised up (ABC)"
+    ]
+   },
    "_path": "events/2026-fed-rate-hikes.json"
   },
   {
@@ -333,11 +394,12 @@
    "what_happened": "The Bank of Japan raised its policy rate to 1.25% in September 2026 and its governor said on 2026-11-19 that it should keep raising rates. The yen briefly weakened past 160 per dollar on 2026-11-12. The Nikkei 225 fell about 5.1% on 2026-11-20 in what was described as one of the largest declines in its history.",
    "how_it_reaches_markets": "Higher Japanese yields can pull Japanese capital home from US and other foreign bonds; sharp yen moves can force unwinding of yen-funded positions; possible currency intervention.",
    "sourced_facts": [
-    "2026-11-20: Nikkei 225 -3,007.81 points (about -5.1%) to 56,436.65 (News On Japan)",
-    "2026-11-12: USD/JPY briefly above 160 in New York (MUFG)",
-    "Policy rate 1.25% since September; a majority in a Reuters survey released 2026-11-20 expect 1.5% in December (News On Japan)",
-    "10-year JGB yield about 2.80% (T. Rowe Price, News On Japan)",
-    "Q3 GDP annualised -0.1% against +0.2% expected (T. Rowe Price)"
+    {
+     "text": "2026-09-18: Bank of Japan set the guideline for the uncollateralized overnight call rate at around 1.25 percent, effective 2026-09-24, by a 7-2 vote; the statement says the Bank will continue to raise the policy interest rate",
+     "url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260918a.pdf",
+     "tier": "primary",
+     "checked": "2026-11-26"
+    }
    ],
    "resolution_conditions": {
     "written_on": "2026-11-26",
@@ -356,18 +418,44 @@
     "Verbal warnings by officials against excessive currency moves"
    ],
    "sources": [
-    "https://newsonjapan.com/article/151493.php",
-    "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-16-november-2026",
-    "https://www.troweprice.com/personal-investing/resources/insights/global-markets-weekly-update.html"
+    "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260918a.pdf"
    ],
    "history": [
     {
      "date": "2026-11-26",
      "status": "open",
      "note": "Card opened. Resolution conditions written before the outcome is known."
+    },
+    {
+     "date": "2026-11-26",
+     "status": "open",
+     "note": "Sources upgraded. The policy rate is confirmed on the Bank of Japan statement. Market levels, the survey and GDP are not yet confirmed at an accepted source and were moved to unconfirmed_facts."
     }
    ],
    "note": "Risk state only. Not a forecast and not investment advice.",
+   "unconfirmed_facts": [
+    "2026-11-20: Nikkei 225 -3,007.81 points to 56,436.65: not yet confirmed at a primary or wire source",
+    "2026-11-12: USD/JPY briefly above 160: not yet confirmed (the Federal Reserve H.10 daily rate can settle the closing level, not the intraday high)",
+    "Reuters survey released 2026-11-20 expecting 1.5% in December: original not read",
+    "10-year JGB yield about 2.80%: not yet confirmed at the Ministry of Finance",
+    "Q3 GDP annualised -0.1%: several outlets report it; the Cabinet Office release itself has not been read. The consensus figure differs between outlets (+0.2% in the original source, +0.3% elsewhere)"
+   ],
+   "superseded_sources": {
+    "replaced_on": "2026-11-26",
+    "reason": "Source rule of 2026-11-26: at least one primary source per card; commentary, blogs and reposts are not used as support",
+    "sources": [
+     "https://newsonjapan.com/article/151493.php",
+     "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-16-november-2026",
+     "https://www.troweprice.com/personal-investing/resources/insights/global-markets-weekly-update.html"
+    ],
+    "facts_as_first_written": [
+     "2026-11-20: Nikkei 225 -3,007.81 points (about -5.1%) to 56,436.65 (News On Japan)",
+     "2026-11-12: USD/JPY briefly above 160 in New York (MUFG)",
+     "Policy rate 1.25% since September; a majority in a Reuters survey released 2026-11-20 expect 1.5% in December (News On Japan)",
+     "10-year JGB yield about 2.80% (T. Rowe Price, News On Japan)",
+     "Q3 GDP annualised -0.1% against +0.2% expected (T. Rowe Price)"
+    ]
+   },
    "_path": "events/2026-japan-boj-tightening-yen.json"
   },
   {
@@ -384,9 +472,18 @@
    "what_happened": "Reuters reported late on 2026-11-20 that the SEC is investigating Nvidia's accounting practices. Jensen Huang's sudden departure was reported the same week; his return as CEO was reported in the week of 2026-11-23.",
    "how_it_reaches_markets": "Nvidia's index weight and its role as a bellwether for AI demand; uncertainty about reported results; possible chip-export restrictions.",
    "sourced_facts": [
-    "2026-11-20: Reuters report of SEC inquiry into Nvidia accounting, as cited by Schwab",
-    "Week of 2026-11-23: Huang's return as CEO reported; described as a 'temporary reprieve' (ABC/Reuters)",
-    "2026-11-25: Nvidia -8.7% in early trading (ABC)"
+    {
+     "text": "2026-11-23: Nvidia's board reinstated Jensen Huang as President, CEO and director, effective immediately; Colette Kress had served as interim CEO (company press release filed with the SEC)",
+     "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000090/nov23pressrelease.htm",
+     "tier": "primary",
+     "checked": "2026-11-26"
+    },
+    {
+     "text": "The same release refers to 'ongoing government investigations and inquiries' without naming an agency, and to an independent-director committee review after reporting that Mr. Huang had been the target of a foreign intelligence effort",
+     "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000090/nov23pressrelease.htm",
+     "tier": "primary",
+     "checked": "2026-11-26"
+    }
    ],
    "resolution_conditions": {
     "written_on": "2026-11-26",
@@ -403,18 +500,39 @@
     "The CEO's return: the reported accounting inquiry is unchanged by it (press described the return as a temporary reprieve)"
    ],
    "sources": [
-    "https://www.schwab.com/learn/story/market-volatility",
-    "https://www.abc.net.au/news/2026-11-26/nasdaq-ai-tariffs-rattle-markets/107428016",
-    "https://finance.yahoo.com/markets/stocks/articles/stocks-retreat-ai-rebound-stumbles-015155560.html"
+    "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000090/nov23pressrelease.htm"
    ],
    "history": [
     {
      "date": "2026-11-26",
      "status": "open",
      "note": "Card opened. Resolution conditions written before the outcome is known."
+    },
+    {
+     "date": "2026-11-26",
+     "status": "open",
+     "note": "Sources upgraded and a correction recorded. Huang's reinstatement on 2026-11-23 is confirmed by the company's SEC-filed release. The original statement that Reuters reported on 2026-11-20 an SEC investigation of accounting practices is not confirmed as written: the wire text read says the WSJ reported an SEC probe on 2026-11-17 and does not state its subject. what_happened is left as first written; read it with this note."
     }
    ],
    "note": "Risk state only. Not a forecast and not investment advice.",
+   "unconfirmed_facts": [
+    "SEC probe: a Reuters dispatch dated 2026-11-17 says the Wall Street Journal reported the SEC is probing Nvidia after Huang's resignation. The dispatch does not say the probe concerns accounting. The card's original wording (Reuters report on 2026-11-20 of an inquiry into accounting practices) is therefore not confirmed as written; only a wire reprint was read, not the Reuters or WSJ original",
+    "2026-11-25: Nvidia -8.7% in early trading: not yet confirmed at a primary or wire source"
+   ],
+   "superseded_sources": {
+    "replaced_on": "2026-11-26",
+    "reason": "Source rule of 2026-11-26: at least one primary source per card; commentary, blogs and reposts are not used as support",
+    "sources": [
+     "https://www.schwab.com/learn/story/market-volatility",
+     "https://www.abc.net.au/news/2026-11-26/nasdaq-ai-tariffs-rattle-markets/107428016",
+     "https://finance.yahoo.com/markets/stocks/articles/stocks-retreat-ai-rebound-stumbles-015155560.html"
+    ],
+    "facts_as_first_written": [
+     "2026-11-20: Reuters report of SEC inquiry into Nvidia accounting, as cited by Schwab",
+     "Week of 2026-11-23: Huang's return as CEO reported; described as a 'temporary reprieve' (ABC/Reuters)",
+     "2026-11-25: Nvidia -8.7% in early trading (ABC)"
+    ]
+   },
    "_path": "events/2026-nvidia-sec-and-leadership.json"
   },
   {
@@ -435,9 +553,12 @@
    "what_happened": "The US Commerce Department announced rules requiring licences for certain shipments of advanced AI chips to overseas data centers that provide substantial computing power to specified Chinese entities. Press reports say TSMC and Samsung Electronics suspended some shipments to Chinese customers pending licences.",
    "how_it_reaches_markets": "Lost or delayed sales for chip makers and equipment makers; retaliation risk; adds to pressure on AI-linked shares.",
    "sourced_facts": [
-    "Commerce Department announcement in the week ending 2026-11-20; exact date not stated in source (T. Rowe Price)",
-    "FT: TSMC and Samsung suspended some chip shipments to Chinese customers pending US licences; Reuters: TSMC halting certain advanced-node orders (both as cited by T. Rowe Price)",
-    "ASML and Infineon shares fell on concerns over tighter US chip export restrictions (T. Rowe Price)"
+    {
+     "text": "Background: a Bureau of Industry and Security final rule published 2026-01-15 moved certain advanced computing chips for China and Macau from presumption of denial to case-by-case licence review, with conditions",
+     "url": "https://public-inspection.federalregister.gov/2026-00789.pdf",
+     "tier": "primary",
+     "checked": "2026-11-26"
+    }
    ],
    "resolution_conditions": {
     "written_on": "2026-11-26",
@@ -453,16 +574,37 @@
     "Reports that licences 'will be granted' without confirmed resumed shipments"
    ],
    "sources": [
-    "https://www.troweprice.com/personal-investing/resources/insights/global-markets-weekly-update.html"
+    "https://public-inspection.federalregister.gov/2026-00789.pdf"
    ],
    "history": [
     {
      "date": "2026-11-26",
      "status": "open",
      "note": "Card opened. Resolution conditions written before the outcome is known."
+    },
+    {
+     "date": "2026-11-26",
+     "status": "open",
+     "note": "Sources upgraded in part. Only the January 2026 rule has been read at the primary source. The November 2026 rule is known so far only through a wire reprint, which gives an effective date of 2026-11-19; the Federal Register text is still to be found. The reprint is not listed as a source under the source rule."
     }
    ],
    "note": "Risk state only. Not a forecast and not investment advice.",
+   "unconfirmed_facts": [
+    "November rule: a Reuters dispatch (read as a reprint dated 2026-11-20) says new Commerce Department rules took effect on 2026-11-19 and removed a compliance route that let some Chinese chip designers use advanced manufacturing without individual licences; TSMC is suspending some orders at 16 nm and below unless customers obtain licences; the FT reported TSMC and Samsung had suspended some shipments. The rule text itself (Federal Register) has not been located",
+    "ASML and Infineon share falls: not confirmed at an accepted source"
+   ],
+   "superseded_sources": {
+    "replaced_on": "2026-11-26",
+    "reason": "Source rule of 2026-11-26: at least one primary source per card; commentary, blogs and reposts are not used as support",
+    "sources": [
+     "https://www.troweprice.com/personal-investing/resources/insights/global-markets-weekly-update.html"
+    ],
+    "facts_as_first_written": [
+     "Commerce Department announcement in the week ending 2026-11-20; exact date not stated in source (T. Rowe Price)",
+     "FT: TSMC and Samsung suspended some chip shipments to Chinese customers pending US licences; Reuters: TSMC halting certain advanced-node orders (both as cited by T. Rowe Price)",
+     "ASML and Infineon shares fell on concerns over tighter US chip export restrictions (T. Rowe Price)"
+    ]
+   },
    "_path": "events/2026-us-ai-chip-export-rules.json"
   },
   {
@@ -663,9 +805,24 @@
    "what_happened": "The federal borrowing limit of 41.1 trillion dollars is close to being reached. Bank of America analysts estimate it could be reached as early as February (2027 implied), with a central X-date forecast of November 2027 and risk of getting uncomfortably close as early as August 2027. After the midterm elections Democrats will control both chambers of the next Congress and therefore the vote.",
    "how_it_reaches_markets": "Risk of delayed Treasury payments; distortions in Treasury bill and repo markets near the X-date; sovereign rating downgrade risk.",
    "sourced_facts": [
-    "2026-11-09: limit 41.1 trillion dollars; about 557 billion dollars of room left (Fortune, citing BofA)",
-    "BofA: limit reached as early as February; X-date forecast November 2027, risk from August 2027 (Fortune)",
-    "BMO warns of a protracted 2027 standoff with downgrade risk (Fortune)"
+    {
+     "text": "The statutory debt limit was raised by $5.0 trillion to $41.1 trillion in July 2025 by P.L. 119-21 (Congressional Research Service, IF10292, updated 2025-12-05)",
+     "url": "https://www.congress.gov/crs_external_products/IF/PDF/IF10292/IF10292.21.pdf",
+     "tier": "primary",
+     "checked": "2026-11-26"
+    },
+    {
+     "text": "2026-11-19: debt subject to limit $40,507,450 million against a statutory limit of $41,103,996 million, leaving about $597 billion (our subtraction) (Daily Treasury Statement, Table III-C)",
+     "url": "https://fiscaldata.treasury.gov/static-data/published-reports/dts/DailyTreasuryStatement_20261119.pdf",
+     "tier": "primary",
+     "checked": "2026-11-26"
+    },
+    {
+     "text": "CRS: projections suggest borrowing will approach the limit sometime in fiscal year 2027, with considerable uncertainty; no date is given",
+     "url": "https://www.congress.gov/crs_external_products/IF/PDF/IF10292/IF10292.21.pdf",
+     "tier": "primary",
+     "checked": "2026-11-26"
+    }
    ],
    "resolution_conditions": {
     "written_on": "2026-11-26",
@@ -682,16 +839,37 @@
     "Treasury starting extraordinary measures (this postpones the X-date, it does not remove it)"
    ],
    "sources": [
-    "https://fortune.com/2026/11/09/us-debt-limit-outlook-xdate-deadline-default-congress-summer-recess/"
+    "https://www.congress.gov/crs_external_products/IF/PDF/IF10292/IF10292.21.pdf",
+    "https://fiscaldata.treasury.gov/static-data/published-reports/dts/DailyTreasuryStatement_20261119.pdf"
    ],
    "history": [
     {
      "date": "2026-11-26",
      "status": "open",
      "note": "Card opened. Resolution conditions written before the outcome is known."
+    },
+    {
+     "date": "2026-11-26",
+     "status": "open",
+     "note": "Sources upgraded. The limit and the remaining room now come from the Congressional Research Service and the Daily Treasury Statement. The room figure changes from about $557 billion (a bank estimate dated 2026-11-09) to about $597 billion (Treasury, 2026-11-19); the dates differ, so this is an update rather than a contradiction. Bank forecasts of the timing were moved to unconfirmed_facts."
     }
    ],
    "note": "Risk state only. Not a forecast and not investment advice.",
+   "unconfirmed_facts": [
+    "Bank forecasts (limit reached as early as February 2027; X-date November 2027 with risk from August) and the downgrade warning: from a magazine article citing bank research; originals not read. Treasury has not published a date in the sources read"
+   ],
+   "superseded_sources": {
+    "replaced_on": "2026-11-26",
+    "reason": "Source rule of 2026-11-26: at least one primary source per card; commentary, blogs and reposts are not used as support",
+    "sources": [
+     "https://fortune.com/2026/11/09/us-debt-limit-outlook-xdate-deadline-default-congress-summer-recess/"
+    ],
+    "facts_as_first_written": [
+     "2026-11-09: limit 41.1 trillion dollars; about 557 billion dollars of room left (Fortune, citing BofA)",
+     "BofA: limit reached as early as February; X-date forecast November 2027, risk from August 2027 (Fortune)",
+     "BMO warns of a protracted 2027 standoff with downgrade risk (Fortune)"
+    ]
+   },
    "_path": "events/2027-us-debt-limit.json"
   }
  ],

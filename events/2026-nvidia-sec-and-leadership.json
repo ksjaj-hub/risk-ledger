@@ -1,46 +1,76 @@
 {
-  "schema": 1,
-  "id": "2026-nvidia-sec-and-leadership",
-  "title": "Nvidia: reported SEC accounting inquiry and CEO turmoil",
-  "category": "company",
-  "markets": [
-    "US"
-  ],
-  "first_recorded": "2026-11-26",
-  "event_started": "2026-11-20",
-  "status": "open",
-  "what_happened": "Reuters reported late on 2026-11-20 that the SEC is investigating Nvidia's accounting practices. Jensen Huang's sudden departure was reported the same week; his return as CEO was reported in the week of 2026-11-23.",
-  "how_it_reaches_markets": "Nvidia's index weight and its role as a bellwether for AI demand; uncertainty about reported results; possible chip-export restrictions.",
-  "sourced_facts": [
-    "2026-11-20: Reuters report of SEC inquiry into Nvidia accounting, as cited by Schwab",
-    "Week of 2026-11-23: Huang's return as CEO reported; described as a 'temporary reprieve' (ABC/Reuters)",
-    "2026-11-25: Nvidia -8.7% in early trading (ABC)"
-  ],
-  "resolution_conditions": {
-    "written_on": "2026-11-26",
-    "resolved_when_all": [
-      "The SEC inquiry is publicly closed without enforcement action, or settled with terms disclosed",
-      "Nvidia files its next periodic report on time with no restatement of prior results"
-    ],
-    "worsened_when_any": [
-      "Nvidia announces a restatement or delays a periodic filing",
-      "The SEC or DOJ announces formal charges"
-    ]
+ "schema": 1,
+ "id": "2026-nvidia-sec-and-leadership",
+ "title": "Nvidia: reported SEC accounting inquiry and CEO turmoil",
+ "category": "company",
+ "markets": [
+  "US"
+ ],
+ "first_recorded": "2026-11-26",
+ "event_started": "2026-11-20",
+ "status": "open",
+ "what_happened": "Reuters reported late on 2026-11-20 that the SEC is investigating Nvidia's accounting practices. Jensen Huang's sudden departure was reported the same week; his return as CEO was reported in the week of 2026-11-23.",
+ "how_it_reaches_markets": "Nvidia's index weight and its role as a bellwether for AI demand; uncertainty about reported results; possible chip-export restrictions.",
+ "sourced_facts": [
+  {
+   "text": "2026-11-23: Nvidia's board reinstated Jensen Huang as President, CEO and director, effective immediately; Colette Kress had served as interim CEO (company press release filed with the SEC)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000090/nov23pressrelease.htm",
+   "tier": "primary",
+   "checked": "2026-11-26"
   },
-  "relief_headlines_that_do_not_resolve_it": [
-    "The CEO's return: the reported accounting inquiry is unchanged by it (press described the return as a temporary reprieve)"
+  {
+   "text": "The same release refers to 'ongoing government investigations and inquiries' without naming an agency, and to an independent-director committee review after reporting that Mr. Huang had been the target of a foreign intelligence effort",
+   "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000090/nov23pressrelease.htm",
+   "tier": "primary",
+   "checked": "2026-11-26"
+  }
+ ],
+ "resolution_conditions": {
+  "written_on": "2026-11-26",
+  "resolved_when_all": [
+   "The SEC inquiry is publicly closed without enforcement action, or settled with terms disclosed",
+   "Nvidia files its next periodic report on time with no restatement of prior results"
   ],
+  "worsened_when_any": [
+   "Nvidia announces a restatement or delays a periodic filing",
+   "The SEC or DOJ announces formal charges"
+  ]
+ },
+ "relief_headlines_that_do_not_resolve_it": [
+  "The CEO's return: the reported accounting inquiry is unchanged by it (press described the return as a temporary reprieve)"
+ ],
+ "sources": [
+  "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000090/nov23pressrelease.htm"
+ ],
+ "history": [
+  {
+   "date": "2026-11-26",
+   "status": "open",
+   "note": "Card opened. Resolution conditions written before the outcome is known."
+  },
+  {
+   "date": "2026-11-26",
+   "status": "open",
+   "note": "Sources upgraded and a correction recorded. Huang's reinstatement on 2026-11-23 is confirmed by the company's SEC-filed release. The original statement that Reuters reported on 2026-11-20 an SEC investigation of accounting practices is not confirmed as written: the wire text read says the WSJ reported an SEC probe on 2026-11-17 and does not state its subject. what_happened is left as first written; read it with this note."
+  }
+ ],
+ "note": "Risk state only. Not a forecast and not investment advice.",
+ "unconfirmed_facts": [
+  "SEC probe: a Reuters dispatch dated 2026-11-17 says the Wall Street Journal reported the SEC is probing Nvidia after Huang's resignation. The dispatch does not say the probe concerns accounting. The card's original wording (Reuters report on 2026-11-20 of an inquiry into accounting practices) is therefore not confirmed as written; only a wire reprint was read, not the Reuters or WSJ original",
+  "2026-11-25: Nvidia -8.7% in early trading: not yet confirmed at a primary or wire source"
+ ],
+ "superseded_sources": {
+  "replaced_on": "2026-11-26",
+  "reason": "Source rule of 2026-11-26: at least one primary source per card; commentary, blogs and reposts are not used as support",
   "sources": [
-    "https://www.schwab.com/learn/story/market-volatility",
-    "https://www.abc.net.au/news/2026-11-26/nasdaq-ai-tariffs-rattle-markets/107428016",
-    "https://finance.yahoo.com/markets/stocks/articles/stocks-retreat-ai-rebound-stumbles-015155560.html"
+   "https://www.schwab.com/learn/story/market-volatility",
+   "https://www.abc.net.au/news/2026-11-26/nasdaq-ai-tariffs-rattle-markets/107428016",
+   "https://finance.yahoo.com/markets/stocks/articles/stocks-retreat-ai-rebound-stumbles-015155560.html"
   ],
-  "history": [
-    {
-      "date": "2026-11-26",
-      "status": "open",
-      "note": "Card opened. Resolution conditions written before the outcome is known."
-    }
-  ],
-  "note": "Risk state only. Not a forecast and not investment advice."
+  "facts_as_first_written": [
+   "2026-11-20: Reuters report of SEC inquiry into Nvidia accounting, as cited by Schwab",
+   "Week of 2026-11-23: Huang's return as CEO reported; described as a 'temporary reprieve' (ABC/Reuters)",
+   "2026-11-25: Nvidia -8.7% in early trading (ABC)"
+  ]
+ }
 }

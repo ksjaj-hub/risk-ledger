@@ -1,47 +1,71 @@
 {
-  "schema": 1,
-  "id": "2026-us-ai-chip-export-rules",
-  "title": "New US licence rules on advanced AI chip shipments",
-  "category": "trade policy",
-  "markets": [
-    "US",
-    "TW",
-    "KR",
-    "EU",
-    "CN"
+ "schema": 1,
+ "id": "2026-us-ai-chip-export-rules",
+ "title": "New US licence rules on advanced AI chip shipments",
+ "category": "trade policy",
+ "markets": [
+  "US",
+  "TW",
+  "KR",
+  "EU",
+  "CN"
+ ],
+ "first_recorded": "2026-11-26",
+ "event_started": "2026-11 (week ending 2026-11-20)",
+ "status": "open",
+ "what_happened": "The US Commerce Department announced rules requiring licences for certain shipments of advanced AI chips to overseas data centers that provide substantial computing power to specified Chinese entities. Press reports say TSMC and Samsung Electronics suspended some shipments to Chinese customers pending licences.",
+ "how_it_reaches_markets": "Lost or delayed sales for chip makers and equipment makers; retaliation risk; adds to pressure on AI-linked shares.",
+ "sourced_facts": [
+  {
+   "text": "Background: a Bureau of Industry and Security final rule published 2026-01-15 moved certain advanced computing chips for China and Macau from presumption of denial to case-by-case licence review, with conditions",
+   "url": "https://public-inspection.federalregister.gov/2026-00789.pdf",
+   "tier": "primary",
+   "checked": "2026-11-26"
+  }
+ ],
+ "resolution_conditions": {
+  "written_on": "2026-11-26",
+  "resolved_when_all": [
+   "The rules are published in final form with licence criteria, AND at least one major supplier publicly confirms that suspended shipments have resumed under licence"
   ],
-  "first_recorded": "2026-11-26",
-  "event_started": "2026-11 (week ending 2026-11-20)",
-  "status": "open",
-  "what_happened": "The US Commerce Department announced rules requiring licences for certain shipments of advanced AI chips to overseas data centers that provide substantial computing power to specified Chinese entities. Press reports say TSMC and Samsung Electronics suspended some shipments to Chinese customers pending licences.",
-  "how_it_reaches_markets": "Lost or delayed sales for chip makers and equipment makers; retaliation risk; adds to pressure on AI-linked shares.",
-  "sourced_facts": [
-    "Commerce Department announcement in the week ending 2026-11-20; exact date not stated in source (T. Rowe Price)",
-    "FT: TSMC and Samsung suspended some chip shipments to Chinese customers pending US licences; Reuters: TSMC halting certain advanced-node orders (both as cited by T. Rowe Price)",
-    "ASML and Infineon shares fell on concerns over tighter US chip export restrictions (T. Rowe Price)"
-  ],
-  "resolution_conditions": {
-    "written_on": "2026-11-26",
-    "resolved_when_all": [
-      "The rules are published in final form with licence criteria, AND at least one major supplier publicly confirms that suspended shipments have resumed under licence"
-    ],
-    "worsened_when_any": [
-      "China announces retaliatory export or import restrictions citing the rules",
-      "The rules are widened to cover additional chip categories or countries"
-    ]
+  "worsened_when_any": [
+   "China announces retaliatory export or import restrictions citing the rules",
+   "The rules are widened to cover additional chip categories or countries"
+  ]
+ },
+ "relief_headlines_that_do_not_resolve_it": [
+  "Reports that licences 'will be granted' without confirmed resumed shipments"
+ ],
+ "sources": [
+  "https://public-inspection.federalregister.gov/2026-00789.pdf"
+ ],
+ "history": [
+  {
+   "date": "2026-11-26",
+   "status": "open",
+   "note": "Card opened. Resolution conditions written before the outcome is known."
   },
-  "relief_headlines_that_do_not_resolve_it": [
-    "Reports that licences 'will be granted' without confirmed resumed shipments"
-  ],
+  {
+   "date": "2026-11-26",
+   "status": "open",
+   "note": "Sources upgraded in part. Only the January 2026 rule has been read at the primary source. The November 2026 rule is known so far only through a wire reprint, which gives an effective date of 2026-11-19; the Federal Register text is still to be found. The reprint is not listed as a source under the source rule."
+  }
+ ],
+ "note": "Risk state only. Not a forecast and not investment advice.",
+ "unconfirmed_facts": [
+  "November rule: a Reuters dispatch (read as a reprint dated 2026-11-20) says new Commerce Department rules took effect on 2026-11-19 and removed a compliance route that let some Chinese chip designers use advanced manufacturing without individual licences; TSMC is suspending some orders at 16 nm and below unless customers obtain licences; the FT reported TSMC and Samsung had suspended some shipments. The rule text itself (Federal Register) has not been located",
+  "ASML and Infineon share falls: not confirmed at an accepted source"
+ ],
+ "superseded_sources": {
+  "replaced_on": "2026-11-26",
+  "reason": "Source rule of 2026-11-26: at least one primary source per card; commentary, blogs and reposts are not used as support",
   "sources": [
-    "https://www.troweprice.com/personal-investing/resources/insights/global-markets-weekly-update.html"
+   "https://www.troweprice.com/personal-investing/resources/insights/global-markets-weekly-update.html"
   ],
-  "history": [
-    {
-      "date": "2026-11-26",
-      "status": "open",
-      "note": "Card opened. Resolution conditions written before the outcome is known."
-    }
-  ],
-  "note": "Risk state only. Not a forecast and not investment advice."
+  "facts_as_first_written": [
+   "Commerce Department announcement in the week ending 2026-11-20; exact date not stated in source (T. Rowe Price)",
+   "FT: TSMC and Samsung suspended some chip shipments to Chinese customers pending US licences; Reuters: TSMC halting certain advanced-node orders (both as cited by T. Rowe Price)",
+   "ASML and Infineon shares fell on concerns over tighter US chip export restrictions (T. Rowe Price)"
+  ]
+ }
 }
