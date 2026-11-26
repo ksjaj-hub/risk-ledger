@@ -9,7 +9,7 @@
  "first_recorded": "2026-11-26",
  "event_started": "2026-11",
  "status": "open",
- "what_happened": "Current federal appropriations run out on 2026-12-11, during the lame-duck session before the new Congress convenes in January 2027. A funding bill needs 60 votes in the Senate.",
+ "what_happened": "Current federal appropriations run out on 2026-12-11 under Public Law 119-103, during the lame-duck session before the new Congress convenes in January 2027.",
  "how_it_reaches_markets": "A lapse in funding would shut parts of the federal government, delay official economic data used by the Fed and markets, and weigh on confidence.",
  "sourced_facts": [
   {
@@ -52,11 +52,16 @@
    "date": "2026-11-26",
    "status": "open",
    "note": "Sources upgraded. The 2026-12-11 expiry is now taken from the text of Public Law 119-103 and the White House signing statement instead of a magazine article."
+  },
+  {
+   "date": "2026-11-26",
+   "status": "open",
+   "note": "Summary rewritten so that it states only what was confirmed at the listed sources and marks the rest as reported. The first version is kept under superseded_sources. Resolution conditions are unchanged."
   }
  ],
  "note": "Risk state only. Not a forecast and not investment advice.",
  "unconfirmed_facts": [
-  "A funding bill needs 60 Senate votes: this is the Senate cloture rule; no primary page stating it has been read yet"
+  "A funding bill needs 60 Senate votes: this is the Senate cloture rule; no primary page stating it has been read"
  ],
  "superseded_sources": {
   "replaced_on": "2026-11-26",
@@ -67,6 +72,14 @@
   "facts_as_first_written": [
    "2026-12-11: current appropriations expire (Fortune)",
    "A funding bill needs 60 Senate votes (Fortune)"
+  ],
+  "summary_as_first_written": "Current federal appropriations run out on 2026-12-11, during the lame-duck session before the new Congress convenes in January 2027. A funding bill needs 60 votes in the Senate."
+ },
+ "condition_reading_notes": {
+  "written_on": "2026-11-26",
+  "note": "How the conditions above are read. The conditions themselves are unchanged.",
+  "notes": [
+   "Signature is read from the White House list of signed bills or the public law text."
   ]
  }
 }

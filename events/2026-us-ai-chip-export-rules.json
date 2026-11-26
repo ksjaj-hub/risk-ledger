@@ -13,11 +13,23 @@
  "first_recorded": "2026-11-26",
  "event_started": "2026-11 (week ending 2026-11-20)",
  "status": "open",
- "what_happened": "The US Commerce Department announced rules requiring licences for certain shipments of advanced AI chips to overseas data centers that provide substantial computing power to specified Chinese entities. Press reports say TSMC and Samsung Electronics suspended some shipments to Chinese customers pending licences.",
+ "what_happened": "A US Commerce Department rule in effect from 2026-11-19 requires licences for advanced chips going to overseas data centres that give significant computing access to companies from restricted countries, and for advanced-node chips made for non-approved designers. Press reports, not yet confirmed here, say TSMC and Samsung suspended some shipments to Chinese customers pending licences.",
  "how_it_reaches_markets": "Lost or delayed sales for chip makers and equipment makers; retaliation risk; adds to pressure on AI-linked shares.",
  "sourced_facts": [
   {
-   "text": "Background: a Bureau of Industry and Security final rule published 2026-01-15 moved certain advanced computing chips for China and Macau from presumption of denial to case-by-case licence review, with conditions",
+   "text": "Interim final rule 'Addressing Remote Access to Advanced Semiconductors' (Bureau of Industry and Security), effective on publication, scheduled for 2026-11-19: adds a licence requirement for advanced-node chips from non-approved designers exported by a front-end fabricator or packaging firm, and for exports to overseas data centres that give significant compute access to companies headquartered in restricted countries",
+   "url": "https://public-inspection.federalregister.gov/2026-23529.pdf",
+   "tier": "primary",
+   "checked": "2026-11-26"
+  },
+  {
+   "text": "The same rule requires a licence for advanced chips to Indonesia, Malaysia, Singapore, Thailand and Brazil, with an exclusion for US-headquartered end users; comments are due 60 days after publication",
+   "url": "https://public-inspection.federalregister.gov/2026-23529.pdf",
+   "tier": "primary",
+   "checked": "2026-11-26"
+  },
+  {
+   "text": "Background: a final rule published 2026-01-15 had moved certain advanced computing chips for China and Macau from presumption of denial to case-by-case licence review",
    "url": "https://public-inspection.federalregister.gov/2026-00789.pdf",
    "tier": "primary",
    "checked": "2026-11-26"
@@ -37,6 +49,7 @@
   "Reports that licences 'will be granted' without confirmed resumed shipments"
  ],
  "sources": [
+  "https://public-inspection.federalregister.gov/2026-23529.pdf",
   "https://public-inspection.federalregister.gov/2026-00789.pdf"
  ],
  "history": [
@@ -49,12 +62,22 @@
    "date": "2026-11-26",
    "status": "open",
    "note": "Sources upgraded in part. Only the January 2026 rule has been read at the primary source. The November 2026 rule is known so far only through a wire reprint, which gives an effective date of 2026-11-19; the Federal Register text is still to be found. The reprint is not listed as a source under the source rule."
+  },
+  {
+   "date": "2026-11-26",
+   "status": "open",
+   "note": "Second pass. The November rule was found and read: an interim final rule of the Bureau of Industry and Security, effective on publication on 2026-11-19. The earlier note that the rule text had not been located no longer applies."
+  },
+  {
+   "date": "2026-11-26",
+   "status": "open",
+   "note": "Summary rewritten so that it states only what was confirmed at the listed sources and marks the rest as reported. The first version is kept under superseded_sources. Resolution conditions are unchanged."
   }
  ],
  "note": "Risk state only. Not a forecast and not investment advice.",
  "unconfirmed_facts": [
-  "November rule: a Reuters dispatch (read as a reprint dated 2026-11-20) says new Commerce Department rules took effect on 2026-11-19 and removed a compliance route that let some Chinese chip designers use advanced manufacturing without individual licences; TSMC is suspending some orders at 16 nm and below unless customers obtain licences; the FT reported TSMC and Samsung had suspended some shipments. The rule text itself (Federal Register) has not been located",
-  "ASML and Infineon share falls: not confirmed at an accepted source"
+  "TSMC suspending some orders at 16 nm and below unless customers obtain licences; FT report that TSMC and Samsung suspended some shipments: read only in a wire reprint dated 2026-11-20",
+  "ASML and Infineon share falls: not confirmed"
  ],
  "superseded_sources": {
   "replaced_on": "2026-11-26",
@@ -66,6 +89,14 @@
    "Commerce Department announcement in the week ending 2026-11-20; exact date not stated in source (T. Rowe Price)",
    "FT: TSMC and Samsung suspended some chip shipments to Chinese customers pending US licences; Reuters: TSMC halting certain advanced-node orders (both as cited by T. Rowe Price)",
    "ASML and Infineon shares fell on concerns over tighter US chip export restrictions (T. Rowe Price)"
+  ],
+  "summary_as_first_written": "The US Commerce Department announced rules requiring licences for certain shipments of advanced AI chips to overseas data centers that provide substantial computing power to specified Chinese entities. Press reports say TSMC and Samsung Electronics suspended some shipments to Chinese customers pending licences."
+ },
+ "condition_reading_notes": {
+  "written_on": "2026-11-26",
+  "note": "How the conditions above are read. The conditions themselves are unchanged.",
+  "notes": [
+   "The rule is an interim final rule already in effect. 'Published in final form' counts when the Bureau of Industry and Security publishes a final rule after the comment period or states that the interim rule stands. 'Major supplier' means TSMC or Samsung."
   ]
  }
 }

@@ -2,26 +2,25 @@
  "note": "Hindsight cases. Written after the outcomes were known, to illustrate the idea of a condition that good news does not meet. Dates and events are as stated in the listed sources (read 2026-11-26). The 'still_open' line is AFMX's own reading with hindsight. None of this is part of the AFMX record, which starts on 2026-11-26.",
  "cases": [
   {
-   "id": "2008-bear-stearns-lehman",
-   "good_news_date": "2008-03-16",
-   "outcome_date": "2008-09-15",
-   "outcome": "hit",
+   "id": "2023-us-debt-ceiling",
+   "good_news_date": "2023-05-27",
+   "outcome_date": "2023-06-03",
+   "outcome": "ok",
    "en": {
-    "title": "Bear Stearns was rescued. Lehman was not.",
-    "good_news": "Bear Stearns was taken over by JPMorgan Chase, after the New York Fed agreed an emergency loan two days earlier.",
-    "still_open": "The takeover dealt with one firm. It did not show that other investment banks were free of the same losses and funding strain.",
-    "outcome": "Lehman Brothers filed for Chapter 11 bankruptcy protection."
+    "title": "A debt-ceiling deal that did become law.",
+    "good_news": "President Biden and Speaker McCarthy struck a deal to raise the debt ceiling.",
+    "still_open": "A deal between two leaders is not a law. It still had to pass both chambers and be signed.",
+    "outcome": "Biden signed the Fiscal Responsibility Act, which suspended the debt limit until January 2025. The condition was met within a week."
    },
    "ko": {
-    "title": "베어스턴스는 구제됐다. 리먼은 아니었다.",
-    "good_news": "뉴욕 연준이 이틀 전 긴급 대출에 합의한 뒤, JP모건이 베어스턴스를 인수했습니다.",
-    "still_open": "인수는 한 회사의 문제만 처리했습니다. 다른 투자은행들이 같은 손실과 자금 압박에서 벗어났다는 것은 보여 주지 못했습니다.",
-    "outcome": "리먼브러더스가 파산보호(챕터 11)를 신청했습니다."
+    "title": "실제로 법이 된 부채 한도 합의.",
+    "good_news": "바이든 대통령과 매카시 하원의장이 부채 한도를 올리는 데 합의했습니다.",
+    "still_open": "두 지도자의 합의는 법이 아닙니다. 상하원을 통과하고 서명까지 돼야 했습니다.",
+    "outcome": "바이든 대통령이 재정책임법에 서명해 부채 한도가 2025년 1월까지 유예됐습니다. 조건은 일주일 안에 채워졌습니다."
    },
    "sources": [
-    "https://www.federalreserve.gov/newsevents/pressreleases/monetary20080316a.htm",
-    "https://www.federalreserve.gov/monetarypolicy/files/129bearstearnsbridgeloan.pdf",
-    "https://www.federalreservehistory.org/-/media/Project/FedHistory/FedHistory/Documents/essaysPDFs/Support-for-Specific-Institutions-_-Federal-Reserve-History.pdf"
+    "https://bidenwhitehouse.archives.gov/briefing-room/statements-releases/2023/05/27/statement-from-president-joe-biden-on-bipartisan-budget-agreement-in-principle/",
+    "https://bidenwhitehouse.archives.gov/briefing-room/legislation/2023/06/03/press-release-bills-signed-h-r-346-h-r-3746/"
    ]
   },
   {
@@ -47,25 +46,137 @@
    ]
   },
   {
-   "id": "2023-us-debt-ceiling",
-   "good_news_date": "2023-05-27",
-   "outcome_date": "2023-06-03",
-   "outcome": "ok",
+   "id": "2023-credit-suisse",
+   "good_news_date": "2023-03-15",
+   "outcome_date": "2023-03-19",
+   "outcome": "hit",
    "en": {
-    "title": "A debt-ceiling deal that did become law.",
-    "good_news": "President Biden and Speaker McCarthy struck a deal to raise the debt ceiling.",
-    "still_open": "A deal between two leaders is not a law. It still had to pass both chambers and be signed.",
-    "outcome": "Biden signed the Fiscal Responsibility Act, which suspended the debt limit until January 2025. The condition was met within a week."
+    "title": "Regulators said Credit Suisse met its requirements. Four days later it was sold.",
+    "good_news": "The Swiss regulator and central bank said Credit Suisse 'meets the capital and liquidity requirements' and that the central bank would provide liquidity if necessary.",
+    "still_open": "Meeting the rules on paper did not show that clients had stopped withdrawing money.",
+    "outcome": "UBS announced the takeover of Credit Suisse, backed by central bank liquidity of up to CHF 100 billion."
    },
    "ko": {
-    "title": "실제로 법이 된 부채 한도 합의.",
-    "good_news": "바이든 대통령과 매카시 하원의장이 부채 한도를 올리는 데 합의했습니다.",
-    "still_open": "두 지도자의 합의는 법이 아닙니다. 상하원을 통과하고 서명까지 돼야 했습니다.",
-    "outcome": "바이든 대통령이 재정책임법에 서명해 부채 한도가 2025년 1월까지 유예됐습니다. 조건은 일주일 안에 채워졌습니다."
+    "title": "당국은 크레디트스위스가 기준을 충족한다고 했다. 나흘 뒤 매각됐다.",
+    "good_news": "스위스 금융당국과 중앙은행이 크레디트스위스가 자본과 유동성 기준을 충족하며, 필요하면 중앙은행이 유동성을 공급하겠다고 밝혔습니다.",
+    "still_open": "서류상 기준을 충족한다고 해서 고객의 자금 인출이 멈췄다는 뜻은 아니었습니다.",
+    "outcome": "UBS가 크레디트스위스 인수를 발표했고, 중앙은행이 최대 1,000억 스위스프랑의 유동성을 지원했습니다."
    },
    "sources": [
-    "https://bidenwhitehouse.archives.gov/briefing-room/statements-releases/2023/05/27/statement-from-president-joe-biden-on-bipartisan-budget-agreement-in-principle/",
-    "https://bidenwhitehouse.archives.gov/briefing-room/legislation/2023/06/03/press-release-bills-signed-h-r-346-h-r-3746/"
+    "https://www.finma.ch/en/news/2023/03/20230315-mm-statement",
+    "https://www.snb.ch/en/publications/communication/press-releases/2023/pre_20230319_1"
+   ]
+  },
+  {
+   "id": "2022-uk-gilt-market",
+   "good_news_date": "2022-09-28",
+   "outcome_date": "2022-10-14",
+   "outcome": "ok",
+   "en": {
+    "title": "A temporary rescue of the UK bond market that ended on schedule.",
+    "good_news": "The Bank of England began temporary purchases of long-dated government bonds 'to restore orderly market conditions', to run until 14 October.",
+    "still_open": "A temporary backstop is not a repair. The test was whether the Bank could stop on the date it had set.",
+    "outcome": "The Bank 'terminated these operations and ceased all bond purchases' on the planned date, and began selling the bonds back from 29 November."
+   },
+   "ko": {
+    "title": "예정대로 끝난 영국 국채시장 임시 지원.",
+    "good_news": "영란은행이 시장 질서를 되찾기 위해 장기 국채를 임시로 사들이기 시작했고, 기한은 10월 14일로 정했습니다.",
+    "still_open": "임시 지원은 수리가 아닙니다. 관건은 정해 둔 날에 실제로 멈출 수 있느냐였습니다.",
+    "outcome": "영란은행은 예정한 날에 매입을 모두 끝냈고, 11월 29일부터 사들인 국채를 되팔기 시작했습니다."
+   },
+   "sources": [
+    "https://www.bankofengland.co.uk/news/2022/september/bank-of-england-announces-gilt-market-operation",
+    "https://www.bankofengland.co.uk/news/2022/october/statement-on-end-of-gilt-market-operations",
+    "https://www.bankofengland.co.uk/markets/market-notices/2022/november/unwind-of-financial-stability-gilt-purchases-market-notice-23-november-2022"
+   ]
+  },
+  {
+   "id": "2020-fed-corporate-credit",
+   "good_news_date": "2020-03-23",
+   "outcome_date": "2020-12-31",
+   "outcome": "ok",
+   "en": {
+    "title": "The Fed's 2020 corporate credit backstop closed on schedule.",
+    "good_news": "The Federal Reserve announced two facilities to support credit to large employers, for new bond issuance and for outstanding corporate bonds.",
+    "still_open": "An announced backstop is not a working market. The test was whether the emergency support could be withdrawn.",
+    "outcome": "The primary market facility 'ceased purchasing eligible assets on December 31, 2020'."
+   },
+   "ko": {
+    "title": "연준의 2020년 회사채 지원은 예정대로 문을 닫았다.",
+    "good_news": "연준이 대기업 신용을 지원하는 두 가지 기구를 발표했습니다. 하나는 신규 채권 발행, 다른 하나는 이미 발행된 회사채를 위한 것이었습니다.",
+    "still_open": "지원을 발표했다고 시장이 돌아가는 것은 아닙니다. 관건은 긴급 지원을 거둘 수 있느냐였습니다.",
+    "outcome": "발행시장 지원 기구는 2020년 12월 31일에 매입을 끝냈습니다."
+   },
+   "sources": [
+    "https://www.federalreserve.gov/newsevents/pressreleases/monetary20200323b.htm",
+    "https://www.federalreserve.gov/monetarypolicy/pmccf.htm"
+   ]
+  },
+  {
+   "id": "2010-greece-first-programme",
+   "good_news_date": "2010-05-09",
+   "outcome_date": "2012-03-15",
+   "outcome": "hit",
+   "en": {
+    "title": "Greece received a €110 billion package. It needed another.",
+    "good_news": "The IMF approved a €30 billion loan for Greece, part of a €110 billion package with the European Union.",
+    "still_open": "New loans covered payments coming due. They did not show that the debt itself could be repaid.",
+    "outcome": "The IMF approved a new €28 billion loan, the first arrangement was cancelled, and private investors agreed to write down 75 percent of their Greek bond holdings."
+   },
+   "ko": {
+    "title": "그리스는 1,100억 유로를 지원받았다. 한 번 더 필요했다.",
+    "good_news": "IMF가 그리스에 300억 유로 대출을 승인했습니다. 유럽연합과 합쳐 1,100억 유로 규모였습니다.",
+    "still_open": "새 대출은 만기가 돌아오는 돈을 막아 줬을 뿐, 빚 자체를 갚을 수 있다는 것을 보여 주지는 못했습니다.",
+    "outcome": "IMF가 280억 유로의 새 대출을 승인했고 첫 지원은 취소됐으며, 민간 투자자들은 보유한 그리스 국채의 75%를 탕감하기로 했습니다."
+   },
+   "sources": [
+    "https://www.imf.org/en/News/Articles/2015/09/14/01/49/pr10187",
+    "https://www.imf.org/en/news/articles/2015/09/28/04/53/socar031512b"
+   ]
+  },
+  {
+   "id": "2008-bear-stearns-lehman",
+   "good_news_date": "2008-03-16",
+   "outcome_date": "2008-09-15",
+   "outcome": "hit",
+   "en": {
+    "title": "Bear Stearns was rescued. Lehman was not.",
+    "good_news": "Bear Stearns was taken over by JPMorgan Chase, after the New York Fed agreed an emergency loan two days earlier.",
+    "still_open": "The takeover dealt with one firm. It did not show that other investment banks were free of the same losses and funding strain.",
+    "outcome": "Lehman Brothers filed for Chapter 11 bankruptcy protection."
+   },
+   "ko": {
+    "title": "베어스턴스는 구제됐다. 리먼은 아니었다.",
+    "good_news": "뉴욕 연준이 이틀 전 긴급 대출에 합의한 뒤, JP모건이 베어스턴스를 인수했습니다.",
+    "still_open": "인수는 한 회사의 문제만 처리했습니다. 다른 투자은행들이 같은 손실과 자금 압박에서 벗어났다는 것은 보여 주지 못했습니다.",
+    "outcome": "리먼브러더스가 파산보호(챕터 11)를 신청했습니다."
+   },
+   "sources": [
+    "https://www.federalreserve.gov/newsevents/pressreleases/monetary20080316a.htm",
+    "https://www.federalreserve.gov/monetarypolicy/files/129bearstearnsbridgeloan.pdf",
+    "https://www.federalreservehistory.org/-/media/Project/FedHistory/FedHistory/Documents/essaysPDFs/Support-for-Specific-Institutions-_-Federal-Reserve-History.pdf"
+   ]
+  },
+  {
+   "id": "2007-fed-discount-rate",
+   "good_news_date": "2007-08-17",
+   "outcome_date": "2008-03-16",
+   "outcome": "hit",
+   "en": {
+    "title": "The Fed cut its discount rate. The strain kept building.",
+    "good_news": "The Federal Reserve cut its discount rate by half a point to 5.75% 'to promote the restoration of orderly conditions in financial markets'.",
+    "still_open": "Cheaper emergency loans did not show how large the mortgage losses were or which firms held them.",
+    "outcome": "Seven months later the Fed backed the emergency takeover of Bear Stearns."
+   },
+   "ko": {
+    "title": "연준이 재할인율을 내렸다. 압박은 계속 쌓였다.",
+    "good_news": "연준이 금융시장의 질서를 되찾기 위해 재할인율을 0.5%포인트 내려 5.75%로 정했습니다.",
+    "still_open": "긴급 대출이 싸졌다고 해서 주택담보 손실이 얼마나 크고 누가 떠안고 있는지가 드러난 것은 아니었습니다.",
+    "outcome": "일곱 달 뒤 연준은 베어스턴스 긴급 인수를 지원했습니다."
+   },
+   "sources": [
+    "https://www.federalreserve.gov/newsevents/pressreleases/monetary20070817a.htm",
+    "https://www.federalreserve.gov/newsevents/pressreleases/monetary20080316a.htm"
    ]
   }
  ],

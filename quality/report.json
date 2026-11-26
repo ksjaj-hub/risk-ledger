@@ -1,20 +1,20 @@
 {
- "checked_at_utc": "2026-11-26T10:05Z",
- "passed": 13,
+ "checked_at_utc": "2026-11-26T10:17Z",
+ "passed": 16,
  "total": 16,
  "checks": [
   {
    "area": "content",
    "id": "sources_per_card",
-   "pass": false,
-   "now": "4/12 cards have 2+ sources",
+   "pass": true,
+   "now": "12/12 cards have 2+ sources",
    "bar": "every card has 2 or more sources"
   },
   {
    "area": "content",
    "id": "primary_source_per_card",
    "pass": true,
-   "now": "15/15 cards and cases have a primary source",
+   "now": "20/20 cards and cases have a primary source",
    "bar": "every card and case has at least one primary source"
   },
   {
@@ -28,7 +28,7 @@
    "area": "content",
    "id": "fact_links",
    "pass": true,
-   "now": "23/23 facts carry their own link",
+   "now": "34/34 facts carry their own link",
    "bar": "every fact links to its article"
   },
   {
@@ -48,8 +48,8 @@
   {
    "area": "content",
    "id": "hindsight_cases",
-   "pass": false,
-   "now": "3 cases, 1 counter-examples",
+   "pass": true,
+   "now": "8 cases, 3 counter-examples",
    "bar": "8 cases, 2 counter-examples"
   },
   {
@@ -69,8 +69,8 @@
   {
    "area": "content",
    "id": "glossary",
-   "pass": false,
-   "now": "0 terms explained",
+   "pass": true,
+   "now": "12 terms explained",
    "bar": "8 or more terms"
   },
   {
@@ -112,7 +112,7 @@
    "area": "screen",
    "id": "page_weight",
    "pass": true,
-   "now": "135 KB",
+   "now": "179 KB",
    "bar": "300 KB or less"
   }
  ],

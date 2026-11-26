@@ -10,12 +10,18 @@
  "first_recorded": "2026-11-26",
  "event_started": "2026-11",
  "status": "open",
- "what_happened": "The Bank of Japan raised its policy rate to 1.25% in September 2026 and its governor said on 2026-11-19 that it should keep raising rates. The yen briefly weakened past 160 per dollar on 2026-11-12. The Nikkei 225 fell about 5.1% on 2026-11-20 in what was described as one of the largest declines in its history.",
+ "what_happened": "The Bank of Japan set its policy rate at around 1.25% in September 2026 and said it would continue to raise it. The yen traded near 159 to 160 per dollar in mid-November. A fall of about 5% in the Nikkei 225 on 2026-11-20 was widely reported but is not yet confirmed here.",
  "how_it_reaches_markets": "Higher Japanese yields can pull Japanese capital home from US and other foreign bonds; sharp yen moves can force unwinding of yen-funded positions; possible currency intervention.",
  "sourced_facts": [
   {
    "text": "2026-09-18: Bank of Japan set the guideline for the uncollateralized overnight call rate at around 1.25 percent, effective 2026-09-24, by a 7-2 vote; the statement says the Bank will continue to raise the policy interest rate",
    "url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260918a.pdf",
+   "tier": "primary",
+   "checked": "2026-11-26"
+  },
+  {
+   "text": "Yen per dollar, Federal Reserve noon rates: 159.65 on 2026-11-16, 159.76 on 2026-11-19, 158.76 on 2026-11-20 (H.10 release of 2026-11-23)",
+   "url": "https://www.federalreserve.gov/releases/h10/current/",
    "tier": "primary",
    "checked": "2026-11-26"
   }
@@ -37,7 +43,8 @@
   "Verbal warnings by officials against excessive currency moves"
  ],
  "sources": [
-  "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260918a.pdf"
+  "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260918a.pdf",
+  "https://www.federalreserve.gov/releases/h10/current/"
  ],
  "history": [
   {
@@ -49,15 +56,24 @@
    "date": "2026-11-26",
    "status": "open",
    "note": "Sources upgraded. The policy rate is confirmed on the Bank of Japan statement. Market levels, the survey and GDP are not yet confirmed at an accepted source and were moved to unconfirmed_facts."
+  },
+  {
+   "date": "2026-11-26",
+   "status": "open",
+   "note": "Second pass. Yen levels were added from the Federal Reserve H.10 release. The Q3 GDP figure is flagged: the Cabinet Office table could not be read reliably and the partial reading did not match the widely reported -0.1%."
+  },
+  {
+   "date": "2026-11-26",
+   "status": "open",
+   "note": "Summary rewritten so that it states only what was confirmed at the listed sources and marks the rest as reported. The first version is kept under superseded_sources. Resolution conditions are unchanged."
   }
  ],
  "note": "Risk state only. Not a forecast and not investment advice.",
  "unconfirmed_facts": [
-  "2026-11-20: Nikkei 225 -3,007.81 points to 56,436.65: not yet confirmed at a primary or wire source",
-  "2026-11-12: USD/JPY briefly above 160: not yet confirmed (the Federal Reserve H.10 daily rate can settle the closing level, not the intraday high)",
-  "Reuters survey released 2026-11-20 expecting 1.5% in December: original not read",
-  "10-year JGB yield about 2.80%: not yet confirmed at the Ministry of Finance",
-  "Q3 GDP annualised -0.1%: several outlets report it; the Cabinet Office release itself has not been read. The consensus figure differs between outlets (+0.2% in the original source, +0.3% elsewhere)"
+  "2026-11-12: USD/JPY briefly above 160: an intraday high cannot be settled from the Federal Reserve's noon rates, which stayed below 160 in the week of 2026-11-16",
+  "2026-11-20: Nikkei 225 -3,007.81 points to 56,436.65: not confirmed at a primary or wire source",
+  "Q3 GDP: outlets report an annualised -0.1%. The Cabinet Office release of 2026-11-16 was opened but its table could not be read reliably, and what was extracted did not match that figure. Treated as unverified until the table is read properly",
+  "Reuters survey expecting 1.5% in December; 10-year JGB yield about 2.80%: originals not read"
  ],
  "superseded_sources": {
   "replaced_on": "2026-11-26",
@@ -73,6 +89,14 @@
    "Policy rate 1.25% since September; a majority in a Reuters survey released 2026-11-20 expect 1.5% in December (News On Japan)",
    "10-year JGB yield about 2.80% (T. Rowe Price, News On Japan)",
    "Q3 GDP annualised -0.1% against +0.2% expected (T. Rowe Price)"
+  ],
+  "summary_as_first_written": "The Bank of Japan raised its policy rate to 1.25% in September 2026 and its governor said on 2026-11-19 that it should keep raising rates. The yen briefly weakened past 160 per dollar on 2026-11-12. The Nikkei 225 fell about 5.1% on 2026-11-20 in what was described as one of the largest declines in its history."
+ },
+ "condition_reading_notes": {
+  "written_on": "2026-11-26",
+  "note": "How the conditions above are read. The conditions themselves are unchanged.",
+  "notes": [
+   "USD/JPY is read from the Federal Reserve H.10 noon rate. 'Reported intervention' means intervention confirmed by Japan's Ministry of Finance. 'Majority forecast' means the median of the Reuters poll published before the meeting."
   ]
  }
 }

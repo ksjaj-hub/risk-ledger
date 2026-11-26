@@ -9,18 +9,30 @@
  "first_recorded": "2026-11-26",
  "event_started": "2026-11-20",
  "status": "open",
- "what_happened": "Reuters reported late on 2026-11-20 that the SEC is investigating Nvidia's accounting practices. Jensen Huang's sudden departure was reported the same week; his return as CEO was reported in the week of 2026-11-23.",
+ "what_happened": "Nvidia announced on 2026-11-12 that Jensen Huang had resigned as CEO, and on 2026-11-23 that the board had reinstated him. The company refers to ongoing government investigations and inquiries without naming an agency. Press reports of an SEC probe have not been confirmed by the company or the SEC.",
  "how_it_reaches_markets": "Nvidia's index weight and its role as a bellwether for AI demand; uncertainty about reported results; possible chip-export restrictions.",
  "sourced_facts": [
   {
-   "text": "2026-11-23: Nvidia's board reinstated Jensen Huang as President, CEO and director, effective immediately; Colette Kress had served as interim CEO (company press release filed with the SEC)",
+   "text": "2026-11-12: Nvidia announced that Jensen Huang 'has resigned as President, Chief Executive Officer, and a member of the Board, effective immediately'; no reason is stated; CFO Colette Kress became interim CEO",
+   "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvidiaannouncesceotransiti.htm",
+   "tier": "primary",
+   "checked": "2026-11-26"
+  },
+  {
+   "text": "2026-11-23: the board reinstated Huang as President, CEO and director, effective immediately",
    "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000090/nov23pressrelease.htm",
    "tier": "primary",
    "checked": "2026-11-26"
   },
   {
-   "text": "The same release refers to 'ongoing government investigations and inquiries' without naming an agency, and to an independent-director committee review after reporting that Mr. Huang had been the target of a foreign intelligence effort",
+   "text": "The 2026-11-23 release refers to 'ongoing government investigations and inquiries' without naming an agency, and to a committee review after reporting that Mr. Huang had been the target of a foreign intelligence effort",
    "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000090/nov23pressrelease.htm",
+   "tier": "primary",
+   "checked": "2026-11-26"
+  },
+  {
+   "text": "The company's 8-K of 2026-11-17 (quarterly results) does not mention an SEC inquiry",
+   "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/nvda-20261117.htm",
    "tier": "primary",
    "checked": "2026-11-26"
   }
@@ -40,7 +52,9 @@
   "The CEO's return: the reported accounting inquiry is unchanged by it (press described the return as a temporary reprieve)"
  ],
  "sources": [
-  "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000090/nov23pressrelease.htm"
+  "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvidiaannouncesceotransiti.htm",
+  "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000090/nov23pressrelease.htm",
+  "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/nvda-20261117.htm"
  ],
  "history": [
   {
@@ -52,12 +66,22 @@
    "date": "2026-11-26",
    "status": "open",
    "note": "Sources upgraded and a correction recorded. Huang's reinstatement on 2026-11-23 is confirmed by the company's SEC-filed release. The original statement that Reuters reported on 2026-11-20 an SEC investigation of accounting practices is not confirmed as written: the wire text read says the WSJ reported an SEC probe on 2026-11-17 and does not state its subject. what_happened is left as first written; read it with this note."
+  },
+  {
+   "date": "2026-11-26",
+   "status": "open",
+   "note": "Second pass. The resignation of 2026-11-12 was confirmed on the company's SEC-filed release. The 8-K of 2026-11-17 does not mention an SEC inquiry."
+  },
+  {
+   "date": "2026-11-26",
+   "status": "open",
+   "note": "Summary rewritten so that it states only what was confirmed at the listed sources and marks the rest as reported. The first version is kept under superseded_sources. Resolution conditions are unchanged."
   }
  ],
  "note": "Risk state only. Not a forecast and not investment advice.",
  "unconfirmed_facts": [
-  "SEC probe: a Reuters dispatch dated 2026-11-17 says the Wall Street Journal reported the SEC is probing Nvidia after Huang's resignation. The dispatch does not say the probe concerns accounting. The card's original wording (Reuters report on 2026-11-20 of an inquiry into accounting practices) is therefore not confirmed as written; only a wire reprint was read, not the Reuters or WSJ original",
-  "2026-11-25: Nvidia -8.7% in early trading: not yet confirmed at a primary or wire source"
+  "SEC probe: a Reuters dispatch dated 2026-11-17 says the Wall Street Journal reported the SEC is probing Nvidia after Huang's resignation. It does not say the probe concerns accounting. The card's original wording (a Reuters report on 2026-11-20 of an inquiry into accounting practices) is not confirmed as written",
+  "2026-11-25: Nvidia -8.7% in early trading: not confirmed at a primary or wire source"
  ],
  "superseded_sources": {
   "replaced_on": "2026-11-26",
@@ -71,6 +95,14 @@
    "2026-11-20: Reuters report of SEC inquiry into Nvidia accounting, as cited by Schwab",
    "Week of 2026-11-23: Huang's return as CEO reported; described as a 'temporary reprieve' (ABC/Reuters)",
    "2026-11-25: Nvidia -8.7% in early trading (ABC)"
+  ],
+  "summary_as_first_written": "Reuters reported late on 2026-11-20 that the SEC is investigating Nvidia's accounting practices. Jensen Huang's sudden departure was reported the same week; his return as CEO was reported in the week of 2026-11-23."
+ },
+ "condition_reading_notes": {
+  "written_on": "2026-11-26",
+  "note": "How the conditions above are read. The conditions themselves are unchanged.",
+  "notes": [
+   "'The SEC inquiry' is read as any SEC inquiry disclosed by the company or the SEC. Neither has confirmed one in the documents read so far, so the first condition is judged from company filings and SEC announcements, not from press reports."
   ]
  }
 }

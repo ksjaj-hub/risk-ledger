@@ -274,6 +274,133 @@
    "date": "2026-11-26",
    "en": "AFMX Weekly No. 1 published in English and Korean.",
    "ko": "AFMX 주간 글 1호를 영어와 한국어로 냈습니다."
+  },
+  {
+   "date": "2026-11-26",
+   "en": "Source rule adopted: every card and past case rests on at least one primary source. Unconfirmed reports are shown separately.",
+   "ko": "출처 기준을 세웠습니다. 모든 카드와 과거 사례는 1차 출처를 하나 이상 갖고, 확인하지 못한 보도는 따로 표시합니다."
   }
- ]
+ ],
+ "glossary": {
+  "risk_state": {
+   "en": {
+    "term": "Risk state",
+    "def": "What the record says about market stress right now, from Calm to Stress. It describes conditions. It is not a forecast and not advice to buy or sell."
+   },
+   "ko": {
+    "term": "리스크 상태",
+    "def": "지금 시장의 긴장 정도를 '평온'부터 '스트레스'까지로 적은 것입니다. 상황을 설명할 뿐, 전망이나 매매 권유가 아닙니다."
+   }
+  },
+  "event_card": {
+   "en": {
+    "term": "Event card",
+    "def": "One risk that is still open, with what happened, how it reaches markets and what would have to happen for it to count as resolved."
+   },
+   "ko": {
+    "term": "사건 카드",
+    "def": "아직 끝나지 않은 리스크 하나를 다룹니다. 무슨 일이 있었는지, 시장에 어떻게 닿는지, 무엇이 일어나야 해소로 볼지를 적습니다."
+   }
+  },
+  "resolution_condition": {
+   "en": {
+    "term": "Resolution condition",
+    "def": "A checkable event written down before the outcome is known. The card closes only when every one of them has happened."
+   },
+   "ko": {
+    "term": "해소 조건",
+    "def": "결과가 나오기 전에 미리 적어 둔, 확인할 수 있는 사건입니다. 모두 일어나야 카드가 닫힙니다."
+   }
+  },
+  "worsening_condition": {
+   "en": {
+    "term": "Worsening condition",
+    "def": "A checkable event that would mark the risk as worse. One is enough."
+   },
+   "ko": {
+    "term": "악화 조건",
+    "def": "리스크가 나빠졌다고 볼 확인 가능한 사건입니다. 하나만 일어나도 해당됩니다."
+   }
+  },
+  "relief_headline": {
+   "en": {
+    "term": "Relief headline",
+    "def": "Good news that makes a risk feel smaller without meeting any resolution condition, such as a one-day rally or a deal that is not yet law."
+   },
+   "ko": {
+    "term": "안도 뉴스",
+    "def": "리스크가 줄어든 듯 보이게 하지만 해소 조건은 하나도 채우지 못하는 호재입니다. 하루짜리 반등이나 아직 법이 아닌 합의가 그 예입니다."
+   }
+  },
+  "primary_source": {
+   "en": {
+    "term": "Primary source",
+    "def": "The body that made the decision or produced the number: a government, central bank, regulator, statute or company filing. Every card has at least one."
+   },
+   "ko": {
+    "term": "1차 출처",
+    "def": "결정을 내렸거나 숫자를 만든 곳입니다. 정부, 중앙은행, 감독기관, 법 원문, 기업 공시가 해당합니다. 모든 카드에 하나 이상 있습니다."
+   }
+  },
+  "unconfirmed_fact": {
+   "en": {
+    "term": "Not yet confirmed",
+    "def": "Something reported that we could not check at a primary source or a major wire. It is shown separately and never used to support a card."
+   },
+   "ko": {
+    "term": "미확인 사실",
+    "def": "보도는 됐지만 1차 출처나 주요 통신사 원문으로 확인하지 못한 내용입니다. 따로 표시하며 카드의 근거로 쓰지 않습니다."
+   }
+  },
+  "sector_link": {
+   "en": {
+    "term": "Sector link",
+    "def": "How strongly a risk has reached a sector in past data: direct, strong, moderate, case, or unconfirmed. 'Unconfirmed' means the data did not show a reliable pattern."
+   },
+   "ko": {
+    "term": "섹터 연결",
+    "def": "과거 자료에서 리스크가 섹터에 닿은 정도입니다. 직접, 강함, 보통, 사례, 미확인으로 나눕니다. '미확인'은 자료에서 믿을 만한 패턴이 나오지 않았다는 뜻입니다."
+   }
+  },
+  "sector_band": {
+   "en": {
+    "term": "Sector band",
+    "def": "High, moderate or low: how many independent open risks touch a sector, weighted by link strength. It counts pressure. It does not predict returns."
+   },
+   "ko": {
+    "term": "섹터 단계",
+    "def": "높음, 보통, 낮음입니다. 서로 다른 열린 리스크가 그 섹터에 얼마나 닿는지를 연결 강도로 가중해 셉니다. 압력의 크기이지 수익률 예측이 아닙니다."
+   }
+  },
+  "hash_chain": {
+   "en": {
+    "term": "Hash chain",
+    "def": "Each record carries a fingerprint of the one before it, so a past record cannot be changed without breaking every later one."
+   },
+   "ko": {
+    "term": "해시 사슬",
+    "def": "각 기록이 바로 앞 기록의 지문을 담고 있습니다. 그래서 과거 기록을 고치면 그 뒤 기록이 모두 어긋납니다."
+   }
+  },
+  "x_date": {
+   "en": {
+    "term": "X-date",
+    "def": "The day the US Treasury would run out of room to pay all its bills if the debt limit is not raised."
+   },
+   "ko": {
+    "term": "자금 소진일",
+    "def": "부채 한도를 올리지 않을 경우 미국 재무부가 모든 지출을 감당할 여력이 바닥나는 날입니다."
+   }
+  },
+  "continuing_resolution": {
+   "en": {
+    "term": "Continuing resolution",
+    "def": "A short-term US funding law that keeps the government open until a set date when the regular budget is not finished."
+   },
+   "ko": {
+    "term": "임시예산",
+    "def": "정규 예산이 끝나지 않았을 때 정해진 날까지 미국 정부를 운영하게 해 주는 단기 예산법입니다."
+   }
+  }
+ }
 }

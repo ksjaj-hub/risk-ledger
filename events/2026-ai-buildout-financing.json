@@ -59,7 +59,7 @@
  ],
  "note": "Risk state only. Not a forecast and not investment advice.",
  "unconfirmed_facts": [
-  "2026-11-20: S&P 500 -3.70% to 6,910.39; Nasdaq Composite -5.28%; seventh straight S&P 500 decline; Nvidia -14%, AMD -13.3%: from a broker commentary; not yet confirmed at a primary or wire source",
+  "2026-11-20: S&P 500 -3.70% to 6,910.39; Nasdaq Composite -5.28%; seventh straight S&P 500 decline; Nvidia -14%, AMD -13.3%: from a broker commentary; not confirmed at a primary or wire source",
   "2026-11-25: Nasdaq 100 briefly 20% below its record closing high: attributed to Reuters in a repost; original not read"
  ],
  "superseded_sources": {
@@ -74,6 +74,14 @@
    "2026-11-20: S&P 500 -3.70% to 6,910.39; Nasdaq Composite -5.28%; seventh straight S&P 500 decline (Schwab)",
    "2026-11-20: Nvidia -14%, AMD -13.3% (Schwab)",
    "2026-11-25: Nasdaq 100 briefly 20% below its record closing high (ABC/Reuters)"
+  ]
+ },
+ "condition_reading_notes": {
+  "written_on": "2026-11-26",
+  "note": "How the conditions above are read. The conditions themselves are unchanged.",
+  "notes": [
+   "'The day before the losing streak began' is read as the last Nasdaq Composite close before the run of declines that ended on 2026-11-20, taken from the FRED series NASDAQCOM. The exact level will be written here once the series has been read; until then this condition cannot be marked as met.",
+   "'Largest AI infrastructure spenders' means Microsoft, Alphabet, Amazon, Meta and Oracle. 'Large AI-linked borrower' means one with at least $1 billion of debt outstanding."
   ]
  }
 }

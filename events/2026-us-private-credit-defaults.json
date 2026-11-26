@@ -9,7 +9,7 @@
  "first_recorded": "2026-11-26",
  "event_started": "2026 (default rate at a record 6.0% in April 2026)",
  "status": "open",
- "what_happened": "The Fitch trailing-12-month US private credit default rate stood at 6.2% in October 2026. Most default events are payment deferrals and maturity extensions rather than bankruptcies, and smaller borrowers default far more often. Banks and life insurers have large exposures to private credit funds.",
+ "what_happened": "US private credit has grown to about $1.5 trillion outstanding, up 13.8% in a year. The Federal Reserve reports that some funds kept redemption limits and net flows stayed negative. A Fitch default rate of 6.2% for October has been reported but not yet read at Fitch.",
  "how_it_reaches_markets": "Losses at business development companies, banks and insurers that lend to or hold private credit; redemption pressure on non-traded funds; tighter credit for mid-sized companies.",
  "sourced_facts": [
   {
@@ -21,6 +21,12 @@
   {
    "text": "Same report: 'Redemption requests at certain business development companies trended lower, though funds maintained redemption limits and net flows remained negative.'",
    "url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
+   "tier": "primary",
+   "checked": "2026-11-26"
+  },
+  {
+   "text": "Federal Reserve staff note, 2026-11-09: US private credit vehicles held about $1.9 trillion in assets at the end of 2025; BDCs 'tend to be more highly levered with an average debt-to-equity ratio around 1'",
+   "url": "https://www.federalreserve.gov/econres/notes/feds-notes/u-s-private-credit-vehicles-institutional-structure-and-aggregate-balance-sheets-20261109.html",
    "tier": "primary",
    "checked": "2026-11-26"
   }
@@ -42,7 +48,8 @@
   "A one-month dip in the default rate (6.3% to 6.2% from September to October 2026)"
  ],
  "sources": [
-  "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf"
+  "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
+  "https://www.federalreserve.gov/econres/notes/feds-notes/u-s-private-credit-vehicles-institutional-structure-and-aggregate-balance-sheets-20261109.html"
  ],
  "history": [
   {
@@ -54,13 +61,17 @@
    "date": "2026-11-26",
    "status": "open",
    "note": "Sources upgraded in part. Market size and redemption wording now come from the Federal Reserve Financial Stability Report. The Fitch default rates match a trade publication but have not been read at Fitch; the '90 unique defaulters' figure was not found and should be treated as unverified."
+  },
+  {
+   "date": "2026-11-26",
+   "status": "open",
+   "note": "Summary rewritten so that it states only what was confirmed at the listed sources and marks the rest as reported. The first version is kept under superseded_sources. Resolution conditions are unchanged."
   }
  ],
  "note": "Risk state only. Not a forecast and not investment advice.",
  "unconfirmed_facts": [
-  "Fitch: trailing-12-month private credit default rate 6.2% in October 2026 (6.3% in September); 10.7% for issuers under $25 million EBITDA versus 2.4% above $100 million: confirmed only in a trade publication dated 2026-11-17, not at Fitch itself. That article reports six defaults in October; the '90 unique defaulters' figure in the original card was not found",
-  "JPMorgan leveraged-loan default forecasts (4.5% in 2027, 4.75% in 2028): from a newsletter; original not read",
-  "Moody's: banks had extended nearly $300 billion to private credit funds, BDCs and CLOs as of October 2025: from a magazine column; original not read"
+  "Fitch: trailing-12-month default rate 6.2% in October 2026 (6.3% in September); 10.7% for issuers under $25 million EBITDA versus 2.4% above $100 million: matches a trade publication dated 2026-11-17 but has not been read at Fitch. The '90 unique defaulters' figure in the original card was not found",
+  "JPMorgan default forecasts and the Moody's figure on bank lending: originals not read"
  ],
  "superseded_sources": {
   "replaced_on": "2026-11-26",
@@ -74,6 +85,14 @@
    "JPMorgan forecasts leveraged-loan defaults of 4.5% in 2027 and 4.75% in 2028 (Max's Digest)",
    "Moody's: banks had extended nearly 300 billion dollars to private credit funds, BDCs and CLOs as of October 2025 (Forbes, 2026-05-24)",
    "No fund redemption gate in November 2026 is stated in these sources"
+  ],
+  "summary_as_first_written": "The Fitch trailing-12-month US private credit default rate stood at 6.2% in October 2026. Most default events are payment deferrals and maturity extensions rather than bankruptcies, and smaller borrowers default far more often. Banks and life insurers have large exposures to private credit funds."
+ },
+ "condition_reading_notes": {
+  "written_on": "2026-11-26",
+  "note": "How the conditions above are read. The conditions themselves are unchanged.",
+  "notes": [
+   "The Fitch rate is read from Fitch's own monthly release or a Reuters or Bloomberg report quoting it. 'Large private credit fund' means one with at least $1 billion in assets."
   ]
  }
 }

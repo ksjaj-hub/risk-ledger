@@ -9,12 +9,18 @@
  "first_recorded": "2026-11-26",
  "event_started": "2026-11 (hawkish minutes released week of 2026-11-16)",
  "status": "open",
- "what_happened": "A strong October jobs report, hot inflation data and hawkish Fed minutes pushed markets to price a rate hike in December 2026 and further hikes in the first half of 2027.",
+ "what_happened": "The Fed held its rate at 3.75% to 4.00% on 2026-10-28 with two members voting for an increase. Its minutes say futures markets put high odds on a quarter-point rise by year-end and two more by summer 2027. PCE inflation was 3.6% in September.",
  "how_it_reaches_markets": "Higher discount rates for equities; tighter financing conditions; pressure on highly indebted borrowers.",
  "sourced_facts": [
   {
    "text": "2026-10-28: the FOMC kept the federal funds target range at 3-3/4 to 4 percent by a 10-2 vote; the two dissenters preferred a quarter-point increase; the statement says inflation remains elevated",
    "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+   "tier": "primary",
+   "checked": "2026-11-26"
+  },
+  {
+   "text": "Minutes of that meeting: futures prices assigned 'high probabilities' to 'a 25 basis point hike by year-end and two more by the summer of 2027'; 12-month PCE inflation 'rose to 3.6 percent in September', core 3.1 percent",
+   "url": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20261028.htm",
    "tier": "primary",
    "checked": "2026-11-26"
   },
@@ -41,6 +47,7 @@
  ],
  "sources": [
   "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+  "https://www.federalreserve.gov/monetarypolicy/fomcminutes20261028.htm",
   "https://www.bls.gov/news.release/cpi.nr0.htm"
  ],
  "history": [
@@ -53,12 +60,22 @@
    "date": "2026-11-26",
    "status": "open",
    "note": "Sources upgraded. The policy rate and the dissents now come from the Federal Reserve statement and the monthly price change from the Bureau of Labor Statistics. Market-implied odds and the 2026-11-25 data wording were moved to unconfirmed_facts."
+  },
+  {
+   "date": "2026-11-26",
+   "status": "open",
+   "note": "Second pass. The market-implied path of rate increases and September PCE inflation were confirmed in the FOMC minutes. A reading note was added because BLS published no 12-month CPI change for October 2026, which the first resolution condition relies on."
+  },
+  {
+   "date": "2026-11-26",
+   "status": "open",
+   "note": "Summary rewritten so that it states only what was confirmed at the listed sources and marks the rest as reported. The first version is kept under superseded_sources. Resolution conditions are unchanged."
   }
  ],
  "note": "Risk state only. Not a forecast and not investment advice.",
  "unconfirmed_facts": [
-  "2026-11-20: CME FedWatch 92% chance of a December hike and above 80% for two or more by June 2027: taken from a broker commentary; CME itself not read",
-  "2026-11-25: October inflation 'increased further' and Q3 growth revised up: the data release behind this wording has not been identified (likely the PCE and GDP releases from the Bureau of Economic Analysis)"
+  "2026-11-20: CME FedWatch 92% chance of a December hike: from a broker commentary; CME itself not read. The Fed minutes above support the direction but not this number",
+  "2026-11-25: October inflation 'increased further' and Q3 growth revised up: the release behind this wording has not been identified"
  ],
  "superseded_sources": {
   "replaced_on": "2026-11-26",
@@ -70,6 +87,15 @@
   "facts_as_first_written": [
    "2026-11-20: CME FedWatch priced a 92% chance of a December hike; odds of two or more hikes by June 2027 above 80% (Schwab)",
    "2026-11-25: October inflation reported as having 'increased further'; Q3 growth revised up (ABC)"
+  ],
+  "summary_as_first_written": "A strong October jobs report, hot inflation data and hawkish Fed minutes pushed markets to price a rate hike in December 2026 and further hikes in the first half of 2027."
+ },
+ "condition_reading_notes": {
+  "written_on": "2026-11-26",
+  "note": "How the conditions above are read. The conditions themselves are unchanged.",
+  "notes": [
+   "'Signal no further hikes' counts when the FOMC statement drops its reference to possible further increases, or when the median projection shows no higher rate at the end of the following year than the current range.",
+   "Year-over-year CPI: months for which BLS publishes no 12-month change (October 2026 is one) are skipped; the condition uses the two most recent months that do have a published figure."
   ]
  }
 }

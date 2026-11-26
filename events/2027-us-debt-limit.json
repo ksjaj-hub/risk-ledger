@@ -9,7 +9,7 @@
  "first_recorded": "2026-11-26",
  "event_started": "2026-11",
  "status": "open",
- "what_happened": "The federal borrowing limit of 41.1 trillion dollars is close to being reached. Bank of America analysts estimate it could be reached as early as February (2027 implied), with a central X-date forecast of November 2027 and risk of getting uncomfortably close as early as August 2027. After the midterm elections Democrats will control both chambers of the next Congress and therefore the vote.",
+ "what_happened": "The federal debt limit is $41.1 trillion. On 2026-11-19 debt subject to the limit was about $597 billion below it. The Congressional Research Service says borrowing is projected to approach the limit during fiscal year 2027; Treasury has not published a date. Democrats will control both chambers of the next Congress and therefore the vote.",
  "how_it_reaches_markets": "Risk of delayed Treasury payments; distortions in Treasury bill and repo markets near the X-date; sovereign rating downgrade risk.",
  "sourced_facts": [
   {
@@ -59,11 +59,16 @@
    "date": "2026-11-26",
    "status": "open",
    "note": "Sources upgraded. The limit and the remaining room now come from the Congressional Research Service and the Daily Treasury Statement. The room figure changes from about $557 billion (a bank estimate dated 2026-11-09) to about $597 billion (Treasury, 2026-11-19); the dates differ, so this is an update rather than a contradiction. Bank forecasts of the timing were moved to unconfirmed_facts."
+  },
+  {
+   "date": "2026-11-26",
+   "status": "open",
+   "note": "Summary rewritten so that it states only what was confirmed at the listed sources and marks the rest as reported. The first version is kept under superseded_sources. Resolution conditions are unchanged."
   }
  ],
  "note": "Risk state only. Not a forecast and not investment advice.",
  "unconfirmed_facts": [
-  "Bank forecasts (limit reached as early as February 2027; X-date November 2027 with risk from August) and the downgrade warning: from a magazine article citing bank research; originals not read. Treasury has not published a date in the sources read"
+  "Bank forecasts (limit reached as early as February 2027; X-date November 2027) and a downgrade warning: from a magazine article citing bank research; originals not read"
  ],
  "superseded_sources": {
   "replaced_on": "2026-11-26",
@@ -75,6 +80,14 @@
    "2026-11-09: limit 41.1 trillion dollars; about 557 billion dollars of room left (Fortune, citing BofA)",
    "BofA: limit reached as early as February; X-date forecast November 2027, risk from August 2027 (Fortune)",
    "BMO warns of a protracted 2027 standoff with downgrade risk (Fortune)"
+  ],
+  "summary_as_first_written": "The federal borrowing limit of 41.1 trillion dollars is close to being reached. Bank of America analysts estimate it could be reached as early as February (2027 implied), with a central X-date forecast of November 2027 and risk of getting uncomfortably close as early as August 2027. After the midterm elections Democrats will control both chambers of the next Congress and therefore the vote."
+ },
+ "condition_reading_notes": {
+  "written_on": "2026-11-26",
+  "note": "How the conditions above are read. The conditions themselves are unchanged.",
+  "notes": [
+   "'Major rating agency' means S&P, Moody's or Fitch. The X-date is read from a Treasury letter to Congress."
   ]
  }
 }

@@ -11,7 +11,7 @@ add("content","sources_per_card",twoSrc===ev.length,`${twoSrc}/${ev.length} card
 // source tiers (owner's rule, 2026-11-26): primary = government, central bank, regulator, statute, company filings and IR;
 // allowed secondary = major wires and financial papers; everything else does not count as support.
 const host=u=>new URL(u).hostname.replace(/^www\./,"");
-const PRIMARY=/(\.gov$|\.gov\.[a-z]{2}$|federalreserve\.gov|stlouisfed\.org|federalreservehistory\.org|newyorkfed\.org|ecb\.europa\.eu|europa\.eu$|boj\.or\.jp|mof\.go\.jp|bankofengland\.co\.uk|imf\.org|bis\.org|stats\.gov\.cn|pbc\.gov\.cn)/;
+const PRIMARY=/(\.gov$|\.gov\.[a-z]{2}$|federalreserve\.gov|stlouisfed\.org|federalreservehistory\.org|newyorkfed\.org|ecb\.europa\.eu|europa\.eu$|boj\.or\.jp|mof\.go\.jp|bankofengland\.co\.uk|imf\.org|bis\.org|stats\.gov\.cn|pbc\.gov\.cn|cao\.go\.jp|snb\.ch|finma\.ch)/;
 const EXTRA=new Set((D.aids.primary_hosts||[]));  // company investor-relations hosts, listed by hand in aids/reading.json
 const SECOND=/(^|\.)(reuters\.com|bloomberg\.com|ft\.com|wsj\.com|apnews\.com|nikkei\.com)$/;
 const tier=u=>{const h=host(u);return PRIMARY.test(h)||EXTRA.has(h)?1:SECOND.test(h)?2:3};
