@@ -63,8 +63,17 @@ button.row:hover{background:var(--hover)}
 .sub{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding:16px 0;border-bottom:1px solid var(--line)}
 .sub p{margin:0;color:var(--muted);font-size:13px;flex:1;min-width:220px}
 .sub p b{color:var(--fg);font-weight:600}
-.sub a.btn{display:inline-block;background:var(--fg);color:var(--bg);font-weight:600;font-size:13px;padding:11px 16px;min-height:44px;line-height:22px;white-space:nowrap}
-.sub a.btn:hover{text-decoration:none;background:#fff}
+.sub form{display:flex;flex-wrap:wrap;gap:0;align-items:stretch;flex:1;min-width:260px;max-width:440px}
+.sub input{flex:1;min-width:0;background:transparent;border:1px solid var(--line2);border-right:0;color:var(--fg);font:inherit;font-size:16px;padding:10px 12px;min-height:44px;border-radius:0;outline:none}
+.sub input:focus{border-color:var(--fg)}
+.sub input::placeholder{color:var(--muted)}
+.sub button.btn{width:auto;background:var(--fg);color:var(--bg);border:1px solid var(--fg);font-weight:600;font-size:13px;padding:0 16px;min-height:44px;white-space:nowrap;cursor:pointer;border-radius:0}
+.sub button.btn:hover{background:#fff}
+.sub button.btn:disabled{opacity:.6;cursor:default}
+#subs{flex-basis:100%;font-size:12.5px;color:var(--muted);margin-top:6px}
+#subs:empty{display:none}
+.sub form.done input,.sub form.done button{display:none}
+.sub form.done #subs{color:var(--fg);font-size:13px;margin:0}
 .verify{border-top:1px solid var(--line);margin-top:22px;padding:20px 0 8px}
 .verify ol{color:var(--muted);padding-left:18px;margin:8px 0 0;font-size:13px;max-width:68ch}
 .foot{border-top:1px solid var(--line);color:var(--dim);font-size:12px;margin-top:18px}
@@ -84,7 +93,7 @@ button.row:hover{background:var(--hover)}
     <div class="asof" id="asof"></div>
   </section>
   <section class="comps" id="comps" aria-label="Components"></section>
-  <section class="sub"><p><b data-t="subh"></b> <span data-t="subp"></span></p><a class="btn" href="https://forms.gle/HthFMyFsjLKKdDhWA" target="_blank" rel="noopener" data-t="subb"></a></section>
+  <section class="sub"><p><b data-t="subh"></b> <span data-t="subp"></span></p><form id="subf" novalidate><input id="subm" type="email" name="email" autocomplete="email" inputmode="email" required aria-label="Email"><button class="btn" type="submit" data-t="subb"></button><span id="subs" role="status" aria-live="polite"></span></form></section>
   <section class="sec"><h2 data-t="chg">State changes</h2><p data-t="chgp">Recorded automatically each time the state or a component level changes.</p><div id="alerts"></div></section>
   <section class="sec"><h2 data-t="ev">Open event risks</h2><p data-t="evp"></p><div id="events"></div></section>
   <section class="verify"><h2 data-t="ver"></h2><ol id="verify"></ol></section>
@@ -94,7 +103,7 @@ button.row:hover{background:var(--hover)}
 const $=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e};
 const COLORS=["#79a596","#b9c06a","#e2a43a","#f0594b"], STATES=["Calm","Watch","Elevated","Stress"];
 const REPO="https://github.com/ksjaj-hub/risk-ledger";
-const T={en:{subh:"AFMX Weekly.",subp:"One short note a week: what changed, what is still open, and which good news did not resolve anything. Free.",subb:"Get it by email",src:"Source and full history",head:"AFMX · US market risk state",chg:"State changes",chgp:"Recorded automatically each time the state or a component level changes.",ev:"Open event risks",
+const T={en:{subh:"AFMX Weekly.",subp:"One short note a week: what changed, what is still open, and which good news did not resolve anything. Free.",subb:"Subscribe",subph:"you@example.com",subok:"You are on the list. The first issue will arrive by email.",subbad:"Please enter a valid email address.",suberr:"Could not save it. Please try again in a moment.",src:"Source and full history",head:"AFMX · US market risk state",chg:"State changes",chgp:"Recorded automatically each time the state or a component level changes.",ev:"Open event risks",
  evp:"AFMX tracks what is still unresolved after the headlines move on. Each card says what would have to be true for the risk to count as resolved. Those conditions were written on the date shown, before the outcome was known. Good news that does not meet them is listed too.",
  ver:"How to check that nothing here was changed afterwards",
  v:[["Every record is its own dated commit in a ","public history",REPO+"/commits/main","."],["Each record contains the fingerprint (SHA-256) of the record before it, so one edit would break the chain."],["Records carry ","OpenTimestamps","https://opentimestamps.org"," proofs anchored to the Bitcoin blockchain."],["The ","judging rule",REPO+"/blob/main/rules/v1.md"," is published and versioned. Old versions are never edited."]],
@@ -103,7 +112,7 @@ const T={en:{subh:"AFMX Weekly.",subp:"One short note a week: what changed, what
  rec:(d,t,v,n)=>"Recorded "+d+" at "+t+" UTC under rule "+v+". "+n+" record"+(n===1?"":"s")+" so far.",
  start:"Start",change:"Change",first:"First record: ",state:"State",status:{open:"open",easing:"easing",worsened:"worsened",resolved:"resolved"},
  cond:"conditions written ",what:"What happened",how:"How it reaches markets",res:"Counts as resolved when all of these are true",wor:"Counts as worsened if any of these happens",rel:"Good news that does not resolve it",log:"Log",srcs:"Sources: ",none:"No record yet",fail:"Data could not be loaded",loc:"en-US"},
-ko:{subh:"AFMX 주간 글.",subp:"일주일에 한 번, 짧게 보냅니다. 무엇이 바뀌었고, 무엇이 아직 열려 있으며, 어떤 호재가 아무것도 해소하지 못했는지 정리합니다. 무료이고 영어로 발행합니다.",subb:"이메일로 받기",src:"원본과 전체 기록",head:"AFMX · 미국 시장 리스크 상태",chg:"상태 변화",chgp:"상태나 요소의 단계가 바뀔 때마다 자동으로 기록됩니다.",ev:"열려 있는 사건 리스크",
+ko:{subh:"AFMX 주간 글.",subp:"일주일에 한 번, 짧게 보냅니다. 무엇이 바뀌었고, 무엇이 아직 열려 있으며, 어떤 호재가 아무것도 해소하지 못했는지 정리합니다. 무료이고 영어로 발행합니다.",subb:"구독",subph:"이메일 주소",subok:"등록됐습니다. 첫 글부터 이메일로 보내 드립니다.",subbad:"이메일 주소를 다시 확인해 주세요.",suberr:"저장하지 못했습니다. 잠시 뒤 다시 시도해 주세요.",src:"원본과 전체 기록",head:"AFMX · 미국 시장 리스크 상태",chg:"상태 변화",chgp:"상태나 요소의 단계가 바뀔 때마다 자동으로 기록됩니다.",ev:"열려 있는 사건 리스크",
  evp:"AFMX는 뉴스가 지나간 뒤에도 해결되지 않고 남아 있는 것을 추적합니다. 카드마다 무엇이 확인돼야 해소로 볼지 적혀 있습니다. 그 조건은 결과를 알기 전, 표시된 날짜에 적었습니다. 조건을 채우지 못하는 호재도 함께 적었습니다. 한국어는 읽기 편하도록 붙인 번역이고, 기록의 원문은 영어입니다.",
  ver:"나중에 고쳐 쓰지 않았다는 것을 확인하는 방법",
  v:[["모든 기록은 날짜가 찍힌 개별 변경으로 ","공개 이력",REPO+"/commits/main","에 남습니다."],["기록마다 바로 앞 기록의 지문(SHA-256)이 들어 있어서, 하나만 고쳐도 사슬이 끊어집니다."],["기록에는 비트코인 블록체인에 시각을 남기는 ","OpenTimestamps","https://opentimestamps.org"," 증명이 붙습니다."],["","판정 규칙",REPO+"/blob/main/rules/v1.ko.md","은 공개돼 있고 버전이 붙습니다. 이전 버전은 고치지 않습니다."]],
@@ -121,6 +130,7 @@ const stName=s=>T[lang].states[STATES.indexOf(s)]||s, lvName=(c)=>T[lang].levels
 function render(){
   const t=T[lang];document.documentElement.lang=lang;
   document.querySelectorAll("[data-t]").forEach(e=>e.textContent=t[e.dataset.t]);
+  document.getElementById("subm").placeholder=t.subph;if(window.subState)document.getElementById("subs").textContent=t[window.subState];
   document.querySelectorAll("[data-lang]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.lang===lang)));
   const vo=document.getElementById("verify");vo.replaceChildren();
   t.v.forEach(p=>{const li=$("li");if(p.length===1)li.textContent=p[0];else{const a=$("a",null,p[1]);a.href=p[2];li.append(p[0],a,p[3])}vo.append(li)});
@@ -170,6 +180,21 @@ function render(){
 document.querySelectorAll("[data-lang]").forEach(b=>b.addEventListener("click",()=>{lang=b.dataset.lang;try{localStorage.setItem("lang",lang)}catch(e){}render()}));
 render();
 fetch("data.json").then(r=>r.json()).then(d=>{D=d;render()}).catch(()=>{document.getElementById("state").textContent=T[lang].fail});
+
+(function(){
+  const f=document.getElementById("subf"),m=document.getElementById("subm"),st=document.getElementById("subs"),b=f.querySelector("button");
+  const U="https://docs.google.com/forms/d/e/1FAIpQLScYx3wNjWsTZgOAcSVpYizasiIc8ThT8n5nMW7SSsMjkU6Liw/formResponse";
+  const say=k=>{window.subState=k;const l=document.documentElement.lang==="ko"?"ko":"en";st.textContent=T[l][k]};
+  f.addEventListener("submit",ev=>{
+    ev.preventDefault();
+    const v=m.value.trim();
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)){say("subbad");m.focus();return}
+    b.disabled=true;
+    fetch(U,{method:"POST",mode:"no-cors",body:new URLSearchParams({"entry.709984895":v})})
+      .then(()=>{f.classList.add("done");say("subok")})
+      .catch(()=>{b.disabled=false;say("suberr")});
+  });
+})();
 </script>
 </body>
 </html>
