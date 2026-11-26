@@ -916,8 +916,411 @@
    }
   }
  },
+ "aftershocks_nikkei": {
+  "first_day": "1949-05-17",
+  "last_day": "2026-11-25",
+  "main_shocks": 120,
+  "with_full_window": 118,
+  "background_share_of_2pct_days": 9.01,
+  "ratio_to_background": {
+   "1-5": 3.14,
+   "6-21": 2.0,
+   "1-21": 2.27,
+   "22-63": 1.56,
+   "64-126": 1.34
+  },
+  "another_3pct_fall_within_21_days": 54,
+  "halves_ratio_1_21_against_own_half_background": [
+   3.22,
+   1.75
+  ],
+  "half_split_day": "1987-09-04",
+  "headline": {
+   "kind": "ratio",
+   "value": 2.27,
+   "background": 1.0,
+   "n": 118,
+   "halves_agree": true,
+   "evidence_score": 5,
+   "effect": "strong"
+  }
+ },
+ "reverberation_nikkei": {
+  "period": [
+   "1949-05-17",
+   "2026-11-25"
+  ],
+  "summary": {
+   "n": 21,
+   "still_higher": 8,
+   "still_higher_share": 38.1,
+   "days_until_back_median": 22.0,
+   "not_back_within_252": 2,
+   "next_126_largest_fall_median": {
+    "still_higher": -1.48,
+    "back": -1.37
+   }
+  },
+  "halves_share": [
+   37.5,
+   40.0
+  ],
+  "without_21_day_restriction": {
+   "n": 25,
+   "still_higher": 12,
+   "still_higher_share": 48.0,
+   "days_until_back_median": 22.0,
+   "not_back_within_252": 2,
+   "next_126_largest_fall_median": {
+    "still_higher": -1.79,
+    "back": -1.37
+   }
+  },
+  "episodes": [
+   {
+    "peak": "1949-09-01",
+    "trough": "1950-07-06",
+    "recovered": "1952-01-14",
+    "fall_pct": -51.81,
+    "days_trough_to_recovery": 381,
+    "rv_at_peak": 1.3,
+    "rv_at_recovery": 0.7,
+    "still_higher": false,
+    "days_until_back": 0,
+    "largest_fall_next_126": -1.05
+   },
+   {
+    "peak": "1952-02-07",
+    "trough": "1952-03-31",
+    "recovered": "1952-04-17",
+    "fall_pct": -9.2,
+    "days_trough_to_recovery": 13,
+    "rv_at_peak": 1.05,
+    "rv_at_recovery": 1.08,
+    "still_higher": true,
+    "days_until_back": 1,
+    "largest_fall_next_126": 0.0
+   },
+   {
+    "peak": "1952-07-11",
+    "trough": "1952-07-18",
+    "recovered": "1952-09-22",
+    "fall_pct": -9.22,
+    "days_trough_to_recovery": 46,
+    "rv_at_peak": 1.1,
+    "rv_at_recovery": 0.92,
+    "still_higher": false,
+    "days_until_back": 0,
+    "largest_fall_next_126": -1.37
+   },
+   {
+    "peak": "1953-02-04",
+    "trough": "1953-04-01",
+    "recovered": "1956-04-13",
+    "fall_pct": -37.78,
+    "days_trough_to_recovery": 760,
+    "rv_at_peak": 1.29,
+    "rv_at_recovery": 0.59,
+    "still_higher": false,
+    "days_until_back": 0,
+    "largest_fall_next_126": -0.63
+   },
+   {
+    "peak": "1957-04-24",
+    "trough": "1957-12-27",
+    "recovered": "1958-10-03",
+    "fall_pct": -20.73,
+    "days_trough_to_recovery": 190,
+    "rv_at_peak": 0.65,
+    "rv_at_recovery": 0.62,
+    "still_higher": false,
+    "days_until_back": 0,
+    "largest_fall_next_126": 0.0
+   },
+   {
+    "peak": "1959-11-30",
+    "trough": "1959-12-21",
+    "recovered": "1960-02-08",
+    "fall_pct": -12.54,
+    "days_trough_to_recovery": 30,
+    "rv_at_peak": 0.72,
+    "rv_at_recovery": 0.66,
+    "still_higher": false,
+    "days_until_back": 0,
+    "largest_fall_next_126": -1.01
+   },
+   {
+    "peak": "1960-05-04",
+    "trough": "1960-06-02",
+    "recovered": "1960-07-06",
+    "fall_pct": -12.24,
+    "days_trough_to_recovery": 24,
+    "rv_at_peak": 0.79,
+    "rv_at_recovery": 1.09,
+    "still_higher": true,
+    "days_until_back": 7,
+    "largest_fall_next_126": -1.15
+   },
+   {
+    "peak": "1961-05-17",
+    "trough": "1961-06-07",
+    "recovered": "1961-06-26",
+    "fall_pct": -7.26,
+    "days_trough_to_recovery": 13,
+    "rv_at_peak": 0.62,
+    "rv_at_recovery": 1.1,
+    "still_higher": true,
+    "days_until_back": 9,
+    "largest_fall_next_126": -26.65
+   },
+   {
+    "peak": "1961-07-18",
+    "trough": "1965-07-12",
+    "recovered": "1968-09-30",
+    "fall_pct": -44.23,
+    "days_trough_to_recovery": 804,
+    "rv_at_peak": 0.45,
+    "rv_at_recovery": 0.56,
+    "still_higher": true,
+    "days_until_back": 158,
+    "largest_fall_next_126": -9.86
+   },
+   {
+    "peak": "1968-10-02",
+    "trough": "1968-11-11",
+    "recovered": "1969-02-12",
+    "fall_pct": -10.43,
+    "days_trough_to_recovery": 60,
+    "rv_at_peak": 0.53,
+    "rv_at_recovery": 0.49,
+    "still_higher": false,
+    "days_until_back": 0,
+    "largest_fall_next_126": -5.59
+   },
+   {
+    "peak": "1969-06-10",
+    "trough": "1969-07-30",
+    "recovered": "1969-10-01",
+    "fall_pct": -9.21,
+    "days_trough_to_recovery": 43,
+    "rv_at_peak": 0.44,
+    "rv_at_recovery": 0.74,
+    "still_higher": true,
+    "days_until_back": null,
+    "largest_fall_next_126": -0.69
+   },
+   {
+    "peak": "1970-04-06",
+    "trough": "1970-05-27",
+    "recovered": "1971-06-15",
+    "fall_pct": -23.86,
+    "days_trough_to_recovery": 261,
+    "rv_at_peak": 0.62,
+    "rv_at_recovery": 0.53,
+    "still_higher": false,
+    "days_until_back": 0,
+    "largest_fall_next_126": -14.92
+   },
+   {
+    "peak": "1971-08-13",
+    "trough": "1971-08-24",
+    "recovered": "1972-01-05",
+    "fall_pct": -20.71,
+    "days_trough_to_recovery": 88,
+    "rv_at_peak": 0.68,
+    "rv_at_recovery": 0.96,
+    "still_higher": true,
+    "days_until_back": 14,
+    "largest_fall_next_126": 0.0
+   },
+   {
+    "peak": "1972-06-19",
+    "trough": "1972-06-26",
+    "recovered": "1972-07-03",
+    "fall_pct": -9.48,
+    "days_trough_to_recovery": 5,
+    "rv_at_peak": 0.65,
+    "rv_at_recovery": 2.26,
+    "still_higher": true,
+    "days_until_back": 43,
+    "largest_fall_next_126": -2.82
+   },
+   {
+    "peak": "1973-01-24",
+    "trough": "1974-10-09",
+    "recovered": "1978-03-28",
+    "fall_pct": -37.4,
+    "days_trough_to_recovery": 852,
+    "rv_at_peak": 0.77,
+    "rv_at_recovery": 0.62,
+    "still_higher": false,
+    "days_until_back": 0,
+    "largest_fall_next_126": 0.0
+   },
+   {
+    "peak": "1981-08-17",
+    "trough": "1982-10-01",
+    "recovered": "1982-12-06",
+    "fall_pct": -14.58,
+    "days_trough_to_recovery": 46,
+    "rv_at_peak": 0.5,
+    "rv_at_recovery": 0.56,
+    "still_higher": true,
+    "days_until_back": 76,
+    "largest_fall_next_126": -3.09
+   },
+   {
+    "peak": "1984-05-04",
+    "trough": "1984-07-23",
+    "recovered": "1984-10-31",
+    "fall_pct": -13.29,
+    "days_trough_to_recovery": 72,
+    "rv_at_peak": 0.57,
+    "rv_at_recovery": 0.63,
+    "still_higher": true,
+    "days_until_back": 16,
+    "largest_fall_next_126": -0.8
+   },
+   {
+    "peak": "1986-08-20",
+    "trough": "1986-10-22",
+    "recovered": "1987-01-06",
+    "fall_pct": -16.46,
+    "days_trough_to_recovery": 52,
+    "rv_at_peak": 0.94,
+    "rv_at_recovery": 0.51,
+    "still_higher": false,
+    "days_until_back": 0,
+    "largest_fall_next_126": -2.07
+   },
+   {
+    "peak": "1987-06-17",
+    "trough": "1987-07-22",
+    "recovered": "1987-08-27",
+    "fall_pct": -12.44,
+    "days_trough_to_recovery": 26,
+    "rv_at_peak": 1.03,
+    "rv_at_recovery": 0.66,
+    "still_higher": false,
+    "days_until_back": 0,
+    "largest_fall_next_126": -18.99
+   },
+   {
+    "peak": "1987-10-14",
+    "trough": "1987-11-11",
+    "recovered": "1988-04-07",
+    "fall_pct": -21.05,
+    "days_trough_to_recovery": 98,
+    "rv_at_peak": 0.78,
+    "rv_at_recovery": 0.61,
+    "still_higher": false,
+    "days_until_back": 0,
+    "largest_fall_next_126": -0.42
+   },
+   {
+    "peak": "1989-12-29",
+    "trough": "2009-03-10",
+    "recovered": "2024-02-22",
+    "fall_pct": -81.87,
+    "days_trough_to_recovery": 3659,
+    "rv_at_peak": 0.52,
+    "rv_at_recovery": 1.04,
+    "still_higher": true,
+    "days_until_back": null,
+    "largest_fall_next_126": -19.54
+   },
+   {
+    "peak": "2024-03-22",
+    "trough": "2024-04-19",
+    "recovered": "2024-07-04",
+    "fall_pct": -9.34,
+    "days_trough_to_recovery": 51,
+    "rv_at_peak": 1.09,
+    "rv_at_recovery": 0.75,
+    "still_higher": false,
+    "days_until_back": 0,
+    "largest_fall_next_126": -23.11
+   },
+   {
+    "peak": "2024-07-11",
+    "trough": "2025-04-07",
+    "recovered": "2025-08-12",
+    "fall_pct": -26.26,
+    "days_trough_to_recovery": 86,
+    "rv_at_peak": 0.81,
+    "rv_at_recovery": 1.15,
+    "still_higher": true,
+    "days_until_back": 28,
+    "largest_fall_next_126": -1.82
+   },
+   {
+    "peak": "2025-10-31",
+    "trough": "2025-11-19",
+    "recovered": "2026-01-06",
+    "fall_pct": -7.39,
+    "days_trough_to_recovery": 30,
+    "rv_at_peak": 1.72,
+    "rv_at_recovery": 1.17,
+    "still_higher": false,
+    "days_until_back": 0,
+    "largest_fall_next_126": -2.77
+   },
+   {
+    "peak": "2026-02-27",
+    "trough": "2026-03-31",
+    "recovered": "2026-04-16",
+    "fall_pct": -13.23,
+    "days_trough_to_recovery": 12,
+    "rv_at_peak": 1.46,
+    "rv_at_recovery": 2.46,
+    "still_higher": true,
+    "days_until_back": 92,
+    "largest_fall_next_126": -1.75
+   }
+  ],
+  "headline": {
+   "kind": "share",
+   "value": 38.1,
+   "background": 50.0,
+   "n": 21,
+   "halves_agree": false,
+   "evidence_score": 2,
+   "effect": "weak"
+  }
+ },
+ "contagion_2": {
+  "period": [
+   "1949-05-17",
+   "1989-12-29"
+  ],
+  "half_split_day": "1969-08-07",
+  "us_shock_threshold_pct": -1.52,
+  "us_shock_days_with_nikkei_next_day": 149,
+  "nikkei_next_day_down": 102,
+  "nikkei_next_day_down_share": 68.46,
+  "nikkei_next_day_median_pct": -0.39,
+  "nikkei_all_days_down_share": 45.38,
+  "halves_down_share": [
+   70.59,
+   67.35
+  ],
+  "reverse": {
+   "japan_shock_days": 148,
+   "us_same_date_down_share": 45.95,
+   "us_all_days_down_share": 43.87
+  },
+  "headline": {
+   "kind": "share",
+   "value": 68.46,
+   "background": 45.38,
+   "n": 149,
+   "halves_agree": true,
+   "evidence_score": 3,
+   "effect": "visible"
+  }
+ },
  "meta": {
-  "generated_at_utc": "2026-11-26T12:02:32Z",
+  "generated_at_utc": "2026-11-26T12:03:13Z",
   "warning": "Hindsight statistics. A range of what happened, not a forecast and not a recommendation.",
   "first_day": "1926-07-01",
   "last_equity_day": "2026-09-30",
@@ -925,6 +1328,6 @@
    "Kenneth R. French Data Library, Fama/French factors (daily)",
    "FRED, Federal Reserve Bank of St. Louis"
   ],
-  "method": "Second look at the risk patterns: longer history and robustness checks.\n\nHindsight statistics for the reading aids. Not part of the ledger, not a forecast.\nThe tests are fixed in patterns/criteria2.json, committed before this script produced any result. The evidence rule\nand the pass rule are those of patterns/criteria.json, unchanged.\n\nInputs: Kenneth R. French Data Library (daily market return, from July 1926); FRED (Brent, 10-year Treasury yield,\nMoody's Baa minus 10-year spread, VIX). Standard library only. Needs FRED_API_KEY."
+  "method": "Second look at the risk patterns: longer history and robustness checks.\n\nHindsight statistics for the reading aids. Not part of the ledger, not a forecast.\nThe tests are fixed in patterns/criteria2.json, committed before this script produced any result. The evidence rule\nand the pass rule are those of patterns/criteria.json, unchanged.\n\nInputs: Kenneth R. French Data Library (daily market return, from July 1926); FRED (Brent, 10-year Treasury yield,\nMoody's Baa minus 10-year spread, VIX, Nikkei 225). Standard library only. Needs FRED_API_KEY."
  }
 }
