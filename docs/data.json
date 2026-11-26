@@ -1719,6 +1719,44 @@
     }
    }
   },
+  "state_ranges": {
+   "first": "2007-01-03",
+   "last": "2026-07-01",
+   "horizon_trading_days": 63,
+   "fall_pct": 10,
+   "states": [
+    {
+     "state": "Calm",
+     "days": 1579,
+     "share": 0.103,
+     "worst5": -13.785
+    },
+    {
+     "state": "Guarded",
+     "days": 1346,
+     "share": 0.148,
+     "worst5": -15.668
+    },
+    {
+     "state": "Watch",
+     "days": 821,
+     "share": 0.163,
+     "worst5": -14.583
+    },
+    {
+     "state": "Elevated",
+     "days": 841,
+     "share": 0.218,
+     "worst5": -26.068
+    },
+    {
+     "state": "Stress",
+     "days": 317,
+     "share": 0.366,
+     "worst5": -28.444
+    }
+   ]
+  },
   "links": {
    "2026-ai-buildout-financing": {
     "technology": {
