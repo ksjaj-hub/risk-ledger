@@ -45,3 +45,7 @@ VIX data: Copyright Chicago Board Options Exchange, Inc.
 
 Most inputs are published with a one-day lag, so a record reflects the latest available close, shown
 in each component's `observation_date`.
+
+## Rights
+
+Public for verification, not open source. See [LICENSE.md](LICENSE.md).
