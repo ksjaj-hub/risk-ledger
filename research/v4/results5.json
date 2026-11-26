@@ -1,0 +1,625 @@
+{
+ "generated_at_utc": "2026-11-26T16:26Z",
+ "warning": "Hindsight. Not part of the ledger. Not a forecast.",
+ "notes": {
+  "days_where_v3_differs_from_round_1": 0
+ },
+ "sample": {
+  "last_day": "2026-09-30",
+  "train_days": 4287,
+  "test_days": 4903
+ },
+ "part_A": {
+  "candidates": {
+   "v3": {
+    "train_O1": 0.835,
+    "test_O1": 0.625,
+    "test_O2": 0.658,
+    "train_near_high_O1": 0.889,
+    "test_near_high_O1": 0.515,
+    "test_share_followed_by_10pct_fall_by_state": {
+     "Calm": 0.103,
+     "Guarded": 0.148,
+     "Watch": 0.163,
+     "Elevated": 0.218,
+     "Stress": 0.366
+    },
+    "test_state_changes": 244,
+    "test_share_elevated_or_stress": 0.233
+   },
+   "A1": {
+    "train_O1": 0.81,
+    "test_O1": 0.66,
+    "test_O2": 0.663,
+    "train_near_high_O1": 0.828,
+    "test_near_high_O1": 0.568,
+    "test_share_followed_by_10pct_fall_by_state": {
+     "Calm": 0.101,
+     "Guarded": 0.108,
+     "Watch": 0.21,
+     "Elevated": 0.187,
+     "Stress": 0.403
+    },
+    "test_state_changes": 292,
+    "test_share_elevated_or_stress": 0.243,
+    "test_O1_minus_v3_90": [
+     -0.001,
+     0.068
+    ],
+    "bar": {
+     "test_gain_at_least_0.02_and_interval_above_zero": false,
+     "train_not_more_than_0.02_below": false,
+     "O2_not_more_than_0.01_below": true,
+     "ladder_rises": false,
+     "state_changes_within_25pct": true
+    },
+    "acceptable_swap": false,
+    "passes_bar": false
+   },
+   "A2": {
+    "train_O1": 0.838,
+    "test_O1": 0.636,
+    "test_O2": 0.665,
+    "train_near_high_O1": 0.887,
+    "test_near_high_O1": 0.521,
+    "test_share_followed_by_10pct_fall_by_state": {
+     "Calm": 0.104,
+     "Guarded": 0.134,
+     "Watch": 0.223,
+     "Elevated": 0.241,
+     "Stress": 0.385
+    },
+    "test_state_changes": 244,
+    "test_share_elevated_or_stress": 0.204,
+    "test_O1_minus_v3_90": [
+     0.003,
+     0.019
+    ],
+    "bar": {
+     "test_gain_at_least_0.02_and_interval_above_zero": false,
+     "train_not_more_than_0.02_below": true,
+     "O2_not_more_than_0.01_below": true,
+     "ladder_rises": true,
+     "state_changes_within_25pct": true,
+     "clean_check_1927_1985": false
+    },
+    "acceptable_swap": true,
+    "passes_bar": false
+   },
+   "A3": {
+    "train_O1": 0.815,
+    "test_O1": 0.666,
+    "test_O2": 0.667,
+    "train_near_high_O1": 0.825,
+    "test_near_high_O1": 0.572,
+    "test_share_followed_by_10pct_fall_by_state": {
+     "Calm": 0.1,
+     "Guarded": 0.128,
+     "Watch": 0.248,
+     "Elevated": 0.221,
+     "Stress": 0.353
+    },
+    "test_state_changes": 265,
+    "test_share_elevated_or_stress": 0.236,
+    "test_O1_minus_v3_90": [
+     0.003,
+     0.077
+    ],
+    "bar": {
+     "test_gain_at_least_0.02_and_interval_above_zero": true,
+     "train_not_more_than_0.02_below": true,
+     "O2_not_more_than_0.01_below": true,
+     "ladder_rises": false,
+     "state_changes_within_25pct": true,
+     "clean_check_1927_1985": false
+    },
+    "acceptable_swap": false,
+    "passes_bar": false
+   }
+  },
+  "clean_check_trend_1927_1985": {
+   "auroc_1927_1985": {
+    "drawdown_level": 0.717,
+    "trend_level": 0.65,
+    "average_of_both": 0.709,
+    "trend_raw": 0.662,
+    "drawdown_raw": 0.737
+   },
+   "both_minus_drawdown_90": [
+    -0.018,
+    -0.001
+   ],
+   "near_high_only": {
+    "drawdown_raw": 0.589,
+    "trend_raw": 0.52
+   },
+   "auroc_1990_2006": {
+    "drawdown_raw": 0.784,
+    "trend_raw": 0.744
+   },
+   "auroc_2007_on": {
+    "drawdown_raw": 0.666,
+    "trend_raw": 0.715
+   },
+   "passes": false
+  },
+  "passed": [],
+  "chosen": null,
+  "yield_curve_alone": {
+   "recession_6_to_18_months_later": {
+    "train": 0.888,
+    "test": 0.654
+   },
+   "O1": {
+    "train": 0.619,
+    "test": 0.388
+   }
+  }
+ },
+ "part_B": {
+  "candidates_tried": 13,
+  "v3_near_high_O1": {
+   "train": 0.889,
+   "test": 0.515
+  },
+  "base_rate_near_high": {
+   "train": 0.045,
+   "test": 0.111,
+   "1927_1985": 0.069
+  },
+  "candidates": {
+   "breadth": {
+    "near_high_O1": {
+     "train": 0.784,
+     "test": 0.679,
+     "1927_1985": 0.589
+    },
+    "near_high_O4_15pct_in_126d": {
+     "train": 0.631,
+     "test": 0.608,
+     "1927_1985": 0.68
+    },
+    "all_days_O1": {
+     "train": 0.69,
+     "test": 0.723
+    },
+    "first_day": "1927-03-03",
+    "test_interval_90": [
+     0.535,
+     0.811
+    ],
+    "test_lower_end_widened_for_all_candidates": 0.464,
+    "passes": false
+   },
+   "dispersion": {
+    "near_high_O1": {
+     "train": 0.72,
+     "test": 0.603,
+     "1927_1985": 0.579
+    },
+    "near_high_O4_15pct_in_126d": {
+     "train": 0.572,
+     "test": 0.584,
+     "1927_1985": 0.634
+    },
+    "all_days_O1": {
+     "train": 0.786,
+     "test": 0.664
+    },
+    "first_day": "1927-03-03",
+    "test_interval_90": [
+     0.489,
+     0.716
+    ],
+    "test_lower_end_widened_for_all_candidates": 0.43,
+    "passes": false
+   },
+   "correlation": {
+    "near_high_O1": {
+     "train": 0.463,
+     "test": 0.509,
+     "1927_1985": 0.514
+    },
+    "near_high_O4_15pct_in_126d": {
+     "train": 0.477,
+     "test": 0.381,
+     "1927_1985": 0.431
+    },
+    "all_days_O1": {
+     "train": 0.382,
+     "test": 0.514
+    },
+    "first_day": "1927-03-03",
+    "test_interval_90": [
+     0.347,
+     0.661
+    ],
+    "test_lower_end_widened_for_all_candidates": 0.295,
+    "passes": false
+   },
+   "skew": {
+    "near_high_O1": {
+     "train": 0.588,
+     "test": 0.51,
+     "1927_1985": null
+    },
+    "near_high_O4_15pct_in_126d": {
+     "train": 0.696,
+     "test": 0.587,
+     "1927_1985": null
+    },
+    "all_days_O1": {
+     "train": 0.43,
+     "test": 0.417
+    },
+    "first_day": "1990-01-02",
+    "test_interval_90": [
+     0.374,
+     0.647
+    ],
+    "test_lower_end_widened_for_all_candidates": 0.302,
+    "passes": false
+   },
+   "margin_growth": {
+    "near_high_O1": {
+     "train": 0.61,
+     "test": 0.591,
+     "1927_1985": 0.541
+    },
+    "near_high_O4_15pct_in_126d": {
+     "train": 0.666,
+     "test": 0.695,
+     "1927_1985": 0.567
+    },
+    "all_days_O1": {
+     "train": 0.485,
+     "test": 0.607
+    },
+    "first_day": "1953-01-21",
+    "test_interval_90": [
+     0.457,
+     0.741
+    ],
+    "test_lower_end_widened_for_all_candidates": 0.391,
+    "passes": false
+   },
+   "valuation": {
+    "near_high_O1": {
+     "train": 0.577,
+     "test": 0.549,
+     "1927_1985": 0.437
+    },
+    "near_high_O4_15pct_in_126d": {
+     "train": 0.57,
+     "test": 0.598,
+     "1927_1985": 0.705
+    },
+    "all_days_O1": {
+     "train": 0.765,
+     "test": 0.504
+    },
+    "first_day": "1951-04-02",
+    "test_interval_90": [
+     0.402,
+     0.692
+    ],
+    "test_lower_end_widened_for_all_candidates": 0.328,
+    "passes": false
+   },
+   "rate_rise": {
+    "near_high_O1": {
+     "train": 0.606,
+     "test": 0.564,
+     "1927_1985": 0.821
+    },
+    "near_high_O4_15pct_in_126d": {
+     "train": 0.525,
+     "test": 0.488,
+     "1927_1985": 0.856
+    },
+    "all_days_O1": {
+     "train": 0.382,
+     "test": 0.53
+    },
+    "first_day": "1976-11-30",
+    "test_interval_90": [
+     0.434,
+     0.701
+    ],
+    "test_lower_end_widened_for_all_candidates": 0.37,
+    "passes": false
+   },
+   "policy_rate_rise": {
+    "near_high_O1": {
+     "train": 0.461,
+     "test": 0.349,
+     "1927_1985": 0.762
+    },
+    "near_high_O4_15pct_in_126d": {
+     "train": 0.423,
+     "test": 0.301,
+     "1927_1985": 0.703
+    },
+    "all_days_O1": {
+     "train": 0.372,
+     "test": 0.331
+    },
+    "first_day": "1955-06-30",
+    "test_interval_90": [
+     0.234,
+     0.468
+    ],
+    "test_lower_end_widened_for_all_candidates": 0.186,
+    "passes": false
+   },
+   "oil_rise": {
+    "near_high_O1": {
+     "train": 0.329,
+     "test": 0.478,
+     "1927_1985": null
+    },
+    "near_high_O4_15pct_in_126d": {
+     "train": 0.163,
+     "test": 0.54,
+     "1927_1985": null
+    },
+    "all_days_O1": {
+     "train": 0.495,
+     "test": 0.497
+    },
+    "first_day": "1986-07-02",
+    "test_interval_90": [
+     0.364,
+     0.608
+    ],
+    "test_lower_end_widened_for_all_candidates": 0.309,
+    "passes": false
+   },
+   "run_up": {
+    "near_high_O1": {
+     "train": 0.516,
+     "test": 0.528,
+     "1927_1985": 0.545
+    },
+    "near_high_O4_15pct_in_126d": {
+     "train": 0.612,
+     "test": 0.6,
+     "1927_1985": 0.536
+    },
+    "all_days_O1": {
+     "train": 0.275,
+     "test": 0.383
+    },
+    "first_day": "1927-05-05",
+    "test_interval_90": [
+     0.373,
+     0.679
+    ],
+    "test_lower_end_widened_for_all_candidates": 0.286,
+    "passes": false
+   },
+   "tight_credit": {
+    "near_high_O1": {
+     "train": 0.484,
+     "test": 0.472,
+     "1927_1985": null
+    },
+    "near_high_O4_15pct_in_126d": {
+     "train": 0.606,
+     "test": 0.656,
+     "1927_1985": null
+    },
+    "all_days_O1": {
+     "train": 0.233,
+     "test": 0.423
+    },
+    "first_day": "1986-01-02",
+    "test_interval_90": [
+     0.328,
+     0.638
+    ],
+    "test_lower_end_widened_for_all_candidates": 0.258,
+    "passes": false
+   },
+   "low_vol": {
+    "near_high_O1": {
+     "train": 0.244,
+     "test": 0.417,
+     "1927_1985": null
+    },
+    "near_high_O4_15pct_in_126d": {
+     "train": 0.227,
+     "test": 0.454,
+     "1927_1985": null
+    },
+    "all_days_O1": {
+     "train": 0.248,
+     "test": 0.362
+    },
+    "first_day": "1990-01-02",
+    "test_interval_90": [
+     0.31,
+     0.523
+    ],
+    "test_lower_end_widened_for_all_candidates": 0.269,
+    "passes": false
+   },
+   "vix_term": {
+    "near_high_O1": {
+     "train": null,
+     "test": 0.528,
+     "1927_1985": null
+    },
+    "near_high_O4_15pct_in_126d": {
+     "train": null,
+     "test": 0.493,
+     "1927_1985": null
+    },
+    "all_days_O1": {
+     "train": null,
+     "test": 0.627
+    },
+    "first_day": "2007-12-04",
+    "test_interval_90": [
+     0.437,
+     0.61
+    ],
+    "test_lower_end_widened_for_all_candidates": 0.387,
+    "passes": false
+   }
+  },
+  "passed": [],
+  "added_to_v3": {}
+ },
+ "part_C": {
+  "C1": {
+   "train_O1": 0.838,
+   "test_O1": 0.627,
+   "test_O2": 0.637,
+   "train_near_high_O1": 0.835,
+   "test_near_high_O1": 0.529,
+   "test_share_followed_by_10pct_fall_by_state": {
+    "Calm": 0.089,
+    "Guarded": 0.14,
+    "Watch": 0.187,
+    "Elevated": 0.178,
+    "Stress": 0.344
+   },
+   "test_state_changes": 254,
+   "test_share_elevated_or_stress": 0.273,
+   "test_O1_minus_v3_90": [
+    -0.046,
+    0.05
+   ],
+   "bar": {
+    "test_gain_at_least_0.02_and_interval_above_zero": false,
+    "train_not_more_than_0.02_below": true,
+    "O2_not_more_than_0.01_below": false,
+    "ladder_rises": false,
+    "state_changes_within_25pct": true
+   },
+   "acceptable_swap": true,
+   "levels": [
+    1.91,
+    2.33,
+    3.147
+   ],
+   "passes_bar": false
+  },
+  "C2": {
+   "train_O1": 0.808,
+   "test_O1": 0.633,
+   "test_O2": 0.638,
+   "train_near_high_O1": 0.714,
+   "test_near_high_O1": 0.564,
+   "test_share_followed_by_10pct_fall_by_state": {
+    "Calm": 0.082,
+    "Guarded": 0.113,
+    "Watch": 0.237,
+    "Elevated": 0.183,
+    "Stress": 0.281
+   },
+   "test_state_changes": 270,
+   "test_share_elevated_or_stress": 0.325,
+   "test_O1_minus_v3_90": [
+    -0.043,
+    0.058
+   ],
+   "bar": {
+    "test_gain_at_least_0.02_and_interval_above_zero": false,
+    "train_not_more_than_0.02_below": false,
+    "O2_not_more_than_0.01_below": false,
+    "ladder_rises": false,
+    "state_changes_within_25pct": true
+   },
+   "acceptable_swap": false,
+   "levels": [
+    0.025,
+    0.072,
+    0.224
+   ],
+   "passes_bar": false
+  },
+  "C3": {
+   "train_O1": 0.817,
+   "test_O1": 0.639,
+   "test_O2": 0.638,
+   "train_near_high_O1": 0.795,
+   "test_near_high_O1": 0.561,
+   "test_share_followed_by_10pct_fall_by_state": {
+    "Calm": 0.073,
+    "Guarded": 0.13,
+    "Watch": 0.225,
+    "Elevated": 0.177,
+    "Stress": 0.344
+   },
+   "test_state_changes": 246,
+   "test_share_elevated_or_stress": 0.321,
+   "test_O1_minus_v3_90": [
+    -0.033,
+    0.059
+   ],
+   "bar": {
+    "test_gain_at_least_0.02_and_interval_above_zero": false,
+    "train_not_more_than_0.02_below": true,
+    "O2_not_more_than_0.01_below": false,
+    "ladder_rises": false,
+    "state_changes_within_25pct": true
+   },
+   "acceptable_swap": false,
+   "levels": [
+    0.025,
+    0.072,
+    0.224
+   ],
+   "passes_bar": false
+  }
+ },
+ "part_D_state_durations_since_1990": {
+  "Calm": {
+   "spells": 85,
+   "median_trading_days": 16.0,
+   "upper_quartile": 49.0,
+   "longest": 306,
+   "longest_began": "1994-12-21",
+   "share_ended_by_moving_up": 1.0,
+   "share_of_all_days": 0.358
+  },
+  "Guarded": {
+   "spells": 142,
+   "median_trading_days": 10.0,
+   "upper_quartile": 19.0,
+   "longest": 132,
+   "longest_began": "2006-08-16",
+   "share_ended_by_moving_up": 0.394,
+   "share_of_all_days": 0.266
+  },
+  "Watch": {
+   "spells": 94,
+   "median_trading_days": 9.0,
+   "upper_quartile": 19.0,
+   "longest": 102,
+   "longest_began": "2001-11-19",
+   "share_ended_by_moving_up": 0.468,
+   "share_of_all_days": 0.148
+  },
+  "Elevated": {
+   "spells": 74,
+   "median_trading_days": 11.0,
+   "upper_quartile": 29.0,
+   "longest": 77,
+   "longest_began": "2023-01-11",
+   "share_ended_by_moving_up": 0.297,
+   "share_of_all_days": 0.154
+  },
+  "Stress": {
+   "spells": 24,
+   "median_trading_days": 8.5,
+   "upper_quartile": 22.25,
+   "longest": 225,
+   "longest_began": "2008-09-15",
+   "share_ended_by_moving_up": 0.0,
+   "share_of_all_days": 0.062
+  }
+ }
+}
