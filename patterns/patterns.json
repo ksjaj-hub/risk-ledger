@@ -188,13 +188,61 @@
    1.63,
    3.43
   ],
+  "two_or_more_sample_days": [
+   "1990-08-30",
+   "1990-10-01",
+   "1998-09-22",
+   "2000-05-22",
+   "2001-09-26",
+   "2002-03-28",
+   "2008-09-29",
+   "2008-10-28",
+   "2009-01-29",
+   "2009-06-01",
+   "2010-06-01",
+   "2011-08-29",
+   "2015-09-01",
+   "2020-03-05",
+   "2022-03-04",
+   "2025-04-09",
+   "2026-03-12"
+  ],
+  "two_or_more_separate_stretches": 14,
+  "now": {
+   "as_of": "2026-11-24",
+   "states": {
+    "oil": {
+     "change_20_days": -25.43,
+     "threshold": 18.38,
+     "active": false
+    },
+    "rates": {
+     "change_20_days": -0.08,
+     "threshold": 0.43,
+     "active": false
+    },
+    "credit": {
+     "change_20_days": 0.16,
+     "threshold": 0.27,
+     "active": false
+    },
+    "vol": {
+     "change_20_days": 8.84,
+     "threshold": 7.54,
+     "active": true
+    }
+   },
+   "active": [
+    "vol"
+   ]
+  },
   "headline": {
    "kind": "ratio",
    "value": 2.24,
    "background": 1.0,
-   "n": 17,
+   "n": 14,
    "halves_agree": true,
-   "evidence_score": 4,
+   "evidence_score": 3,
    "effect": "strong"
   }
  },
@@ -701,7 +749,7 @@
   }
  },
  "meta": {
-  "generated_at_utc": "2026-11-26T11:53:52Z",
+  "generated_at_utc": "2026-11-26T11:55:12Z",
   "warning": "Hindsight statistics. A range of what happened, not a forecast and not a recommendation.",
   "first_day": "1990-01-02",
   "last_equity_day": "2026-09-30",
