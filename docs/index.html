@@ -38,23 +38,31 @@ button:focus-visible,a:focus-visible{outline:1px solid var(--link);outline-offse
 .lang{display:flex;border:1px solid var(--line2)}
 .lang button{width:auto;padding:5px 10px;font-size:11.5px;font-weight:600;color:var(--muted)}
 .lang button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
-.now{padding:28px 0 22px;border-bottom:1px solid var(--line)}
-.state{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-top:6px}
-.state .name{font-size:54px;line-height:1;font-weight:700;font-stretch:112%;letter-spacing:-.01em}
-.state .score{font-size:20px;color:var(--muted);font-weight:500}
-.scale{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;margin-top:16px;max-width:420px}
+.hero{padding:30px 0 20px;border-bottom:1px solid var(--line)}
+.hero h1{font-size:40px;line-height:1.06;font-weight:700;font-stretch:112%;letter-spacing:-.012em;margin:8px 0 10px;text-wrap:balance}
+.hero .lead{color:var(--muted);font-size:15px;max-width:60ch;margin:0}
+.tally{display:grid;grid-template-columns:repeat(4,1fr);margin-top:22px;border-top:1px solid var(--line)}
+.tally div{padding:12px 12px 12px 0;border-right:1px solid var(--line);margin-right:12px}
+.tally div:last-child{border-right:0;margin-right:0}
+.tally b{display:block;font-size:34px;line-height:1.05;font-weight:700;font-stretch:108%}
+.tally span{font-size:11px;font-stretch:88%;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.backdrop{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;margin-top:6px;padding:11px 0 0;border-top:1px solid var(--line);color:var(--fg);min-height:44px}
+.backdrop:hover{text-decoration:none}.backdrop:hover .more{text-decoration:underline}
+.backdrop .bs{font-weight:700;font-size:15px}
+.backdrop .bn{color:var(--muted);font-size:13px}
+.backdrop .more{color:var(--link);font-size:12.5px;margin-left:auto}
+.scale{display:inline-grid;grid-template-columns:repeat(4,18px);gap:2px}
 .scale span{height:4px;background:var(--line2)}
-.scale small{font-size:10.5px;color:var(--dim);letter-spacing:.05em;text-transform:uppercase;padding-top:5px}
-.scale small.on{color:var(--fg)}
-.asof{color:var(--muted);font-size:12.5px;margin-top:14px}
-.comps{display:grid;grid-template-columns:repeat(5,1fr);border-bottom:1px solid var(--line)}
+@media(max-width:560px){.hero h1{font-size:30px}.tally b{font-size:26px}.tally div{margin-right:8px;padding-right:8px}.tally span{font-size:10px;letter-spacing:.03em}}
+.asof{color:var(--muted);font-size:12.5px;margin:0 0 4px}
+.comps{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:10px}
 .comp{padding:14px 12px 14px 0;border-right:1px solid var(--line);margin-right:12px;min-width:0}
 .comp:last-child{border-right:0;margin-right:0}
 .comp .lv{font-size:17px;font-weight:600;margin-top:2px}
 .comp .dots{display:flex;gap:3px;margin-top:7px}
 .comp .dots i{width:14px;height:3px;background:var(--line2)}
 .comp .val{font-size:12px;color:var(--muted);margin-top:6px}
-@media(max-width:700px){.comps{grid-template-columns:1fr 1fr}.comp{border-right:0;border-bottom:1px solid var(--line);margin-right:0}.comp:last-child{grid-column:1/-1;border-bottom:0}.state .name{font-size:44px}}
+@media(max-width:700px){.comps{grid-template-columns:1fr 1fr}.comp{border-right:0;border-bottom:1px solid var(--line);margin-right:0}.comp:last-child{grid-column:1/-1;border-bottom:0}}
 h2{font-size:15px;font-weight:600;margin:0}
 .sec{padding:22px 0 6px}
 .sec p{color:var(--muted);margin:4px 0 12px;max-width:64ch;font-size:13px}
@@ -63,6 +71,13 @@ button.row:hover{background:var(--hover)}
 .row .d{color:var(--muted);font-size:12.5px;padding-top:2px}
 .row .ti{font-weight:500;text-wrap:pretty}
 .row .su{color:var(--muted);font-size:12.5px;margin-top:2px}
+.row .ti.big{font-size:16px;font-weight:600}
+.kv{display:grid;grid-template-columns:auto minmax(0,1fr);gap:3px 10px;margin:8px 0 6px;font-size:13px}
+.kv dt{font-size:10.5px;font-stretch:88%;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);padding-top:2px;white-space:nowrap}
+.kv dt.need{color:var(--watch)}
+.kv dd{margin:0;color:var(--fg)}
+.kv dd.gn{color:var(--muted)}
+.kv dd small{color:var(--muted);font-size:12px}
 .tag{display:inline-block;font-size:10.5px;font-weight:700;font-stretch:90%;letter-spacing:.07em;padding:2px 0;width:78px;text-align:center;text-transform:uppercase;border:1px solid var(--line2);color:var(--muted)}
 .tag.open,.tag.change{border-color:var(--watch);color:var(--watch)}
 .tag.worsened{background:var(--alert);border-color:var(--alert);color:#12090a}
@@ -100,16 +115,17 @@ button.row:hover{background:var(--hover)}
   <div class="r"><a href="https://github.com/ksjaj-hub/risk-ledger" data-t="src">Source and full history</a><div class="lang" role="group" aria-label="Language"><button type="button" data-lang="en">EN</button><button type="button" data-lang="ko">한국어</button></div></div>
 </div></header>
 <main class="wrap">
-  <section class="now" aria-live="polite">
-    <div class="lbl" data-t="head">AFMX · US market risk state</div>
-    <div class="state"><span class="name" id="state">…</span><span class="score" id="score"></span></div>
-    <div class="scale" id="scale" aria-hidden="true"></div>
-    <div class="asof" id="asof"></div>
+  <section class="hero">
+    <div class="lbl" data-t="kick"></div>
+    <h1 data-t="h1"></h1>
+    <p class="lead" data-t="lead"></p>
+    <div class="tally" id="tally" aria-live="polite"></div>
+    <a class="backdrop" href="#backdrop"><span class="lbl" data-t="bd"></span><span id="state" class="bs">…</span><span id="score" class="bn"></span><span class="scale" id="scale" aria-hidden="true"></span><span class="more" data-t="bdmore"></span></a>
   </section>
-  <section class="comps" id="comps" aria-label="Components"></section>
   <section class="sub"><p><b data-t="subh"></b> <span data-t="subp"></span> <a href="weekly/1.html" data-t="subr"></a></p><form id="subf" novalidate><input id="subm" type="email" name="email" autocomplete="email" inputmode="email" required aria-label="Email"><button class="btn" type="submit" data-t="subb"></button><span id="subs" role="status" aria-live="polite"></span></form></section>
-  <section class="sec"><h2 data-t="chg">State changes</h2><p data-t="chgp">Recorded automatically each time the state or a component level changes.</p><div id="alerts"></div></section>
-  <section class="sec"><h2 data-t="ev">Open event risks</h2><p data-t="evp"></p><div id="events"></div></section>
+  <section class="sec"><h2 data-t="ev"></h2><p data-t="evp"></p><div id="events"></div></section>
+  <section class="sec" id="backdrop"><h2 data-t="bdh"></h2><p data-t="bdp"></p><div class="asof" id="asof"></div><div class="comps" id="comps" aria-label="Components"></div></section>
+  <section class="sec"><h2 data-t="chg"></h2><p data-t="chgp"></p><div id="alerts"></div></section>
   <section class="verify"><h2 data-t="ver"></h2><ol id="verify"></ol></section>
 </main>
 <footer class="foot"><div class="wrap" data-t="foot"></div></footer>
@@ -117,20 +133,20 @@ button.row:hover{background:var(--hover)}
 const $=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e};
 const COLORS=["#79a596","#b9c06a","#e2a43a","#f0594b"], STATES=["Calm","Watch","Elevated","Stress"];
 const REPO="https://github.com/ksjaj-hub/risk-ledger";
-const T={en:{subh:"AFMX Weekly.",subp:"One short note a week: what changed, what is still open, and which good news did not resolve anything. Free.",subb:"Subscribe",subr:"Read No. 1",subph:"you@example.com",subok:"You are on the list. The first issue will arrive by email.",subbad:"Please enter a valid email address.",suberr:"Could not save it. Please try again in a moment.",src:"Source and full history",head:"AFMX · US market risk state",chg:"State changes",chgp:"Recorded automatically each time the state or a component level changes.",ev:"Open event risks",
- evp:"AFMX tracks what is still unresolved after the headlines move on. Each card says what would have to be true for the risk to count as resolved. Those conditions were written on the date shown, before the outcome was known. Good news that does not meet them is listed too.",
+const T={en:{subh:"AFMX Weekly.",subp:"One short note a week: what changed, what is still open, and which good news did not resolve anything. Free.",subb:"Subscribe",subr:"Read No. 1",subph:"you@example.com",subok:"You are on the list. The first issue will arrive by email.",subbad:"Please enter a valid email address.",suberr:"Could not save it. Please try again in a moment.",src:"Source and full history",kick:"AFMX · US market",h1:"What is left after the news.",lead:"Good news moves the price. It does not always remove the risk. AFMX writes down, in advance, what would have to be true for each risk to count as resolved, and keeps the record where it cannot be edited.",tl:["Still open","Worsened","Easing","Resolved"],bd:"Market backdrop",bdmore:"Details",bdh:"Market backdrop",bdp:"A plain reading of five public indicators, for context. It describes current conditions and reacts after markets move; it is not a forecast.",gn:"Good news",need:"Still needed",more:n=>" +"+n+" more",tap:"Full card",chg:"Backdrop changes",chgp:"Recorded automatically each time the state or a component level changes.",ev:"Risks that are still open",
+ evp:"Each card shows the good news that came out and the condition that is still not met. Conditions were written on the date shown, before the outcome was known. Tap a card for everything, with sources.",
  ver:"How to check that nothing here was changed afterwards",
- v:[["Every record is its own dated commit in a ","public history",REPO+"/commits/main","."],["Each record contains the fingerprint (SHA-256) of the record before it, so one edit would break the chain."],["Records carry ","OpenTimestamps","https://opentimestamps.org"," proofs anchored to the Bitcoin blockchain."],["The ","judging rule",REPO+"/blob/main/rules/v1.md"," is published and versioned. Old versions are never edited."]],
+ v:[["Every record is its own dated commit in a ","public history",REPO+"/commits/main","."],["Each record contains the fingerprint (SHA-256) of the record before it, so one edit would break the chain."],["Records carry ","OpenTimestamps","https://opentimestamps.org"," proofs anchored to the Bitcoin blockchain."],["The ","judging rule",REPO+"/blob/main/rules/"," is published and versioned. Old versions are never edited."]],
  foot:"This is a description of risk conditions. It is not a forecast, not a recommendation to buy or sell anything, and not investment advice. Inputs via FRED; most lag by about one trading day. VIX data: Copyright Chicago Board Options Exchange, Inc.",
  states:STATES,levels:["Low","Moderate","High","Extreme"],comp:{},of:" of 100",asof:"as of ",
  rec:(d,t,v,n)=>"Recorded "+d+" at "+t+" UTC under rule "+v+". "+n+" record"+(n===1?"":"s")+" so far.",
  rulev:"Rule",held:x=>"The rule indicated "+x+" on the latest day; the state steps down only after 5 trading days in a row.",
  start:"Start",change:"Change",first:"First record: ",state:"State",status:{open:"open",easing:"easing",worsened:"worsened",resolved:"resolved"},
  cond:"conditions written ",what:"What happened",how:"How it reaches markets",res:"Counts as resolved when all of these are true",wor:"Counts as worsened if any of these happens",rel:"Good news that does not resolve it",log:"Log",srcs:"Sources: ",none:"No record yet",fail:"Data could not be loaded",loc:"en-US"},
-ko:{subh:"AFMX 주간 글.",subp:"일주일에 한 번, 짧게 보냅니다. 무엇이 바뀌었고, 무엇이 아직 열려 있으며, 어떤 호재가 아무것도 해소하지 못했는지 정리합니다. 무료이고 영어로 발행합니다.",subb:"구독",subr:"1호 읽기",subph:"이메일 주소",subok:"등록됐습니다. 첫 글부터 이메일로 보내 드립니다.",subbad:"이메일 주소를 다시 확인해 주세요.",suberr:"저장하지 못했습니다. 잠시 뒤 다시 시도해 주세요.",src:"원본과 전체 기록",head:"AFMX · 미국 시장 리스크 상태",chg:"상태 변화",chgp:"상태나 요소의 단계가 바뀔 때마다 자동으로 기록됩니다.",ev:"열려 있는 사건 리스크",
- evp:"AFMX는 뉴스가 지나간 뒤에도 해결되지 않고 남아 있는 것을 추적합니다. 카드마다 무엇이 확인돼야 해소로 볼지 적혀 있습니다. 그 조건은 결과를 알기 전, 표시된 날짜에 적었습니다. 조건을 채우지 못하는 호재도 함께 적었습니다. 한국어는 읽기 편하도록 붙인 번역이고, 기록의 원문은 영어입니다.",
+ko:{subh:"AFMX 주간 글.",subp:"일주일에 한 번, 짧게 보냅니다. 무엇이 바뀌었고, 무엇이 아직 열려 있으며, 어떤 호재가 아무것도 해소하지 못했는지 정리합니다. 무료이고 영어로 발행합니다.",subb:"구독",subr:"1호 읽기",subph:"이메일 주소",subok:"등록됐습니다. 첫 글부터 이메일로 보내 드립니다.",subbad:"이메일 주소를 다시 확인해 주세요.",suberr:"저장하지 못했습니다. 잠시 뒤 다시 시도해 주세요.",src:"원본과 전체 기록",kick:"AFMX · 미국 시장",h1:"뉴스가 지나간 뒤에 남은 것.",lead:"호재는 가격을 움직이지만 리스크까지 없애 주지는 않습니다. AFMX는 리스크마다 무엇이 확인돼야 해소인지를 미리 적어 두고, 그 기록을 고칠 수 없는 곳에 남깁니다.",tl:["아직 열림","악화","완화","해소"],bd:"시장 배경",bdmore:"자세히",bdh:"시장 배경",bdp:"공개 지표 다섯 가지를 그대로 읽은 참고값입니다. 지금 상태를 설명할 뿐이고 시장이 움직인 뒤에 반응합니다. 예측이 아닙니다.",gn:"나온 호재",need:"남은 조건",more:n=>" 외 "+n+"개",tap:"카드 전체 보기",chg:"시장 배경의 변화",chgp:"상태나 요소의 단계가 바뀔 때마다 자동으로 기록됩니다.",ev:"아직 열려 있는 리스크",
+ evp:"카드마다 나온 호재와 아직 채워지지 않은 조건을 보여 줍니다. 조건은 결과를 알기 전, 표시된 날짜에 적었습니다. 카드를 누르면 출처와 함께 전체가 열립니다. 한국어는 읽기 편하도록 붙인 번역이고, 기록의 원문은 영어입니다.",
  ver:"나중에 고쳐 쓰지 않았다는 것을 확인하는 방법",
- v:[["모든 기록은 날짜가 찍힌 개별 변경으로 ","공개 이력",REPO+"/commits/main","에 남습니다."],["기록마다 바로 앞 기록의 지문(SHA-256)이 들어 있어서, 하나만 고쳐도 사슬이 끊어집니다."],["기록에는 비트코인 블록체인에 시각을 남기는 ","OpenTimestamps","https://opentimestamps.org"," 증명이 붙습니다."],["","판정 규칙",REPO+"/blob/main/rules/v1.ko.md","은 공개돼 있고 버전이 붙습니다. 이전 버전은 고치지 않습니다."]],
+ v:[["모든 기록은 날짜가 찍힌 개별 변경으로 ","공개 이력",REPO+"/commits/main","에 남습니다."],["기록마다 바로 앞 기록의 지문(SHA-256)이 들어 있어서, 하나만 고쳐도 사슬이 끊어집니다."],["기록에는 비트코인 블록체인에 시각을 남기는 ","OpenTimestamps","https://opentimestamps.org"," 증명이 붙습니다."],["","판정 규칙",REPO+"/blob/main/rules/","은 공개돼 있고 버전이 붙습니다. 이전 버전은 고치지 않습니다."]],
  foot:"이 페이지는 리스크 상태를 설명합니다. 예측이 아니며, 무엇을 사거나 팔라는 권유나 투자 조언이 아닙니다. 입력 자료는 FRED를 통해 받으며 대부분 약 1거래일 늦습니다. VIX 자료: Copyright Chicago Board Options Exchange, Inc.",
  states:["평온","주의","높음","위기"],levels:["낮음","보통","높음","매우 높음"],
  comp:{equity_volatility:"주식 변동성",credit_stress:"신용 불안",yield_curve:"금리 곡선",financial_conditions:"금융 여건",equity_drawdown:"주가 낙폭"},of:" / 100",asof:"기준일 ",
@@ -149,7 +165,7 @@ function render(){
   document.getElementById("subm").placeholder=t.subph;if(window.subState)document.getElementById("subs").textContent=t[window.subState];
   document.querySelectorAll("[data-lang]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.lang===lang)));
   const vo=document.getElementById("verify");vo.replaceChildren();
-  t.v.forEach(p=>{const li=$("li");if(p.length===1)li.textContent=p[0];else{const a=$("a",null,p[1]);a.href=p[2];li.append(p[0],a,p[3])}vo.append(li)});
+  t.v.forEach(p=>{const li=$("li");if(p.length===1)li.textContent=p[0];else{const a=$("a",null,p[1]);a.href=p[2].endsWith("/rules/")&&D?p[2]+D.rule.version+(lang==="ko"?".ko.md":".md"):p[2];li.append(p[0],a,p[3])}vo.append(li)});
   const st=document.getElementById("state");
   if(!D){st.textContent="…";return}
   const cn=id=>t.comp[id]||D.rule.components[id]||id;
@@ -158,7 +174,6 @@ function render(){
     const si=STATES.indexOf(L.state);st.textContent=stName(L.state);st.style.color=COLORS[si];
     document.getElementById("score").textContent="AFMX "+L.score+t.of;
     STATES.forEach((s,i)=>{const b=$("span");if(i<=si)b.style.background=COLORS[si];sc.append(b)});
-    STATES.forEach((s,i)=>sc.append($("small",i===si?"on":"",t.states[i])));
     document.getElementById("asof").textContent=t.rec(fmt(L.recorded_at_utc.slice(0,10)),L.recorded_at_utc.slice(11,16),L.rule_version,D.history.length)+(L.indicated_state&&L.indicated_state!==L.state?" "+t.held(stName(L.indicated_state)):"");
     Object.entries(L.components).forEach(([id,c])=>{
       const d=$("div","comp");d.append($("div","lbl",cn(id)));
@@ -176,12 +191,20 @@ function render(){
     if(a.changes.length)b.append($("div","su",a.changes.map(c=>c.what==="rule_version"?t.rulev+": "+c.from+" → "+c.to:(c.what==="state"?t.state:cn(c.what))+": "+lab(c.from)+" → "+lab(c.to)).join("; ")));
     r.append(b);al.append(r)});
   const ev=document.getElementById("events");ev.replaceChildren();
+  const tl=document.getElementById("tally");tl.replaceChildren();
+  ["open","worsened","easing","resolved"].forEach((k,i)=>{const d=$("div");const n=D.events.filter(e=>e.status===k).length;const b=$("b",null,String(n));if(n)b.style.color=["var(--watch)","var(--alert)","var(--fg)","var(--clear)"][i];else b.style.color="var(--dim)";d.append(b,$("span",null,t.tl[i]));tl.append(d)});
   const order={worsened:0,open:1,easing:2,resolved:3};
-  D.events.slice().sort((a,b)=>(order[a.status]-order[b.status])||a.title.localeCompare(b.title)).forEach(e=>{
+  D.events.slice().sort((a,b)=>(order[a.status]-order[b.status])||b.event_started.localeCompare(a.event_started)||a.title.localeCompare(b.title)).forEach(e=>{
     const k=(lang==="ko"&&D.ko&&D.ko[e.id])||null, last=e.history[e.history.length-1], id="ev-"+e.id;
     const r=$("button","row");r.type="button";r.setAttribute("aria-expanded",String(open.has(e.id)));r.setAttribute("aria-controls",id);
     r.append($("div","d",fmt(last.date)));r.append($("span","tag "+e.status,t.status[e.status]||e.status));
-    const b=$("div","body");b.append($("div","ti",k?k.title:e.title));b.append($("div","su",t.cond+fmt(e.resolution_conditions.written_on)));r.append(b);
+    const b=$("div","body");b.append($("div","ti big",k?k.title:e.title));
+    const gn=(k?k.relief:e.relief_headlines_that_do_not_resolve_it)||[], need=(k?k.resolved:e.resolution_conditions.resolved_when_all)||[];
+    if(e.status!=="resolved"&&(gn.length||need.length)){const dl=$("dl","kv");
+      if(gn.length){dl.append($("dt",null,t.gn));dl.append($("dd","gn",gn[0]))}
+      if(need.length){dl.append($("dt","need",t.need));const dd=$("dd",null,need[0]);if(need.length>1)dd.append($("small",null,t.more(need.length-1)));dl.append(dd)}
+      b.append(dl)}
+    b.append($("div","su",t.cond+fmt(e.resolution_conditions.written_on)+" · "+t.tap));r.append(b);
     const d=$("div","det");d.id=id;d.hidden=!open.has(e.id);
     d.append($("h3","lbl",t.what),$("p",null,k?k.what:e.what_happened));
     d.append($("h3","lbl",t.how),$("p",null,k?k.channel:e.how_it_reaches_markets));
