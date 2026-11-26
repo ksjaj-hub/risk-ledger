@@ -1,0 +1,16 @@
+{
+  "written": "2026-11-26 (UTC), after results5.json, before part E of scripts/research_v4e.py produced any number",
+  "status": "Fixed. An exploratory follow-up, chosen after seeing round 5. It cannot by itself justify a rule change.",
+  "why": "In round 5 part B no candidate cleared the bar. Industry breadth (share of the 49 French industries below their own 200-day average) came closest: near-high AUROC 0.784 on 1990-2006, 0.679 on 2007 on and 0.589 on 1927-1985, but its test interval widened for 13 candidates reached down to 0.464. Because breadth was picked after seeing those numbers, anything below is flattered by that choice.",
+  "what_has_been_seen": "Breadth alone on all three periods (near-high and all days for 1990 on; near-high only for 1927-1985). Not seen: breadth combined with the v3 rule, or with drawdown on 1927-1985.",
+  "candidates": {
+    "E1": "v3 plus breadth as one more component, levels at its 50th, 75th and 95th percentile of 1990-2006, not counted toward floors",
+    "E2": "E1 without the yield curve in the score"
+  },
+  "old_period_check": "On 1927-1985: the average of the drawdown level (5/10/20) and the breadth level (same cut points as above) against the drawdown level alone, for O1, on all days and on near-high days, with the 90% interval of the difference.",
+  "reading": {
+    "strong": "E1 or E2 clears every item of the round 5 part A bar and the old-period check interval is above zero on all days: put it to the owner as a candidate v4, labelled exploratory, together with the proposal to record breadth live first.",
+    "worth_recording": "The old-period check is above zero on near-high days or on all days, but the bar is not cleared: propose recording breadth live as a shadow indicator outside the rule, so that clean evidence accumulates.",
+    "drop": "Neither."
+  }
+}

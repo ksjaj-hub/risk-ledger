@@ -1,0 +1,119 @@
+{
+ "warning": "Hindsight. Not part of the ledger. Not a forecast.",
+ "funds": {
+  "XLB": {
+   "first_day": "2003-12-01",
+   "last_day": "2026-11-24",
+   "days": 5786
+  },
+  "XLC": {
+   "first_day": "2018-06-18",
+   "last_day": "2026-11-24",
+   "days": 2122
+  },
+  "XLE": {
+   "first_day": "2003-12-01",
+   "last_day": "2026-11-24",
+   "days": 5786
+  },
+  "XLF": {
+   "first_day": "2003-12-01",
+   "last_day": "2026-11-24",
+   "days": 5786
+  },
+  "XLI": {
+   "first_day": "2003-12-01",
+   "last_day": "2026-11-24",
+   "days": 5786
+  },
+  "XLK": {
+   "first_day": "2003-12-01",
+   "last_day": "2026-11-24",
+   "days": 5786
+  },
+  "XLP": {
+   "first_day": "2003-12-01",
+   "last_day": "2026-11-24",
+   "days": 5786
+  },
+  "XLRE": {
+   "first_day": "2015-10-07",
+   "last_day": "2026-11-24",
+   "days": 2800
+  },
+  "XLU": {
+   "first_day": "2003-12-01",
+   "last_day": "2026-11-24",
+   "days": 5786
+  },
+  "XLV": {
+   "first_day": "2003-12-01",
+   "last_day": "2026-11-24",
+   "days": 5786
+  },
+  "XLY": {
+   "first_day": "2003-12-01",
+   "last_day": "2026-11-24",
+   "days": 5786
+  }
+ },
+ "first_day_with_9_funds": "2004-09-16",
+ "common_days_with_49_industry_breadth": 5545,
+ "spearman_with_49_industry_breadth": 0.874,
+ "near_high_O1_2007_on": {
+  "proxy": 0.61,
+  "49_industry_breadth_same_days": 0.679,
+  "v3_same_days": 0.515
+ },
+ "all_days_O1_2007_on": {
+  "proxy": 0.675,
+  "49_industry_breadth_same_days": 0.723
+ },
+ "v3_plus_proxy": {
+  "test_O1": 0.638,
+  "v3_same_days": 0.625,
+  "minus_v3_90": [
+   -0.006,
+   0.038
+  ],
+  "test_near_high_O1": 0.532,
+  "card": {
+   "train_O1": 0.834,
+   "test_O1": 0.638,
+   "test_O2": 0.658,
+   "train_near_high_O1": 0.892,
+   "test_near_high_O1": 0.532,
+   "test_share_followed_by_10pct_fall_by_state": {
+    "Calm": 0.103,
+    "Guarded": 0.133,
+    "Watch": 0.201,
+    "Elevated": 0.222,
+    "Stress": 0.385
+   },
+   "test_state_changes": 270,
+   "test_share_elevated_or_stress": 0.235,
+   "test_O1_minus_v3_90": [
+    -0.007,
+    0.037
+   ],
+   "bar": {
+    "test_gain_at_least_0.02_and_interval_above_zero": false,
+    "train_not_more_than_0.02_below": true,
+    "O2_not_more_than_0.01_below": true,
+    "ladder_rises": true,
+    "state_changes_within_25pct": true
+   },
+   "acceptable_swap": true
+  }
+ },
+ "checks": {
+  "same_information": true,
+  "near_highs": true,
+  "in_the_rule": false
+ },
+ "reading": "failed_a_check",
+ "proxy_now": {
+  "day": "2026-09-30",
+  "value": 0.727
+ }
+}

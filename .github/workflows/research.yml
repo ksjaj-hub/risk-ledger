@@ -3,24 +3,24 @@ on:
   workflow_dispatch:
   push:
     branches: ["claude/**"]
-    paths: ["scripts/research_v4.py", "scripts/research_v4b.py", ".github/workflows/research.yml"]
+    paths: ["scripts/research_v4e.py", ".github/workflows/research.yml"]
 permissions:
   contents: write
 jobs:
   run:
     runs-on: ubuntu-latest
+    timeout-minutes: 180
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install numpy
+      - run: pip install numpy openpyxl
       - name: Compute
         env:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
-        run: |
-          python scripts/research_v4.py
-          if [ -f scripts/research_v4b.py ]; then python scripts/research_v4b.py; fi
+        # rounds 1 to 4 (research_v4.py, _v4b.py, _v4c.py, _v4d.py) are finished; run them by hand if their inputs change
+        run: python scripts/research_v4e.py
       - name: Commit
         run: |
           git config user.name "risk-ledger-bot"

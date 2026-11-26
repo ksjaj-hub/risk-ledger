@@ -1,0 +1,57 @@
+{
+  "written": "2026-11-26 (UTC), before scripts/research_v4e.py produced any number on real data",
+  "status": "Fixed. Not edited after results exist. Hindsight; not part of the ledger; not a forecast.",
+  "asked_for": "The owner chose to follow up the five directions from round 4: trend, the yield curve, information that works near market highs, verifiable inputs, and what AFMX can offer that free indicators do not.",
+  "what_has_already_been_seen": "Round 4 showed, on 2007-2026, that distance below the 200-day average scored 0.714 and the yield curve 0.392. So 2007-2026 is no longer unseen for parts A. The clean evidence for trend is 1927-1985: round 3's price family did not contain a 200-day measure. Rounds 1 and 3 showed dropping the curve gives 0.660 on the test period and is worse on 1990-2006.",
+  "periods": {"train": "1990-01-02 to 2006-12-29", "test": "2007-01-03 on", "old": "1927-01-03 to 1985-12-31 (price-based measures only)"},
+  "outcomes": {"O1": "market closes 10% or more below today's close within 63 trading days", "O2": "5% within 21 days", "O4": "15% within 126 days (secondary, part B only)", "near_high": "days when the market is within 5% of its 252-day high"},
+  "uncertainty": "Moving-block bootstrap, 63-day blocks, 2,000 draws, seed 20261126, 90% intervals.",
+  "part_A_trend_and_curve": {
+    "form": "The v3 rule as written (levels 0-3 per component, plain average, floors, 5-day confirmation). No fitting.",
+    "trend_component": "100 x (1 - price / 200-day average). Levels at 0, 5 and 10: above the average = Low; up to 5% below = Moderate; 5-10% below = High; more than 10% below = Extreme. Not counted toward the floors.",
+    "candidates": {"A1": "v3 without the yield curve in the score", "A2": "v3 plus the trend component", "A3": "v3 without the yield curve, plus the trend component"},
+    "bar_to_propose_as_v4": [
+      "test O1 AUROC at least 0.02 above v3 and the 90% interval of the difference above zero",
+      "train (1990-2006) O1 AUROC not more than 0.02 below v3",
+      "test O2 AUROC not more than 0.01 below v3",
+      "share of days followed by O1 rises from Calm to Stress on the test period, allowing one tie",
+      "published state changes not more than 25% above v3 on the test period",
+      "for A2 and A3 only, the clean check: on 1927-1985 the average of the drawdown level (5/10/20) and the trend level beats the drawdown level alone on O1 with the 90% interval of the difference above zero"
+    ],
+    "if_more_than_one_passes": "the one with the highest train O1 AUROC",
+    "curve_as_a_separate_light": "Reported for information whatever happens: the curve's AUROC for a recession starting 6-18 months later (R1) and for O1, both periods. Showing the curve separately from the score is a presentation choice for the owner; the bar above decides only whether it leaves the score."
+  },
+  "part_B_information_near_highs": {
+    "question": "Does anything tell apart, on days when the market is near its high, the days that are followed by a 10% fall?",
+    "candidates_and_direction": {
+      "breadth": "share of the 49 French industries trading below their own 200-day average; higher = riskier",
+      "dispersion": "cross-industry standard deviation of 63-day returns; higher = riskier",
+      "correlation": "average pairwise correlation of the 49 industries' daily returns over 63 days; higher = riskier",
+      "skew": "Cboe SKEW index; higher = riskier",
+      "margin_growth": "security brokers' margin loans (Federal Reserve Z.1, quarterly), change over a year, used 75 trading days after quarter end; higher = riskier",
+      "valuation": "market value of corporate equities divided by GDP (Z.1 and BEA, quarterly), used 75 trading days after quarter end; higher = riskier",
+      "rate_rise": "change in the 2-year Treasury yield over 126 trading days; higher = riskier",
+      "policy_rate_rise": "change in the effective federal funds rate over 252 trading days; higher = riskier",
+      "oil_rise": "percentage change in WTI crude over 126 trading days; higher = riskier",
+      "run_up": "market return over the past 252 trading days; higher = riskier",
+      "tight_credit": "Baa minus 10-year Treasury spread, sign flipped; tighter = riskier",
+      "low_vol": "VIX, sign flipped; lower = riskier",
+      "vix_term": "VIX divided by 3-month VIX, test period only; higher = riskier"
+    },
+    "bar": "A candidate counts as working near highs only if its AUROC for O1 on near-high days is at least 0.58 on BOTH train and test, and on the test period the lower end of its interval, widened for the number of candidates tried (Bonferroni: the 10%/K percentile), is above 0.50. Price-based candidates (breadth, dispersion, correlation, run_up) must also reach 0.55 on 1927-1985.",
+    "then": "Every candidate that passes is added to v3 as one more component with levels at its 50th, 75th and 95th percentile of the train period, not counted toward floors, and judged by the part A bar with M3 (near-high AUROC) reported.",
+    "expectation": "Round 2 found four slow indicators failed outside the period they were chosen on. Finding nothing is a likely and acceptable result."
+  },
+  "part_C_verifiable_inputs": {
+    "why": "The live rule's high-yield spread is downloadable for 3 years and the S&P 500 for 10, so the rule cannot be checked on the past as it runs.",
+    "candidates": {
+      "C1": "v3 with credit stress read from Baa minus 10-year Treasury, levels at its 50th, 75th and 95th percentile of the train period",
+      "C2": "C1 with NFCI replaced by the ECB CISS for the United States, levels at its train 50th, 75th and 95th percentile",
+      "C3": "C1 plus CISS as a sixth component, same levels"
+    },
+    "bar": "A swap is acceptable if O1 AUROC is not more than 0.01 below v3 (as backtested) on train and on test, and state changes are not more than 25% higher. It is an improvement only by the part A bar.",
+    "ofr": "The OFR index starts in 2000; too short to set levels on the train period. Not tested as a component."
+  },
+  "part_D_description_only": "How long each published v3 state has lasted (number of spells, median, upper quartile, longest) and which state came next, 1990 on. No test.",
+  "what_can_come_out": "A candidate rule v4 for the owner to decide on, or the finding that none of these directions clears the bar. Nothing changes in the live rule from this file or its results."
+}

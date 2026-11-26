@@ -1,0 +1,101 @@
+{
+ "warning": "Exploratory. Breadth was chosen after seeing round 5. Hindsight; not a forecast.",
+ "levels": [
+  0.245,
+  0.49,
+  0.857
+ ],
+ "candidates": {
+  "E1": {
+   "train_O1": 0.818,
+   "test_O1": 0.662,
+   "test_O2": 0.671,
+   "train_near_high_O1": 0.891,
+   "test_near_high_O1": 0.59,
+   "test_share_followed_by_10pct_fall_by_state": {
+    "Calm": 0.094,
+    "Guarded": 0.14,
+    "Watch": 0.205,
+    "Elevated": 0.229,
+    "Stress": 0.385
+   },
+   "test_state_changes": 267,
+   "test_share_elevated_or_stress": 0.23,
+   "test_O1_minus_v3_90": [
+    0.015,
+    0.065
+   ],
+   "bar": {
+    "test_gain_at_least_0.02_and_interval_above_zero": true,
+    "train_not_more_than_0.02_below": true,
+    "O2_not_more_than_0.01_below": true,
+    "ladder_rises": true,
+    "state_changes_within_25pct": true
+   },
+   "acceptable_swap": false,
+   "passes_bar": true,
+   "test_near_high_minus_v3_90": [
+    0.018,
+    0.134
+   ]
+  },
+  "E2": {
+   "train_O1": 0.798,
+   "test_O1": 0.692,
+   "test_O2": 0.673,
+   "train_near_high_O1": 0.857,
+   "test_near_high_O1": 0.644,
+   "test_share_followed_by_10pct_fall_by_state": {
+    "Calm": 0.082,
+    "Guarded": 0.114,
+    "Watch": 0.216,
+    "Elevated": 0.236,
+    "Stress": 0.364
+   },
+   "test_state_changes": 293,
+   "test_share_elevated_or_stress": 0.265,
+   "test_O1_minus_v3_90": [
+    0.023,
+    0.115
+   ],
+   "bar": {
+    "test_gain_at_least_0.02_and_interval_above_zero": true,
+    "train_not_more_than_0.02_below": false,
+    "O2_not_more_than_0.01_below": true,
+    "ladder_rises": true,
+    "state_changes_within_25pct": true
+   },
+   "acceptable_swap": false,
+   "passes_bar": false,
+   "test_near_high_minus_v3_90": [
+    0.01,
+    0.235
+   ]
+  }
+ },
+ "check_1927_1985": {
+  "all_days": {
+   "drawdown_level": 0.717,
+   "breadth_level": 0.678,
+   "average_of_both": 0.718,
+   "both_minus_drawdown_90": [
+    -0.016,
+    0.019
+   ]
+  },
+  "near_high_days": {
+   "drawdown_level": 0.5,
+   "breadth_level": 0.57,
+   "average_of_both": 0.57,
+   "both_minus_drawdown_90": [
+    0.005,
+    0.137
+   ]
+  }
+ },
+ "reading": "worth_recording",
+ "breadth_now": {
+  "day": "2026-09-30",
+  "value": 0.612
+ }
+}
