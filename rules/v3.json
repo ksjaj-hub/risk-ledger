@@ -1,0 +1,138 @@
+{
+ "version": "v3",
+ "effective_from": "2026-11-26",
+ "market": "US",
+ "level_labels": [
+  "Low",
+  "Moderate",
+  "High",
+  "Extreme"
+ ],
+ "components": [
+  {
+   "id": "equity_volatility",
+   "name": "Equity volatility",
+   "series": "VIXCLS",
+   "source": "Cboe Volatility Index (VIX), daily close, via FRED",
+   "transform": "latest",
+   "publish_value": true,
+   "direction": "higher_is_riskier",
+   "thresholds": [
+    15,
+    20,
+    30
+   ]
+  },
+  {
+   "id": "credit_stress",
+   "name": "Credit stress",
+   "series": "BAMLH0A0HYM2",
+   "source": "ICE BofA US High Yield Index option-adjusted spread, via FRED",
+   "transform": "latest",
+   "publish_value": false,
+   "direction": "higher_is_riskier",
+   "thresholds": [
+    3.5,
+    5,
+    7
+   ]
+  },
+  {
+   "id": "yield_curve",
+   "name": "Yield curve",
+   "series": "T10Y3M",
+   "source": "10-year minus 3-month US Treasury yield, via FRED",
+   "transform": "latest",
+   "publish_value": true,
+   "direction": "lower_is_riskier",
+   "thresholds": [
+    0.5,
+    0,
+    -0.5
+   ]
+  },
+  {
+   "id": "financial_conditions",
+   "name": "Financial conditions",
+   "series": "NFCI",
+   "source": "Chicago Fed National Financial Conditions Index (weekly), via FRED",
+   "transform": "latest",
+   "publish_value": true,
+   "direction": "higher_is_riskier",
+   "thresholds": [
+    -0.5,
+    0,
+    0.5
+   ]
+  },
+  {
+   "id": "equity_drawdown",
+   "name": "Equity drawdown",
+   "series": "SP500",
+   "source": "S&P 500 daily close, via FRED",
+   "transform": "drawdown_pct_from_252d_high",
+   "publish_value": false,
+   "direction": "higher_is_riskier",
+   "thresholds": [
+    5,
+    10,
+    20
+   ]
+  }
+ ],
+ "score": "round(100 * sum(levels) / (3 * number_of_components))",
+ "states": [
+  {
+   "name": "Calm",
+   "min_score": 0
+  },
+  {
+   "name": "Guarded",
+   "min_score": 15
+  },
+  {
+   "name": "Watch",
+   "min_score": 30
+  },
+  {
+   "name": "Elevated",
+   "min_score": 50
+  },
+  {
+   "name": "Stress",
+   "min_score": 75
+  }
+ ],
+ "floors": [
+  {
+   "if_components_at_extreme_at_least": 1,
+   "state_at_least": "Elevated",
+   "not_counting": [
+    "yield_curve"
+   ]
+  },
+  {
+   "if_components_at_extreme_at_least": 2,
+   "state_at_least": "Stress",
+   "not_counting": [
+    "yield_curve"
+   ]
+  }
+ ],
+ "alert_on": [
+  "state_change",
+  "component_level_change"
+ ],
+ "confirmation": {
+  "escalate_after_days": 1,
+  "deescalate_after_days": 5,
+  "meaning": "The state moves up on the first day the rule says so. It moves down only after the rule has said a lower state for 5 trading days in a row, and then only to the highest state seen in those days.",
+  "starting_point": "The first v3 record starts from the last state published under v2. The four v2 state names keep their names in v3.",
+  "trading_days": "Dates on which a daily market input (VIX, high-yield spread, yield curve) has an observation."
+ },
+ "changes_from_v2": [
+  "Five states instead of four. A new state, Guarded, sits between Calm and Watch.",
+  "Score bands: 0-14 Calm, 15-29 Guarded, 30-49 Watch, 50-74 Elevated, 75-100 Stress. Under v2: 0-24 Calm, 25-49 Watch, 50-74 Elevated, 75-100 Stress.",
+  "Elevated and Stress, the floors, the component thresholds, the score formula and the confirmation step are unchanged."
+ ]
+}

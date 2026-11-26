@@ -15,7 +15,7 @@ anything, and not investment advice.**
 
 | Path | Contents |
 | --- | --- |
-| `rules/` | The judging rules. Each version has an explanation (`v2.md`) and the file the script actually runs (`v2.json`). The newest version is in force; old versions stay, and each record names the version that judged it. `candidates/` holds proposals that are not in force. |
+| `rules/` | The judging rules. Each version has an explanation (`v3.md`) and the file the script actually runs (`v3.json`). The newest version is in force; old versions stay, and each record names the version that judged it. `candidates/` holds proposals that are not in force. |
 | `records/us/` | One file per day with new data: the state, the score, and each component's level. |
 | `alerts/us/` | One file each time the state or a component level changes. |
 | `events/` | Event risk cards with resolution conditions written in advance. |

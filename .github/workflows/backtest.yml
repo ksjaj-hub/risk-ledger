@@ -17,6 +17,7 @@ jobs:
         run: |
           python scripts/backtest.py
           python scripts/backtest.py --rule rules/candidates/v2-candidate.json
+          python scripts/backtest.py --rule v3
       - name: Commit
         run: |
           git config user.name "risk-ledger-bot"
