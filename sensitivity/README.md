@@ -21,25 +21,34 @@ recommendation.
 
 ## How the page uses it
 
-`aids/reading.json` says which shock each card resembles (`risk_factors`, AFMX judgment) and which sectors a card
-is literally about (`about`). `scripts/build_site.py` then gives each card and sector one of:
+`mapping.json` fixes in advance, in public, which shocks each card is read against (`factors`), which past case
+applies (`cases`), which sectors a card is literally about (`about`) and which cards share one cause (`group`).
+Changes get a new version and a changelog line. `scripts/build_site.py` then gives each card and sector one of:
 
 | level | meaning | points |
 |---|---|---|
 | direct | the card is about companies in the sector | 3 |
 | strong / moderate | the sector lagged the market on such shock days | 3 / 2 |
-| unconfirmed | AFMX judgment only; no fitting data, or the data was weak or mixed | 1 |
+| case | no shock series says anything, but the sector ended 3 points or more behind the market in the 126 trading days after the start of a past case in `cases.json` (one case only) | 2 |
+| unconfirmed | AFMX judgment only; the data was weak or mixed | 1 |
 | whole market | the card reaches the whole market and nothing more specific is known | 1 |
 
-Sectors that historically did better than the market on such days are shown on the card but add no points.
-Sector score = points over open cards / (3 x number of open cards) x 100.
+Sectors that historically did better than the market are shown on the card but add no points.
+
+Sector score (method 2): for each cause group take the highest points among its cards, keep the five largest
+groups, divide by 15, times 100. Opening more cards about one cause therefore does not raise the score.
+
+Public grading of the score is described in `sector_scores/README.md`.
 
 ## Limits
 
 - Same-day association, not cause. Many shock days coincide with each other.
 - Hindsight. The 5% cut-offs use the whole sample.
-- A past shock of a similar kind is not the event on the card. Choosing which shock a card resembles is a judgment.
-- Tariff, China-demand and euro-area cards have no fitting series here; their sector links stay `unconfirmed`.
-- The score counts open cards. It grows when AFMX opens more cards about a sector, so it also reflects coverage.
+- A currency or rate shock is a stand-in, not the event on the card. A falling euro is not the same as ECB rate
+  rises; a weak yuan is not the same as weak Chinese demand. Freight indices and German yields are not available
+  daily from the sources this repository can use.
+- Past cases are single episodes. Only start dates that could be quoted from a source are used. A 2011 euro-area
+  case was left out because no start date could be verified and it is a poor match for an inflation card.
+- The score measures exposure to open risks. Whether that predicts anything is what the public grading will show.
 
 Rerun: Actions, "sector sensitivity", Run workflow. Then `python3 scripts/build_site.py`.

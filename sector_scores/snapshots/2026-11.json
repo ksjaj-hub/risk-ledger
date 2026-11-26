@@ -1,0 +1,18 @@
+{
+ "date": "2026-11-26",
+ "score_version": 2,
+ "mapping_version": 1,
+ "scores": {
+  "technology": 73,
+  "communication": 40,
+  "consumer_discretionary": 47,
+  "consumer_staples": 40,
+  "energy": 87,
+  "financials": 93,
+  "health_care": 47,
+  "industrials": 80,
+  "materials": 87,
+  "real_estate": 53,
+  "utilities": 33
+ }
+}

@@ -1,7 +1,7 @@
 {
  "version": 1,
  "published": "2026-11-26",
- "note": "Which measured shocks each card is read against, which past case applies, and which cards share one cause. Fixed in advance and public. Changes are listed in changelog with a date and a new version; earlier versions stay in git history.",
+ "note": "Which measured shocks each card is read against, which past case applies, and which cards share one cause. Fixed in advance and public. Changes are listed in changelog with a date and a new version; earlier versions stay in git history. chip_selloff is computed but not used: when chip stocks fall, every other sector beats the market by construction.",
  "cards": {
   "2026-us-appropriations-lapse": {
    "group": "us_fiscal",
@@ -18,18 +18,14 @@
   },
   "2026-nvidia-sec-and-leadership": {
    "group": "ai_chips",
-   "factors": [
-    "chip_selloff"
-   ],
+   "factors": [],
    "about": [
     "technology"
    ]
   },
   "2026-us-ai-chip-export-rules": {
    "group": "ai_chips",
-   "factors": [
-    "chip_selloff"
-   ],
+   "factors": [],
    "about": [
     "technology"
    ]
@@ -37,7 +33,6 @@
   "2026-ai-buildout-financing": {
    "group": "ai_chips",
    "factors": [
-    "chip_selloff",
     "credit_widening"
    ],
    "about": [

@@ -1,5 +1,8 @@
 name: sector sensitivity
 on:
+  schedule:
+    # the 6th of every month, 05:17 UTC
+    - cron: "17 5 6 * *"
   workflow_dispatch:
 permissions:
   contents: write
@@ -15,11 +18,15 @@ jobs:
         env:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         run: python scripts/sector_sensitivity.py
+      - name: Grade past sector scores
+        run: python scripts/sector_scorecard.py grade
+      - name: Rebuild the public page data
+        run: python scripts/build_site.py
       - name: Commit
         run: |
           git config user.name "risk-ledger-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add sensitivity
+          git add sensitivity sector_scores docs
           git diff --cached --quiet && { echo "nothing new"; exit 0; }
           git commit -m "sector sensitivity: $(date -u +%Y-%m-%dT%H:%MZ)"
           git pull --rebase origin main

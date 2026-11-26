@@ -36,11 +36,13 @@ jobs:
           done
       - name: Rebuild the public page data
         run: python scripts/build_site.py
+      - name: Monthly snapshot of sector scores (written once per month)
+        run: python scripts/sector_scorecard.py snapshot
       - name: Commit
         run: |
           git config user.name "risk-ledger-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add records alerts docs
+          git add records alerts docs sector_scores
           git diff --cached --quiet && { echo "nothing new"; exit 0; }
           git commit -m "record: $(date -u +%Y-%m-%dT%H:%MZ)"
           git pull --rebase origin main
