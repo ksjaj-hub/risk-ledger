@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches: ["claude/**"]
-    paths: ["scripts/patterns.py", "patterns/dates.json", "patterns/criteria.json", ".github/workflows/patterns.yml"]
+    paths: ["scripts/patterns.py", "scripts/patterns2.py", "patterns/dates.json", "patterns/criteria.json", ".github/workflows/patterns.yml"]
 permissions:
   contents: write
 jobs:
@@ -18,6 +18,10 @@ jobs:
         env:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         run: python scripts/patterns.py
+      - name: Second look
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: python scripts/patterns2.py
       - name: Commit
         run: |
           git config user.name "risk-ledger-bot"
