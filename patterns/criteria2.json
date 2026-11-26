@@ -1,0 +1,78 @@
+{
+ "written": "2026-11-26",
+ "note": "Second look. Written and committed after the first round's results were known and before any number below was computed. The evidence rule and the pass rule of patterns/criteria.json are unchanged and are applied as they stand. Because these tests were chosen with the first results in view, each one says what had and had not been seen when it was written.",
+ "rules_for_this_round": [
+  "A second-look score may replace a first-round evidence score only when the test uses a period the first round did not touch (before 1990) or a number the first round never computed.",
+  "A test on the same period with a changed threshold or a changed mix of inputs is a robustness check. It is reported and does not change a score.",
+  "Both rounds stay on record. Nothing from the first round is deleted or re-scored in place.",
+  "Reading published research is recorded as context. It does not change a score, because the score is about what this repository can measure and keep measuring."
+ ],
+ "tests": {
+  "reverberation_2": {
+   "ko": "잔향 (2차)",
+   "changes_score": true,
+   "seen_before_writing": "First round, 1990 onward, 24 recoveries: the pre-chosen credit spread was still wider on 54% (no effect); the VIX, not the pre-chosen measure, was still higher on 18 of 24. Nothing before 1990 has been computed, and realized volatility has not been computed for any period.",
+   "why_this_measure": "The VIX starts in 1990 and daily credit spreads in 1986, so neither can be taken to an untouched period. Volatility computed from the market's own daily returns exists from 1926.",
+   "definition": "US market daily returns, 1926-07-01 to 1989-12-29. Drawdown episode and recovery day exactly as in the first round (a fall of 7% or more from a peak; recovery is the first close back at the peak). Realized volatility is the standard deviation of the 21 daily returns ending on a day. Only recoveries that come 21 or more trading days after the trough are counted, so the 21 days measured at the recovery contain no day of the fall itself.",
+   "headline": "share: recoveries on which realized volatility was higher than on the day of the peak, against 50%. Halves are the two halves of 1926-1989.",
+   "reported_beside": [
+    "the same share for 1990 onward (same sample as the first round, so not independent of what was seen)",
+    "the same share without the 21-day restriction",
+    "placebo: the same share for small dips (a fall of 2% to under 7%), to show how much of the effect is just what a new high looks like",
+    "trading days after the recovery until realized volatility is back at its peak-day level",
+    "does it matter: median largest market fall over the 126 trading days after the recovery, for recoveries with volatility still higher against those with volatility back, 1926 to the latest day"
+   ]
+  },
+  "dates_2": {
+   "ko": "날짜 효과 (2차)",
+   "changes_score": true,
+   "seen_before_writing": "First round: the absolute move on FOMC days (0.64% against 0.72%), the share of 1% moves (29% against 23%) and the share of FOMC days on which the VIX fell (53%). The direction of the market on FOMC days has not been computed.",
+   "definition": "The same 66 scheduled FOMC meeting days as the first round. Whether the market closed up on the day, against the other trading days of the same years.",
+   "headline": "share: FOMC days on which the market closed up, against the share of other days that closed up",
+   "reported_beside": [
+    "mean return on FOMC days and on other days",
+    "the share of other days on which the VIX fell, to set beside the 53% already seen (not a new test)"
+   ],
+   "limit": "The meeting list still lacks 2021-2023 and late 2024. No new dates were added in this round."
+  },
+  "aftershocks_2": {
+   "ko": "여진 (재현)",
+   "changes_score": false,
+   "seen_before_writing": "First round, 1990 onward: 3.1 times. Nothing before 1990 has been computed.",
+   "definition": "The first-round definition unchanged, on 1926-07-01 to 1989-12-29, with the background taken from that same period.",
+   "headline": "ratio: frequency of 2% days in days 1-21 after the main shock, divided by the background frequency of 1926-1989",
+   "note": "The first-round score is already 5. This is a replication on an untouched period, reported whether it agrees or not."
+  },
+  "overlap_2": {
+   "ko": "겹침 (견고성)",
+   "changes_score": false,
+   "seen_before_writing": "First round: -8.1% with two or more states against -3.6% with one, 14 separate stretches.",
+   "definition": "Same period and inputs as the first round. (a) Threshold moved from the top 5% to the top 10%. (b) Each of the four states left out in turn, counting overlap among the other three. (c) Sampled every 5th trading day instead of every 21st.",
+   "headline": "ratio as in the first round, for each variant, with the number of separate stretches",
+   "note": "Brent starts in 1987 and the VIX in 1990, so there is no untouched period. Robustness only; the score stays 3."
+  },
+  "contagion_2": {
+   "ko": "전염 (재현)",
+   "changes_score": false,
+   "seen_before_writing": "First round, 1990 onward: the Nikkei fell on the next trading day after 129 of 141 US shock days (91% against 49%). Nothing before 1990 has been computed.",
+   "definition": "The first-round country definition unchanged, on the earliest day FRED has for the Nikkei 225 through 1989-12-29, with thresholds and background taken from that same period. The reverse direction is measured the same way.",
+   "headline": "share: Nikkei down on the next trading day after a US shock day, against the share of all Nikkei days that are down, before 1990",
+   "note": "The first-round evidence score is already 5. Contagion was left off the page for usefulness and fit, which more evidence does not change. Reported whether it agrees or not."
+  },
+  "aftershocks_nikkei": {
+   "ko": "여진 (다른 시장)",
+   "changes_score": false,
+   "seen_before_writing": "No aftershock measure has been computed on any market other than the US.",
+   "definition": "The first-round aftershock definition unchanged, applied to Nikkei 225 daily changes over all the days FRED has.",
+   "headline": "ratio: frequency of 2% days in days 1-21 after the main shock, divided by the Nikkei's own background frequency"
+  },
+  "reverberation_nikkei": {
+   "ko": "잔향 (다른 시장)",
+   "changes_score": false,
+   "seen_before_writing": "Nothing of this kind has been computed on the Nikkei.",
+   "definition": "The reverberation_2 definition unchanged, applied to the Nikkei 225 over all the days FRED has. The index is a price index and spent 1990-2024 below its 1989 peak, so most of its recoveries come before 1990.",
+   "headline": "share: recoveries on which realized volatility was higher than on the day of the peak, against 50%"
+  }
+ },
+ "added_2026-11-26_second_commit": "The three 'other market' tests below (contagion_2, aftershocks_nikkei, reverberation_nikkei) were added after the first four tests were sent to compute and before their results were read, and before anything in these three was computed."
+}
