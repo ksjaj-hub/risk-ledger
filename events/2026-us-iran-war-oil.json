@@ -1,47 +1,77 @@
 {
-  "schema": 1,
-  "id": "2026-us-iran-war-oil",
-  "title": "US-Iran war and shipping attacks around the Strait of Hormuz",
-  "category": "geopolitical",
-  "markets": [
-    "US"
-  ],
-  "first_recorded": "2026-11-26",
-  "event_started": "2026-03",
-  "status": "open",
-  "what_happened": "The US-Iran war that began in March 2026 has driven a sustained rise in oil prices. New attacks on vessels in and around the Strait of Hormuz were reported on 2026-11-24.",
-  "how_it_reaches_markets": "Oil prices feed inflation and therefore rate expectations; shipping disruption; risk-off moves on escalation.",
-  "sourced_facts": [
-    "War began March 2026; VIX closing high during that episode 31.05 on 2026-03-27 (ceoeconomy)",
-    "2026-11-24: Brent settled more than 2% higher after reported attacks on vessels; opened at 90.97 in Asia on 2026-11-25 (Reuters)"
-  ],
-  "resolution_conditions": {
-    "written_on": "2026-11-26",
-    "resolved_when_all": [
-      "A ceasefire or agreement is publicly announced by both governments",
-      "No reported attack on commercial shipping in or around the Strait of Hormuz for 60 consecutive days",
-      "Brent settles below 80 dollars for 20 consecutive trading days"
-    ],
-    "worsened_when_any": [
-      "Strait of Hormuz closed to commercial traffic",
-      "Brent settles above 110 dollars"
-    ]
+ "schema": 1,
+ "id": "2026-us-iran-war-oil",
+ "title": "US-Iran war and shipping attacks around the Strait of Hormuz",
+ "category": "geopolitical",
+ "markets": [
+  "US"
+ ],
+ "first_recorded": "2026-11-26",
+ "event_started": "2026-03",
+ "status": "open",
+ "what_happened": "The US-Iran war that began in March 2026 has driven a sustained rise in oil prices. New attacks on vessels in and around the Strait of Hormuz were reported on 2026-11-24.",
+ "how_it_reaches_markets": "Oil prices feed inflation and therefore rate expectations; shipping disruption; risk-off moves on escalation.",
+ "sourced_facts": [
+  {
+   "text": "Brent spot averaged $124 a barrel in October 2026 and fell below $100 on 2026-11-04; EIA forecasts about $100 for November and December (Short-Term Energy Outlook, released 2026-11-10)",
+   "url": "https://www.eia.gov/outlooks/steo/report/global_oil.php",
+   "tier": "primary",
+   "checked": "2026-11-26"
   },
-  "relief_headlines_that_do_not_resolve_it": [
-    "Announcements of talks without a ceasefire",
-    "Single-day falls in oil prices"
+  {
+   "text": "EIA estimates Middle East production shut-ins at 2.5 million barrels a day in October, down from 10.9 million at the peak in May, and expects exports from Iran to remain constrained through the forecast period",
+   "url": "https://www.eia.gov/outlooks/steo/report/global_oil.php",
+   "tier": "primary",
+   "checked": "2026-11-26"
+  }
+ ],
+ "resolution_conditions": {
+  "written_on": "2026-11-26",
+  "resolved_when_all": [
+   "A ceasefire or agreement is publicly announced by both governments",
+   "No reported attack on commercial shipping in or around the Strait of Hormuz for 60 consecutive days",
+   "Brent settles below 80 dollars for 20 consecutive trading days"
   ],
+  "worsened_when_any": [
+   "Strait of Hormuz closed to commercial traffic",
+   "Brent settles above 110 dollars"
+  ]
+ },
+ "relief_headlines_that_do_not_resolve_it": [
+  "Announcements of talks without a ceasefire",
+  "Single-day falls in oil prices"
+ ],
+ "sources": [
+  "https://www.eia.gov/outlooks/steo/report/global_oil.php"
+ ],
+ "history": [
+  {
+   "date": "2026-11-26",
+   "status": "open",
+   "note": "Card opened. Resolution conditions written before the outcome is known."
+  },
+  {
+   "date": "2026-11-26",
+   "status": "open",
+   "note": "Sources upgraded. Oil price and supply facts now come from the EIA Short-Term Energy Outlook of 2026-11-10. The start date, the VIX figure and the 2026-11-24 price move were moved to unconfirmed_facts."
+  }
+ ],
+ "note": "Risk state only. Not a forecast and not investment advice.",
+ "unconfirmed_facts": [
+  "War began March 2026; VIX closing high during that episode 31.05 on 2026-03-27: the EIA page does not state the start date; the VIX figure can be checked against this record's own VIX series but has not been yet",
+  "2026-11-24: Brent settled more than 2% higher after reported attacks on vessels; opened at 90.97 in Asia on 2026-11-25: attributed to Reuters in a repost; the Reuters original has not been read"
+ ],
+ "superseded_sources": {
+  "replaced_on": "2026-11-26",
+  "reason": "Source rule of 2026-11-26: at least one primary source per card; commentary, blogs and reposts are not used as support",
   "sources": [
-    "https://www.abc.net.au/news/2026-11-26/nasdaq-ai-tariffs-rattle-markets/107428016",
-    "https://finance.yahoo.com/markets/stocks/articles/stocks-retreat-ai-rebound-stumbles-015155560.html",
-    "https://ceoeconomy.com/article/vix-closes-at-2026-high-35-89-wall-street-fear-gauge-nov-2026"
+   "https://www.abc.net.au/news/2026-11-26/nasdaq-ai-tariffs-rattle-markets/107428016",
+   "https://finance.yahoo.com/markets/stocks/articles/stocks-retreat-ai-rebound-stumbles-015155560.html",
+   "https://ceoeconomy.com/article/vix-closes-at-2026-high-35-89-wall-street-fear-gauge-nov-2026"
   ],
-  "history": [
-    {
-      "date": "2026-11-26",
-      "status": "open",
-      "note": "Card opened. Resolution conditions written before the outcome is known."
-    }
-  ],
-  "note": "Risk state only. Not a forecast and not investment advice."
+  "facts_as_first_written": [
+   "War began March 2026; VIX closing high during that episode 31.05 on 2026-03-27 (ceoeconomy)",
+   "2026-11-24: Brent settled more than 2% higher after reported attacks on vessels; opened at 90.97 in Asia on 2026-11-25 (Reuters)"
+  ]
+ }
 }

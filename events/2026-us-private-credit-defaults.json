@@ -1,48 +1,79 @@
 {
-  "schema": 1,
-  "id": "2026-us-private-credit-defaults",
-  "title": "Rising defaults in US private credit",
-  "category": "credit",
-  "markets": [
-    "US"
-  ],
-  "first_recorded": "2026-11-26",
-  "event_started": "2026 (default rate at a record 6.0% in April 2026)",
-  "status": "open",
-  "what_happened": "The Fitch trailing-12-month US private credit default rate stood at 6.2% in October 2026. Most default events are payment deferrals and maturity extensions rather than bankruptcies, and smaller borrowers default far more often. Banks and life insurers have large exposures to private credit funds.",
-  "how_it_reaches_markets": "Losses at business development companies, banks and insurers that lend to or hold private credit; redemption pressure on non-traded funds; tighter credit for mid-sized companies.",
-  "sourced_facts": [
-    "Fitch: 6.2% trailing-12-month default rate to October 2026, 6.3% in September; 90 unique defaulters; 10.7% for issuers under 25 million dollars EBITDA versus 2.4% above 100 million (Max's Digest, 2026-11-18)",
-    "JPMorgan forecasts leveraged-loan defaults of 4.5% in 2027 and 4.75% in 2028 (Max's Digest)",
-    "Moody's: banks had extended nearly 300 billion dollars to private credit funds, BDCs and CLOs as of October 2025 (Forbes, 2026-05-24)",
-    "No fund redemption gate in November 2026 is stated in these sources"
-  ],
-  "resolution_conditions": {
-    "written_on": "2026-11-26",
-    "resolved_when_all": [
-      "Fitch trailing-12-month private credit default rate below 4.0% for three consecutive monthly readings",
-      "Credit stress component of this ledger is Moderate or lower throughout the same period"
-    ],
-    "worsened_when_any": [
-      "Fitch default rate above 8.0%",
-      "A large private credit fund suspends or limits redemptions, or a bank discloses a private-credit-related loss above 1 billion dollars",
-      "Credit stress component of this ledger reaches High"
-    ]
+ "schema": 1,
+ "id": "2026-us-private-credit-defaults",
+ "title": "Rising defaults in US private credit",
+ "category": "credit",
+ "markets": [
+  "US"
+ ],
+ "first_recorded": "2026-11-26",
+ "event_started": "2026 (default rate at a record 6.0% in April 2026)",
+ "status": "open",
+ "what_happened": "The Fitch trailing-12-month US private credit default rate stood at 6.2% in October 2026. Most default events are payment deferrals and maturity extensions rather than bankruptcies, and smaller borrowers default far more often. Banks and life insurers have large exposures to private credit funds.",
+ "how_it_reaches_markets": "Losses at business development companies, banks and insurers that lend to or hold private credit; redemption pressure on non-traded funds; tighter credit for mid-sized companies.",
+ "sourced_facts": [
+  {
+   "text": "Federal Reserve Financial Stability Report (November 2026): private credit outstanding $1,504 billion, up 13.8% from 2025:Q2 to 2026:Q2 (Table 1.1)",
+   "url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
+   "tier": "primary",
+   "checked": "2026-11-26"
   },
-  "relief_headlines_that_do_not_resolve_it": [
-    "Record fundraising by private credit managers (new money raised says nothing about existing loans)",
-    "A one-month dip in the default rate (6.3% to 6.2% from September to October 2026)"
+  {
+   "text": "Same report: 'Redemption requests at certain business development companies trended lower, though funds maintained redemption limits and net flows remained negative.'",
+   "url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
+   "tier": "primary",
+   "checked": "2026-11-26"
+  }
+ ],
+ "resolution_conditions": {
+  "written_on": "2026-11-26",
+  "resolved_when_all": [
+   "Fitch trailing-12-month private credit default rate below 4.0% for three consecutive monthly readings",
+   "Credit stress component of this ledger is Moderate or lower throughout the same period"
   ],
+  "worsened_when_any": [
+   "Fitch default rate above 8.0%",
+   "A large private credit fund suspends or limits redemptions, or a bank discloses a private-credit-related loss above 1 billion dollars",
+   "Credit stress component of this ledger reaches High"
+  ]
+ },
+ "relief_headlines_that_do_not_resolve_it": [
+  "Record fundraising by private credit managers (new money raised says nothing about existing loans)",
+  "A one-month dip in the default rate (6.3% to 6.2% from September to October 2026)"
+ ],
+ "sources": [
+  "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf"
+ ],
+ "history": [
+  {
+   "date": "2026-11-26",
+   "status": "open",
+   "note": "Card opened. Resolution conditions written before the outcome is known."
+  },
+  {
+   "date": "2026-11-26",
+   "status": "open",
+   "note": "Sources upgraded in part. Market size and redemption wording now come from the Federal Reserve Financial Stability Report. The Fitch default rates match a trade publication but have not been read at Fitch; the '90 unique defaulters' figure was not found and should be treated as unverified."
+  }
+ ],
+ "note": "Risk state only. Not a forecast and not investment advice.",
+ "unconfirmed_facts": [
+  "Fitch: trailing-12-month private credit default rate 6.2% in October 2026 (6.3% in September); 10.7% for issuers under $25 million EBITDA versus 2.4% above $100 million: confirmed only in a trade publication dated 2026-11-17, not at Fitch itself. That article reports six defaults in October; the '90 unique defaulters' figure in the original card was not found",
+  "JPMorgan leveraged-loan default forecasts (4.5% in 2027, 4.75% in 2028): from a newsletter; original not read",
+  "Moody's: banks had extended nearly $300 billion to private credit funds, BDCs and CLOs as of October 2025: from a magazine column; original not read"
+ ],
+ "superseded_sources": {
+  "replaced_on": "2026-11-26",
+  "reason": "Source rule of 2026-11-26: at least one primary source per card; commentary, blogs and reposts are not used as support",
   "sources": [
-    "https://maxsdigest.substack.com/p/maxs-digest-wednesday-november-18",
-    "https://www.forbes.com/sites/mayrarodriguezvalladares/2026/05/24/rising-private-credit-defaults-are-testing-banks-and-insurers/"
+   "https://maxsdigest.substack.com/p/maxs-digest-wednesday-november-18",
+   "https://www.forbes.com/sites/mayrarodriguezvalladares/2026/05/24/rising-private-credit-defaults-are-testing-banks-and-insurers/"
   ],
-  "history": [
-    {
-      "date": "2026-11-26",
-      "status": "open",
-      "note": "Card opened. Resolution conditions written before the outcome is known."
-    }
-  ],
-  "note": "Risk state only. Not a forecast and not investment advice."
+  "facts_as_first_written": [
+   "Fitch: 6.2% trailing-12-month default rate to October 2026, 6.3% in September; 90 unique defaulters; 10.7% for issuers under 25 million dollars EBITDA versus 2.4% above 100 million (Max's Digest, 2026-11-18)",
+   "JPMorgan forecasts leveraged-loan defaults of 4.5% in 2027 and 4.75% in 2028 (Max's Digest)",
+   "Moody's: banks had extended nearly 300 billion dollars to private credit funds, BDCs and CLOs as of October 2025 (Forbes, 2026-05-24)",
+   "No fund redemption gate in November 2026 is stated in these sources"
+  ]
+ }
 }

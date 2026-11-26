@@ -270,9 +270,12 @@
    "what_happened": "Eurozone inflation rose to 4.0% year over year in October 2026 from 3.8%. The ECB is expected to raise rates again in December. European shares had their steepest weekly fall since March in the week ending 2026-11-20.",
    "how_it_reaches_markets": "Higher rates in Europe at the same time as in the US and Japan tighten global financing conditions; pressure on highly indebted euro governments ahead of elections in Spain, France and Italy.",
    "sourced_facts": [
-    "October 2026 eurozone inflation 4.0% y/y (from 3.8%); core revised to 2.6% (T. Rowe Price)",
-    "Goldman Sachs Asset Management (2026-11-05) expects one more ECB hike in December, to a peak policy rate of 2.75%",
-    "Week ending 2026-11-20: STOXX 600 -5.80%, DAX -7.28% (T. Rowe Price)"
+    {
+     "text": "2026-10-29: the ECB Governing Council kept its three key rates unchanged, with the deposit facility rate at 2.50% (the page was read in part; the rate levels come from a machine summary of the remainder)",
+     "url": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp261029~9a493adf17.en.html",
+     "tier": "primary",
+     "checked": "2026-11-26"
+    }
    ],
    "resolution_conditions": {
     "written_on": "2026-11-26",
@@ -290,17 +293,39 @@
     "A single lower inflation reading"
    ],
    "sources": [
-    "https://www.troweprice.com/personal-investing/resources/insights/global-markets-weekly-update.html",
-    "https://am.gs.com/en-us/advisors/insights/article/market-pulse"
+    "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp261029~9a493adf17.en.html"
    ],
    "history": [
     {
      "date": "2026-11-26",
      "status": "open",
      "note": "Card opened. Resolution conditions written before the outcome is known."
+    },
+    {
+     "date": "2026-11-26",
+     "status": "open",
+     "note": "Sources upgraded in part. The policy decision is taken from the ECB release, read only in part. The Eurostat inflation release could not be opened and the figure stays unconfirmed until it is read."
     }
    ],
    "note": "Risk state only. Not a forecast and not investment advice.",
+   "unconfirmed_facts": [
+    "October 2026 euro area inflation 4.0% (from 3.8%): Eurostat release titles of 2026-11-04 and 2026-11-18 read 'annual inflation up to 4.0%', but the pages could not be opened, so the figure is not counted as confirmed; core 2.6% likewise",
+    "A fund manager's expectation of one more ECB hike in December to 2.75%: commentary, not used as support",
+    "Week ending 2026-11-20: STOXX 600 -5.80%, DAX -7.28%: not yet confirmed at a primary or wire source"
+   ],
+   "superseded_sources": {
+    "replaced_on": "2026-11-26",
+    "reason": "Source rule of 2026-11-26: at least one primary source per card; commentary, blogs and reposts are not used as support",
+    "sources": [
+     "https://www.troweprice.com/personal-investing/resources/insights/global-markets-weekly-update.html",
+     "https://am.gs.com/en-us/advisors/insights/article/market-pulse"
+    ],
+    "facts_as_first_written": [
+     "October 2026 eurozone inflation 4.0% y/y (from 3.8%); core revised to 2.6% (T. Rowe Price)",
+     "Goldman Sachs Asset Management (2026-11-05) expects one more ECB hike in December, to a peak policy rate of 2.75%",
+     "Week ending 2026-11-20: STOXX 600 -5.80%, DAX -7.28% (T. Rowe Price)"
+    ]
+   },
    "_path": "events/2026-eurozone-inflation-ecb.json"
   },
   {
@@ -664,8 +689,24 @@
    "what_happened": "The US proposed new tariffs on major trading partners over what it calls structural excess industrial capacity. Reports differ on the count (14 partners per ABC, 16 per Reuters). China faces the highest proposed rate, 20% on top of existing duties of roughly 25%.",
    "how_it_reaches_markets": "Higher import costs feed inflation while rates are already expected to rise; retaliation risk for US exporters; direct hit to Asian and European equity markets.",
    "sourced_facts": [
-    "2026-11-24/25: proposal reported; effective date not stated in sources",
-    "2026-11-25: MSCI Asia-Pacific ex-Japan -2.3%; South Korea down as much as 5.3% intraday (Reuters)"
+    {
+     "text": "2026-11-25: USTR determined that structural excess capacity practices of 14 economies (China, EU, Singapore, Switzerland, Indonesia, Malaysia, Cambodia, Thailand, Korea, Vietnam, Taiwan, Bangladesh, Japan, India) are actionable under Section 301 and proposed to consider tariffs",
+     "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/november/ustr-makes-determinations-and-proposes-actions-14-section-301-investigations-relating-structural",
+     "tier": "primary",
+     "checked": "2026-11-26"
+    },
+    {
+     "text": "Proposed ceilings include: Vietnam up to 35%, India up to 25%, China and Singapore up to 20%, five Southeast and South Asian economies up to 18%, EU 15%, Japan, Korea, Switzerland and Taiwan up to 15%",
+     "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/november/ustr-makes-determinations-and-proposes-actions-14-section-301-investigations-relating-structural",
+     "tier": "primary",
+     "checked": "2026-11-26"
+    },
+    {
+     "text": "Written comments are due 2027-01-05 and hearings begin 2027-01-25; no effective date is stated",
+     "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/november/ustr-makes-determinations-and-proposes-actions-14-section-301-investigations-relating-structural",
+     "tier": "primary",
+     "checked": "2026-11-26"
+    }
    ],
    "resolution_conditions": {
     "written_on": "2026-11-26",
@@ -681,17 +722,36 @@
     "Reports of talks or delays without a published change to the proposed rates"
    ],
    "sources": [
-    "https://www.abc.net.au/news/2026-11-26/nasdaq-ai-tariffs-rattle-markets/107428016",
-    "https://finance.yahoo.com/markets/stocks/articles/stocks-retreat-ai-rebound-stumbles-015155560.html"
+    "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/november/ustr-makes-determinations-and-proposes-actions-14-section-301-investigations-relating-structural"
    ],
    "history": [
     {
      "date": "2026-11-26",
      "status": "open",
      "note": "Card opened. Resolution conditions written before the outcome is known."
+    },
+    {
+     "date": "2026-11-26",
+     "status": "open",
+     "note": "Sources upgraded. The proposal is now taken from the USTR release of 2026-11-25, which adds the list of 14 economies, the proposed ceilings and the comment and hearing dates. The Asian market moves were moved to unconfirmed_facts."
     }
    ],
    "note": "Risk state only. Not a forecast and not investment advice.",
+   "unconfirmed_facts": [
+    "2026-11-25: MSCI Asia-Pacific ex-Japan -2.3%; South Korea down as much as 5.3% intraday: attributed to Reuters in a repost; the Reuters original has not been read"
+   ],
+   "superseded_sources": {
+    "replaced_on": "2026-11-26",
+    "reason": "Source rule of 2026-11-26: at least one primary source per card; commentary, blogs and reposts are not used as support",
+    "sources": [
+     "https://www.abc.net.au/news/2026-11-26/nasdaq-ai-tariffs-rattle-markets/107428016",
+     "https://finance.yahoo.com/markets/stocks/articles/stocks-retreat-ai-rebound-stumbles-015155560.html"
+    ],
+    "facts_as_first_written": [
+     "2026-11-24/25: proposal reported; effective date not stated in sources",
+     "2026-11-25: MSCI Asia-Pacific ex-Japan -2.3%; South Korea down as much as 5.3% intraday (Reuters)"
+    ]
+   },
    "_path": "events/2026-us-excess-capacity-tariffs.json"
   },
   {
@@ -708,8 +768,18 @@
    "what_happened": "The US-Iran war that began in March 2026 has driven a sustained rise in oil prices. New attacks on vessels in and around the Strait of Hormuz were reported on 2026-11-24.",
    "how_it_reaches_markets": "Oil prices feed inflation and therefore rate expectations; shipping disruption; risk-off moves on escalation.",
    "sourced_facts": [
-    "War began March 2026; VIX closing high during that episode 31.05 on 2026-03-27 (ceoeconomy)",
-    "2026-11-24: Brent settled more than 2% higher after reported attacks on vessels; opened at 90.97 in Asia on 2026-11-25 (Reuters)"
+    {
+     "text": "Brent spot averaged $124 a barrel in October 2026 and fell below $100 on 2026-11-04; EIA forecasts about $100 for November and December (Short-Term Energy Outlook, released 2026-11-10)",
+     "url": "https://www.eia.gov/outlooks/steo/report/global_oil.php",
+     "tier": "primary",
+     "checked": "2026-11-26"
+    },
+    {
+     "text": "EIA estimates Middle East production shut-ins at 2.5 million barrels a day in October, down from 10.9 million at the peak in May, and expects exports from Iran to remain constrained through the forecast period",
+     "url": "https://www.eia.gov/outlooks/steo/report/global_oil.php",
+     "tier": "primary",
+     "checked": "2026-11-26"
+    }
    ],
    "resolution_conditions": {
     "written_on": "2026-11-26",
@@ -728,18 +798,38 @@
     "Single-day falls in oil prices"
    ],
    "sources": [
-    "https://www.abc.net.au/news/2026-11-26/nasdaq-ai-tariffs-rattle-markets/107428016",
-    "https://finance.yahoo.com/markets/stocks/articles/stocks-retreat-ai-rebound-stumbles-015155560.html",
-    "https://ceoeconomy.com/article/vix-closes-at-2026-high-35-89-wall-street-fear-gauge-nov-2026"
+    "https://www.eia.gov/outlooks/steo/report/global_oil.php"
    ],
    "history": [
     {
      "date": "2026-11-26",
      "status": "open",
      "note": "Card opened. Resolution conditions written before the outcome is known."
+    },
+    {
+     "date": "2026-11-26",
+     "status": "open",
+     "note": "Sources upgraded. Oil price and supply facts now come from the EIA Short-Term Energy Outlook of 2026-11-10. The start date, the VIX figure and the 2026-11-24 price move were moved to unconfirmed_facts."
     }
    ],
    "note": "Risk state only. Not a forecast and not investment advice.",
+   "unconfirmed_facts": [
+    "War began March 2026; VIX closing high during that episode 31.05 on 2026-03-27: the EIA page does not state the start date; the VIX figure can be checked against this record's own VIX series but has not been yet",
+    "2026-11-24: Brent settled more than 2% higher after reported attacks on vessels; opened at 90.97 in Asia on 2026-11-25: attributed to Reuters in a repost; the Reuters original has not been read"
+   ],
+   "superseded_sources": {
+    "replaced_on": "2026-11-26",
+    "reason": "Source rule of 2026-11-26: at least one primary source per card; commentary, blogs and reposts are not used as support",
+    "sources": [
+     "https://www.abc.net.au/news/2026-11-26/nasdaq-ai-tariffs-rattle-markets/107428016",
+     "https://finance.yahoo.com/markets/stocks/articles/stocks-retreat-ai-rebound-stumbles-015155560.html",
+     "https://ceoeconomy.com/article/vix-closes-at-2026-high-35-89-wall-street-fear-gauge-nov-2026"
+    ],
+    "facts_as_first_written": [
+     "War began March 2026; VIX closing high during that episode 31.05 on 2026-03-27 (ceoeconomy)",
+     "2026-11-24: Brent settled more than 2% higher after reported attacks on vessels; opened at 90.97 in Asia on 2026-11-25 (Reuters)"
+    ]
+   },
    "_path": "events/2026-us-iran-war-oil.json"
   },
   {
@@ -756,10 +846,18 @@
    "what_happened": "The Fitch trailing-12-month US private credit default rate stood at 6.2% in October 2026. Most default events are payment deferrals and maturity extensions rather than bankruptcies, and smaller borrowers default far more often. Banks and life insurers have large exposures to private credit funds.",
    "how_it_reaches_markets": "Losses at business development companies, banks and insurers that lend to or hold private credit; redemption pressure on non-traded funds; tighter credit for mid-sized companies.",
    "sourced_facts": [
-    "Fitch: 6.2% trailing-12-month default rate to October 2026, 6.3% in September; 90 unique defaulters; 10.7% for issuers under 25 million dollars EBITDA versus 2.4% above 100 million (Max's Digest, 2026-11-18)",
-    "JPMorgan forecasts leveraged-loan defaults of 4.5% in 2027 and 4.75% in 2028 (Max's Digest)",
-    "Moody's: banks had extended nearly 300 billion dollars to private credit funds, BDCs and CLOs as of October 2025 (Forbes, 2026-05-24)",
-    "No fund redemption gate in November 2026 is stated in these sources"
+    {
+     "text": "Federal Reserve Financial Stability Report (November 2026): private credit outstanding $1,504 billion, up 13.8% from 2025:Q2 to 2026:Q2 (Table 1.1)",
+     "url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
+     "tier": "primary",
+     "checked": "2026-11-26"
+    },
+    {
+     "text": "Same report: 'Redemption requests at certain business development companies trended lower, though funds maintained redemption limits and net flows remained negative.'",
+     "url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
+     "tier": "primary",
+     "checked": "2026-11-26"
+    }
    ],
    "resolution_conditions": {
     "written_on": "2026-11-26",
@@ -778,17 +876,40 @@
     "A one-month dip in the default rate (6.3% to 6.2% from September to October 2026)"
    ],
    "sources": [
-    "https://maxsdigest.substack.com/p/maxs-digest-wednesday-november-18",
-    "https://www.forbes.com/sites/mayrarodriguezvalladares/2026/05/24/rising-private-credit-defaults-are-testing-banks-and-insurers/"
+    "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf"
    ],
    "history": [
     {
      "date": "2026-11-26",
      "status": "open",
      "note": "Card opened. Resolution conditions written before the outcome is known."
+    },
+    {
+     "date": "2026-11-26",
+     "status": "open",
+     "note": "Sources upgraded in part. Market size and redemption wording now come from the Federal Reserve Financial Stability Report. The Fitch default rates match a trade publication but have not been read at Fitch; the '90 unique defaulters' figure was not found and should be treated as unverified."
     }
    ],
    "note": "Risk state only. Not a forecast and not investment advice.",
+   "unconfirmed_facts": [
+    "Fitch: trailing-12-month private credit default rate 6.2% in October 2026 (6.3% in September); 10.7% for issuers under $25 million EBITDA versus 2.4% above $100 million: confirmed only in a trade publication dated 2026-11-17, not at Fitch itself. That article reports six defaults in October; the '90 unique defaulters' figure in the original card was not found",
+    "JPMorgan leveraged-loan default forecasts (4.5% in 2027, 4.75% in 2028): from a newsletter; original not read",
+    "Moody's: banks had extended nearly $300 billion to private credit funds, BDCs and CLOs as of October 2025: from a magazine column; original not read"
+   ],
+   "superseded_sources": {
+    "replaced_on": "2026-11-26",
+    "reason": "Source rule of 2026-11-26: at least one primary source per card; commentary, blogs and reposts are not used as support",
+    "sources": [
+     "https://maxsdigest.substack.com/p/maxs-digest-wednesday-november-18",
+     "https://www.forbes.com/sites/mayrarodriguezvalladares/2026/05/24/rising-private-credit-defaults-are-testing-banks-and-insurers/"
+    ],
+    "facts_as_first_written": [
+     "Fitch: 6.2% trailing-12-month default rate to October 2026, 6.3% in September; 90 unique defaulters; 10.7% for issuers under 25 million dollars EBITDA versus 2.4% above 100 million (Max's Digest, 2026-11-18)",
+     "JPMorgan forecasts leveraged-loan defaults of 4.5% in 2027 and 4.75% in 2028 (Max's Digest)",
+     "Moody's: banks had extended nearly 300 billion dollars to private credit funds, BDCs and CLOs as of October 2025 (Forbes, 2026-05-24)",
+     "No fund redemption gate in November 2026 is stated in these sources"
+    ]
+   },
    "_path": "events/2026-us-private-credit-defaults.json"
   },
   {

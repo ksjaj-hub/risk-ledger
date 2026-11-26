@@ -1,46 +1,71 @@
 {
-  "schema": 1,
-  "id": "2026-eurozone-inflation-ecb",
-  "title": "Eurozone inflation at 4% and further ECB rate rises",
-  "category": "monetary policy",
-  "markets": [
-    "EU"
+ "schema": 1,
+ "id": "2026-eurozone-inflation-ecb",
+ "title": "Eurozone inflation at 4% and further ECB rate rises",
+ "category": "monetary policy",
+ "markets": [
+  "EU"
+ ],
+ "first_recorded": "2026-11-26",
+ "event_started": "2026-11",
+ "status": "open",
+ "what_happened": "Eurozone inflation rose to 4.0% year over year in October 2026 from 3.8%. The ECB is expected to raise rates again in December. European shares had their steepest weekly fall since March in the week ending 2026-11-20.",
+ "how_it_reaches_markets": "Higher rates in Europe at the same time as in the US and Japan tighten global financing conditions; pressure on highly indebted euro governments ahead of elections in Spain, France and Italy.",
+ "sourced_facts": [
+  {
+   "text": "2026-10-29: the ECB Governing Council kept its three key rates unchanged, with the deposit facility rate at 2.50% (the page was read in part; the rate levels come from a machine summary of the remainder)",
+   "url": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp261029~9a493adf17.en.html",
+   "tier": "primary",
+   "checked": "2026-11-26"
+  }
+ ],
+ "resolution_conditions": {
+  "written_on": "2026-11-26",
+  "resolved_when_all": [
+   "Eurozone headline inflation falls for three consecutive monthly readings",
+   "The ECB signals at a policy meeting that it does not expect further rises"
   ],
-  "first_recorded": "2026-11-26",
-  "event_started": "2026-11",
-  "status": "open",
-  "what_happened": "Eurozone inflation rose to 4.0% year over year in October 2026 from 3.8%. The ECB is expected to raise rates again in December. European shares had their steepest weekly fall since March in the week ending 2026-11-20.",
-  "how_it_reaches_markets": "Higher rates in Europe at the same time as in the US and Japan tighten global financing conditions; pressure on highly indebted euro governments ahead of elections in Spain, France and Italy.",
-  "sourced_facts": [
-    "October 2026 eurozone inflation 4.0% y/y (from 3.8%); core revised to 2.6% (T. Rowe Price)",
-    "Goldman Sachs Asset Management (2026-11-05) expects one more ECB hike in December, to a peak policy rate of 2.75%",
-    "Week ending 2026-11-20: STOXX 600 -5.80%, DAX -7.28% (T. Rowe Price)"
-  ],
-  "resolution_conditions": {
-    "written_on": "2026-11-26",
-    "resolved_when_all": [
-      "Eurozone headline inflation falls for three consecutive monthly readings",
-      "The ECB signals at a policy meeting that it does not expect further rises"
-    ],
-    "worsened_when_any": [
-      "Eurozone headline inflation reaches 4.5% or more",
-      "The ECB raises by more than 0.25 percentage points at one meeting"
-    ]
+  "worsened_when_any": [
+   "Eurozone headline inflation reaches 4.5% or more",
+   "The ECB raises by more than 0.25 percentage points at one meeting"
+  ]
+ },
+ "relief_headlines_that_do_not_resolve_it": [
+  "A hike that was fully expected being delivered",
+  "A single lower inflation reading"
+ ],
+ "sources": [
+  "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp261029~9a493adf17.en.html"
+ ],
+ "history": [
+  {
+   "date": "2026-11-26",
+   "status": "open",
+   "note": "Card opened. Resolution conditions written before the outcome is known."
   },
-  "relief_headlines_that_do_not_resolve_it": [
-    "A hike that was fully expected being delivered",
-    "A single lower inflation reading"
-  ],
+  {
+   "date": "2026-11-26",
+   "status": "open",
+   "note": "Sources upgraded in part. The policy decision is taken from the ECB release, read only in part. The Eurostat inflation release could not be opened and the figure stays unconfirmed until it is read."
+  }
+ ],
+ "note": "Risk state only. Not a forecast and not investment advice.",
+ "unconfirmed_facts": [
+  "October 2026 euro area inflation 4.0% (from 3.8%): Eurostat release titles of 2026-11-04 and 2026-11-18 read 'annual inflation up to 4.0%', but the pages could not be opened, so the figure is not counted as confirmed; core 2.6% likewise",
+  "A fund manager's expectation of one more ECB hike in December to 2.75%: commentary, not used as support",
+  "Week ending 2026-11-20: STOXX 600 -5.80%, DAX -7.28%: not yet confirmed at a primary or wire source"
+ ],
+ "superseded_sources": {
+  "replaced_on": "2026-11-26",
+  "reason": "Source rule of 2026-11-26: at least one primary source per card; commentary, blogs and reposts are not used as support",
   "sources": [
-    "https://www.troweprice.com/personal-investing/resources/insights/global-markets-weekly-update.html",
-    "https://am.gs.com/en-us/advisors/insights/article/market-pulse"
+   "https://www.troweprice.com/personal-investing/resources/insights/global-markets-weekly-update.html",
+   "https://am.gs.com/en-us/advisors/insights/article/market-pulse"
   ],
-  "history": [
-    {
-      "date": "2026-11-26",
-      "status": "open",
-      "note": "Card opened. Resolution conditions written before the outcome is known."
-    }
-  ],
-  "note": "Risk state only. Not a forecast and not investment advice."
+  "facts_as_first_written": [
+   "October 2026 eurozone inflation 4.0% y/y (from 3.8%); core revised to 2.6% (T. Rowe Price)",
+   "Goldman Sachs Asset Management (2026-11-05) expects one more ECB hike in December, to a peak policy rate of 2.75%",
+   "Week ending 2026-11-20: STOXX 600 -5.80%, DAX -7.28% (T. Rowe Price)"
+  ]
+ }
 }
