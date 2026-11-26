@@ -93,8 +93,8 @@ def asof(obs, days, lag=0):
 
 
 class Data:
-    def __init__(self, fixture):
-        mkt, fred, ebp, self.ebp_note = load(fixture)
+    def __init__(self, fixture, loaded=None):
+        mkt, fred, ebp, self.ebp_note = loaded or load(fixture)
         alld = sorted(mkt)
         k0 = bisect.bisect_left(alld, "1985-01-01")
         self.days = days = alld[k0:]
