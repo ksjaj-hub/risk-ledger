@@ -35,6 +35,7 @@
      "extreme_day": 126,
      "arrival_day": 119,
      "half_life_days": 36,
+     "back_at_baseline_day": 226,
      "days_observed_after_extreme": 126
     },
     "communication": {
@@ -49,6 +50,7 @@
      "extreme_day": 34,
      "arrival_day": 3,
      "half_life_days": 4,
+     "back_at_baseline_day": 39,
      "days_observed_after_extreme": 218
     },
     "consumer_discretionary": {
@@ -63,6 +65,7 @@
      "extreme_day": 66,
      "arrival_day": 14,
      "half_life_days": 61,
+     "back_at_baseline_day": 150,
      "days_observed_after_extreme": 186
     },
     "consumer_staples": {
@@ -77,6 +80,7 @@
      "extreme_day": 93,
      "arrival_day": 46,
      "half_life_days": null,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 159
     },
     "energy": {
@@ -91,6 +95,7 @@
      "extreme_day": 126,
      "arrival_day": 89,
      "half_life_days": null,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 126
     },
     "financials": {
@@ -105,6 +110,7 @@
      "extreme_day": 63,
      "arrival_day": 39,
      "half_life_days": 25,
+     "back_at_baseline_day": 130,
      "days_observed_after_extreme": 189
     },
     "health_care": {
@@ -119,6 +125,7 @@
      "extreme_day": 126,
      "arrival_day": 54,
      "half_life_days": null,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 126
     },
     "industrials": {
@@ -133,6 +140,7 @@
      "extreme_day": 83,
      "arrival_day": 37,
      "half_life_days": null,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 169
     },
     "materials": {
@@ -147,6 +155,7 @@
      "extreme_day": 72,
      "arrival_day": 63,
      "half_life_days": 35,
+     "back_at_baseline_day": 211,
      "days_observed_after_extreme": 180
     },
     "real_estate": {
@@ -161,6 +170,7 @@
      "extreme_day": 118,
      "arrival_day": 45,
      "half_life_days": null,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 134
     },
     "utilities": {
@@ -175,6 +185,7 @@
      "extreme_day": 65,
      "arrival_day": 40,
      "half_life_days": 57,
+     "back_at_baseline_day": 147,
      "days_observed_after_extreme": 187
     }
    },
@@ -192,6 +203,7 @@
      "extreme_day": 41,
      "arrival_day": 16,
      "half_life_days": 17,
+     "back_at_baseline_day": 120,
      "days_observed_after_extreme": 211
     },
     "yield_2y": {
@@ -207,6 +219,7 @@
      "extreme_day": 126,
      "arrival_day": 88,
      "half_life_days": null,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 126
     },
     "yield_10y": {
@@ -222,6 +235,7 @@
      "extreme_day": 17,
      "arrival_day": 3,
      "half_life_days": 28,
+     "back_at_baseline_day": 77,
      "days_observed_after_extreme": 235
     },
     "credit_spread": {
@@ -237,6 +251,7 @@
      "extreme_day": 91,
      "arrival_day": 64,
      "half_life_days": 49,
+     "back_at_baseline_day": 182,
      "days_observed_after_extreme": 161
     },
     "vix": {
@@ -252,6 +267,7 @@
      "extreme_day": 16,
      "arrival_day": 3,
      "half_life_days": 4,
+     "back_at_baseline_day": 76,
      "days_observed_after_extreme": 236
     }
    },
@@ -4475,6 +4491,7 @@
      "extreme_day": 89,
      "arrival_day": 33,
      "half_life_days": 13,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 163
     },
     "communication": {
@@ -4489,6 +4506,7 @@
      "extreme_day": 49,
      "arrival_day": 39,
      "half_life_days": 152,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 203
     },
     "consumer_discretionary": {
@@ -4503,6 +4521,7 @@
      "extreme_day": 63,
      "arrival_day": 54,
      "half_life_days": 6,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 189
     },
     "consumer_staples": {
@@ -4517,6 +4536,7 @@
      "extreme_day": 24,
      "arrival_day": 10,
      "half_life_days": 6,
+     "back_at_baseline_day": 39,
      "days_observed_after_extreme": 228
     },
     "energy": {
@@ -4531,6 +4551,7 @@
      "extreme_day": 72,
      "arrival_day": 35,
      "half_life_days": 18,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 180
     },
     "financials": {
@@ -4545,6 +4566,7 @@
      "extreme_day": 28,
      "arrival_day": 4,
      "half_life_days": 11,
+     "back_at_baseline_day": 134,
      "days_observed_after_extreme": 224
     },
     "health_care": {
@@ -4559,6 +4581,7 @@
      "extreme_day": 32,
      "arrival_day": 7,
      "half_life_days": 9,
+     "back_at_baseline_day": 45,
      "days_observed_after_extreme": 220
     },
     "industrials": {
@@ -4573,6 +4596,7 @@
      "extreme_day": 32,
      "arrival_day": 27,
      "half_life_days": 7,
+     "back_at_baseline_day": 70,
      "days_observed_after_extreme": 220
     },
     "materials": {
@@ -4587,6 +4611,7 @@
      "extreme_day": 72,
      "arrival_day": 13,
      "half_life_days": 6,
+     "back_at_baseline_day": 82,
      "days_observed_after_extreme": 180
     },
     "real_estate": {
@@ -4601,6 +4626,7 @@
      "extreme_day": 84,
      "arrival_day": 8,
      "half_life_days": 139,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 168
     },
     "utilities": {
@@ -4615,6 +4641,7 @@
      "extreme_day": 63,
      "arrival_day": 30,
      "half_life_days": 103,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 189
     }
    },
@@ -4632,6 +4659,7 @@
      "extreme_day": 9,
      "arrival_day": 5,
      "half_life_days": 2,
+     "back_at_baseline_day": 33,
      "days_observed_after_extreme": 243
     },
     "yield_2y": {
@@ -4647,6 +4675,7 @@
      "extreme_day": 77,
      "arrival_day": 32,
      "half_life_days": null,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 175
     },
     "yield_10y": {
@@ -4662,6 +4691,7 @@
      "extreme_day": 77,
      "arrival_day": 33,
      "half_life_days": 30,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 175
     },
     "breakeven_5y": {
@@ -4677,6 +4707,7 @@
      "extreme_day": 22,
      "arrival_day": 9,
      "half_life_days": 5,
+     "back_at_baseline_day": 53,
      "days_observed_after_extreme": 230
     },
     "credit_spread": {
@@ -4692,6 +4723,7 @@
      "extreme_day": 29,
      "arrival_day": 24,
      "half_life_days": 6,
+     "back_at_baseline_day": 50,
      "days_observed_after_extreme": 223
     },
     "vix": {
@@ -4707,6 +4739,7 @@
      "extreme_day": 28,
      "arrival_day": 17,
      "half_life_days": 13,
+     "back_at_baseline_day": 43,
      "days_observed_after_extreme": 224
     }
    },
@@ -9191,6 +9224,7 @@
      "extreme_day": 91,
      "arrival_day": 5,
      "half_life_days": 2,
+     "back_at_baseline_day": 104,
      "days_observed_after_extreme": 161
     },
     "communication": {
@@ -9205,6 +9239,7 @@
      "extreme_day": 77,
      "arrival_day": 59,
      "half_life_days": 5,
+     "back_at_baseline_day": 92,
      "days_observed_after_extreme": 175
     },
     "consumer_discretionary": {
@@ -9219,6 +9254,7 @@
      "extreme_day": 61,
      "arrival_day": 26,
      "half_life_days": 26,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 191
     },
     "consumer_staples": {
@@ -9233,6 +9269,7 @@
      "extreme_day": 53,
      "arrival_day": 29,
      "half_life_days": 12,
+     "back_at_baseline_day": 148,
      "days_observed_after_extreme": 199
     },
     "energy": {
@@ -9247,6 +9284,7 @@
      "extreme_day": 54,
      "arrival_day": 20,
      "half_life_days": 6,
+     "back_at_baseline_day": 102,
      "days_observed_after_extreme": 198
     },
     "financials": {
@@ -9261,6 +9299,7 @@
      "extreme_day": 122,
      "arrival_day": 63,
      "half_life_days": 51,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 130
     },
     "health_care": {
@@ -9275,6 +9314,7 @@
      "extreme_day": 114,
      "arrival_day": 64,
      "half_life_days": null,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 138
     },
     "industrials": {
@@ -9289,6 +9329,7 @@
      "extreme_day": 115,
      "arrival_day": 59,
      "half_life_days": null,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 137
     },
     "materials": {
@@ -9303,6 +9344,7 @@
      "extreme_day": 115,
      "arrival_day": 63,
      "half_life_days": null,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 137
     },
     "real_estate": {
@@ -9317,6 +9359,7 @@
      "extreme_day": 126,
      "arrival_day": 96,
      "half_life_days": null,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 126
     },
     "utilities": {
@@ -9331,6 +9374,7 @@
      "extreme_day": 72,
      "arrival_day": 4,
      "half_life_days": 3,
+     "back_at_baseline_day": 130,
      "days_observed_after_extreme": 180
     }
    },
@@ -9348,6 +9392,7 @@
      "extreme_day": 41,
      "arrival_day": 19,
      "half_life_days": 8,
+     "back_at_baseline_day": 165,
      "days_observed_after_extreme": 211
     },
     "yield_2y": {
@@ -9363,6 +9408,7 @@
      "extreme_day": 125,
      "arrival_day": 38,
      "half_life_days": 65,
+     "back_at_baseline_day": 250,
      "days_observed_after_extreme": 127
     },
     "yield_10y": {
@@ -9378,6 +9424,7 @@
      "extreme_day": 40,
      "arrival_day": 23,
      "half_life_days": 5,
+     "back_at_baseline_day": 47,
      "days_observed_after_extreme": 212
     },
     "breakeven_5y": {
@@ -9393,6 +9440,7 @@
      "extreme_day": 39,
      "arrival_day": 14,
      "half_life_days": 7,
+     "back_at_baseline_day": 104,
      "days_observed_after_extreme": 213
     },
     "credit_spread": {
@@ -9408,6 +9456,7 @@
      "extreme_day": 69,
      "arrival_day": 47,
      "half_life_days": 7,
+     "back_at_baseline_day": 95,
      "days_observed_after_extreme": 183
     },
     "vix": {
@@ -9423,6 +9472,7 @@
      "extreme_day": 2,
      "arrival_day": 1,
      "half_life_days": 1,
+     "back_at_baseline_day": 16,
      "days_observed_after_extreme": 250
     }
    },
@@ -13907,6 +13957,7 @@
      "extreme_day": 126,
      "arrival_day": 61,
      "half_life_days": null,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 126
     },
     "communication": {
@@ -13921,6 +13972,7 @@
      "extreme_day": 126,
      "arrival_day": 113,
      "half_life_days": null,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 126
     },
     "consumer_discretionary": {
@@ -13935,6 +13987,7 @@
      "extreme_day": 111,
      "arrival_day": 8,
      "half_life_days": 66,
+     "back_at_baseline_day": 223,
      "days_observed_after_extreme": 141
     },
     "consumer_staples": {
@@ -13949,6 +14002,7 @@
      "extreme_day": 119,
      "arrival_day": 59,
      "half_life_days": null,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 133
     },
     "energy": {
@@ -13963,6 +14017,7 @@
      "extreme_day": 62,
      "arrival_day": 27,
      "half_life_days": 7,
+     "back_at_baseline_day": 121,
      "days_observed_after_extreme": 190
     },
     "financials": {
@@ -13977,6 +14032,7 @@
      "extreme_day": 126,
      "arrival_day": 44,
      "half_life_days": null,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 126
     },
     "health_care": {
@@ -13991,6 +14047,7 @@
      "extreme_day": 119,
      "arrival_day": 59,
      "half_life_days": 38,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 133
     },
     "industrials": {
@@ -14005,6 +14062,7 @@
      "extreme_day": 101,
      "arrival_day": 63,
      "half_life_days": null,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 151
     },
     "materials": {
@@ -14019,6 +14077,7 @@
      "extreme_day": 122,
      "arrival_day": 61,
      "half_life_days": 73,
+     "back_at_baseline_day": 211,
      "days_observed_after_extreme": 130
     },
     "real_estate": {
@@ -14033,6 +14092,7 @@
      "extreme_day": 36,
      "arrival_day": 8,
      "half_life_days": 20,
+     "back_at_baseline_day": 81,
      "days_observed_after_extreme": 216
     },
     "utilities": {
@@ -14047,6 +14107,7 @@
      "extreme_day": 118,
      "arrival_day": 58,
      "half_life_days": 15,
+     "back_at_baseline_day": 247,
      "days_observed_after_extreme": 134
     }
    },
@@ -14064,6 +14125,7 @@
      "extreme_day": 23,
      "arrival_day": 3,
      "half_life_days": 24,
+     "back_at_baseline_day": 51,
      "days_observed_after_extreme": 229
     },
     "yield_2y": {
@@ -14079,6 +14141,7 @@
      "extreme_day": 109,
      "arrival_day": 3,
      "half_life_days": 126,
+     "back_at_baseline_day": 241,
      "days_observed_after_extreme": 143
     },
     "yield_10y": {
@@ -14094,6 +14157,7 @@
      "extreme_day": 35,
      "arrival_day": 7,
      "half_life_days": 9,
+     "back_at_baseline_day": 107,
      "days_observed_after_extreme": 217
     },
     "breakeven_5y": {
@@ -14109,6 +14173,7 @@
      "extreme_day": 13,
      "arrival_day": 3,
      "half_life_days": 17,
+     "back_at_baseline_day": 231,
      "days_observed_after_extreme": 239
     },
     "credit_spread": {
@@ -14124,6 +14189,7 @@
      "extreme_day": 4,
      "arrival_day": 2,
      "half_life_days": 11,
+     "back_at_baseline_day": 46,
      "days_observed_after_extreme": 248
     },
     "vix": {
@@ -14139,6 +14205,7 @@
      "extreme_day": 5,
      "arrival_day": 3,
      "half_life_days": 1,
+     "back_at_baseline_day": 28,
      "days_observed_after_extreme": 247
     }
    },
@@ -18598,6 +18665,16 @@
  },
  "oil_rule_episodes": [
   {
+   "current": false,
+   "back_at_pre_shock_day": 45,
+   "new_high_after_half_day": 147,
+   "rise_at": {
+    "63": -3.9,
+    "126": -18.5,
+    "252": 51.8
+   },
+   "latest_rise_pct": 51.8,
+   "latest_day": 252,
    "day_0": "1990-01-03",
    "pre_shock_date": "1989-12-01",
    "pre_shock_price": 18.68,
@@ -18891,6 +18968,7 @@
       "extreme_day": 99,
       "arrival_day": 45,
       "half_life_days": 40,
+      "back_at_baseline_day": 159,
       "days_observed_after_extreme": 153
      },
      "communication": {
@@ -18905,6 +18983,7 @@
       "extreme_day": 36,
       "arrival_day": 8,
       "half_life_days": 66,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 216
      },
      "consumer_discretionary": {
@@ -18919,6 +18998,7 @@
       "extreme_day": 19,
       "arrival_day": 14,
       "half_life_days": 27,
+      "back_at_baseline_day": 55,
       "days_observed_after_extreme": 233
      },
      "consumer_staples": {
@@ -18933,6 +19013,7 @@
       "extreme_day": 126,
       "arrival_day": 109,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 126
      },
      "energy": {
@@ -18947,6 +19028,7 @@
       "extreme_day": 33,
       "arrival_day": 24,
       "half_life_days": 34,
+      "back_at_baseline_day": 123,
       "days_observed_after_extreme": 219
      },
      "financials": {
@@ -18961,6 +19043,7 @@
       "extreme_day": 126,
       "arrival_day": 52,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 126
      },
      "health_care": {
@@ -18975,6 +19058,7 @@
       "extreme_day": 126,
       "arrival_day": 118,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 126
      },
      "industrials": {
@@ -18989,6 +19073,7 @@
       "extreme_day": 59,
       "arrival_day": 35,
       "half_life_days": 95,
+      "back_at_baseline_day": 179,
       "days_observed_after_extreme": 193
      },
      "materials": {
@@ -19003,6 +19088,7 @@
       "extreme_day": 66,
       "arrival_day": 4,
       "half_life_days": 19,
+      "back_at_baseline_day": 101,
       "days_observed_after_extreme": 186
      },
      "real_estate": {
@@ -19017,6 +19103,7 @@
       "extreme_day": 126,
       "arrival_day": 87,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 126
      },
      "utilities": {
@@ -19031,6 +19118,7 @@
       "extreme_day": 104,
       "arrival_day": 83,
       "half_life_days": 42,
+      "back_at_baseline_day": 158,
       "days_observed_after_extreme": 148
      }
     }
@@ -19049,6 +19137,7 @@
      "extreme_day": 82,
      "arrival_day": 32,
      "half_life_days": 19,
+     "back_at_baseline_day": 143,
      "days_observed_after_extreme": 170
     },
     "yield_10y": {
@@ -19064,6 +19153,7 @@
      "extreme_day": 82,
      "arrival_day": 23,
      "half_life_days": 21,
+     "back_at_baseline_day": 234,
      "days_observed_after_extreme": 170
     },
     "vix": {
@@ -19079,6 +19169,7 @@
      "extreme_day": 19,
      "arrival_day": 7,
      "half_life_days": 11,
+     "back_at_baseline_day": 51,
      "days_observed_after_extreme": 233
     },
     "credit_spread": {
@@ -19094,11 +19185,22 @@
      "extreme_day": 77,
      "arrival_day": 14,
      "half_life_days": 7,
+     "back_at_baseline_day": 186,
      "days_observed_after_extreme": 175
     }
    }
   },
   {
+   "current": false,
+   "back_at_pre_shock_day": null,
+   "new_high_after_half_day": null,
+   "rise_at": {
+    "63": 123.5,
+    "126": 36.5,
+    "252": 26.9
+   },
+   "latest_rise_pct": 26.9,
+   "latest_day": 252,
    "day_0": "1990-08-03",
    "pre_shock_date": "1990-07-06",
    "pre_shock_price": 15.35,
@@ -19392,6 +19494,7 @@
       "extreme_day": 126,
       "arrival_day": 117,
       "half_life_days": 61,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 126
      },
      "communication": {
@@ -19406,6 +19509,7 @@
       "extreme_day": 92,
       "arrival_day": 40,
       "half_life_days": 21,
+      "back_at_baseline_day": 120,
       "days_observed_after_extreme": 160
      },
      "consumer_discretionary": {
@@ -19420,6 +19524,7 @@
       "extreme_day": 64,
       "arrival_day": 33,
       "half_life_days": 51,
+      "back_at_baseline_day": 144,
       "days_observed_after_extreme": 188
      },
      "consumer_staples": {
@@ -19434,6 +19539,7 @@
       "extreme_day": 91,
       "arrival_day": 40,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 161
      },
      "energy": {
@@ -19448,6 +19554,7 @@
       "extreme_day": 126,
       "arrival_day": 85,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 126
      },
      "financials": {
@@ -19462,6 +19569,7 @@
       "extreme_day": 61,
       "arrival_day": 37,
       "half_life_days": 12,
+      "back_at_baseline_day": 127,
       "days_observed_after_extreme": 191
      },
      "health_care": {
@@ -19476,6 +19584,7 @@
       "extreme_day": 124,
       "arrival_day": 50,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 128
      },
      "industrials": {
@@ -19490,6 +19599,7 @@
       "extreme_day": 81,
       "arrival_day": 35,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 171
      },
      "materials": {
@@ -19504,6 +19614,7 @@
       "extreme_day": 70,
       "arrival_day": 61,
       "half_life_days": 24,
+      "back_at_baseline_day": 208,
       "days_observed_after_extreme": 182
      },
      "real_estate": {
@@ -19518,6 +19629,7 @@
       "extreme_day": 116,
       "arrival_day": 41,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 136
      },
      "utilities": {
@@ -19532,6 +19644,7 @@
       "extreme_day": 63,
       "arrival_day": 38,
       "half_life_days": 52,
+      "back_at_baseline_day": 129,
       "days_observed_after_extreme": 189
      }
     }
@@ -19550,6 +19663,7 @@
      "extreme_day": 125,
      "arrival_day": 87,
      "half_life_days": null,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 127
     },
     "yield_10y": {
@@ -19565,6 +19679,7 @@
      "extreme_day": 126,
      "arrival_day": 86,
      "half_life_days": 16,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 126
     },
     "vix": {
@@ -19580,6 +19695,7 @@
      "extreme_day": 76,
      "arrival_day": 4,
      "half_life_days": 18,
+     "back_at_baseline_day": 107,
      "days_observed_after_extreme": 176
     },
     "credit_spread": {
@@ -19595,11 +19711,22 @@
      "extreme_day": 89,
      "arrival_day": 53,
      "half_life_days": 50,
+     "back_at_baseline_day": 191,
      "days_observed_after_extreme": 163
     }
    }
   },
   {
+   "current": false,
+   "back_at_pre_shock_day": null,
+   "new_high_after_half_day": null,
+   "rise_at": {
+    "63": 15.9,
+    "126": 35.8,
+    "252": 8.3
+   },
+   "latest_rise_pct": 8.3,
+   "latest_day": 252,
    "day_0": "1996-03-18",
    "pre_shock_date": "1996-02-01",
    "pre_shock_price": 16.78,
@@ -19893,6 +20020,7 @@
       "extreme_day": 82,
       "arrival_day": 3,
       "half_life_days": 3,
+      "back_at_baseline_day": 99,
       "days_observed_after_extreme": 170
      },
      "communication": {
@@ -19907,6 +20035,7 @@
       "extreme_day": 118,
       "arrival_day": 87,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 134
      },
      "consumer_discretionary": {
@@ -19921,6 +20050,7 @@
       "extreme_day": 83,
       "arrival_day": 12,
       "half_life_days": 1,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 169
      },
      "consumer_staples": {
@@ -19935,6 +20065,7 @@
       "extreme_day": 88,
       "arrival_day": 65,
       "half_life_days": 13,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 164
      },
      "energy": {
@@ -19949,6 +20080,7 @@
       "extreme_day": 82,
       "arrival_day": 60,
       "half_life_days": 18,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 170
      },
      "financials": {
@@ -19963,6 +20095,7 @@
       "extreme_day": 108,
       "arrival_day": 9,
       "half_life_days": 21,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 144
      },
      "health_care": {
@@ -19977,6 +20110,7 @@
       "extreme_day": 80,
       "arrival_day": 33,
       "half_life_days": 35,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 172
      },
      "industrials": {
@@ -19991,6 +20125,7 @@
       "extreme_day": 55,
       "arrival_day": 19,
       "half_life_days": 12,
+      "back_at_baseline_day": 206,
       "days_observed_after_extreme": 197
      },
      "materials": {
@@ -20005,6 +20140,7 @@
       "extreme_day": 72,
       "arrival_day": 46,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 180
      },
      "real_estate": {
@@ -20019,6 +20155,7 @@
       "extreme_day": 64,
       "arrival_day": 33,
       "half_life_days": 5,
+      "back_at_baseline_day": 102,
       "days_observed_after_extreme": 188
      },
      "utilities": {
@@ -20033,6 +20170,7 @@
       "extreme_day": 60,
       "arrival_day": 24,
       "half_life_days": 7,
+      "back_at_baseline_day": 72,
       "days_observed_after_extreme": 192
      }
     }
@@ -20051,6 +20189,7 @@
      "extreme_day": 77,
      "arrival_day": 34,
      "half_life_days": 9,
+     "back_at_baseline_day": 141,
      "days_observed_after_extreme": 175
     },
     "yield_10y": {
@@ -20066,6 +20205,7 @@
      "extreme_day": 77,
      "arrival_day": 33,
      "half_life_days": 9,
+     "back_at_baseline_day": 157,
      "days_observed_after_extreme": 175
     },
     "vix": {
@@ -20081,6 +20221,7 @@
      "extreme_day": 88,
      "arrival_day": 16,
      "half_life_days": 2,
+     "back_at_baseline_day": 96,
      "days_observed_after_extreme": 164
     },
     "credit_spread": {
@@ -20096,11 +20237,22 @@
      "extreme_day": 77,
      "arrival_day": 38,
      "half_life_days": 85,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 175
     }
    }
   },
   {
+   "current": false,
+   "back_at_pre_shock_day": null,
+   "new_high_after_half_day": 173,
+   "rise_at": {
+    "63": 75.2,
+    "126": 100.2,
+    "252": 130.8
+   },
+   "latest_rise_pct": 130.8,
+   "latest_day": 252,
    "day_0": "1999-07-07",
    "pre_shock_date": "1999-05-21",
    "pre_shock_price": 14.49,
@@ -20394,6 +20546,7 @@
       "extreme_day": 125,
       "arrival_day": 99,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 127
      },
      "communication": {
@@ -20408,6 +20561,7 @@
       "extreme_day": 112,
       "arrival_day": 13,
       "half_life_days": 2,
+      "back_at_baseline_day": 129,
       "days_observed_after_extreme": 140
      },
      "consumer_discretionary": {
@@ -20422,6 +20576,7 @@
       "extreme_day": 125,
       "arrival_day": 84,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 127
      },
      "consumer_staples": {
@@ -20436,6 +20591,7 @@
       "extreme_day": 125,
       "arrival_day": 89,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 127
      },
      "energy": {
@@ -20450,6 +20606,7 @@
       "extreme_day": 14,
       "arrival_day": 12,
       "half_life_days": 6,
+      "back_at_baseline_day": 28,
       "days_observed_after_extreme": 238
      },
      "financials": {
@@ -20464,6 +20621,7 @@
       "extreme_day": 125,
       "arrival_day": 48,
       "half_life_days": 92,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 127
      },
      "health_care": {
@@ -20478,6 +20636,7 @@
       "extreme_day": 117,
       "arrival_day": 105,
       "half_life_days": 11,
+      "back_at_baseline_day": 202,
       "days_observed_after_extreme": 135
      },
      "industrials": {
@@ -20492,6 +20651,7 @@
       "extreme_day": 125,
       "arrival_day": 85,
       "half_life_days": 70,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 127
      },
      "materials": {
@@ -20506,6 +20666,7 @@
       "extreme_day": 118,
       "arrival_day": 80,
       "half_life_days": 9,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 134
      },
      "real_estate": {
@@ -20520,6 +20681,7 @@
       "extreme_day": 125,
       "arrival_day": 80,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 127
      },
      "utilities": {
@@ -20534,6 +20696,7 @@
       "extreme_day": 125,
       "arrival_day": 97,
       "half_life_days": 71,
+      "back_at_baseline_day": 226,
       "days_observed_after_extreme": 127
      }
     }
@@ -20552,6 +20715,7 @@
      "extreme_day": 123,
      "arrival_day": 77,
      "half_life_days": null,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 129
     },
     "yield_10y": {
@@ -20567,6 +20731,7 @@
      "extreme_day": 125,
      "arrival_day": 112,
      "half_life_days": 49,
+     "back_at_baseline_day": 187,
      "days_observed_after_extreme": 127
     },
     "vix": {
@@ -20582,6 +20747,7 @@
      "extreme_day": 71,
      "arrival_day": 13,
      "half_life_days": 3,
+     "back_at_baseline_day": 95,
      "days_observed_after_extreme": 181
     },
     "credit_spread": {
@@ -20597,11 +20763,22 @@
      "extreme_day": 125,
      "arrival_day": 118,
      "half_life_days": 32,
+     "back_at_baseline_day": 170,
      "days_observed_after_extreme": 127
     }
    }
   },
   {
+   "current": false,
+   "back_at_pre_shock_day": 56,
+   "new_high_after_half_day": null,
+   "rise_at": {
+    "63": -21.3,
+    "126": -5.3,
+    "252": -34.7
+   },
+   "latest_rise_pct": -34.7,
+   "latest_day": 252,
    "day_0": "2000-09-01",
    "pre_shock_date": "2000-07-19",
    "pre_shock_price": 28.33,
@@ -20895,6 +21072,7 @@
       "extreme_day": 122,
       "arrival_day": 49,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 130
      },
      "communication": {
@@ -20909,6 +21087,7 @@
       "extreme_day": 81,
       "arrival_day": 31,
       "half_life_days": 4,
+      "back_at_baseline_day": 90,
       "days_observed_after_extreme": 171
      },
      "consumer_discretionary": {
@@ -20923,6 +21102,7 @@
       "extreme_day": 120,
       "arrival_day": 57,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 132
      },
      "consumer_staples": {
@@ -20937,6 +21117,7 @@
       "extreme_day": 117,
       "arrival_day": 40,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 135
      },
      "energy": {
@@ -20951,6 +21132,7 @@
       "extreme_day": 125,
       "arrival_day": 80,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 127
      },
      "financials": {
@@ -20965,6 +21147,7 @@
       "extreme_day": 84,
       "arrival_day": 65,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 168
      },
      "health_care": {
@@ -20979,6 +21162,7 @@
       "extreme_day": 81,
       "arrival_day": 27,
       "half_life_days": 14,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 171
      },
      "industrials": {
@@ -20993,6 +21177,7 @@
       "extreme_day": 125,
       "arrival_day": 56,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 127
      },
      "materials": {
@@ -21007,6 +21192,7 @@
       "extreme_day": 125,
       "arrival_day": 64,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 127
      },
      "real_estate": {
@@ -21021,6 +21207,7 @@
       "extreme_day": 124,
       "arrival_day": 57,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 128
      },
      "utilities": {
@@ -21035,6 +21222,7 @@
       "extreme_day": 124,
       "arrival_day": 27,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 128
      }
     }
@@ -21053,6 +21241,7 @@
      "extreme_day": 121,
      "arrival_day": 75,
      "half_life_days": null,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 131
     },
     "yield_10y": {
@@ -21068,6 +21257,7 @@
      "extreme_day": 122,
      "arrival_day": 71,
      "half_life_days": 31,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 130
     },
     "vix": {
@@ -21083,6 +21273,7 @@
      "extreme_day": 76,
      "arrival_day": 26,
      "half_life_days": 15,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 176
     },
     "credit_spread": {
@@ -21098,11 +21289,22 @@
      "extreme_day": 82,
      "arrival_day": 71,
      "half_life_days": 9,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 170
     }
    }
   },
   {
+   "current": false,
+   "back_at_pre_shock_day": 78,
+   "new_high_after_half_day": null,
+   "rise_at": {
+    "63": 13.5,
+    "126": 13.8,
+    "252": 37.3
+   },
+   "latest_rise_pct": 37.3,
+   "latest_day": 252,
    "day_0": "2002-12-18",
    "pre_shock_date": "2002-11-07",
    "pre_shock_price": 24.36,
@@ -21396,6 +21598,7 @@
       "extreme_day": 125,
       "arrival_day": 15,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 127
      },
      "communication": {
@@ -21410,6 +21613,7 @@
       "extreme_day": 44,
       "arrival_day": 30,
       "half_life_days": 41,
+      "back_at_baseline_day": 136,
       "days_observed_after_extreme": 208
      },
      "consumer_discretionary": {
@@ -21424,6 +21628,7 @@
       "extreme_day": 98,
       "arrival_day": 74,
       "half_life_days": 4,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 154
      },
      "consumer_staples": {
@@ -21438,6 +21643,7 @@
       "extreme_day": 94,
       "arrival_day": 60,
       "half_life_days": 12,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 158
      },
      "energy": {
@@ -21452,6 +21658,7 @@
       "extreme_day": 119,
       "arrival_day": 48,
       "half_life_days": 4,
+      "back_at_baseline_day": 137,
       "days_observed_after_extreme": 133
      },
      "financials": {
@@ -21466,6 +21673,7 @@
       "extreme_day": 56,
       "arrival_day": 33,
       "half_life_days": 8,
+      "back_at_baseline_day": 75,
       "days_observed_after_extreme": 196
      },
      "health_care": {
@@ -21480,6 +21688,7 @@
       "extreme_day": 84,
       "arrival_day": 80,
       "half_life_days": 9,
+      "back_at_baseline_day": 153,
       "days_observed_after_extreme": 168
      },
      "industrials": {
@@ -21494,6 +21703,7 @@
       "extreme_day": 119,
       "arrival_day": 111,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 133
      },
      "materials": {
@@ -21508,6 +21718,7 @@
       "extreme_day": 89,
       "arrival_day": 52,
       "half_life_days": 59,
+      "back_at_baseline_day": 152,
       "days_observed_after_extreme": 163
      },
      "real_estate": {
@@ -21522,6 +21733,7 @@
       "extreme_day": 104,
       "arrival_day": 35,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 148
      },
      "utilities": {
@@ -21536,6 +21748,7 @@
       "extreme_day": 107,
       "arrival_day": 106,
       "half_life_days": 8,
+      "back_at_baseline_day": 138,
       "days_observed_after_extreme": 145
      }
     }
@@ -21554,6 +21767,7 @@
      "extreme_day": 121,
      "arrival_day": 53,
      "half_life_days": 22,
+     "back_at_baseline_day": 155,
      "days_observed_after_extreme": 131
     },
     "yield_10y": {
@@ -21569,6 +21783,7 @@
      "extreme_day": 121,
      "arrival_day": 54,
      "half_life_days": 14,
+     "back_at_baseline_day": 146,
      "days_observed_after_extreme": 131
     },
     "vix": {
@@ -21584,6 +21799,7 @@
      "extreme_day": 102,
      "arrival_day": 80,
      "half_life_days": null,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 150
     },
     "credit_spread": {
@@ -21599,11 +21815,22 @@
      "extreme_day": 96,
      "arrival_day": 63,
      "half_life_days": null,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 156
     }
    }
   },
   {
+   "current": false,
+   "back_at_pre_shock_day": null,
+   "new_high_after_half_day": 145,
+   "rise_at": {
+    "63": 43.6,
+    "126": 35.4,
+    "252": 96.7
+   },
+   "latest_rise_pct": 96.7,
+   "latest_day": 252,
    "day_0": "2004-07-27",
    "pre_shock_date": "2004-06-29",
    "pre_shock_price": 32.61,
@@ -21897,6 +22124,7 @@
       "extreme_day": 29,
       "arrival_day": 11,
       "half_life_days": 3,
+      "back_at_baseline_day": 59,
       "days_observed_after_extreme": 223
      },
      "communication": {
@@ -21911,6 +22139,7 @@
       "extreme_day": 114,
       "arrival_day": 93,
       "half_life_days": 14,
+      "back_at_baseline_day": 147,
       "days_observed_after_extreme": 138
      },
      "consumer_discretionary": {
@@ -21925,6 +22154,7 @@
       "extreme_day": 120,
       "arrival_day": 69,
       "half_life_days": 19,
+      "back_at_baseline_day": 156,
       "days_observed_after_extreme": 132
      },
      "consumer_staples": {
@@ -21939,6 +22169,7 @@
       "extreme_day": 51,
       "arrival_day": 32,
       "half_life_days": 71,
+      "back_at_baseline_day": 182,
       "days_observed_after_extreme": 201
      },
      "energy": {
@@ -21953,6 +22184,7 @@
       "extreme_day": 86,
       "arrival_day": 50,
       "half_life_days": 8,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 166
      },
      "financials": {
@@ -21967,6 +22199,7 @@
       "extreme_day": 114,
       "arrival_day": 18,
       "half_life_days": 31,
+      "back_at_baseline_day": 165,
       "days_observed_after_extreme": 138
      },
      "health_care": {
@@ -21981,6 +22214,7 @@
       "extreme_day": 85,
       "arrival_day": 57,
       "half_life_days": 33,
+      "back_at_baseline_day": 169,
       "days_observed_after_extreme": 167
      },
      "industrials": {
@@ -21995,6 +22229,7 @@
       "extreme_day": 102,
       "arrival_day": 47,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 150
      },
      "materials": {
@@ -22009,6 +22244,7 @@
       "extreme_day": 88,
       "arrival_day": 28,
       "half_life_days": 5,
+      "back_at_baseline_day": 202,
       "days_observed_after_extreme": 164
      },
      "real_estate": {
@@ -22023,6 +22259,7 @@
       "extreme_day": 122,
       "arrival_day": 98,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 130
      },
      "utilities": {
@@ -22037,6 +22274,7 @@
       "extreme_day": 125,
       "arrival_day": 8,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 127
      }
     }
@@ -22055,6 +22293,7 @@
      "extreme_day": 126,
      "arrival_day": 85,
      "half_life_days": null,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 126
     },
     "yield_10y": {
@@ -22070,6 +22309,7 @@
      "extreme_day": 62,
      "arrival_day": 8,
      "half_life_days": 23,
+     "back_at_baseline_day": 163,
      "days_observed_after_extreme": 190
     },
     "vix": {
@@ -22085,6 +22325,7 @@
      "extreme_day": 105,
      "arrival_day": 32,
      "half_life_days": 6,
+     "back_at_baseline_day": 182,
      "days_observed_after_extreme": 147
     },
     "credit_spread": {
@@ -22100,6 +22341,7 @@
      "extreme_day": 126,
      "arrival_day": 97,
      "half_life_days": 77,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 126
     },
     "breakeven_5y": {
@@ -22115,11 +22357,22 @@
      "extreme_day": 86,
      "arrival_day": 69,
      "half_life_days": 27,
+     "back_at_baseline_day": 219,
      "days_observed_after_extreme": 166
     }
    }
   },
   {
+   "current": false,
+   "back_at_pre_shock_day": null,
+   "new_high_after_half_day": 229,
+   "rise_at": {
+    "63": 33.0,
+    "126": 32.4,
+    "252": 55.8
+   },
+   "latest_rise_pct": 55.8,
+   "latest_day": 252,
    "day_0": "2005-03-08",
    "pre_shock_date": "2005-02-04",
    "pre_shock_price": 43.26,
@@ -22413,6 +22666,7 @@
       "extreme_day": 28,
       "arrival_day": 26,
       "half_life_days": 3,
+      "back_at_baseline_day": 47,
       "days_observed_after_extreme": 224
      },
      "communication": {
@@ -22427,6 +22681,7 @@
       "extreme_day": 25,
       "arrival_day": 5,
       "half_life_days": 12,
+      "back_at_baseline_day": 45,
       "days_observed_after_extreme": 227
      },
      "consumer_discretionary": {
@@ -22441,6 +22696,7 @@
       "extreme_day": 37,
       "arrival_day": 27,
       "half_life_days": 26,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 215
      },
      "consumer_staples": {
@@ -22455,6 +22711,7 @@
       "extreme_day": 46,
       "arrival_day": 24,
       "half_life_days": 22,
+      "back_at_baseline_day": 82,
       "days_observed_after_extreme": 206
      },
      "energy": {
@@ -22469,6 +22726,7 @@
       "extreme_day": 124,
       "arrival_day": 99,
       "half_life_days": 51,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 128
      },
      "financials": {
@@ -22483,6 +22741,7 @@
       "extreme_day": 31,
       "arrival_day": 10,
       "half_life_days": 5,
+      "back_at_baseline_day": 76,
       "days_observed_after_extreme": 221
      },
      "health_care": {
@@ -22497,6 +22756,7 @@
       "extreme_day": 27,
       "arrival_day": 21,
       "half_life_days": 60,
+      "back_at_baseline_day": 164,
       "days_observed_after_extreme": 225
      },
      "industrials": {
@@ -22511,6 +22771,7 @@
       "extreme_day": 100,
       "arrival_day": 93,
       "half_life_days": 14,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 152
      },
      "materials": {
@@ -22525,6 +22786,7 @@
       "extreme_day": 82,
       "arrival_day": 27,
       "half_life_days": 98,
+      "back_at_baseline_day": 227,
       "days_observed_after_extreme": 170
      },
      "real_estate": {
@@ -22539,6 +22801,7 @@
       "extreme_day": 80,
       "arrival_day": 72,
       "half_life_days": 16,
+      "back_at_baseline_day": 121,
       "days_observed_after_extreme": 172
      },
      "utilities": {
@@ -22553,6 +22816,7 @@
       "extreme_day": 124,
       "arrival_day": 74,
       "half_life_days": 34,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 128
      }
     }
@@ -22571,6 +22835,7 @@
      "extreme_day": 106,
      "arrival_day": 13,
      "half_life_days": 17,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 146
     },
     "yield_10y": {
@@ -22586,6 +22851,7 @@
      "extreme_day": 60,
      "arrival_day": 47,
      "half_life_days": 27,
+     "back_at_baseline_day": 105,
      "days_observed_after_extreme": 192
     },
     "vix": {
@@ -22601,6 +22867,7 @@
      "extreme_day": 27,
      "arrival_day": 27,
      "half_life_days": 2,
+     "back_at_baseline_day": 56,
      "days_observed_after_extreme": 225
     },
     "credit_spread": {
@@ -22616,6 +22883,7 @@
      "extreme_day": 50,
      "arrival_day": 26,
      "half_life_days": 46,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 202
     },
     "breakeven_5y": {
@@ -22631,11 +22899,22 @@
      "extreme_day": 91,
      "arrival_day": 47,
      "half_life_days": 37,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 161
     }
    }
   },
   {
+   "current": false,
+   "back_at_pre_shock_day": 119,
+   "new_high_after_half_day": null,
+   "rise_at": {
+    "63": 32.3,
+    "126": 1.9,
+    "252": 16.8
+   },
+   "latest_rise_pct": 16.8,
+   "latest_day": 252,
    "day_0": "2006-04-12",
    "pre_shock_date": "2006-02-16",
    "pre_shock_price": 56.78,
@@ -22929,6 +23208,7 @@
       "extreme_day": 76,
       "arrival_day": 33,
       "half_life_days": 21,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 176
      },
      "communication": {
@@ -22943,6 +23223,7 @@
       "extreme_day": 126,
       "arrival_day": 23,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 126
      },
      "consumer_discretionary": {
@@ -22957,6 +23238,7 @@
       "extreme_day": 94,
       "arrival_day": 63,
       "half_life_days": 7,
+      "back_at_baseline_day": 105,
       "days_observed_after_extreme": 158
      },
      "consumer_staples": {
@@ -22971,6 +23253,7 @@
       "extreme_day": 69,
       "arrival_day": 41,
       "half_life_days": 54,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 183
      },
      "energy": {
@@ -22985,6 +23268,7 @@
       "extreme_day": 111,
       "arrival_day": 103,
       "half_life_days": 27,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 141
      },
      "financials": {
@@ -22999,6 +23283,7 @@
       "extreme_day": 121,
       "arrival_day": 107,
       "half_life_days": 8,
+      "back_at_baseline_day": 229,
       "days_observed_after_extreme": 131
      },
      "health_care": {
@@ -23013,6 +23298,7 @@
       "extreme_day": 77,
       "arrival_day": 38,
       "half_life_days": 10,
+      "back_at_baseline_day": 125,
       "days_observed_after_extreme": 175
      },
      "industrials": {
@@ -23027,6 +23313,7 @@
       "extreme_day": 112,
       "arrival_day": 66,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 140
      },
      "materials": {
@@ -23041,6 +23328,7 @@
       "extreme_day": 121,
       "arrival_day": 38,
       "half_life_days": 6,
+      "back_at_baseline_day": 147,
       "days_observed_after_extreme": 131
      },
      "real_estate": {
@@ -23055,6 +23343,7 @@
       "extreme_day": 85,
       "arrival_day": 80,
       "half_life_days": 106,
+      "back_at_baseline_day": 233,
       "days_observed_after_extreme": 167
      },
      "utilities": {
@@ -23069,6 +23358,7 @@
       "extreme_day": 76,
       "arrival_day": 39,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 176
      }
     }
@@ -23087,6 +23377,7 @@
      "extreme_day": 53,
      "arrival_day": 43,
      "half_life_days": 11,
+     "back_at_baseline_day": 79,
      "days_observed_after_extreme": 199
     },
     "yield_10y": {
@@ -23102,6 +23393,7 @@
      "extreme_day": 114,
      "arrival_day": 97,
      "half_life_days": 11,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 138
     },
     "vix": {
@@ -23117,6 +23409,7 @@
      "extreme_day": 42,
      "arrival_day": 32,
      "half_life_days": 2,
+     "back_at_baseline_day": 87,
      "days_observed_after_extreme": 210
     },
     "credit_spread": {
@@ -23132,6 +23425,7 @@
      "extreme_day": 19,
      "arrival_day": 9,
      "half_life_days": 4,
+     "back_at_baseline_day": 82,
      "days_observed_after_extreme": 233
     },
     "breakeven_5y": {
@@ -23147,11 +23441,22 @@
      "extreme_day": 121,
      "arrival_day": 97,
      "half_life_days": 80,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 131
     }
    }
   },
   {
+   "current": false,
+   "back_at_pre_shock_day": 233,
+   "new_high_after_half_day": null,
+   "rise_at": {
+    "63": 17.5,
+    "126": 58.8,
+    "252": -27.9
+   },
+   "latest_rise_pct": -27.9,
+   "latest_day": 252,
    "day_0": "2007-11-06",
    "pre_shock_date": "2007-10-09",
    "pre_shock_price": 77.82,
@@ -23445,6 +23750,7 @@
       "extreme_day": 74,
       "arrival_day": 40,
       "half_life_days": 57,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 178
      },
      "communication": {
@@ -23459,6 +23765,7 @@
       "extreme_day": 113,
       "arrival_day": 46,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 139
      },
      "consumer_discretionary": {
@@ -23473,6 +23780,7 @@
       "extreme_day": 47,
       "arrival_day": 39,
       "half_life_days": 4,
+      "back_at_baseline_day": 93,
       "days_observed_after_extreme": 205
      },
      "consumer_staples": {
@@ -23487,6 +23795,7 @@
       "extreme_day": 43,
       "arrival_day": 13,
       "half_life_days": 13,
+      "back_at_baseline_day": 121,
       "days_observed_after_extreme": 209
      },
      "energy": {
@@ -23501,6 +23810,7 @@
       "extreme_day": 126,
       "arrival_day": 68,
       "half_life_days": 84,
+      "back_at_baseline_day": 234,
       "days_observed_after_extreme": 126
      },
      "financials": {
@@ -23515,6 +23825,7 @@
       "extreme_day": 89,
       "arrival_day": 79,
       "half_life_days": 3,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 163
      },
      "health_care": {
@@ -23529,6 +23840,7 @@
       "extreme_day": 49,
       "arrival_day": 41,
       "half_life_days": 7,
+      "back_at_baseline_day": 129,
       "days_observed_after_extreme": 203
      },
      "industrials": {
@@ -23543,6 +23855,7 @@
       "extreme_day": 126,
       "arrival_day": 98,
       "half_life_days": 34,
+      "back_at_baseline_day": 164,
       "days_observed_after_extreme": 126
      },
      "materials": {
@@ -23557,6 +23870,7 @@
       "extreme_day": 113,
       "arrival_day": 72,
       "half_life_days": 51,
+      "back_at_baseline_day": 210,
       "days_observed_after_extreme": 139
      },
      "real_estate": {
@@ -23571,6 +23885,7 @@
       "extreme_day": 47,
       "arrival_day": 24,
       "half_life_days": 5,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 205
      },
      "utilities": {
@@ -23585,6 +23900,7 @@
       "extreme_day": 43,
       "arrival_day": 40,
       "half_life_days": 8,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 209
      }
     }
@@ -23603,6 +23919,7 @@
      "extreme_day": 88,
      "arrival_day": 47,
      "half_life_days": 41,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 164
     },
     "yield_10y": {
@@ -23618,6 +23935,7 @@
      "extreme_day": 88,
      "arrival_day": 12,
      "half_life_days": 27,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 164
     },
     "vix": {
@@ -23633,6 +23951,7 @@
      "extreme_day": 89,
      "arrival_day": 3,
      "half_life_days": 1,
+     "back_at_baseline_day": 110,
      "days_observed_after_extreme": 163
     },
     "credit_spread": {
@@ -23648,6 +23967,7 @@
      "extreme_day": 88,
      "arrival_day": 44,
      "half_life_days": null,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 164
     },
     "breakeven_5y": {
@@ -23663,11 +23983,22 @@
      "extreme_day": 51,
      "arrival_day": 19,
      "half_life_days": 19,
+     "back_at_baseline_day": 84,
      "days_observed_after_extreme": 201
     }
    }
   },
   {
+   "current": false,
+   "back_at_pre_shock_day": null,
+   "new_high_after_half_day": null,
+   "rise_at": {
+    "63": 11.1,
+    "126": 33.4,
+    "252": 24.2
+   },
+   "latest_rise_pct": 24.2,
+   "latest_day": 252,
    "day_0": "2009-10-22",
    "pre_shock_date": "2009-09-24",
    "pre_shock_price": 64.99,
@@ -23961,6 +24292,7 @@
       "extreme_day": 47,
       "arrival_day": 41,
       "half_life_days": 5,
+      "back_at_baseline_day": 66,
       "days_observed_after_extreme": 205
      },
      "communication": {
@@ -23975,6 +24307,7 @@
       "extreme_day": 126,
       "arrival_day": 111,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 126
      },
      "consumer_discretionary": {
@@ -23989,6 +24322,7 @@
       "extreme_day": 126,
       "arrival_day": 92,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 126
      },
      "consumer_staples": {
@@ -24003,6 +24337,7 @@
       "extreme_day": 85,
       "arrival_day": 4,
       "half_life_days": 27,
+      "back_at_baseline_day": 118,
       "days_observed_after_extreme": 167
      },
      "energy": {
@@ -24017,6 +24352,7 @@
       "extreme_day": 106,
       "arrival_day": 30,
       "half_life_days": 5,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 146
      },
      "financials": {
@@ -24031,6 +24367,7 @@
       "extreme_day": 46,
       "arrival_day": 21,
       "half_life_days": 6,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 206
      },
      "health_care": {
@@ -24045,6 +24382,7 @@
       "extreme_day": 67,
       "arrival_day": 25,
       "half_life_days": 26,
+      "back_at_baseline_day": 124,
       "days_observed_after_extreme": 185
      },
      "industrials": {
@@ -24059,6 +24397,7 @@
       "extreme_day": 126,
       "arrival_day": 118,
       "half_life_days": 28,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 126
      },
      "materials": {
@@ -24073,6 +24412,7 @@
       "extreme_day": 67,
       "arrival_day": 4,
       "half_life_days": 11,
+      "back_at_baseline_day": 111,
       "days_observed_after_extreme": 185
      },
      "real_estate": {
@@ -24087,6 +24427,7 @@
       "extreme_day": 126,
       "arrival_day": 100,
       "half_life_days": 18,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 126
      },
      "utilities": {
@@ -24101,6 +24442,7 @@
       "extreme_day": 119,
       "arrival_day": 96,
       "half_life_days": 16,
+      "back_at_baseline_day": 163,
       "days_observed_after_extreme": 133
      }
     }
@@ -24119,6 +24461,7 @@
      "extreme_day": 25,
      "arrival_day": 14,
      "half_life_days": 4,
+     "back_at_baseline_day": 43,
      "days_observed_after_extreme": 227
     },
     "yield_10y": {
@@ -24134,6 +24477,7 @@
      "extreme_day": 111,
      "arrival_day": 41,
      "half_life_days": 16,
+     "back_at_baseline_day": 134,
      "days_observed_after_extreme": 141
     },
     "vix": {
@@ -24149,6 +24493,7 @@
      "extreme_day": 6,
      "arrival_day": 4,
      "half_life_days": 4,
+     "back_at_baseline_day": 23,
      "days_observed_after_extreme": 246
     },
     "credit_spread": {
@@ -24164,6 +24509,7 @@
      "extreme_day": 125,
      "arrival_day": 45,
      "half_life_days": 18,
+     "back_at_baseline_day": 149,
      "days_observed_after_extreme": 127
     },
     "breakeven_5y": {
@@ -24179,11 +24525,22 @@
      "extreme_day": 51,
      "arrival_day": 36,
      "half_life_days": 33,
+     "back_at_baseline_day": 173,
      "days_observed_after_extreme": 201
     }
    }
   },
   {
+   "current": false,
+   "back_at_pre_shock_day": null,
+   "new_high_after_half_day": 200,
+   "rise_at": {
+    "63": 27.1,
+    "126": 12.5,
+    "252": 46.9
+   },
+   "latest_rise_pct": 46.9,
+   "latest_day": 252,
    "day_0": "2016-12-02",
    "pre_shock_date": "2016-11-04",
    "pre_shock_price": 43.06,
@@ -24477,6 +24834,7 @@
       "extreme_day": 112,
       "arrival_day": 54,
       "half_life_days": 33,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 140
      },
      "communication": {
@@ -24491,6 +24849,7 @@
       "extreme_day": 99,
       "arrival_day": 31,
       "half_life_days": 5,
+      "back_at_baseline_day": 145,
       "days_observed_after_extreme": 153
      },
      "consumer_discretionary": {
@@ -24505,6 +24864,7 @@
       "extreme_day": 42,
       "arrival_day": 14,
       "half_life_days": 5,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 210
      },
      "consumer_staples": {
@@ -24519,6 +24879,7 @@
       "extreme_day": 92,
       "arrival_day": 70,
       "half_life_days": 6,
+      "back_at_baseline_day": 187,
       "days_observed_after_extreme": 160
      },
      "energy": {
@@ -24533,6 +24894,7 @@
       "extreme_day": 125,
       "arrival_day": 52,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 127
      },
      "financials": {
@@ -24547,6 +24909,7 @@
       "extreme_day": 124,
       "arrival_day": 74,
       "half_life_days": 5,
+      "back_at_baseline_day": 143,
       "days_observed_after_extreme": 128
      },
      "health_care": {
@@ -24561,6 +24924,7 @@
       "extreme_day": 77,
       "arrival_day": 55,
       "half_life_days": 94,
+      "back_at_baseline_day": 228,
       "days_observed_after_extreme": 175
      },
      "industrials": {
@@ -24575,6 +24939,7 @@
       "extreme_day": 24,
       "arrival_day": 9,
       "half_life_days": 10,
+      "back_at_baseline_day": 35,
       "days_observed_after_extreme": 228
      },
      "materials": {
@@ -24589,6 +24954,7 @@
       "extreme_day": 114,
       "arrival_day": 19,
       "half_life_days": 40,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 138
      },
      "real_estate": {
@@ -24603,6 +24969,7 @@
       "extreme_day": 124,
       "arrival_day": 92,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 128
      },
      "utilities": {
@@ -24617,6 +24984,7 @@
       "extreme_day": 90,
       "arrival_day": 73,
       "half_life_days": 4,
+      "back_at_baseline_day": 101,
       "days_observed_after_extreme": 162
      }
     }
@@ -24635,6 +25003,7 @@
      "extreme_day": 67,
      "arrival_day": 8,
      "half_life_days": 15,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 185
     },
     "yield_10y": {
@@ -24650,6 +25019,7 @@
      "extreme_day": 126,
      "arrival_day": 90,
      "half_life_days": 17,
+     "back_at_baseline_day": 223,
      "days_observed_after_extreme": 126
     },
     "vix": {
@@ -24665,6 +25035,7 @@
      "extreme_day": 124,
      "arrival_day": 2,
      "half_life_days": 23,
+     "back_at_baseline_day": 172,
      "days_observed_after_extreme": 128
     },
     "credit_spread": {
@@ -24680,6 +25051,7 @@
      "extreme_day": 63,
      "arrival_day": 9,
      "half_life_days": 21,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 189
     },
     "breakeven_5y": {
@@ -24695,11 +25067,22 @@
      "extreme_day": 35,
      "arrival_day": 6,
      "half_life_days": 10,
+     "back_at_baseline_day": 75,
      "days_observed_after_extreme": 217
     }
    }
   },
   {
+   "current": false,
+   "back_at_pre_shock_day": null,
+   "new_high_after_half_day": 148,
+   "rise_at": {
+    "63": 26.1,
+    "126": 31.0,
+    "252": 79.3
+   },
+   "latest_rise_pct": 79.3,
+   "latest_day": 252,
    "day_0": "2021-02-24",
    "pre_shock_date": "2021-01-27",
    "pre_shock_price": 55.07,
@@ -24993,6 +25376,7 @@
       "extreme_day": 126,
       "arrival_day": 87,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 126
      },
      "communication": {
@@ -25007,6 +25391,7 @@
       "extreme_day": 111,
       "arrival_day": 70,
       "half_life_days": 44,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 141
      },
      "consumer_discretionary": {
@@ -25021,6 +25406,7 @@
       "extreme_day": 77,
       "arrival_day": 7,
       "half_life_days": 6,
+      "back_at_baseline_day": 174,
       "days_observed_after_extreme": 175
      },
      "consumer_staples": {
@@ -25035,6 +25421,7 @@
       "extreme_day": 23,
       "arrival_day": 8,
       "half_life_days": 3,
+      "back_at_baseline_day": 91,
       "days_observed_after_extreme": 229
      },
      "energy": {
@@ -25049,6 +25436,7 @@
       "extreme_day": 46,
       "arrival_day": 14,
       "half_life_days": 6,
+      "back_at_baseline_day": 67,
       "days_observed_after_extreme": 206
      },
      "financials": {
@@ -25063,6 +25451,7 @@
       "extreme_day": 69,
       "arrival_day": 8,
       "half_life_days": 10,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 183
      },
      "health_care": {
@@ -25077,6 +25466,7 @@
       "extreme_day": 68,
       "arrival_day": 26,
       "half_life_days": 6,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 184
      },
      "industrials": {
@@ -25091,6 +25481,7 @@
       "extreme_day": 52,
       "arrival_day": 12,
       "half_life_days": 8,
+      "back_at_baseline_day": 79,
       "days_observed_after_extreme": 200
      },
      "materials": {
@@ -25105,6 +25496,7 @@
       "extreme_day": 53,
       "arrival_day": 48,
       "half_life_days": 21,
+      "back_at_baseline_day": 91,
       "days_observed_after_extreme": 199
      },
      "real_estate": {
@@ -25119,6 +25511,7 @@
       "extreme_day": 100,
       "arrival_day": 20,
       "half_life_days": 9,
+      "back_at_baseline_day": 169,
       "days_observed_after_extreme": 152
      },
      "utilities": {
@@ -25133,6 +25526,7 @@
       "extreme_day": 38,
       "arrival_day": 8,
       "half_life_days": 5,
+      "back_at_baseline_day": 87,
       "days_observed_after_extreme": 214
      }
     }
@@ -25151,6 +25545,7 @@
      "extreme_day": 86,
      "arrival_day": 79,
      "half_life_days": 8,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 166
     },
     "yield_10y": {
@@ -25166,6 +25561,7 @@
      "extreme_day": 17,
      "arrival_day": 7,
      "half_life_days": 56,
+     "back_at_baseline_day": 92,
      "days_observed_after_extreme": 235
     },
     "vix": {
@@ -25181,6 +25577,7 @@
      "extreme_day": 1,
      "arrival_day": 1,
      "half_life_days": 2,
+     "back_at_baseline_day": 12,
      "days_observed_after_extreme": 251
     },
     "credit_spread": {
@@ -25196,6 +25593,7 @@
      "extreme_day": 79,
      "arrival_day": 25,
      "half_life_days": 166,
+     "back_at_baseline_day": 250,
      "days_observed_after_extreme": 173
     },
     "breakeven_5y": {
@@ -25211,11 +25609,22 @@
      "extreme_day": 55,
      "arrival_day": 14,
      "half_life_days": 16,
+     "back_at_baseline_day": 80,
      "days_observed_after_extreme": 197
     }
    }
   },
   {
+   "current": false,
+   "back_at_pre_shock_day": null,
+   "new_high_after_half_day": null,
+   "rise_at": {
+    "63": 44.6,
+    "126": 57.5,
+    "252": 14.8
+   },
+   "latest_rise_pct": 14.8,
+   "latest_day": 252,
    "day_0": "2022-01-18",
    "pre_shock_date": "2021-12-17",
    "pre_shock_price": 72.97,
@@ -25509,6 +25918,7 @@
       "extreme_day": 114,
       "arrival_day": 38,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 138
      },
      "communication": {
@@ -25523,6 +25933,7 @@
       "extreme_day": 74,
       "arrival_day": 56,
       "half_life_days": 168,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 178
      },
      "consumer_discretionary": {
@@ -25537,6 +25948,7 @@
       "extreme_day": 88,
       "arrival_day": 33,
       "half_life_days": 39,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 164
      },
      "consumer_staples": {
@@ -25551,6 +25963,7 @@
       "extreme_day": 82,
       "arrival_day": 65,
       "half_life_days": 61,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 170
      },
      "energy": {
@@ -25565,6 +25978,7 @@
       "extreme_day": 97,
       "arrival_day": 32,
       "half_life_days": 18,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 155
      },
      "financials": {
@@ -25579,6 +25993,7 @@
       "extreme_day": 25,
       "arrival_day": 6,
       "half_life_days": 1,
+      "back_at_baseline_day": 29,
       "days_observed_after_extreme": 227
      },
      "health_care": {
@@ -25593,6 +26008,7 @@
       "extreme_day": 57,
       "arrival_day": 27,
       "half_life_days": 9,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 195
      },
      "industrials": {
@@ -25607,6 +26023,7 @@
       "extreme_day": 57,
       "arrival_day": 13,
       "half_life_days": 11,
+      "back_at_baseline_day": 201,
       "days_observed_after_extreme": 195
      },
      "materials": {
@@ -25621,6 +26038,7 @@
       "extreme_day": 64,
       "arrival_day": 31,
       "half_life_days": 41,
+      "back_at_baseline_day": 108,
       "days_observed_after_extreme": 188
      },
      "real_estate": {
@@ -25635,6 +26053,7 @@
       "extreme_day": 104,
       "arrival_day": 48,
       "half_life_days": 143,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 148
      },
      "utilities": {
@@ -25649,6 +26068,7 @@
       "extreme_day": 88,
       "arrival_day": 33,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 164
      }
     }
@@ -25667,6 +26087,7 @@
      "extreme_day": 102,
      "arrival_day": 47,
      "half_life_days": null,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 150
     },
     "yield_10y": {
@@ -25682,6 +26103,7 @@
      "extreme_day": 102,
      "arrival_day": 57,
      "half_life_days": 30,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 150
     },
     "vix": {
@@ -25697,6 +26119,7 @@
      "extreme_day": 33,
      "arrival_day": 4,
      "half_life_days": 7,
+     "back_at_baseline_day": 46,
      "days_observed_after_extreme": 219
     },
     "credit_spread": {
@@ -25712,6 +26135,7 @@
      "extreme_day": 114,
      "arrival_day": 22,
      "half_life_days": 57,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 138
     },
     "breakeven_5y": {
@@ -25727,11 +26151,21 @@
      "extreme_day": 47,
      "arrival_day": 30,
      "half_life_days": 30,
+     "back_at_baseline_day": 105,
      "days_observed_after_extreme": 205
     }
    }
   },
   {
+   "current": true,
+   "back_at_pre_shock_day": 80,
+   "new_high_after_half_day": null,
+   "rise_at": {
+    "63": 39.5,
+    "126": 46.3
+   },
+   "latest_rise_pct": 31.4,
+   "latest_day": 183,
    "day_0": "2026-03-05",
    "pre_shock_date": "2026-02-05",
    "pre_shock_price": 69.87,
@@ -25956,6 +26390,7 @@
       "extreme_day": 61,
       "arrival_day": 45,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 83
      },
      "communication": {
@@ -25970,6 +26405,7 @@
       "extreme_day": 104,
       "arrival_day": 42,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 40
      },
      "consumer_discretionary": {
@@ -25984,6 +26420,7 @@
       "extreme_day": 121,
       "arrival_day": 46,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 23
      },
      "consumer_staples": {
@@ -25998,6 +26435,7 @@
       "extreme_day": 61,
       "arrival_day": 28,
       "half_life_days": 6,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 83
      },
      "energy": {
@@ -26012,6 +26450,7 @@
       "extreme_day": 16,
       "arrival_day": 10,
       "half_life_days": 3,
+      "back_at_baseline_day": 27,
       "days_observed_after_extreme": 128
      },
      "financials": {
@@ -26026,6 +26465,7 @@
       "extreme_day": 99,
       "arrival_day": 83,
       "half_life_days": 5,
+      "back_at_baseline_day": 138,
       "days_observed_after_extreme": 45
      },
      "health_care": {
@@ -26040,6 +26480,7 @@
       "extreme_day": 61,
       "arrival_day": 35,
       "half_life_days": 16,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 83
      },
      "industrials": {
@@ -26054,6 +26495,7 @@
       "extreme_day": 77,
       "arrival_day": 73,
       "half_life_days": 5,
+      "back_at_baseline_day": 93,
       "days_observed_after_extreme": 67
      },
      "materials": {
@@ -26068,6 +26510,7 @@
       "extreme_day": 126,
       "arrival_day": 38,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 18
      },
      "real_estate": {
@@ -26082,6 +26525,7 @@
       "extreme_day": 60,
       "arrival_day": 49,
       "half_life_days": 6,
+      "back_at_baseline_day": 100,
       "days_observed_after_extreme": 84
      },
      "utilities": {
@@ -26096,6 +26540,7 @@
       "extreme_day": 108,
       "arrival_day": 44,
       "half_life_days": null,
+      "back_at_baseline_day": null,
       "days_observed_after_extreme": 36
      }
     }
@@ -26114,6 +26559,7 @@
      "extreme_day": 125,
      "arrival_day": 48,
      "half_life_days": null,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 57
     },
     "yield_10y": {
@@ -26129,6 +26575,7 @@
      "extreme_day": 125,
      "arrival_day": 48,
      "half_life_days": null,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 57
     },
     "vix": {
@@ -26144,6 +26591,7 @@
      "extreme_day": 115,
      "arrival_day": 27,
      "half_life_days": 45,
+     "back_at_baseline_day": 174,
      "days_observed_after_extreme": 72
     },
     "credit_spread": {
@@ -26159,6 +26607,7 @@
      "extreme_day": 72,
      "arrival_day": 49,
      "half_life_days": 29,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 109
     },
     "breakeven_5y": {
@@ -26174,6 +26623,7 @@
      "extreme_day": 100,
      "arrival_day": 73,
      "half_life_days": 17,
+     "back_at_baseline_day": null,
      "days_observed_after_extreme": 83
     }
    }
@@ -26190,134 +26640,209 @@
   ]
  },
  "oil_rule_summary": {
-  "episodes_with_full_window": 15,
-  "episodes_total": 15,
+  "episodes_with_full_window": 14,
+  "episodes_total": 14,
+  "any_day_since_1990": {
+   "market_at": {
+    "1": {
+     "n": 9128,
+     "median": 0.1,
+     "min": -12.0,
+     "max": 11.4,
+     "q1": -0.4,
+     "q3": 0.6,
+     "negative": 4115
+    },
+    "5": {
+     "n": 9128,
+     "median": 0.4,
+     "min": -18.6,
+     "max": 19.5,
+     "q1": -1.0,
+     "q3": 1.6,
+     "negative": 3775
+    },
+    "21": {
+     "n": 9128,
+     "median": 1.5,
+     "min": -33.3,
+     "max": 25.1,
+     "q1": -1.3,
+     "q3": 3.7,
+     "negative": 3187
+    },
+    "63": {
+     "n": 9128,
+     "median": 3.8,
+     "min": -42.2,
+     "max": 42.3,
+     "q1": -0.8,
+     "q3": 7.6,
+     "negative": 2591
+    },
+    "126": {
+     "n": 9128,
+     "median": 7.0,
+     "min": -45.6,
+     "max": 53.3,
+     "q1": 0.4,
+     "q3": 12.5,
+     "negative": 2198
+    }
+   },
+   "market_largest_fall_pct": {
+    "n": 9128,
+    "median": -3.8,
+    "min": -46.3,
+    "max": 0.0,
+    "q1": -8.9,
+    "q3": -1.2,
+    "negative": 8209
+   }
+  },
+  "oil_peak_before_market_low": 5,
+  "oil_back_at_pre_shock_day": {
+   "n": 5,
+   "median": 78,
+   "min": 45,
+   "max": 233,
+   "q1": 56,
+   "q3": 119,
+   "negative": 0
+  },
+  "oil_not_back_at_pre_shock_within_window": 9,
+  "oil_still_above_pre_shock_at": {
+   "63": 12,
+   "126": 12,
+   "252": 12
+  },
+  "oil_new_high_after_half": 6,
   "market_at": {
    "1": {
-    "n": 15,
-    "median": -0.9,
+    "n": 14,
+    "median": -0.8,
     "min": -3.3,
     "max": 0.8,
-    "q1": -1.3,
+    "q1": -1.2,
     "q3": -0.1,
-    "negative": 12
+    "negative": 11
    },
    "5": {
-    "n": 15,
-    "median": -2.4,
+    "n": 14,
+    "median": -2.0,
     "min": -5.1,
     "max": 3.3,
     "q1": -2.9,
     "q3": 0.3,
-    "negative": 10
+    "negative": 9
    },
    "21": {
-    "n": 15,
-    "median": -1.6,
+    "n": 14,
+    "median": -1.2,
     "min": -8.4,
     "max": 3.8,
     "q1": -6.2,
     "q3": -0.2,
-    "negative": 12
+    "negative": 11
    },
    "63": {
-    "n": 15,
-    "median": -1.0,
+    "n": 14,
+    "median": -1.7,
     "min": -16.3,
-    "max": 11.1,
+    "max": 8.0,
     "q1": -6.3,
-    "q3": 3.7,
+    "q3": 1.3,
     "negative": 8
    },
    "126": {
-    "n": 15,
-    "median": 5.3,
+    "n": 14,
+    "median": 4.8,
     "min": -19.5,
-    "max": 13.8,
+    "max": 13.6,
     "q1": 1.1,
-    "q3": 11.9,
+    "q3": 11.3,
     "negative": 3
    }
   },
   "market_largest_fall_pct": {
-   "n": 15,
-   "median": -7.1,
+   "n": 14,
+   "median": -8.1,
    "min": -20.8,
    "max": 0.0,
    "q1": -14.9,
    "q3": -4.6,
-   "negative": 14
+   "negative": 13
   },
   "sector_excess_at": {
    "technology": {
     "1": {
-     "n": 15,
-     "median": -0.2,
+     "n": 14,
+     "median": -0.1,
      "min": -1.3,
      "max": 1.4,
-     "q1": -0.5,
+     "q1": -0.4,
      "q3": 0.6,
-     "negative": 8
+     "negative": 7
     },
     "5": {
-     "n": 15,
+     "n": 14,
      "median": -0.3,
      "min": -6.0,
      "max": 3.5,
      "q1": -1.8,
-     "q3": 0.6,
+     "q3": 0.5,
      "negative": 10
     },
     "21": {
-     "n": 15,
-     "median": -0.5,
+     "n": 14,
+     "median": -0.6,
      "min": -13.2,
      "max": 4.0,
      "q1": -2.7,
-     "q3": 0.4,
+     "q3": 0.3,
      "negative": 9
     },
     "63": {
-     "n": 15,
+     "n": 14,
      "median": 0.9,
      "min": -23.3,
-     "max": 25.5,
+     "max": 10.9,
      "q1": -5.0,
-     "q3": 6.0,
+     "q3": 4.4,
      "negative": 5
     },
     "126": {
-     "n": 15,
-     "median": 2.3,
+     "n": 14,
+     "median": 1.9,
      "min": -32.6,
      "max": 33.5,
      "q1": -4.2,
-     "q3": 12.4,
+     "q3": 10.5,
      "negative": 5
     }
    },
    "communication": {
     "1": {
-     "n": 15,
-     "median": 0.0,
+     "n": 14,
+     "median": -0.1,
      "min": -1.8,
      "max": 0.7,
      "q1": -0.6,
-     "q3": 0.4,
+     "q3": 0.3,
      "negative": 7
     },
     "5": {
-     "n": 15,
-     "median": -1.0,
+     "n": 14,
+     "median": -0.6,
      "min": -5.1,
      "max": 1.8,
      "q1": -1.8,
      "q3": 0.3,
-     "negative": 11
+     "negative": 10
     },
     "21": {
-     "n": 15,
-     "median": 0.3,
+     "n": 14,
+     "median": -0.5,
      "min": -5.0,
      "max": 3.0,
      "q1": -2.0,
@@ -26325,83 +26850,83 @@
      "negative": 7
     },
     "63": {
-     "n": 15,
-     "median": -1.7,
-     "min": -22.6,
+     "n": 14,
+     "median": -1.4,
+     "min": -8.3,
      "max": 4.2,
-     "q1": -7.3,
+     "q1": -6.1,
      "q3": 0.9,
-     "negative": 10
+     "negative": 9
     },
     "126": {
-     "n": 15,
-     "median": -2.5,
-     "min": -21.1,
+     "n": 14,
+     "median": -2.2,
+     "min": -14.0,
      "max": 15.1,
-     "q1": -9.9,
+     "q1": -9.1,
      "q3": 3.2,
-     "negative": 9
+     "negative": 8
     }
    },
    "consumer_discretionary": {
     "1": {
-     "n": 15,
+     "n": 14,
      "median": -0.1,
      "min": -1.6,
      "max": 2.0,
      "q1": -0.7,
      "q3": 0.0,
-     "negative": 9
-    },
-    "5": {
-     "n": 15,
-     "median": -0.1,
-     "min": -1.6,
-     "max": 4.2,
-     "q1": -1.3,
-     "q3": 0.3,
      "negative": 8
     },
+    "5": {
+     "n": 14,
+     "median": 0.0,
+     "min": -1.6,
+     "max": 4.2,
+     "q1": -1.1,
+     "q3": 0.3,
+     "negative": 7
+    },
     "21": {
-     "n": 15,
+     "n": 14,
      "median": -1.9,
-     "min": -3.7,
+     "min": -2.9,
      "max": 4.7,
      "q1": -2.5,
      "q3": -0.5,
-     "negative": 12
-    },
-    "63": {
-     "n": 15,
-     "median": -2.6,
-     "min": -13.4,
-     "max": 16.5,
-     "q1": -5.8,
-     "q3": 1.4,
      "negative": 11
     },
+    "63": {
+     "n": 14,
+     "median": -1.9,
+     "min": -9.1,
+     "max": 16.5,
+     "q1": -4.5,
+     "q3": 1.4,
+     "negative": 10
+    },
     "126": {
-     "n": 15,
-     "median": -1.5,
+     "n": 14,
+     "median": -1.4,
      "min": -20.6,
      "max": 28.8,
-     "q1": -6.0,
+     "q1": -5.0,
      "q3": 2.2,
-     "negative": 10
+     "negative": 9
     }
    },
    "consumer_staples": {
     "1": {
-     "n": 15,
-     "median": -0.1,
+     "n": 14,
+     "median": -0.2,
      "min": -0.8,
      "max": 2.0,
      "q1": -0.3,
-     "q3": 1.3,
+     "q3": 1.1,
      "negative": 8
     },
     "5": {
-     "n": 15,
+     "n": 14,
      "median": 0.9,
      "min": -2.6,
      "max": 3.7,
@@ -26410,36 +26935,36 @@
      "negative": 5
     },
     "21": {
-     "n": 15,
+     "n": 14,
      "median": 2.2,
      "min": -2.5,
      "max": 8.6,
-     "q1": -0.2,
+     "q1": 0.6,
      "q3": 3.3,
-     "negative": 4
+     "negative": 3
     },
     "63": {
-     "n": 15,
-     "median": 2.9,
-     "min": -14.4,
+     "n": 14,
+     "median": 3.2,
+     "min": -6.9,
      "max": 33.7,
-     "q1": -5.9,
+     "q1": 0.9,
      "q3": 5.9,
-     "negative": 4
+     "negative": 3
     },
     "126": {
-     "n": 15,
-     "median": 0.1,
+     "n": 14,
+     "median": 2.1,
      "min": -23.3,
      "max": 40.7,
-     "q1": -2.4,
+     "q1": -1.3,
      "q3": 6.7,
-     "negative": 7
+     "negative": 6
     }
    },
    "energy": {
     "1": {
-     "n": 15,
+     "n": 14,
      "median": 0.2,
      "min": -5.7,
      "max": 3.7,
@@ -26448,35 +26973,35 @@
      "negative": 6
     },
     "5": {
-     "n": 15,
+     "n": 14,
      "median": -0.2,
      "min": -4.9,
-     "max": 8.2,
+     "max": 5.9,
      "q1": -2.0,
-     "q3": 3.3,
+     "q3": 1.4,
      "negative": 8
     },
     "21": {
-     "n": 15,
-     "median": -0.2,
+     "n": 14,
+     "median": -0.8,
      "min": -15.6,
-     "max": 13.6,
+     "max": 13.4,
      "q1": -2.2,
-     "q3": 4.8,
+     "q3": 4.3,
      "negative": 8
     },
     "63": {
-     "n": 15,
-     "median": -0.8,
+     "n": 14,
+     "median": 1.8,
      "min": -24.0,
      "max": 55.8,
      "q1": -1.7,
      "q3": 12.7,
-     "negative": 8
+     "negative": 7
     },
     "126": {
-     "n": 15,
-     "median": 3.2,
+     "n": 14,
+     "median": 5.0,
      "min": -34.0,
      "max": 63.3,
      "q1": -3.9,
@@ -26486,26 +27011,26 @@
    },
    "financials": {
     "1": {
-     "n": 15,
-     "median": 0.0,
+     "n": 14,
+     "median": 0.1,
      "min": -1.5,
      "max": 1.2,
-     "q1": -0.3,
-     "q3": 0.2,
-     "negative": 6
-    },
-    "5": {
-     "n": 15,
-     "median": 0.2,
-     "min": -2.7,
-     "max": 5.6,
      "q1": -0.2,
-     "q3": 1.7,
+     "q3": 0.2,
      "negative": 5
     },
+    "5": {
+     "n": 14,
+     "median": 0.6,
+     "min": -2.2,
+     "max": 5.6,
+     "q1": -0.1,
+     "q3": 1.7,
+     "negative": 4
+    },
     "21": {
-     "n": 15,
-     "median": 0.4,
+     "n": 14,
+     "median": 0.0,
      "min": -4.4,
      "max": 9.1,
      "q1": -2.1,
@@ -26513,27 +27038,27 @@
      "negative": 7
     },
     "63": {
-     "n": 15,
-     "median": -1.5,
+     "n": 14,
+     "median": -1.4,
      "min": -10.4,
      "max": 9.3,
      "q1": -3.9,
      "q3": 0.5,
-     "negative": 10
+     "negative": 9
     },
     "126": {
-     "n": 15,
-     "median": 0.4,
+     "n": 14,
+     "median": 0.2,
      "min": -18.5,
      "max": 16.6,
      "q1": -5.1,
-     "q3": 3.0,
+     "q3": 2.5,
      "negative": 6
     }
    },
    "health_care": {
     "1": {
-     "n": 15,
+     "n": 14,
      "median": -0.1,
      "min": -1.6,
      "max": 0.8,
@@ -26542,73 +27067,73 @@
      "negative": 9
     },
     "5": {
-     "n": 15,
-     "median": -0.3,
+     "n": 14,
+     "median": -0.2,
      "min": -1.6,
      "max": 1.8,
      "q1": -1.0,
      "q3": 0.8,
-     "negative": 9
+     "negative": 8
     },
     "21": {
-     "n": 15,
-     "median": 0.4,
+     "n": 14,
+     "median": 0.8,
      "min": -2.9,
      "max": 11.0,
-     "q1": -1.4,
+     "q1": -1.1,
      "q3": 2.9,
-     "negative": 7
-    },
-    "63": {
-     "n": 15,
-     "median": 0.9,
-     "min": -17.8,
-     "max": 24.4,
-     "q1": -4.1,
-     "q3": 5.7,
      "negative": 6
     },
+    "63": {
+     "n": 14,
+     "median": 2.4,
+     "min": -5.8,
+     "max": 24.4,
+     "q1": -3.3,
+     "q3": 5.7,
+     "negative": 5
+    },
     "126": {
-     "n": 15,
-     "median": -0.1,
+     "n": 14,
+     "median": 0.1,
      "min": -12.5,
      "max": 24.6,
-     "q1": -3.0,
+     "q1": -2.4,
      "q3": 4.5,
-     "negative": 8
+     "negative": 7
     }
    },
    "industrials": {
     "1": {
-     "n": 15,
-     "median": 0.0,
-     "min": -1.5,
+     "n": 14,
+     "median": 0.1,
+     "min": -0.8,
      "max": 1.1,
-     "q1": -0.7,
+     "q1": -0.6,
      "q3": 0.3,
-     "negative": 7
+     "negative": 6
     },
     "5": {
-     "n": 15,
+     "n": 14,
      "median": 0.2,
      "min": -2.5,
      "max": 2.1,
-     "q1": -0.5,
+     "q1": -0.4,
      "q3": 1.0,
-     "negative": 5
+     "negative": 4
     },
     "21": {
-     "n": 15,
-     "median": 0.1,
+     "n": 14,
+     "median": 0.2,
      "min": -3.5,
      "max": 4.0,
      "q1": -1.5,
      "q3": 1.3,
-     "negative": 7
+     "negative": 6
     },
     "63": {
-     "n": 15,
-     "median": 0.0,
+     "n": 14,
+     "median": -0.1,
      "min": -9.4,
      "max": 10.9,
      "q1": -3.1,
@@ -26616,113 +27141,113 @@
      "negative": 7
     },
     "126": {
-     "n": 15,
-     "median": -0.7,
+     "n": 14,
+     "median": 1.0,
      "min": -11.9,
      "max": 22.0,
-     "q1": -6.4,
+     "q1": -3.6,
      "q3": 4.5,
-     "negative": 8
+     "negative": 7
     }
    },
    "materials": {
     "1": {
-     "n": 15,
+     "n": 14,
      "median": 0.3,
-     "min": -1.0,
+     "min": -0.7,
      "max": 1.3,
-     "q1": -0.5,
+     "q1": -0.3,
      "q3": 0.6,
-     "negative": 5
+     "negative": 4
     },
     "5": {
-     "n": 15,
-     "median": -0.2,
+     "n": 14,
+     "median": 0.0,
      "min": -3.1,
      "max": 2.4,
-     "q1": -1.2,
+     "q1": -0.7,
      "q3": 1.2,
-     "negative": 8
+     "negative": 7
     },
     "21": {
-     "n": 15,
+     "n": 14,
      "median": 0.1,
      "min": -1.8,
      "max": 3.4,
      "q1": -1.3,
      "q3": 1.9,
-     "negative": 7
+     "negative": 6
     },
     "63": {
-     "n": 15,
-     "median": -2.3,
+     "n": 14,
+     "median": -1.9,
      "min": -9.3,
      "max": 9.1,
-     "q1": -5.1,
+     "q1": -4.5,
      "q3": 3.0,
-     "negative": 9
+     "negative": 8
     },
     "126": {
-     "n": 15,
-     "median": -1.9,
-     "min": -12.3,
+     "n": 14,
+     "median": -1.7,
+     "min": -9.5,
      "max": 15.8,
      "q1": -5.2,
      "q3": 1.6,
-     "negative": 11
+     "negative": 10
     }
    },
    "real_estate": {
     "1": {
-     "n": 15,
-     "median": -0.6,
+     "n": 14,
+     "median": -0.1,
      "min": -2.6,
      "max": 1.5,
-     "q1": -1.5,
+     "q1": -1.0,
      "q3": 0.9,
-     "negative": 8
+     "negative": 7
     },
     "5": {
-     "n": 15,
-     "median": 0.0,
+     "n": 14,
+     "median": 0.2,
      "min": -4.5,
      "max": 5.3,
-     "q1": -1.2,
+     "q1": -1.0,
      "q3": 2.3,
-     "negative": 6
+     "negative": 5
     },
     "21": {
-     "n": 15,
-     "median": 0.6,
+     "n": 14,
+     "median": 0.8,
      "min": -6.0,
      "max": 4.7,
      "q1": -2.9,
      "q3": 2.1,
-     "negative": 7
+     "negative": 6
     },
     "63": {
-     "n": 15,
-     "median": -3.5,
+     "n": 14,
+     "median": -1.0,
      "min": -14.1,
      "max": 16.4,
-     "q1": -7.6,
+     "q1": -6.7,
      "q3": 6.1,
-     "negative": 8
+     "negative": 7
     },
     "126": {
-     "n": 15,
-     "median": -7.2,
+     "n": 14,
+     "median": -3.9,
      "min": -25.9,
      "max": 28.6,
      "q1": -11.6,
      "q3": 12.2,
-     "negative": 8
+     "negative": 7
     }
    },
    "utilities": {
     "1": {
-     "n": 15,
-     "median": 0.4,
+     "n": 14,
+     "median": 0.1,
      "min": -0.8,
      "max": 2.3,
      "q1": -0.5,
@@ -26730,17 +27255,17 @@
      "negative": 7
     },
     "5": {
-     "n": 15,
-     "median": 0.7,
+     "n": 14,
+     "median": 0.6,
      "min": -1.0,
      "max": 11.1,
      "q1": -0.2,
-     "q3": 1.6,
+     "q3": 1.4,
      "negative": 5
     },
     "21": {
-     "n": 15,
-     "median": 2.5,
+     "n": 14,
+     "median": 2.2,
      "min": -2.4,
      "max": 13.7,
      "q1": 0.4,
@@ -26748,57 +27273,56 @@
      "negative": 3
     },
     "63": {
-     "n": 15,
-     "median": 4.1,
-     "min": -15.4,
+     "n": 14,
+     "median": 4.2,
+     "min": -5.3,
      "max": 25.8,
-     "q1": -1.7,
+     "q1": 0.7,
      "q3": 11.9,
-     "negative": 4
+     "negative": 3
     },
     "126": {
-     "n": 15,
-     "median": 2.9,
+     "n": 14,
+     "median": 4.0,
      "min": -19.5,
      "max": 31.5,
-     "q1": -6.8,
+     "q1": -3.0,
      "q3": 9.7,
-     "negative": 5
+     "negative": 4
     }
    }
   },
   "oil_peak_rise_pct": {
-   "n": 15,
-   "median": 51.4,
+   "n": 14,
+   "median": 47.4,
    "min": 23.8,
    "max": 170.0,
    "q1": 33.7,
-   "q3": 82.5,
+   "q3": 60.3,
    "negative": 0
   },
   "oil_peak_day": {
-   "n": 15,
-   "median": 57,
+   "n": 14,
+   "median": 68.5,
    "min": 2,
    "max": 126,
-   "q1": 35,
+   "q1": 39,
    "q3": 110,
    "negative": 0
   },
   "oil_half_life_days": {
-   "n": 15,
-   "median": 17,
+   "n": 14,
+   "median": 19.0,
    "min": 3,
    "max": 84,
-   "q1": 8,
+   "q1": 14,
    "q3": 34,
    "negative": 0
   },
-  "oil_half_life_not_reached": 0,
-  "oil_half_life_still_open": 0
+  "oil_half_life_not_reached": 0
  },
  "meta": {
-  "generated_at_utc": "2026-11-26T10:51:13Z",
+  "generated_at_utc": "2026-11-26T10:52:47Z",
   "warning": "Hindsight measurements of a small number of past episodes. A range of what happened, not a forecast and not a recommendation.",
   "window_trading_days": 126,
   "half_life_search_trading_days": 252,
@@ -26816,6 +27340,6 @@
    "Kenneth R. French Data Library, 49 Industry Portfolios (daily) and Fama/French factors (daily)",
    "FRED, Federal Reserve Bank of St. Louis (Brent spot from the U.S. Energy Information Administration)"
   ],
-  "method": "The wave after a shock: how large, in what order it spread, how long it lasted.\n\nHindsight measurements of past episodes for the reading aids. Not part of the ledger, not a forecast.\n\nInputs\n  - Kenneth R. French Data Library: 49 industry portfolios (daily, value weighted) and the daily market return.\n  - FRED: Brent spot (EIA), 2- and 10-year Treasury yields, Moody's Baa minus 10-year spread, VIX,\n    5-year breakeven inflation.\n  - waves/episodes.json: named episodes with a start date quoted from a source, and the oil rule.\nDefinitions (the same for every episode)\n  - Baseline: the close of the last trading day before the start date. Day 1 is the first trading day on or\n    after the start date.\n  - Size: cumulative market return and sector return minus market return at fixed horizons; the largest\n    market fall from the baseline within the window and the day it happened.\n  - Order: for each series, the extreme of its move within the window, and the first day the move reached\n    half of that extreme (\"arrival day\"). Series are listed by arrival day.\n  - Half-life: trading days from the extreme until half of the move had been given back, searched up to the\n    half-life window. \"None\" means it was not given back inside that window.\n  - Rule-based oil episodes: see oil_rule in waves/episodes.json. For those, day 0 is the day the rule fired\n    and the pre-shock oil price is the close 20 trading days earlier.\nStandard library only. Needs FRED_API_KEY."
+  "method": "The wave after a shock: how large, in what order it spread, how long it lasted.\n\nHindsight measurements of past episodes for the reading aids. Not part of the ledger, not a forecast.\n\nInputs\n  - Kenneth R. French Data Library: 49 industry portfolios (daily, value weighted) and the daily market return.\n  - FRED: Brent spot (EIA), 2- and 10-year Treasury yields, Moody's Baa minus 10-year spread, VIX,\n    5-year breakeven inflation.\n  - waves/episodes.json: named episodes with a start date quoted from a source, and the oil rule.\nDefinitions (the same for every episode)\n  - Baseline: the close of the last trading day before the start date. Day 1 is the first trading day on or\n    after the start date.\n  - Size: cumulative market return and sector return minus market return at fixed horizons; the largest\n    market fall from the baseline within the window and the day it happened.\n  - Order: for each series, the extreme of its move within the window, and the first day the move reached\n    half of that extreme (\"arrival day\"). Series are listed by arrival day.\n  - Half-life: trading days from the extreme until half of the move had been given back, searched up to the\n    half-life window. \"None\" means it was not given back inside that window.\n  - Back at baseline: the first day after the extreme on which the series was back at or through its\n    baseline level.\n  - Background: the same market measurements taken from every trading day since 1990, so that a number after\n    a shock can be compared with an ordinary period.\n  - Rule-based oil episodes: see oil_rule in waves/episodes.json. For those, day 0 is the day the rule fired\n    and the pre-shock oil price is the close 20 trading days earlier.\nStandard library only. Needs FRED_API_KEY."
  }
 }
