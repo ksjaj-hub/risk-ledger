@@ -41,10 +41,10 @@ button:focus-visible,a:focus-visible{outline:1px solid var(--link);outline-offse
 .hero{padding:30px 0 20px;border-bottom:1px solid var(--line)}
 .hero h1{font-size:40px;line-height:1.06;font-weight:700;font-stretch:112%;letter-spacing:-.012em;margin:8px 0 10px;text-wrap:balance}
 .hero .lead{color:var(--muted);font-size:15px;max-width:60ch;margin:0}
-.top2{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:0 28px;margin-top:22px;border-top:1px solid var(--line);padding-top:14px}
-.top2 ul{list-style:none;margin:8px 0 0;padding:0}
-.top2 li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:0 10px;padding:5px 0;font-size:14px}
-.top2 li time{color:var(--muted);font-size:12.5px;padding-top:1px;white-space:nowrap}
+.top1{margin-top:22px;border-top:1px solid var(--line);padding-top:14px}
+.wk ul{list-style:none;margin:8px 0 0;padding:0}
+.wk li{display:grid;grid-template-columns:92px minmax(0,1fr);gap:0 12px;padding:9px 0;border-top:1px solid var(--line);font-size:14px}
+.wk li time{color:var(--muted);font-size:12.5px;padding-top:1px;white-space:nowrap}
 .cd{display:grid;grid-template-columns:auto minmax(0,1fr);gap:0 14px;align-items:center;margin-top:8px;color:var(--fg);min-height:44px}
 .cd:hover{text-decoration:none}.cd:hover .t{text-decoration:underline}
 .cd b{font-size:44px;line-height:1;font-weight:700;font-stretch:108%;color:var(--watch)}
@@ -52,7 +52,7 @@ button:focus-visible,a:focus-visible{outline:1px solid var(--link);outline-offse
 .cd .t{font-weight:600;font-size:14.5px}
 .cd .w{color:var(--muted);font-size:12.5px}
 .none{color:var(--muted);font-size:13px;margin-top:8px}
-@media(max-width:640px){.top2{grid-template-columns:1fr}.top2>div+div{margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}.cd b{font-size:38px}}
+@media(max-width:640px){.cd b{font-size:38px}}
 .tally{color:var(--muted);font-size:12.5px;padding:12px 0 0;border-top:1px solid var(--line)}
 .mine{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;padding:0 0 14px}
 .mine input{flex:1;min-width:150px;max-width:300px;background:transparent;border:1px solid var(--line2);color:var(--fg);font:inherit;font-size:16px;padding:8px 10px;min-height:40px;border-radius:0;outline:none;text-transform:uppercase}
@@ -147,10 +147,7 @@ button.row:hover{background:var(--hover)}
     <div class="lbl" data-t="kick"></div>
     <h1 data-t="h1"></h1>
     <p class="lead" data-t="lead"></p>
-    <div class="top2">
-      <div><div class="lbl" data-t="wk"></div><ul id="week" aria-live="polite"></ul></div>
-      <div><div class="lbl" data-t="up"></div><div id="upcoming"></div></div>
-    </div>
+    <div class="top1"><div class="lbl" data-t="up"></div><div id="upcoming"></div></div>
     <a class="backdrop" href="#backdrop"><span class="lbl" data-t="bd"></span><span id="state" class="bs">…</span><span id="score" class="bn"></span><span class="scale" id="scale" aria-hidden="true"></span><span class="more" data-t="bdmore"></span></a>
   </section>
   <section class="sub"><p><b data-t="subh"></b> <span data-t="subp"></span> <a href="weekly/1.html" data-t="subr"></a></p><form id="subf" novalidate><input id="subm" type="email" name="email" autocomplete="email" inputmode="email" required aria-label="Email"><button class="btn" type="submit" data-t="subb"></button><span id="subs" role="status" aria-live="polite"></span></form></section>
@@ -161,6 +158,7 @@ button.row:hover{background:var(--hover)}
     <div id="events2" hidden></div>
     <div class="tally" id="tally"></div>
   </section>
+  <section class="sec wk"><h2 data-t="wk"></h2><ul id="week" aria-live="polite"></ul></section>
   <section class="sec" id="past"><h2 data-t="hs"></h2><p data-t="hsp"></p><div id="cases"></div></section>
   <section class="sec" id="backdrop"><h2 data-t="bdh"></h2><p data-t="bdp"></p><div class="asof" id="asof"></div><div class="comps" id="comps" aria-label="Components"></div></section>
   <section class="sec"><h2 data-t="chg"></h2><p data-t="chgp"></p><div id="alerts"></div></section>
