@@ -5,7 +5,7 @@ Standard library only. Usage:
   python scripts/collect.py                 # live fetch from FRED
   python scripts/collect.py --fixture DIR   # read <SERIES>.csv from DIR (tests)
 """
-import argparse, csv, datetime as dt, hashlib, io, json, pathlib, sys, time, urllib.request
+import argparse, csv, datetime as dt, hashlib, io, json, pathlib, subprocess, sys, time
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 FRED = "https://fred.stlouisfed.org/graph/fredgraph.csv?id={sid}&cosd={start}"
@@ -17,14 +17,17 @@ def fetch_series(sid, start, fixture=None):
         text = (pathlib.Path(fixture) / f"{sid}.csv").read_text()
     else:
         url, last = FRED.format(sid=sid, start=start), None
+        ua = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"
         for attempt in range(4):
             try:
-                req = urllib.request.Request(url, headers={"User-Agent": "risk-ledger-collector"})
-                with urllib.request.urlopen(req, timeout=60) as r:
-                    text = r.read().decode("utf-8")
+                # curl first: the site stalls some non-browser clients
+                text = subprocess.run(
+                    ["curl", "-sS", "--fail", "--compressed", "--max-time", "40", "-A", ua,
+                     "-H", "Accept: text/csv,*/*", url],
+                    check=True, capture_output=True, text=True).stdout
                 break
             except Exception as e:  # network errors: retry with backoff
-                last = e
+                last = getattr(e, "stderr", None) or e
                 time.sleep(5 * 2 ** attempt)
         else:
             raise RuntimeError(f"could not fetch {sid}: {last}")
