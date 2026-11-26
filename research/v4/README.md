@@ -12,8 +12,10 @@ Everything in this folder is hindsight on revised data. It describes past ranges
 | `results.json`, `daily.csv` | Round 1 results |
 | `preregistration2.json` | Round 2, written after round 1 was read: slow indicators and a long-history replication |
 | `results2.json` | Round 2 results |
+| `preregistration3.json` | Round 3: a search over 9,420 scores, with the correction for the size of the search fixed in advance |
+| `results3.json`, `candidates3.csv` | Round 3 results, and every candidate with its train and test figures |
 
-Scripts: `scripts/research_v4.py`, `scripts/research_v4b.py` (workflow `rule research`).
+Scripts: `scripts/research_v4.py`, `scripts/research_v4b.py`, `scripts/research_v4c.py` (workflow `rule research` runs the last one).
 
 ## Round 1: does a better way of combining the inputs beat v3?
 
@@ -86,9 +88,45 @@ Outcome O5: the market closes 20% or more below today's close within 504 trading
 - Prices alone did about as well as v3: 0.797 against 0.835 in 1990-2006, 0.661 against 0.625 after
   2007. The VIX and NFCI add little that the market's own fall and volatility do not already say.
 
+## Round 3: a search over 9,420 scores
+
+Asked for by the owner: review the score against thousands of alternatives. Every subset of one to four
+of 12 components (793 subsets), two transforms, three ways of combining, with and without smoothing:
+9,420 candidates, all scored on the same days. Train 1990-04 to 2006 (4,224 days), test 2007-01 to
+2026-06 (4,903 days). v3 on the long series: 0.842 train, 0.625 test.
+
+**Outcome: no change. Nothing in the search is distinguishable from luck.**
+
+| Question | Answer |
+|---|---|
+| The candidate that was best on 1990-2006 (AUROC 0.892) | 0.607 on the test period, 0.018 *below* v3, ranked 7,513th of 9,420 |
+| Does doing well on 1990-2006 say anything about 2007-2026? | No. Rank correlation across all candidates: -0.03 |
+| The best candidate on the test period | 0.733, a gain of 0.109 over v3. It ranked 4,858th on the train period |
+| What a search this size produces by luck alone | A best gain of 0.097 (median), 0.201 at the 95th percentile |
+| White's Reality Check | p = 0.42 (studentized: 0.19). No evidence that any candidate is better than v3 |
+
+- 68% of candidates were above v3 on the test period and 10% on the train period; 4.9% on both. v3 is an
+  ordinary member of this family, not a tuned one: unremarkable after 2007, in the top tenth before.
+  Which members did better changed completely between the two periods.
+- The only patterns that held in both periods: a plain average did better than taking the maximum
+  (0.797 and 0.655 against 0.767 and 0.619), and more components did slightly better than fewer. v3 is
+  already a plain average of five.
+- Everything else flipped. Candidates with the yield curve or the excess bond premium were better
+  before 2007 and no better or worse after; candidates with momentum, the credit jump or the leverage
+  subindex were the reverse.
+- Prices-only family on 1927-1985 (148 candidates, 15,774 days): the best gained 0.003 over round 2's
+  simple score (0.755 against 0.752), Reality Check p = 0.99. Within this family the ranking was stable
+  across periods (rank correlation 0.81), and the simplest member was already at the top.
+- Confirmation days (v3, test period): stepping down after 1 / 3 / 5 / 10 / 21 days gives 27.0 / 15.3 /
+  12.5 / 9.9 / 6.7 state changes a year, and 19.6% / 22.0% / 23.6% / 26.6% / 31.8% of days at Elevated
+  or above. A trade of flicker against lingering alarms, with no free point on it. 5 stays.
+
+What a careless search would have reported: "a new score beats v3 by 0.11 AUROC out of sample". That
+candidate exists in `candidates3.csv`. The correction is what says it is noise.
+
 ## What this means for the rule
 
-1. v3 is not improved by re-weighting. A v4 would need a new kind of information, not new arithmetic.
+1. v3 is not improved by re-weighting, nor by any of 9,420 recombinations of 12 inputs. A v4 would need a new kind of information, not new arithmetic.
 2. The state is a description of how stressed the market is now. It is not an early warning, and the
    record should say so: Calm has been followed by sharp falls about one time in ten since 2007.
 3. Two of v3's inputs (ICE high-yield spread, S&P 500 via FRED) cannot be tested over more than three
