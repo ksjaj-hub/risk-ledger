@@ -1,0 +1,91 @@
+{
+ "written": "2026-11-26",
+ "status": "Written and committed before scripts/research_v4.py produced any number. Nothing below may be edited after the first results commit; later rounds get their own file.",
+ "question": "Can the market rule be made to separate calm days from dangerous days better than v3, using methods from published central-bank and academic work, without fitting the past?",
+ "what_had_been_seen_when_this_was_written": [
+  "backtest/v3: share of days followed within 60 trading days by a VIX close of 30 or more, by state: 8% / 27% / 36% / 69% / 88%. 427 state changes over 9,352 days.",
+  "backtest/v1 and v2-candidate: entry dates in 2007-08, 2020, 2022, and the long Elevated stretch caused by the inverted yield curve in 2022-2024.",
+  "patterns/: aftershock and overlap statistics on the US market from 1926.",
+  "Not seen: any area-under-the-curve figure for any rule, any result for forward market falls by state, any percentile-based, principal-component or correlation-weighted score, any result with realized volatility, the Baa spread or the excess bond premium as a component."
+ ],
+ "reading_that_shaped_the_candidates": "research/v4/literature.md. Each candidate below names the source it comes from.",
+ "data": {
+  "market": "Kenneth R. French Data Library, daily Mkt-RF plus RF (US total market return). Used for outcomes and for the drawdown component, because FRED gives the S&P 500 for ten years only.",
+  "VIXCLS": "FRED, from 1990",
+  "VXOCLS": "FRED, 1986 to 2021. Used only in the untouched-period check, standing in for the VIX before 1990.",
+  "BAA10Y": "FRED, Moody's Baa corporate yield minus 10-year Treasury, daily from 1986. Stands in for credit stress, because FRED gives the ICE high-yield spread for three years only.",
+  "T10Y3M": "FRED, from 1982",
+  "NFCI": "FRED, weekly from 1971. Used with a lag of 5 trading days after its observation date, because it is published the Wednesday after the Friday it describes. Its history is re-estimated every week; only the latest revised history is available here. That flatters every rule that uses it, v3 included.",
+  "EBP": "Federal Reserve excess bond premium CSV (monthly, from 1973), used with a lag of 25 trading days after month end. If the file cannot be fetched from the runner, candidate C6 is reported as not run.",
+  "USRECD": "FRED, NBER recession indicator, daily. Used only for the yield-curve horizon check."
+ },
+ "periods": {
+  "train": "1990-01-02 to 2006-12-29. Cutpoints, weights and state boundaries are set here and nowhere else.",
+  "test": "2007-01-03 to the last day that has 63 trading days of market data after it. Looked at once, with everything frozen.",
+  "untouched": "1986-01-02 to 1989-12-29, with the VXO in place of the VIX and train-period cutpoints applied unchanged. Reported whether it agrees or not. It holds one large event (October 1987), so it is a sanity check, not a second test.",
+  "reverse_split": "Robustness only: everything set on 2007 onward and scored on 1990-2006. Reported beside the main result and never used to choose."
+ },
+ "outcomes": {
+  "O1_primary": "Within the next 63 trading days the market closes 10% or more below today's close.",
+  "O2": "Within the next 21 trading days the market closes 5% or more below today's close.",
+  "O3_continuity": "Within the next 60 trading days the VIX closes at 30 or above (the figure backtest/v3 already reports).",
+  "O4_tail_size": "The 5th percentile and median of the largest fall over the next 63 trading days, by state. Described as a past range, never as a forecast.",
+  "R1_horizon_check": "A recession day (USRECD = 1) occurs between 126 and 378 trading days ahead. Used only for the yield-curve question."
+ },
+ "measures": {
+  "separation": "Area under the ROC curve (AUROC) of the daily score against each outcome. 0.5 is no better than chance. This is the measure used for early-warning indicators in BIS Working Paper 421 and in the OFR stress index paper.",
+  "uncertainty": "Daily observations overlap, so intervals come from a moving-block bootstrap with 63-day blocks, 2,000 draws, fixed seed 20261126. The difference in AUROC between a candidate and v3 is bootstrapped on the same draws.",
+  "ladder": "Share of days with O1 in each of the five published states. It should rise from each state to the next.",
+  "stability": "Published-state changes per year, with the v3 confirmation step (up at once, down after 5 trading days) applied to every candidate.",
+  "timing": "First day at Elevated or above, and first day at Stress, around 2007-2009, 2011, 2015-16, 2018, 2020, 2022 and 2025. Reported, not scored."
+ },
+ "baseline": {
+  "v3_as_published": "rules/v3.json on the data FRED has (two or three components before 2016). This is what backtest/v3 shows.",
+  "v3_long": "The comparison baseline. v3's thresholds, bands, floors and confirmation step unchanged, with the long market series in place of the S&P 500 for drawdown, NFCI lagged 5 days, and no credit component before the ICE series starts (as published). Its daily score is the 0-100 score; where a floor lifts the state, the score used for AUROC is raised to that state's lower bound so the baseline gets credit for its floors."
+ },
+ "candidates": {
+  "C1_no_curve": {
+   "what": "v3_long with the yield curve left out of the score.",
+   "from": "Estrella and Mishkin (1996): the curve predicts recessions two to six quarters ahead and is beaten by other indicators one quarter ahead. Engstrom and Sharpe (2018, 2022): the spread reflects expected policy easing and is not an independent measure of present danger."
+  },
+  "C2_percentile": {
+   "what": "Each component turned into its percentile among train-period days (frozen cutpoints at every 5th percentile, linear between them, clipped to 0-1). Components: VIX, Baa-10y spread, NFCI (lagged), market drawdown from the 252-day high. Score = 100 x the plain average. The yield curve is included as a fifth component only if C1 fails to beat v3_long on O1 in the train period.",
+   "from": "ECB Working Paper 1426 (CISS) turns raw indicators into order statistics from their empirical distribution instead of hand-set thresholds. KCFSI (Hakkio and Keeton 2009): principal-component coefficients of 11 inputs fall between 0.081 and 0.130, close to equal weights."
+  },
+  "C3_pca_weights": {
+   "what": "C2 with weights proportional to the loadings of the first principal component of the percentile-transformed components in the train period (negative loadings set to zero, weights summing to one).",
+   "from": "St. Louis Fed STLFSI (Kliesen and Smith 2010), KCFSI, OFR FSI (Monin 2017): all weight by the first principal component or a one-factor model."
+  },
+  "C4_correlation_weighted": {
+   "what": "C2's components centred at 0.5 and combined as sqrt(s' C s) scaled to 0-100, where C is the exponentially weighted correlation matrix of the centred components (daily decay 0.97, started from the train-period matrix; before enough history the train matrix is used for train days only). Components below 0.5 are set to zero after centring, so only above-median stress counts.",
+   "from": "ECB Working Paper 1426: stress that shows up in several market segments at once is weighted more than the same stress in one segment."
+  },
+  "C5_realized_vol": {
+   "what": "C2 plus a fifth component: the standard deviation of the last 21 daily market returns, percentile-transformed the same way.",
+   "from": "Bekaert and Hoerova (ECB WP 1675): the expected-variance part of the VIX, not the premium part, carries the information about financial instability. Giglio, Kelly and Pruitt (2016): equity volatility is among the few measures with robust power for bad macro outcomes."
+  },
+  "C6_ebp": {
+   "what": "C2 plus the excess bond premium (monthly, lagged), percentile-transformed the same way.",
+   "from": "Gilchrist and Zakrajsek (2012); Favara, Gilchrist, Lewis and Zakrajsek (FEDS Notes 2016): the spread's predictive content for recessions comes entirely from the excess bond premium."
+  },
+  "C7_market_only": {
+   "what": "C2 without NFCI.",
+   "from": "Chicago Fed NFCI FAQ: the index history changes from week to week. A rule that does not lean on a revised series is easier to trust in the live record. Reported as a robustness check and eligible to be chosen."
+  }
+ },
+ "state_boundaries_for_candidates": "For any percentile-type candidate the four score cut-offs are set so that the share of train-period days at or above each state equals v3_long's share in the train period. No floors. The v3 confirmation step is applied unchanged.",
+ "how_one_candidate_is_chosen": "By train-period results only: the candidate with the highest AUROC on O1 in the train period. Ties within 0.005 go to the simpler one in the order C1, C7, C2, C3, C5, C6, C4.",
+ "bar_for_proposing_v4": [
+  "On the test period the chosen candidate's AUROC on O1 is at least 0.02 above v3_long's, and the 90% bootstrap interval of the difference lies above zero.",
+  "Its AUROC on O2 and on O3 is not below v3_long's by more than 0.01.",
+  "The share of days with O1 rises from each state to the next in the test period (a state with fewer than 60 test days is merged with its neighbour for this check).",
+  "State changes per year in the test period are no more than 25% above v3_long's."
+ ],
+ "if_the_bar_is_not_met": "v3 stays. The result is reported as it is, with what was learned. No second candidate is tried against the test period in this round.",
+ "limits_known_in_advance": [
+  "Seven candidates were written with knowledge of how v1-v3 behaved in 2008, 2020 and 2022. The split protects the cutpoints and weights, not the choice of ideas.",
+  "The test period holds roughly five to seven separate bad stretches. Daily counts overstate how much evidence that is; the block bootstrap only partly corrects it.",
+  "The backtest components are stand-ins for two of the live inputs (Baa spread for the high-yield spread, total market for the S&P 500). A v4 would have to name inputs it can be tested on.",
+  "All of this describes the past. None of it is a forecast."
+ ]
+}
