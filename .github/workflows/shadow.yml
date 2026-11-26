@@ -1,0 +1,29 @@
+name: shadow breadth
+on:
+  schedule:
+    # 03:17 UTC Tuesday to Saturday: after the US close and the funds' evening NAV files.
+    - cron: "17 3 * * 2-6"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: shadow
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet numpy openpyxl
+      - name: Record breadth (outside the rule and the ledger chain)
+        run: python scripts/shadow_breadth.py
+      - name: Commit
+        run: |
+          git config user.name "risk-ledger-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add shadow
+          git diff --cached --quiet && { echo "nothing new"; exit 0; }
+          git commit -m "shadow breadth: $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull --rebase origin main
+          git push
