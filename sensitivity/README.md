@@ -35,6 +35,8 @@ Changes get a new version and a changelog line. `scripts/build_site.py` then giv
 
 Sectors that historically did better than the market are shown on the card but add no points.
 
+The page shows the score only as a band (high from 67, moderate from 34, otherwise low) with the main reasons, until the public grading supports showing a number.
+
 Sector score (method 2): for each cause group take the highest points among its cards, keep the five largest
 groups, divide by 15, times 100. Opening more cards about one cause therefore does not raise the score.
 

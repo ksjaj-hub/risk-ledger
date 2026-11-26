@@ -105,13 +105,22 @@
    "market_wide": 1
   },
   "top_groups": 5,
-  "rule": "For each sector: take the highest points among the cards of each cause group, keep the five largest groups, divide by 15, times 100."
+  "rule": "For each sector: take the highest points among the cards of each cause group, keep the five largest groups, divide by 15, times 100. The page shows only a band: high from 67, moderate from 34, otherwise low. The number is kept in sector_scores/snapshots for grading and will be shown once grading supports it.",
+  "bands": {
+   "high_from": 67,
+   "moderate_from": 34
+  }
  },
  "changelog": [
   {
    "date": "2026-11-26",
    "version": 1,
    "change": "First published mapping. Score method 2 replaces the plain count used for a few hours on the same day."
+  },
+  {
+   "date": "2026-11-26",
+   "version": 1,
+   "change": "The page shows a band (high, moderate, low) and the main reasons instead of the number. Score method unchanged."
   }
  ]
 }

@@ -1560,6 +1560,11 @@
   "sector_scores": {
    "technology": {
     "score": 73,
+    "band": "high",
+    "reasons": [
+     "2026-ai-buildout-financing",
+     "2026-us-appropriations-lapse"
+    ],
     "points": 11,
     "max_points": 15,
     "open_cards": 8,
@@ -1573,6 +1578,10 @@
    },
    "communication": {
     "score": 40,
+    "band": "moderate",
+    "reasons": [
+     "2026-ai-buildout-financing"
+    ],
     "points": 6,
     "max_points": 15,
     "open_cards": 1,
@@ -1584,6 +1593,11 @@
    },
    "consumer_discretionary": {
     "score": 47,
+    "band": "moderate",
+    "reasons": [
+     "2026-us-iran-war-oil",
+     "2026-china-domestic-demand-property"
+    ],
     "points": 7,
     "max_points": 15,
     "open_cards": 2,
@@ -1596,6 +1610,11 @@
    },
    "consumer_staples": {
     "score": 40,
+    "band": "moderate",
+    "reasons": [
+     "2026-fed-rate-hikes",
+     "2026-us-iran-war-oil"
+    ],
     "points": 6,
     "max_points": 15,
     "open_cards": 2,
@@ -1606,6 +1625,11 @@
    },
    "energy": {
     "score": 87,
+    "band": "high",
+    "reasons": [
+     "2026-us-iran-war-oil",
+     "2026-china-domestic-demand-property"
+    ],
     "points": 13,
     "max_points": 15,
     "open_cards": 4,
@@ -1618,6 +1642,11 @@
    },
    "financials": {
     "score": 93,
+    "band": "high",
+    "reasons": [
+     "2026-us-private-credit-defaults",
+     "2026-ai-buildout-financing"
+    ],
     "points": 14,
     "max_points": 15,
     "open_cards": 8,
@@ -1630,6 +1659,11 @@
    },
    "health_care": {
     "score": 47,
+    "band": "moderate",
+    "reasons": [
+     "2026-fed-rate-hikes",
+     "2026-us-iran-war-oil"
+    ],
     "points": 7,
     "max_points": 15,
     "open_cards": 2,
@@ -1641,6 +1675,11 @@
    },
    "industrials": {
     "score": 80,
+    "band": "high",
+    "reasons": [
+     "2026-eurozone-inflation-ecb",
+     "2026-us-excess-capacity-tariffs"
+    ],
     "points": 12,
     "max_points": 15,
     "open_cards": 7,
@@ -1652,6 +1691,11 @@
    },
    "materials": {
     "score": 87,
+    "band": "high",
+    "reasons": [
+     "2026-china-domestic-demand-property",
+     "2026-eurozone-inflation-ecb"
+    ],
     "points": 13,
     "max_points": 15,
     "open_cards": 6,
@@ -1663,6 +1707,11 @@
    },
    "real_estate": {
     "score": 53,
+    "band": "moderate",
+    "reasons": [
+     "2026-us-excess-capacity-tariffs",
+     "2026-eurozone-inflation-ecb"
+    ],
     "points": 8,
     "max_points": 15,
     "open_cards": 3,
@@ -1676,6 +1725,11 @@
    },
    "utilities": {
     "score": 33,
+    "band": "low",
+    "reasons": [
+     "2026-fed-rate-hikes",
+     "2026-eurozone-inflation-ecb"
+    ],
     "points": 5,
     "max_points": 15,
     "open_cards": 2,

@@ -72,11 +72,15 @@ for s_id in aids.get("sector_names", {}):
         else:
             continue
         g = mapping["cards"].get(e["id"], {}).get("group", e["id"])
-        if g not in groups or POINTS[lev] > POINTS[groups[g]]:
-            groups[g] = lev
-    top = sorted(groups.values(), key=lambda v: -POINTS[v])[:TOPN]
+        if g not in groups or POINTS[lev] > POINTS[groups[g][0]]:
+            groups[g] = (lev, e["id"])
+    ranked = sorted(groups.values(), key=lambda v: (-POINTS[v[0]], v[0] != "direct"))[:TOPN]
+    top = [v[0] for v in ranked]
     pts = sum(POINTS[v] for v in top)
-    scores[s_id] = {"score": round(100 * pts / (3 * TOPN)), "points": pts, "max_points": 3 * TOPN, "open_cards": cards,
+    sc = round(100 * pts / (3 * TOPN))
+    bands = mapping["score"]["bands"]
+    scores[s_id] = {"score": sc, "band": "high" if sc >= bands["high_from"] else "moderate" if sc >= bands["moderate_from"] else "low",
+                    "reasons": [c for lev, c in ranked if lev != "market_wide"][:2], "points": pts, "max_points": 3 * TOPN, "open_cards": cards,
                     "groups": len(groups), "counted": {k: top.count(k) for k in POINTS if top.count(k)}}
 aids["links"], aids["sector_scores"], aids["score_points"] = links, scores, POINTS
 aids["score_version"], aids["mapping_version"] = mapping["score"]["version"], mapping.get("version")
