@@ -1,0 +1,69 @@
+#!/usr/bin/env node
+// Measures the content and screen quality bars. Run from the repository root: node scripts/quality_check.js
+// Needs Playwright and python3 (to serve docs/). Writes quality/report.json. Reading aid for the maintainer, not part of the record.
+const fs=require("fs"),path=require("path"),{spawn}=require("child_process"),{chromium}=require("playwright");
+const ROOT=path.resolve(__dirname,".."),D=JSON.parse(fs.readFileSync(path.join(ROOT,"docs/data.json"),"utf8"));
+const out=[],add=(area,id,pass,now,bar)=>out.push({area,id,pass,now,bar});
+const ev=D.events,live=ev.filter(e=>e.status!=="resolved"),day=864e5,today=Date.now();
+// content
+const twoSrc=ev.filter(e=>e.sources.length>=2).length;
+add("content","sources_per_card",twoSrc===ev.length,`${twoSrc}/${ev.length} cards have 2+ sources`,"every card has 2 or more sources");
+// source tiers (owner's rule, 2026-11-26): primary = government, central bank, regulator, statute, company filings and IR;
+// allowed secondary = major wires and financial papers; everything else does not count as support.
+const host=u=>new URL(u).hostname.replace(/^www\./,"");
+const PRIMARY=/(\.gov$|\.gov\.[a-z]{2}$|federalreserve\.gov|stlouisfed\.org|newyorkfed\.org|ecb\.europa\.eu|europa\.eu$|boj\.or\.jp|mof\.go\.jp|bankofengland\.co\.uk|imf\.org|bis\.org|stats\.gov\.cn|pbc\.gov\.cn)/;
+const EXTRA=new Set((D.aids.primary_hosts||[]));  // company investor-relations hosts, listed by hand in aids/reading.json
+const SECOND=/(^|\.)(reuters\.com|bloomberg\.com|ft\.com|wsj\.com|apnews\.com|nikkei\.com)$/;
+const tier=u=>{const h=host(u);return PRIMARY.test(h)||EXTRA.has(h)?1:SECOND.test(h)?2:3};
+const allSrc=[...ev.map(e=>[e.id,e.sources]),...(D.hindsight.cases||[]).map(c=>["case:"+c.id,c.sources])];
+const noPrim=allSrc.filter(([,s])=>!s.some(u=>tier(u)===1)).length,weak=allSrc.flatMap(([,s])=>s).filter(u=>tier(u)===3);
+add("content","primary_source_per_card",noPrim===0,`${allSrc.length-noPrim}/${allSrc.length} cards and cases have a primary source`,"every card and case has at least one primary source");
+add("content","no_weak_sources",weak.length===0,`${weak.length} links from sources below the bar (${[...new Set(weak.map(host))].join(", ")})`,"0 (no Wikipedia, blogs, newsletters or fund commentary)");
+const facts=ev.flatMap(e=>e.sourced_facts),linked=facts.filter(f=>typeof f==="object"&&f.url).length;
+add("content","fact_links",linked===facts.length,`${linked}/${facts.length} facts carry their own link`,"every fact links to its article");
+const fresh=live.filter(e=>(today-new Date(e.history[e.history.length-1].date+"T00:00:00Z"))/day<=8).length;
+add("content","freshness",fresh===live.length,`${fresh}/${live.length} open cards reviewed in the last 7 days`,"all open cards");
+const L=Object.values(D.aids.links||{}).flatMap(o=>Object.values(o)),unc=L.filter(l=>l.level==="unconfirmed").length;
+add("content","judgment_only_share",unc/L.length<0.3,`${unc}/${L.length} (${Math.round(100*unc/L.length)}%)`,"under 30%");
+const cs=(D.hindsight.cases||[]),ok=cs.filter(c=>c.outcome==="ok").length;
+add("content","hindsight_cases",cs.length>=8&&ok>=2,`${cs.length} cases, ${ok} counter-examples`,"8 cases, 2 counter-examples");
+const ko=ev.filter(e=>D.ko[e.id]).length;
+add("content","korean_cards",ko===ev.length,`${ko}/${ev.length}`,"all cards translated");
+const watch=ev.filter(e=>(e.resolution_conditions.resolved_when_all||[]).length&&(e.resolution_conditions.worsened_when_any||[]).length).length;
+add("content","conditions_present",watch===ev.length,`${watch}/${ev.length} cards have both resolution and worsening conditions`,"all cards");
+const gl=Object.keys((D.aids.glossary)||{}).length;
+add("content","glossary",gl>=8,`${gl} terms explained`,"8 or more terms");
+// wording: phrases that read as advice, unless negated in the same sentence
+const BAD=[/\b(you should|we recommend|strong buy|buy now|sell now|time to (buy|sell)|price target)\b/i,/(매수하세요|매도하세요|사세요|파세요|사야 합니다|팔아야 합니다|매수 추천|매도 추천|목표가)/];
+const texts=[];const walk=(v)=>{if(typeof v==="string")texts.push(v);else if(v&&typeof v==="object")Object.values(v).forEach(walk)};walk(D.events);walk(D.ko);walk(D.hindsight);walk(D.aids.history||[]);
+for(const f of fs.readdirSync(path.join(ROOT,"docs/weekly")))texts.push(fs.readFileSync(path.join(ROOT,"docs/weekly",f),"utf8").replace(/<[^>]+>/g," "));
+const hits=texts.flatMap(t=>t.split(/(?<=[.!?。])\s+/)).filter(s=>BAD.some(r=>r.test(s))&&!/\b(not|no|never)\b|아닙니다|않습니다|금지/.test(s));
+add("content","advice_wording",hits.length===0,`${hits.length} sentences flagged${hits.length?": "+hits.slice(0,3).join(" | ").slice(0,300):""}`,"0 sentences");
+// screen
+(async()=>{
+  const srv=spawn("python3",["-m","http.server","8791"],{cwd:path.join(ROOT,"docs"),stdio:"ignore"});await new Promise(r=>setTimeout(r,900));
+  const b=await chromium.launch();let errs=0,scroll=0,missing=[],broken=[];
+  try{
+    for(const [w,loc] of [[390,"ko-KR"],[390,"en-US"],[1200,"en-US"]]){
+      const c=await b.newContext({viewport:{width:w,height:900},locale:loc});const p=await c.newPage();p.on("pageerror",()=>errs++);
+      for(const u of ["/","/weekly/1.html","/weekly/1.ko.html"]){await p.goto("http://localhost:8791"+u);await p.waitForTimeout(500);
+        if(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth))scroll++;
+        for(const h of await p.evaluate(()=>[...document.querySelectorAll("a[href]")].map(a=>a.getAttribute("href")).filter(h=>!/^(https?:|mailto:|#)/.test(h)))){
+          const r=await p.request.get(new URL(h,"http://localhost:8791"+u).href);if(!r.ok())broken.push(u+" -> "+h)}}
+      if(w===390&&loc==="ko-KR"){await p.goto("http://localhost:8791/");await p.waitForTimeout(400);
+        missing=await p.evaluate(()=>{const f=(o,pre="")=>Object.entries(o).flatMap(([k,v])=>v&&typeof v==="object"&&!Array.isArray(v)?f(v,pre+k+"."):[pre+k]);const a=new Set(f(T.en)),k=new Set(f(T.ko));return [...a].filter(x=>!k.has(x)).map(x=>"ko:"+x).concat([...k].filter(x=>!a.has(x)&&!x.startsWith("comp.")).map(x=>"en:"+x))}).catch(()=>["could not read strings"]);
+      }
+      await c.close()}
+  }finally{await b.close();srv.kill()}
+  add("screen","no_script_errors",errs===0,`${errs} errors`,"0");
+  add("screen","no_sideways_scroll",scroll===0,`${scroll} pages scroll sideways`,"0");
+  add("screen","internal_links",broken.length===0,`${broken.length} broken${broken.length?": "+[...new Set(broken)].slice(0,3).join(", "):""}`,"0 (links inside the site; outside links are not checked)");
+  add("screen","two_languages_match",missing.length===0,`${missing.length} strings missing${missing.length?": "+missing.slice(0,5).join(", "):""}`,"0");
+  const kb=Math.round((fs.statSync(path.join(ROOT,"docs/index.html")).size+fs.statSync(path.join(ROOT,"docs/data.json")).size)/1024);
+  add("screen","page_weight",kb<=300,`${kb} KB`,"300 KB or less");
+  const rep={checked_at_utc:new Date().toISOString().slice(0,16)+"Z",passed:out.filter(x=>x.pass).length,total:out.length,checks:out,
+    not_automated:["numbers on cards checked against sources","each resolution condition decidable by one public fact","accessibility contrast and keyboard","friends' feedback bars"]};
+  fs.mkdirSync(path.join(ROOT,"quality"),{recursive:true});fs.writeFileSync(path.join(ROOT,"quality/report.json"),JSON.stringify(rep,null,1)+"\n");
+  for(const x of out)console.log((x.pass?"PASS ":"FAIL ")+x.area+"/"+x.id+": "+x.now+"  [bar: "+x.bar+"]");
+  console.log(`${rep.passed}/${rep.total} automated checks pass`);
+})();

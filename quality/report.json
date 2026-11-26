@@ -1,0 +1,125 @@
+{
+ "checked_at_utc": "2026-11-26T09:41Z",
+ "passed": 10,
+ "total": 16,
+ "checks": [
+  {
+   "area": "content",
+   "id": "sources_per_card",
+   "pass": false,
+   "now": "8/12 cards have 2+ sources",
+   "bar": "every card has 2 or more sources"
+  },
+  {
+   "area": "content",
+   "id": "primary_source_per_card",
+   "pass": false,
+   "now": "0/16 cards and cases have a primary source",
+   "bar": "every card and case has at least one primary source"
+  },
+  {
+   "area": "content",
+   "id": "no_weak_sources",
+   "pass": false,
+   "now": "30 links from sources below the bar (schwab.com, abc.net.au, finance.yahoo.com, troweprice.com, am.gs.com, newsonjapan.com, mufgresearch.com, fortune.com, ceoeconomy.com, maxsdigest.substack.com, forbes.com, en.wikipedia.org)",
+   "bar": "0 (no Wikipedia, blogs, newsletters or fund commentary)"
+  },
+  {
+   "area": "content",
+   "id": "fact_links",
+   "pass": false,
+   "now": "0/35 facts carry their own link",
+   "bar": "every fact links to its article"
+  },
+  {
+   "area": "content",
+   "id": "freshness",
+   "pass": true,
+   "now": "12/12 open cards reviewed in the last 7 days",
+   "bar": "all open cards"
+  },
+  {
+   "area": "content",
+   "id": "judgment_only_share",
+   "pass": true,
+   "now": "8/71 (11%)",
+   "bar": "under 30%"
+  },
+  {
+   "area": "content",
+   "id": "hindsight_cases",
+   "pass": false,
+   "now": "4 cases, 1 counter-examples",
+   "bar": "8 cases, 2 counter-examples"
+  },
+  {
+   "area": "content",
+   "id": "korean_cards",
+   "pass": true,
+   "now": "12/12",
+   "bar": "all cards translated"
+  },
+  {
+   "area": "content",
+   "id": "conditions_present",
+   "pass": true,
+   "now": "12/12 cards have both resolution and worsening conditions",
+   "bar": "all cards"
+  },
+  {
+   "area": "content",
+   "id": "glossary",
+   "pass": false,
+   "now": "0 terms explained",
+   "bar": "8 or more terms"
+  },
+  {
+   "area": "content",
+   "id": "advice_wording",
+   "pass": true,
+   "now": "0 sentences flagged",
+   "bar": "0 sentences"
+  },
+  {
+   "area": "screen",
+   "id": "no_script_errors",
+   "pass": true,
+   "now": "0 errors",
+   "bar": "0"
+  },
+  {
+   "area": "screen",
+   "id": "no_sideways_scroll",
+   "pass": true,
+   "now": "0 pages scroll sideways",
+   "bar": "0"
+  },
+  {
+   "area": "screen",
+   "id": "internal_links",
+   "pass": true,
+   "now": "0 broken",
+   "bar": "0 (links inside the site; outside links are not checked)"
+  },
+  {
+   "area": "screen",
+   "id": "two_languages_match",
+   "pass": true,
+   "now": "0 strings missing",
+   "bar": "0"
+  },
+  {
+   "area": "screen",
+   "id": "page_weight",
+   "pass": true,
+   "now": "113 KB",
+   "bar": "300 KB or less"
+  }
+ ],
+ "not_automated": [
+  "numbers on cards checked against sources",
+  "each resolution condition decidable by one public fact",
+  "accessibility contrast and keyboard",
+  "friends' feedback bars"
+ ]
+}
