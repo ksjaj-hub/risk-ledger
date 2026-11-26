@@ -1,4 +1,4 @@
-name: form probe
+name: data probe
 on:
   push:
     branches: [tmp-form-probe]
@@ -7,10 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          curl -sL -A "Mozilla/5.0" "https://docs.google.com/forms/d/e/1FAIpQLScYx3wNjWsTZgOAcSVpYizasiIc8ThT8n5nMW7SSsMjkU6Liw/viewform" -o f.html
-          wc -c f.html
-          grep -o 'FB_PUBLIC_LOAD_DATA_ = [^<]*' f.html | head -c 3000 || true
-          echo
-          grep -o 'entry\.[0-9]*' f.html | sort -u || true
-          grep -o 'emailAddress' f.html | sort | uniq -c || true
-          grep -o 'action="[^"]*"' f.html || true
+          UA="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36"
+          echo "== stooq"
+          curl -sL -m 30 -A "$UA" -w "\nHTTP %{http_code}\n" "https://stooq.com/q/d/l/?s=xlk.us&i=d" | (head -c 400; echo; tail -c 200) || true
+          echo "== yahoo chart"
+          curl -sL -m 30 -A "$UA" -w "\nHTTP %{http_code}\n" "https://query1.finance.yahoo.com/v8/finance/chart/XLK?period1=883612800&period2=1795000000&interval=1d&events=div%2Csplit" | (head -c 500; echo; tail -c 150) || true
+          echo "== yahoo query2"
+          curl -sL -m 30 -A "$UA" -w "\nHTTP %{http_code}\n" "https://query2.finance.yahoo.com/v8/finance/chart/XLRE?range=max&interval=1d" | head -c 300 || true
