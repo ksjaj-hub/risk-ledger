@@ -18,9 +18,9 @@
  "latest": {
   "schema": 1,
   "market": "US",
-  "recorded_at_utc": "2026-11-26T05:29:37Z",
-  "rule_version": "v2",
-  "rule_sha256": "9fe03ce216f6699b6c50ade855523c06e0572aaf205adcedb15f986c364fc64b",
+  "recorded_at_utc": "2026-11-26T15:03:38Z",
+  "rule_version": "v3",
+  "rule_sha256": "e138d7b24c9fc22d9c626419f56458721bb7e556d4e3a5b3ab526958ea409305",
   "state": "Watch",
   "score": 33,
   "indicated_state": "Watch",
@@ -79,13 +79,18 @@
    }
   },
   "previous_record": {
-   "path": "records/us/2026/2026-11-26.json",
-   "sha256": "71f5eb90aa75d15a8aa68a9efd15d56446a310938cf5094d139d3279b697f221"
+   "path": "records/us/2026/2026-11-26T0529Z.json",
+   "sha256": "cfc900255b21f5d579464578077c8689097075065ebb25a3046da7bdec1a8f8a"
   },
   "note": "Risk state only. Not a forecast and not investment advice.",
-  "_path": "records/us/2026/2026-11-26T0529Z.json"
+  "_path": "records/us/2026/2026-11-26T1503Z.json"
  },
  "history": [
+  {
+   "date": "2026-11-26",
+   "state": "Watch",
+   "score": 33
+  },
   {
    "date": "2026-11-26",
    "state": "Watch",
@@ -129,6 +134,25 @@
    "record": "records/us/2026/2026-11-26T0529Z.json",
    "note": "Risk state only. Not a forecast and not investment advice.",
    "_path": "alerts/us/2026/2026-11-26T0529Z.json"
+  },
+  {
+   "schema": 1,
+   "market": "US",
+   "issued_at_utc": "2026-11-26T15:03:38Z",
+   "type": "change",
+   "rule_version": "v3",
+   "state": "Watch",
+   "score": 33,
+   "changes": [
+    {
+     "what": "rule_version",
+     "from": "v2",
+     "to": "v3"
+    }
+   ],
+   "record": "records/us/2026/2026-11-26T1503Z.json",
+   "note": "Risk state only. Not a forecast and not investment advice.",
+   "_path": "alerts/us/2026/2026-11-26T1503Z.json"
   }
  ],
  "events": [
