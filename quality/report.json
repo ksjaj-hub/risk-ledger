@@ -1,7 +1,7 @@
 {
- "checked_at_utc": "2026-11-26T10:17Z",
- "passed": 16,
- "total": 16,
+ "checked_at_utc": "2026-11-26T10:55Z",
+ "passed": 18,
+ "total": 18,
  "checks": [
   {
    "area": "content",
@@ -100,6 +100,20 @@
    "pass": true,
    "now": "0 broken",
    "bar": "0 (links inside the site; outside links are not checked)"
+  },
+  {
+   "area": "screen",
+   "id": "text_contrast",
+   "pass": true,
+   "now": "0 texts below the AA contrast ratio",
+   "bar": "0 (4.5:1 for normal text, 3:1 for large)"
+  },
+  {
+   "area": "screen",
+   "id": "keyboard_and_labels",
+   "pass": true,
+   "now": "0 problems",
+   "bar": "0 (every card opens by keyboard; inputs, buttons and images are named)"
   },
   {
    "area": "screen",
