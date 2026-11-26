@@ -134,3 +134,40 @@ candidate exists in `candidates3.csv`. The correction is what says it is noise.
 4. Not tested, and where new information might come from: option-implied measures beyond the VIX level,
    funding-market spreads, and firm-level measures (CoVaR, SRISK), none of which are available from the
    sources this repository can republish.
+
+## Round 4: AFMX scored against widely used indicators
+
+Asked by the owner: score AFMX against the indicators people use most and find where it falls short. Fixed beforehand in `preregistration4.json`; numbers in `results4.json`; script `scripts/research_v4d.py`. Hindsight, not a forecast.
+
+Sample: 2007-12-04 to 2026-07-01, 4672 days on which all 14 have a value. A 10% fall followed 16.3% of days.
+
+| Rank | Indicator | Overall (0-100) | M1 10% in 63d | M2 5% in 21d | M3 near highs | M5 falls after its calmest third | M6 falls after its top fifth | M7 flips/yr | Corr. with AFMX | M1 minus AFMX, 90% |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | below_200dma | 87.2 | 0.714 | 0.657 | 0.632 | 8.4% | 34.4% | 6.6 | 0.50 | +0.009 to +0.180 |
+| 2 | drawdown | 82.1 | 0.667 | 0.663 | 0.587 | 8.4% | 28.0% | 5.4 | 0.74 | -0.006 to +0.103 |
+| 3 | ofr_fsi | 79.5 | 0.648 | 0.644 | 0.565 | 8.3% | 27.3% | 3.9 | 0.73 | -0.045 to +0.093 |
+| 4 | ciss_us | 75.6 | 0.651 | 0.636 | 0.609 | 8.3% | 26.3% | 3.6 | 0.68 | -0.039 to +0.089 |
+| 5 | vix | 64.1 | 0.631 | 0.663 | 0.559 | 8.5% | 20.8% | 10.1 | 0.78 | -0.047 to +0.065 |
+| 6 | realized_vol | 64.1 | 0.645 | 0.662 | 0.553 | 9.0% | 27.6% | 4.9 | 0.70 | -0.040 to +0.082 |
+| 7 | afmx | 56.4 | 0.625 | 0.660 | 0.507 | 10.9% | 28.6% | 3.6 | 1.00 |  |
+| 8 | vix_term | 47.4 | 0.627 | 0.648 | 0.528 | 11.4% | 26.1% | 19.7 | 0.53 | -0.073 to +0.081 |
+| 9 | stlfsi | 41.0 | 0.612 | 0.590 | 0.550 | 10.5% | 26.5% | 3.1 | 0.48 | -0.110 to +0.069 |
+| 10 | nfci | 41.0 | 0.611 | 0.641 | 0.525 | 11.7% | 25.7% | 0.7 | 0.80 | -0.067 to +0.032 |
+| 11 | anfci | 32.1 | 0.604 | 0.630 | 0.515 | 11.6% | 26.3% | 0.9 | 0.75 | -0.082 to +0.031 |
+| 12 | credit_spread | 16.7 | 0.572 | 0.552 | 0.522 | 16.3% | 25.9% | 2.6 | 0.19 | -0.171 to +0.069 |
+| 13 | kcfsi | 14.1 | 0.562 | 0.584 | 0.450 | 15.4% | 23.5% | 0.9 | 0.63 | -0.141 to +0.004 |
+| 14 | yield_curve | 0.0 | 0.392 | 0.447 | 0.413 | 26.1% | 7.8% | 2.7 | 0.20 | -0.404 to -0.063 |
+
+What it shows:
+
+- AFMX is 7th of 14, in the middle. Only one indicator is ahead of it by more than chance on M1: the market's distance below its 200-day average. AFMX is ahead of only one by more than chance: the yield curve.
+- **Near market highs AFMX says nothing (M3 0.507, 12th of 14).** That is the question a reader most wants answered. No indicator's lead on M3 is outside chance, but AFMX is at the coin-flip line.
+- **Its Calm is less clean.** 10.9% of AFMX's calmest third of days were followed by a 10% fall; the best indicators have 8.3%.
+- **It repeats what is free.** Rank correlation 0.78 with VIX and 0.80 with NFCI.
+- **One of its five inputs points the wrong way in this period.** The yield curve alone scores 0.39, below a coin flip.
+- **It lost the most between periods.** On 1990-2006 AFMX led everything (0.835); after 2007 it is 0.625. VIX went 0.752 to 0.638, the 200-day rule 0.744 to 0.715.
+- Where AFMX is good: its top fifth is followed by a 10% fall 28.6% of the time, second best; it changes little (3.6 flips a year); on the 21-day horizon it is level with the best.
+
+Caution, same as round 3: the 200-day rule's lead is a 2007-2026 result. On 1990-2006 it was behind AFMX (0.744 against 0.835, and 0.49 against 0.89 near highs). It is a lead worth a pre-registered test, not a reason to change the rule.
+
+Not testable from primary sources: CNN Fear & Greed, MOVE, SKEW. The Fed-bank indexes and CISS are re-estimated over time, so their numbers here are flattered. The `episodes_trading_days_from_peak` block in the results file was an extra outside the pre-registration; its 2020 and 2025 windows pick the wrong peak and it is not used.
