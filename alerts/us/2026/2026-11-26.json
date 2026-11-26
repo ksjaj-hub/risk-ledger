@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "market": "US",
+  "issued_at_utc": "2026-11-26T02:17:16Z",
+  "type": "baseline",
+  "rule_version": "v1",
+  "state": "Watch",
+  "score": 33,
+  "changes": [],
+  "record": "records/us/2026/2026-11-26.json",
+  "note": "Risk state only. Not a forecast and not investment advice."
+}

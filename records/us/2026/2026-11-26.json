@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "market": "US",
+  "recorded_at_utc": "2026-11-26T02:17:16Z",
+  "rule_version": "v1",
+  "rule_sha256": "f5cd0182549bb5b0f65d7dda43fd4ec63938669b69c0f72eed26626389d58808",
+  "state": "Watch",
+  "score": 33,
+  "components": {
+    "equity_volatility": {
+      "observation_date": "2026-11-24",
+      "level": 2,
+      "label": "High",
+      "value": 26.36
+    },
+    "credit_stress": {
+      "observation_date": "2026-11-24",
+      "level": 1,
+      "label": "Moderate",
+      "value_withheld": "source license does not allow republishing"
+    },
+    "yield_curve": {
+      "observation_date": "2026-11-25",
+      "level": 0,
+      "label": "Low",
+      "value": 0.51
+    },
+    "financial_conditions": {
+      "observation_date": "2026-11-20",
+      "level": 1,
+      "label": "Moderate",
+      "value": -0.444
+    },
+    "equity_drawdown": {
+      "observation_date": "2026-11-24",
+      "level": 1,
+      "label": "Moderate",
+      "value_withheld": "source license does not allow republishing"
+    }
+  },
+  "previous_record": null,
+  "note": "Risk state only. Not a forecast and not investment advice."
+}
