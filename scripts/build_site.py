@@ -33,6 +33,13 @@ sens = _j("sectors.json", {"table": {}, "factors": {}, "cases": {}})
 mapping = _j("mapping.json", {"cards": {}, "score": {"points": {}, "top_groups": 5, "version": 0}})
 case_names = {c["id"]: c for c in _j("cases.json", {"cases": []})["cases"]}
 aids = data["aids"]
+# what each state was followed by: hindsight from research/v4 (rule v3 on long series, test period only). Reading aid.
+_rp = ROOT / "research" / "v4" / "results.json"
+if _rp.exists():
+    _t = json.loads(_rp.read_text())["test"]
+    aids["state_ranges"] = {"first": _t["first"], "last": _t["last"], "horizon_trading_days": 63, "fall_pct": 10,
+                            "states": [{"state": b["state"], "days": b["days"], "share": b["share_O1"], "worst5": b["fall63_5th_percentile"]}
+                                       for b in _t["states"]["v3_long"]["by_state"]]}
 POINTS, TOPN = mapping["score"]["points"], mapping["score"]["top_groups"]
 links = {}
 for e in data["events"]:
