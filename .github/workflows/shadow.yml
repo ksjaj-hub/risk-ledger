@@ -18,11 +18,13 @@ jobs:
       - run: pip install --quiet numpy openpyxl
       - name: Record breadth (outside the rule and the ledger chain)
         run: python scripts/shadow_breadth.py
+      - name: Rebuild the public page data (the record tab shows the latest reading)
+        run: python scripts/build_site.py
       - name: Commit
         run: |
           git config user.name "risk-ledger-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add shadow
+          git add shadow docs
           git diff --cached --quiet && { echo "nothing new"; exit 0; }
           git commit -m "shadow breadth: $(date -u +%Y-%m-%dT%H:%MZ)"
           git pull --rebase origin main

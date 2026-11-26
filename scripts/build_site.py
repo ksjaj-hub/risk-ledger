@@ -40,6 +40,22 @@ if _rp.exists():
     aids["state_ranges"] = {"first": _t["first"], "last": _t["last"], "horizon_trading_days": 63, "fall_pct": 10,
                             "states": [{"state": b["state"], "days": b["days"], "share": b["share_O1"], "worst5": b["fall63_5th_percentile"]}
                                        for b in _t["states"]["v3_long"]["by_state"]]}
+# how long each state has lasted: hindsight from research/v4 round 5 (rule v3 from 1990). Reading aid.
+_r5 = ROOT / "research" / "v4" / "results5.json"
+if _r5.exists():
+    _d = json.loads(_r5.read_text())["part_D_state_durations_since_1990"]
+    aids["state_durations"] = {"since": 1990, "states": [{"state": k, "spells": v["spells"], "median": v["median_trading_days"],
+                                                          "upper_quartile": v["upper_quartile"], "moved_up_share": v["share_ended_by_moving_up"]}
+                                                         for k, v in _d.items()]}
+# market breadth: a reference reading under test, outside the rule (shadow/README.md). Reading aid.
+_sb = ROOT / "shadow" / "breadth.csv"
+if _sb.exists():
+    import csv as _csv
+    _last = {}
+    for _r in _csv.DictReader(open(_sb)):
+        _last[_r["measure"]] = _r
+    aids["shadow_breadth"] = {m: {"as_of": r["as_of"], "below": round(float(r["breadth"]) * int(r["members"])), "members": int(r["members"]),
+                                  "level": int(r["level"])} for m, r in _last.items()}
 POINTS, TOPN = mapping["score"]["points"], mapping["score"]["top_groups"]
 links = {}
 for e in data["events"]:
