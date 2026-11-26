@@ -2,43 +2,40 @@
 """Daily collector: fetch inputs, apply the versioned rule, write an append-only record.
 
 Standard library only. Usage:
-  python scripts/collect.py                 # live fetch from FRED
+  python scripts/collect.py                 # live fetch from the FRED API (needs FRED_API_KEY)
   python scripts/collect.py --fixture DIR   # read <SERIES>.csv from DIR (tests)
 """
-import argparse, csv, datetime as dt, hashlib, io, json, pathlib, subprocess, sys, time
+import argparse, csv, datetime as dt, hashlib, io, json, os, pathlib, sys, time, urllib.request
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-FRED = "https://fred.stlouisfed.org/graph/fredgraph.csv?id={sid}&cosd={start}"
+API = ("https://api.stlouisfed.org/fred/series/observations"
+       "?series_id={sid}&observation_start={start}&file_type=json&api_key={key}")
 
 
 def fetch_series(sid, start, fixture=None):
     """Return [(date_str, float)] ascending, skipping missing values."""
     if fixture:
-        text = (pathlib.Path(fixture) / f"{sid}.csv").read_text()
+        rows = list(csv.reader(io.StringIO((pathlib.Path(fixture) / f"{sid}.csv").read_text())))
+        if not rows or len(rows[0]) != 2 or rows[0][1] != sid:
+            raise RuntimeError(f"unexpected CSV header for {sid}: {rows[:1]}")
+        pairs = rows[1:]
     else:
-        url, last = FRED.format(sid=sid, start=start), None
-        ua = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"
+        key = os.environ.get("FRED_API_KEY")
+        if not key:
+            raise RuntimeError("FRED_API_KEY is not set")
+        url, last = API.format(sid=sid, start=start, key=key), None
         for attempt in range(4):
             try:
-                # curl first: the site stalls some non-browser clients
-                text = subprocess.run(
-                    ["curl", "-sS", "--fail", "--compressed", "--max-time", "40", "-A", ua,
-                     "-H", "Accept: text/csv,*/*", url],
-                    check=True, capture_output=True, text=True).stdout
+                with urllib.request.urlopen(url, timeout=40) as r:
+                    data = json.load(r)
                 break
             except Exception as e:  # network errors: retry with backoff
-                last = getattr(e, "stderr", None) or e
+                last = type(e).__name__ + (f" {e.code}" if hasattr(e, "code") else "")
                 time.sleep(5 * 2 ** attempt)
         else:
-            raise RuntimeError(f"could not fetch {sid}: {last}")
-    rows = list(csv.reader(io.StringIO(text)))
-    if not rows or len(rows[0]) != 2 or rows[0][1] != sid:
-        raise RuntimeError(f"unexpected CSV header for {sid}: {rows[:1]}")
-    out = []
-    for d, v in rows[1:]:
-        if v in ("", "."):
-            continue
-        out.append((d, float(v)))
+            raise RuntimeError(f"could not fetch {sid}: {last}")  # never print the URL: it holds the key
+        pairs = [(o["date"], o["value"]) for o in data["observations"]]
+    out = [(d, float(v)) for d, v in pairs if v not in ("", ".")]
     if not out:
         raise RuntimeError(f"no observations for {sid}")
     return out

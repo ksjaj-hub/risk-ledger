@@ -19,6 +19,8 @@ jobs:
       - name: Verify existing chain
         run: python scripts/verify.py
       - name: Collect and judge
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         run: python scripts/collect.py
       - name: Timestamp new files on Bitcoin (OpenTimestamps, best effort)
         continue-on-error: true
