@@ -385,8 +385,38 @@ def main():
                   "share_of_all_days": r3(float(ln.sum() / len(seq)))}
     out["part_D_state_durations_since_1990"] = Dd
 
+    # ---------------- part E (preregistration5b.json): exploratory follow-up on breadth
+    outE = None
+    if "breadth" in cand:
+        rng = np.random.default_rng(SEED + 5)
+        x = cand["breadth"]
+        cuts = [float(np.nanpercentile(x[tr], p_)) for p_ in (50, 75, 95)]
+        bcomp = {"breadth": (x, cuts, HI)}
+        scores["E1"], idxs["E1"] = run({**base_comps, **bcomp}, uncounted=["breadth"])
+        scores["E2"], idxs["E2"] = run({**no_curve, **bcomp}, uncounted=["breadth"])
+        E = {k: card(k) for k in ("E1", "E2")}
+        for k in E:
+            E[k]["passes_bar"] = all(E[k]["bar"].values())
+            dn = boot_diff(scores[k], scores["v3"], O1, te, sub=near)
+            E[k]["test_near_high_minus_v3_90"] = dn[0] if dn else None
+        lb = lev(x, cuts)
+        bb = (ld + lb) / 2
+        da, dnh = boot_diff(bb, ld, O1, old), boot_diff(bb, ld, O1, old, sub=near)
+        chk = {"all_days": {"drawdown_level": r3(auc(ld, O1, old)), "breadth_level": r3(auc(lb, O1, old)), "average_of_both": r3(auc(bb, O1, old)),
+                            "both_minus_drawdown_90": da[0] if da else None},
+               "near_high_days": {"drawdown_level": r3(auc(ld, O1, old & near)), "breadth_level": r3(auc(lb, O1, old & near)),
+                                  "average_of_both": r3(auc(bb, O1, old & near)), "both_minus_drawdown_90": dnh[0] if dnh else None}}
+        pos_all = bool(da and da[0][0] > 0)
+        pos_nh = bool(dnh and dnh[0][0] > 0)
+        strong = pos_all and any(E[k]["passes_bar"] for k in E)
+        outE = {"warning": "Exploratory. Breadth was chosen after seeing round 5. Hindsight; not a forecast.", "levels": [r3(c) for c in cuts],
+                "candidates": E, "check_1927_1985": chk, "reading": "strong" if strong else "worth_recording" if (pos_all or pos_nh) else "drop",
+                "breadth_now": {"day": days[-1], "value": r3(x[-1])}}
     pathlib.Path(a.out).mkdir(parents=True, exist_ok=True)
     (pathlib.Path(a.out) / "results5.json").write_text(json.dumps(out, indent=1) + "\n")
+    if outE:
+        (pathlib.Path(a.out) / "results5b.json").write_text(json.dumps(outE, indent=1) + "\n")
+        print("E", outE["reading"], {k: (v["test_O1"], v["passes_bar"]) for k, v in outE["candidates"].items()})
     print(json.dumps({"A": {k: (v["test_O1"], v.get("passes_bar")) for k, v in A.items()}, "B_passed": passers,
                       "C": {k: (v["test_O1"], v["acceptable_swap"]) for k, v in C.items()}, "notes": notes}, indent=1))
 
