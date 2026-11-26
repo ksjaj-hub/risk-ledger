@@ -1,0 +1,54 @@
+{
+ "written": "2026-11-26",
+ "status": "Round 3. Written and committed after rounds 1 and 2 were read and before scripts/research_v4c.py produced any number.",
+ "asked_for": "The owner asked for a review of the AFMX score against a very large number of alternatives: about 5,000, up to 10,000.",
+ "the_danger": "Among thousands of alternatives some will beat v3 on any past period by luck alone. A search this wide is only worth running if the answer is corrected for the number of things tried. That correction, and the way one candidate is picked, are fixed here.",
+ "what_had_been_seen": [
+  "Rounds 1 and 2 in full, including test-period (2007-2026) results for eight scores and the prices-only score. The components and the ways of combining them below were chosen knowing those results.",
+  "Not seen: any result for z-score transforms, max or top-two aggregation, smoothing, the change-type components, momentum, the 63-day drawdown, or any subset other than those of round 1."
+ ],
+ "search_space": {
+  "components_12": {
+   "vol": "VIX close",
+   "credit": "Baa minus 10-year Treasury spread",
+   "nfci": "Chicago Fed NFCI, lagged 5 trading days",
+   "drawdown252": "market fall from its 252-day high",
+   "curve": "minus (10-year minus 3-month Treasury)",
+   "realized_vol21": "standard deviation of the last 21 daily market returns",
+   "ebp": "excess bond premium, lagged 25 trading days after month end",
+   "leverage": "NFCI nonfinancial leverage subindex, lagged 5 trading days",
+   "vol_jump": "VIX divided by its own mean over the previous 63 trading days",
+   "credit_jump": "Baa spread minus its own mean over the previous 63 trading days",
+   "momentum63": "minus the market's return over the last 63 trading days",
+   "drawdown63": "market fall from its 63-day high"
+  },
+  "subsets": "every subset of 1, 2, 3 or 4 components: 12 + 66 + 220 + 495 = 793",
+  "transforms_2": ["percentile: frozen cutpoints at every 5th percentile of the train period", "z-score: train-period mean and standard deviation"],
+  "aggregations_3": ["mean", "max", "mean of the two highest"],
+  "smoothing_2": ["none", "exponential moving average of the score, span 10 trading days (uses past days only)"],
+  "count": "single components: 12 x 2 transforms x 2 smoothings = 48. Subsets of 2 to 4: 781 x 2 x 3 x 2 = 9,372. Total 9,420 candidates.",
+  "not_searched_and_why": "Thresholds and state bands (the percentile transform already covers where the cut falls), and confirmation days (they change how often the state flips, not how well the score separates days; reported separately in part C)."
+ },
+ "periods_and_outcome": "As round 1. Train 1990-2006, test 2007-01-03 to the last day with 63 trading days after it. Outcome O1: the market closes 10% or more below today's close within 63 trading days. Only days on which all 12 components and v3_long exist are used, so every candidate is scored on the same days. Baseline: v3_long as defined in round 1.",
+ "part_A_one_candidate_chosen_honestly": {
+  "choice": "The candidate with the highest AUROC on O1 in the train period. Nothing from the test period enters the choice.",
+  "bar": "As round 1: test-period AUROC at least 0.02 above v3_long with the 90% block-bootstrap interval of the difference above zero; AUROC on O2 not below v3_long's by more than 0.01.",
+  "also_reported": "The ten best by train with their test results, and the rank correlation between train AUROC and test AUROC across all 9,420. If that correlation is near zero, being best on the past says nothing about the next period."
+ },
+ "part_B_is_anything_in_the_whole_search_better_than_luck": {
+  "method": "White's Reality Check (White 2000, Econometrica) on the test period: the largest AUROC gain over v3_long among all 9,420 is compared with the distribution of the largest gain under moving-block resampling (63-day blocks, 1,000 draws, seed 20261126, each candidate's resampled gain centred on its own observed gain). A studentized version (each gain divided by its bootstrap standard deviation) is reported beside it.",
+  "reads_as": "p below 0.05: something in the search beats v3 by more than a search of this size produces by luck. p of 0.05 or more: no evidence that any of the 9,420 is better.",
+  "reported_beside": "The best candidate on the test period (the number a careless search would have reported), its rank in the train period, the share of candidates above v3_long on the test period, and how large a gain luck alone produces (median of the bootstrap maximum)."
+ },
+ "part_C_replication_and_stability": {
+  "prices_only_family": "The 148 candidates built only from drawdown252, realized_vol21, momentum63 and drawdown63 can be scored on 1927-07 to 1985-12, which no rule has been fitted on. Cutpoints from 1990-2006. Baseline there: round 2's score M (mean of percentile drawdown252 and realized_vol21). Reality Check of the family against M on 1927-1985.",
+  "what_matters": "Average test-period AUROC of candidates that include each component against those that do not, and by transform, aggregation and smoothing. Descriptive.",
+  "confirmation_days": "v3_long with the step down confirmed after 1, 3, 5 (as published), 10 and 21 trading days: state changes per year and share of days at Elevated or above, test period. Descriptive."
+ },
+ "what_can_come_out": "A v4 candidate is proposed only if part A's bar is met. If part A fails and part B's p is below 0.05, the report says that something better may exist but that this search cannot say which, and what fresh data would settle it. If both fail, v3 stays. In every case the owner decides.",
+ "limits": [
+  "The test period has been used in two earlier rounds. The Reality Check corrects for the 9,420 tried here, not for choices made while designing the search.",
+  "AUROC measures ranking of days, one property of a score. Timing, stability and plain meaning matter too and are not searched.",
+  "Stand-in series and revised data, as in round 1. Past ranges, not forecasts."
+ ]
+}
