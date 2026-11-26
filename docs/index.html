@@ -38,10 +38,10 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible{ou
 .lang{display:flex;border:1px solid var(--line2)}
 .lang button{width:auto;padding:5px 10px;font-size:11.5px;font-weight:600;color:var(--muted)}
 .lang button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
-.hero{padding:30px 0 20px;border-bottom:1px solid var(--line)}
-.hero h1{font-size:40px;line-height:1.06;font-weight:700;font-stretch:112%;letter-spacing:-.012em;margin:8px 0 10px;text-wrap:balance}
+.hero{padding:22px 0 8px}
+.hero h1{font-size:30px;line-height:1.06;font-weight:700;font-stretch:112%;letter-spacing:-.012em;margin:8px 0 10px;text-wrap:balance}
 .hero .lead{color:var(--muted);font-size:15px;max-width:60ch;margin:0}
-.top1{margin-top:22px;border-top:1px solid var(--line);padding-top:14px}
+.top1{border-top:1px solid var(--line);padding-top:14px}
 .wk ul{list-style:none;margin:8px 0 0;padding:0}
 .wk li{display:grid;grid-template-columns:92px minmax(0,1fr);gap:0 12px;padding:9px 0;border-top:1px solid var(--line);font-size:14px}
 .wk li time{color:var(--muted);font-size:12.5px;padding-top:1px;white-space:nowrap}
@@ -95,14 +95,27 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible{ou
 .wv .tip i{display:inline-block;width:8px;height:8px;margin-right:6px}
 .wv p.wf{color:var(--fg);margin:6px 0;max-width:68ch}.wv p.wf b{font-weight:600;margin-right:6px}
 .hsnote{border:1px solid var(--line2);padding:8px 10px;font-size:12.5px;color:var(--muted);margin:0 0 4px;max-width:none}
-.backdrop{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;margin-top:6px;padding:11px 0 0;border-top:1px solid var(--line);color:var(--fg);min-height:44px}
-.backdrop:hover{text-decoration:none}.backdrop:hover .more{text-decoration:underline}
-.backdrop .bs{font-weight:700;font-size:15px}
-.backdrop .bn{color:var(--muted);font-size:13px}
-.backdrop .more{color:var(--link);font-size:12.5px;margin-left:auto}
+.bar a.brand{color:var(--fg);font-size:13px}.bar a.brand:hover{text-decoration:none}
+.tabs{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.tabs .wrap{display:flex;overflow-x:auto;scrollbar-width:none;padding:0 6px}
+.tabs .wrap::-webkit-scrollbar{display:none}
+.tabs a{flex:none;display:flex;align-items:center;min-height:44px;padding:0 10px;color:var(--muted);font-size:13.5px;font-weight:600;white-space:nowrap;border-bottom:2px solid transparent}
+.tabs a:hover{color:var(--fg);text-decoration:none}
+.tabs a[aria-current="page"]{color:var(--fg);border-bottom-color:var(--fg)}
+.off{display:none!important}
+main section,.det,.row{scroll-margin-top:52px}
+.glance{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);margin-top:18px}
+.glance a{display:block;padding:14px 12px 16px 0;color:var(--fg);min-width:0}
+.glance a+a{border-left:1px solid var(--line);padding-left:14px}
+.glance a:hover{text-decoration:none;background:var(--hover)}
+.glance .big{display:block;font-size:34px;line-height:1.15;font-weight:700;font-stretch:108%;margin:4px 0 6px}
+.glance .bn{display:block;color:var(--muted);font-size:12.5px;margin-top:6px}
+a.row{color:var(--fg)}a.row:hover{background:var(--hover);text-decoration:none}
+a.morebtn{display:flex;align-items:center}a.morebtn:hover{text-decoration:none}
+.iss{list-style:none;margin:0;padding:0}.iss li{border-top:1px solid var(--line)}.iss a{display:grid;grid-template-columns:92px minmax(0,1fr);gap:0 12px;padding:12px 0;color:var(--fg);min-height:44px;font-size:15px;font-weight:600}.iss a span{color:var(--muted);font-size:12.5px;font-weight:400;padding-top:2px}
 .scale{display:inline-grid;grid-template-columns:repeat(5,16px);gap:2px}
 .scale span{height:4px;background:var(--line2)}
-@media(max-width:560px){.hero h1{font-size:30px}}
+@media(max-width:560px){.hero h1{font-size:24px}.glance .big{font-size:28px}}
 .asof{color:var(--muted);font-size:12.5px;margin:0 0 4px}
 .comps{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:10px}
 .comp{padding:14px 12px 14px 0;border-right:1px solid var(--line);margin-right:12px;min-width:0}
@@ -139,7 +152,7 @@ button.row:hover{background:var(--hover)}
 .det ul{margin:0;padding-left:18px;color:var(--fg)}
 .det li{margin:2px 0}
 .det .src{color:var(--muted);font-size:12px;margin-top:12px;overflow-wrap:anywhere}
-.sub{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding:16px 0;border-bottom:1px solid var(--line)}
+.sub{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding:16px 0;margin-top:16px;border-top:1px solid var(--line)}
 .sub p{margin:0;color:var(--muted);font-size:13px;flex:1;min-width:220px}
 .sub p b{color:var(--fg);font-weight:600}
 .sub form{display:flex;flex-wrap:wrap;gap:0;align-items:stretch;flex:1;min-width:260px;max-width:440px}
@@ -155,43 +168,51 @@ button.row:hover{background:var(--hover)}
 #subs:empty{display:none}
 .sub form.done input,.sub form.done button{display:none}
 .sub form.done #subs{color:var(--fg);font-size:13px;margin:0}
-.verify{border-top:1px solid var(--line);margin-top:22px;padding:6px 0 8px}
-.verify summary{cursor:pointer;color:var(--muted);font-size:13px;padding:10px 0;min-height:44px}
-.verify summary:hover{color:var(--fg)}
-.verify ol{color:var(--muted);padding-left:18px;margin:8px 0 0;font-size:13px;max-width:68ch}
+#glossary,#history{padding:22px 0 6px}
+ol.verify{color:var(--muted);padding-left:18px;margin:8px 0 0;font-size:13px;max-width:68ch}
 .foot{border-top:1px solid var(--line);color:var(--dim);font-size:12px;margin-top:18px}
 .foot .wrap{padding-block:14px 28px}
 </style>
 </head>
 <body>
 <header class="bar"><div class="wrap">
-  <div class="brand"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect x=".5" y=".5" width="15" height="15" fill="none" stroke="#e9ebee"/><rect x="0" y="9" width="7" height="7" fill="#e9ebee"/></svg>AFMX</div>
+  <a class="brand" href="#home"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect x=".5" y=".5" width="15" height="15" fill="none" stroke="#e9ebee"/><rect x="0" y="9" width="7" height="7" fill="#e9ebee"/></svg>AFMX</a>
   <div class="r"><a id="srcl" href="https://github.com/ksjaj-hub/risk-ledger" data-t="src">Source and full history</a><div class="lang" role="group" aria-label="Language"><button type="button" data-lang="en">EN</button><button type="button" data-lang="ko">한국어</button></div></div>
 </div></header>
+<nav class="tabs" id="tabs" aria-label="Sections"><div class="wrap"><a href="#home" data-tab="home"></a><a href="#risks" data-tab="risks"></a><a href="#sectors" data-tab="sectors"></a><a href="#past" data-tab="past"></a><a href="#record" data-tab="record"></a><a href="#method" data-tab="method"></a><a href="#weekly" data-tab="weekly"></a></div></nav>
 <main class="wrap">
-  <section class="hero">
+  <section class="hero" data-v="home">
     <div class="lbl" data-t="kick"></div>
     <h1 data-t="h1"></h1>
     <p class="lead" data-t="lead"></p>
+    <div class="glance">
+      <a href="#record"><span class="lbl" data-t="bd"></span><span id="state" class="big">…</span><span class="scale" id="scale" aria-hidden="true"></span><span id="score" class="bn"></span></a>
+      <a href="#risks"><span class="lbl" data-t="openr"></span><span id="nopen" class="big">…</span><span id="tally1" class="bn"></span></a>
+    </div>
     <div class="top1"><div class="lbl" data-t="up"></div><div id="upcoming"></div></div>
-    <a class="backdrop" href="#backdrop"><span class="lbl" data-t="bd"></span><span id="state" class="bs">…</span><span id="score" class="bn"></span><span class="scale" id="scale" aria-hidden="true"></span><span class="more" data-t="bdmore"></span></a>
   </section>
-  <section class="sub"><p><b data-t="subh"></b> <span data-t="subp"></span> <a id="subr" href="weekly/1.html" data-t="subr"></a></p><form id="subf" novalidate><input id="subm" type="email" name="email" autocomplete="email" inputmode="email" required aria-label="Email"><select id="subl" aria-label="Language"><option value="en">English</option><option value="ko">한국어</option></select><button class="btn" type="submit" data-t="subb"></button><span id="subs" role="status" aria-live="polite"></span></form></section>
-  <section class="sec"><h2 data-t="ev"></h2><p data-t="evp"></p>
-    <div class="mine"><div class="lbl" data-t="mine"></div><div id="secs" class="secs" role="group"></div><div id="minemsg" role="status" aria-live="polite"></div></div>
+  <section class="sec wk" data-v="home"><h2 data-t="wk"></h2><ul id="week" aria-live="polite"></ul></section>
+  <section class="sec" data-v="home"><h2 data-t="top"></h2><p data-t="topp"></p>
+    <div id="feat"></div>
+    <a id="alllink" class="morebtn" href="#risks"></a>
+  </section>
+  <section class="sec" data-v="risks"><h2 data-t="ev"></h2><p data-t="evp"></p>
     <div id="events"></div>
-    <button type="button" id="morebtn" class="morebtn" aria-controls="events2" aria-expanded="false"></button>
-    <div id="events2" hidden></div>
     <div class="tally" id="tally"></div>
   </section>
-  <section class="sec wk"><h2 data-t="wk"></h2><ul id="week" aria-live="polite"></ul></section>
-  <section class="sec" id="past"><h2 data-t="hs"></h2><p data-t="hsp"></p><div id="cases"></div></section>
-  <section class="sec" id="patterns" hidden><h2 data-t="pth"></h2><p data-t="ptp"></p><div id="pats"></div></section>
-  <section class="sec" id="backdrop"><h2 data-t="bdh"></h2><p data-t="bdp"></p><div class="asof" id="asof"></div><div class="comps" id="comps" aria-label="Components"></div></section>
-  <section class="sec"><h2 data-t="chg"></h2><p data-t="chgp"></p><div id="alerts"></div></section>
-  <section id="glossary"><h2 data-t="glh"></h2><dl id="gl" class="kv gl"></dl></section>
-  <section id="history"><h2 data-t="hist"></h2><ul id="hist" class="wk"></ul></section>
-  <details class="verify"><summary data-t="ver"></summary><ol id="verify"></ol></details>
+  <section class="sec" data-v="sectors"><h2 data-t="sech"></h2><p data-t="secp"></p>
+    <div class="mine"><div class="lbl" data-t="mine"></div><div id="secs" class="secs" role="group"></div><div id="minemsg" role="status" aria-live="polite"></div></div>
+    <div id="minecards"></div>
+  </section>
+  <section class="sec" id="cases-sec" data-v="past"><h2 data-t="hs"></h2><p data-t="hsp"></p><div id="cases"></div></section>
+  <section class="sec" id="patterns" data-v="past" hidden><h2 data-t="pth"></h2><p data-t="ptp"></p><div id="pats"></div></section>
+  <section class="sec" id="backdrop" data-v="record"><h2 data-t="bdh"></h2><p data-t="bdp"></p><div class="asof" id="asof"></div><div class="comps" id="comps" aria-label="Components"></div></section>
+  <section class="sec" data-v="record"><h2 data-t="chg"></h2><p data-t="chgp"></p><div id="alerts"></div></section>
+  <section class="sec" data-v="method"><h2 id="verh"></h2><ol id="verify" class="verify"></ol></section>
+  <section id="glossary" data-v="method"><h2 data-t="glh"></h2><dl id="gl" class="kv gl"></dl></section>
+  <section id="history" data-v="method"><h2 data-t="hist"></h2><ul id="hist" class="wk"></ul></section>
+  <section class="sec" data-v="weekly"><h2 data-t="wkh"></h2><p data-t="wkp"></p><ul id="issues" class="iss"></ul></section>
+  <section class="sub" data-v="home weekly"><p><b data-t="subh"></b> <span data-t="subp"></span> <a id="subr" href="weekly/1.html" data-t="subr"></a></p><form id="subf" novalidate><input id="subm" type="email" name="email" autocomplete="email" inputmode="email" required aria-label="Email"><select id="subl" aria-label="Language"><option value="en">English</option><option value="ko">한국어</option></select><button class="btn" type="submit" data-t="subb"></button><span id="subs" role="status" aria-live="polite"></span></form></section>
 </main>
 <footer class="foot"><div class="wrap" data-t="foot"></div></footer>
 <script>
@@ -219,7 +240,7 @@ wtSub:"Only two past cases have a start date confirmed from a primary source.",w
 wtSize:(a,b,g)=>"The market low came on trading day "+a.day+" in "+a.y+" ("+g(a.fall)+"%) and day "+b.day+" in "+b.y+" ("+g(b.fall)+"%). Half of the fall was recovered in "+a.rec+" and "+b.rec+" trading days. Six months on the market was "+g(a.end)+"% and "+g(b.end)+"%.",
 wtSec:(a,b,g)=>"Six months on, materials were "+g(a.mat)+" and "+g(b.mat)+" points against the market, and financials "+g(a.fin)+" and "+g(b.fin)+".",
 wtOne:(a,b)=>"Past waves · two cases, market low on trading day "+a.day+" and "+b.day+" · materials and financials still behind six months on",
-wk1:"Size",wk2:"Duration",wk3:"Order",wk4:"Sectors",glh:"Terms used here",fct:"Checked facts",unc:"Reported but not yet confirmed",rdn:"How these conditions are read",subh:"AFMX Weekly.",subp:"One short note a week: what changed, what is still open, and which good news did not resolve anything. Free, in English or Korean.",subb:"Subscribe",subr:"Read No. 1",subph:"you@example.com",subl:"Language of the weekly note",subok:"You are on the list. The first issue will arrive by email.",subbad:"Please enter a valid email address.",suberr:"Could not save it. Please try again in a moment.",src:"Source and full history",kick:"AFMX · US market",h1:"What is left after the news.",lead:"Good news moves the price. It does not always remove the risk. AFMX writes down in advance what would have to be true for each risk to count as resolved, then tracks whether it is.",tl:["open","worsened","easing","resolved"],wk:"This week",up:"Coming up",days:"days",today:"today",nodate:"No dated deadline on the open cards.",nochg:"No changes this week.",opened:(n,d)=>n+" risk"+(n===1?"":"s")+" opened and written down",rulechg:(a,b)=>"Judging rule "+a+" → "+b,bdchg:(a,b)=>"Market backdrop: "+a+" → "+b,stchg:(ti,a,b)=>ti+": "+a+" → "+b,mine:"Pick your sectors",minehit:(n,m,l)=>n+" open risk"+(n===1?" is":"s are")+" tied directly to "+l+(m?". "+m+" more bear on the whole market.":"."),minenone:(m,l)=>"No open risk is tied directly to "+l+(m?". "+m+" bear on the whole market.":"."),touch:"Tied to: ",mw:"Whole market",relt:"Related ETFs and named companies (AFMX mapping for navigation, not a recommendation)",sect:"Sectors, and how strong the evidence is (not a recommendation)",lv:{direct:"directly involved",strong:"strong evidence",moderate:"some evidence",unconfirmed:"AFMX judgment, not confirmed by data",case:"one past case"},mwl:"Reaches the whole market.",ldir:"The card is about companies in this sector.",lunc:"No past data that fits this kind of event, or the data was mixed.",lfact:(f,n,y,m)=>`On the ${n} days since ${y} when the ${f}, this sector did ${Math.abs(m).toFixed(2)} points ${m<0?"worse":"better"} than the market on average.`,band:{high:"High",moderate:"Moderate",low:"Low"},why:"Mainly because of: ",scline:(n,g)=>`${n} open ${n===1?"card":"cards"} tied to this sector, from ${g} separate ${g===1?"cause":"causes"}. The five largest causes are counted.`,scnote:"Cards that share one cause count once, and only the five largest causes are counted, so opening more cards on one topic does not raise the score. We show three levels, not a number, until the public grading shows a number would be justified. It describes exposure, and is not a forecast or a recommendation.",nograde:"Public grading: each month we will publish whether high-score sectors actually did worse in the following month. First grade expected around February 2027.",graded:(g,a)=>`Public grading so far: in ${a} of ${g} months the highest-score sectors did worse than the lowest in the following month.`,cfact:"Indicators this card is read against, fixed in advance: ",lcase:(c,a,b,x)=>`Past case, ${c} (${a} to ${b}): this sector ended ${Math.abs(x).toFixed(1)} points ${x<0?"behind":"ahead of"} the market. One case only.`,showmore:n=>"Show the other "+n+" open risks",showless:"Show fewer",hs:"Has this happened before?",hsp:"Past cases where good news arrived while a condition was still unmet.",hsnote:"Written after the fact, with hindsight. These are not part of the AFMX record, which starts on November 26, 2026. One case is included where the good news did hold.",then:"What happened",still:"Was still open",out:{hit:"Risk materialised",ok:"Resolved as stated"},bd:"Market backdrop",bdmore:"Details",bdh:"Market backdrop",bdp:"A plain reading of five public indicators, for context. It describes current conditions and reacts after markets move; it is not a forecast.",gn:"Good news",need:"Still needed",more:n=>" +"+n+" more",tap:"Full card",chg:"Backdrop changes",chgp:"Recorded automatically each time the state or a component level changes.",ev:"Risks that are still open",
+wk1:"Size",wk2:"Duration",wk3:"Order",wk4:"Sectors",glh:"Terms used here",fct:"Checked facts",unc:"Reported but not yet confirmed",rdn:"How these conditions are read",subh:"AFMX Weekly.",subp:"One short note a week: what changed, what is still open, and which good news did not resolve anything. Free, in English or Korean.",subb:"Subscribe",subr:"Read No. 1",subph:"you@example.com",subl:"Language of the weekly note",subok:"You are on the list. The first issue will arrive by email.",subbad:"Please enter a valid email address.",suberr:"Could not save it. Please try again in a moment.",src:"Source and full history",kick:"AFMX · US market",h1:"What is left after the news.",lead:"Good news moves the price. It does not always remove the risk. AFMX writes down in advance what would have to be true for each risk to count as resolved, then tracks whether it is.",tl:["open","worsened","easing","resolved"],wk:"This week",up:"Coming up",days:"days",today:"today",nodate:"No dated deadline on the open cards.",nochg:"No changes this week.",opened:(n,d)=>n+" risk"+(n===1?"":"s")+" opened and written down",rulechg:(a,b)=>"Judging rule "+a+" → "+b,bdchg:(a,b)=>"Market backdrop: "+a+" → "+b,stchg:(ti,a,b)=>ti+": "+a+" → "+b,mine:"Pick your sectors",minehit:(n,m,l)=>n+" open risk"+(n===1?" is":"s are")+" tied directly to "+l+(m?". "+m+" more bear on the whole market.":"."),minenone:(m,l)=>"No open risk is tied directly to "+l+(m?". "+m+" bear on the whole market.":"."),touch:"Tied to: ",mw:"Whole market",relt:"Related ETFs and named companies (AFMX mapping for navigation, not a recommendation)",sect:"Sectors, and how strong the evidence is (not a recommendation)",lv:{direct:"directly involved",strong:"strong evidence",moderate:"some evidence",unconfirmed:"AFMX judgment, not confirmed by data",case:"one past case"},mwl:"Reaches the whole market.",ldir:"The card is about companies in this sector.",lunc:"No past data that fits this kind of event, or the data was mixed.",lfact:(f,n,y,m)=>`On the ${n} days since ${y} when the ${f}, this sector did ${Math.abs(m).toFixed(2)} points ${m<0?"worse":"better"} than the market on average.`,band:{high:"High",moderate:"Moderate",low:"Low"},why:"Mainly because of: ",scline:(n,g)=>`${n} open ${n===1?"card":"cards"} tied to this sector, from ${g} separate ${g===1?"cause":"causes"}. The five largest causes are counted.`,scnote:"Cards that share one cause count once, and only the five largest causes are counted, so opening more cards on one topic does not raise the score. We show three levels, not a number, until the public grading shows a number would be justified. It describes exposure, and is not a forecast or a recommendation.",nograde:"Public grading: each month we will publish whether high-score sectors actually did worse in the following month. First grade expected around February 2027.",graded:(g,a)=>`Public grading so far: in ${a} of ${g} months the highest-score sectors did worse than the lowest in the following month.`,cfact:"Indicators this card is read against, fixed in advance: ",lcase:(c,a,b,x)=>`Past case, ${c} (${a} to ${b}): this sector ended ${Math.abs(x).toFixed(1)} points ${x<0?"behind":"ahead of"} the market. One case only.`,nav:{home:"Home",risks:"Risks",sectors:"Sectors",past:"Past",record:"Record",method:"Method",weekly:"Weekly"},navl:"Sections",openr:"Open risks",top:"Risks to look at first",topp:"The good news that came out, and the condition that is still not met.",all:n=>"See all "+n+" open risks",sech:"Risk by sector",secp:"Pick sectors to see the open risks tied to them and a three-level score. Your choice is saved on this device only.",wkh:"AFMX Weekly",wkp:"One short note a week. Every issue stays here.",issue:n=>"No. "+n,hs:"Has this happened before?",hsp:"Past cases where good news arrived while a condition was still unmet.",hsnote:"Written after the fact, with hindsight. These are not part of the AFMX record, which starts on November 26, 2026. One case is included where the good news did hold.",then:"What happened",still:"Was still open",out:{hit:"Risk materialised",ok:"Resolved as stated"},bd:"Market backdrop",bdmore:"Details",bdh:"Market backdrop",bdp:"A plain reading of five public indicators, for context. It describes current conditions and reacts after markets move; it is not a forecast.",gn:"Good news",need:"Still needed",more:n=>" +"+n+" more",tap:"Full card",chg:"Backdrop changes",chgp:"Recorded automatically each time the state or a component level changes.",ev:"Risks that are still open",
  evp:"Each card shows the good news that came out and the condition that is still not met. Conditions were written on the date shown, before the outcome was known. Tap a card for everything, with sources.",
  ver:"How to check that nothing here was changed afterwards (hash chain, timestamps, public history)",verp:"How we can prove that nothing here was changed afterwards",vp:[["Every record is saved as its own dated entry in a version history that AFMX keeps. During this early phase that history is not public."],["Each record contains the fingerprint (SHA-256) of the record before it, so one edit would break the chain."],["Each record is also timestamped on the Bitcoin blockchain (OpenTimestamps). That proof does not depend on AFMX and stays valid whether or not the history is public."],["When the history is opened, anyone will be able to check every record against those proofs. Until then you are taking our word for it, and we say so."]],hist:"History",
  v:[["Every record is its own dated commit in a ","public history",REPO+"/commits/main","."],["Each record contains the fingerprint (SHA-256) of the record before it, so one edit would break the chain."],["Records carry ","OpenTimestamps","https://opentimestamps.org"," proofs anchored to the Bitcoin blockchain."],["The ","judging rule",REPO+"/blob/main/rules/"," is published and versioned. Old versions are never edited."]],
@@ -248,7 +269,7 @@ wtSub:"날짜를 1차 출처로 확인한 과거 사례는 두 번뿐입니다."
 wtSize:(a,b,g)=>"시장 바닥은 "+a.y+"년 "+a.day+"거래일째("+g(a.fall)+"%), "+b.y+"년 "+b.day+"거래일째("+g(b.fall)+"%)였습니다. 하락의 절반을 되찾는 데 "+a.rec+"일과 "+b.rec+"일이 걸렸고, 6개월 뒤 시장은 "+g(a.end)+"%와 "+g(b.end)+"%였습니다.",
 wtSec:(a,b,g)=>"6개월 뒤에도 소재는 시장 대비 "+g(a.mat)+"%p와 "+g(b.mat)+"%p, 금융은 "+g(a.fin)+"%p와 "+g(b.fin)+"%p였습니다.",
 wtOne:(a,b)=>"지나간 파동 · 과거 두 번, 시장 바닥은 "+a.day+"·"+b.day+"거래일째 · 소재와 금융은 6개월 뒤에도 뒤처짐",
-wk1:"크기",wk2:"지속",wk3:"순서",wk4:"업종",glh:"용어 풀이",fct:"확인한 사실",unc:"보도됐지만 아직 확인하지 못한 것",rdn:"조건을 읽는 방법",subh:"AFMX 주간 글.",subp:"일주일에 한 번, 짧게 보냅니다. 무엇이 바뀌었고, 무엇이 아직 열려 있으며, 어떤 호재가 아무것도 해소하지 못했는지 정리합니다. 무료이고 영어와 한국어로 발행합니다.",subb:"구독",subr:"1호 읽기",subph:"이메일 주소",subl:"주간 글을 받을 언어",subok:"등록됐습니다. 첫 글부터 이메일로 보내 드립니다.",subbad:"이메일 주소를 다시 확인해 주세요.",suberr:"저장하지 못했습니다. 잠시 뒤 다시 시도해 주세요.",src:"원본과 전체 기록",kick:"AFMX · 미국 시장",h1:"뉴스가 지나간 뒤에 남은 것.",lead:"호재는 가격을 움직이지만 리스크까지 없애 주지는 않습니다. AFMX는 리스크마다 무엇이 확인돼야 해소인지를 미리 적어 두고, 실제로 그렇게 됐는지 추적합니다.",tl:["열림","악화","완화","해소"],wk:"이번 주 바뀐 것",up:"다가오는 날짜",days:"일 남음",today:"오늘",nodate:"열린 카드에 정해진 날짜가 없습니다.",nochg:"이번 주에는 바뀐 것이 없습니다.",opened:(n,d)=>"리스크 "+n+"건을 열고 조건을 적음",rulechg:(a,b)=>"판정 규칙 "+a+" → "+b,bdchg:(a,b)=>"시장 배경: "+a+" → "+b,stchg:(ti,a,b)=>ti+": "+a+" → "+b,mine:"내 섹터 고르기",minehit:(n,m,l)=>l+"에 직접 걸린 열린 리스크가 "+n+"건 있습니다."+(m?" 시장 전체에 걸린 리스크가 "+m+"건 더 있습니다.":""),minenone:(m,l)=>l+"에 직접 걸린 열린 리스크는 없습니다."+(m?" 시장 전체에 걸린 리스크는 "+m+"건 있습니다.":""),touch:"관련 섹터: ",mw:"시장 전체",relt:"관련 ETF와 카드에 나온 회사 (찾아보기 편하도록 AFMX가 연결한 것이며 추천이 아닙니다)",sect:"관련 섹터와 근거 수준 (추천이 아닙니다)",lv:{direct:"직접 관련",strong:"근거 강함",moderate:"근거 보통",unconfirmed:"AFMX 판단, 데이터로 확인 안 됨",case:"과거 사례 1건"},mwl:"시장 전체에 영향을 줍니다.",ldir:"이 섹터의 회사를 직접 다루는 카드입니다.",lunc:"이런 사건에 맞는 과거 데이터가 없거나 결과가 엇갈렸습니다.",lfact:(f,n,y,m)=>`${y}년 이후 ${f} ${n}일 동안, 이 섹터는 시장보다 평균 ${Math.abs(m).toFixed(2)}%p ${m<0?"나빴습니다":"좋았습니다"}.`,band:{high:"높음",moderate:"보통",low:"낮음"},why:"주된 이유: ",scline:(n,g)=>`이 섹터에 걸린 열린 카드 ${n}건, 원인으로는 ${g}가지입니다. 큰 원인 5가지만 반영합니다.`,scnote:"원인이 같은 카드는 한 번만 세고 큰 원인 5가지만 반영하므로, 한 주제의 카드를 많이 열어도 점수가 오르지 않습니다. 공개 채점으로 확인되기 전까지는 숫자 대신 세 단계로만 보여 드립니다. 리스크에 얼마나 노출돼 있는지를 나타내며 예측이나 추천이 아닙니다.",nograde:"공개 채점: 점수가 높았던 섹터가 다음 달에 실제로 약했는지 매달 공개합니다. 첫 채점은 2027년 2월쯤 나옵니다.",graded:(g,a)=>`지금까지 공개 채점: ${g}개월 중 ${a}개월에서 점수가 높은 섹터가 다음 달에 낮은 섹터보다 약했습니다.`,cfact:"이 카드를 읽는 지표(미리 정해 공개): ",lcase:(c,a,b,x)=>`과거 사례 ${c} (${a} ~ ${b}): 이 섹터는 시장보다 ${Math.abs(x).toFixed(1)}%p ${x<0?"뒤처졌습니다":"앞섰습니다"}. 사례 1건입니다.`,showmore:n=>"나머지 열린 리스크 "+n+"건 보기",showless:"접기",hs:"전에도 이런 일이 있었나",hsp:"호재가 나왔지만 조건이 채워지지 않았던 과거 사례입니다.",hsnote:"결과를 알고 나서 쓴 사후 검증입니다. 2026년 11월 26일에 시작한 AFMX 기록에는 포함되지 않습니다. 호재가 실제로 해소로 이어진 사례도 하나 넣었습니다.",then:"이후 일어난 일",still:"남아 있던 것",out:{hit:"리스크 현실화",ok:"적힌 대로 해소"},bd:"시장 배경",bdmore:"자세히",bdh:"시장 배경",bdp:"공개 지표 다섯 가지를 그대로 읽은 참고값입니다. 지금 상태를 설명할 뿐이고 시장이 움직인 뒤에 반응합니다. 예측이 아닙니다.",gn:"나온 호재",need:"남은 조건",more:n=>" 외 "+n+"개",tap:"카드 전체 보기",chg:"시장 배경의 변화",chgp:"상태나 요소의 단계가 바뀔 때마다 자동으로 기록됩니다.",ev:"아직 열려 있는 리스크",
+wk1:"크기",wk2:"지속",wk3:"순서",wk4:"업종",glh:"용어 풀이",fct:"확인한 사실",unc:"보도됐지만 아직 확인하지 못한 것",rdn:"조건을 읽는 방법",subh:"AFMX 주간 글.",subp:"일주일에 한 번, 짧게 보냅니다. 무엇이 바뀌었고, 무엇이 아직 열려 있으며, 어떤 호재가 아무것도 해소하지 못했는지 정리합니다. 무료이고 영어와 한국어로 발행합니다.",subb:"구독",subr:"1호 읽기",subph:"이메일 주소",subl:"주간 글을 받을 언어",subok:"등록됐습니다. 첫 글부터 이메일로 보내 드립니다.",subbad:"이메일 주소를 다시 확인해 주세요.",suberr:"저장하지 못했습니다. 잠시 뒤 다시 시도해 주세요.",src:"원본과 전체 기록",kick:"AFMX · 미국 시장",h1:"뉴스가 지나간 뒤에 남은 것.",lead:"호재는 가격을 움직이지만 리스크까지 없애 주지는 않습니다. AFMX는 리스크마다 무엇이 확인돼야 해소인지를 미리 적어 두고, 실제로 그렇게 됐는지 추적합니다.",tl:["열림","악화","완화","해소"],wk:"이번 주 바뀐 것",up:"다가오는 날짜",days:"일 남음",today:"오늘",nodate:"열린 카드에 정해진 날짜가 없습니다.",nochg:"이번 주에는 바뀐 것이 없습니다.",opened:(n,d)=>"리스크 "+n+"건을 열고 조건을 적음",rulechg:(a,b)=>"판정 규칙 "+a+" → "+b,bdchg:(a,b)=>"시장 배경: "+a+" → "+b,stchg:(ti,a,b)=>ti+": "+a+" → "+b,mine:"내 섹터 고르기",minehit:(n,m,l)=>l+"에 직접 걸린 열린 리스크가 "+n+"건 있습니다."+(m?" 시장 전체에 걸린 리스크가 "+m+"건 더 있습니다.":""),minenone:(m,l)=>l+"에 직접 걸린 열린 리스크는 없습니다."+(m?" 시장 전체에 걸린 리스크는 "+m+"건 있습니다.":""),touch:"관련 섹터: ",mw:"시장 전체",relt:"관련 ETF와 카드에 나온 회사 (찾아보기 편하도록 AFMX가 연결한 것이며 추천이 아닙니다)",sect:"관련 섹터와 근거 수준 (추천이 아닙니다)",lv:{direct:"직접 관련",strong:"근거 강함",moderate:"근거 보통",unconfirmed:"AFMX 판단, 데이터로 확인 안 됨",case:"과거 사례 1건"},mwl:"시장 전체에 영향을 줍니다.",ldir:"이 섹터의 회사를 직접 다루는 카드입니다.",lunc:"이런 사건에 맞는 과거 데이터가 없거나 결과가 엇갈렸습니다.",lfact:(f,n,y,m)=>`${y}년 이후 ${f} ${n}일 동안, 이 섹터는 시장보다 평균 ${Math.abs(m).toFixed(2)}%p ${m<0?"나빴습니다":"좋았습니다"}.`,band:{high:"높음",moderate:"보통",low:"낮음"},why:"주된 이유: ",scline:(n,g)=>`이 섹터에 걸린 열린 카드 ${n}건, 원인으로는 ${g}가지입니다. 큰 원인 5가지만 반영합니다.`,scnote:"원인이 같은 카드는 한 번만 세고 큰 원인 5가지만 반영하므로, 한 주제의 카드를 많이 열어도 점수가 오르지 않습니다. 공개 채점으로 확인되기 전까지는 숫자 대신 세 단계로만 보여 드립니다. 리스크에 얼마나 노출돼 있는지를 나타내며 예측이나 추천이 아닙니다.",nograde:"공개 채점: 점수가 높았던 섹터가 다음 달에 실제로 약했는지 매달 공개합니다. 첫 채점은 2027년 2월쯤 나옵니다.",graded:(g,a)=>`지금까지 공개 채점: ${g}개월 중 ${a}개월에서 점수가 높은 섹터가 다음 달에 낮은 섹터보다 약했습니다.`,cfact:"이 카드를 읽는 지표(미리 정해 공개): ",lcase:(c,a,b,x)=>`과거 사례 ${c} (${a} ~ ${b}): 이 섹터는 시장보다 ${Math.abs(x).toFixed(1)}%p ${x<0?"뒤처졌습니다":"앞섰습니다"}. 사례 1건입니다.`,nav:{home:"홈",risks:"리스크",sectors:"섹터",past:"과거",record:"기록",method:"방법",weekly:"주간 글"},navl:"구간",openr:"열린 리스크",top:"먼저 볼 리스크",topp:"나온 호재와 아직 채워지지 않은 조건입니다.",all:n=>"열린 리스크 "+n+"건 모두 보기",sech:"섹터별 리스크",secp:"섹터를 고르면 그 섹터에 걸린 열린 리스크와 세 단계 점수를 보여 줍니다. 선택은 이 기기에만 저장됩니다.",wkh:"AFMX 주간 글",wkp:"일주일에 한 번 보내는 짧은 글입니다. 지난 글은 모두 여기에 남습니다.",issue:n=>n+"호",hs:"전에도 이런 일이 있었나",hsp:"호재가 나왔지만 조건이 채워지지 않았던 과거 사례입니다.",hsnote:"결과를 알고 나서 쓴 사후 검증입니다. 2026년 11월 26일에 시작한 AFMX 기록에는 포함되지 않습니다. 호재가 실제로 해소로 이어진 사례도 하나 넣었습니다.",then:"이후 일어난 일",still:"남아 있던 것",out:{hit:"리스크 현실화",ok:"적힌 대로 해소"},bd:"시장 배경",bdmore:"자세히",bdh:"시장 배경",bdp:"공개 지표 다섯 가지를 그대로 읽은 참고값입니다. 지금 상태를 설명할 뿐이고 시장이 움직인 뒤에 반응합니다. 예측이 아닙니다.",gn:"나온 호재",need:"남은 조건",more:n=>" 외 "+n+"개",tap:"카드 전체 보기",chg:"시장 배경의 변화",chgp:"상태나 요소의 단계가 바뀔 때마다 자동으로 기록됩니다.",ev:"아직 열려 있는 리스크",
  evp:"카드마다 나온 호재와 아직 채워지지 않은 조건을 보여 줍니다. 조건은 결과를 알기 전, 표시된 날짜에 적었습니다. 카드를 누르면 출처와 함께 전체가 열립니다. 한국어는 읽기 편하도록 붙인 번역이고, 기록의 원문은 영어입니다.",
  ver:"나중에 고쳐 쓰지 않았다는 것을 확인하는 방법 (지문 사슬, 시각 증명, 공개 이력)",verp:"나중에 고쳐 쓰지 않았다는 것을 증명하는 방법",vp:[["모든 기록은 AFMX가 보관하는 변경 이력에 날짜가 찍힌 개별 항목으로 남습니다. 지금 초기 단계에서는 이 이력을 공개하지 않습니다."],["기록마다 바로 앞 기록의 지문(SHA-256)이 들어 있어서, 하나만 고쳐도 사슬이 끊어집니다."],["기록마다 비트코인 블록체인에 시각 증명(OpenTimestamps)도 남깁니다. 이 증명은 AFMX에 의존하지 않고, 이력의 공개 여부와 상관없이 유효합니다."],["이력을 공개하면 누구나 모든 기록을 이 증명과 대조할 수 있습니다. 그 전까지는 저희 말을 믿으셔야 하는 상태이고, 그 점을 숨기지 않습니다."]],hist:"연혁",
  v:[["모든 기록은 날짜가 찍힌 개별 변경으로 ","공개 이력",REPO+"/commits/main","에 남습니다."],["기록마다 바로 앞 기록의 지문(SHA-256)이 들어 있어서, 하나만 고쳐도 사슬이 끊어집니다."],["기록에는 비트코인 블록체인에 시각을 남기는 ","OpenTimestamps","https://opentimestamps.org"," 증명이 붙습니다."],["","판정 규칙",REPO+"/blob/main/rules/","은 공개돼 있고 버전이 붙습니다. 이전 버전은 고치지 않습니다."]],
@@ -260,7 +281,19 @@ wk1:"크기",wk2:"지속",wk3:"순서",wk4:"업종",glh:"용어 풀이",fct:"확
  start:"시작",change:"변화",first:"첫 기록: ",state:"상태",status:{open:"진행 중",easing:"완화",worsened:"악화",resolved:"해소"},
  cond:"조건 작성일 ",what:"무슨 일이 있었나",how:"시장에 미치는 경로",res:"아래가 모두 사실이면 해소로 봅니다",wor:"아래 중 하나라도 일어나면 악화로 봅니다",rel:"해소가 아닌 호재",log:"기록 (원문)",srcs:"출처: ",none:"아직 기록이 없습니다",fail:"자료를 불러오지 못했습니다",loc:"ko-KR"}};
 let lang="en";try{lang=localStorage.getItem("lang")||((navigator.language||"").startsWith("ko")?"ko":"en")}catch(e){if((navigator.language||"").startsWith("ko"))lang="ko"}{const q=new URLSearchParams(location.search).get("lang");if(q==="ko"||q==="en")lang=q}
-let D=null,showRest=false;const open=new Set();
+let D=null,tab="home";const open=new Set();
+const TABS=["home","risks","sectors","past","record","method","weekly"],LEG={backdrop:"record",patterns:"past","cases-sec":"past",glossary:"method",history:"method",subf:"weekly"};
+const ISSUES=[{n:1,date:"2026-11-26",en:["weekly/1.html","The CEO came back. The inquiry did not go away."],ko:["weekly/1.ko.html","CEO는 돌아왔다. 조사는 사라지지 않았다."]}];
+// one page, seven sections: the hash picks the section; old anchors (#backdrop, #ev-...) still land in the right place
+function route(){
+  let h="";try{h=decodeURIComponent(location.hash.slice(1))}catch(e){}let to=null;
+  if(TABS.includes(h))tab=h;else if(h.startsWith("ev-")){tab="risks";open.add(h.slice(3));to=h}else if(LEG[h]){tab=LEG[h];to=h}else tab="home";
+  document.querySelectorAll("[data-v]").forEach(s=>s.classList.toggle("off",!s.dataset.v.split(" ").includes(tab)));
+  const bar=document.querySelector("#tabs .wrap");
+  bar.querySelectorAll("a").forEach(a=>{if(a.dataset.tab===tab){a.setAttribute("aria-current","page");bar.scrollLeft=a.offsetLeft-(bar.clientWidth-a.offsetWidth)/2}else a.removeAttribute("aria-current")});
+  render();
+  let el=to&&document.getElementById(to);if(el&&to.startsWith("ev-")&&el.previousElementSibling)el=el.previousElementSibling;
+  if(el)el.scrollIntoView();else window.scrollTo(0,0)}
 function mine(){let v="";try{v=localStorage.getItem("sectors")||""}catch(e){v=window._sc||""}return v?v.split(","):[]}
 function setMine(a){window._sc=a.join(",");try{localStorage.setItem("sectors",window._sc)}catch(e){}}
 const fmt=d=>lang==="ko"?d.replaceAll("-","."):new Date(d+"T00:00:00Z").toLocaleDateString(T[lang].loc,{year:"numeric",month:"short",day:"numeric",timeZone:"UTC"});
@@ -302,8 +335,10 @@ function render(){
   document.querySelectorAll("[data-t]").forEach(e=>e.textContent=t[e.dataset.t]);
   document.getElementById("subm").placeholder=t.subph;document.getElementById("subr").href=lang==="ko"?"weekly/1.ko.html":"weekly/1.html";{const sl=document.getElementById("subl");if(!sl.dataset.touched)sl.value=lang;sl.setAttribute("aria-label",t.subl)}if(window.subState)document.getElementById("subs").textContent=t[window.subState];
   document.querySelectorAll("[data-lang]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.lang===lang)));
+  document.getElementById("tabs").setAttribute("aria-label",t.navl);document.querySelectorAll("#tabs a").forEach(a=>a.textContent=t.nav[a.dataset.tab]);
+  {const is=document.getElementById("issues");is.replaceChildren();ISSUES.slice().reverse().forEach(x=>{const li=$("li"),a=$("a");a.href=x[lang][0];a.append($("span",null,t.issue(x.n)+" · "+fmt(x.date)),x[lang][1]);li.append(a);is.append(li)})}
   const vo=document.getElementById("verify");vo.replaceChildren();
-  document.getElementById("srcl").hidden=!OPEN;document.querySelector(".verify summary").textContent=OPEN?t.ver:t.verp;
+  document.getElementById("srcl").hidden=!OPEN;document.getElementById("verh").textContent=OPEN?t.ver:t.verp;
   (OPEN?t.v:t.vp).forEach(p=>{const li=$("li");if(p.length===1)li.textContent=p[0];else{const a=$("a",null,p[1]);a.href=p[2].endsWith("/rules/")&&D?p[2]+D.rule.version+(lang==="ko"?".ko.md":".md"):p[2];li.append(p[0],a,p[3])}vo.append(li)});
   const st=document.getElementById("state");
   if(!D){st.textContent="…";return}
@@ -346,7 +381,7 @@ function render(){
   const wk=document.getElementById("week");wk.replaceChildren();const items=[];
   const fresh=D.events.filter(e=>ago(e.first_recorded)<=7);
   if(fresh.length)items.push([fresh.map(e=>e.first_recorded).sort().pop(),t.opened(fresh.length)]);
-  D.events.forEach(e=>e.history.forEach((h,i)=>{if(i&&ago(h.date)<=7)items.push([h.date,t.stchg(title(e),t.status[e.history[i-1].status]||e.history[i-1].status,t.status[h.status]||h.status)])}));
+  D.events.forEach(e=>e.history.forEach((h,i)=>{if(i&&ago(h.date)<=7&&h.status!==e.history[i-1].status)items.push([h.date,t.stchg(title(e),t.status[e.history[i-1].status]||e.history[i-1].status,t.status[h.status]||h.status)])}));
   D.alerts.forEach(a=>{if(ago(a.issued_at_utc.slice(0,10))>7)return;a.changes.forEach(c=>{if(c.what==="state")items.push([a.issued_at_utc.slice(0,10),t.bdchg(stName(c.from),stName(c.to))]);if(c.what==="rule_version")items.push([a.issued_at_utc.slice(0,10),t.rulechg(c.from,c.to)])})});
   items.sort((x,y)=>y[0].localeCompare(x[0])).slice(0,5).forEach(([d,x])=>{const li=$("li");const tm=$("time",null,fmt(d));tm.dateTime=d;li.append(tm,$("span",null,x));wk.append(li)});
   if(!items.length)wk.append($("li","none",t.nochg));
@@ -355,14 +390,14 @@ function render(){
   const today=new Date(Date.UTC(now.getUTCFullYear(),now.getUTCMonth(),now.getUTCDate()));
   const dates=(A.dates||[]).map(x=>({...x,n:Math.round((new Date(x.date+"T00:00:00Z")-today)/day)})).filter(x=>x.n>=0&&D.events.some(e=>e.id===x.event&&e.status!=="resolved")).sort((x,y)=>x.n-y.n).slice(0,2);
   dates.forEach(x=>{const a=$("a","cd");a.href="#ev-"+x.event;const b=$("b",null,x.n?String(x.n):t.today);if(x.n)b.append($("small",null,t.days));const w=$("div");w.append($("div","t",x[lang]||x.en),$("div","w",fmt(x.date)));a.append(b,w);
-    a.addEventListener("click",()=>{open.add(x.event);render()});up.append(a)});
+    up.append(a)});
   if(!dates.length)up.append($("div","none",t.nodate));
   // events
-  const ev=document.getElementById("events"),ev2=document.getElementById("events2");ev.replaceChildren();ev2.replaceChildren();
+  const ev=document.getElementById("events"),ft=document.getElementById("feat"),mc=document.getElementById("minecards");ev.replaceChildren();ft.replaceChildren();mc.replaceChildren();
   const order={worsened:0,open:1,easing:2,resolved:3};
-  const mk=(e,rich)=>{
+  const mk=(e,rich,link)=>{
     const k=kOf(e), last=e.history[e.history.length-1], id="ev-"+e.id, hits=hitsOf(e);
-    const r=$("button","row");r.type="button";r.setAttribute("aria-expanded",String(open.has(e.id)));r.setAttribute("aria-controls",id);
+    const r=$(link?"a":"button","row");if(link)r.href="#"+id;else{r.type="button";r.setAttribute("aria-expanded",String(open.has(e.id)));r.setAttribute("aria-controls",id)}
     r.append($("div","d",fmt(last.date)));r.append($("span","tag "+e.status,t.status[e.status]||e.status));
     const b=$("div","body");b.append($("div",rich?"ti big":"ti",title(e)));
     const gn=(k?k.relief:e.relief_headlines_that_do_not_resolve_it)||[], need=(k?k.resolved:e.resolution_conditions.resolved_when_all)||[];
@@ -372,7 +407,7 @@ function render(){
       b.append(dl)}
     if(hits.length)b.append($("div","hitline",t.touch+hits.map(x=>sn(x)+" ("+t.lv[lk(e,x).level]+")").join(", ")));else if(tks.length&&isMW(e)&&e.status!=="resolved")b.append($("div","su",t.mw));
     const wv=(A.waves||{})[e.id];if(rich&&wv&&e.status!=="resolved")b.append($("div","su",wv.kind==="oil"?t.woOne(wv,sg):t.wtOne(wv.eps[0],wv.eps[1])));
-    if(rich)b.append($("div","su",t.cond+fmt(e.resolution_conditions.written_on)+" · "+t.tap));r.append(b);
+    if(rich)b.append($("div","su",t.cond+fmt(e.resolution_conditions.written_on)+" · "+t.tap));r.append(b);if(link)return [r];
     const d=$("div","det");d.id=id;d.hidden=!open.has(e.id);
     d.append($("h3","lbl",t.what),$("p",null,k?k.what:e.what_happened));
     d.append($("h3","lbl",t.how),$("p",null,k?k.channel:e.how_it_reaches_markets));
@@ -394,30 +429,28 @@ function render(){
   const live=sorted.filter(e=>e.status!=="resolved");
   const PT=A.score_points||{}, wt=e=>Math.max(0,...hitsOf(e).map(x=>PT[lk(e,x).level]||0));const mineHits=live.filter(e=>hitsOf(e).length).sort((x,y)=>wt(y)-wt(x));
   const feat=tks.length?(mineHits.length?mineHits.slice(0,5):live.filter(isMW)):(A.featured||[]).map(id=>live.find(e=>e.id===id)).filter(Boolean);
-  const top=feat.length?feat:live.slice(0,3), rest=sorted.filter(e=>!top.includes(e));
-  top.forEach(e=>ev.append(...mk(e,true)));rest.forEach(e=>ev2.append(...mk(e,false)));
-  const mb=document.getElementById("morebtn");mb.hidden=!rest.length;
-  const anyOpen=rest.some(e=>open.has(e.id));if(anyOpen)showRest=true;
-  ev2.hidden=!showRest;mb.setAttribute("aria-expanded",String(showRest));mb.textContent=showRest?t.showless:t.showmore(rest.length);
+  const top=(feat.length?feat:live).slice(0,3);
+  top.forEach(e=>ft.append(...mk(e,true,true)));sorted.forEach(e=>ev.append(...mk(e,true,false)));mineHits.forEach(e=>mc.append(...mk(e,false,true)));
+  document.getElementById("alllink").textContent=t.all(live.length);document.getElementById("nopen").textContent=live.length;
   const mm=document.getElementById("minemsg"),sb=document.getElementById("secs");sb.setAttribute("aria-label",t.mine);sb.replaceChildren();
-  Object.keys(SN).forEach(x=>{const bt=$("button",null,sn(x));if(SS[x])bt.append($("small","bd "+SS[x].band,t.band[SS[x].band]));bt.type="button";bt.setAttribute("aria-pressed",String(tks.includes(x)));bt.addEventListener("click",()=>{const c=mine();setMine(c.includes(x)?c.filter(y=>y!==x):[...c,x]);showRest=false;render()});sb.append(bt)});
+  Object.keys(SN).forEach(x=>{const bt=$("button",null,sn(x));if(SS[x])bt.append($("small","bd "+SS[x].band,t.band[SS[x].band]));bt.type="button";bt.setAttribute("aria-pressed",String(tks.includes(x)));bt.addEventListener("click",()=>{const c=mine();setMine(c.includes(x)?c.filter(y=>y!==x):[...c,x]);render()});sb.append(bt)});
   const nmw=live.filter(e=>isMW(e)&&!hitsOf(e).length).length, names=tks.map(sn).join(", ");
   mm.replaceChildren();if(tks.length){const bx=$("div","scs");tks.forEach(x=>{const v=SS[x];if(!v)return;const r=$("div","sc");const h=$("div","sch");h.append($("b",null,sn(x)),$("span","num "+v.band,t.band[v.band]));const why=(v.reasons||[]).map(id=>D.events.find(e=>e.id===id)).filter(Boolean).map(title);r.append(h);if(why.length)r.append($("div","why",t.why+why.join(" / ")));r.append($("div","su",t.scline(v.open_cards,v.groups)));bx.append(r)});const K=A.scorecard,g=K?K.graded_months:0;mm.append(bx,$("div","su",t.scnote),$("div","su",g?t.graded(g,K.as_expected_months):t.nograde),$("div","mmt",mineHits.length?t.minehit(mineHits.length,nmw,names):t.minenone(nmw,names)))}
-  document.getElementById("tally").textContent=["open","worsened","easing","resolved"].map((k,i)=>D.events.filter(e=>e.status===k).length+" "+t.tl[i]).join(" · ");
+  document.getElementById("tally").textContent=document.getElementById("tally1").textContent=["open","worsened","easing","resolved"].map((k,i)=>D.events.filter(e=>e.status===k).length+" "+t.tl[i]).join(" · ");
   const hi=document.getElementById("hist");hi.replaceChildren();(A.history||[]).forEach(h=>{const li=$("li");const tm=$("time",null,fmt(h.date));tm.dateTime=h.date;li.append(tm,$("span",null,h[lang]||h.en));hi.append(li)});
   const gl=document.getElementById("gl");gl.replaceChildren();Object.values(A.glossary||{}).forEach(g=>{const x=g[lang]||g.en;gl.append($("dt",null,x.term),$("dd",null,x.def))});
   // hindsight
   const cs2=document.getElementById("cases");cs2.replaceChildren();
-  const H=(D.hindsight&&D.hindsight.cases)||[];document.getElementById("past").hidden=!H.length;
+  const H=(D.hindsight&&D.hindsight.cases)||[];document.getElementById("cases-sec").hidden=!H.length;
   if(H.length)cs2.append($("p","hsnote",t.hsnote));
   H.forEach(c=>{const x=c[lang]||c.en,d=$("div","case");const h=$("div","ti",x.title);h.append($("span","out "+c.outcome,t.out[c.outcome]));d.append(h);
     const dl=$("dl","kv");dl.append($("dt",null,t.gn),$("dd","gn",fmt(c.good_news_date)+" · "+x.good_news),$("dt","need",t.still),$("dd",null,x.still_open),$("dt",null,t.then),$("dd",null,fmt(c.outcome_date)+" · "+x.outcome));d.append(dl);
     const sr=$("div","src",t.srcs);c.sources.forEach((u,j)=>{const a=$("a",null,new URL(u).hostname.replace(/^www\./,""));a.href=u;a.rel="noopener";if(j)sr.append(", ");sr.append(a)});d.append(sr);cs2.append(d)});
 }
 document.querySelectorAll("[data-lang]").forEach(b=>b.addEventListener("click",()=>{lang=b.dataset.lang;try{localStorage.setItem("lang",lang)}catch(e){}render()}));
-document.getElementById("morebtn").addEventListener("click",()=>{showRest=!showRest;if(!showRest)open.forEach(id=>{if(document.querySelector("#events2 #ev-"+CSS.escape(id)))open.delete(id)});render()});
-render();
-fetch("data.json").then(r=>r.json()).then(d=>{D=d;render()}).catch(()=>{document.getElementById("state").textContent=T[lang].fail});
+addEventListener("hashchange",route);
+route();
+fetch("data.json").then(r=>r.json()).then(d=>{D=d;route()}).catch(()=>{document.getElementById("state").textContent=T[lang].fail});
 
 (function(){
   const f=document.getElementById("subf"),m=document.getElementById("subm"),st=document.getElementById("subs"),b=f.querySelector("button");

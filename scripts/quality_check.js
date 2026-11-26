@@ -46,7 +46,8 @@ add("content","advice_wording",hits.length===0,`${hits.length} sentences flagged
   try{
     for(const [w,loc] of [[390,"ko-KR"],[390,"en-US"],[1200,"en-US"]]){
       const c=await b.newContext({viewport:{width:w,height:900},locale:loc});const p=await c.newPage();p.on("pageerror",()=>errs++);
-      for(const u of ["/","/weekly/1.html","/weekly/1.ko.html"]){await p.goto("http://localhost:8791"+u);await p.waitForTimeout(500);
+      for(const u of ["/","/#risks","/#sectors","/#past","/#record","/#method","/#weekly","/weekly/1.html","/weekly/1.ko.html"]){await p.goto("http://localhost:8791"+u);await p.waitForTimeout(500);
+        if(u==="/#sectors")await p.evaluate(()=>document.querySelector("#secs button")?.click());
         if(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth))scroll++;
         if(w===390){const r=await p.evaluate(()=>{document.querySelectorAll(".det").forEach(d=>d.hidden=false);
           const P=s=>s.match(/[\d.]+/g).map(Number),L=c=>{const a=c.map(v=>{v/=255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)});return .2126*a[0]+.7152*a[1]+.0722*a[2]};
@@ -58,7 +59,7 @@ add("content","advice_wording",hits.length===0,`${hits.length} sentences flagged
           const kb=[];document.querySelectorAll("[aria-expanded]").forEach(e=>{if(e.tabIndex<0)kb.push("row not focusable")});
           document.querySelectorAll("input,select").forEach(i=>{if(!(i.labels&&i.labels.length)&&!i.getAttribute("aria-label"))kb.push("no label: "+i.id)});
           document.querySelectorAll("button").forEach(x=>{if(!x.textContent.trim()&&!x.getAttribute("aria-label"))kb.push("unnamed button")});
-          document.querySelectorAll("img:not([alt])").forEach(()=>kb.push("image without alt"));if(!document.documentElement.lang)kb.push("no page language");
+          document.querySelectorAll("img:not([alt])").forEach(()=>kb.push("image without alt"));document.querySelectorAll("#tabs a").forEach(x=>{if(x.getBoundingClientRect().height<44)kb.push("tab too small to tap")});if(document.querySelector("#tabs")&&document.querySelectorAll("#tabs a[aria-current=page]").length!==1)kb.push("current tab not marked");if(!document.documentElement.lang)kb.push("no page language");
           return {low,kb}});lowc.push(...r.low.map(x=>u+" "+x));kbd.push(...r.kb.map(x=>u+" "+x))}
         for(const h of await p.evaluate(()=>[...document.querySelectorAll("a[href]")].map(a=>a.getAttribute("href")).filter(h=>!/^(https?:|mailto:|#)/.test(h)))){
           const r=await p.request.get(new URL(h,"http://localhost:8791"+u).href);if(!r.ok())broken.push(u+" -> "+h)}}
