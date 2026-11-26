@@ -1,12 +1,12 @@
 {
- "measured_at_utc": "2026-11-26T15:47Z",
- "label": "after",
+ "measured_at_utc": "2026-11-26T16:02Z",
+ "label": "final",
  "viewport": "390x844",
  "tabs": {
   "ko": {
    "home": {
-    "screens": 2.1,
-    "chars": 917,
+    "screens": 2,
+    "chars": 882,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
@@ -22,8 +22,8 @@
     "title": "AFMX: 뉴스가 지나간 뒤에 남은 것"
    },
    "risks": {
-    "screens": 3.4,
-    "chars": 2038,
+    "screens": 2.4,
+    "chars": 1124,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
@@ -40,8 +40,8 @@
     "first_card_open_screens": 3.5
    },
    "sectors": {
-    "screens": 1,
-    "chars": 157,
+    "screens": 1.8,
+    "chars": 905,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
@@ -57,8 +57,8 @@
     "title": "섹터 · AFMX"
    },
    "past": {
-    "screens": 2.3,
-    "chars": 3068,
+    "screens": 2.4,
+    "chars": 3115,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
@@ -74,8 +74,8 @@
     "title": "과거 · AFMX"
    },
    "record": {
-    "screens": 2.2,
-    "chars": 975,
+    "screens": 2.3,
+    "chars": 1002,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
@@ -91,12 +91,12 @@
     "title": "기록 · AFMX"
    },
    "method": {
-    "screens": 2.8,
-    "chars": 2389,
+    "screens": 2.1,
+    "chars": 2431,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13.5,
-    "targets": 34,
+    "targets": 35,
     "small_targets": 0,
     "small_target_list": [],
     "jargon": [],
@@ -127,8 +127,8 @@
   },
   "en": {
    "home": {
-    "screens": 2.4,
-    "chars": 1780,
+    "screens": 2.3,
+    "chars": 1703,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
@@ -144,17 +144,15 @@
     "title": "AFMX: What is left after the news"
    },
    "risks": {
-    "screens": 4.4,
-    "chars": 4155,
+    "screens": 3,
+    "chars": 2347,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
     "targets": 24,
     "small_targets": 0,
     "small_target_list": [],
-    "jargon": [
-     "median"
-    ],
+    "jargon": [],
     "h1": 1,
     "heading_skips": 0,
     "first_heading": 1,
@@ -163,8 +161,8 @@
     "title": "Risks · AFMX"
    },
    "sectors": {
-    "screens": 1,
-    "chars": 383,
+    "screens": 2.1,
+    "chars": 2004,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
@@ -180,8 +178,8 @@
     "title": "Sectors · AFMX"
    },
    "past": {
-    "screens": 2.6,
-    "chars": 5655,
+    "screens": 2.7,
+    "chars": 5731,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
@@ -201,8 +199,8 @@
     "title": "Past · AFMX"
    },
    "record": {
-    "screens": 2.4,
-    "chars": 1703,
+    "screens": 2.5,
+    "chars": 1736,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
@@ -222,12 +220,12 @@
     "title": "Record · AFMX"
    },
    "method": {
-    "screens": 2.9,
-    "chars": 4667,
+    "screens": 2.1,
+    "chars": 4751,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13.5,
-    "targets": 34,
+    "targets": 35,
     "small_targets": 0,
     "small_target_list": [],
     "jargon": [
