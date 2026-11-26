@@ -207,54 +207,6 @@
    ]
   }
  },
- "risk_factors": {
-  "2026-us-appropriations-lapse": [
-   "volatility_spike"
-  ],
-  "2026-nvidia-sec-and-leadership": [],
-  "2026-us-excess-capacity-tariffs": [],
-  "2026-ai-buildout-financing": [
-   "credit_widening"
-  ],
-  "2026-us-ai-chip-export-rules": [],
-  "2026-fed-rate-hikes": [
-   "short_rates_up",
-   "long_rates_up"
-  ],
-  "2026-us-iran-war-oil": [
-   "oil_spike"
-  ],
-  "2027-us-debt-limit": [
-   "volatility_spike",
-   "credit_widening"
-  ],
-  "2026-japan-boj-tightening-yen": [
-   "yen_surge"
-  ],
-  "2026-us-private-credit-defaults": [
-   "credit_widening"
-  ],
-  "2026-eurozone-inflation-ecb": [],
-  "2026-china-domestic-demand-property": []
- },
- "about": {
-  "2026-nvidia-sec-and-leadership": [
-   "technology"
-  ],
-  "2026-us-ai-chip-export-rules": [
-   "technology"
-  ],
-  "2026-ai-buildout-financing": [
-   "technology",
-   "communication"
-  ],
-  "2026-us-private-credit-defaults": [
-   "financials"
-  ],
-  "2026-us-iran-war-oil": [
-   "energy"
-  ]
- },
  "factor_names": {
   "oil_spike": {
    "en": "oil price jumped",
@@ -279,7 +231,22 @@
   "yen_surge": {
    "en": "yen strengthened sharply",
    "ko": "엔화가 급등한 날"
+  },
+  "dollar_surge": {
+   "en": "dollar jumped",
+   "ko": "달러가 급등한 날"
+  },
+  "yuan_weakening": {
+   "en": "yuan weakened sharply",
+   "ko": "위안화가 급락한 날"
+  },
+  "euro_drop": {
+   "en": "euro fell sharply",
+   "ko": "유로가 급락한 날"
+  },
+  "chip_selloff": {
+   "en": "chip stocks fell hard",
+   "ko": "반도체주가 급락한 날"
   }
- },
- "note_links": "risk_factors: which measured shock each card resembles (AFMX judgment). about: sectors the card is literally about. sectors.direct: AFMX judgment, shown as 'unconfirmed' unless sensitivity/sectors.json supports it. scripts/build_site.py combines these into links and sector_scores."
+ }
 }

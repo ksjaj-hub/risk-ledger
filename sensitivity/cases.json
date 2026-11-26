@@ -1,0 +1,15 @@
+{
+ "note": "Single past episodes used as hindsight cases. Start dates are taken from the quoted source. The window and threshold are fixed for all cases.",
+ "window_trading_days": 126,
+ "lagged_if_excess_at_most_pct": 3,
+ "cases": [
+  {
+   "id": "2018-us-china-tariffs",
+   "start": "2018-03-22",
+   "en": "2018 US tariffs on Chinese goods",
+   "ko": "2018년 미국의 대중국 관세",
+   "source": "https://en.wikipedia.org/wiki/Tariffs_in_the_first_Trump_administration",
+   "quote": "On March 22, 2018, Trump signed a memorandum under the Section 301"
+  }
+ ]
+}

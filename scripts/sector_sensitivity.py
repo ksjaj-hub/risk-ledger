@@ -43,6 +43,9 @@ FACTORS = {
     "credit_widening": ("BAA10Y", "diff", "high", "Corporate credit spread widens (Moody's Baa minus 10-year, daily change, top 5%)"),
     "volatility_spike": ("VIXCLS", "diff", "high", "VIX jumps (daily change, top 5%)"),
     "yen_surge": ("DEXJPUS", "pct", "low", "Yen strengthens sharply against the dollar (daily % change, 5% largest)"),
+    "dollar_surge": ("DTWEXBGS", "pct", "high", "Dollar jumps against a broad basket of currencies (daily % change, top 5%, from 2006)"),
+    "yuan_weakening": ("DEXCHUS", "pct", "high", "Chinese yuan weakens against the dollar (daily % change, top 5%, from August 2005 when the yuan began to move daily)", "2005-08-01"),
+    "euro_drop": ("DEXUSEU", "pct", "low", "Euro falls sharply against the dollar (daily % change, 5% largest falls, from 1999)"),
     "chip_selloff": (None, "chips", "low", "Semiconductor stocks fall hard relative to the market (worst 5% of days)"),
 }
 
@@ -91,14 +94,15 @@ def main():
         sector_ex[s] = out
     chips_i = ih.index("Chips")
     result = {"factors": {}, "table": {}}
-    for fid, (sid, how, tail, desc) in FACTORS.items():
+    for fid, (sid, how, tail, desc, *st) in FACTORS.items():
+        fstart = st[0] if st else START
         if how == "chips":
             move = {d: ind[d][chips_i] - mkt[d] for d in days if ind[d][chips_i] > -99}
         else:
             obs = fetch_series(sid, "1989-06-01")
             move = {}
             for (d0, v0), (d1, v1) in zip(obs, obs[1:]):
-                if d1 in mkt and d1 >= START and (dt.date.fromisoformat(d1) - dt.date.fromisoformat(d0)).days <= 5:
+                if d1 in mkt and d1 >= fstart and (dt.date.fromisoformat(d1) - dt.date.fromisoformat(d0)).days <= 5:
                     move[d1] = (100 * (v1 / v0 - 1)) if how == "pct" and v0 > 0 else (v1 - v0)
         ds = sorted(move)
         vals = sorted(move[d] for d in ds)
@@ -136,6 +140,20 @@ def main():
         print(fid, result["factors"][fid])
         for s, v in sorted(row.items(), key=lambda kv: kv[1]["mean_excess_pct"]):
             print(f"   {s:24s} {v['mean_excess_pct']:+.2f}  t={v['t']:+.1f}  n={v['n']}  halves {v['first_half_pct']:+.2f}/{v['second_half_pct']:+.2f}  {v['evidence']}")
+    # single past episodes: cumulative sector return minus market over a fixed window from a verified start date
+    cases_in = json.loads((ROOT / "sensitivity" / "cases.json").read_text())
+    result["cases"] = {}
+    for c in cases_in["cases"]:
+        win = [d for d in days if d >= c["start"]][: cases_in["window_trading_days"]]
+        cm = math.prod(1 + mkt[d] / 100 for d in win)
+        row = {}
+        for s_id, names in SECTORS.items():
+            idx = [ih.index(n) for n in names]
+            cs = math.prod(1 + statistics.fmean(ind[d][i] for i in idx) / 100 for d in win)
+            ex = round(100 * (cs - cm), 1)
+            row[s_id] = {"excess_pct": ex, "direction": "lagged" if ex <= -cases_in["lagged_if_excess_at_most_pct"] else "led" if ex >= cases_in["lagged_if_excess_at_most_pct"] else "flat"}
+        result["cases"][c["id"]] = {"start": win[0], "end": win[-1], "trading_days": len(win), "market_return_pct": round(100 * (cm - 1), 1), "sectors": row}
+        print(c["id"], result["cases"][c["id"]])
     result["meta"] = {
         "generated_at_utc": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "warning": "Hindsight statistics on same-day moves. Association, not cause. Not a forecast and not a recommendation.",

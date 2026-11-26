@@ -1,0 +1,122 @@
+{
+ "version": 1,
+ "published": "2026-11-26",
+ "note": "Which measured shocks each card is read against, which past case applies, and which cards share one cause. Fixed in advance and public. Changes are listed in changelog with a date and a new version; earlier versions stay in git history.",
+ "cards": {
+  "2026-us-appropriations-lapse": {
+   "group": "us_fiscal",
+   "factors": [
+    "volatility_spike"
+   ]
+  },
+  "2027-us-debt-limit": {
+   "group": "us_fiscal",
+   "factors": [
+    "volatility_spike",
+    "credit_widening"
+   ]
+  },
+  "2026-nvidia-sec-and-leadership": {
+   "group": "ai_chips",
+   "factors": [
+    "chip_selloff"
+   ],
+   "about": [
+    "technology"
+   ]
+  },
+  "2026-us-ai-chip-export-rules": {
+   "group": "ai_chips",
+   "factors": [
+    "chip_selloff"
+   ],
+   "about": [
+    "technology"
+   ]
+  },
+  "2026-ai-buildout-financing": {
+   "group": "ai_chips",
+   "factors": [
+    "chip_selloff",
+    "credit_widening"
+   ],
+   "about": [
+    "technology",
+    "communication"
+   ]
+  },
+  "2026-us-excess-capacity-tariffs": {
+   "group": "us_tariffs",
+   "factors": [
+    "dollar_surge",
+    "yuan_weakening"
+   ],
+   "cases": [
+    "2018-us-china-tariffs"
+   ]
+  },
+  "2026-fed-rate-hikes": {
+   "group": "us_rates",
+   "factors": [
+    "short_rates_up",
+    "long_rates_up"
+   ]
+  },
+  "2026-us-iran-war-oil": {
+   "group": "oil",
+   "factors": [
+    "oil_spike"
+   ],
+   "about": [
+    "energy"
+   ]
+  },
+  "2026-japan-boj-tightening-yen": {
+   "group": "japan",
+   "factors": [
+    "yen_surge"
+   ]
+  },
+  "2026-us-private-credit-defaults": {
+   "group": "private_credit",
+   "factors": [
+    "credit_widening"
+   ],
+   "about": [
+    "financials"
+   ]
+  },
+  "2026-eurozone-inflation-ecb": {
+   "group": "eurozone",
+   "factors": [
+    "euro_drop"
+   ]
+  },
+  "2026-china-domestic-demand-property": {
+   "group": "china",
+   "factors": [
+    "yuan_weakening"
+   ]
+  }
+ },
+ "score": {
+  "version": 2,
+  "points": {
+   "direct": 3,
+   "strong": 3,
+   "moderate": 2,
+   "case": 2,
+   "unconfirmed": 1,
+   "market_wide": 1
+  },
+  "top_groups": 5,
+  "rule": "For each sector: take the highest points among the cards of each cause group, keep the five largest groups, divide by 15, times 100."
+ },
+ "changelog": [
+  {
+   "date": "2026-11-26",
+   "version": 1,
+   "change": "First published mapping. Score method 2 replaces the plain count used for a few hours on the same day."
+  }
+ ]
+}
