@@ -1,0 +1,37 @@
+{
+  "written": "2026-11-26, before scripts/research_v4d.py produced any number on real data",
+  "status": "Fixed. Not edited after results exist. Hindsight comparison; not part of the ledger; not a forecast.",
+  "asked_for": "The owner asked for the AFMX score to be scored against the most widely used indicators, to find where it falls short.",
+  "afmx": "v3_long from round 1: rules/v3.json thresholds on the long series, score lifted to the floor of the indicated state. No fitting here.",
+  "benchmarks": {
+    "vix": "CBOE VIX, daily close (FRED VIXCLS)",
+    "vix_term": "VIX divided by 3-month VIX (FRED VIXCLS / VXVCLS), from 2007-12",
+    "nfci": "Chicago Fed National Financial Conditions Index, weekly, used 5 trading days late (FRED NFCI)",
+    "anfci": "Chicago Fed Adjusted NFCI, weekly, 5 trading days late (FRED ANFCI)",
+    "stlfsi": "St. Louis Fed Financial Stress Index, weekly, 5 trading days late (FRED STLFSI4)",
+    "kcfsi": "Kansas City Fed Financial Stress Index, monthly, used from 10 trading days after month end (FRED KCFSI)",
+    "ofr_fsi": "Office of Financial Research Financial Stress Index, daily, 2 trading days late (financialresearch.gov)",
+    "ciss_us": "ECB Composite Indicator of Systemic Stress for the United States, 1 trading day late (ECB Data Portal)",
+    "credit_spread": "Moody's Baa yield minus 10-year Treasury, daily (FRED BAA10Y)",
+    "yield_curve": "10-year minus 3-month Treasury, sign flipped so higher = more inverted (FRED T10Y3M)",
+    "drawdown": "Market's fall from its 252-day high (French daily market return)",
+    "below_200dma": "Market's distance below its 200-day average, higher = further below",
+    "realized_vol": "21-day realized volatility of the market"
+  },
+  "not_testable": "CNN Fear & Greed (no official history file), MOVE and SKEW (no free primary-source history). They are compared on published facts only, not on numbers.",
+  "revision_caveat": "NFCI, ANFCI, STLFSI, KCFSI and CISS are re-estimated; today's history is what is downloaded, so their numbers here are flattered. Real-time vintages are not used.",
+  "sample": "Test period only, 2007-01-03 on (AFMX thresholds and nothing else were set with knowledge of earlier years). Ranking uses the days on which every available indicator has a value. 1990-2006 is reported for information.",
+  "measures": {
+    "M1": "AUROC for: market closes 10% or more below today's close within 63 trading days",
+    "M2": "AUROC for: 5% or more within 21 trading days",
+    "M3": "Early warning: M1 computed only on days when the market is within 5% of its 252-day high",
+    "M4": "Spearman correlation between the indicator and the size of the worst fall over the next 63 trading days",
+    "M5": "Share of the indicator's lowest-third days that were followed by the 10% fall (lower is better)",
+    "M6": "Share of the indicator's highest-fifth days that were followed by the 10% fall (higher is better)",
+    "M7": "Times per year the indicator crosses its own 80th percentile (lower is calmer). Reported, not ranked: weekly and monthly series move less by construction."
+  },
+  "scoring": "On each of M1 to M6 an indicator gets 100 x (number of indicators it beats or ties) / (number of other indicators). Overall = plain average of the six. Thirds, fifths and the 80th percentile are taken within the ranking sample for every indicator alike.",
+  "uncertainty": "Moving-block bootstrap, 63-day blocks, 2,000 draws, seed 20261126. For M1 and M3, the 90% interval of (indicator minus AFMX).",
+  "what_counts_as_a_shortfall": "AFMX is called behind an indicator on M1 or M3 only when the 90% interval of the difference lies above zero. A lower rank without that is reported as 'not distinguishable'. Also reported: Spearman correlation of AFMX with each indicator (how much AFMX repeats what is already free).",
+  "what_can_come_out": "A scorecard and a list of shortfalls. No rule change. Any change to the rule would be a separate pre-registered test and the owner's decision."
+}
