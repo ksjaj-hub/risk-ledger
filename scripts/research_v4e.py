@@ -23,6 +23,47 @@ r3 = R.r3
 HI = "higher_is_riskier"
 
 
+SPDR = ["XLB", "XLC", "XLE", "XLF", "XLI", "XLK", "XLP", "XLRE", "XLU", "XLV", "XLY"]
+SPDR_URL = "https://www.ssga.com/us/en/intermediary/etfs/library-content/products/fund-data/etfs/us/navhist-us-en-{}.xlsx"
+
+
+def spdr_nav(tk, fixture):
+    """[(date, NAV)] ascending from the issuer's NAV history file."""
+    if fixture:
+        rows = list(csv.reader(open(pathlib.Path(fixture) / f"navhist_{tk}.csv")))
+    else:
+        import io, urllib.request
+        import openpyxl
+        req = urllib.request.Request(SPDR_URL.format(tk.lower()), headers={"User-Agent": "Mozilla/5.0 (research script)"})
+        with urllib.request.urlopen(req, timeout=90) as r_:
+            wb = openpyxl.load_workbook(io.BytesIO(r_.read()), read_only=True, data_only=True)
+        rows = [[c for c in row] for row in wb.worksheets[0].iter_rows(values_only=True)]
+    out = []
+    for row in rows:
+        if not row or row[0] is None or len(row) < 2:
+            continue
+        d = row[0]
+        if isinstance(d, (dt.datetime, dt.date)):
+            day = d.strftime("%Y-%m-%d")
+        else:
+            day = None
+            for fmt in ("%d-%b-%Y", "%Y-%m-%d", "%m/%d/%Y"):
+                try:
+                    day = dt.datetime.strptime(str(d).strip(), fmt).strftime("%Y-%m-%d")
+                    break
+                except ValueError:
+                    continue
+        try:
+            v = float(str(row[1]).replace(",", "").replace("$", ""))
+        except ValueError:
+            continue
+        if day and v > 0:
+            out.append((day, v))
+    if len(out) < 300:
+        raise RuntimeError(f"only {len(out)} rows parsed")
+    return sorted(out)
+
+
 def auc(s, y, m):
     ok = m & ~np.isnan(s) & ~np.isnan(y)
     if ok.sum() < 100:
@@ -412,8 +453,54 @@ def main():
         outE = {"warning": "Exploratory. Breadth was chosen after seeing round 5. Hindsight; not a forecast.", "levels": [r3(c) for c in cuts],
                 "candidates": E, "check_1927_1985": chk, "reading": "strong" if strong else "worth_recording" if (pos_all or pos_nh) else "drop",
                 "breadth_now": {"day": days[-1], "value": r3(x[-1])}}
+    # ---------------- part F (preregistration6.json): a breadth measure that can be collected daily
+    outF = {"warning": "Hindsight. Not part of the ledger. Not a forecast.", "funds": {}}
+    navs = {}
+    for tk in SPDR:
+        try:
+            navs[tk] = spdr_nav(tk, a.fixture)
+            outF["funds"][tk] = {"first_day": navs[tk][0][0], "last_day": navs[tk][-1][0], "days": len(navs[tk])}
+        except Exception as e_:  # noqa: BLE001
+            outF["funds"][tk] = {"unavailable": f"{type(e_).__name__}: {e_}"[:200]}
+            print(tk, "unavailable", e_)
+    if len(navs) >= 9 and "breadth" in cand:
+        below, have = np.zeros(N), np.zeros(N)
+        for tk, obs in navs.items():
+            v = asof(obs)
+            c_ = np.concatenate([[0], np.cumsum(np.nan_to_num(v))])
+            ok_ = np.concatenate([[0], np.cumsum(~np.isnan(v))])
+            for i in range(199, N):
+                if ok_[i + 1] - ok_[i - 199] == 200:
+                    have[i] += 1
+                    below[i] += v[i] < (c_[i + 1] - c_[i - 199]) / 200
+        px = np.where(have >= 9, below / np.maximum(have, 1), np.nan)
+        both_ok = ~np.isnan(px) & ~np.isnan(cand["breadth"])
+        rho = R4.spearman(px[both_ok], cand["breadth"][both_ok]) if both_ok.sum() > 500 else None
+        cuts6 = [0.245, 0.49, 0.857]
+        scores["F1"], idxs["F1"] = run({**base_comps, "breadth": (px, cuts6, HI)}, uncounted=["breadth"])
+        cov = te & ~np.isnan(px)
+        f1, b1 = auc(scores["F1"], O1, cov), auc(scores["v3"], O1, cov)
+        nh = auc(px, O1, cov & near)
+        rngF = np.random.default_rng(SEED + 6)
+        rng = rngF
+        dF = boot_diff(scores["F1"], scores["v3"], O1, cov)
+        chk = {"same_information": bool(rho is not None and rho >= 0.80), "near_highs": bool(nh is not None and nh >= 0.58),
+               "in_the_rule": bool(f1 is not None and b1 is not None and f1 - b1 >= 0.02)}
+        outF.update({"first_day_with_9_funds": days[int(np.flatnonzero(~np.isnan(px))[0])], "common_days_with_49_industry_breadth": int(both_ok.sum()),
+                     "spearman_with_49_industry_breadth": r3(rho),
+                     "near_high_O1_2007_on": {"proxy": r3(nh), "49_industry_breadth_same_days": r3(auc(cand["breadth"], O1, cov & near)),
+                                              "v3_same_days": r3(auc(scores["v3"], O1, cov & near))},
+                     "all_days_O1_2007_on": {"proxy": r3(auc(px, O1, cov)), "49_industry_breadth_same_days": r3(auc(cand["breadth"], O1, cov))},
+                     "v3_plus_proxy": {"test_O1": r3(f1), "v3_same_days": r3(b1), "minus_v3_90": dF[0] if dF else None,
+                                       "test_near_high_O1": r3(auc(scores["F1"], O1, cov & near)), "card": card("F1")},
+                     "checks": chk, "reading": "record_live" if all(chk.values()) else "failed_a_check",
+                     "proxy_now": {"day": days[int(np.flatnonzero(~np.isnan(px))[-1])], "value": r3(px[int(np.flatnonzero(~np.isnan(px))[-1])])}})
+    else:
+        outF["reading"] = "source_unreachable"
     pathlib.Path(a.out).mkdir(parents=True, exist_ok=True)
     (pathlib.Path(a.out) / "results5.json").write_text(json.dumps(out, indent=1) + "\n")
+    (pathlib.Path(a.out) / "results6.json").write_text(json.dumps(outF, indent=1) + "\n")
+    print("F", outF["reading"], outF.get("checks"), outF.get("spearman_with_49_industry_breadth"))
     if outE:
         (pathlib.Path(a.out) / "results5b.json").write_text(json.dumps(outE, indent=1) + "\n")
         print("E", outE["reading"], {k: (v["test_O1"], v["passes_bar"]) for k, v in outE["candidates"].items()})
