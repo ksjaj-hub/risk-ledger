@@ -112,7 +112,11 @@ def main():
         return 0
 
     day = now.strftime("%Y-%m-%d")
-    rec_path = mdir / day[:4] / f"{day}.json"
+    stem = day
+    if (mdir / day[:4] / f"{day}.json").exists():
+        # a later record on the same day gets the time in its name; nothing is overwritten
+        stem = now.strftime("%Y-%m-%dT%H%MZ")
+    rec_path = mdir / day[:4] / f"{stem}.json"
     if rec_path.exists():
         print(f"{rec_path} already exists; records are never overwritten")
         return 0
@@ -161,7 +165,7 @@ def main():
             "record": rec_path.relative_to(root).as_posix(),
             "note": "Risk state only. Not a forecast and not investment advice.",
         }
-        (adir / f"{day}.json").write_text(dump(alert))
+        (adir / f"{stem}.json").write_text(dump(alert))
         print(f"alert ({kind}): {changes or 'first record'}")
     return 0
 

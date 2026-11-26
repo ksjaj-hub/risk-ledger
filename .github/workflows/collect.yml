@@ -29,6 +29,11 @@ jobs:
           git ls-files --others --exclude-standard -- records alerts | grep '\.json$' | while read -r f; do
             ots stamp "$f"
           done
+          # complete earlier proofs once Bitcoin has confirmed them (proof files only, never the records)
+          git ls-files -- 'records/**/*.ots' 'alerts/**/*.ots' | tail -n 40 | while read -r f; do
+            ots upgrade "$f" || true
+            rm -f "$f.bak"
+          done
       - name: Rebuild the public page data
         run: python scripts/build_site.py
       - name: Commit
@@ -38,4 +43,5 @@ jobs:
           git add records alerts docs
           git diff --cached --quiet && { echo "nothing new"; exit 0; }
           git commit -m "record: $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull --rebase origin main
           git push
