@@ -11,10 +11,35 @@ the components that exist. Only levels are written, never licensed raw values.
 import argparse, bisect, csv, datetime as dt, json, pathlib, sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-from collect import ROOT, fetch_series, level_for  # noqa: E402
+from collect import ROOT, confirm, fetch_series, judge, level_for, trading_days  # noqa: E402
 
 START = "1990-01-01"
 MIN_WINDOW = 252  # the drawdown component needs a full year of prices before it counts
+
+
+class Asof:
+    """Same result as collect.levels_asof(min_window=MIN_WINDOW), without rebuilding date lists each day."""
+
+    def __init__(self, rule, by_series):
+        self.rule = rule
+        self.d = {k: [x for x, _ in v] for k, v in by_series.items()}
+        self.v = {k: [x for _, x in v] for k, v in by_series.items()}
+
+    def levels(self, day):
+        out = {}
+        for c in self.rule["components"]:
+            dates, vals = self.d[c["series"]], self.v[c["series"]]
+            i = bisect.bisect_right(dates, day)
+            if i == 0:
+                continue
+            if c["transform"] == "latest":
+                value = vals[i - 1]
+            else:
+                if i < MIN_WINDOW:
+                    continue
+                value = 100 * (1 - vals[i - 1] / max(vals[i - 252:i]))
+            out[c["id"]] = level_for(value, c["thresholds"], c["direction"])
+        return out
 
 
 def main():
@@ -37,43 +62,21 @@ def main():
         avail[c["id"]] = {"series": c["series"], "first": s[0][0] if s else None,
                           "last": s[-1][0] if s else None, "observations": len(s)}
         print(c["series"], avail[c["id"]])
-    days = sorted(set().union(*[set(series[c["id"]][0]) for c in comps if c["transform"] == "latest"
-                                and c["series"] != "NFCI"]))
+    by_series = {c["series"]: list(zip(*series[c["id"]])) for c in comps}
+    days = trading_days(rule, by_series)
     names = [s["name"] for s in rule["states"]]
-    conf = rule.get("confirmation", {})
-    esc, de = conf.get("escalate_after_days", 1), conf.get("deescalate_after_days", 1)
     rows, hist, pub = [], [], None
+    keep = max(rule.get("confirmation", {}).get("deescalate_after_days", 1),
+               rule.get("confirmation", {}).get("escalate_after_days", 1))
+    asof = Asof(rule, by_series)
     for day in days:
-        levels = {}
-        for c in comps:
-            dates, vals = series[c["id"]]
-            i = bisect.bisect_right(dates, day)
-            if i == 0:
-                continue
-            if c["transform"] == "latest":
-                value = vals[i - 1]
-            else:
-                if i < MIN_WINDOW:
-                    continue
-                value = 100 * (1 - vals[i - 1] / max(vals[i - 252:i]))
-            levels[c["id"]] = level_for(value, c["thresholds"], c["direction"])
+        levels = asof.levels(day)
         if not levels:
             continue
-        lv = list(levels.values())
-        score = round(100 * sum(lv) / (3 * len(lv)))
-        idx = max(k for k, s in enumerate(rule["states"]) if score >= s["min_score"])
-        for f in rule["floors"]:
-            ext = sum(l == 3 for k, l in levels.items() if k not in f.get("not_counting", []))
-            if ext >= f["if_components_at_extreme_at_least"]:
-                idx = max(idx, names.index(f["state_at_least"]))
-        hist.append(idx)
-        if pub is None:
-            pub = idx
-        elif len(hist) >= esc and all(h > pub for h in hist[-esc:]):
-            pub = min(hist[-esc:])
-        elif len(hist) >= de and all(h < pub for h in hist[-de:]):
-            pub = max(hist[-de:])
-        rows.append((day, names[pub], score, len(lv), levels))
+        score, idx = judge(rule, levels)
+        hist = (hist + [idx])[-keep:]
+        pub = confirm(pub, hist, rule)
+        rows.append((day, names[pub], score, len(levels), levels))
 
     out = pathlib.Path(a.out) / rule["version"]
     out.mkdir(parents=True, exist_ok=True)

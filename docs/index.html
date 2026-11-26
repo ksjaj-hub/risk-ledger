@@ -123,6 +123,7 @@ const T={en:{subh:"AFMX Weekly.",subp:"One short note a week: what changed, what
  foot:"This is a description of risk conditions. It is not a forecast, not a recommendation to buy or sell anything, and not investment advice. Inputs via FRED; most lag by about one trading day. VIX data: Copyright Chicago Board Options Exchange, Inc.",
  states:STATES,levels:["Low","Moderate","High","Extreme"],comp:{},of:" of 100",asof:"as of ",
  rec:(d,t,v,n)=>"Recorded "+d+" at "+t+" UTC under rule "+v+". "+n+" record"+(n===1?"":"s")+" so far.",
+ rulev:"Rule",held:x=>"The rule indicated "+x+" on the latest day; the state steps down only after 5 trading days in a row.",
  start:"Start",change:"Change",first:"First record: ",state:"State",status:{open:"open",easing:"easing",worsened:"worsened",resolved:"resolved"},
  cond:"conditions written ",what:"What happened",how:"How it reaches markets",res:"Counts as resolved when all of these are true",wor:"Counts as worsened if any of these happens",rel:"Good news that does not resolve it",log:"Log",srcs:"Sources: ",none:"No record yet",fail:"Data could not be loaded",loc:"en-US"},
 ko:{subh:"AFMX 주간 글.",subp:"일주일에 한 번, 짧게 보냅니다. 무엇이 바뀌었고, 무엇이 아직 열려 있으며, 어떤 호재가 아무것도 해소하지 못했는지 정리합니다. 무료이고 영어로 발행합니다.",subb:"구독",subph:"이메일 주소",subok:"등록됐습니다. 첫 글부터 이메일로 보내 드립니다.",subbad:"이메일 주소를 다시 확인해 주세요.",suberr:"저장하지 못했습니다. 잠시 뒤 다시 시도해 주세요.",src:"원본과 전체 기록",head:"AFMX · 미국 시장 리스크 상태",chg:"상태 변화",chgp:"상태나 요소의 단계가 바뀔 때마다 자동으로 기록됩니다.",ev:"열려 있는 사건 리스크",
@@ -132,6 +133,7 @@ ko:{subh:"AFMX 주간 글.",subp:"일주일에 한 번, 짧게 보냅니다. 무
  foot:"이 페이지는 리스크 상태를 설명합니다. 예측이 아니며, 무엇을 사거나 팔라는 권유나 투자 조언이 아닙니다. 입력 자료는 FRED를 통해 받으며 대부분 약 1거래일 늦습니다. VIX 자료: Copyright Chicago Board Options Exchange, Inc.",
  states:["평온","주의","높음","위기"],levels:["낮음","보통","높음","매우 높음"],
  comp:{equity_volatility:"주식 변동성",credit_stress:"신용 불안",yield_curve:"금리 곡선",financial_conditions:"금융 여건",equity_drawdown:"주가 낙폭"},of:" / 100",asof:"기준일 ",
+ rulev:"규칙",held:x=>"최근 거래일에 규칙이 가리킨 상태는 "+x+"입니다. 상태는 5거래일 연속 확인된 뒤에만 내려갑니다.",
  rec:(d,t,v,n)=>d+" "+t+" UTC 기록, 규칙 "+v+". 지금까지 기록 "+n+"건.",
  start:"시작",change:"변화",first:"첫 기록: ",state:"상태",status:{open:"진행 중",easing:"완화",worsened:"악화",resolved:"해소"},
  cond:"조건 작성일 ",what:"무슨 일이 있었나",how:"시장에 미치는 경로",res:"아래가 모두 사실이면 해소로 봅니다",wor:"아래 중 하나라도 일어나면 악화로 봅니다",rel:"해소가 아닌 호재",log:"기록 (원문)",srcs:"출처: ",none:"아직 기록이 없습니다",fail:"자료를 불러오지 못했습니다",loc:"ko-KR"}};
@@ -156,7 +158,7 @@ function render(){
     document.getElementById("score").textContent="AFMX "+L.score+t.of;
     STATES.forEach((s,i)=>{const b=$("span");if(i<=si)b.style.background=COLORS[si];sc.append(b)});
     STATES.forEach((s,i)=>sc.append($("small",i===si?"on":"",t.states[i])));
-    document.getElementById("asof").textContent=t.rec(fmt(L.recorded_at_utc.slice(0,10)),L.recorded_at_utc.slice(11,16),L.rule_version,D.history.length);
+    document.getElementById("asof").textContent=t.rec(fmt(L.recorded_at_utc.slice(0,10)),L.recorded_at_utc.slice(11,16),L.rule_version,D.history.length)+(L.indicated_state&&L.indicated_state!==L.state?" "+t.held(stName(L.indicated_state)):"");
     Object.entries(L.components).forEach(([id,c])=>{
       const d=$("div","comp");d.append($("div","lbl",cn(id)));
       const lv=$("div","lv",lvName(c));lv.style.color=COLORS[c.level];d.append(lv);
@@ -170,7 +172,7 @@ function render(){
     r.append($("span","tag "+a.type,a.type==="baseline"?t.start:t.change));
     const b=$("div","body");
     b.append($("div","ti",(a.type==="baseline"?t.first:t.state+" ")+stName(a.state)+" ("+a.score+")"));
-    if(a.changes.length)b.append($("div","su",a.changes.map(c=>(c.what==="state"?t.state:cn(c.what))+": "+lab(c.from)+" → "+lab(c.to)).join("; ")));
+    if(a.changes.length)b.append($("div","su",a.changes.map(c=>c.what==="rule_version"?t.rulev+": "+c.from+" → "+c.to:(c.what==="state"?t.state:cn(c.what))+": "+lab(c.from)+" → "+lab(c.to)).join("; ")));
     r.append(b);al.append(r)});
   const ev=document.getElementById("events");ev.replaceChildren();
   const order={worsened:0,open:1,easing:2,resolved:3};

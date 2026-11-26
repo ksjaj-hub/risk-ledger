@@ -1,6 +1,6 @@
 {
  "rule": {
-  "version": "v1",
+  "version": "v2",
   "components": {
    "equity_volatility": "Equity volatility",
    "credit_stress": "Credit stress",

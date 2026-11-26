@@ -119,7 +119,7 @@
     "state_change",
     "component_level_change"
   ],
-  "status": "Candidate only. Not in force. The collector uses rules/v1.json until a v2 is published.",
+  "status": "Adopted and published as rules/v2.json on 2026-11-26. Kept here as the candidate that was backtested.",
   "confirmation": {
     "escalate_after_days": 1,
     "deescalate_after_days": 5,

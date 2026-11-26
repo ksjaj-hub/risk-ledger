@@ -5,7 +5,7 @@ Standard library only. Usage:
   python scripts/collect.py                 # live fetch from the FRED API (needs FRED_API_KEY)
   python scripts/collect.py --fixture DIR   # read <SERIES>.csv from DIR (tests)
 """
-import argparse, csv, datetime as dt, hashlib, io, json, os, pathlib, sys, time, urllib.request
+import argparse, bisect, csv, datetime as dt, hashlib, io, json, os, pathlib, sys, time, urllib.request
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 API = ("https://api.stlouisfed.org/fred/series/observations"
@@ -66,15 +66,66 @@ def evaluate(rule, series):
         else:
             entry["value_withheld"] = "source license does not allow republishing"
         comps[c["id"]] = entry
-    levels = [e["level"] for e in comps.values()]
-    score = round(100 * sum(levels) / (3 * len(levels)))
+    score, idx = judge(rule, {k: e["level"] for k, e in comps.items()})
+    return comps, score, [s["name"] for s in rule["states"]][idx]
+
+
+def judge(rule, levels):
+    """levels: {component_id: level}. Returns (score, index of the state the rule indicates)."""
     names = [s["name"] for s in rule["states"]]
+    lv = list(levels.values())
+    score = round(100 * sum(lv) / (3 * len(lv)))
     idx = max(i for i, s in enumerate(rule["states"]) if score >= s["min_score"])
-    extremes = sum(l == 3 for l in levels)
     for f in rule["floors"]:
+        extremes = sum(l == 3 for k, l in levels.items() if k not in f.get("not_counting", []))
         if extremes >= f["if_components_at_extreme_at_least"]:
             idx = max(idx, names.index(f["state_at_least"]))
-    return comps, score, names[idx]
+    return score, idx
+
+
+def levels_asof(rule, series, day, min_window=1):
+    """Component levels using only observations dated on or before `day`."""
+    out = {}
+    for c in rule["components"]:
+        obs = series[c["series"]]
+        i = bisect.bisect_right([d for d, _ in obs], day)
+        if i == 0:
+            continue
+        if c["transform"] == "latest":
+            value = obs[i - 1][1]
+        else:
+            if i < min_window:
+                continue
+            value = 100 * (1 - obs[i - 1][1] / max(v for _, v in obs[max(0, i - 252):i]))
+        out[c["id"]] = level_for(value, c["thresholds"], c["direction"])
+    return out
+
+
+def confirm(published, recent, rule):
+    """Apply the rule's confirmation step. `recent` = indicated state indexes, oldest first, ending today.
+
+    Up: after `escalate_after_days` days in a row above the published state (default 1 = at once).
+    Down: after `deescalate_after_days` days in a row below it, and then only to the highest of those days.
+    A rule without a confirmation block publishes what it indicates.
+    """
+    conf = rule.get("confirmation", {})
+    esc, de = conf.get("escalate_after_days", 1), conf.get("deescalate_after_days", 1)
+    if published is None:
+        return recent[-1]
+    if len(recent) >= esc and all(h > published for h in recent[-esc:]):
+        return min(recent[-esc:])
+    if len(recent) >= de and all(h < published for h in recent[-de:]):
+        return max(recent[-de:])
+    return published
+
+
+def trading_days(rule, series):
+    """Days that count for confirmation: dates of the daily market inputs."""
+    ds = set()
+    for c in rule["components"]:
+        if c["transform"] == "latest" and c["series"] != "NFCI":
+            ds.update(d for d, _ in series[c["series"]])
+    return sorted(ds)
 
 
 def latest_record(market_dir):
@@ -99,7 +150,8 @@ def main():
     now = dt.datetime.fromisoformat(a.now) if a.now else dt.datetime.now(dt.timezone.utc)
     start = (now - dt.timedelta(days=420)).strftime("%Y-%m-%d")
     series = {c["series"]: fetch_series(c["series"], start, a.fixture) for c in rule["components"]}
-    comps, score, state = evaluate(rule, series)
+    comps, score, indicated = evaluate(rule, series)
+    names = [s["name"] for s in rule["states"]]
 
     market = rule["market"].lower()
     mdir = root / "records" / market
@@ -110,6 +162,26 @@ def main():
             {k: v["observation_date"] for k, v in prev["components"].items()} == obs_dates:
         print("no new observations since last record; nothing written")
         return 0
+
+    # Confirmation: start from the last published state and walk the trading days since that record.
+    days = trading_days(rule, series)
+    prev_day = None
+    if prev:
+        daily = {c["id"] for c in rule["components"] if c["transform"] == "latest" and c["series"] != "NFCI"}
+        prev_day = max(v["observation_date"] for k, v in prev["components"].items() if k in daily)
+    todo = [d for d in days if prev_day is None or d >= prev_day][-30:] or days[-1:]
+    lookback = max(rule.get("confirmation", {}).get("deescalate_after_days", 1),
+                   rule.get("confirmation", {}).get("escalate_after_days", 1))
+    first = days.index(todo[0])
+    window = days[max(0, first - lookback + 1):]
+    ind = {d: judge(rule, levels_asof(rule, series, d))[1] for d in window}
+    ind[window[-1]] = names.index(indicated)  # the last day uses every latest observation, as recorded above
+    published = names.index(prev["state"]) if prev else None
+    for d in todo:
+        recent = [ind[x] for x in window if x <= d]
+        published = confirm(published, recent, rule)
+    state = names[published]
+    recent_days = [{"date": d, "indicated": names[ind[d]]} for d in window[-lookback:]]
 
     day = now.strftime("%Y-%m-%d")
     stem = day
@@ -128,6 +200,8 @@ def main():
         "rule_sha256": hashlib.sha256(rule_bytes).hexdigest(),
         "state": state,
         "score": score,
+        **({"indicated_state": indicated, "recent_indicated_states": recent_days}
+           if "confirmation" in rule else {}),
         "components": comps,
         "previous_record": None if not prev_path else {
             "path": prev_path.relative_to(root).as_posix(),
@@ -144,6 +218,8 @@ def main():
         kind = "baseline"
     else:
         kind = "change"
+        if prev["rule_version"] != rule["version"]:
+            changes.append({"what": "rule_version", "from": prev["rule_version"], "to": rule["version"]})
         if prev["state"] != state:
             changes.append({"what": "state", "from": prev["state"], "to": state})
         for k, v in comps.items():
