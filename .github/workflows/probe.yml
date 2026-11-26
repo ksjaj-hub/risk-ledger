@@ -7,10 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          UA="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36"
-          echo "== stooq"
-          curl -sL -m 30 -A "$UA" -w "\nHTTP %{http_code}\n" "https://stooq.com/q/d/l/?s=xlk.us&i=d" | (head -c 400; echo; tail -c 200) || true
-          echo "== yahoo chart"
-          curl -sL -m 30 -A "$UA" -w "\nHTTP %{http_code}\n" "https://query1.finance.yahoo.com/v8/finance/chart/XLK?period1=883612800&period2=1795000000&interval=1d&events=div%2Csplit" | (head -c 500; echo; tail -c 150) || true
-          echo "== yahoo query2"
-          curl -sL -m 30 -A "$UA" -w "\nHTTP %{http_code}\n" "https://query2.finance.yahoo.com/v8/finance/chart/XLRE?range=max&interval=1d" | head -c 300 || true
+          B="https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp"
+          for f in 12_Industry_Portfolios_daily_CSV 49_Industry_Portfolios_daily_CSV F-F_Research_Data_Factors_daily_CSV; do
+            echo "== $f"
+            curl -sL -m 60 -o $f.zip -w "HTTP %{http_code} %{size_download}\n" "$B/$f.zip" || true
+            unzip -o -q $f.zip || true
+          done
+          ls -la
+          for c in *.csv *.CSV; do [ -f "$c" ] || continue; echo "== $c"; head -c 900 "$c"; echo; grep -n "Average\|Equal\|Value" "$c" | head -5; wc -l "$c"; tail -4 "$c"; done
