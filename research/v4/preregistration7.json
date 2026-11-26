@@ -1,0 +1,24 @@
+{
+  "written": "2026-11-26 (UTC), before part G of scripts/research_v4e.py produced any number",
+  "status": "Fixed. Exploratory: every candidate here was picked because it came close in round 5. It cannot by itself justify a rule change.",
+  "asked_for": "The owner asked for the candidates that came closest to the bar to be looked at again.",
+  "what_has_been_seen": "Round 5: each candidate alone, near highs and on all days, on all periods. Round 5b: v3 plus breadth (E1) on train and test. Not seen: any of the candidates below inside the v3 rule, or combined with breadth.",
+  "form": "As in round 5b: one more component in the v3 rule, levels at the candidate's 50th, 75th and 95th percentile of 1990-2006, not counted toward floors.",
+  "candidates": {
+    "G1": "v3 plus industry dispersion",
+    "G2": "v3 plus margin-loan growth",
+    "G3": "v3 plus the 126-day rise in the 2-year yield",
+    "G4": "v3 plus breadth plus dispersion",
+    "G5": "v3 plus breadth plus margin-loan growth",
+    "G6": "v3 plus breadth, with credit stress read from the Baa spread (round 5 C1)",
+    "G7": "v3 plus breadth plus the 200-day trend component of round 5"
+  },
+  "measures": "Train and test O1 AUROC, test near-high AUROC, test O2, state ladder, state changes; 90% interval of the test difference to v3 and to E1 (v3 plus breadth), and the same interval widened for 7 candidates (the 10%/7 percentile).",
+  "old_period": "1927-1985 (or from the candidate's first day): drawdown level plus the candidate's level against drawdown level alone; for G4, drawdown plus breadth plus dispersion against drawdown plus breadth.",
+  "reading": {
+    "useful_alone": "G1, G2 or G3 clears the round 5 part A bar with the widened interval above zero: record it live alongside breadth.",
+    "adds_to_breadth": "G4, G5 or G7 beats E1 on the test period with the widened interval of the difference above zero, is not more than 0.02 below E1 on train, and its old-period check is not negative: record it live alongside breadth.",
+    "verifiable_and_no_worse": "G6 is within 0.01 of E1 on train and test: the Baa spread can replace the high-yield spread in whatever is recorded.",
+    "otherwise": "Breadth alone stays the one lead."
+  }
+}

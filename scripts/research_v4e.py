@@ -453,6 +453,60 @@ def main():
         outE = {"warning": "Exploratory. Breadth was chosen after seeing round 5. Hindsight; not a forecast.", "levels": [r3(c) for c in cuts],
                 "candidates": E, "check_1927_1985": chk, "reading": "strong" if strong else "worth_recording" if (pos_all or pos_nh) else "drop",
                 "breadth_now": {"day": days[-1], "value": r3(x[-1])}}
+    # ---------------- part G (preregistration7.json): second look at the near misses, exploratory
+    outG = None
+    if outE and all(k in cand for k in ("dispersion", "margin_growth", "rate_rise")):
+        rng = np.random.default_rng(SEED + 7)
+        qc = lambda z: [float(np.nanpercentile(z[tr], p_)) for p_ in (50, 75, 95)]
+        cp = {k: (cand[k], qc(cand[k]), HI) for k in ("breadth", "dispersion", "margin_growth", "rate_rise")}
+        cp["trend"] = tcomp["trend"]
+        defs = {"G1": (base_comps, ["dispersion"]), "G2": (base_comps, ["margin_growth"]), "G3": (base_comps, ["rate_rise"]),
+                "G4": (base_comps, ["breadth", "dispersion"]), "G5": (base_comps, ["breadth", "margin_growth"]),
+                "G6": (c1, ["breadth"]), "G7": (base_comps, ["breadth", "trend"])}
+        G = {}
+        wide = lambda v: r3(np.nanpercentile(v, 100 * 0.10 / len(defs)))
+        for k, (bc, extra) in defs.items():
+            scores[k], idxs[k] = run({**bc, **{e_: cp[e_] for e_ in extra}}, uncounted=extra)
+            g = card(k)
+            g["passes_bar"] = all(g["bar"].values())
+            d3, dE = boot_diff(scores[k], scores["v3"], O1, te), boot_diff(scores[k], scores["E1"], O1, te)
+            g["test_minus_v3_lower_end_widened"] = wide(d3[1]) if d3 else None
+            g["test_minus_E1_90"] = dE[0] if dE else None
+            g["test_minus_E1_lower_end_widened"] = wide(dE[1]) if dE else None
+            g["train_minus_E1"] = r3(g["train_O1"] - E["E1"]["train_O1"])
+            g["test_minus_E1"] = r3(g["test_O1"] - E["E1"]["test_O1"])
+            G[k] = g
+        lv = {k: lev(v[0], v[1]) for k, v in cp.items()}
+        oldc = {}
+        for k in ("dispersion", "margin_growth", "rate_rise"):
+            both_ = (ld + lv[k]) / 2
+            dd_ = boot_diff(both_, ld, O1, old)
+            okk = old & ~np.isnan(lv[k])
+            oldc[k] = {"from": days[int(np.flatnonzero(okk)[0])] if okk.any() else None, "drawdown_level_same_days": r3(auc(ld, O1, okk)),
+                       "with_candidate": r3(auc(both_, O1, old)), "difference_90": dd_[0] if dd_ else None,
+                       "near_high_drawdown": r3(auc(ld, O1, okk & near)), "near_high_with_candidate": r3(auc(both_, O1, old & near))}
+        b2, b3 = (ld + lv["breadth"]) / 2, (ld + lv["breadth"] + lv["dispersion"]) / 3
+        d43 = boot_diff(b3, b2, O1, old)
+        oldc["dispersion_on_top_of_breadth"] = {"drawdown_plus_breadth": r3(auc(b2, O1, old)), "plus_dispersion": r3(auc(b3, O1, old)),
+                                                "difference_90": d43[0] if d43 else None}
+        b4 = (ld + lv["breadth"] + lt) / 3
+        d44 = boot_diff(b4, b2, O1, old)
+        oldc["trend_on_top_of_breadth"] = {"drawdown_plus_breadth": r3(auc(b2, O1, old)), "plus_trend": r3(auc(b4, O1, old)),
+                                           "difference_90": d44[0] if d44 else None}
+        corr = {}
+        for k in ("dispersion", "margin_growth", "rate_rise"):
+            m_ = ~np.isnan(cand[k]) & ~np.isnan(cand["breadth"]) & (darr >= "1990-01-02")
+            corr[k] = r3(R4.spearman(cand[k][m_], cand["breadth"][m_]))
+        alone = [k for k in ("G1", "G2", "G3") if G[k]["passes_bar"] and (G[k]["test_minus_v3_lower_end_widened"] or -1) > 0]
+        nonneg = {"G4": (oldc["dispersion_on_top_of_breadth"]["difference_90"] or [-1, -1])[1] >= 0, "G5": True,
+                  "G7": (oldc["trend_on_top_of_breadth"]["difference_90"] or [-1, -1])[1] >= 0}
+        adds = [k for k in ("G4", "G5", "G7") if (G[k]["test_minus_E1_lower_end_widened"] or -1) > 0 and G[k]["train_minus_E1"] >= -0.02 and nonneg[k]]
+        outG = {"warning": "Exploratory. Candidates were chosen after seeing round 5. Hindsight; not a forecast.",
+                "levels": {k: [r3(x) for x in v[1]] for k, v in cp.items()}, "E1_for_reference": {"train_O1": E["E1"]["train_O1"], "test_O1": E["E1"]["test_O1"],
+                                                                                                "test_near_high_O1": E["E1"]["test_near_high_O1"]},
+                "candidates": G, "check_before_1986": oldc, "rank_correlation_with_breadth_1990_on": corr,
+                "reading": {"useful_alone": alone, "adds_to_breadth": adds,
+                            "verifiable_and_no_worse": bool(G["G6"]["train_minus_E1"] >= -0.01 and G["G6"]["test_minus_E1"] >= -0.01)}}
     # ---------------- part F (preregistration6.json): a breadth measure that can be collected daily
     outF = {"warning": "Hindsight. Not part of the ledger. Not a forecast.", "funds": {}}
     navs = {}
@@ -501,6 +555,9 @@ def main():
     (pathlib.Path(a.out) / "results5.json").write_text(json.dumps(out, indent=1) + "\n")
     (pathlib.Path(a.out) / "results6.json").write_text(json.dumps(outF, indent=1) + "\n")
     print("F", outF["reading"], outF.get("checks"), outF.get("spearman_with_49_industry_breadth"))
+    if outG:
+        (pathlib.Path(a.out) / "results7.json").write_text(json.dumps(outG, indent=1) + "\n")
+        print("G", outG["reading"], {k: (v["train_O1"], v["test_O1"], v["test_near_high_O1"]) for k, v in outG["candidates"].items()})
     if outE:
         (pathlib.Path(a.out) / "results5b.json").write_text(json.dumps(outE, indent=1) + "\n")
         print("E", outE["reading"], {k: (v["test_O1"], v["passes_bar"]) for k, v in outE["candidates"].items()})
