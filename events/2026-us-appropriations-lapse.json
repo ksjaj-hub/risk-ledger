@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "id": "2026-us-appropriations-lapse",
+  "title": "US government funding expires on 11 December 2026",
+  "category": "fiscal policy",
+  "markets": [
+    "US"
+  ],
+  "first_recorded": "2026-11-26",
+  "event_started": "2026-11",
+  "status": "open",
+  "what_happened": "Current federal appropriations run out on 2026-12-11, during the lame-duck session before the new Congress convenes in January 2027. A funding bill needs 60 votes in the Senate.",
+  "how_it_reaches_markets": "A lapse in funding would shut parts of the federal government, delay official economic data used by the Fed and markets, and weigh on confidence.",
+  "sourced_facts": [
+    "2026-12-11: current appropriations expire (Fortune)",
+    "A funding bill needs 60 Senate votes (Fortune)"
+  ],
+  "resolution_conditions": {
+    "written_on": "2026-11-26",
+    "resolved_when_all": [
+      "A funding law covering the period beyond 2026-12-11 is signed"
+    ],
+    "worsened_when_any": [
+      "Funding lapses and a shutdown begins",
+      "A shutdown lasts more than 14 days"
+    ]
+  },
+  "relief_headlines_that_do_not_resolve_it": [
+    "A short stopgap of under 30 days (the deadline moves, the risk stays open; record the new date in history)"
+  ],
+  "sources": [
+    "https://fortune.com/2026/11/09/us-debt-limit-outlook-xdate-deadline-default-congress-summer-recess/"
+  ],
+  "history": [
+    {
+      "date": "2026-11-26",
+      "status": "open",
+      "note": "Card opened. Resolution conditions written before the outcome is known."
+    }
+  ],
+  "note": "Risk state only. Not a forecast and not investment advice."
+}

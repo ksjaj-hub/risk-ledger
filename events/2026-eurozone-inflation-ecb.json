@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "id": "2026-eurozone-inflation-ecb",
+  "title": "Eurozone inflation at 4% and further ECB rate rises",
+  "category": "monetary policy",
+  "markets": [
+    "EU"
+  ],
+  "first_recorded": "2026-11-26",
+  "event_started": "2026-11",
+  "status": "open",
+  "what_happened": "Eurozone inflation rose to 4.0% year over year in October 2026 from 3.8%. The ECB is expected to raise rates again in December. European shares had their steepest weekly fall since March in the week ending 2026-11-20.",
+  "how_it_reaches_markets": "Higher rates in Europe at the same time as in the US and Japan tighten global financing conditions; pressure on highly indebted euro governments ahead of elections in Spain, France and Italy.",
+  "sourced_facts": [
+    "October 2026 eurozone inflation 4.0% y/y (from 3.8%); core revised to 2.6% (T. Rowe Price)",
+    "Goldman Sachs Asset Management (2026-11-05) expects one more ECB hike in December, to a peak policy rate of 2.75%",
+    "Week ending 2026-11-20: STOXX 600 -5.80%, DAX -7.28% (T. Rowe Price)"
+  ],
+  "resolution_conditions": {
+    "written_on": "2026-11-26",
+    "resolved_when_all": [
+      "Eurozone headline inflation falls for three consecutive monthly readings",
+      "The ECB signals at a policy meeting that it does not expect further rises"
+    ],
+    "worsened_when_any": [
+      "Eurozone headline inflation reaches 4.5% or more",
+      "The ECB raises by more than 0.25 percentage points at one meeting"
+    ]
+  },
+  "relief_headlines_that_do_not_resolve_it": [
+    "A hike that was fully expected being delivered",
+    "A single lower inflation reading"
+  ],
+  "sources": [
+    "https://www.troweprice.com/personal-investing/resources/insights/global-markets-weekly-update.html",
+    "https://am.gs.com/en-us/advisors/insights/article/market-pulse"
+  ],
+  "history": [
+    {
+      "date": "2026-11-26",
+      "status": "open",
+      "note": "Card opened. Resolution conditions written before the outcome is known."
+    }
+  ],
+  "note": "Risk state only. Not a forecast and not investment advice."
+}

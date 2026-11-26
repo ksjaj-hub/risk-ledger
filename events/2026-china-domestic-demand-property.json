@@ -1,0 +1,44 @@
+{
+  "schema": 1,
+  "id": "2026-china-domestic-demand-property",
+  "title": "China: weak domestic demand and property investment slump",
+  "category": "macro",
+  "markets": [
+    "CN"
+  ],
+  "first_recorded": "2026-11-26",
+  "event_started": "2026 (ongoing)",
+  "status": "open",
+  "what_happened": "October 2026 data showed retail sales growth of 0.4% year over year, fixed-asset investment down 8.1% for January to October, and property development investment down 21.6%.",
+  "how_it_reaches_markets": "Weaker demand for commodities and for foreign companies selling into China; pressure on Chinese and Hong Kong shares; deflationary pressure exported through cheap goods, which also feeds the tariff dispute.",
+  "sourced_facts": [
+    "October 2026: industrial output +4.8% y/y (from 5.5%); retail sales +0.4% (from 1.1%) (T. Rowe Price)",
+    "January to October 2026: fixed-asset investment -8.1%; property development investment -21.6% (T. Rowe Price)",
+    "Week ending 2026-11-20: Hang Seng -5.19%, CSI 300 -1.54% (T. Rowe Price)"
+  ],
+  "resolution_conditions": {
+    "written_on": "2026-11-26",
+    "resolved_when_all": [
+      "Retail sales growth above 3% year over year for three consecutive months",
+      "Year-to-date property development investment decline narrower than 10%"
+    ],
+    "worsened_when_any": [
+      "Retail sales fall year over year",
+      "A large developer or local-government financing vehicle defaults on a public bond"
+    ]
+  },
+  "relief_headlines_that_do_not_resolve_it": [
+    "Announcements of stimulus without subsequent improvement in the monthly data"
+  ],
+  "sources": [
+    "https://www.troweprice.com/personal-investing/resources/insights/global-markets-weekly-update.html"
+  ],
+  "history": [
+    {
+      "date": "2026-11-26",
+      "status": "open",
+      "note": "Card opened. Resolution conditions written before the outcome is known."
+    }
+  ],
+  "note": "Risk state only. Not a forecast and not investment advice."
+}
