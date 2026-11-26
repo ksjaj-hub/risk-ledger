@@ -1,0 +1,375 @@
+{
+ "measured_at_utc": "2026-11-26T15:43Z",
+ "label": "before",
+ "viewport": "390x844",
+ "tabs": {
+  "ko": {
+   "home": {
+    "screens": 1.8,
+    "chars": 912,
+    "small_pct": 33,
+    "tiny_pct": 8,
+    "min_px": 10.5,
+    "targets": 21,
+    "small_targets": 4,
+    "small_target_list": [
+     "AFMX 20",
+     "원본과 전체 기록 19",
+     "EN 27",
+     "한국어 27"
+    ],
+    "jargon": [
+     "거래일"
+    ],
+    "h1": 1,
+    "heading_skips": 0,
+    "first_heading": 1,
+    "landmarks": 4,
+    "skip_link": false,
+    "title": "AFMX: what is left after the news"
+   },
+   "risks": {
+    "screens": 3,
+    "chars": 2034,
+    "small_pct": 40,
+    "tiny_pct": 8,
+    "min_px": 10.5,
+    "targets": 23,
+    "small_targets": 4,
+    "small_target_list": [
+     "AFMX 20",
+     "원본과 전체 기록 19",
+     "EN 27",
+     "한국어 27"
+    ],
+    "jargon": [
+     "중간값",
+     "거래일"
+    ],
+    "h1": 0,
+    "heading_skips": 0,
+    "first_heading": 2,
+    "landmarks": 4,
+    "skip_link": false,
+    "title": "AFMX: what is left after the news",
+    "first_card_open_screens": 2.8
+   },
+   "sectors": {
+    "screens": 1,
+    "chars": 135,
+    "small_pct": 22,
+    "tiny_pct": 22,
+    "min_px": 11,
+    "targets": 22,
+    "small_targets": 15,
+    "small_target_list": [
+     "AFMX 20",
+     "원본과 전체 기록 19",
+     "EN 27",
+     "한국어 27",
+     "기술높음 36",
+     "커뮤니케이션보통 36",
+     "경기소비재보통 36",
+     "필수소비재보통 36"
+    ],
+    "jargon": [],
+    "h1": 0,
+    "heading_skips": 0,
+    "first_heading": 2,
+    "landmarks": 4,
+    "skip_link": false,
+    "title": "AFMX: what is left after the news"
+   },
+   "past": {
+    "screens": 3.9,
+    "chars": 3046,
+    "small_pct": 20,
+    "tiny_pct": 7,
+    "min_px": 10.5,
+    "targets": 12,
+    "small_targets": 5,
+    "small_target_list": [
+     "AFMX 20",
+     "원본과 전체 기록 19",
+     "EN 27",
+     "한국어 27",
+     "계산 방법과 점수표 14"
+    ],
+    "jargon": [
+     "스프레드",
+     "VIX",
+     "중간값",
+     "거래일",
+     "변동성",
+     "사후 검증"
+    ],
+    "h1": 0,
+    "heading_skips": 0,
+    "first_heading": 2,
+    "landmarks": 4,
+    "skip_link": false,
+    "title": "AFMX: what is left after the news"
+   },
+   "record": {
+    "screens": 1.8,
+    "chars": 821,
+    "small_pct": 30,
+    "tiny_pct": 7,
+    "min_px": 10.5,
+    "targets": 11,
+    "small_targets": 4,
+    "small_target_list": [
+     "AFMX 20",
+     "원본과 전체 기록 19",
+     "EN 27",
+     "한국어 27"
+    ],
+    "jargon": [
+     "거래일",
+     "금리 곡선",
+     "금융 여건",
+     "낙폭",
+     "변동성"
+    ],
+    "h1": 0,
+    "heading_skips": 0,
+    "first_heading": 2,
+    "landmarks": 4,
+    "skip_link": false,
+    "title": "AFMX: what is left after the news"
+   },
+   "method": {
+    "screens": 2.4,
+    "chars": 1500,
+    "small_pct": 9,
+    "tiny_pct": 4,
+    "min_px": 10.5,
+    "targets": 11,
+    "small_targets": 4,
+    "small_target_list": [
+     "AFMX 20",
+     "원본과 전체 기록 19",
+     "EN 27",
+     "한국어 27"
+    ],
+    "jargon": [
+     "SHA-256",
+     "OpenTimestamps",
+     "블록체인"
+    ],
+    "h1": 0,
+    "heading_skips": 0,
+    "first_heading": 2,
+    "landmarks": 4,
+    "skip_link": false,
+    "title": "AFMX: what is left after the news"
+   },
+   "weekly": {
+    "screens": 1,
+    "chars": 198,
+    "small_pct": 8,
+    "tiny_pct": 0,
+    "min_px": 12.5,
+    "targets": 15,
+    "small_targets": 4,
+    "small_target_list": [
+     "AFMX 20",
+     "원본과 전체 기록 19",
+     "EN 27",
+     "한국어 27"
+    ],
+    "jargon": [],
+    "h1": 0,
+    "heading_skips": 0,
+    "first_heading": 2,
+    "landmarks": 4,
+    "skip_link": false,
+    "title": "AFMX: what is left after the news"
+   }
+  },
+  "en": {
+   "home": {
+    "screens": 2.1,
+    "chars": 1775,
+    "small_pct": 28,
+    "tiny_pct": 7,
+    "min_px": 10.5,
+    "targets": 21,
+    "small_targets": 4,
+    "small_target_list": [
+     "AFMX 20",
+     "Source and full hist 19",
+     "EN 27",
+     "한국어 27"
+    ],
+    "jargon": [
+     "trading day"
+    ],
+    "h1": 1,
+    "heading_skips": 0,
+    "first_heading": 1,
+    "landmarks": 4,
+    "skip_link": false,
+    "title": "AFMX: what is left after the news"
+   },
+   "risks": {
+    "screens": 3.7,
+    "chars": 4147,
+    "small_pct": 31,
+    "tiny_pct": 7,
+    "min_px": 10.5,
+    "targets": 23,
+    "small_targets": 4,
+    "small_target_list": [
+     "AFMX 20",
+     "Source and full hist 19",
+     "EN 27",
+     "한국어 27"
+    ],
+    "jargon": [
+     "median",
+     "trading day"
+    ],
+    "h1": 0,
+    "heading_skips": 0,
+    "first_heading": 2,
+    "landmarks": 4,
+    "skip_link": false,
+    "title": "AFMX: what is left after the news"
+   },
+   "sectors": {
+    "screens": 1,
+    "chars": 336,
+    "small_pct": 24,
+    "tiny_pct": 24,
+    "min_px": 11,
+    "targets": 22,
+    "small_targets": 15,
+    "small_target_list": [
+     "AFMX 20",
+     "Source and full hist 19",
+     "EN 27",
+     "한국어 27",
+     "TechnologyHigh 36",
+     "CommunicationModerat 36",
+     "Consumer discretiona 36",
+     "Consumer staplesMode 36"
+    ],
+    "jargon": [],
+    "h1": 0,
+    "heading_skips": 0,
+    "first_heading": 2,
+    "landmarks": 4,
+    "skip_link": false,
+    "title": "AFMX: what is left after the news"
+   },
+   "past": {
+    "screens": 4.5,
+    "chars": 5611,
+    "small_pct": 16,
+    "tiny_pct": 8,
+    "min_px": 10.5,
+    "targets": 12,
+    "small_targets": 5,
+    "small_target_list": [
+     "AFMX 20",
+     "Source and full hist 19",
+     "EN 27",
+     "한국어 27",
+     "Method and scorecard 14"
+    ],
+    "jargon": [
+     "spread",
+     "VIX",
+     "median",
+     "trading day",
+     "volatility",
+     "hindsight"
+    ],
+    "h1": 0,
+    "heading_skips": 0,
+    "first_heading": 2,
+    "landmarks": 4,
+    "skip_link": false,
+    "title": "AFMX: what is left after the news"
+   },
+   "record": {
+    "screens": 1.9,
+    "chars": 1399,
+    "small_pct": 28,
+    "tiny_pct": 10,
+    "min_px": 10.5,
+    "targets": 11,
+    "small_targets": 4,
+    "small_target_list": [
+     "AFMX 20",
+     "Source and full hist 19",
+     "EN 27",
+     "한국어 27"
+    ],
+    "jargon": [
+     "trading day",
+     "drawdown",
+     "volatility",
+     "hindsight"
+    ],
+    "h1": 0,
+    "heading_skips": 0,
+    "first_heading": 2,
+    "landmarks": 4,
+    "skip_link": false,
+    "title": "AFMX: what is left after the news"
+   },
+   "method": {
+    "screens": 2.6,
+    "chars": 2901,
+    "small_pct": 9,
+    "tiny_pct": 6,
+    "min_px": 10.5,
+    "targets": 11,
+    "small_targets": 4,
+    "small_target_list": [
+     "AFMX 20",
+     "Source and full hist 19",
+     "EN 27",
+     "한국어 27"
+    ],
+    "jargon": [
+     "SHA-256",
+     "OpenTimestamps",
+     "blockchain",
+     "commit",
+     "hash"
+    ],
+    "h1": 0,
+    "heading_skips": 0,
+    "first_heading": 2,
+    "landmarks": 4,
+    "skip_link": false,
+    "title": "AFMX: what is left after the news"
+   },
+   "weekly": {
+    "screens": 1,
+    "chars": 285,
+    "small_pct": 7,
+    "tiny_pct": 0,
+    "min_px": 12.5,
+    "targets": 15,
+    "small_targets": 4,
+    "small_target_list": [
+     "AFMX 20",
+     "Source and full hist 19",
+     "EN 27",
+     "한국어 27"
+    ],
+    "jargon": [],
+    "h1": 0,
+    "heading_skips": 0,
+    "first_heading": 2,
+    "landmarks": 4,
+    "skip_link": false,
+    "title": "AFMX: what is left after the news"
+   }
+  }
+ }
+}

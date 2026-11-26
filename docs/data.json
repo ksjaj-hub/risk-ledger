@@ -1741,6 +1741,116 @@
      "term": "임시예산",
      "def": "정규 예산이 끝나지 않았을 때 정해진 날까지 미국 정부를 운영하게 해 주는 단기 예산법입니다."
     }
+   },
+   "trading_day": {
+    "en": {
+     "term": "Trading day",
+     "def": "A day the stock market is open. Weekends and holidays do not count, so 21 trading days is about a month and 63 about three months."
+    },
+    "ko": {
+     "term": "거래일",
+     "def": "주식시장이 열리는 날입니다. 주말과 공휴일은 세지 않으므로 21거래일이 약 한 달, 63거래일이 약 석 달입니다."
+    }
+   },
+   "median": {
+    "en": {
+     "term": "Median",
+     "def": "The middle value when past cases are lined up by size. One or two unusually large cases do not pull it, which is why it is used here in place of the average."
+    },
+    "ko": {
+     "term": "중간값",
+     "def": "과거 사례를 크기 순으로 줄 세웠을 때 한가운데 값입니다. 유난히 컸던 한두 번에 끌려가지 않아서 평균 대신 씁니다."
+    }
+   },
+   "volatility": {
+    "en": {
+     "term": "Volatility and VIX",
+     "def": "Volatility is how much prices swing. VIX is an index of how much the options market expects the S&P 500 to swing over the next month. It is often called the fear index."
+    },
+    "ko": {
+     "term": "변동성과 VIX",
+     "def": "변동성은 가격이 얼마나 크게 출렁이는지입니다. VIX는 앞으로 한 달 동안 S&P 500이 얼마나 출렁일지에 대한 옵션 시장의 예상을 숫자로 만든 지수이고, 흔히 공포지수라고 부릅니다."
+    }
+   },
+   "credit_spread": {
+    "en": {
+     "term": "Credit spread",
+     "def": "The extra interest a company pays to borrow, compared with the government. When the spread widens, lenders are more worried about not being repaid."
+    },
+    "ko": {
+     "term": "신용 스프레드",
+     "def": "회사가 돈을 빌릴 때 정부보다 더 내야 하는 이자입니다. 이 차이가 벌어지면 돈을 빌려주는 쪽이 떼일 것을 더 걱정한다는 뜻입니다."
+    }
+   },
+   "yield_curve": {
+    "en": {
+     "term": "Yield curve",
+     "def": "The gap between interest rates on long and short government debt. Short rates above long rates is called an inversion, and in the past a recession often followed."
+    },
+    "ko": {
+     "term": "금리 곡선",
+     "def": "만기가 긴 국채와 짧은 국채의 금리 차이입니다. 짧은 쪽 금리가 더 높아지는 것을 역전이라고 하며, 과거에는 그 뒤에 경기 침체가 온 경우가 많았습니다."
+    }
+   },
+   "financial_conditions": {
+    "en": {
+     "term": "Financial conditions",
+     "def": "How easy it is to borrow and move money, summed up from interest rates, credit and markets. AFMX uses the Chicago Fed's index (NFCI)."
+    },
+    "ko": {
+     "term": "금융 여건",
+     "def": "돈을 빌리고 굴리기가 얼마나 쉬운지를 금리, 신용, 시장 지표로 종합한 것입니다. AFMX는 시카고 연준의 지수(NFCI)를 씁니다."
+    }
+   },
+   "drawdown": {
+    "en": {
+     "term": "Drawdown",
+     "def": "How far the price is below its recent high."
+    },
+    "ko": {
+     "term": "낙폭",
+     "def": "가격이 최근 고점에서 얼마나 내려와 있는지입니다."
+    }
+   },
+   "percentage_point": {
+    "en": {
+     "term": "Points against the market",
+     "def": "The difference between two percentages, in percentage points. If the market rose 5% and a sector rose 2%, the sector is 3 points against the market."
+    },
+    "ko": {
+     "term": "%p (퍼센트포인트)",
+     "def": "두 퍼센트 수치의 차이입니다. 시장이 5% 오르고 어떤 섹터가 2% 올랐다면 그 섹터는 시장보다 3%p 뒤처진 것입니다."
+    }
+   },
+   "hindsight": {
+    "en": {
+     "term": "Hindsight",
+     "def": "A look back made after the outcome is known. Unlike conditions written in advance, it can be fitted to what happened, so it is kept apart from the AFMX record."
+    },
+    "ko": {
+     "term": "사후 검증",
+     "def": "결과를 이미 아는 상태에서 과거를 돌아본 것입니다. 미리 적어 둔 조건과 달리 결과에 맞춰 쓸 수 있으므로 AFMX 기록과 따로 둡니다."
+    }
+   },
+   "timestamp": {
+    "en": {
+     "term": "Fingerprint and timestamp",
+     "def": "A fingerprint (SHA-256) is a value computed from a file's contents; change one letter and the value changes. A timestamp proves the file already existed at a given time. AFMX uses OpenTimestamps, which anchors the proof to the Bitcoin blockchain."
+    },
+    "ko": {
+     "term": "지문과 시각 증명",
+     "def": "지문(SHA-256)은 파일 내용에서 계산한 값으로, 한 글자만 달라도 값이 바뀝니다. 시각 증명은 그 파일이 어느 시각에 이미 있었다는 것을 보여 줍니다. AFMX는 OpenTimestamps를 써서 비트코인 블록체인에 증명을 남깁니다."
+    }
+   },
+   "etf": {
+    "en": {
+     "term": "ETF",
+     "def": "A fund that holds a basket of stocks and trades like a single stock. Sector ETFs are listed on cards only to help you find the sector, not as a recommendation."
+    },
+    "ko": {
+     "term": "ETF",
+     "def": "여러 종목을 한 바구니에 담아 주식처럼 사고파는 펀드입니다. 카드에 적힌 섹터 ETF는 그 섹터를 찾아보기 쉽게 하려는 것이고 추천이 아닙니다."
+    }
    }
   },
   "state_ranges": {
