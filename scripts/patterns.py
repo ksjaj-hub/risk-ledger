@@ -181,7 +181,24 @@ def main():
         return r2(a / b) if a is not None and b else None
     hC = [ratio([r for r in groups[2] if (r[0] < mid) == first], [r for r in groups[1] if (r[0] < mid) == first]) for first in (True, False)]
     C["halves_ratio"] = hC
-    C["headline"] = {"kind": "ratio", "value": ratio(groups[2], groups[1]), "background": 1.0, "n": len(groups[2]),
+    # samples taken 21 trading days apart inside one crisis are not independent: count separate stretches instead
+    idx2 = [r[0] for r in groups[2]]
+    stretches = sum(1 for j, i in enumerate(idx2) if j == 0 or i - idx2[j - 1] > 63)
+    C["two_or_more_sample_days"] = [days[i] for i in idx2]
+    C["two_or_more_separate_stretches"] = stretches
+    # the present: which states are active on the latest day FRED has, on the VIX calendar
+    vd = fred["VIXCLS"][0]
+    last = vd[-1]
+    now = {}
+    for key, (sid, pct) in {"oil": ("DCOILBRENTEU", True), "rates": ("DGS10", False), "credit": ("BAA10Y", False), "vol": ("VIXCLS", False)}.items():
+        a, b = asof(sid, last), asof(sid, vd[-21])
+        if a is None or b is None or (pct and b <= 0):
+            now[key] = None
+            continue
+        chg = 100 * (a / b - 1) if pct else a - b
+        now[key] = {"change_20_days": r2(chg), "threshold": r2(cuts[key]), "active": chg >= cuts[key]}
+    C["now"] = {"as_of": last, "states": now, "active": sorted(k for k, v in now.items() if v and v["active"])}
+    C["headline"] = {"kind": "ratio", "value": ratio(groups[2], groups[1]), "background": 1.0, "n": stretches,
                      "halves_agree": all(x is not None and x >= rule["effect"]["ratio"]["visible"] for x in hC)}
     out["overlap"] = C
 
