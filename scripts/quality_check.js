@@ -42,12 +42,24 @@ add("content","advice_wording",hits.length===0,`${hits.length} sentences flagged
 // screen
 (async()=>{
   const srv=spawn("python3",["-m","http.server","8791"],{cwd:path.join(ROOT,"docs"),stdio:"ignore"});await new Promise(r=>setTimeout(r,900));
-  const b=await chromium.launch();let errs=0,scroll=0,missing=[],broken=[];
+  const b=await chromium.launch();let errs=0,scroll=0,missing=[],broken=[],lowc=[],kbd=[];
   try{
     for(const [w,loc] of [[390,"ko-KR"],[390,"en-US"],[1200,"en-US"]]){
       const c=await b.newContext({viewport:{width:w,height:900},locale:loc});const p=await c.newPage();p.on("pageerror",()=>errs++);
       for(const u of ["/","/weekly/1.html","/weekly/1.ko.html"]){await p.goto("http://localhost:8791"+u);await p.waitForTimeout(500);
         if(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth))scroll++;
+        if(w===390){const r=await p.evaluate(()=>{document.querySelectorAll(".det").forEach(d=>d.hidden=false);
+          const P=s=>s.match(/[\d.]+/g).map(Number),L=c=>{const a=c.map(v=>{v/=255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)});return .2126*a[0]+.7152*a[1]+.0722*a[2]};
+          const root=P(getComputedStyle(document.body).backgroundColor).slice(0,3);
+          const bgOf=el=>{for(let e=el;e;e=e.parentElement){const c=P(getComputedStyle(e).backgroundColor);if(c.length<4||c[3]>.99)return c.slice(0,3);if(c[3]>0)return c.slice(0,3).map((v,i)=>v*c[3]+root[i]*(1-c[3]))}return root};
+          const low=[],w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n;
+          while(n=w.nextNode()){const t=n.textContent.trim(),el=n.parentElement;if(!t||!el.offsetParent)continue;const cs=getComputedStyle(el),bg=bgOf(el);let fg=P(cs.color);if(fg.length>3&&fg[3]<1)fg=fg.slice(0,3).map((v,i)=>v*fg[3]+bg[i]*(1-fg[3]));fg=fg.slice(0,3);
+            const a=L(fg),b=L(bg),cr=(Math.max(a,b)+.05)/(Math.min(a,b)+.05),sz=parseFloat(cs.fontSize),big=sz>=24||(sz>=18.66&&+cs.fontWeight>=700);if(cr<(big?3:4.5))low.push(cr.toFixed(2)+" "+t.slice(0,24))}
+          const kb=[];document.querySelectorAll("[aria-expanded]").forEach(e=>{if(e.tabIndex<0)kb.push("row not focusable")});
+          document.querySelectorAll("input,select").forEach(i=>{if(!(i.labels&&i.labels.length)&&!i.getAttribute("aria-label"))kb.push("no label: "+i.id)});
+          document.querySelectorAll("button").forEach(x=>{if(!x.textContent.trim()&&!x.getAttribute("aria-label"))kb.push("unnamed button")});
+          document.querySelectorAll("img:not([alt])").forEach(()=>kb.push("image without alt"));if(!document.documentElement.lang)kb.push("no page language");
+          return {low,kb}});lowc.push(...r.low.map(x=>u+" "+x));kbd.push(...r.kb.map(x=>u+" "+x))}
         for(const h of await p.evaluate(()=>[...document.querySelectorAll("a[href]")].map(a=>a.getAttribute("href")).filter(h=>!/^(https?:|mailto:|#)/.test(h)))){
           const r=await p.request.get(new URL(h,"http://localhost:8791"+u).href);if(!r.ok())broken.push(u+" -> "+h)}}
       if(w===390&&loc==="ko-KR"){await p.goto("http://localhost:8791/");await p.waitForTimeout(400);
@@ -58,6 +70,8 @@ add("content","advice_wording",hits.length===0,`${hits.length} sentences flagged
   add("screen","no_script_errors",errs===0,`${errs} errors`,"0");
   add("screen","no_sideways_scroll",scroll===0,`${scroll} pages scroll sideways`,"0");
   add("screen","internal_links",broken.length===0,`${broken.length} broken${broken.length?": "+[...new Set(broken)].slice(0,3).join(", "):""}`,"0 (links inside the site; outside links are not checked)");
+  add("screen","text_contrast",lowc.length===0,`${lowc.length} texts below the AA contrast ratio${lowc.length?": "+[...new Set(lowc)].slice(0,3).join("; "):""}`,"0 (4.5:1 for normal text, 3:1 for large)");
+  add("screen","keyboard_and_labels",kbd.length===0,`${kbd.length} problems${kbd.length?": "+[...new Set(kbd)].slice(0,3).join("; "):""}`,"0 (every card opens by keyboard; inputs, buttons and images are named)");
   add("screen","two_languages_match",missing.length===0,`${missing.length} strings missing${missing.length?": "+missing.slice(0,5).join(", "):""}`,"0");
   const kb=Math.round((fs.statSync(path.join(ROOT,"docs/index.html")).size+fs.statSync(path.join(ROOT,"docs/data.json")).size)/1024);
   add("screen","page_weight",kb<=300,`${kb} KB`,"300 KB or less");
