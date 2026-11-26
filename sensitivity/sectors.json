@@ -66,6 +66,39 @@
    "market_mean_return_on_shock_days_pct": -0.38,
    "market_mean_return_all_days_pct": 0.046
   },
+  "dollar_surge": {
+   "description": "Dollar jumps against a broad basket of currencies (daily % change, top 5%, from 2006)",
+   "source": "DTWEXBGS",
+   "first_day": "2006-01-03",
+   "last_day": "2026-09-30",
+   "days": 5153,
+   "shock_days": 257,
+   "threshold": 0.541,
+   "market_mean_return_on_shock_days_pct": -1.07,
+   "market_mean_return_all_days_pct": 0.049
+  },
+  "yuan_weakening": {
+   "description": "Chinese yuan weakens against the dollar (daily % change, top 5%, from August 2005 when the yuan began to move daily)",
+   "source": "DEXCHUS",
+   "first_day": "2005-08-01",
+   "last_day": "2026-09-30",
+   "days": 5275,
+   "shock_days": 263,
+   "threshold": 0.301,
+   "market_mean_return_on_shock_days_pct": -0.37,
+   "market_mean_return_all_days_pct": 0.047
+  },
+  "euro_drop": {
+   "description": "Euro falls sharply against the dollar (daily % change, 5% largest falls, from 1999)",
+   "source": "DEXUSEU",
+   "first_day": "1999-01-05",
+   "last_day": "2026-09-30",
+   "days": 6916,
+   "shock_days": 345,
+   "threshold": -0.948,
+   "market_mean_return_on_shock_days_pct": -0.23,
+   "market_mean_return_all_days_pct": 0.04
+  },
   "chip_selloff": {
    "description": "Semiconductor stocks fall hard relative to the market (worst 5% of days)",
    "source": "Kenneth R. French Data Library (Chips industry)",
@@ -685,6 +718,309 @@
     "direction": "led"
    }
   },
+  "dollar_surge": {
+   "technology": {
+    "mean_excess_pct": 0.02,
+    "t": -0.0,
+    "n": 257,
+    "first_half_pct": 0.04,
+    "second_half_pct": -0.0,
+    "evidence": "weak",
+    "direction": "led"
+   },
+   "communication": {
+    "mean_excess_pct": -0.14,
+    "t": -2.4,
+    "n": 257,
+    "first_half_pct": -0.27,
+    "second_half_pct": 0.05,
+    "evidence": "weak",
+    "direction": "lagged"
+   },
+   "consumer_discretionary": {
+    "mean_excess_pct": 0.07,
+    "t": 1.4,
+    "n": 257,
+    "first_half_pct": 0.15,
+    "second_half_pct": -0.06,
+    "evidence": "weak",
+    "direction": "led"
+   },
+   "consumer_staples": {
+    "mean_excess_pct": 0.31,
+    "t": 4.4,
+    "n": 257,
+    "first_half_pct": 0.4,
+    "second_half_pct": 0.17,
+    "evidence": "strong",
+    "direction": "led"
+   },
+   "energy": {
+    "mean_excess_pct": -0.93,
+    "t": -6.1,
+    "n": 257,
+    "first_half_pct": -1.08,
+    "second_half_pct": -0.69,
+    "evidence": "strong",
+    "direction": "lagged"
+   },
+   "financials": {
+    "mean_excess_pct": -0.16,
+    "t": -2.0,
+    "n": 257,
+    "first_half_pct": -0.18,
+    "second_half_pct": -0.14,
+    "evidence": "moderate",
+    "direction": "lagged"
+   },
+   "health_care": {
+    "mean_excess_pct": 0.2,
+    "t": 3.7,
+    "n": 257,
+    "first_half_pct": 0.25,
+    "second_half_pct": 0.14,
+    "evidence": "strong",
+    "direction": "led"
+   },
+   "industrials": {
+    "mean_excess_pct": -0.36,
+    "t": -7.1,
+    "n": 257,
+    "first_half_pct": -0.34,
+    "second_half_pct": -0.39,
+    "evidence": "strong",
+    "direction": "lagged"
+   },
+   "materials": {
+    "mean_excess_pct": -0.5,
+    "t": -8.3,
+    "n": 257,
+    "first_half_pct": -0.57,
+    "second_half_pct": -0.41,
+    "evidence": "strong",
+    "direction": "lagged"
+   },
+   "real_estate": {
+    "mean_excess_pct": -0.59,
+    "t": -5.1,
+    "n": 257,
+    "first_half_pct": -0.52,
+    "second_half_pct": -0.69,
+    "evidence": "strong",
+    "direction": "lagged"
+   },
+   "utilities": {
+    "mean_excess_pct": 0.13,
+    "t": 1.7,
+    "n": 257,
+    "first_half_pct": 0.15,
+    "second_half_pct": 0.1,
+    "evidence": "weak",
+    "direction": "led"
+   }
+  },
+  "yuan_weakening": {
+   "technology": {
+    "mean_excess_pct": -0.05,
+    "t": -1.8,
+    "n": 263,
+    "first_half_pct": 0.01,
+    "second_half_pct": -0.06,
+    "evidence": "weak",
+    "direction": "lagged"
+   },
+   "communication": {
+    "mean_excess_pct": -0.03,
+    "t": -0.5,
+    "n": 263,
+    "first_half_pct": -0.02,
+    "second_half_pct": -0.03,
+    "evidence": "weak",
+    "direction": "lagged"
+   },
+   "consumer_discretionary": {
+    "mean_excess_pct": -0.04,
+    "t": -0.7,
+    "n": 263,
+    "first_half_pct": 0.09,
+    "second_half_pct": -0.06,
+    "evidence": "weak",
+    "direction": "lagged"
+   },
+   "consumer_staples": {
+    "mean_excess_pct": 0.25,
+    "t": 4.1,
+    "n": 263,
+    "first_half_pct": 0.26,
+    "second_half_pct": 0.25,
+    "evidence": "strong",
+    "direction": "led"
+   },
+   "energy": {
+    "mean_excess_pct": -0.44,
+    "t": -3.3,
+    "n": 263,
+    "first_half_pct": -1.02,
+    "second_half_pct": -0.35,
+    "evidence": "strong",
+    "direction": "lagged"
+   },
+   "financials": {
+    "mean_excess_pct": 0.05,
+    "t": 1.0,
+    "n": 263,
+    "first_half_pct": -0.11,
+    "second_half_pct": 0.08,
+    "evidence": "weak",
+    "direction": "led"
+   },
+   "health_care": {
+    "mean_excess_pct": 0.09,
+    "t": 2.3,
+    "n": 263,
+    "first_half_pct": 0.03,
+    "second_half_pct": 0.1,
+    "evidence": "moderate",
+    "direction": "led"
+   },
+   "industrials": {
+    "mean_excess_pct": -0.09,
+    "t": -1.9,
+    "n": 263,
+    "first_half_pct": -0.16,
+    "second_half_pct": -0.08,
+    "evidence": "weak",
+    "direction": "lagged"
+   },
+   "materials": {
+    "mean_excess_pct": -0.3,
+    "t": -5.6,
+    "n": 263,
+    "first_half_pct": -0.48,
+    "second_half_pct": -0.28,
+    "evidence": "strong",
+    "direction": "lagged"
+   },
+   "real_estate": {
+    "mean_excess_pct": -0.17,
+    "t": -2.0,
+    "n": 263,
+    "first_half_pct": -0.16,
+    "second_half_pct": -0.17,
+    "evidence": "weak",
+    "direction": "lagged"
+   },
+   "utilities": {
+    "mean_excess_pct": 0.26,
+    "t": 4.0,
+    "n": 263,
+    "first_half_pct": 0.24,
+    "second_half_pct": 0.27,
+    "evidence": "strong",
+    "direction": "led"
+   }
+  },
+  "euro_drop": {
+   "technology": {
+    "mean_excess_pct": 0.17,
+    "t": 2.5,
+    "n": 345,
+    "first_half_pct": 0.23,
+    "second_half_pct": 0.02,
+    "evidence": "moderate",
+    "direction": "led"
+   },
+   "communication": {
+    "mean_excess_pct": -0.03,
+    "t": -0.6,
+    "n": 345,
+    "first_half_pct": -0.04,
+    "second_half_pct": -0.02,
+    "evidence": "weak",
+    "direction": "lagged"
+   },
+   "consumer_discretionary": {
+    "mean_excess_pct": 0.11,
+    "t": 2.5,
+    "n": 345,
+    "first_half_pct": 0.15,
+    "second_half_pct": -0.0,
+    "evidence": "weak",
+    "direction": "led"
+   },
+   "consumer_staples": {
+    "mean_excess_pct": -0.05,
+    "t": -0.7,
+    "n": 345,
+    "first_half_pct": -0.01,
+    "second_half_pct": -0.12,
+    "evidence": "weak",
+    "direction": "lagged"
+   },
+   "energy": {
+    "mean_excess_pct": -0.47,
+    "t": -4.2,
+    "n": 345,
+    "first_half_pct": -0.59,
+    "second_half_pct": -0.17,
+    "evidence": "strong",
+    "direction": "lagged"
+   },
+   "financials": {
+    "mean_excess_pct": 0.02,
+    "t": 0.3,
+    "n": 345,
+    "first_half_pct": 0.03,
+    "second_half_pct": 0.0,
+    "evidence": "weak",
+    "direction": "led"
+   },
+   "health_care": {
+    "mean_excess_pct": 0.01,
+    "t": 0.3,
+    "n": 345,
+    "first_half_pct": -0.02,
+    "second_half_pct": 0.1,
+    "evidence": "weak",
+    "direction": "led"
+   },
+   "industrials": {
+    "mean_excess_pct": -0.13,
+    "t": -3.5,
+    "n": 345,
+    "first_half_pct": -0.12,
+    "second_half_pct": -0.17,
+    "evidence": "strong",
+    "direction": "lagged"
+   },
+   "materials": {
+    "mean_excess_pct": -0.3,
+    "t": -6.0,
+    "n": 345,
+    "first_half_pct": -0.34,
+    "second_half_pct": -0.19,
+    "evidence": "strong",
+    "direction": "lagged"
+   },
+   "real_estate": {
+    "mean_excess_pct": -0.23,
+    "t": -2.6,
+    "n": 345,
+    "first_half_pct": -0.18,
+    "second_half_pct": -0.36,
+    "evidence": "moderate",
+    "direction": "lagged"
+   },
+   "utilities": {
+    "mean_excess_pct": -0.14,
+    "t": -2.1,
+    "n": 345,
+    "first_half_pct": -0.14,
+    "second_half_pct": -0.15,
+    "evidence": "moderate",
+    "direction": "lagged"
+   }
+  },
   "chip_selloff": {
    "communication": {
     "mean_excess_pct": 0.14,
@@ -778,8 +1114,62 @@
    }
   }
  },
+ "cases": {
+  "2018-us-china-tariffs": {
+   "start": "2018-03-22",
+   "end": "2018-09-19",
+   "trading_days": 126,
+   "market_return_pct": 8.5,
+   "sectors": {
+    "technology": {
+     "excess_pct": 0.1,
+     "direction": "flat"
+    },
+    "communication": {
+     "excess_pct": -0.6,
+     "direction": "flat"
+    },
+    "consumer_discretionary": {
+     "excess_pct": 5.7,
+     "direction": "led"
+    },
+    "consumer_staples": {
+     "excess_pct": -5.5,
+     "direction": "lagged"
+    },
+    "energy": {
+     "excess_pct": 0.7,
+     "direction": "flat"
+    },
+    "financials": {
+     "excess_pct": -5.9,
+     "direction": "lagged"
+    },
+    "health_care": {
+     "excess_pct": 6.4,
+     "direction": "led"
+    },
+    "industrials": {
+     "excess_pct": -5.7,
+     "direction": "lagged"
+    },
+    "materials": {
+     "excess_pct": -11.4,
+     "direction": "lagged"
+    },
+    "real_estate": {
+     "excess_pct": -22.2,
+     "direction": "lagged"
+    },
+    "utilities": {
+     "excess_pct": 1.0,
+     "direction": "flat"
+    }
+   }
+  }
+ },
  "meta": {
-  "generated_at_utc": "2026-11-26T06:52:54Z",
+  "generated_at_utc": "2026-11-26T06:59:47Z",
   "warning": "Hindsight statistics on same-day moves. Association, not cause. Not a forecast and not a recommendation.",
   "sectors": {
    "technology": [
