@@ -9,3 +9,6 @@ it is **not** part of the record.
 - `exposure`: tickers and ETFs that the event plausibly touches, by sector or by being named in the card.
   This is AFMX's own mapping for navigation. It is not a statement about what any security will do and
   not a recommendation. When a card is added, add its entry here.
+- `sectors`: for each card, the US equity sectors it is directly tied to (`direct`) and whether it bears on the
+  whole market (`market_wide`). AFMX's own judgment from the card's "how it reaches markets" text. The page lets
+  a reader pick sectors and see the cards tied to them first. When a card is added, add its entry here.

@@ -79,5 +79,132 @@
       "MCHI",
       "KWEB"
     ]
+  },
+  "sector_names": {
+    "technology": {
+      "en": "Technology",
+      "ko": "기술"
+    },
+    "communication": {
+      "en": "Communication",
+      "ko": "커뮤니케이션"
+    },
+    "consumer_discretionary": {
+      "en": "Consumer discretionary",
+      "ko": "경기소비재"
+    },
+    "consumer_staples": {
+      "en": "Consumer staples",
+      "ko": "필수소비재"
+    },
+    "energy": {
+      "en": "Energy",
+      "ko": "에너지"
+    },
+    "financials": {
+      "en": "Financials",
+      "ko": "금융"
+    },
+    "health_care": {
+      "en": "Health care",
+      "ko": "헬스케어"
+    },
+    "industrials": {
+      "en": "Industrials",
+      "ko": "산업재"
+    },
+    "materials": {
+      "en": "Materials",
+      "ko": "소재"
+    },
+    "real_estate": {
+      "en": "Real estate",
+      "ko": "부동산"
+    },
+    "utilities": {
+      "en": "Utilities",
+      "ko": "유틸리티"
+    }
+  },
+  "sectors": {
+    "2026-us-appropriations-lapse": {
+      "market_wide": true,
+      "direct": []
+    },
+    "2026-nvidia-sec-and-leadership": {
+      "market_wide": false,
+      "direct": [
+        "technology"
+      ]
+    },
+    "2026-us-excess-capacity-tariffs": {
+      "market_wide": false,
+      "direct": [
+        "industrials",
+        "materials",
+        "consumer_discretionary",
+        "technology"
+      ]
+    },
+    "2026-ai-buildout-financing": {
+      "market_wide": false,
+      "direct": [
+        "technology",
+        "communication",
+        "utilities"
+      ]
+    },
+    "2026-us-ai-chip-export-rules": {
+      "market_wide": false,
+      "direct": [
+        "technology"
+      ]
+    },
+    "2026-fed-rate-hikes": {
+      "market_wide": true,
+      "direct": [
+        "financials",
+        "real_estate",
+        "utilities"
+      ]
+    },
+    "2026-us-iran-war-oil": {
+      "market_wide": false,
+      "direct": [
+        "energy",
+        "industrials"
+      ]
+    },
+    "2027-us-debt-limit": {
+      "market_wide": true,
+      "direct": [
+        "financials"
+      ]
+    },
+    "2026-japan-boj-tightening-yen": {
+      "market_wide": true,
+      "direct": []
+    },
+    "2026-us-private-credit-defaults": {
+      "market_wide": false,
+      "direct": [
+        "financials"
+      ]
+    },
+    "2026-eurozone-inflation-ecb": {
+      "market_wide": false,
+      "direct": [
+        "financials"
+      ]
+    },
+    "2026-china-domestic-demand-property": {
+      "market_wide": false,
+      "direct": [
+        "materials",
+        "industrials",
+        "consumer_discretionary",
+        "technology"
+      ]
+    }
   }
 }
