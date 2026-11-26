@@ -1733,8 +1733,19 @@
     "yuan_weakening"
    ]
   },
-  "sensitivity_generated": "2026-11-26T06:59:47Z",
-  "scorecard": null
+  "sensitivity_generated": "2026-11-26T07:01:45Z",
+  "scorecard": {
+   "note": "as_expected is true when the three highest-score sectors did worse than the three lowest in the following month. One month says very little; read the running count.",
+   "graded_months": 0,
+   "as_expected_months": 0,
+   "months": [
+    {
+     "snapshot": "2026-11",
+     "graded_month": "2026-12",
+     "status": "waiting for data"
+    }
+   ]
+  }
  },
  "hindsight": {
   "note": "Hindsight cases. Written after the outcomes were known, to illustrate the idea of a condition that good news does not meet. Dates and events are as stated in the listed sources (read 2026-11-26). The 'still_open' line is AFMX's own reading with hindsight. None of this is part of the AFMX record, which starts on 2026-11-26.",

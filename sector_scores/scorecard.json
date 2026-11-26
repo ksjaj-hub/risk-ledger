@@ -1,0 +1,12 @@
+{
+ "note": "as_expected is true when the three highest-score sectors did worse than the three lowest in the following month. One month says very little; read the running count.",
+ "graded_months": 0,
+ "as_expected_months": 0,
+ "months": [
+  {
+   "snapshot": "2026-11",
+   "graded_month": "2026-12",
+   "status": "waiting for data"
+  }
+ ]
+}
