@@ -1,0 +1,70 @@
+{
+ "note": "Past episodes used to measure the wave after a shock. Start dates are quoted from the listed source. The baseline for every episode is the close of the last trading day before the start date. Windows and rules are fixed for all episodes.",
+ "window_trading_days": 126,
+ "half_life_search_trading_days": 252,
+ "horizons": [
+  1,
+  5,
+  21,
+  63,
+  126
+ ],
+ "oil_rule": {
+  "series": "DCOILBRENTEU",
+  "rise_pct": 20,
+  "over_trading_days": 20,
+  "must_be_high_of_trading_days": 252,
+  "cooldown_trading_days": 126,
+  "text": "A rule-based oil episode starts on the first day Brent closes at least 20% above its close 20 trading days earlier and at its highest close in 252 trading days. No new episode can start for 126 trading days."
+ },
+ "current_from": "2026-03-01",
+ "current_note": "Rule-based oil episodes that start on or after this date belong to the open card 2026-us-iran-war-oil. They are shown as the present and left out of the past range.",
+ "cards": {
+  "2026-us-iran-war-oil": [
+   "1990-iraq-kuwait",
+   "2022-russia-ukraine"
+  ],
+  "2026-us-excess-capacity-tariffs": [
+   "2018-us-china-tariffs",
+   "2025-us-reciprocal-tariffs"
+  ]
+ },
+ "episodes": [
+  {
+   "id": "1990-iraq-kuwait",
+   "kind": "oil",
+   "start": "1990-08-02",
+   "en": "1990 Iraq invades Kuwait",
+   "ko": "1990년 이라크의 쿠웨이트 침공",
+   "source": "https://digitallibrary.un.org/record/94220",
+   "quote": "Resolution 660 (1990) / adopted by the Security Council at its 2932nd meeting, on 2 August 1990. (The resolution condemns the Iraqi invasion of Kuwait.)"
+  },
+  {
+   "id": "2022-russia-ukraine",
+   "kind": "oil",
+   "start": "2022-02-24",
+   "en": "2022 Russia invades Ukraine",
+   "ko": "2022년 러시아의 우크라이나 침공",
+   "source": "https://www.eia.gov/todayinenergy/detail.php?id=51498",
+   "quote": "Following reports that Russian forces further invaded Ukraine on Thursday, February 24"
+  },
+  {
+   "id": "2018-us-china-tariffs",
+   "kind": "tariff",
+   "start": "2018-03-22",
+   "en": "2018 US tariffs on Chinese goods",
+   "ko": "2018년 미국의 대중국 관세",
+   "source": "https://trumpwhitehouse.archives.gov/presidential-actions/presidential-memorandum-actions-united-states-related-section-301-investigation/",
+   "quote": "The Trade Representative should take all appropriate action under section 301 of the Act (Presidential Memorandum issued March 22, 2018)"
+  },
+  {
+   "id": "2025-us-reciprocal-tariffs",
+   "kind": "tariff",
+   "start": "2025-04-02",
+   "en": "2025 US 'reciprocal' tariffs",
+   "ko": "2025년 미국의 상호 관세",
+   "source": "https://www.govinfo.gov/content/pkg/FR-2025-04-07/html/2025-06063.htm",
+   "quote": "Executive Order 14257 of April 2, 2025"
+  }
+ ]
+}

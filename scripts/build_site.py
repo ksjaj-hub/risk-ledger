@@ -86,6 +86,51 @@ aids["links"], aids["sector_scores"], aids["score_points"] = links, scores, POIN
 aids["score_version"], aids["mapping_version"] = mapping["score"]["version"], mapping.get("version")
 aids["card_factors"] = {k: v.get("factors", []) for k, v in mapping["cards"].items()}
 aids["sensitivity_generated"] = sens.get("meta", {}).get("generated_at_utc")
+# past waves after similar shocks: reading aid, see waves/README.md
+def _waves():
+    import datetime as _dt
+    wp, ep = ROOT / "waves" / "waves.json", ROOT / "waves" / "episodes.json"
+    if not (wp.exists() and ep.exists()):
+        return {}
+    W, E = json.loads(wp.read_text()), json.loads(ep.read_text())
+    names = {x["id"]: x for x in E["episodes"]}
+    S, rule_eps, out = W["oil_rule_summary"], W["oil_rule_episodes"], {}
+    past = [x for x in rule_eps if not x["current"]]
+    cur = next((x for x in rule_eps if x["current"]), None)
+    gap = lambda a, b: abs((_dt.date.fromisoformat(a) - _dt.date.fromisoformat(b)).days)
+    for cid, ids in W["cards"].items():
+        eps = [W["named"][i] | {"id": i} for i in ids if i in W["named"]]
+        if not eps:
+            continue
+        if eps[0]["kind"] == "oil" and past:
+            sx, n = S["sector_excess_at"], len(past)
+            series = []
+            if cur:
+                series.append({"k": "now", "y": cur["day_0"][:4], "now": True, "p": cur["oil_path"]})
+            for k, e in zip("ab", eps):
+                r = min(past, key=lambda x: gap(x["day_0"], e["start"]))
+                series.append({"k": k, "y": e["start"][:4], "en": names[e["id"]]["en"], "ko": names[e["id"]]["ko"], "p": r["oil_path"]})
+            out[cid] = {"kind": "oil", "n": n, "series": series, "x0": 0,
+                        "fall_med": S["market_largest_fall_pct"]["median"], "fall_min": S["market_largest_fall_pct"]["min"],
+                        "fall_base": S["any_day_since_1990"]["market_largest_fall_pct"]["median"],
+                        "hl": int(S["oil_half_life_days"]["median"]), "hl_min": int(S["oil_half_life_days"]["min"]),
+                        "hl_max": int(S["oil_half_life_days"]["max"]),
+                        "still": S["oil_still_above_pre_shock_at"]["252"], "oil_first": S["oil_peak_before_market_low"],
+                        "util_led": n - sx["utilities"]["21"]["negative"], "stap_led": n - sx["consumer_staples"]["21"]["negative"],
+                        "disc_lag": sx["consumer_discretionary"]["21"]["negative"],
+                        "cur": cur and {"fall": cur.get("equity", {}).get("market", {}).get("largest_fall_pct"),
+                                        "half": cur["half_life_days"], "now": cur["latest_rise_pct"], "day": cur["latest_day"]},
+                        "last_equity": W["meta"]["last_equity_day"], "last_brent": W["meta"]["last_brent_day"]}
+        elif eps[0]["kind"] == "tariff" and len(eps) >= 2:
+            out[cid] = {"kind": "tariff", "x0": 1,
+                        "series": [{"k": k, "y": e["start"][:4], "en": names[e["id"]]["en"], "ko": names[e["id"]]["ko"],
+                                    "p": e["paths"]["market"][:126]} for k, e in zip("ab", eps)],
+                        "eps": [{"y": e["start"][:4], "fall": e["market"]["largest_fall_pct"], "day": e["market"]["largest_fall_day"],
+                                 "rec": e["market"]["days_to_recover_half"], "end": e["market"]["at"]["126"],
+                                 "mat": e["sectors"]["materials"]["at"]["126"], "fin": e["sectors"]["financials"]["at"]["126"]}
+                                for e in eps[:2]]}
+    return out
+aids["waves"] = _waves()
 sc_path = ROOT / "sector_scores" / "scorecard.json"
 aids["scorecard"] = json.loads(sc_path.read_text()) if sc_path.exists() else None
 out = ROOT / "docs" / "data.json"
