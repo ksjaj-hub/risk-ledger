@@ -1,0 +1,4029 @@
+{
+ "generated_at_utc": "2026-11-26T12:46:13Z",
+ "warning": "Hindsight on revised data. Past ranges, not forecasts. See preregistration.json for what was fixed in advance.",
+ "data": {
+  "market_first": "1985-01-02",
+  "market_last": "2026-09-30",
+  "last_day_scored_on_O1": "2026-07-01",
+  "ebp": "used"
+ },
+ "fitted_on_train": {
+  "train_auroc_O1_v3_long": 0.835,
+  "train_auroc_O1_C1": 0.81,
+  "curve_included_in_percentile_candidates": true,
+  "cutpoints": {
+   "vol": {
+    "values": [
+     9.31,
+     11.393,
+     11.93,
+     12.43,
+     13.08,
+     13.78,
+     14.598,
+     15.431,
+     16.18,
+     16.87,
+     17.8,
+     18.82,
+     19.76,
+     20.669,
+     21.64,
+     22.725,
+     24.108,
+     25.66,
+     28.128,
+     31.327,
+     45.74
+    ],
+    "percentiles": [
+     0.0,
+     0.05,
+     0.1,
+     0.15,
+     0.2,
+     0.25,
+     0.3,
+     0.35,
+     0.4,
+     0.45,
+     0.5,
+     0.55,
+     0.6,
+     0.65,
+     0.7,
+     0.75,
+     0.8,
+     0.85,
+     0.9,
+     0.95,
+     1.0
+    ]
+   },
+   "credit": {
+    "values": [
+     1.22,
+     1.48,
+     1.52,
+     1.56,
+     1.62,
+     1.67,
+     1.7,
+     1.73,
+     1.774,
+     1.83,
+     1.91,
+     2.0,
+     2.09,
+     2.15,
+     2.23,
+     2.33,
+     2.5,
+     2.66,
+     2.86,
+     3.147,
+     3.9
+    ],
+    "percentiles": [
+     0.0,
+     0.05,
+     0.1,
+     0.15,
+     0.2,
+     0.25,
+     0.3,
+     0.35,
+     0.4,
+     0.45,
+     0.5,
+     0.55,
+     0.6,
+     0.65,
+     0.7,
+     0.75,
+     0.8,
+     0.85,
+     0.9,
+     0.95,
+     1.0
+    ]
+   },
+   "nfci": {
+    "values": [
+     -1.095,
+     -0.957,
+     -0.811,
+     -0.753,
+     -0.72,
+     -0.708,
+     -0.697,
+     -0.684,
+     -0.652,
+     -0.628,
+     -0.607,
+     -0.582,
+     -0.552,
+     -0.49,
+     -0.425,
+     -0.363,
+     -0.246,
+     -0.168,
+     -0.086,
+     0.051,
+     0.523
+    ],
+    "percentiles": [
+     0.0,
+     0.05,
+     0.1,
+     0.15,
+     0.2,
+     0.25,
+     0.3,
+     0.35,
+     0.4,
+     0.45,
+     0.5,
+     0.55,
+     0.6,
+     0.65,
+     0.7,
+     0.75,
+     0.8,
+     0.85,
+     0.9,
+     0.95,
+     1.0
+    ]
+   },
+   "drawdown": {
+    "values": [
+     0.0,
+     0.109,
+     0.33,
+     0.636,
+     0.97,
+     1.307,
+     1.658,
+     2.031,
+     2.489,
+     3.025,
+     3.678,
+     4.45,
+     5.559,
+     7.064,
+     9.591,
+     14.287,
+     17.905,
+     22.157,
+     35.364
+    ],
+    "percentiles": [
+     0.05,
+     0.15,
+     0.2,
+     0.25,
+     0.3,
+     0.35,
+     0.4,
+     0.45,
+     0.5,
+     0.55,
+     0.6,
+     0.65,
+     0.7,
+     0.75,
+     0.8,
+     0.85,
+     0.9,
+     0.95,
+     1.0
+    ]
+   },
+   "curve": {
+    "values": [
+     -3.87,
+     -3.497,
+     -3.36,
+     -3.12,
+     -2.9,
+     -2.75,
+     -2.59,
+     -2.39,
+     -2.13,
+     -1.71,
+     -1.51,
+     -1.31,
+     -1.14,
+     -0.96,
+     -0.78,
+     -0.6,
+     -0.49,
+     -0.34,
+     -0.18,
+     0.16,
+     0.95
+    ],
+    "percentiles": [
+     0.0,
+     0.05,
+     0.1,
+     0.15,
+     0.2,
+     0.25,
+     0.3,
+     0.35,
+     0.4,
+     0.45,
+     0.5,
+     0.55,
+     0.6,
+     0.65,
+     0.7,
+     0.75,
+     0.8,
+     0.85,
+     0.9,
+     0.95,
+     1.0
+    ]
+   },
+   "realized_vol": {
+    "values": [
+     0.276,
+     0.394,
+     0.457,
+     0.502,
+     0.542,
+     0.574,
+     0.603,
+     0.628,
+     0.655,
+     0.689,
+     0.737,
+     0.792,
+     0.861,
+     0.916,
+     0.972,
+     1.043,
+     1.114,
+     1.224,
+     1.417,
+     1.784,
+     2.799
+    ],
+    "percentiles": [
+     0.0,
+     0.05,
+     0.1,
+     0.15,
+     0.2,
+     0.25,
+     0.3,
+     0.35,
+     0.4,
+     0.45,
+     0.5,
+     0.55,
+     0.6,
+     0.65,
+     0.7,
+     0.75,
+     0.8,
+     0.85,
+     0.9,
+     0.95,
+     1.0
+    ]
+   },
+   "ebp": {
+    "values": [
+     -1.072,
+     -0.538,
+     -0.485,
+     -0.406,
+     -0.363,
+     -0.319,
+     -0.298,
+     -0.274,
+     -0.243,
+     -0.17,
+     -0.087,
+     -0.004,
+     0.055,
+     0.086,
+     0.143,
+     0.18,
+     0.306,
+     0.587,
+     0.888,
+     1.154,
+     1.694
+    ],
+    "percentiles": [
+     0.0,
+     0.05,
+     0.1,
+     0.15,
+     0.2,
+     0.25,
+     0.3,
+     0.35,
+     0.4,
+     0.45,
+     0.5,
+     0.55,
+     0.6,
+     0.65,
+     0.7,
+     0.75,
+     0.8,
+     0.85,
+     0.9,
+     0.95,
+     1.0
+    ]
+   }
+  },
+  "components": {
+   "C2_percentile": [
+    "vol",
+    "credit",
+    "nfci",
+    "drawdown",
+    "curve"
+   ],
+   "C7_market_only": [
+    "vol",
+    "credit",
+    "drawdown",
+    "curve"
+   ],
+   "C5_realized_vol": [
+    "vol",
+    "credit",
+    "nfci",
+    "drawdown",
+    "curve",
+    "realized_vol"
+   ],
+   "C6_ebp": [
+    "vol",
+    "credit",
+    "nfci",
+    "drawdown",
+    "curve",
+    "ebp"
+   ],
+   "C3_pca_weights": [
+    "vol",
+    "credit",
+    "nfci",
+    "drawdown",
+    "curve"
+   ],
+   "C4_correlation_weighted": [
+    "vol",
+    "credit",
+    "nfci",
+    "drawdown",
+    "curve"
+   ]
+  },
+  "pca": {
+   "weights": {
+    "vol": 0.264,
+    "credit": 0.184,
+    "nfci": 0.244,
+    "drawdown": 0.24,
+    "curve": 0.067
+   },
+   "share_of_variance": 0.499
+  },
+  "v3_long_train_share_at_or_above": {
+   "Guarded": 0.53,
+   "Watch": 0.295,
+   "Elevated": 0.164,
+   "Stress": 0.042
+  },
+  "cutoffs": {
+   "C2_percentile": [
+    43.159,
+    62.957,
+    74.319,
+    83.986
+   ],
+   "C7_market_only": [
+    43.515,
+    61.394,
+    73.582,
+    83.539
+   ],
+   "C5_realized_vol": [
+    42.853,
+    63.815,
+    75.032,
+    85.079
+   ],
+   "C6_ebp": [
+    40.905,
+    63.493,
+    75.308,
+    83.578
+   ],
+   "C3_pca_weights": [
+    42.382,
+    65.165,
+    78.012,
+    86.591
+   ],
+   "C4_correlation_weighted": [
+    12.267,
+    34.764,
+    51.257,
+    65.786
+   ]
+  }
+ },
+ "chosen_on_train": "C6_ebp",
+ "train": {
+  "days": 4287,
+  "first": "1990-01-02",
+  "last": "2006-12-29",
+  "auroc": {
+   "O1": {
+    "days_scored": 4287,
+    "share_of_days_with_outcome": 0.122,
+    "auroc": {
+     "v3_long": 0.835,
+     "C1_no_curve": 0.81,
+     "C2_percentile": 0.836,
+     "C7_market_only": 0.838,
+     "C5_realized_vol": 0.832,
+     "C6_ebp": 0.852,
+     "C3_pca_weights": 0.828,
+     "C4_correlation_weighted": 0.843
+    }
+   },
+   "O2": {
+    "days_scored": 4287,
+    "share_of_days_with_outcome": 0.145,
+    "auroc": {
+     "v3_long": 0.762,
+     "C1_no_curve": 0.755,
+     "C2_percentile": 0.761,
+     "C7_market_only": 0.763,
+     "C5_realized_vol": 0.761,
+     "C6_ebp": 0.755,
+     "C3_pca_weights": 0.76,
+     "C4_correlation_weighted": 0.748
+    }
+   },
+   "O3": {
+    "days_scored": 4287,
+    "share_of_days_with_outcome": 0.247,
+    "auroc": {
+     "v3_long": 0.92,
+     "C1_no_curve": 0.904,
+     "C2_percentile": 0.918,
+     "C7_market_only": 0.914,
+     "C5_realized_vol": 0.92,
+     "C6_ebp": 0.908,
+     "C3_pca_weights": 0.914,
+     "C4_correlation_weighted": 0.918
+    }
+   },
+   "R1": {
+    "days_scored": 4287,
+    "share_of_days_with_outcome": 0.171,
+    "auroc": {
+     "v3_long": 0.813,
+     "C1_no_curve": 0.719,
+     "C2_percentile": 0.82,
+     "C7_market_only": 0.779,
+     "C5_realized_vol": 0.799,
+     "C6_ebp": 0.825,
+     "C3_pca_weights": 0.765,
+     "C4_correlation_weighted": 0.838
+    }
+   }
+  },
+  "states": {
+   "v3_long": {
+    "by_state": [
+     {
+      "state": "Calm",
+      "days": 1788,
+      "share_O1": 0.0,
+      "fall63_median": -1.988,
+      "fall63_5th_percentile": -6.755
+     },
+     {
+      "state": "Guarded",
+      "days": 1118,
+      "share_O1": 0.081,
+      "fall63_median": -2.046,
+      "fall63_5th_percentile": -16.154
+     },
+     {
+      "state": "Watch",
+      "days": 547,
+      "share_O1": 0.309,
+      "fall63_median": -4.718,
+      "fall63_5th_percentile": -23.113
+     },
+     {
+      "state": "Elevated",
+      "days": 581,
+      "share_O1": 0.353,
+      "fall63_median": -5.826,
+      "fall63_5th_percentile": -20.157
+     },
+     {
+      "state": "Stress",
+      "days": 253,
+      "share_O1": 0.221,
+      "fall63_median": -4.049,
+      "fall63_5th_percentile": -14.972
+     }
+    ],
+    "ladder_groups": [
+     [
+      "Calm"
+     ],
+     [
+      "Guarded"
+     ],
+     [
+      "Watch"
+     ],
+     [
+      "Elevated"
+     ],
+     [
+      "Stress"
+     ]
+    ],
+    "ladder_share_O1": [
+     0.0,
+     0.081,
+     0.309,
+     0.353,
+     0.221
+    ],
+    "ladder_rises": false,
+    "state_changes": 175,
+    "state_changes_per_year": 10.287,
+    "timing": {}
+   },
+   "C1_no_curve": {
+    "by_state": [
+     {
+      "state": "Calm",
+      "days": 1931,
+      "share_O1": 0.006,
+      "fall63_median": -1.888,
+      "fall63_5th_percentile": -6.788
+     },
+     {
+      "state": "Guarded",
+      "days": 699,
+      "share_O1": 0.074,
+      "fall63_median": -2.062,
+      "fall63_5th_percentile": -15.81
+     },
+     {
+      "state": "Watch",
+      "days": 670,
+      "share_O1": 0.266,
+      "fall63_median": -4.207,
+      "fall63_5th_percentile": -22.407
+     },
+     {
+      "state": "Elevated",
+      "days": 676,
+      "share_O1": 0.337,
+      "fall63_median": -5.573,
+      "fall63_5th_percentile": -20.031
+     },
+     {
+      "state": "Stress",
+      "days": 311,
+      "share_O1": 0.164,
+      "fall63_median": -3.653,
+      "fall63_5th_percentile": -14.444
+     }
+    ],
+    "ladder_groups": [
+     [
+      "Calm"
+     ],
+     [
+      "Guarded"
+     ],
+     [
+      "Watch"
+     ],
+     [
+      "Elevated"
+     ],
+     [
+      "Stress"
+     ]
+    ],
+    "ladder_share_O1": [
+     0.006,
+     0.074,
+     0.266,
+     0.337,
+     0.164
+    ],
+    "ladder_rises": false,
+    "state_changes": 198,
+    "state_changes_per_year": 11.639,
+    "timing": {}
+   },
+   "C2_percentile": {
+    "by_state": [
+     {
+      "state": "Calm",
+      "days": 1769,
+      "share_O1": 0.0,
+      "fall63_median": -2.089,
+      "fall63_5th_percentile": -6.893
+     },
+     {
+      "state": "Guarded",
+      "days": 1140,
+      "share_O1": 0.111,
+      "fall63_median": -1.715,
+      "fall63_5th_percentile": -16.879
+     },
+     {
+      "state": "Watch",
+      "days": 549,
+      "share_O1": 0.271,
+      "fall63_median": -4.716,
+      "fall63_5th_percentile": -20.85
+     },
+     {
+      "state": "Elevated",
+      "days": 607,
+      "share_O1": 0.267,
+      "fall63_median": -4.637,
+      "fall63_5th_percentile": -18.778
+     },
+     {
+      "state": "Stress",
+      "days": 222,
+      "share_O1": 0.374,
+      "fall63_median": -7.35,
+      "fall63_5th_percentile": -18.337
+     }
+    ],
+    "ladder_groups": [
+     [
+      "Calm"
+     ],
+     [
+      "Guarded"
+     ],
+     [
+      "Watch"
+     ],
+     [
+      "Elevated"
+     ],
+     [
+      "Stress"
+     ]
+    ],
+    "ladder_share_O1": [
+     0.0,
+     0.111,
+     0.271,
+     0.267,
+     0.374
+    ],
+    "ladder_rises": false,
+    "state_changes": 173,
+    "state_changes_per_year": 10.169,
+    "timing": {}
+   },
+   "C7_market_only": {
+    "by_state": [
+     {
+      "state": "Calm",
+      "days": 1685,
+      "share_O1": 0.0,
+      "fall63_median": -1.975,
+      "fall63_5th_percentile": -6.865
+     },
+     {
+      "state": "Guarded",
+      "days": 1222,
+      "share_O1": 0.092,
+      "fall63_median": -2.087,
+      "fall63_5th_percentile": -16.045
+     },
+     {
+      "state": "Watch",
+      "days": 559,
+      "share_O1": 0.216,
+      "fall63_median": -4.481,
+      "fall63_5th_percentile": -22.646
+     },
+     {
+      "state": "Elevated",
+      "days": 585,
+      "share_O1": 0.35,
+      "fall63_median": -5.043,
+      "fall63_5th_percentile": -19.258
+     },
+     {
+      "state": "Stress",
+      "days": 236,
+      "share_O1": 0.347,
+      "fall63_median": -7.233,
+      "fall63_5th_percentile": -18.776
+     }
+    ],
+    "ladder_groups": [
+     [
+      "Calm"
+     ],
+     [
+      "Guarded"
+     ],
+     [
+      "Watch"
+     ],
+     [
+      "Elevated"
+     ],
+     [
+      "Stress"
+     ]
+    ],
+    "ladder_share_O1": [
+     0.0,
+     0.092,
+     0.216,
+     0.35,
+     0.347
+    ],
+    "ladder_rises": false,
+    "state_changes": 203,
+    "state_changes_per_year": 11.933,
+    "timing": {}
+   },
+   "C5_realized_vol": {
+    "by_state": [
+     {
+      "state": "Calm",
+      "days": 1805,
+      "share_O1": 0.0,
+      "fall63_median": -2.022,
+      "fall63_5th_percentile": -6.877
+     },
+     {
+      "state": "Guarded",
+      "days": 1105,
+      "share_O1": 0.105,
+      "fall63_median": -1.888,
+      "fall63_5th_percentile": -16.667
+     },
+     {
+      "state": "Watch",
+      "days": 569,
+      "share_O1": 0.302,
+      "fall63_median": -4.785,
+      "fall63_5th_percentile": -22.409
+     },
+     {
+      "state": "Elevated",
+      "days": 591,
+      "share_O1": 0.264,
+      "fall63_median": -4.68,
+      "fall63_5th_percentile": -17.099
+     },
+     {
+      "state": "Stress",
+      "days": 217,
+      "share_O1": 0.355,
+      "fall63_median": -7.313,
+      "fall63_5th_percentile": -18.95
+     }
+    ],
+    "ladder_groups": [
+     [
+      "Calm"
+     ],
+     [
+      "Guarded"
+     ],
+     [
+      "Watch"
+     ],
+     [
+      "Elevated"
+     ],
+     [
+      "Stress"
+     ]
+    ],
+    "ladder_share_O1": [
+     0.0,
+     0.105,
+     0.302,
+     0.264,
+     0.355
+    ],
+    "ladder_rises": false,
+    "state_changes": 147,
+    "state_changes_per_year": 8.641,
+    "timing": {}
+   },
+   "C6_ebp": {
+    "by_state": [
+     {
+      "state": "Calm",
+      "days": 1753,
+      "share_O1": 0.0,
+      "fall63_median": -2.052,
+      "fall63_5th_percentile": -7.053
+     },
+     {
+      "state": "Guarded",
+      "days": 1163,
+      "share_O1": 0.087,
+      "fall63_median": -1.923,
+      "fall63_5th_percentile": -16.109
+     },
+     {
+      "state": "Watch",
+      "days": 573,
+      "share_O1": 0.244,
+      "fall63_median": -4.445,
+      "fall63_5th_percentile": -21.825
+     },
+     {
+      "state": "Elevated",
+      "days": 572,
+      "share_O1": 0.336,
+      "fall63_median": -5.408,
+      "fall63_5th_percentile": -19.307
+     },
+     {
+      "state": "Stress",
+      "days": 226,
+      "share_O1": 0.389,
+      "fall63_median": -7.065,
+      "fall63_5th_percentile": -19.184
+     }
+    ],
+    "ladder_groups": [
+     [
+      "Calm"
+     ],
+     [
+      "Guarded"
+     ],
+     [
+      "Watch"
+     ],
+     [
+      "Elevated"
+     ],
+     [
+      "Stress"
+     ]
+    ],
+    "ladder_share_O1": [
+     0.0,
+     0.087,
+     0.244,
+     0.336,
+     0.389
+    ],
+    "ladder_rises": true,
+    "state_changes": 170,
+    "state_changes_per_year": 9.993,
+    "timing": {}
+   },
+   "C3_pca_weights": {
+    "by_state": [
+     {
+      "state": "Calm",
+      "days": 1748,
+      "share_O1": 0.001,
+      "fall63_median": -1.823,
+      "fall63_5th_percentile": -6.951
+     },
+     {
+      "state": "Guarded",
+      "days": 1148,
+      "share_O1": 0.079,
+      "fall63_median": -2.205,
+      "fall63_5th_percentile": -15.443
+     },
+     {
+      "state": "Watch",
+      "days": 579,
+      "share_O1": 0.351,
+      "fall63_median": -5.466,
+      "fall63_5th_percentile": -23.302
+     },
+     {
+      "state": "Elevated",
+      "days": 555,
+      "share_O1": 0.281,
+      "fall63_median": -5.102,
+      "fall63_5th_percentile": -19.276
+     },
+     {
+      "state": "Stress",
+      "days": 257,
+      "share_O1": 0.268,
+      "fall63_median": -4.791,
+      "fall63_5th_percentile": -15.998
+     }
+    ],
+    "ladder_groups": [
+     [
+      "Calm"
+     ],
+     [
+      "Guarded"
+     ],
+     [
+      "Watch"
+     ],
+     [
+      "Elevated"
+     ],
+     [
+      "Stress"
+     ]
+    ],
+    "ladder_share_O1": [
+     0.001,
+     0.079,
+     0.351,
+     0.281,
+     0.268
+    ],
+    "ladder_rises": false,
+    "state_changes": 191,
+    "state_changes_per_year": 11.227,
+    "timing": {}
+   },
+   "C4_correlation_weighted": {
+    "by_state": [
+     {
+      "state": "Calm",
+      "days": 1892,
+      "share_O1": 0.0,
+      "fall63_median": -1.953,
+      "fall63_5th_percentile": -6.733
+     },
+     {
+      "state": "Guarded",
+      "days": 1057,
+      "share_O1": 0.098,
+      "fall63_median": -2.075,
+      "fall63_5th_percentile": -16.627
+     },
+     {
+      "state": "Watch",
+      "days": 545,
+      "share_O1": 0.341,
+      "fall63_median": -5.169,
+      "fall63_5th_percentile": -23.677
+     },
+     {
+      "state": "Elevated",
+      "days": 577,
+      "share_O1": 0.26,
+      "fall63_median": -4.737,
+      "fall63_5th_percentile": -15.61
+     },
+     {
+      "state": "Stress",
+      "days": 216,
+      "share_O1": 0.375,
+      "fall63_median": -6.745,
+      "fall63_5th_percentile": -18.971
+     }
+    ],
+    "ladder_groups": [
+     [
+      "Calm"
+     ],
+     [
+      "Guarded"
+     ],
+     [
+      "Watch"
+     ],
+     [
+      "Elevated"
+     ],
+     [
+      "Stress"
+     ]
+    ],
+    "ladder_share_O1": [
+     0.0,
+     0.098,
+     0.341,
+     0.26,
+     0.375
+    ],
+    "ladder_rises": false,
+    "state_changes": 106,
+    "state_changes_per_year": 6.231,
+    "timing": {}
+   }
+  }
+ },
+ "test": {
+  "days": 4904,
+  "first": "2007-01-03",
+  "last": "2026-07-01",
+  "auroc": {
+   "O1": {
+    "days_scored": 4904,
+    "share_of_days_with_outcome": 0.162,
+    "auroc": {
+     "v3_long": 0.625,
+     "C1_no_curve": 0.66,
+     "C2_percentile": 0.639,
+     "C7_market_only": 0.623,
+     "C5_realized_vol": 0.644,
+     "C6_ebp": 0.637,
+     "C3_pca_weights": 0.658,
+     "C4_correlation_weighted": 0.6
+    },
+    "interval_90": {
+     "v3_long": [
+      0.513,
+      0.722
+     ],
+     "C1_no_curve": [
+      0.549,
+      0.755
+     ],
+     "C2_percentile": [
+      0.535,
+      0.724
+     ],
+     "C7_market_only": [
+      0.524,
+      0.704
+     ],
+     "C5_realized_vol": [
+      0.543,
+      0.73
+     ],
+     "C6_ebp": [
+      0.525,
+      0.728
+     ],
+     "C3_pca_weights": [
+      0.554,
+      0.746
+     ],
+     "C4_correlation_weighted": [
+      0.48,
+      0.701
+     ]
+    },
+    "difference_to_v3_long_interval_90": {
+     "C1_no_curve": [
+      -0.001,
+      0.068
+     ],
+     "C2_percentile": [
+      -0.027,
+      0.053
+     ],
+     "C7_market_only": [
+      -0.051,
+      0.045
+     ],
+     "C5_realized_vol": [
+      -0.021,
+      0.058
+     ],
+     "C6_ebp": [
+      -0.039,
+      0.059
+     ],
+     "C3_pca_weights": [
+      -0.014,
+      0.078
+     ],
+     "C4_correlation_weighted": [
+      -0.068,
+      0.014
+     ]
+    },
+    "days_in_bootstrap": 4904
+   },
+   "O2": {
+    "days_scored": 4904,
+    "share_of_days_with_outcome": 0.193,
+    "auroc": {
+     "v3_long": 0.655,
+     "C1_no_curve": 0.661,
+     "C2_percentile": 0.645,
+     "C7_market_only": 0.634,
+     "C5_realized_vol": 0.651,
+     "C6_ebp": 0.634,
+     "C3_pca_weights": 0.654,
+     "C4_correlation_weighted": 0.634
+    },
+    "interval_90": {
+     "v3_long": [
+      0.586,
+      0.715
+     ],
+     "C1_no_curve": [
+      0.595,
+      0.721
+     ],
+     "C2_percentile": [
+      0.579,
+      0.704
+     ],
+     "C7_market_only": [
+      0.57,
+      0.69
+     ],
+     "C5_realized_vol": [
+      0.585,
+      0.709
+     ],
+     "C6_ebp": [
+      0.562,
+      0.698
+     ],
+     "C3_pca_weights": [
+      0.588,
+      0.714
+     ],
+     "C4_correlation_weighted": [
+      0.56,
+      0.698
+     ]
+    },
+    "difference_to_v3_long_interval_90": {
+     "C1_no_curve": [
+      -0.015,
+      0.03
+     ],
+     "C2_percentile": [
+      -0.033,
+      0.015
+     ],
+     "C7_market_only": [
+      -0.049,
+      0.008
+     ],
+     "C5_realized_vol": [
+      -0.028,
+      0.023
+     ],
+     "C6_ebp": [
+      -0.051,
+      0.009
+     ],
+     "C3_pca_weights": [
+      -0.027,
+      0.028
+     ],
+     "C4_correlation_weighted": [
+      -0.045,
+      0.0
+     ]
+    },
+    "days_in_bootstrap": 4904
+   },
+   "O3": {
+    "days_scored": 4904,
+    "share_of_days_with_outcome": 0.353,
+    "auroc": {
+     "v3_long": 0.724,
+     "C1_no_curve": 0.75,
+     "C2_percentile": 0.726,
+     "C7_market_only": 0.713,
+     "C5_realized_vol": 0.731,
+     "C6_ebp": 0.696,
+     "C3_pca_weights": 0.737,
+     "C4_correlation_weighted": 0.705
+    },
+    "interval_90": {
+     "v3_long": [
+      0.646,
+      0.795
+     ],
+     "C1_no_curve": [
+      0.673,
+      0.816
+     ],
+     "C2_percentile": [
+      0.645,
+      0.794
+     ],
+     "C7_market_only": [
+      0.63,
+      0.783
+     ],
+     "C5_realized_vol": [
+      0.65,
+      0.8
+     ],
+     "C6_ebp": [
+      0.608,
+      0.77
+     ],
+     "C3_pca_weights": [
+      0.656,
+      0.804
+     ],
+     "C4_correlation_weighted": [
+      0.613,
+      0.781
+     ]
+    },
+    "difference_to_v3_long_interval_90": {
+     "C1_no_curve": [
+      -0.014,
+      0.062
+     ],
+     "C2_percentile": [
+      -0.039,
+      0.039
+     ],
+     "C7_market_only": [
+      -0.06,
+      0.033
+     ],
+     "C5_realized_vol": [
+      -0.034,
+      0.046
+     ],
+     "C6_ebp": [
+      -0.078,
+      0.013
+     ],
+     "C3_pca_weights": [
+      -0.033,
+      0.056
+     ],
+     "C4_correlation_weighted": [
+      -0.059,
+      0.014
+     ]
+    },
+    "days_in_bootstrap": 4904
+   },
+   "R1": {
+    "days_scored": 4589,
+    "share_of_days_with_outcome": 0.174,
+    "auroc": {
+     "v3_long": 0.668,
+     "C1_no_curve": 0.58,
+     "C2_percentile": 0.659,
+     "C7_market_only": 0.655,
+     "C5_realized_vol": 0.648,
+     "C6_ebp": 0.66,
+     "C3_pca_weights": 0.613,
+     "C4_correlation_weighted": 0.65
+    },
+    "interval_90": {
+     "v3_long": [
+      0.562,
+      0.777
+     ],
+     "C1_no_curve": [
+      0.452,
+      0.744
+     ],
+     "C2_percentile": [
+      0.563,
+      0.786
+     ],
+     "C7_market_only": [
+      0.569,
+      0.772
+     ],
+     "C5_realized_vol": [
+      0.553,
+      0.776
+     ],
+     "C6_ebp": [
+      0.549,
+      0.801
+     ],
+     "C3_pca_weights": [
+      0.504,
+      0.756
+     ],
+     "C4_correlation_weighted": [
+      0.538,
+      0.773
+     ]
+    },
+    "difference_to_v3_long_interval_90": {
+     "C1_no_curve": [
+      -0.151,
+      -0.008
+     ],
+     "C2_percentile": [
+      -0.054,
+      0.062
+     ],
+     "C7_market_only": [
+      -0.067,
+      0.068
+     ],
+     "C5_realized_vol": [
+      -0.061,
+      0.046
+     ],
+     "C6_ebp": [
+      -0.071,
+      0.076
+     ],
+     "C3_pca_weights": [
+      -0.105,
+      0.015
+     ],
+     "C4_correlation_weighted": [
+      -0.06,
+      0.031
+     ]
+    },
+    "days_in_bootstrap": 4589
+   }
+  },
+  "states": {
+   "v3_long": {
+    "by_state": [
+     {
+      "state": "Calm",
+      "days": 1579,
+      "share_O1": 0.103,
+      "fall63_median": -2.647,
+      "fall63_5th_percentile": -13.785
+     },
+     {
+      "state": "Guarded",
+      "days": 1346,
+      "share_O1": 0.148,
+      "fall63_median": -3.347,
+      "fall63_5th_percentile": -15.668
+     },
+     {
+      "state": "Watch",
+      "days": 821,
+      "share_O1": 0.163,
+      "fall63_median": -2.219,
+      "fall63_5th_percentile": -14.583
+     },
+     {
+      "state": "Elevated",
+      "days": 841,
+      "share_O1": 0.218,
+      "fall63_median": -4.815,
+      "fall63_5th_percentile": -26.068
+     },
+     {
+      "state": "Stress",
+      "days": 317,
+      "share_O1": 0.366,
+      "fall63_median": -3.794,
+      "fall63_5th_percentile": -28.444
+     }
+    ],
+    "ladder_groups": [
+     [
+      "Calm"
+     ],
+     [
+      "Guarded"
+     ],
+     [
+      "Watch"
+     ],
+     [
+      "Elevated"
+     ],
+     [
+      "Stress"
+     ]
+    ],
+    "ladder_share_O1": [
+     0.103,
+     0.148,
+     0.163,
+     0.218,
+     0.366
+    ],
+    "ladder_rises": true,
+    "state_changes": 244,
+    "state_changes_per_year": 12.538,
+    "timing": {
+     "2007-2009": {
+      "first_elevated_or_above": "2007-07-27",
+      "first_stress": "2008-03-14"
+     },
+     "2011": {
+      "first_elevated_or_above": "2011-08-04",
+      "first_stress": "2011-10-03"
+     },
+     "2015-16": {
+      "first_elevated_or_above": "2015-08-24",
+      "first_stress": null
+     },
+     "2018": {
+      "first_elevated_or_above": "2018-02-05",
+      "first_stress": "2018-12-24"
+     },
+     "2020": {
+      "first_elevated_or_above": "2020-02-27",
+      "first_stress": "2020-03-12"
+     },
+     "2022": {
+      "first_elevated_or_above": "2022-01-25",
+      "first_stress": "2022-06-13"
+     },
+     "2025": {
+      "first_elevated_or_above": "2025-04-03",
+      "first_stress": null
+     }
+    }
+   },
+   "C1_no_curve": {
+    "by_state": [
+     {
+      "state": "Calm",
+      "days": 1918,
+      "share_O1": 0.101,
+      "fall63_median": -2.916,
+      "fall63_5th_percentile": -15.726
+     },
+     {
+      "state": "Guarded",
+      "days": 972,
+      "share_O1": 0.108,
+      "fall63_median": -2.004,
+      "fall63_5th_percentile": -13.74
+     },
+     {
+      "state": "Watch",
+      "days": 805,
+      "share_O1": 0.21,
+      "fall63_median": -3.526,
+      "fall63_5th_percentile": -15.777
+     },
+     {
+      "state": "Elevated",
+      "days": 743,
+      "share_O1": 0.187,
+      "fall63_median": -4.309,
+      "fall63_5th_percentile": -13.57
+     },
+     {
+      "state": "Stress",
+      "days": 466,
+      "share_O1": 0.403,
+      "fall63_median": -5.855,
+      "fall63_5th_percentile": -37.365
+     }
+    ],
+    "ladder_groups": [
+     [
+      "Calm"
+     ],
+     [
+      "Guarded"
+     ],
+     [
+      "Watch"
+     ],
+     [
+      "Elevated"
+     ],
+     [
+      "Stress"
+     ]
+    ],
+    "ladder_share_O1": [
+     0.101,
+     0.108,
+     0.21,
+     0.187,
+     0.403
+    ],
+    "ladder_rises": false,
+    "state_changes": 290,
+    "state_changes_per_year": 14.902,
+    "timing": {
+     "2007-2009": {
+      "first_elevated_or_above": "2007-08-15",
+      "first_stress": "2008-01-08"
+     },
+     "2011": {
+      "first_elevated_or_above": "2011-08-04",
+      "first_stress": "2011-10-03"
+     },
+     "2015-16": {
+      "first_elevated_or_above": "2015-08-24",
+      "first_stress": null
+     },
+     "2018": {
+      "first_elevated_or_above": "2018-02-05",
+      "first_stress": "2018-12-24"
+     },
+     "2020": {
+      "first_elevated_or_above": "2020-02-27",
+      "first_stress": "2020-03-12"
+     },
+     "2022": {
+      "first_elevated_or_above": "2022-01-25",
+      "first_stress": "2022-06-13"
+     },
+     "2025": {
+      "first_elevated_or_above": "2025-04-03",
+      "first_stress": null
+     }
+    }
+   },
+   "C2_percentile": {
+    "by_state": [
+     {
+      "state": "Calm",
+      "days": 615,
+      "share_O1": 0.039,
+      "fall63_median": -2.793,
+      "fall63_5th_percentile": -9.123
+     },
+     {
+      "state": "Guarded",
+      "days": 2176,
+      "share_O1": 0.138,
+      "fall63_median": -2.965,
+      "fall63_5th_percentile": -17.2
+     },
+     {
+      "state": "Watch",
+      "days": 897,
+      "share_O1": 0.197,
+      "fall63_median": -3.094,
+      "fall63_5th_percentile": -14.353
+     },
+     {
+      "state": "Elevated",
+      "days": 904,
+      "share_O1": 0.22,
+      "fall63_median": -4.038,
+      "fall63_5th_percentile": -28.19
+     },
+     {
+      "state": "Stress",
+      "days": 312,
+      "share_O1": 0.298,
+      "fall63_median": -3.949,
+      "fall63_5th_percentile": -25.851
+     }
+    ],
+    "ladder_groups": [
+     [
+      "Calm"
+     ],
+     [
+      "Guarded"
+     ],
+     [
+      "Watch"
+     ],
+     [
+      "Elevated"
+     ],
+     [
+      "Stress"
+     ]
+    ],
+    "ladder_share_O1": [
+     0.039,
+     0.138,
+     0.197,
+     0.22,
+     0.298
+    ],
+    "ladder_rises": true,
+    "state_changes": 291,
+    "state_changes_per_year": 14.954,
+    "timing": {
+     "2007-2009": {
+      "first_elevated_or_above": "2007-08-03",
+      "first_stress": "2008-01-08"
+     },
+     "2011": {
+      "first_elevated_or_above": "2011-08-08",
+      "first_stress": "2011-09-22"
+     },
+     "2015-16": {
+      "first_elevated_or_above": "2015-08-24",
+      "first_stress": null
+     },
+     "2018": {
+      "first_elevated_or_above": "2018-12-07",
+      "first_stress": "2018-12-24"
+     },
+     "2020": {
+      "first_elevated_or_above": "2020-02-25",
+      "first_stress": "2020-02-28"
+     },
+     "2022": {
+      "first_elevated_or_above": "2022-03-04",
+      "first_stress": "2022-07-13"
+     },
+     "2025": {
+      "first_elevated_or_above": "2025-04-03",
+      "first_stress": null
+     }
+    }
+   },
+   "C7_market_only": {
+    "by_state": [
+     {
+      "state": "Calm",
+      "days": 882,
+      "share_O1": 0.084,
+      "fall63_median": -2.829,
+      "fall63_5th_percentile": -13.583
+     },
+     {
+      "state": "Guarded",
+      "days": 1815,
+      "share_O1": 0.127,
+      "fall63_median": -2.989,
+      "fall63_5th_percentile": -16.617
+     },
+     {
+      "state": "Watch",
+      "days": 1099,
+      "share_O1": 0.231,
+      "fall63_median": -3.248,
+      "fall63_5th_percentile": -15.252
+     },
+     {
+      "state": "Elevated",
+      "days": 885,
+      "share_O1": 0.211,
+      "fall63_median": -4.039,
+      "fall63_5th_percentile": -27.73
+     },
+     {
+      "state": "Stress",
+      "days": 223,
+      "share_O1": 0.22,
+      "fall63_median": -3.09,
+      "fall63_5th_percentile": -24.253
+     }
+    ],
+    "ladder_groups": [
+     [
+      "Calm"
+     ],
+     [
+      "Guarded"
+     ],
+     [
+      "Watch"
+     ],
+     [
+      "Elevated"
+     ],
+     [
+      "Stress"
+     ]
+    ],
+    "ladder_share_O1": [
+     0.084,
+     0.127,
+     0.231,
+     0.211,
+     0.22
+    ],
+    "ladder_rises": false,
+    "state_changes": 388,
+    "state_changes_per_year": 19.938,
+    "timing": {
+     "2007-2009": {
+      "first_elevated_or_above": "2007-08-03",
+      "first_stress": "2008-01-17"
+     },
+     "2011": {
+      "first_elevated_or_above": "2011-08-04",
+      "first_stress": null
+     },
+     "2015-16": {
+      "first_elevated_or_above": "2015-08-21",
+      "first_stress": null
+     },
+     "2018": {
+      "first_elevated_or_above": "2018-12-06",
+      "first_stress": "2018-12-21"
+     },
+     "2020": {
+      "first_elevated_or_above": "2020-02-24",
+      "first_stress": "2020-02-27"
+     },
+     "2022": {
+      "first_elevated_or_above": "2022-02-28",
+      "first_stress": "2022-07-13"
+     },
+     "2025": {
+      "first_elevated_or_above": "2025-04-03",
+      "first_stress": "2025-04-04"
+     }
+    }
+   },
+   "C5_realized_vol": {
+    "by_state": [
+     {
+      "state": "Calm",
+      "days": 812,
+      "share_O1": 0.079,
+      "fall63_median": -3.059,
+      "fall63_5th_percentile": -12.452
+     },
+     {
+      "state": "Guarded",
+      "days": 2037,
+      "share_O1": 0.121,
+      "fall63_median": -2.754,
+      "fall63_5th_percentile": -15.709
+     },
+     {
+      "state": "Watch",
+      "days": 825,
+      "share_O1": 0.24,
+      "fall63_median": -3.111,
+      "fall63_5th_percentile": -15.174
+     },
+     {
+      "state": "Elevated",
+      "days": 903,
+      "share_O1": 0.19,
+      "fall63_median": -4.108,
+      "fall63_5th_percentile": -26.164
+     },
+     {
+      "state": "Stress",
+      "days": 327,
+      "share_O1": 0.349,
+      "fall63_median": -4.611,
+      "fall63_5th_percentile": -28.316
+     }
+    ],
+    "ladder_groups": [
+     [
+      "Calm"
+     ],
+     [
+      "Guarded"
+     ],
+     [
+      "Watch"
+     ],
+     [
+      "Elevated"
+     ],
+     [
+      "Stress"
+     ]
+    ],
+    "ladder_share_O1": [
+     0.079,
+     0.121,
+     0.24,
+     0.19,
+     0.349
+    ],
+    "ladder_rises": false,
+    "state_changes": 274,
+    "state_changes_per_year": 14.08,
+    "timing": {
+     "2007-2009": {
+      "first_elevated_or_above": "2007-08-03",
+      "first_stress": "2008-01-17"
+     },
+     "2011": {
+      "first_elevated_or_above": "2011-08-04",
+      "first_stress": "2011-09-22"
+     },
+     "2015-16": {
+      "first_elevated_or_above": "2015-08-24",
+      "first_stress": null
+     },
+     "2018": {
+      "first_elevated_or_above": "2018-12-06",
+      "first_stress": "2018-12-24"
+     },
+     "2020": {
+      "first_elevated_or_above": "2020-02-25",
+      "first_stress": "2020-02-28"
+     },
+     "2022": {
+      "first_elevated_or_above": "2022-02-28",
+      "first_stress": "2022-07-13"
+     },
+     "2025": {
+      "first_elevated_or_above": "2025-04-03",
+      "first_stress": null
+     }
+    }
+   },
+   "C6_ebp": {
+    "by_state": [
+     {
+      "state": "Calm",
+      "days": 537,
+      "share_O1": 0.043,
+      "fall63_median": -2.937,
+      "fall63_5th_percentile": -9.336
+     },
+     {
+      "state": "Guarded",
+      "days": 2449,
+      "share_O1": 0.149,
+      "fall63_median": -2.908,
+      "fall63_5th_percentile": -17.275
+     },
+     {
+      "state": "Watch",
+      "days": 1025,
+      "share_O1": 0.135,
+      "fall63_median": -2.777,
+      "fall63_5th_percentile": -13.133
+     },
+     {
+      "state": "Elevated",
+      "days": 594,
+      "share_O1": 0.259,
+      "fall63_median": -4.883,
+      "fall63_5th_percentile": -29.326
+     },
+     {
+      "state": "Stress",
+      "days": 299,
+      "share_O1": 0.378,
+      "fall63_median": -4.655,
+      "fall63_5th_percentile": -35.677
+     }
+    ],
+    "ladder_groups": [
+     [
+      "Calm"
+     ],
+     [
+      "Guarded"
+     ],
+     [
+      "Watch"
+     ],
+     [
+      "Elevated"
+     ],
+     [
+      "Stress"
+     ]
+    ],
+    "ladder_share_O1": [
+     0.043,
+     0.149,
+     0.135,
+     0.259,
+     0.378
+    ],
+    "ladder_rises": false,
+    "state_changes": 199,
+    "state_changes_per_year": 10.226,
+    "timing": {
+     "2007-2009": {
+      "first_elevated_or_above": "2007-09-05",
+      "first_stress": "2008-01-08"
+     },
+     "2011": {
+      "first_elevated_or_above": "2011-08-18",
+      "first_stress": null
+     },
+     "2015-16": {
+      "first_elevated_or_above": "2015-08-24",
+      "first_stress": null
+     },
+     "2018": {
+      "first_elevated_or_above": "2018-12-19",
+      "first_stress": null
+     },
+     "2020": {
+      "first_elevated_or_above": "2020-02-28",
+      "first_stress": "2020-03-16"
+     },
+     "2022": {
+      "first_elevated_or_above": "2022-07-11",
+      "first_stress": null
+     },
+     "2025": {
+      "first_elevated_or_above": "2025-04-07",
+      "first_stress": null
+     }
+    }
+   },
+   "C3_pca_weights": {
+    "by_state": [
+     {
+      "state": "Calm",
+      "days": 869,
+      "share_O1": 0.062,
+      "fall63_median": -2.793,
+      "fall63_5th_percentile": -10.941
+     },
+     {
+      "state": "Guarded",
+      "days": 2038,
+      "share_O1": 0.131,
+      "fall63_median": -2.841,
+      "fall63_5th_percentile": -15.46
+     },
+     {
+      "state": "Watch",
+      "days": 857,
+      "share_O1": 0.214,
+      "fall63_median": -3.039,
+      "fall63_5th_percentile": -15.191
+     },
+     {
+      "state": "Elevated",
+      "days": 637,
+      "share_O1": 0.224,
+      "fall63_median": -4.381,
+      "fall63_5th_percentile": -15.285
+     },
+     {
+      "state": "Stress",
+      "days": 503,
+      "share_O1": 0.292,
+      "fall63_median": -4.737,
+      "fall63_5th_percentile": -32.95
+     }
+    ],
+    "ladder_groups": [
+     [
+      "Calm"
+     ],
+     [
+      "Guarded"
+     ],
+     [
+      "Watch"
+     ],
+     [
+      "Elevated"
+     ],
+     [
+      "Stress"
+     ]
+    ],
+    "ladder_share_O1": [
+     0.062,
+     0.131,
+     0.214,
+     0.224,
+     0.292
+    ],
+    "ladder_rises": true,
+    "state_changes": 331,
+    "state_changes_per_year": 17.009,
+    "timing": {
+     "2007-2009": {
+      "first_elevated_or_above": "2007-08-14",
+      "first_stress": "2008-01-08"
+     },
+     "2011": {
+      "first_elevated_or_above": "2011-08-04",
+      "first_stress": "2011-08-19"
+     },
+     "2015-16": {
+      "first_elevated_or_above": "2015-08-21",
+      "first_stress": null
+     },
+     "2018": {
+      "first_elevated_or_above": "2018-12-18",
+      "first_stress": null
+     },
+     "2020": {
+      "first_elevated_or_above": "2020-02-27",
+      "first_stress": "2020-03-09"
+     },
+     "2022": {
+      "first_elevated_or_above": "2022-03-04",
+      "first_stress": "2022-09-28"
+     },
+     "2025": {
+      "first_elevated_or_above": "2025-04-04",
+      "first_stress": null
+     }
+    }
+   },
+   "C4_correlation_weighted": {
+    "by_state": [
+     {
+      "state": "Calm",
+      "days": 657,
+      "share_O1": 0.081,
+      "fall63_median": -2.929,
+      "fall63_5th_percentile": -11.614
+     },
+     {
+      "state": "Guarded",
+      "days": 2620,
+      "share_O1": 0.151,
+      "fall63_median": -2.976,
+      "fall63_5th_percentile": -16.719
+     },
+     {
+      "state": "Watch",
+      "days": 647,
+      "share_O1": 0.139,
+      "fall63_median": -2.544,
+      "fall63_5th_percentile": -12.966
+     },
+     {
+      "state": "Elevated",
+      "days": 545,
+      "share_O1": 0.237,
+      "fall63_median": -5.307,
+      "fall63_5th_percentile": -32.775
+     },
+     {
+      "state": "Stress",
+      "days": 435,
+      "share_O1": 0.29,
+      "fall63_median": -3.477,
+      "fall63_5th_percentile": -28.217
+     }
+    ],
+    "ladder_groups": [
+     [
+      "Calm"
+     ],
+     [
+      "Guarded"
+     ],
+     [
+      "Watch"
+     ],
+     [
+      "Elevated"
+     ],
+     [
+      "Stress"
+     ]
+    ],
+    "ladder_share_O1": [
+     0.081,
+     0.151,
+     0.139,
+     0.237,
+     0.29
+    ],
+    "ladder_rises": false,
+    "state_changes": 146,
+    "state_changes_per_year": 7.502,
+    "timing": {
+     "2007-2009": {
+      "first_elevated_or_above": "2007-11-21",
+      "first_stress": "2008-01-17"
+     },
+     "2011": {
+      "first_elevated_or_above": "2011-08-08",
+      "first_stress": "2011-09-21"
+     },
+     "2015-16": {
+      "first_elevated_or_above": "2016-01-20",
+      "first_stress": null
+     },
+     "2018": {
+      "first_elevated_or_above": "2018-12-19",
+      "first_stress": null
+     },
+     "2020": {
+      "first_elevated_or_above": "2020-03-09",
+      "first_stress": "2020-03-16"
+     },
+     "2022": {
+      "first_elevated_or_above": "2022-05-18",
+      "first_stress": "2022-09-28"
+     },
+     "2025": {
+      "first_elevated_or_above": "2025-04-08",
+      "first_stress": null
+     }
+    }
+   }
+  }
+ },
+ "bar": {
+  "O1_gain_at_least_0.02": false,
+  "O1_gain": 0.012,
+  "O1_gain_interval_above_zero": false,
+  "O2_not_worse_by_0.01": false,
+  "O2_gain": -0.021,
+  "O3_not_worse_by_0.01": false,
+  "O3_gain": -0.028,
+  "ladder_rises": false,
+  "state_changes_within_125pct": true,
+  "met": false
+ },
+ "untouched_1986_1989": {
+  "days": 1011,
+  "first": "1986-01-02",
+  "last": "1989-12-29",
+  "auroc": {
+   "O1": {
+    "days_scored": 1011,
+    "share_of_days_with_outcome": 0.067,
+    "auroc": {
+     "v3_long": 0.477,
+     "C1_no_curve": 0.571,
+     "C2_percentile": 0.334,
+     "C7_market_only": 0.277,
+     "C5_realized_vol": 0.406,
+     "C6_ebp": 0.335,
+     "C3_pca_weights": 0.499,
+     "C4_correlation_weighted": 0.27
+    }
+   },
+   "O2": {
+    "days_scored": 1011,
+    "share_of_days_with_outcome": 0.12,
+    "auroc": {
+     "v3_long": 0.472,
+     "C1_no_curve": 0.506,
+     "C2_percentile": 0.473,
+     "C7_market_only": 0.485,
+     "C5_realized_vol": 0.509,
+     "C6_ebp": 0.486,
+     "C3_pca_weights": 0.527,
+     "C4_correlation_weighted": 0.437
+    }
+   },
+   "O3": {
+    "days_scored": 1011,
+    "share_of_days_with_outcome": 0.304,
+    "auroc": {
+     "v3_long": 0.682,
+     "C1_no_curve": 0.703,
+     "C2_percentile": 0.639,
+     "C7_market_only": 0.617,
+     "C5_realized_vol": 0.654,
+     "C6_ebp": 0.64,
+     "C3_pca_weights": 0.668,
+     "C4_correlation_weighted": 0.647
+    }
+   },
+   "R1": {
+    "days_scored": 1011,
+    "share_of_days_with_outcome": 0.228,
+    "auroc": {
+     "v3_long": 0.654,
+     "C1_no_curve": 0.445,
+     "C2_percentile": 0.383,
+     "C7_market_only": 0.307,
+     "C5_realized_vol": 0.319,
+     "C6_ebp": 0.47,
+     "C3_pca_weights": 0.237,
+     "C4_correlation_weighted": 0.637
+    }
+   }
+  },
+  "states": {
+   "v3_long": {
+    "by_state": [
+     {
+      "state": "Calm",
+      "days": 32,
+      "share_O1": 0.0,
+      "fall63_median": -5.516,
+      "fall63_5th_percentile": -8.849
+     },
+     {
+      "state": "Guarded",
+      "days": 332,
+      "share_O1": 0.063,
+      "fall63_median": -1.555,
+      "fall63_5th_percentile": -23.468
+     },
+     {
+      "state": "Watch",
+      "days": 259,
+      "share_O1": 0.139,
+      "fall63_median": -3.167,
+      "fall63_5th_percentile": -30.993
+     },
+     {
+      "state": "Elevated",
+      "days": 282,
+      "share_O1": 0.018,
+      "fall63_median": -2.19,
+      "fall63_5th_percentile": -6.554
+     },
+     {
+      "state": "Stress",
+      "days": 106,
+      "share_O1": 0.057,
+      "fall63_median": -2.546,
+      "fall63_5th_percentile": -10.052
+     }
+    ],
+    "ladder_groups": [
+     [
+      "Calm",
+      "Guarded"
+     ],
+     [
+      "Watch"
+     ],
+     [
+      "Elevated"
+     ],
+     [
+      "Stress"
+     ]
+    ],
+    "ladder_share_O1": [
+     0.058,
+     0.139,
+     0.018,
+     0.057
+    ],
+    "ladder_rises": false,
+    "state_changes": 39,
+    "state_changes_per_year": 9.721,
+    "timing": {}
+   },
+   "C1_no_curve": {
+    "by_state": [
+     {
+      "state": "Calm",
+      "days": 32,
+      "share_O1": 0.0,
+      "fall63_median": -5.516,
+      "fall63_5th_percentile": -8.849
+     },
+     {
+      "state": "Guarded",
+      "days": 90,
+      "share_O1": 0.0,
+      "fall63_median": -2.513,
+      "fall63_5th_percentile": -8.114
+     },
+     {
+      "state": "Watch",
+      "days": 473,
+      "share_O1": 0.087,
+      "fall63_median": -2.335,
+      "fall63_5th_percentile": -30.055
+     },
+     {
+      "state": "Elevated",
+      "days": 268,
+      "share_O1": 0.075,
+      "fall63_median": -1.999,
+      "fall63_5th_percentile": -28.921
+     },
+     {
+      "state": "Stress",
+      "days": 148,
+      "share_O1": 0.047,
+      "fall63_median": -2.529,
+      "fall63_5th_percentile": -9.839
+     }
+    ],
+    "ladder_groups": [
+     [
+      "Calm",
+      "Guarded"
+     ],
+     [
+      "Watch"
+     ],
+     [
+      "Elevated"
+     ],
+     [
+      "Stress"
+     ]
+    ],
+    "ladder_share_O1": [
+     0.0,
+     0.087,
+     0.075,
+     0.047
+    ],
+    "ladder_rises": false,
+    "state_changes": 44,
+    "state_changes_per_year": 10.967,
+    "timing": {}
+   },
+   "C2_percentile": {
+    "by_state": [
+     {
+      "state": "Calm",
+      "days": 0,
+      "share_O1": null,
+      "fall63_median": null,
+      "fall63_5th_percentile": null
+     },
+     {
+      "state": "Guarded",
+      "days": 437,
+      "share_O1": 0.114,
+      "fall63_median": -2.026,
+      "fall63_5th_percentile": -30.305
+     },
+     {
+      "state": "Watch",
+      "days": 390,
+      "share_O1": 0.033,
+      "fall63_median": -2.181,
+      "fall63_5th_percentile": -7.955
+     },
+     {
+      "state": "Elevated",
+      "days": 184,
+      "share_O1": 0.027,
+      "fall63_median": -3.953,
+      "fall63_5th_percentile": -9.166
+     },
+     {
+      "state": "Stress",
+      "days": 0,
+      "share_O1": null,
+      "fall63_median": null,
+      "fall63_5th_percentile": null
+     }
+    ],
+    "ladder_groups": [
+     [
+      "Guarded"
+     ],
+     [
+      "Watch"
+     ],
+     [
+      "Elevated"
+     ]
+    ],
+    "ladder_share_O1": [
+     0.114,
+     0.033,
+     0.027
+    ],
+    "ladder_rises": false,
+    "state_changes": 48,
+    "state_changes_per_year": 11.964,
+    "timing": {}
+   },
+   "C7_market_only": {
+    "by_state": [
+     {
+      "state": "Calm",
+      "days": 71,
+      "share_O1": 0.127,
+      "fall63_median": -0.549,
+      "fall63_5th_percentile": -28.934
+     },
+     {
+      "state": "Guarded",
+      "days": 454,
+      "share_O1": 0.119,
+      "fall63_median": -2.28,
+      "fall63_5th_percentile": -30.19
+     },
+     {
+      "state": "Watch",
+      "days": 405,
+      "share_O1": 0.007,
+      "fall63_median": -2.588,
+      "fall63_5th_percentile": -7.68
+     },
+     {
+      "state": "Elevated",
+      "days": 81,
+      "share_O1": 0.025,
+      "fall63_median": -3.105,
+      "fall63_5th_percentile": -8.652
+     },
+     {
+      "state": "Stress",
+      "days": 0,
+      "share_O1": null,
+      "fall63_median": null,
+      "fall63_5th_percentile": null
+     }
+    ],
+    "ladder_groups": [
+     [
+      "Calm"
+     ],
+     [
+      "Guarded"
+     ],
+     [
+      "Watch"
+     ],
+     [
+      "Elevated"
+     ]
+    ],
+    "ladder_share_O1": [
+     0.127,
+     0.119,
+     0.007,
+     0.025
+    ],
+    "ladder_rises": false,
+    "state_changes": 52,
+    "state_changes_per_year": 12.961,
+    "timing": {}
+   },
+   "C5_realized_vol": {
+    "by_state": [
+     {
+      "state": "Calm",
+      "days": 4,
+      "share_O1": 0.0,
+      "fall63_median": 0.055,
+      "fall63_5th_percentile": -0.158
+     },
+     {
+      "state": "Guarded",
+      "days": 565,
+      "share_O1": 0.09,
+      "fall63_median": -2.109,
+      "fall63_5th_percentile": -29.554
+     },
+     {
+      "state": "Watch",
+      "days": 314,
+      "share_O1": 0.038,
+      "fall63_median": -2.839,
+      "fall63_5th_percentile": -7.858
+     },
+     {
+      "state": "Elevated",
+      "days": 128,
+      "share_O1": 0.039,
+      "fall63_median": -2.877,
+      "fall63_5th_percentile": -9.611
+     },
+     {
+      "state": "Stress",
+      "days": 0,
+      "share_O1": null,
+      "fall63_median": null,
+      "fall63_5th_percentile": null
+     }
+    ],
+    "ladder_groups": [
+     [
+      "Calm",
+      "Guarded"
+     ],
+     [
+      "Watch"
+     ],
+     [
+      "Elevated"
+     ]
+    ],
+    "ladder_share_O1": [
+     0.09,
+     0.038,
+     0.039
+    ],
+    "ladder_rises": false,
+    "state_changes": 31,
+    "state_changes_per_year": 7.727,
+    "timing": {}
+   },
+   "C6_ebp": {
+    "by_state": [
+     {
+      "state": "Calm",
+      "days": 0,
+      "share_O1": null,
+      "fall63_median": null,
+      "fall63_5th_percentile": null
+     },
+     {
+      "state": "Guarded",
+      "days": 327,
+      "share_O1": 0.101,
+      "fall63_median": -1.447,
+      "fall63_5th_percentile": -29.968
+     },
+     {
+      "state": "Watch",
+      "days": 562,
+      "share_O1": 0.053,
+      "fall63_median": -2.547,
+      "fall63_5th_percentile": -25.358
+     },
+     {
+      "state": "Elevated",
+      "days": 122,
+      "share_O1": 0.041,
+      "fall63_median": -4.418,
+      "fall63_5th_percentile": -9.718
+     },
+     {
+      "state": "Stress",
+      "days": 0,
+      "share_O1": null,
+      "fall63_median": null,
+      "fall63_5th_percentile": null
+     }
+    ],
+    "ladder_groups": [
+     [
+      "Guarded"
+     ],
+     [
+      "Watch"
+     ],
+     [
+      "Elevated"
+     ]
+    ],
+    "ladder_share_O1": [
+     0.101,
+     0.053,
+     0.041
+    ],
+    "ladder_rises": false,
+    "state_changes": 47,
+    "state_changes_per_year": 11.715,
+    "timing": {}
+   },
+   "C3_pca_weights": {
+    "by_state": [
+     {
+      "state": "Calm",
+      "days": 0,
+      "share_O1": null,
+      "fall63_median": null,
+      "fall63_5th_percentile": null
+     },
+     {
+      "state": "Guarded",
+      "days": 472,
+      "share_O1": 0.059,
+      "fall63_median": -1.815,
+      "fall63_5th_percentile": -23.468
+     },
+     {
+      "state": "Watch",
+      "days": 290,
+      "share_O1": 0.121,
+      "fall63_median": -2.626,
+      "fall63_5th_percentile": -30.006
+     },
+     {
+      "state": "Elevated",
+      "days": 155,
+      "share_O1": 0.0,
+      "fall63_median": -3.41,
+      "fall63_5th_percentile": -5.672
+     },
+     {
+      "state": "Stress",
+      "days": 94,
+      "share_O1": 0.053,
+      "fall63_median": -2.414,
+      "fall63_5th_percentile": -9.968
+     }
+    ],
+    "ladder_groups": [
+     [
+      "Guarded"
+     ],
+     [
+      "Watch"
+     ],
+     [
+      "Elevated"
+     ],
+     [
+      "Stress"
+     ]
+    ],
+    "ladder_share_O1": [
+     0.059,
+     0.121,
+     0.0,
+     0.053
+    ],
+    "ladder_rises": false,
+    "state_changes": 38,
+    "state_changes_per_year": 9.472,
+    "timing": {}
+   },
+   "C4_correlation_weighted": {
+    "by_state": [
+     {
+      "state": "Calm",
+      "days": 0,
+      "share_O1": null,
+      "fall63_median": null,
+      "fall63_5th_percentile": null
+     },
+     {
+      "state": "Guarded",
+      "days": 498,
+      "share_O1": 0.12,
+      "fall63_median": -2.415,
+      "fall63_5th_percentile": -30.166
+     },
+     {
+      "state": "Watch",
+      "days": 335,
+      "share_O1": 0.012,
+      "fall63_median": -2.171,
+      "fall63_5th_percentile": -7.556
+     },
+     {
+      "state": "Elevated",
+      "days": 143,
+      "share_O1": 0.028,
+      "fall63_median": -3.359,
+      "fall63_5th_percentile": -9.349
+     },
+     {
+      "state": "Stress",
+      "days": 35,
+      "share_O1": 0.0,
+      "fall63_median": -0.735,
+      "fall63_5th_percentile": -5.199
+     }
+    ],
+    "ladder_groups": [
+     [
+      "Guarded"
+     ],
+     [
+      "Watch"
+     ],
+     [
+      "Elevated",
+      "Stress"
+     ]
+    ],
+    "ladder_share_O1": [
+     0.12,
+     0.012,
+     0.022
+    ],
+    "ladder_rises": false,
+    "state_changes": 29,
+    "state_changes_per_year": 7.228,
+    "timing": {}
+   }
+  }
+ },
+ "reverse_split": {
+  "fitted_on": "2007 onward",
+  "scored_on": "1990-2006",
+  "fitted": {
+   "train_auroc_O1_v3_long": 0.625,
+   "train_auroc_O1_C1": 0.66,
+   "curve_included_in_percentile_candidates": false,
+   "cutpoints": {
+    "vol": {
+     "values": [
+      9.14,
+      11.47,
+      12.42,
+      12.945,
+      13.49,
+      14.078,
+      14.78,
+      15.49,
+      16.13,
+      16.77,
+      17.5,
+      18.306,
+      19.128,
+      20.259,
+      21.44,
+      22.73,
+      24.314,
+      26.09,
+      29.229,
+      35.317,
+      82.69
+     ],
+     "percentiles": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+     ]
+    },
+    "credit": {
+     "values": [
+      1.36,
+      1.57,
+      1.67,
+      1.75,
+      1.83,
+      1.9,
+      1.98,
+      2.1,
+      2.18,
+      2.24,
+      2.3,
+      2.44,
+      2.58,
+      2.67,
+      2.76,
+      2.88,
+      3.0,
+      3.14,
+      3.26,
+      3.53,
+      6.16
+     ],
+     "percentiles": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+     ]
+    },
+    "nfci": {
+     "values": [
+      -0.791,
+      -0.703,
+      -0.654,
+      -0.62,
+      -0.593,
+      -0.57,
+      -0.554,
+      -0.54,
+      -0.516,
+      -0.5,
+      -0.473,
+      -0.436,
+      -0.406,
+      -0.371,
+      -0.337,
+      -0.278,
+      -0.198,
+      -0.097,
+      0.177,
+      0.758,
+      3.088
+     ],
+     "percentiles": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+     ]
+    },
+    "drawdown": {
+     "values": [
+      0.0,
+      0.04,
+      0.21,
+      0.4,
+      0.641,
+      0.927,
+      1.278,
+      1.703,
+      2.219,
+      2.814,
+      3.575,
+      4.451,
+      5.741,
+      7.305,
+      9.5,
+      12.249,
+      15.824,
+      22.571,
+      50.729
+     ],
+     "percentiles": [
+      0.05,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+     ]
+    },
+    "curve": {
+     "values": [
+      -3.83,
+      -3.33,
+      -2.93,
+      -2.63,
+      -2.45,
+      -2.21,
+      -2.05,
+      -1.91,
+      -1.72,
+      -1.57,
+      -1.44,
+      -1.25,
+      -1.06,
+      -0.78,
+      -0.54,
+      -0.29,
+      -0.09,
+      0.1,
+      0.547,
+      1.22,
+      1.89
+     ],
+     "percentiles": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+     ]
+    },
+    "realized_vol": {
+     "values": [
+      0.242,
+      0.422,
+      0.483,
+      0.538,
+      0.58,
+      0.62,
+      0.66,
+      0.7,
+      0.743,
+      0.799,
+      0.851,
+      0.902,
+      0.962,
+      1.033,
+      1.112,
+      1.218,
+      1.316,
+      1.448,
+      1.736,
+      2.059,
+      5.941
+     ],
+     "percentiles": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+     ]
+    },
+    "ebp": {
+     "values": [
+      -0.946,
+      -0.507,
+      -0.391,
+      -0.309,
+      -0.265,
+      -0.23,
+      -0.202,
+      -0.171,
+      -0.144,
+      -0.117,
+      -0.096,
+      -0.057,
+      -0.009,
+      0.013,
+      0.03,
+      0.076,
+      0.17,
+      0.31,
+      0.592,
+      1.179,
+      3.419
+     ],
+     "percentiles": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+     ]
+    }
+   },
+   "components": {
+    "C2_percentile": [
+     "vol",
+     "credit",
+     "nfci",
+     "drawdown"
+    ],
+    "C7_market_only": [
+     "vol",
+     "credit",
+     "drawdown"
+    ],
+    "C5_realized_vol": [
+     "vol",
+     "credit",
+     "nfci",
+     "drawdown",
+     "realized_vol"
+    ],
+    "C6_ebp": [
+     "vol",
+     "credit",
+     "nfci",
+     "drawdown",
+     "ebp"
+    ],
+    "C3_pca_weights": [
+     "vol",
+     "credit",
+     "nfci",
+     "drawdown"
+    ],
+    "C4_correlation_weighted": [
+     "vol",
+     "credit",
+     "nfci",
+     "drawdown"
+    ]
+   },
+   "pca": {
+    "weights": {
+     "vol": 0.271,
+     "credit": 0.197,
+     "nfci": 0.253,
+     "drawdown": 0.279
+    },
+    "share_of_variance": 0.651
+   },
+   "v3_long_train_share_at_or_above": {
+    "Guarded": 0.618,
+    "Watch": 0.354,
+    "Elevated": 0.196,
+    "Stress": 0.056
+   },
+   "cutoffs": {
+    "C2_percentile": [
+     38.677,
+     57.298,
+     73.829,
+     90.455
+    ],
+    "C7_market_only": [
+     39.796,
+     58.5,
+     73.616,
+     90.547
+    ],
+    "C5_realized_vol": [
+     38.719,
+     57.549,
+     74.316,
+     90.061
+    ],
+    "C6_ebp": [
+     39.499,
+     56.879,
+     71.383,
+     88.593
+    ],
+    "C3_pca_weights": [
+     38.608,
+     57.729,
+     74.411,
+     90.289
+    ],
+    "C4_correlation_weighted": [
+     7.801,
+     23.51,
+     46.224,
+     79.06
+    ]
+   }
+  },
+  "result": {
+   "days": 4287,
+   "first": "1990-01-02",
+   "last": "2006-12-29",
+   "auroc": {
+    "O1": {
+     "days_scored": 4287,
+     "share_of_days_with_outcome": 0.122,
+     "auroc": {
+      "v3_long": 0.835,
+      "C1_no_curve": 0.81,
+      "C2_percentile": 0.828,
+      "C7_market_only": 0.811,
+      "C5_realized_vol": 0.825,
+      "C6_ebp": 0.839,
+      "C3_pca_weights": 0.825,
+      "C4_correlation_weighted": 0.824
+     },
+     "interval_90": {
+      "v3_long": [
+       0.775,
+       0.895
+      ],
+      "C1_no_curve": [
+       0.74,
+       0.876
+      ],
+      "C2_percentile": [
+       0.759,
+       0.89
+      ],
+      "C7_market_only": [
+       0.723,
+       0.886
+      ],
+      "C5_realized_vol": [
+       0.755,
+       0.888
+      ],
+      "C6_ebp": [
+       0.765,
+       0.904
+      ],
+      "C3_pca_weights": [
+       0.756,
+       0.886
+      ],
+      "C4_correlation_weighted": [
+       0.753,
+       0.889
+      ]
+     },
+     "difference_to_v3_long_interval_90": {
+      "C1_no_curve": [
+       -0.052,
+       -0.004
+      ],
+      "C2_percentile": [
+       -0.038,
+       0.016
+      ],
+      "C7_market_only": [
+       -0.08,
+       0.021
+      ],
+      "C5_realized_vol": [
+       -0.04,
+       0.013
+      ],
+      "C6_ebp": [
+       -0.043,
+       0.035
+      ],
+      "C3_pca_weights": [
+       -0.039,
+       0.012
+      ],
+      "C4_correlation_weighted": [
+       -0.046,
+       0.016
+      ]
+     },
+     "days_in_bootstrap": 4287
+    },
+    "O2": {
+     "days_scored": 4287,
+     "share_of_days_with_outcome": 0.145,
+     "auroc": {
+      "v3_long": 0.762,
+      "C1_no_curve": 0.755,
+      "C2_percentile": 0.76,
+      "C7_market_only": 0.75,
+      "C5_realized_vol": 0.761,
+      "C6_ebp": 0.745,
+      "C3_pca_weights": 0.762,
+      "C4_correlation_weighted": 0.758
+     },
+     "interval_90": {
+      "v3_long": [
+       0.693,
+       0.816
+      ],
+      "C1_no_curve": [
+       0.689,
+       0.807
+      ],
+      "C2_percentile": [
+       0.691,
+       0.811
+      ],
+      "C7_market_only": [
+       0.677,
+       0.805
+      ],
+      "C5_realized_vol": [
+       0.69,
+       0.813
+      ],
+      "C6_ebp": [
+       0.669,
+       0.802
+      ],
+      "C3_pca_weights": [
+       0.693,
+       0.812
+      ],
+      "C4_correlation_weighted": [
+       0.689,
+       0.812
+      ]
+     },
+     "difference_to_v3_long_interval_90": {
+      "C1_no_curve": [
+       -0.024,
+       0.008
+      ],
+      "C2_percentile": [
+       -0.025,
+       0.017
+      ],
+      "C7_market_only": [
+       -0.046,
+       0.019
+      ],
+      "C5_realized_vol": [
+       -0.023,
+       0.018
+      ],
+      "C6_ebp": [
+       -0.051,
+       0.009
+      ],
+      "C3_pca_weights": [
+       -0.022,
+       0.018
+      ],
+      "C4_correlation_weighted": [
+       -0.027,
+       0.016
+      ]
+     },
+     "days_in_bootstrap": 4287
+    },
+    "O3": {
+     "days_scored": 4287,
+     "share_of_days_with_outcome": 0.247,
+     "auroc": {
+      "v3_long": 0.92,
+      "C1_no_curve": 0.904,
+      "C2_percentile": 0.902,
+      "C7_market_only": 0.876,
+      "C5_realized_vol": 0.905,
+      "C6_ebp": 0.884,
+      "C3_pca_weights": 0.905,
+      "C4_correlation_weighted": 0.908
+     },
+     "interval_90": {
+      "v3_long": [
+       0.883,
+       0.959
+      ],
+      "C1_no_curve": [
+       0.857,
+       0.949
+      ],
+      "C2_percentile": [
+       0.848,
+       0.947
+      ],
+      "C7_market_only": [
+       0.814,
+       0.928
+      ],
+      "C5_realized_vol": [
+       0.854,
+       0.949
+      ],
+      "C6_ebp": [
+       0.821,
+       0.94
+      ],
+      "C3_pca_weights": [
+       0.854,
+       0.949
+      ],
+      "C4_correlation_weighted": [
+       0.858,
+       0.952
+      ]
+     },
+     "difference_to_v3_long_interval_90": {
+      "C1_no_curve": [
+       -0.033,
+       -0.003
+      ],
+      "C2_percentile": [
+       -0.04,
+       -0.003
+      ],
+      "C7_market_only": [
+       -0.079,
+       -0.019
+      ],
+      "C5_realized_vol": [
+       -0.036,
+       -0.001
+      ],
+      "C6_ebp": [
+       -0.074,
+       -0.009
+      ],
+      "C3_pca_weights": [
+       -0.035,
+       -0.002
+      ],
+      "C4_correlation_weighted": [
+       -0.035,
+       0.004
+      ]
+     },
+     "days_in_bootstrap": 4287
+    },
+    "R1": {
+     "days_scored": 4287,
+     "share_of_days_with_outcome": 0.171,
+     "auroc": {
+      "v3_long": 0.813,
+      "C1_no_curve": 0.719,
+      "C2_percentile": 0.733,
+      "C7_market_only": 0.652,
+      "C5_realized_vol": 0.734,
+      "C6_ebp": 0.74,
+      "C3_pca_weights": 0.739,
+      "C4_correlation_weighted": 0.748
+     },
+     "interval_90": {
+      "v3_long": [
+       0.733,
+       0.888
+      ],
+      "C1_no_curve": [
+       0.618,
+       0.85
+      ],
+      "C2_percentile": [
+       0.64,
+       0.87
+      ],
+      "C7_market_only": [
+       0.549,
+       0.797
+      ],
+      "C5_realized_vol": [
+       0.639,
+       0.873
+      ],
+      "C6_ebp": [
+       0.641,
+       0.883
+      ],
+      "C3_pca_weights": [
+       0.646,
+       0.875
+      ],
+      "C4_correlation_weighted": [
+       0.657,
+       0.876
+      ]
+     },
+     "difference_to_v3_long_interval_90": {
+      "C1_no_curve": [
+       -0.15,
+       -0.015
+      ],
+      "C2_percentile": [
+       -0.132,
+       0.001
+      ],
+      "C7_market_only": [
+       -0.216,
+       -0.075
+      ],
+      "C5_realized_vol": [
+       -0.132,
+       0.006
+      ],
+      "C6_ebp": [
+       -0.134,
+       0.016
+      ],
+      "C3_pca_weights": [
+       -0.126,
+       0.006
+      ],
+      "C4_correlation_weighted": [
+       -0.112,
+       0.01
+      ]
+     },
+     "days_in_bootstrap": 4287
+    }
+   },
+   "states": {
+    "v3_long": {
+     "by_state": [
+      {
+       "state": "Calm",
+       "days": 1788,
+       "share_O1": 0.0,
+       "fall63_median": -1.988,
+       "fall63_5th_percentile": -6.755
+      },
+      {
+       "state": "Guarded",
+       "days": 1118,
+       "share_O1": 0.081,
+       "fall63_median": -2.046,
+       "fall63_5th_percentile": -16.154
+      },
+      {
+       "state": "Watch",
+       "days": 547,
+       "share_O1": 0.309,
+       "fall63_median": -4.718,
+       "fall63_5th_percentile": -23.113
+      },
+      {
+       "state": "Elevated",
+       "days": 581,
+       "share_O1": 0.353,
+       "fall63_median": -5.826,
+       "fall63_5th_percentile": -20.157
+      },
+      {
+       "state": "Stress",
+       "days": 253,
+       "share_O1": 0.221,
+       "fall63_median": -4.049,
+       "fall63_5th_percentile": -14.972
+      }
+     ],
+     "ladder_groups": [
+      [
+       "Calm"
+      ],
+      [
+       "Guarded"
+      ],
+      [
+       "Watch"
+      ],
+      [
+       "Elevated"
+      ],
+      [
+       "Stress"
+      ]
+     ],
+     "ladder_share_O1": [
+      0.0,
+      0.081,
+      0.309,
+      0.353,
+      0.221
+     ],
+     "ladder_rises": false,
+     "state_changes": 175,
+     "state_changes_per_year": 10.287,
+     "timing": {}
+    },
+    "C1_no_curve": {
+     "by_state": [
+      {
+       "state": "Calm",
+       "days": 1931,
+       "share_O1": 0.006,
+       "fall63_median": -1.888,
+       "fall63_5th_percentile": -6.788
+      },
+      {
+       "state": "Guarded",
+       "days": 699,
+       "share_O1": 0.074,
+       "fall63_median": -2.062,
+       "fall63_5th_percentile": -15.81
+      },
+      {
+       "state": "Watch",
+       "days": 670,
+       "share_O1": 0.266,
+       "fall63_median": -4.207,
+       "fall63_5th_percentile": -22.407
+      },
+      {
+       "state": "Elevated",
+       "days": 676,
+       "share_O1": 0.337,
+       "fall63_median": -5.573,
+       "fall63_5th_percentile": -20.031
+      },
+      {
+       "state": "Stress",
+       "days": 311,
+       "share_O1": 0.164,
+       "fall63_median": -3.653,
+       "fall63_5th_percentile": -14.444
+      }
+     ],
+     "ladder_groups": [
+      [
+       "Calm"
+      ],
+      [
+       "Guarded"
+      ],
+      [
+       "Watch"
+      ],
+      [
+       "Elevated"
+      ],
+      [
+       "Stress"
+      ]
+     ],
+     "ladder_share_O1": [
+      0.006,
+      0.074,
+      0.266,
+      0.337,
+      0.164
+     ],
+     "ladder_rises": false,
+     "state_changes": 198,
+     "state_changes_per_year": 11.639,
+     "timing": {}
+    },
+    "C2_percentile": {
+     "by_state": [
+      {
+       "state": "Calm",
+       "days": 2226,
+       "share_O1": 0.007,
+       "fall63_median": -1.92,
+       "fall63_5th_percentile": -6.986
+      },
+      {
+       "state": "Guarded",
+       "days": 697,
+       "share_O1": 0.119,
+       "fall63_median": -2.281,
+       "fall63_5th_percentile": -16.107
+      },
+      {
+       "state": "Watch",
+       "days": 661,
+       "share_O1": 0.348,
+       "fall63_median": -5.403,
+       "fall63_5th_percentile": -22.504
+      },
+      {
+       "state": "Elevated",
+       "days": 703,
+       "share_O1": 0.273,
+       "fall63_median": -5.102,
+       "fall63_5th_percentile": -17.855
+      },
+      {
+       "state": "Stress",
+       "days": 0,
+       "share_O1": null,
+       "fall63_median": null,
+       "fall63_5th_percentile": null
+      }
+     ],
+     "ladder_groups": [
+      [
+       "Calm"
+      ],
+      [
+       "Guarded"
+      ],
+      [
+       "Watch"
+      ],
+      [
+       "Elevated"
+      ]
+     ],
+     "ladder_share_O1": [
+      0.007,
+      0.119,
+      0.348,
+      0.273
+     ],
+     "ladder_rises": false,
+     "state_changes": 125,
+     "state_changes_per_year": 7.348,
+     "timing": {}
+    },
+    "C7_market_only": {
+     "by_state": [
+      {
+       "state": "Calm",
+       "days": 1808,
+       "share_O1": 0.029,
+       "fall63_median": -1.933,
+       "fall63_5th_percentile": -8.37
+      },
+      {
+       "state": "Guarded",
+       "days": 1178,
+       "share_O1": 0.057,
+       "fall63_median": -2.385,
+       "fall63_5th_percentile": -11.859
+      },
+      {
+       "state": "Watch",
+       "days": 521,
+       "share_O1": 0.198,
+       "fall63_median": -3.637,
+       "fall63_5th_percentile": -14.245
+      },
+      {
+       "state": "Elevated",
+       "days": 559,
+       "share_O1": 0.428,
+       "fall63_median": -7.386,
+       "fall63_5th_percentile": -23.497
+      },
+      {
+       "state": "Stress",
+       "days": 221,
+       "share_O1": 0.267,
+       "fall63_median": -5.39,
+       "fall63_5th_percentile": -15.14
+      }
+     ],
+     "ladder_groups": [
+      [
+       "Calm"
+      ],
+      [
+       "Guarded"
+      ],
+      [
+       "Watch"
+      ],
+      [
+       "Elevated"
+      ],
+      [
+       "Stress"
+      ]
+     ],
+     "ladder_share_O1": [
+      0.029,
+      0.057,
+      0.198,
+      0.428,
+      0.267
+     ],
+     "ladder_rises": false,
+     "state_changes": 208,
+     "state_changes_per_year": 12.227,
+     "timing": {}
+    },
+    "C5_realized_vol": {
+     "by_state": [
+      {
+       "state": "Calm",
+       "days": 2131,
+       "share_O1": 0.007,
+       "fall63_median": -1.954,
+       "fall63_5th_percentile": -7.062
+      },
+      {
+       "state": "Guarded",
+       "days": 778,
+       "share_O1": 0.109,
+       "fall63_median": -2.08,
+       "fall63_5th_percentile": -16.623
+      },
+      {
+       "state": "Watch",
+       "days": 772,
+       "share_O1": 0.333,
+       "fall63_median": -5.38,
+       "fall63_5th_percentile": -22.05
+      },
+      {
+       "state": "Elevated",
+       "days": 606,
+       "share_O1": 0.271,
+       "fall63_median": -5.151,
+       "fall63_5th_percentile": -16.726
+      },
+      {
+       "state": "Stress",
+       "days": 0,
+       "share_O1": null,
+       "fall63_median": null,
+       "fall63_5th_percentile": null
+      }
+     ],
+     "ladder_groups": [
+      [
+       "Calm"
+      ],
+      [
+       "Guarded"
+      ],
+      [
+       "Watch"
+      ],
+      [
+       "Elevated"
+      ]
+     ],
+     "ladder_share_O1": [
+      0.007,
+      0.109,
+      0.333,
+      0.271
+     ],
+     "ladder_rises": false,
+     "state_changes": 103,
+     "state_changes_per_year": 6.055,
+     "timing": {}
+    },
+    "C6_ebp": {
+     "by_state": [
+      {
+       "state": "Calm",
+       "days": 2327,
+       "share_O1": 0.015,
+       "fall63_median": -1.859,
+       "fall63_5th_percentile": -7.286
+      },
+      {
+       "state": "Guarded",
+       "days": 497,
+       "share_O1": 0.133,
+       "fall63_median": -2.886,
+       "fall63_5th_percentile": -16.123
+      },
+      {
+       "state": "Watch",
+       "days": 580,
+       "share_O1": 0.195,
+       "fall63_median": -3.227,
+       "fall63_5th_percentile": -21.173
+      },
+      {
+       "state": "Elevated",
+       "days": 801,
+       "share_O1": 0.368,
+       "fall63_median": -6.577,
+       "fall63_5th_percentile": -20.157
+      },
+      {
+       "state": "Stress",
+       "days": 82,
+       "share_O1": 0.159,
+       "fall63_median": -2.721,
+       "fall63_5th_percentile": -15.387
+      }
+     ],
+     "ladder_groups": [
+      [
+       "Calm"
+      ],
+      [
+       "Guarded"
+      ],
+      [
+       "Watch"
+      ],
+      [
+       "Elevated"
+      ],
+      [
+       "Stress"
+      ]
+     ],
+     "ladder_share_O1": [
+      0.015,
+      0.133,
+      0.195,
+      0.368,
+      0.159
+     ],
+     "ladder_rises": false,
+     "state_changes": 110,
+     "state_changes_per_year": 6.466,
+     "timing": {}
+    },
+    "C3_pca_weights": {
+     "by_state": [
+      {
+       "state": "Calm",
+       "days": 2099,
+       "share_O1": 0.006,
+       "fall63_median": -1.93,
+       "fall63_5th_percentile": -7.052
+      },
+      {
+       "state": "Guarded",
+       "days": 775,
+       "share_O1": 0.102,
+       "fall63_median": -2.052,
+       "fall63_5th_percentile": -16.107
+      },
+      {
+       "state": "Watch",
+       "days": 683,
+       "share_O1": 0.338,
+       "fall63_median": -5.403,
+       "fall63_5th_percentile": -22.423
+      },
+      {
+       "state": "Elevated",
+       "days": 730,
+       "share_O1": 0.273,
+       "fall63_median": -5.122,
+       "fall63_5th_percentile": -18.06
+      },
+      {
+       "state": "Stress",
+       "days": 0,
+       "share_O1": null,
+       "fall63_median": null,
+       "fall63_5th_percentile": null
+      }
+     ],
+     "ladder_groups": [
+      [
+       "Calm"
+      ],
+      [
+       "Guarded"
+      ],
+      [
+       "Watch"
+      ],
+      [
+       "Elevated"
+      ]
+     ],
+     "ladder_share_O1": [
+      0.006,
+      0.102,
+      0.338,
+      0.273
+     ],
+     "ladder_rises": false,
+     "state_changes": 127,
+     "state_changes_per_year": 7.465,
+     "timing": {}
+    },
+    "C4_correlation_weighted": {
+     "by_state": [
+      {
+       "state": "Calm",
+       "days": 1803,
+       "share_O1": 0.009,
+       "fall63_median": -1.925,
+       "fall63_5th_percentile": -6.878
+      },
+      {
+       "state": "Guarded",
+       "days": 1034,
+       "share_O1": 0.071,
+       "fall63_median": -2.201,
+       "fall63_5th_percentile": -14.911
+      },
+      {
+       "state": "Watch",
+       "days": 695,
+       "share_O1": 0.299,
+       "fall63_median": -4.587,
+       "fall63_5th_percentile": -21.265
+      },
+      {
+       "state": "Elevated",
+       "days": 755,
+       "share_O1": 0.295,
+       "fall63_median": -5.386,
+       "fall63_5th_percentile": -19.458
+      },
+      {
+       "state": "Stress",
+       "days": 0,
+       "share_O1": null,
+       "fall63_median": null,
+       "fall63_5th_percentile": null
+      }
+     ],
+     "ladder_groups": [
+      [
+       "Calm"
+      ],
+      [
+       "Guarded"
+      ],
+      [
+       "Watch"
+      ],
+      [
+       "Elevated"
+      ]
+     ],
+     "ladder_share_O1": [
+      0.009,
+      0.071,
+      0.299,
+      0.295
+     ],
+     "ladder_rises": false,
+     "state_changes": 129,
+     "state_changes_per_year": 7.583,
+     "timing": {}
+    }
+   }
+  }
+ },
+ "market_context": {
+  "2007-2009": {
+   "market_peak": "2007-10-09",
+   "market_trough": "2009-03-09",
+   "fall_pct": -54.566
+  },
+  "2011": {
+   "market_peak": "2011-07-07",
+   "market_trough": "2011-10-03",
+   "fall_pct": -19.972
+  },
+  "2015-16": {
+   "market_peak": "2015-06-23",
+   "market_trough": "2016-02-11",
+   "fall_pct": -15.527
+  },
+  "2018": {
+   "market_peak": "2018-09-20",
+   "market_trough": "2018-12-24",
+   "fall_pct": -20.446
+  },
+  "2020": {
+   "market_peak": "2020-02-19",
+   "market_trough": "2020-03-23",
+   "fall_pct": -34.216
+  },
+  "2022": {
+   "market_peak": "2022-01-03",
+   "market_trough": "2022-10-14",
+   "fall_pct": -25.449
+  },
+  "2025": {
+   "market_peak": "2025-02-19",
+   "market_trough": "2025-04-08",
+   "fall_pct": -19.558
+  }
+ }
+}
