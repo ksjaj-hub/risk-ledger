@@ -23,6 +23,7 @@
 :root{color-scheme:dark;--bg:#07080a;--panel:#0d0f12;--hover:#12151a;--line:#1c2026;--line2:#2b3139;--fg:#e9ebee;--muted:#8d959e;--dim:#5b636c;--alert:#f0594b;--watch:#e2a43a;--clear:#79a596;--link:#86b4ee;--sans:"Archivo","Noto Sans KR",system-ui,-apple-system,"Segoe UI",sans-serif}
 *{box-sizing:border-box}
 html,body{background:var(--bg);margin:0}
+html[lang="ko"] body{word-break:keep-all;overflow-wrap:anywhere}
 body{color:var(--fg);font-family:var(--sans);font-size:14px;line-height:1.5;font-variant-numeric:tabular-nums lining-nums;-webkit-font-smoothing:antialiased}
 a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
 button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;text-align:inherit;width:100%}
@@ -106,7 +107,7 @@ button.row:hover{background:var(--hover)}
     <div class="asof" id="asof"></div>
   </section>
   <section class="comps" id="comps" aria-label="Components"></section>
-  <section class="sub"><p><b data-t="subh"></b> <span data-t="subp"></span></p><form id="subf" novalidate><input id="subm" type="email" name="email" autocomplete="email" inputmode="email" required aria-label="Email"><button class="btn" type="submit" data-t="subb"></button><span id="subs" role="status" aria-live="polite"></span></form></section>
+  <section class="sub"><p><b data-t="subh"></b> <span data-t="subp"></span> <a href="weekly/1.html" data-t="subr"></a></p><form id="subf" novalidate><input id="subm" type="email" name="email" autocomplete="email" inputmode="email" required aria-label="Email"><button class="btn" type="submit" data-t="subb"></button><span id="subs" role="status" aria-live="polite"></span></form></section>
   <section class="sec"><h2 data-t="chg">State changes</h2><p data-t="chgp">Recorded automatically each time the state or a component level changes.</p><div id="alerts"></div></section>
   <section class="sec"><h2 data-t="ev">Open event risks</h2><p data-t="evp"></p><div id="events"></div></section>
   <section class="verify"><h2 data-t="ver"></h2><ol id="verify"></ol></section>
@@ -116,7 +117,7 @@ button.row:hover{background:var(--hover)}
 const $=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e};
 const COLORS=["#79a596","#b9c06a","#e2a43a","#f0594b"], STATES=["Calm","Watch","Elevated","Stress"];
 const REPO="https://github.com/ksjaj-hub/risk-ledger";
-const T={en:{subh:"AFMX Weekly.",subp:"One short note a week: what changed, what is still open, and which good news did not resolve anything. Free.",subb:"Subscribe",subph:"you@example.com",subok:"You are on the list. The first issue will arrive by email.",subbad:"Please enter a valid email address.",suberr:"Could not save it. Please try again in a moment.",src:"Source and full history",head:"AFMX · US market risk state",chg:"State changes",chgp:"Recorded automatically each time the state or a component level changes.",ev:"Open event risks",
+const T={en:{subh:"AFMX Weekly.",subp:"One short note a week: what changed, what is still open, and which good news did not resolve anything. Free.",subb:"Subscribe",subr:"Read No. 1",subph:"you@example.com",subok:"You are on the list. The first issue will arrive by email.",subbad:"Please enter a valid email address.",suberr:"Could not save it. Please try again in a moment.",src:"Source and full history",head:"AFMX · US market risk state",chg:"State changes",chgp:"Recorded automatically each time the state or a component level changes.",ev:"Open event risks",
  evp:"AFMX tracks what is still unresolved after the headlines move on. Each card says what would have to be true for the risk to count as resolved. Those conditions were written on the date shown, before the outcome was known. Good news that does not meet them is listed too.",
  ver:"How to check that nothing here was changed afterwards",
  v:[["Every record is its own dated commit in a ","public history",REPO+"/commits/main","."],["Each record contains the fingerprint (SHA-256) of the record before it, so one edit would break the chain."],["Records carry ","OpenTimestamps","https://opentimestamps.org"," proofs anchored to the Bitcoin blockchain."],["The ","judging rule",REPO+"/blob/main/rules/v1.md"," is published and versioned. Old versions are never edited."]],
@@ -126,7 +127,7 @@ const T={en:{subh:"AFMX Weekly.",subp:"One short note a week: what changed, what
  rulev:"Rule",held:x=>"The rule indicated "+x+" on the latest day; the state steps down only after 5 trading days in a row.",
  start:"Start",change:"Change",first:"First record: ",state:"State",status:{open:"open",easing:"easing",worsened:"worsened",resolved:"resolved"},
  cond:"conditions written ",what:"What happened",how:"How it reaches markets",res:"Counts as resolved when all of these are true",wor:"Counts as worsened if any of these happens",rel:"Good news that does not resolve it",log:"Log",srcs:"Sources: ",none:"No record yet",fail:"Data could not be loaded",loc:"en-US"},
-ko:{subh:"AFMX 주간 글.",subp:"일주일에 한 번, 짧게 보냅니다. 무엇이 바뀌었고, 무엇이 아직 열려 있으며, 어떤 호재가 아무것도 해소하지 못했는지 정리합니다. 무료이고 영어로 발행합니다.",subb:"구독",subph:"이메일 주소",subok:"등록됐습니다. 첫 글부터 이메일로 보내 드립니다.",subbad:"이메일 주소를 다시 확인해 주세요.",suberr:"저장하지 못했습니다. 잠시 뒤 다시 시도해 주세요.",src:"원본과 전체 기록",head:"AFMX · 미국 시장 리스크 상태",chg:"상태 변화",chgp:"상태나 요소의 단계가 바뀔 때마다 자동으로 기록됩니다.",ev:"열려 있는 사건 리스크",
+ko:{subh:"AFMX 주간 글.",subp:"일주일에 한 번, 짧게 보냅니다. 무엇이 바뀌었고, 무엇이 아직 열려 있으며, 어떤 호재가 아무것도 해소하지 못했는지 정리합니다. 무료이고 영어로 발행합니다.",subb:"구독",subr:"1호 읽기",subph:"이메일 주소",subok:"등록됐습니다. 첫 글부터 이메일로 보내 드립니다.",subbad:"이메일 주소를 다시 확인해 주세요.",suberr:"저장하지 못했습니다. 잠시 뒤 다시 시도해 주세요.",src:"원본과 전체 기록",head:"AFMX · 미국 시장 리스크 상태",chg:"상태 변화",chgp:"상태나 요소의 단계가 바뀔 때마다 자동으로 기록됩니다.",ev:"열려 있는 사건 리스크",
  evp:"AFMX는 뉴스가 지나간 뒤에도 해결되지 않고 남아 있는 것을 추적합니다. 카드마다 무엇이 확인돼야 해소로 볼지 적혀 있습니다. 그 조건은 결과를 알기 전, 표시된 날짜에 적었습니다. 조건을 채우지 못하는 호재도 함께 적었습니다. 한국어는 읽기 편하도록 붙인 번역이고, 기록의 원문은 영어입니다.",
  ver:"나중에 고쳐 쓰지 않았다는 것을 확인하는 방법",
  v:[["모든 기록은 날짜가 찍힌 개별 변경으로 ","공개 이력",REPO+"/commits/main","에 남습니다."],["기록마다 바로 앞 기록의 지문(SHA-256)이 들어 있어서, 하나만 고쳐도 사슬이 끊어집니다."],["기록에는 비트코인 블록체인에 시각을 남기는 ","OpenTimestamps","https://opentimestamps.org"," 증명이 붙습니다."],["","판정 규칙",REPO+"/blob/main/rules/v1.ko.md","은 공개돼 있고 버전이 붙습니다. 이전 버전은 고치지 않습니다."]],
