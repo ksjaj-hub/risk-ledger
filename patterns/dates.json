@@ -1,0 +1,41 @@
+{
+ "note": "Hand-kept date lists. Only dates read verbatim from the listed official page are used. Dates that could not be read verbatim are listed under not_used and left out of the calculation.",
+ "checked": "2026-11-26",
+ "fomc": {
+  "what": "Last day of each scheduled FOMC meeting. Unscheduled meetings, conference calls and notation votes are left out.",
+  "sources": [
+   "https://www.federalreserve.gov/monetarypolicy/fomchistorical2015.htm",
+   "https://www.federalreserve.gov/monetarypolicy/fomchistorical2016.htm",
+   "https://www.federalreserve.gov/monetarypolicy/fomchistorical2017.htm",
+   "https://www.federalreserve.gov/monetarypolicy/fomchistorical2018.htm",
+   "https://www.federalreserve.gov/monetarypolicy/fomchistorical2019.htm",
+   "https://www.federalreserve.gov/monetarypolicy/fomchistorical2020.htm",
+   "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+  ],
+  "dates": [
+   "2015-01-28", "2015-03-18", "2015-04-29", "2015-06-17", "2015-07-29", "2015-09-17", "2015-10-28", "2015-12-16",
+   "2016-01-27", "2016-03-16", "2016-04-27", "2016-06-15", "2016-07-27", "2016-09-21", "2016-11-02", "2016-12-14",
+   "2017-02-01", "2017-03-15", "2017-05-03", "2017-06-14", "2017-07-26", "2017-09-20", "2017-11-01", "2017-12-13",
+   "2018-01-31", "2018-03-21", "2018-05-02", "2018-06-13", "2018-08-01", "2018-09-26", "2018-11-08", "2018-12-19",
+   "2019-01-30", "2019-03-20", "2019-05-01", "2019-06-19", "2019-07-31", "2019-09-18", "2019-10-30", "2019-12-11",
+   "2020-01-29", "2020-04-29", "2020-06-10", "2020-07-29", "2020-09-16", "2020-11-05", "2020-12-16",
+   "2024-01-31", "2024-03-20", "2024-05-01", "2024-06-12", "2024-07-31",
+   "2025-01-29", "2025-03-19", "2025-05-07", "2025-06-18", "2025-07-30", "2025-09-17", "2025-10-29", "2025-12-10",
+   "2026-01-28", "2026-03-18", "2026-04-29", "2026-06-17", "2026-07-29", "2026-09-16", "2026-10-28", "2026-12-09"
+  ],
+  "not_used": "2021, 2022, 2023 and September to December 2024: the calendar page was cut off when read, so these dates were not seen verbatim. The scheduled meeting of March 17-18, 2020 was cancelled and is not in the list."
+ },
+ "funding_gaps": {
+  "what": "Federal funding gaps of at least one full day since fiscal year 1991. 'funding_ended' is the first date in the table row; the gap begins after it.",
+  "source": "https://history.house.gov/Institution/Shutdown/Government-Shutdowns/",
+  "caveat": "The table's column headings other than 'Duration of Funding Gap (in Days)' did not come through when the page was read, so which date is which was inferred from the durations. The table as read ends with the fiscal year 2019 row.",
+  "gaps": [
+   {"fiscal_year": 1991, "funding_ended": "1990-10-05", "full_days": 3},
+   {"fiscal_year": 1996, "funding_ended": "1995-11-13", "full_days": 5},
+   {"fiscal_year": 1996, "funding_ended": "1995-12-15", "full_days": 21},
+   {"fiscal_year": 2014, "funding_ended": "2013-09-30", "full_days": 16},
+   {"fiscal_year": 2018, "funding_ended": "2018-01-19", "full_days": 2},
+   {"fiscal_year": 2019, "funding_ended": "2018-12-21", "full_days": 34}
+  ]
+ }
+}
