@@ -1,0 +1,16 @@
+name: form probe
+on:
+  push:
+    branches: [tmp-form-probe]
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          curl -sL -A "Mozilla/5.0" "https://docs.google.com/forms/d/e/1FAIpQLScYx3wNjWsTZgOAcSVpYizasiIc8ThT8n5nMW7SSsMjkU6Liw/viewform" -o f.html
+          wc -c f.html
+          grep -o 'FB_PUBLIC_LOAD_DATA_ = [^<]*' f.html | head -c 3000 || true
+          echo
+          grep -o 'entry\.[0-9]*' f.html | sort -u || true
+          grep -o 'emailAddress' f.html | sort | uniq -c || true
+          grep -o 'action="[^"]*"' f.html || true
