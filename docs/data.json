@@ -946,6 +946,33 @@
     "ko": "반도체주가 급락한 날"
    }
   },
+  "history": [
+   {
+    "date": "2026-11-26",
+    "en": "First record written. Twelve event cards opened, each with resolution conditions written before the outcome.",
+    "ko": "첫 기록을 남겼습니다. 사건 카드 12건을 열고, 결과가 나오기 전에 해소 조건을 적었습니다."
+   },
+   {
+    "date": "2026-11-26",
+    "en": "Rule 1 tested on data from 1990. Its weak points were published and rule 2 took its place.",
+    "ko": "규칙 1판을 1990년부터의 자료로 점검했습니다. 약점을 공개하고 2판으로 바꿨습니다."
+   },
+   {
+    "date": "2026-11-26",
+    "en": "The first screen changed from an index to open risks and the conditions still unmet.",
+    "ko": "첫 화면을 지수에서 열린 리스크와 남은 조건 중심으로 바꿨습니다."
+   },
+   {
+    "date": "2026-11-26",
+    "en": "Sector links backed by data since 1990, with evidence levels. Monthly public grading set up.",
+    "ko": "섹터 연결에 1990년 이후 데이터 근거와 근거 수준을 붙였습니다. 매달 공개 채점 틀을 만들었습니다."
+   },
+   {
+    "date": "2026-11-26",
+    "en": "AFMX Weekly No. 1 published in English and Korean.",
+    "ko": "AFMX 주간 글 1호를 영어와 한국어로 냈습니다."
+   }
+  ],
   "links": {
    "2026-ai-buildout-financing": {
     "technology": {
