@@ -1,42 +1,72 @@
 {
-  "schema": 1,
-  "id": "2026-us-appropriations-lapse",
-  "title": "US government funding expires on 11 December 2026",
-  "category": "fiscal policy",
-  "markets": [
-    "US"
-  ],
-  "first_recorded": "2026-11-26",
-  "event_started": "2026-11",
-  "status": "open",
-  "what_happened": "Current federal appropriations run out on 2026-12-11, during the lame-duck session before the new Congress convenes in January 2027. A funding bill needs 60 votes in the Senate.",
-  "how_it_reaches_markets": "A lapse in funding would shut parts of the federal government, delay official economic data used by the Fed and markets, and weigh on confidence.",
-  "sourced_facts": [
-    "2026-12-11: current appropriations expire (Fortune)",
-    "A funding bill needs 60 Senate votes (Fortune)"
-  ],
-  "resolution_conditions": {
-    "written_on": "2026-11-26",
-    "resolved_when_all": [
-      "A funding law covering the period beyond 2026-12-11 is signed"
-    ],
-    "worsened_when_any": [
-      "Funding lapses and a shutdown begins",
-      "A shutdown lasts more than 14 days"
-    ]
+ "schema": 1,
+ "id": "2026-us-appropriations-lapse",
+ "title": "US government funding expires on 11 December 2026",
+ "category": "fiscal policy",
+ "markets": [
+  "US"
+ ],
+ "first_recorded": "2026-11-26",
+ "event_started": "2026-11",
+ "status": "open",
+ "what_happened": "Current federal appropriations run out on 2026-12-11, during the lame-duck session before the new Congress convenes in January 2027. A funding bill needs 60 votes in the Senate.",
+ "how_it_reaches_markets": "A lapse in funding would shut parts of the federal government, delay official economic data used by the Fed and markets, and weigh on confidence.",
+ "sourced_facts": [
+  {
+   "text": "Public Law 119-103 (Continuing Appropriations and Extensions Act, 2027), enacted 2026-09-02: funds are available until regular appropriations are enacted or 'December 11, 2026', whichever comes first (Sec. 106)",
+   "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ103/html/PLAW-119publ103.htm",
+   "tier": "primary",
+   "checked": "2026-11-26"
   },
-  "relief_headlines_that_do_not_resolve_it": [
-    "A short stopgap of under 30 days (the deadline moves, the risk stays open; record the new date in history)"
+  {
+   "text": "White House, 2026-09-02: the act 'includes a short-term continuing resolution that provides fiscal year 2027 appropriations to Federal agencies through December 11, 2026'",
+   "url": "https://www.whitehouse.gov/briefings-statements/2026/09/congressional-bill-h-r-6500-signed-into-law/",
+   "tier": "primary",
+   "checked": "2026-11-26"
+  }
+ ],
+ "resolution_conditions": {
+  "written_on": "2026-11-26",
+  "resolved_when_all": [
+   "A funding law covering the period beyond 2026-12-11 is signed"
   ],
+  "worsened_when_any": [
+   "Funding lapses and a shutdown begins",
+   "A shutdown lasts more than 14 days"
+  ]
+ },
+ "relief_headlines_that_do_not_resolve_it": [
+  "A short stopgap of under 30 days (the deadline moves, the risk stays open; record the new date in history)"
+ ],
+ "sources": [
+  "https://www.govinfo.gov/content/pkg/PLAW-119publ103/html/PLAW-119publ103.htm",
+  "https://www.whitehouse.gov/briefings-statements/2026/09/congressional-bill-h-r-6500-signed-into-law/"
+ ],
+ "history": [
+  {
+   "date": "2026-11-26",
+   "status": "open",
+   "note": "Card opened. Resolution conditions written before the outcome is known."
+  },
+  {
+   "date": "2026-11-26",
+   "status": "open",
+   "note": "Sources upgraded. The 2026-12-11 expiry is now taken from the text of Public Law 119-103 and the White House signing statement instead of a magazine article."
+  }
+ ],
+ "note": "Risk state only. Not a forecast and not investment advice.",
+ "unconfirmed_facts": [
+  "A funding bill needs 60 Senate votes: this is the Senate cloture rule; no primary page stating it has been read yet"
+ ],
+ "superseded_sources": {
+  "replaced_on": "2026-11-26",
+  "reason": "Source rule of 2026-11-26: at least one primary source per card; commentary, blogs and reposts are not used as support",
   "sources": [
-    "https://fortune.com/2026/11/09/us-debt-limit-outlook-xdate-deadline-default-congress-summer-recess/"
+   "https://fortune.com/2026/11/09/us-debt-limit-outlook-xdate-deadline-default-congress-summer-recess/"
   ],
-  "history": [
-    {
-      "date": "2026-11-26",
-      "status": "open",
-      "note": "Card opened. Resolution conditions written before the outcome is known."
-    }
-  ],
-  "note": "Risk state only. Not a forecast and not investment advice."
+  "facts_as_first_written": [
+   "2026-12-11: current appropriations expire (Fortune)",
+   "A funding bill needs 60 Senate votes (Fortune)"
+  ]
+ }
 }

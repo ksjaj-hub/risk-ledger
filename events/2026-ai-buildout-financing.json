@@ -1,48 +1,79 @@
 {
-  "schema": 1,
-  "id": "2026-ai-buildout-financing",
-  "title": "Doubts about financing of the AI buildout",
-  "category": "sector",
-  "markets": [
-    "US"
-  ],
-  "first_recorded": "2026-11-26",
-  "event_started": "2026-11 (exact start not established)",
-  "status": "open",
-  "what_happened": "A sell-off concentrated in AI and semiconductor shares, attributed in press reports to doubts about whether the debt-financed AI buildout can earn sufficient returns and to signs of moderating AI spending.",
-  "how_it_reaches_markets": "Large index weight of AI-linked companies; debt used to fund data centers; possible regulatory opposition to data center construction.",
-  "sourced_facts": [
-    "2026-11-20: S&P 500 -3.70% to 6,910.39; Nasdaq Composite -5.28%; seventh straight S&P 500 decline (Schwab)",
-    "2026-11-20: Nvidia -14%, AMD -13.3% (Schwab)",
-    "2026-11-25: Nasdaq 100 briefly 20% below its record closing high (ABC/Reuters)"
-  ],
-  "resolution_conditions": {
-    "written_on": "2026-11-26",
-    "resolved_when_all": [
-      "Nasdaq Composite closes above its close of the day before the losing streak began for 20 consecutive trading days",
-      "Equity volatility component of this ledger is Moderate or lower for 20 consecutive trading days",
-      "At least two of the largest AI infrastructure spenders reaffirm or raise capital spending plans in a quarterly report"
-    ],
-    "worsened_when_any": [
-      "A large AI-linked borrower misses a debt payment or cancels a publicly announced financing",
-      "A major AI infrastructure spender publicly cuts its capital spending plan"
-    ]
+ "schema": 1,
+ "id": "2026-ai-buildout-financing",
+ "title": "Doubts about financing of the AI buildout",
+ "category": "sector",
+ "markets": [
+  "US"
+ ],
+ "first_recorded": "2026-11-26",
+ "event_started": "2026-11 (exact start not established)",
+ "status": "open",
+ "what_happened": "A sell-off concentrated in AI and semiconductor shares, attributed in press reports to doubts about whether the debt-financed AI buildout can earn sufficient returns and to signs of moderating AI spending.",
+ "how_it_reaches_markets": "Large index weight of AI-linked companies; debt used to fund data centers; possible regulatory opposition to data center construction.",
+ "sourced_facts": [
+  {
+   "text": "Federal Reserve Governor Barr, 2026-11-16: 'the AI buildout has been increasingly funded by debt'; on-balance-sheet debt of the seven largest AI firms 'is expected to exceed $800 billion before year's end'; he adds that he is 'less concerned about direct losses' given the still-limited debt behind the boom",
+   "url": "https://www.federalreserve.gov/newsevents/speech/barr20261116a.htm",
+   "tier": "primary",
+   "checked": "2026-11-26"
   },
-  "relief_headlines_that_do_not_resolve_it": [
-    "Single-day rebounds in AI shares",
-    "One company beating earnings forecasts (Dell beat forecasts on 2026-11-24 and its shares still fell about 7% the next day)"
+  {
+   "text": "Federal Reserve Financial Stability Report (November 2026, data to 2026-10-28): 'Bond issuance by the largest investment-grade firms involved in operating data centers was greater than $150 billion year to date'; 'Measures of equity valuations have remained elevated since the previous report'",
+   "url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
+   "tier": "primary",
+   "checked": "2026-11-26"
+  }
+ ],
+ "resolution_conditions": {
+  "written_on": "2026-11-26",
+  "resolved_when_all": [
+   "Nasdaq Composite closes above its close of the day before the losing streak began for 20 consecutive trading days",
+   "Equity volatility component of this ledger is Moderate or lower for 20 consecutive trading days",
+   "At least two of the largest AI infrastructure spenders reaffirm or raise capital spending plans in a quarterly report"
   ],
+  "worsened_when_any": [
+   "A large AI-linked borrower misses a debt payment or cancels a publicly announced financing",
+   "A major AI infrastructure spender publicly cuts its capital spending plan"
+  ]
+ },
+ "relief_headlines_that_do_not_resolve_it": [
+  "Single-day rebounds in AI shares",
+  "One company beating earnings forecasts (Dell beat forecasts on 2026-11-24 and its shares still fell about 7% the next day)"
+ ],
+ "sources": [
+  "https://www.federalreserve.gov/newsevents/speech/barr20261116a.htm",
+  "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf"
+ ],
+ "history": [
+  {
+   "date": "2026-11-26",
+   "status": "open",
+   "note": "Card opened. Resolution conditions written before the outcome is known."
+  },
+  {
+   "date": "2026-11-26",
+   "status": "open",
+   "note": "Sources upgraded. The debt-financing concern is now supported by a Federal Reserve governor's speech and the Financial Stability Report. The index and share-price moves of 2026-11-20 and 2026-11-25 are not yet confirmed at an accepted source and were moved to unconfirmed_facts."
+  }
+ ],
+ "note": "Risk state only. Not a forecast and not investment advice.",
+ "unconfirmed_facts": [
+  "2026-11-20: S&P 500 -3.70% to 6,910.39; Nasdaq Composite -5.28%; seventh straight S&P 500 decline; Nvidia -14%, AMD -13.3%: from a broker commentary; not yet confirmed at a primary or wire source",
+  "2026-11-25: Nasdaq 100 briefly 20% below its record closing high: attributed to Reuters in a repost; original not read"
+ ],
+ "superseded_sources": {
+  "replaced_on": "2026-11-26",
+  "reason": "Source rule of 2026-11-26: at least one primary source per card; commentary, blogs and reposts are not used as support",
   "sources": [
-    "https://www.schwab.com/learn/story/market-volatility",
-    "https://www.abc.net.au/news/2026-11-26/nasdaq-ai-tariffs-rattle-markets/107428016",
-    "https://finance.yahoo.com/markets/stocks/articles/stocks-retreat-ai-rebound-stumbles-015155560.html"
+   "https://www.schwab.com/learn/story/market-volatility",
+   "https://www.abc.net.au/news/2026-11-26/nasdaq-ai-tariffs-rattle-markets/107428016",
+   "https://finance.yahoo.com/markets/stocks/articles/stocks-retreat-ai-rebound-stumbles-015155560.html"
   ],
-  "history": [
-    {
-      "date": "2026-11-26",
-      "status": "open",
-      "note": "Card opened. Resolution conditions written before the outcome is known."
-    }
-  ],
-  "note": "Risk state only. Not a forecast and not investment advice."
+  "facts_as_first_written": [
+   "2026-11-20: S&P 500 -3.70% to 6,910.39; Nasdaq Composite -5.28%; seventh straight S&P 500 decline (Schwab)",
+   "2026-11-20: Nvidia -14%, AMD -13.3% (Schwab)",
+   "2026-11-25: Nasdaq 100 briefly 20% below its record closing high (ABC/Reuters)"
+  ]
+ }
 }

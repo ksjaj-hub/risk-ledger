@@ -1,34 +1,34 @@
 {
- "checked_at_utc": "2026-11-26T10:03Z",
- "passed": 10,
+ "checked_at_utc": "2026-11-26T10:05Z",
+ "passed": 13,
  "total": 16,
  "checks": [
   {
    "area": "content",
    "id": "sources_per_card",
    "pass": false,
-   "now": "3/12 cards have 2+ sources",
+   "now": "4/12 cards have 2+ sources",
    "bar": "every card has 2 or more sources"
   },
   {
    "area": "content",
    "id": "primary_source_per_card",
-   "pass": false,
-   "now": "13/15 cards and cases have a primary source",
+   "pass": true,
+   "now": "15/15 cards and cases have a primary source",
    "bar": "every card and case has at least one primary source"
   },
   {
    "area": "content",
    "id": "no_weak_sources",
-   "pass": false,
-   "now": "4 links from sources below the bar (schwab.com, abc.net.au, finance.yahoo.com, fortune.com)",
+   "pass": true,
+   "now": "0 links from sources below the bar ()",
    "bar": "0 (no Wikipedia, blogs, newsletters or fund commentary)"
   },
   {
    "area": "content",
    "id": "fact_links",
-   "pass": false,
-   "now": "19/24 facts carry their own link",
+   "pass": true,
+   "now": "23/23 facts carry their own link",
    "bar": "every fact links to its article"
   },
   {
@@ -112,7 +112,7 @@
    "area": "screen",
    "id": "page_weight",
    "pass": true,
-   "now": "131 KB",
+   "now": "135 KB",
    "bar": "300 KB or less"
   }
  ],
