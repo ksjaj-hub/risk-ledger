@@ -1,5 +1,5 @@
 {
- "checked_at_utc": "2026-11-26T09:41Z",
+ "checked_at_utc": "2026-11-26T09:43Z",
  "passed": 10,
  "total": 16,
  "checks": [
@@ -14,14 +14,14 @@
    "area": "content",
    "id": "primary_source_per_card",
    "pass": false,
-   "now": "0/16 cards and cases have a primary source",
+   "now": "3/15 cards and cases have a primary source",
    "bar": "every card and case has at least one primary source"
   },
   {
    "area": "content",
    "id": "no_weak_sources",
    "pass": false,
-   "now": "30 links from sources below the bar (schwab.com, abc.net.au, finance.yahoo.com, troweprice.com, am.gs.com, newsonjapan.com, mufgresearch.com, fortune.com, ceoeconomy.com, maxsdigest.substack.com, forbes.com, en.wikipedia.org)",
+   "now": "24 links from sources below the bar (schwab.com, abc.net.au, finance.yahoo.com, troweprice.com, am.gs.com, newsonjapan.com, mufgresearch.com, fortune.com, ceoeconomy.com, maxsdigest.substack.com, forbes.com)",
    "bar": "0 (no Wikipedia, blogs, newsletters or fund commentary)"
   },
   {
@@ -49,7 +49,7 @@
    "area": "content",
    "id": "hindsight_cases",
    "pass": false,
-   "now": "4 cases, 1 counter-examples",
+   "now": "3 cases, 1 counter-examples",
    "bar": "8 cases, 2 counter-examples"
   },
   {

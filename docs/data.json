@@ -1849,8 +1849,9 @@
      "outcome": "리먼브러더스가 파산보호(챕터 11)를 신청했습니다."
     },
     "sources": [
-     "https://en.wikipedia.org/wiki/Bear_Stearns",
-     "https://en.wikipedia.org/wiki/Lehman_Brothers"
+     "https://www.federalreserve.gov/newsevents/pressreleases/monetary20080316a.htm",
+     "https://www.federalreserve.gov/monetarypolicy/files/129bearstearnsbridgeloan.pdf",
+     "https://www.federalreservehistory.org/-/media/Project/FedHistory/FedHistory/Documents/essaysPDFs/Support-for-Specific-Institutions-_-Federal-Reserve-History.pdf"
     ]
    },
    {
@@ -1871,29 +1872,8 @@
      "outcome": "FDIC가 퍼스트리퍼블릭을 폐쇄하고 JP모건에 매각했다고 발표했습니다."
     },
     "sources": [
-     "https://en.wikipedia.org/wiki/First_Republic_Bank"
-    ]
-   },
-   {
-    "id": "2021-evergrande",
-    "good_news_date": "2021-10-20",
-    "outcome_date": "2021-12-09",
-    "outcome": "hit",
-    "en": {
-     "title": "Evergrande made the payment it had missed.",
-     "good_news": "Evergrande paid US$83.5 million of bond interest it had missed on September 24, inside the 30-day grace period, avoiding a default on those bonds.",
-     "still_open": "One late payment was made. It did not show that the company could meet the payments that were still to come.",
-     "outcome": "Fitch downgraded Evergrande to \"restricted default\"."
-    },
-    "ko": {
-     "title": "헝다는 밀린 이자를 냈다.",
-     "good_news": "헝다는 9월 24일에 내지 못한 채권 이자 8,350만 달러를 30일 유예 기간 안에 지급해 그 채권의 부도를 피했습니다.",
-     "still_open": "밀린 이자 한 번을 낸 것이었습니다. 앞으로 돌아올 지급을 감당할 수 있다는 것은 보여 주지 못했습니다.",
-     "outcome": "피치가 헝다의 등급을 '제한적 부도'로 내렸습니다."
-    },
-    "sources": [
-     "https://en.wikipedia.org/wiki/Chinese_real_estate_crisis_(2020%E2%80%93present)",
-     "https://en.wikipedia.org/wiki/Evergrande_Group"
+     "https://home.treasury.gov/news/press-releases/jy1349",
+     "https://www.fdic.gov/news/press-releases/2023/pr23034.html"
     ]
    },
    {
@@ -1914,10 +1894,19 @@
      "outcome": "바이든 대통령이 재정책임법에 서명해 부채 한도가 2025년 1월까지 유예됐습니다. 조건은 일주일 안에 채워졌습니다."
     },
     "sources": [
-     "https://en.wikipedia.org/wiki/2023_United_States_debt-ceiling_crisis"
+     "https://bidenwhitehouse.archives.gov/briefing-room/statements-releases/2023/05/27/statement-from-president-joe-biden-on-bipartisan-budget-agreement-in-principle/",
+     "https://bidenwhitehouse.archives.gov/briefing-room/legislation/2023/06/03/press-release-bills-signed-h-r-346-h-r-3746/"
     ]
    }
-  ]
+  ],
+  "withdrawn": [
+   {
+    "id": "2021-evergrande",
+    "date": "2026-11-26",
+    "reason": "Withdrawn until it can be supported by a primary source. It rested on Wikipedia, which no longer meets the source bar."
+   }
+  ],
+  "source_rule": "Every case needs at least one primary source (government, central bank, regulator, statute, company filing). Checked 2026-11-26 against the pages listed."
  },
  "ko": {
   "2026-ai-buildout-financing": {
