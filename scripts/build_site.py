@@ -136,6 +136,7 @@ def _patterns():
     d = ROOT / "patterns"
     if not all((d / f).exists() for f in ("patterns.json", "criteria.json", "judgment.json")):
         return {}
+    S2 = json.loads((d / "second_look.json").read_text()) if (d / "second_look.json").exists() else {}
     P, J = json.loads((d / "patterns.json").read_text()), json.loads((d / "judgment.json").read_text())["scores"]
     out = {"as_of_equity": P["meta"]["last_equity_day"], "scorecard": {}, "shown": {}}
     for k, j in J.items():
@@ -149,11 +150,18 @@ def _patterns():
                                    "falls": [o["none_active"]["largest_fall_63_median"], o["one_active"]["largest_fall_63_median"],
                                              o["two_or_more_active"]["largest_fall_63_median"]],
                                    "stretches": o["two_or_more_separate_stretches"]}
+        if "overlap_2" in S2:  # robustness variants, see patterns/criteria2.json
+            v2 = S2["overlap_2"]
+            rs = [v2[k]["ratio_two_or_more_over_one"] for k in ("top_10pct", "every_5th_day")] + [x["ratio_two_or_more_over_one"] for x in v2["leave_one_out"].values()]
+            out["shown"]["overlap"]["more"] = [min(rs), max(rs)]
     if out["scorecard"].get("aftershocks", {}).get("shown"):
         a = P["aftershocks"]
         out["shown"]["aftershocks"] = {"n": a["with_full_window"], "ratios": [a["headline"]["value"], a["ratio_to_background"]["22-63"],
                                                                                a["ratio_to_background"]["64-126"]],
                                        "again": a["another_3pct_fall_within_21_days"]}
+        if "aftershocks_2" in S2 and "aftershocks_nikkei" in S2:  # untouched period and another market
+            out["shown"]["aftershocks"]["more"] = {"pre": S2["aftershocks_2"]["headline"]["value"], "pre_n": S2["aftershocks_2"]["with_full_window"],
+                                                   "nk": S2["aftershocks_nikkei"]["headline"]["value"], "nk_n": S2["aftershocks_nikkei"]["with_full_window"]}
     return out
 aids["patterns"] = _patterns()
 sc_path = ROOT / "sector_scores" / "scorecard.json"
