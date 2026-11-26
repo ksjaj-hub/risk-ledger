@@ -20,7 +20,7 @@ jobs:
         run: python scripts/verify.py
       - name: Collect and judge
         env:
-          FRED_API_KEY: ${{ secrets.f6560de0d2b8fde1ab6370a4df69b7c7 }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         run: python scripts/collect.py
       - name: Timestamp new files on Bitcoin (OpenTimestamps, best effort)
         continue-on-error: true
