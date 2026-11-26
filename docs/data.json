@@ -903,7 +903,670 @@
      "technology"
     ]
    }
-  }
+  },
+  "risk_factors": {
+   "2026-us-appropriations-lapse": [
+    "volatility_spike"
+   ],
+   "2026-nvidia-sec-and-leadership": [],
+   "2026-us-excess-capacity-tariffs": [],
+   "2026-ai-buildout-financing": [
+    "credit_widening"
+   ],
+   "2026-us-ai-chip-export-rules": [],
+   "2026-fed-rate-hikes": [
+    "short_rates_up",
+    "long_rates_up"
+   ],
+   "2026-us-iran-war-oil": [
+    "oil_spike"
+   ],
+   "2027-us-debt-limit": [
+    "volatility_spike",
+    "credit_widening"
+   ],
+   "2026-japan-boj-tightening-yen": [
+    "yen_surge"
+   ],
+   "2026-us-private-credit-defaults": [
+    "credit_widening"
+   ],
+   "2026-eurozone-inflation-ecb": [],
+   "2026-china-domestic-demand-property": []
+  },
+  "about": {
+   "2026-nvidia-sec-and-leadership": [
+    "technology"
+   ],
+   "2026-us-ai-chip-export-rules": [
+    "technology"
+   ],
+   "2026-ai-buildout-financing": [
+    "technology",
+    "communication"
+   ],
+   "2026-us-private-credit-defaults": [
+    "financials"
+   ],
+   "2026-us-iran-war-oil": [
+    "energy"
+   ]
+  },
+  "factor_names": {
+   "oil_spike": {
+    "en": "oil price jumped",
+    "ko": "유가가 급등한 날"
+   },
+   "long_rates_up": {
+    "en": "10-year Treasury yield jumped",
+    "ko": "미국 10년 국채 금리가 급등한 날"
+   },
+   "short_rates_up": {
+    "en": "2-year Treasury yield jumped",
+    "ko": "미국 2년 국채 금리가 급등한 날"
+   },
+   "credit_widening": {
+    "en": "corporate credit spread widened sharply",
+    "ko": "회사채 신용 스프레드가 크게 벌어진 날"
+   },
+   "volatility_spike": {
+    "en": "VIX jumped",
+    "ko": "VIX가 급등한 날"
+   },
+   "yen_surge": {
+    "en": "yen strengthened sharply",
+    "ko": "엔화가 급등한 날"
+   }
+  },
+  "note_links": "risk_factors: which measured shock each card resembles (AFMX judgment). about: sectors the card is literally about. sectors.direct: AFMX judgment, shown as 'unconfirmed' unless sensitivity/sectors.json supports it. scripts/build_site.py combines these into links and sector_scores.",
+  "links": {
+   "2026-ai-buildout-financing": {
+    "technology": {
+     "level": "direct",
+     "direction": "lagged",
+     "factor": "credit_widening",
+     "mean_excess_pct": -0.16,
+     "t": -5.2,
+     "n": 734,
+     "since": "1990"
+    },
+    "communication": {
+     "level": "direct",
+     "direction": "lagged"
+    },
+    "consumer_staples": {
+     "level": "strong",
+     "direction": "led",
+     "factor": "credit_widening",
+     "mean_excess_pct": 0.28,
+     "t": 7.1,
+     "n": 734,
+     "since": "1990"
+    },
+    "financials": {
+     "level": "strong",
+     "direction": "lagged",
+     "factor": "credit_widening",
+     "mean_excess_pct": -0.12,
+     "t": -4.0,
+     "n": 734,
+     "since": "1990"
+    },
+    "health_care": {
+     "level": "strong",
+     "direction": "led",
+     "factor": "credit_widening",
+     "mean_excess_pct": 0.18,
+     "t": 5.8,
+     "n": 734,
+     "since": "1990"
+    },
+    "industrials": {
+     "level": "moderate",
+     "direction": "lagged",
+     "factor": "credit_widening",
+     "mean_excess_pct": -0.06,
+     "t": -2.7,
+     "n": 734,
+     "since": "1990"
+    },
+    "materials": {
+     "level": "moderate",
+     "direction": "lagged",
+     "factor": "credit_widening",
+     "mean_excess_pct": -0.07,
+     "t": -2.1,
+     "n": 734,
+     "since": "1990"
+    },
+    "utilities": {
+     "level": "strong",
+     "direction": "led",
+     "factor": "credit_widening",
+     "mean_excess_pct": 0.24,
+     "t": 6.0,
+     "n": 734,
+     "since": "1990"
+    }
+   },
+   "2026-china-domestic-demand-property": {
+    "technology": {
+     "level": "unconfirmed",
+     "direction": "lagged"
+    },
+    "consumer_discretionary": {
+     "level": "unconfirmed",
+     "direction": "lagged"
+    },
+    "industrials": {
+     "level": "unconfirmed",
+     "direction": "lagged"
+    },
+    "materials": {
+     "level": "unconfirmed",
+     "direction": "lagged"
+    }
+   },
+   "2026-eurozone-inflation-ecb": {
+    "financials": {
+     "level": "unconfirmed",
+     "direction": "lagged"
+    }
+   },
+   "2026-fed-rate-hikes": {
+    "technology": {
+     "level": "strong",
+     "direction": "led",
+     "factor": "short_rates_up",
+     "mean_excess_pct": 0.25,
+     "t": 4.6,
+     "n": 468,
+     "since": "1990"
+    },
+    "consumer_staples": {
+     "level": "strong",
+     "direction": "lagged",
+     "factor": "long_rates_up",
+     "mean_excess_pct": -0.27,
+     "t": -5.4,
+     "n": 469,
+     "since": "1990"
+    },
+    "energy": {
+     "level": "moderate",
+     "direction": "led",
+     "factor": "long_rates_up",
+     "mean_excess_pct": 0.2,
+     "t": 2.2,
+     "n": 469,
+     "since": "1990"
+    },
+    "financials": {
+     "level": "unconfirmed",
+     "direction": "lagged"
+    },
+    "health_care": {
+     "level": "strong",
+     "direction": "lagged",
+     "factor": "long_rates_up",
+     "mean_excess_pct": -0.24,
+     "t": -5.8,
+     "n": 469,
+     "since": "1990"
+    },
+    "materials": {
+     "level": "strong",
+     "direction": "led",
+     "factor": "long_rates_up",
+     "mean_excess_pct": 0.13,
+     "t": 3.4,
+     "n": 469,
+     "since": "1990"
+    },
+    "real_estate": {
+     "level": "unconfirmed",
+     "direction": "lagged"
+    },
+    "utilities": {
+     "level": "strong",
+     "direction": "lagged",
+     "factor": "long_rates_up",
+     "mean_excess_pct": -0.36,
+     "t": -6.1,
+     "n": 469,
+     "since": "1990"
+    }
+   },
+   "2026-japan-boj-tightening-yen": {
+    "consumer_staples": {
+     "level": "strong",
+     "direction": "led",
+     "factor": "yen_surge",
+     "mean_excess_pct": 0.18,
+     "t": 3.7,
+     "n": 458,
+     "since": "1990"
+    },
+    "financials": {
+     "level": "strong",
+     "direction": "lagged",
+     "factor": "yen_surge",
+     "mean_excess_pct": -0.18,
+     "t": -4.4,
+     "n": 458,
+     "since": "1990"
+    },
+    "utilities": {
+     "level": "strong",
+     "direction": "led",
+     "factor": "yen_surge",
+     "mean_excess_pct": 0.19,
+     "t": 3.6,
+     "n": 458,
+     "since": "1990"
+    }
+   },
+   "2026-nvidia-sec-and-leadership": {
+    "technology": {
+     "level": "direct",
+     "direction": "lagged"
+    }
+   },
+   "2026-us-ai-chip-export-rules": {
+    "technology": {
+     "level": "direct",
+     "direction": "lagged"
+    }
+   },
+   "2026-us-appropriations-lapse": {
+    "technology": {
+     "level": "strong",
+     "direction": "lagged",
+     "factor": "volatility_spike",
+     "mean_excess_pct": -0.37,
+     "t": -9.1,
+     "n": 463,
+     "since": "1990"
+    },
+    "consumer_staples": {
+     "level": "strong",
+     "direction": "led",
+     "factor": "volatility_spike",
+     "mean_excess_pct": 0.93,
+     "t": 19.0,
+     "n": 463,
+     "since": "1990"
+    },
+    "financials": {
+     "level": "strong",
+     "direction": "lagged",
+     "factor": "volatility_spike",
+     "mean_excess_pct": -0.4,
+     "t": -8.2,
+     "n": 463,
+     "since": "1990"
+    },
+    "health_care": {
+     "level": "strong",
+     "direction": "led",
+     "factor": "volatility_spike",
+     "mean_excess_pct": 0.41,
+     "t": 10.4,
+     "n": 463,
+     "since": "1990"
+    },
+    "utilities": {
+     "level": "strong",
+     "direction": "led",
+     "factor": "volatility_spike",
+     "mean_excess_pct": 0.91,
+     "t": 17.2,
+     "n": 463,
+     "since": "1990"
+    }
+   },
+   "2026-us-excess-capacity-tariffs": {
+    "technology": {
+     "level": "unconfirmed",
+     "direction": "lagged"
+    },
+    "consumer_discretionary": {
+     "level": "unconfirmed",
+     "direction": "lagged"
+    },
+    "industrials": {
+     "level": "unconfirmed",
+     "direction": "lagged"
+    },
+    "materials": {
+     "level": "unconfirmed",
+     "direction": "lagged"
+    }
+   },
+   "2026-us-iran-war-oil": {
+    "consumer_discretionary": {
+     "level": "strong",
+     "direction": "lagged",
+     "factor": "oil_spike",
+     "mean_excess_pct": -0.19,
+     "t": -5.0,
+     "n": 423,
+     "since": "1990"
+    },
+    "consumer_staples": {
+     "level": "strong",
+     "direction": "lagged",
+     "factor": "oil_spike",
+     "mean_excess_pct": -0.24,
+     "t": -4.6,
+     "n": 423,
+     "since": "1990"
+    },
+    "energy": {
+     "level": "direct",
+     "direction": "led",
+     "factor": "oil_spike",
+     "mean_excess_pct": 1.37,
+     "t": 12.9,
+     "n": 423,
+     "since": "1990"
+    },
+    "health_care": {
+     "level": "strong",
+     "direction": "lagged",
+     "factor": "oil_spike",
+     "mean_excess_pct": -0.17,
+     "t": -3.9,
+     "n": 423,
+     "since": "1990"
+    },
+    "industrials": {
+     "level": "unconfirmed",
+     "direction": "lagged"
+    },
+    "materials": {
+     "level": "strong",
+     "direction": "led",
+     "factor": "oil_spike",
+     "mean_excess_pct": 0.18,
+     "t": 3.9,
+     "n": 423,
+     "since": "1990"
+    }
+   },
+   "2026-us-private-credit-defaults": {
+    "technology": {
+     "level": "strong",
+     "direction": "lagged",
+     "factor": "credit_widening",
+     "mean_excess_pct": -0.16,
+     "t": -5.2,
+     "n": 734,
+     "since": "1990"
+    },
+    "consumer_staples": {
+     "level": "strong",
+     "direction": "led",
+     "factor": "credit_widening",
+     "mean_excess_pct": 0.28,
+     "t": 7.1,
+     "n": 734,
+     "since": "1990"
+    },
+    "financials": {
+     "level": "direct",
+     "direction": "lagged",
+     "factor": "credit_widening",
+     "mean_excess_pct": -0.12,
+     "t": -4.0,
+     "n": 734,
+     "since": "1990"
+    },
+    "health_care": {
+     "level": "strong",
+     "direction": "led",
+     "factor": "credit_widening",
+     "mean_excess_pct": 0.18,
+     "t": 5.8,
+     "n": 734,
+     "since": "1990"
+    },
+    "industrials": {
+     "level": "moderate",
+     "direction": "lagged",
+     "factor": "credit_widening",
+     "mean_excess_pct": -0.06,
+     "t": -2.7,
+     "n": 734,
+     "since": "1990"
+    },
+    "materials": {
+     "level": "moderate",
+     "direction": "lagged",
+     "factor": "credit_widening",
+     "mean_excess_pct": -0.07,
+     "t": -2.1,
+     "n": 734,
+     "since": "1990"
+    },
+    "utilities": {
+     "level": "strong",
+     "direction": "led",
+     "factor": "credit_widening",
+     "mean_excess_pct": 0.24,
+     "t": 6.0,
+     "n": 734,
+     "since": "1990"
+    }
+   },
+   "2027-us-debt-limit": {
+    "technology": {
+     "level": "strong",
+     "direction": "lagged",
+     "factor": "volatility_spike",
+     "mean_excess_pct": -0.37,
+     "t": -9.1,
+     "n": 463,
+     "since": "1990"
+    },
+    "consumer_staples": {
+     "level": "strong",
+     "direction": "led",
+     "factor": "volatility_spike",
+     "mean_excess_pct": 0.93,
+     "t": 19.0,
+     "n": 463,
+     "since": "1990"
+    },
+    "financials": {
+     "level": "strong",
+     "direction": "lagged",
+     "factor": "volatility_spike",
+     "mean_excess_pct": -0.4,
+     "t": -8.2,
+     "n": 463,
+     "since": "1990"
+    },
+    "health_care": {
+     "level": "strong",
+     "direction": "led",
+     "factor": "volatility_spike",
+     "mean_excess_pct": 0.41,
+     "t": 10.4,
+     "n": 463,
+     "since": "1990"
+    },
+    "industrials": {
+     "level": "moderate",
+     "direction": "lagged",
+     "factor": "credit_widening",
+     "mean_excess_pct": -0.06,
+     "t": -2.7,
+     "n": 734,
+     "since": "1990"
+    },
+    "materials": {
+     "level": "moderate",
+     "direction": "lagged",
+     "factor": "credit_widening",
+     "mean_excess_pct": -0.07,
+     "t": -2.1,
+     "n": 734,
+     "since": "1990"
+    },
+    "utilities": {
+     "level": "strong",
+     "direction": "led",
+     "factor": "volatility_spike",
+     "mean_excess_pct": 0.91,
+     "t": 17.2,
+     "n": 463,
+     "since": "1990"
+    }
+   }
+  },
+  "sector_scores": {
+   "technology": {
+    "score": 58,
+    "points": 21,
+    "max_points": 36,
+    "counts": {
+     "direct": 3,
+     "strong": 3,
+     "moderate": 0,
+     "unconfirmed": 2,
+     "market_wide": 1
+    }
+   },
+   "communication": {
+    "score": 19,
+    "points": 7,
+    "max_points": 36,
+    "counts": {
+     "direct": 1,
+     "strong": 0,
+     "moderate": 0,
+     "unconfirmed": 0,
+     "market_wide": 4
+    }
+   },
+   "consumer_discretionary": {
+    "score": 25,
+    "points": 9,
+    "max_points": 36,
+    "counts": {
+     "direct": 0,
+     "strong": 1,
+     "moderate": 0,
+     "unconfirmed": 2,
+     "market_wide": 4
+    }
+   },
+   "consumer_staples": {
+    "score": 17,
+    "points": 6,
+    "max_points": 36,
+    "counts": {
+     "direct": 0,
+     "strong": 2,
+     "moderate": 0,
+     "unconfirmed": 0,
+     "market_wide": 0
+    }
+   },
+   "energy": {
+    "score": 17,
+    "points": 6,
+    "max_points": 36,
+    "counts": {
+     "direct": 1,
+     "strong": 0,
+     "moderate": 0,
+     "unconfirmed": 0,
+     "market_wide": 3
+    }
+   },
+   "financials": {
+    "score": 47,
+    "points": 17,
+    "max_points": 36,
+    "counts": {
+     "direct": 1,
+     "strong": 4,
+     "moderate": 0,
+     "unconfirmed": 2,
+     "market_wide": 0
+    }
+   },
+   "health_care": {
+    "score": 19,
+    "points": 7,
+    "max_points": 36,
+    "counts": {
+     "direct": 0,
+     "strong": 2,
+     "moderate": 0,
+     "unconfirmed": 0,
+     "market_wide": 1
+    }
+   },
+   "industrials": {
+    "score": 33,
+    "points": 12,
+    "max_points": 36,
+    "counts": {
+     "direct": 0,
+     "strong": 0,
+     "moderate": 3,
+     "unconfirmed": 3,
+     "market_wide": 3
+    }
+   },
+   "materials": {
+    "score": 28,
+    "points": 10,
+    "max_points": 36,
+    "counts": {
+     "direct": 0,
+     "strong": 0,
+     "moderate": 3,
+     "unconfirmed": 2,
+     "market_wide": 2
+    }
+   },
+   "real_estate": {
+    "score": 11,
+    "points": 4,
+    "max_points": 36,
+    "counts": {
+     "direct": 0,
+     "strong": 0,
+     "moderate": 0,
+     "unconfirmed": 1,
+     "market_wide": 3
+    }
+   },
+   "utilities": {
+    "score": 8,
+    "points": 3,
+    "max_points": 36,
+    "counts": {
+     "direct": 0,
+     "strong": 1,
+     "moderate": 0,
+     "unconfirmed": 0,
+     "market_wide": 0
+    }
+   }
+  },
+  "score_points": {
+   "direct": 3,
+   "strong": 3,
+   "moderate": 2,
+   "unconfirmed": 1,
+   "market_wide": 1
+  },
+  "sensitivity_generated": "2026-11-26T06:52:54Z"
  },
  "hindsight": {
   "note": "Hindsight cases. Written after the outcomes were known, to illustrate the idea of a condition that good news does not meet. Dates and events are as stated in the listed sources (read 2026-11-26). The 'still_open' line is AFMX's own reading with hindsight. None of this is part of the AFMX record, which starts on 2026-11-26.",

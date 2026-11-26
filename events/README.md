@@ -16,3 +16,7 @@ One file per event. Each card says what happened, how it reaches markets, and, m
 2. Add its related tickers to `aids/reading.json` (`exposure`), and any deadline stated in its sources to `dates`.
 3. Review `featured` in `aids/reading.json`: up to three cards that matter most this week.
 4. Run `python3 scripts/build_site.py` and commit `docs/data.json` with the change.
+
+For a new card also add `risk_factors` (which measured shock it resembles, may be empty) and `about` (sectors it is
+literally about) in `aids/reading.json`. Evidence levels and sector scores are then computed by `build_site.py`
+from `sensitivity/sectors.json`; see `sensitivity/README.md`.
