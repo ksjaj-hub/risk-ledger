@@ -6,7 +6,7 @@ The tests are fixed in patterns/criteria2.json, committed before this script pro
 and the pass rule are those of patterns/criteria.json, unchanged.
 
 Inputs: Kenneth R. French Data Library (daily market return, from July 1926); FRED (Brent, 10-year Treasury yield,
-Moody's Baa minus 10-year spread, VIX). Standard library only. Needs FRED_API_KEY.
+Moody's Baa minus 10-year spread, VIX, Nikkei 225). Standard library only. Needs FRED_API_KEY.
 """
 import bisect, datetime as dt, json, math, pathlib, statistics, sys
 
@@ -210,7 +210,55 @@ def main():
     out["overlap_2"] = {"first_round_again_top5_every21": variant(0.95, 21), "top_10pct": variant(0.90, 21), "every_5th_day": variant(0.95, 5),
                         "leave_one_out": {k: variant(0.95, 21, k) for k in states}}
 
-    for k in ("reverberation_2", "aftershocks_2", "dates_2"):
+    # ---- other market: Nikkei 225 (FRED), added in the second commit of criteria2.json
+    nobs = fetch_series("NIKKEI225", "1949-01-01")
+    nd = [d for d, _ in nobs][1:]
+    nr = [100 * (nobs[k][1] / nobs[k - 1][1] - 1) for k in range(1, len(nobs))]
+    NK = Series(nd, nr)
+    An = aftershocks(NK)
+    hn_ = An["halves_ratio_1_21_against_own_half_background"]
+    An["headline"] = {"kind": "ratio", "value": An["ratio_to_background"]["1-21"], "background": 1.0, "n": An["with_full_window"],
+                      "halves_agree": all(x is not None and x >= rule["effect"]["ratio"]["visible"] for x in hn_)}
+    out["aftershocks_nikkei"] = An
+    nrows = reverb(NK)
+    s_n, use_n = reverb_summary(nrows)
+    midn = NK.N // 2
+    hsn = [share([x for x in use_n if (x["_r"] < midn) == first], lambda x: x["still_higher"]) for first in (True, False)]
+    out["reverberation_nikkei"] = {"period": [nd[0], nd[-1]], "summary": s_n, "halves_share": hsn,
+                                   "without_21_day_restriction": reverb_summary(nrows, False)[0], "episodes": strip(nrows),
+                                   "headline": {"kind": "share", "value": s_n["still_higher_share"], "background": 50.0, "n": s_n["n"],
+                                                "halves_agree": all(x is not None and x - 50 >= rule["effect"]["share"]["visible_points_over_background"] for x in hsn)}}
+    # contagion before 1990, first-round definition
+    kn = bisect.bisect_left(nd, SPLIT)
+    nk = dict(zip(nd[:kn], nr[:kn]))
+    nk_days = nd[:kn]
+    us_i = [i for i in range(PRE.N) if PRE.days[i] >= nk_days[0]]
+    usR = [PRE.R[i] for i in us_i]
+    cut_us = sorted(usR)[max(0, int(len(usR) * 0.025) - 1)]
+    shock = [i for i in us_i if PRE.R[i] <= cut_us and not any(PRE.R[j] <= cut_us for j in range(max(0, i - 5), i))]
+    nxt = []
+    for i in shock:
+        k = bisect.bisect_right(nk_days, PRE.days[i])
+        if k < len(nk_days) and (dt.date.fromisoformat(nk_days[k]) - dt.date.fromisoformat(PRE.days[i])).days <= 5:
+            nxt.append((i, nk[nk_days[k]]))
+    vals = [v for _, v in nxt]
+    mc = us_i[len(us_i) // 2]
+    bg_down = share(list(nk.values()), lambda x: x < 0)
+    hc = [share([v for i, v in nxt if (i < mc) == first], lambda x: x < 0) for first in (True, False)]
+    nv_sorted = sorted(nk.values())
+    cut_jp = nv_sorted[max(0, int(len(nv_sorted) * 0.025) - 1)]
+    jp = [d for k, d in enumerate(nk_days) if nk[d] <= cut_jp and not any(nk[x] <= cut_jp for x in nk_days[max(0, k - 5): k])]
+    us_same = [mkt[d] for d in jp if d in mkt]
+    out["contagion_2"] = {"period": [nk_days[0], nk_days[-1]], "half_split_day": PRE.days[mc], "us_shock_threshold_pct": r2(cut_us),
+                          "us_shock_days_with_nikkei_next_day": len(vals), "nikkei_next_day_down": sum(1 for v in vals if v < 0),
+                          "nikkei_next_day_down_share": share(vals, lambda x: x < 0), "nikkei_next_day_median_pct": med(vals),
+                          "nikkei_all_days_down_share": bg_down, "halves_down_share": hc,
+                          "reverse": {"japan_shock_days": len(us_same), "us_same_date_down_share": share(us_same, lambda x: x < 0),
+                                      "us_all_days_down_share": share(usR, lambda x: x < 0)},
+                          "headline": {"kind": "share", "value": share(vals, lambda x: x < 0), "background": bg_down, "n": len(vals),
+                                       "halves_agree": all(x is not None and x - bg_down >= rule["effect"]["share"]["visible_points_over_background"] for x in hc)}}
+
+    for k in ("reverberation_2", "aftershocks_2", "dates_2", "aftershocks_nikkei", "reverberation_nikkei", "contagion_2"):
         h = out[k]["headline"]
         h["evidence_score"], h["effect"] = evidence(rule, h["kind"], h["value"], h["background"], h["n"], h["halves_agree"])
         print(k, json.dumps(h))
