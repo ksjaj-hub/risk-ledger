@@ -1,0 +1,19 @@
+{
+  "written": "2026-11-26 (UTC), before part F of scripts/research_v4e.py produced any number",
+  "status": "Fixed. Hindsight; not part of the ledger; not a forecast.",
+  "why": "Round 5 ended with: record industry breadth live, outside the rule. The 49-industry file it was measured on (Kenneth R. French Data Library) is published weeks late, so it cannot be recorded daily. This checks whether a breadth measure that can be collected every day carries the same information.",
+  "daily_proxy": "The 11 Select Sector SPDR funds (XLB, XLC, XLE, XLF, XLI, XLK, XLP, XLRE, XLU, XLV, XLY). Source: the issuer's own NAV history files (State Street). Breadth = share of the funds with a 200-day NAV history whose NAV is below its own 200-day average; needs at least 9 funds.",
+  "known_differences": "9 to 11 sectors instead of 49 industries, so the value moves in steps of about 0.1. NAV leaves out distributions. History starts in 1999-2000, so 1990-2006 is only partly covered.",
+  "levels": "The same cut points as the 49-industry measure in round 5b (its 50th, 75th and 95th percentile of 1990-2006: 0.245, 0.49, 0.857). Not refitted.",
+  "checks": {
+    "same_information": "Spearman rank correlation with the 49-industry breadth on common days at least 0.80",
+    "near_highs": "AUROC for a 10% fall within 63 days, on days within 5% of the 252-day high, 2007 on, at least 0.58",
+    "in_the_rule": "v3 plus the proxy as one more component (not counted toward floors): 2007-on O1 AUROC at least 0.02 above v3"
+  },
+  "reading": {
+    "all three hold": "The proxy is good enough to record live as a shadow indicator. Build the daily record outside the ledger chain.",
+    "otherwise": "Report which check failed. Record the 49-industry measure when its file is published instead, and say plainly that such a record is late.",
+    "source unreachable": "Report it and name what else could be tried."
+  },
+  "what_this_is_not": "Not a test of whether breadth should enter the rule. That is what the live record is for."
+}
