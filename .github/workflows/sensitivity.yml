@@ -1,0 +1,26 @@
+name: sector sensitivity
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compute
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: python scripts/sector_sensitivity.py
+      - name: Commit
+        run: |
+          git config user.name "risk-ledger-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add sensitivity
+          git diff --cached --quiet && { echo "nothing new"; exit 0; }
+          git commit -m "sector sensitivity: $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull --rebase origin main
+          git push
