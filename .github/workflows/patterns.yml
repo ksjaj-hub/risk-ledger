@@ -1,0 +1,29 @@
+name: risk patterns
+on:
+  workflow_dispatch:
+  push:
+    branches: ["claude/**"]
+    paths: ["scripts/patterns.py", "patterns/dates.json", "patterns/criteria.json", ".github/workflows/patterns.yml"]
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compute
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: python scripts/patterns.py
+      - name: Commit
+        run: |
+          git config user.name "risk-ledger-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add patterns
+          git diff --cached --quiet && { echo "nothing new"; exit 0; }
+          git commit -m "risk patterns: $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull --rebase origin "${{ github.ref_name }}"
+          git push origin "HEAD:${{ github.ref_name }}"

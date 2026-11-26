@@ -131,6 +131,31 @@ def _waves():
                                 for e in eps[:2]]}
     return out
 aids["waves"] = _waves()
+# patterns that passed the scoring rule fixed in advance: reading aid, see patterns/README.md
+def _patterns():
+    d = ROOT / "patterns"
+    if not all((d / f).exists() for f in ("patterns.json", "criteria.json", "judgment.json")):
+        return {}
+    P, J = json.loads((d / "patterns.json").read_text()), json.loads((d / "judgment.json").read_text())["scores"]
+    out = {"as_of_equity": P["meta"]["last_equity_day"], "scorecard": {}, "shown": {}}
+    for k, j in J.items():
+        e = P[k]["headline"]["evidence_score"]
+        total = e + j["usefulness"] + j["fit"] + j["upkeep"]
+        out["scorecard"][k] = {"evidence": e, "usefulness": j["usefulness"], "fit": j["fit"], "upkeep": j["upkeep"],
+                               "total": total, "shown": e >= 3 and total >= 14}  # pass rule in patterns/criteria.json
+    if out["scorecard"].get("overlap", {}).get("shown"):
+        o = P["overlap"]
+        out["shown"]["overlap"] = {"now": {"as_of": o["now"]["as_of"], "active": o["now"]["active"]},
+                                   "falls": [o["none_active"]["largest_fall_63_median"], o["one_active"]["largest_fall_63_median"],
+                                             o["two_or_more_active"]["largest_fall_63_median"]],
+                                   "stretches": o["two_or_more_separate_stretches"]}
+    if out["scorecard"].get("aftershocks", {}).get("shown"):
+        a = P["aftershocks"]
+        out["shown"]["aftershocks"] = {"n": a["with_full_window"], "ratios": [a["headline"]["value"], a["ratio_to_background"]["22-63"],
+                                                                               a["ratio_to_background"]["64-126"]],
+                                       "again": a["another_3pct_fall_within_21_days"]}
+    return out
+aids["patterns"] = _patterns()
 sc_path = ROOT / "sector_scores" / "scorecard.json"
 aids["scorecard"] = json.loads(sc_path.read_text()) if sc_path.exists() else None
 out = ROOT / "docs" / "data.json"

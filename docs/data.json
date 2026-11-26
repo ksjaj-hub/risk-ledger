@@ -3591,6 +3591,76 @@
     ]
    }
   },
+  "patterns": {
+   "as_of_equity": "2026-09-30",
+   "scorecard": {
+    "aftershocks": {
+     "evidence": 5,
+     "usefulness": 4,
+     "fit": 4,
+     "upkeep": 5,
+     "total": 18,
+     "shown": true
+    },
+    "contagion": {
+     "evidence": 5,
+     "usefulness": 2,
+     "fit": 2,
+     "upkeep": 4,
+     "total": 13,
+     "shown": false
+    },
+    "overlap": {
+     "evidence": 3,
+     "usefulness": 4,
+     "fit": 5,
+     "upkeep": 4,
+     "total": 16,
+     "shown": true
+    },
+    "reverberation": {
+     "evidence": 1,
+     "usefulness": 3,
+     "fit": 5,
+     "upkeep": 5,
+     "total": 14,
+     "shown": false
+    },
+    "dates": {
+     "evidence": 1,
+     "usefulness": 3,
+     "fit": 3,
+     "upkeep": 3,
+     "total": 10,
+     "shown": false
+    }
+   },
+   "shown": {
+    "overlap": {
+     "now": {
+      "as_of": "2026-11-24",
+      "active": [
+       "vol"
+      ]
+     },
+     "falls": [
+      -2.58,
+      -3.63,
+      -8.12
+     ],
+     "stretches": 14
+    },
+    "aftershocks": {
+     "n": 38,
+     "ratios": [
+      3.08,
+      2.2,
+      1.33
+     ],
+     "again": 17
+    }
+   }
+  },
   "scorecard": {
    "note": "as_expected is true when the three highest-score sectors did worse than the three lowest in the following month. One month says very little; read the running count.",
    "graded_months": 0,

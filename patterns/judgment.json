@@ -1,0 +1,16 @@
+{
+ "written": "2026-11-26",
+ "note": "AFMX judgment scores, 1 to 5. Evidence is not here: it is set by the rule in criteria.json from patterns.json. scripts/build_site.py adds the four and applies the pass rule.",
+ "scores": {
+  "aftershocks": {"usefulness": 4, "fit": 4, "upkeep": 5,
+   "why": "Tells a reader that the day of a large fall is rarely the end of it, and for roughly how long. Recomputed from public daily data."},
+  "contagion": {"usefulness": 2, "fit": 2, "upkeep": 4,
+   "why": "The strong result is Tokyo following New York overnight. AFMX records the US market only and country screens are postponed, so a reader of a card cannot use it. Trouble in one US sector did not lead the market."},
+  "overlap": {"usefulness": 4, "fit": 5, "upkeep": 4,
+   "why": "The ledger holds many open risks at once; whether several are moving together is the question a reader has. The present count needs the workflow to be rerun."},
+  "reverberation": {"usefulness": 3, "fit": 5, "upkeep": 5,
+   "why": "Closest to the product's point, but the measurement fixed in advance (credit spread still wider at the recovery) showed no effect. The VIX was higher at 18 of 24 recoveries; that was not the measurement chosen beforehand, so it is noted and not used."},
+  "dates": {"usefulness": 3, "fit": 3, "upkeep": 3,
+   "why": "Needs hand-kept date lists. FOMC days did not move more than other days, and six funding gaps show no common direction."}
+ }
+}

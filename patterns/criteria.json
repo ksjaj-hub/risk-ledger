@@ -1,0 +1,51 @@
+{
+ "written": "2026-11-26",
+ "note": "Written and committed before any result was computed. Five candidate measurements that resemble the risk wave are scored on four criteria, 1 to 5 each. Only candidates that pass go on the public page.",
+ "pass_rule": "evidence >= 3 and total >= 14 of 20",
+ "criteria": {
+  "evidence": "Set by the rule below from the computed numbers, not by judgment.",
+  "usefulness": "AFMX judgment: does a reader of a card learn something they can act on without it being advice?",
+  "fit": "AFMX judgment: does it serve the product's point, tracking risk that remains after good news?",
+  "upkeep": "5 = recomputed automatically from public daily data; 3 = needs a hand-kept date list updated a few times a year; 1 = needs data this repository cannot get, or continuous manual work."
+ },
+ "evidence_rule": {
+  "effect": {
+   "ratio": {"strong": 2.0, "visible": 1.5, "none_below": 1.15},
+   "share": {"strong_points_over_background": 25, "visible_points_over_background": 12, "none_within_points": 5}
+  },
+  "score": [
+   "5: strong effect, 30 or more independent episodes, same direction in both halves of the sample",
+   "4: strong effect, 15 to 29 episodes, same direction in both halves",
+   "3: visible effect with 15 or more episodes and both halves agreeing; or strong effect with 8 to 14 episodes; or strong effect with 15 or more episodes but the halves disagree",
+   "2: fewer than 8 episodes, or the effect is below 'visible'",
+   "1: no difference from the ordinary background"
+  ]
+ },
+ "candidates": {
+  "aftershocks": {
+   "ko": "여진", "question": "After a large one-day fall, how long do large daily moves keep coming?",
+   "definition": "Main shock: a day the US market falls 3% or more with no such day in the previous 21 trading days. Count days with an absolute move of 2% or more in trading days 1-5, 6-21, 22-63 and 64-126 after it. Background: the share of all days since 1990 with such a move.",
+   "headline": "ratio: frequency of 2% days in days 1-21 after the main shock, divided by the background frequency"
+  },
+  "contagion": {
+   "ko": "전염", "question": "Does a shock in one place show up in another, and how fast?",
+   "definition": "(a) Countries: a US shock day is a day in the worst 2.5% of US market returns, first in 5 trading days. Look at the Nikkei 225 on its next trading day. Background: all Nikkei days. The reverse direction is also measured. (b) Sectors: a sector shock day is a day the sector's return minus the market is in its worst 1% while the market itself fell less than 1%, first in 5 trading days. Look at the market over the next 5 and 21 trading days.",
+   "headline": "share: Nikkei down on the next trading day after a US shock day, against the share of all Nikkei days that are down"
+  },
+  "overlap": {
+   "ko": "겹침", "question": "When several risks are live at once, is the damage larger than with one?",
+   "definition": "Four stress states, each true when the 20-trading-day change is in the top 5% since 1990: Brent (% change), 10-year Treasury yield, Baa minus 10-year spread, VIX. Every 21st trading day, count the active states and measure the largest market fall over the next 63 trading days.",
+   "headline": "ratio: median largest fall with two or more states active, divided by the median with exactly one"
+  },
+  "reverberation": {
+   "ko": "잔향", "question": "After prices recover, is fear still elevated?",
+   "definition": "A drawdown episode is a fall of 7% or more in the US market from a peak; the recovery day is the first close back at the peak. Compare the VIX and the Baa minus 10-year spread on the recovery day with the day of the peak, and count the trading days until each is back at its peak-day level.",
+   "headline": "share: recoveries on which the credit spread was still wider than at the peak, against 50%"
+  },
+  "dates": {
+   "ko": "날짜 효과", "question": "Do scheduled dates move markets before and after?",
+   "definition": "(a) Scheduled FOMC meetings, last day, 2015 onward: the absolute market move on the day against other days in the same years. (b) Federal funding gaps since fiscal year 1991: market return over the 10 trading days before the gap began and the 21 after.",
+   "headline": "ratio: mean absolute market move on FOMC days divided by the mean on other days (funding gaps are reported beside it and capped by their small number)"
+  }
+ }
+}

@@ -80,6 +80,12 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible{ou
 .case .out{font-size:10.5px;font-weight:700;font-stretch:90%;letter-spacing:.07em;text-transform:uppercase;margin-left:8px;white-space:nowrap}
 .case .out.hit{color:var(--alert)}.case .out.ok{color:var(--clear)}
 .case .src{color:var(--muted);font-size:12px;margin-top:6px;overflow-wrap:anywhere}
+.pt{padding:14px 0;border-top:1px solid var(--line)}
+.pt h3{font-size:15px;font-weight:600;margin:0 0 4px}
+.pt p{color:var(--fg);max-width:68ch;margin:4px 0 10px}
+.pt .br{display:grid;grid-template-columns:minmax(96px,150px) minmax(0,1fr) 64px;gap:0 10px;align-items:center;font-size:12.5px;color:var(--muted);padding:3px 0}
+.pt .br i{display:block;height:8px;background:var(--muted)}.pt .br.on i{background:var(--s-now)}.pt .br.on span{color:var(--fg);font-weight:600}
+.pt .br b{font-weight:600;color:var(--fg);text-align:right}
 .wv .cap{font-size:12.5px;color:var(--muted);margin:2px 0 0}
 .wv .lg{display:flex;flex-wrap:wrap;gap:2px 14px;font-size:12.5px;color:var(--muted);margin:6px 0 2px}
 .wv .lg i{display:inline-block;width:14px;border-top:2px solid;vertical-align:middle;margin-right:6px}
@@ -180,6 +186,7 @@ button.row:hover{background:var(--hover)}
   </section>
   <section class="sec wk"><h2 data-t="wk"></h2><ul id="week" aria-live="polite"></ul></section>
   <section class="sec" id="past"><h2 data-t="hs"></h2><p data-t="hsp"></p><div id="cases"></div></section>
+  <section class="sec" id="patterns" hidden><h2 data-t="pth"></h2><p data-t="ptp"></p><div id="pats"></div></section>
   <section class="sec" id="backdrop"><h2 data-t="bdh"></h2><p data-t="bdp"></p><div class="asof" id="asof"></div><div class="comps" id="comps" aria-label="Components"></div></section>
   <section class="sec"><h2 data-t="chg"></h2><p data-t="chgp"></p><div id="alerts"></div></section>
   <section id="glossary"><h2 data-t="glh"></h2><dl id="gl" class="kv gl"></dl></section>
@@ -193,7 +200,14 @@ const COLORS=["#79a596","#b9c06a","#e2a43a","#f0594b"], STATES=["Calm","Watch","
 const REPO="https://github.com/ksjaj-hub/risk-ledger";
 // OPEN=false when the repository is private: hides repository links and explains how the record can be proven later.
 const OPEN=true;
-const T={en:{wvh:"Past waves",wvn:"Not a forecast. This is the range of what followed similar shocks.",wvnow:"now",wvday:d=>"day "+d,wvm:"How this is measured",wvl:"Limits: hindsight, few episodes, and other things happened in the same months.",
+const T={en:{pth:"What tended to repeat",ptp:"Not a forecast. This is what happened in the US market since 1990. Five measurements were computed; only the two that passed a rule fixed in advance are shown.",
+ptm:"Method and scorecard",ptst:{oil:"oil",rates:"long rates",credit:"credit spread",vol:"volatility (VIX)"},
+poh:"Overlap",poNow:(n,names,d)=>"Of oil, long rates, credit spread and volatility, "+(n?n+" moved sharply over the last 20 trading days ("+names+")":"none moved sharply over the last 20 trading days")+", as of "+d+".",
+poPast:(f,g,s)=>"When two or more moved sharply at once, the largest market fall over the next three months had a median of "+g(f[2])+"%. With one it was "+g(f[1])+"%, with none "+g(f[0])+"%. That happened in "+s+" separate stretches.",
+poL:["none","one","two or more"],
+pah:"Aftershocks",paTxt:(a,r)=>"After a one-day fall of 3% or more ("+a.n+" times), days with a move of 2% or more were "+r(a.ratios[0])+" times as frequent as usual for a month, "+r(a.ratios[1])+" times in months two and three, and "+r(a.ratios[2])+" times in months four to six. In "+a.again+" of "+a.n+" another fall of 3% or more came within 21 trading days.",
+paL:["first month","months 2-3","months 4-6"],paX:"x usual",
+wvh:"Past waves",wvn:"Not a forecast. This is the range of what followed similar shocks.",wvnow:"now",wvday:d=>"day "+d,wvm:"How this is measured",wvl:"Limits: hindsight, few episodes, and other things happened in the same months.",
 woSub:n=>"An episode starts on the day Brent is up more than 20% in 20 trading days and at a one-year high. There were "+n+" since 1990.",woCap:"Brent, % change from the price before the spike. Across: trading days from the start (21 is about a month).",
 woSize:(w,g)=>"Within six months the largest fall in the US stock market had a median of "+g(w.fall_med)+"% (an ordinary six months: "+g(w.fall_base)+"%; the largest: "+g(w.fall_min)+"%)."+(w.cur&&w.cur.fall!=null?" This time it is "+g(w.cur.fall)+"% so far (equity data to "+w.last_equity+").":""),
 woDur:(w,g)=>"Half of the oil spike was given back a median of "+w.hl+" trading days after the peak (range "+w.hl_min+" to "+w.hl_max+"). Yet in "+w.still+" of "+w.n+" episodes oil was still above the pre-spike price a year later."+(w.cur?" This time half was given back in "+w.cur.half+" trading days, and on "+w.last_brent+" oil was "+g(w.cur.now)+"% against the pre-spike price.":""),
@@ -213,7 +227,14 @@ wk1:"Size",wk2:"Duration",wk3:"Order",wk4:"Sectors",glh:"Terms used here",fct:"C
  rulev:"Rule",held:x=>"The rule indicated "+x+" on the latest day; the state steps down only after 5 trading days in a row.",
  start:"Start",change:"Change",first:"First record: ",state:"State",status:{open:"open",easing:"easing",worsened:"worsened",resolved:"resolved"},
  cond:"conditions written ",what:"What happened",how:"How it reaches markets",res:"Counts as resolved when all of these are true",wor:"Counts as worsened if any of these happens",rel:"Good news that does not resolve it",log:"Log",srcs:"Sources: ",none:"No record yet",fail:"Data could not be loaded",loc:"en-US"},
-ko:{wvh:"지나간 파동",wvn:"예측이 아닙니다. 비슷한 충격 뒤에 실제로 있었던 범위입니다.",wvnow:"지금",wvday:d=>d+"거래일째",wvm:"계산 방법",wvl:"한계: 사후에 본 기록이고 사건 수가 적습니다. 같은 시기에 다른 일도 있었습니다.",
+ko:{pth:"과거에 반복된 것",ptp:"예측이 아닙니다. 1990년 이후 미국 시장에서 실제로 있었던 일입니다. 다섯 가지를 계산했고, 미리 정한 기준을 넘은 두 가지만 싣습니다.",
+ptm:"계산 방법과 점수표",ptst:{oil:"유가",rates:"장기 금리",credit:"신용 스프레드",vol:"변동성(VIX)"},
+poh:"겹침",poNow:(n,names,d)=>"유가, 장기 금리, 신용 스프레드, 변동성 가운데 최근 20거래일 사이 급하게 움직인 것은 "+(n?n+"가지("+names+")입니다":"없습니다")+". "+d+" 기준입니다.",
+poPast:(f,g,s)=>"과거에 두 가지 이상이 한꺼번에 급하게 움직였을 때는 이후 3개월 안 시장 최대 하락이 중간값 "+g(f[2])+"%였습니다. 한 가지일 때는 "+g(f[1])+"%, 없을 때는 "+g(f[0])+"%였습니다. 그런 시기는 "+s+"번 있었습니다.",
+poL:["없음","한 가지","두 가지 이상"],
+pah:"여진",paTxt:(a,r)=>"하루에 3% 넘게 빠진 뒤("+a.n+"번) 한 달 동안 2% 넘게 움직인 날이 평소의 "+r(a.ratios[0])+"배였습니다. 2~3개월째에도 "+r(a.ratios[1])+"배였고 4~6개월째에 "+r(a.ratios[2])+"배로 잦아들었습니다. "+a.n+"번 중 "+a.again+"번은 21거래일 안에 3% 넘는 하락이 또 왔습니다.",
+paL:["첫 한 달","2~3개월째","4~6개월째"],paX:"배",
+wvh:"지나간 파동",wvn:"예측이 아닙니다. 비슷한 충격 뒤에 실제로 있었던 범위입니다.",wvnow:"지금",wvday:d=>d+"거래일째",wvm:"계산 방법",wvl:"한계: 사후에 본 기록이고 사건 수가 적습니다. 같은 시기에 다른 일도 있었습니다.",
 woSub:n=>"유가가 20거래일 사이 20% 넘게 뛰어 1년 최고가가 된 날을 시작으로 봅니다. 1990년 이후 "+n+"번 있었습니다.",woCap:"브렌트유, 급등 전 가격 대비 변화(%). 가로축은 시작한 날부터 센 거래일이고 21일이 약 한 달입니다.",
 woSize:(w,g)=>"6개월 안 미국 주식시장의 최대 하락은 중간값 "+g(w.fall_med)+"%였습니다(평소 6개월은 "+g(w.fall_base)+"%, 가장 컸을 때 "+g(w.fall_min)+"%)."+(w.cur&&w.cur.fall!=null?" 이번은 지금까지 "+g(w.cur.fall)+"%입니다(주식 자료는 "+w.last_equity+"까지).":""),
 woDur:(w,g)=>"유가 급등의 절반은 정점 뒤 "+w.hl+"거래일(중간값, "+w.hl_min+"~"+w.hl_max+"일) 만에 되돌려졌습니다. 그러나 "+w.n+"번 중 "+w.still+"번은 1년 뒤에도 급등 전보다 비쌌습니다."+(w.cur?" 이번에는 "+w.cur.half+"거래일 만에 절반을 되돌렸고, "+w.last_brent+" 기준 급등 전 가격 대비 "+g(w.cur.now)+"%입니다.":""),
@@ -308,6 +329,14 @@ function render(){
   const ago=d=>(now-new Date(d+"T00:00:00Z"))/day;
   const SN=A.sector_names||{}, SM=A.sectors||{}, sn=x=>(SN[x]||{})[lang]||(SN[x]||{}).en||x;
   const tks=mine().filter(x=>SN[x]), LK=A.links||{}, SS=A.sector_scores||{}, lk=(e,x)=>(LK[e.id]||{})[x], press=l=>l&&(l.direction==="lagged"||l.level==="direct"), hitsOf=e=>tks.filter(x=>press(lk(e,x))), isMW=e=>!!(SM[e.id]||{}).market_wide;
+  // patterns that passed the scoring rule (patterns/README.md): overlap and aftershocks
+  {const P=(A.patterns||{}).shown||{},sec=document.getElementById("patterns"),box=document.getElementById("pats");box.replaceChildren();sec.hidden=!(P.overlap||P.aftershocks);
+    const r1=v=>v.toFixed(1),bars=(rows,max,on)=>{const f=document.createDocumentFragment();rows.forEach(([l,v,txt],i)=>{const r=$("div","br"+(i===on?" on":"")),bar=$("i");bar.style.width=Math.max(2,Math.round(100*Math.abs(v)/max))+"%";const w=$("div");w.append(bar);r.append($("span",null,l),w,$("b",null,txt));f.append(r)});return f};
+    if(P.overlap){const o=P.overlap,n=o.now.active.length,d=$("div","pt");d.append($("h3",null,t.poh),$("p",null,t.poNow(n,o.now.active.map(k=>t.ptst[k]).join(", "),fmt(o.now.as_of))+" "+t.poPast(o.falls,sg,o.stretches)));
+      d.append(bars(o.falls.map((v,i)=>[t.poL[i],v,sg(v)+"%"]),Math.max(...o.falls.map(Math.abs)),Math.min(2,n)));box.append(d)}
+    if(P.aftershocks){const a=P.aftershocks,d=$("div","pt");d.append($("h3",null,t.pah),$("p",null,t.paTxt(a,r1)));
+      d.append(bars(a.ratios.map((v,i)=>[t.paL[i],v,lang==="ko"?r1(v)+t.paX:r1(v)+" "+t.paX]),Math.max(...a.ratios),-1));box.append(d)}
+    if(OPEN&&!sec.hidden){const p=$("p","su"),a=$("a",null,t.ptm);a.href="https://github.com/ksjaj-hub/risk-ledger/blob/main/patterns/README.md";a.rel="noopener";p.append(a);box.append(p)}}
   const kOf=e=>(lang==="ko"&&D.ko&&D.ko[e.id])||null, title=e=>{const k=kOf(e);return k?k.title:e.title};
   // this week
   const wk=document.getElementById("week");wk.replaceChildren();const items=[];
