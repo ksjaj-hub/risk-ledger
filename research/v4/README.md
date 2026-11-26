@@ -211,7 +211,7 @@ Days within 5% of the 252-day high; 11.1% of them were followed by a 10% fall af
 | policy_rate_rise | 1955 | 0.461 | 0.349 | 0.234 to 0.468 | 0.186 | 0.762 |
 
 - None passes: the bar needed 0.58 on both periods and a widened lower end above 0.50.
-- Breadth (share of the 49 industries below their own 200-day average) is the only one above 0.58 on both periods and above 0.55 on 1927-1985. It fails only on the widened interval.
+- Breadth (share of the 49 industries below their own 200-day average), industry dispersion and margin-loan growth are above 0.58 on both periods; they fail only on the widened interval. Breadth is the strongest of the three and the only one whose plain 90% interval stays above 0.50.
 - Options skew, low volatility, tight credit spreads, a strong run-up, oil and policy-rate rises do not separate the days. Rate rises worked before 1985 and not since.
 
 ### C. Verifiable inputs
