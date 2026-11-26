@@ -1,0 +1,83 @@
+{
+  "note": "Reading aids for the public page. Editorial choices by AFMX, updated at the weekly review. Not part of the record, and not a recommendation to buy or sell anything.",
+  "featured": [
+    "2026-us-appropriations-lapse",
+    "2026-nvidia-sec-and-leadership",
+    "2026-us-excess-capacity-tariffs"
+  ],
+  "dates": [
+    {
+      "event": "2026-us-appropriations-lapse",
+      "date": "2026-12-11",
+      "en": "US government funding expires",
+      "ko": "미국 정부 예산 만료"
+    }
+  ],
+  "exposure": {
+    "2026-us-appropriations-lapse": [
+      "SPY",
+      "TLT"
+    ],
+    "2026-nvidia-sec-and-leadership": [
+      "NVDA",
+      "SMH",
+      "SOXX",
+      "QQQ"
+    ],
+    "2026-us-excess-capacity-tariffs": [
+      "SPY",
+      "XLI",
+      "FXI",
+      "EZU"
+    ],
+    "2026-ai-buildout-financing": [
+      "NVDA",
+      "DELL",
+      "SMH",
+      "QQQ"
+    ],
+    "2026-us-ai-chip-export-rules": [
+      "NVDA",
+      "AMD",
+      "SMH",
+      "SOXX"
+    ],
+    "2026-fed-rate-hikes": [
+      "TLT",
+      "SHY",
+      "SPY",
+      "QQQ"
+    ],
+    "2026-us-iran-war-oil": [
+      "USO",
+      "BNO",
+      "XLE",
+      "JETS"
+    ],
+    "2027-us-debt-limit": [
+      "TLT",
+      "BIL",
+      "SPY"
+    ],
+    "2026-japan-boj-tightening-yen": [
+      "EWJ",
+      "DXJ",
+      "FXY"
+    ],
+    "2026-us-private-credit-defaults": [
+      "BIZD",
+      "BKLN",
+      "HYG"
+    ],
+    "2026-eurozone-inflation-ecb": [
+      "EZU",
+      "FEZ",
+      "FXE"
+    ],
+    "2026-china-domestic-demand-property": [
+      "FXI",
+      "MCHI",
+      "KWEB"
+    ]
+  }
+}

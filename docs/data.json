@@ -695,6 +695,180 @@
    "_path": "events/2027-us-debt-limit.json"
   }
  ],
+ "aids": {
+  "note": "Reading aids for the public page. Editorial choices by AFMX, updated at the weekly review. Not part of the record, and not a recommendation to buy or sell anything.",
+  "featured": [
+   "2026-us-appropriations-lapse",
+   "2026-nvidia-sec-and-leadership",
+   "2026-us-excess-capacity-tariffs"
+  ],
+  "dates": [
+   {
+    "event": "2026-us-appropriations-lapse",
+    "date": "2026-12-11",
+    "en": "US government funding expires",
+    "ko": "미국 정부 예산 만료"
+   }
+  ],
+  "exposure": {
+   "2026-us-appropriations-lapse": [
+    "SPY",
+    "TLT"
+   ],
+   "2026-nvidia-sec-and-leadership": [
+    "NVDA",
+    "SMH",
+    "SOXX",
+    "QQQ"
+   ],
+   "2026-us-excess-capacity-tariffs": [
+    "SPY",
+    "XLI",
+    "FXI",
+    "EZU"
+   ],
+   "2026-ai-buildout-financing": [
+    "NVDA",
+    "DELL",
+    "SMH",
+    "QQQ"
+   ],
+   "2026-us-ai-chip-export-rules": [
+    "NVDA",
+    "AMD",
+    "SMH",
+    "SOXX"
+   ],
+   "2026-fed-rate-hikes": [
+    "TLT",
+    "SHY",
+    "SPY",
+    "QQQ"
+   ],
+   "2026-us-iran-war-oil": [
+    "USO",
+    "BNO",
+    "XLE",
+    "JETS"
+   ],
+   "2027-us-debt-limit": [
+    "TLT",
+    "BIL",
+    "SPY"
+   ],
+   "2026-japan-boj-tightening-yen": [
+    "EWJ",
+    "DXJ",
+    "FXY"
+   ],
+   "2026-us-private-credit-defaults": [
+    "BIZD",
+    "BKLN",
+    "HYG"
+   ],
+   "2026-eurozone-inflation-ecb": [
+    "EZU",
+    "FEZ",
+    "FXE"
+   ],
+   "2026-china-domestic-demand-property": [
+    "FXI",
+    "MCHI",
+    "KWEB"
+   ]
+  }
+ },
+ "hindsight": {
+  "note": "Hindsight cases. Written after the outcomes were known, to illustrate the idea of a condition that good news does not meet. Dates and events are as stated in the listed sources (read 2026-11-26). The 'still_open' line is AFMX's own reading with hindsight. None of this is part of the AFMX record, which starts on 2026-11-26.",
+  "cases": [
+   {
+    "id": "2008-bear-stearns-lehman",
+    "good_news_date": "2008-03-16",
+    "outcome_date": "2008-09-15",
+    "outcome": "hit",
+    "en": {
+     "title": "Bear Stearns was rescued. Lehman was not.",
+     "good_news": "Bear Stearns was taken over by JPMorgan Chase, after the New York Fed agreed an emergency loan two days earlier.",
+     "still_open": "The takeover dealt with one firm. It did not show that other investment banks were free of the same losses and funding strain.",
+     "outcome": "Lehman Brothers filed for Chapter 11 bankruptcy protection."
+    },
+    "ko": {
+     "title": "베어스턴스는 구제됐다. 리먼은 아니었다.",
+     "good_news": "뉴욕 연준이 이틀 전 긴급 대출에 합의한 뒤, JP모건이 베어스턴스를 인수했습니다.",
+     "still_open": "인수는 한 회사의 문제만 처리했습니다. 다른 투자은행들이 같은 손실과 자금 압박에서 벗어났다는 것은 보여 주지 못했습니다.",
+     "outcome": "리먼브러더스가 파산보호(챕터 11)를 신청했습니다."
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Bear_Stearns",
+     "https://en.wikipedia.org/wiki/Lehman_Brothers"
+    ]
+   },
+   {
+    "id": "2023-first-republic",
+    "good_news_date": "2023-03-16",
+    "outcome_date": "2023-05-01",
+    "outcome": "hit",
+    "en": {
+     "title": "Eleven banks put $30 billion into First Republic.",
+     "good_news": "Eleven American banks, including JPMorgan Chase, deposited $30 billion with First Republic.",
+     "still_open": "Money from other banks did not show that the bank's own customers had stopped leaving, or that it could fund itself without help.",
+     "outcome": "The FDIC announced that First Republic had been closed and sold to JPMorgan Chase."
+    },
+    "ko": {
+     "title": "은행 11곳이 퍼스트리퍼블릭에 300억 달러를 넣었다.",
+     "good_news": "JP모건을 비롯한 미국 은행 11곳이 퍼스트리퍼블릭에 300억 달러를 예치했습니다.",
+     "still_open": "다른 은행의 돈이 들어왔다고 해서 이 은행의 고객 이탈이 멈췄거나, 도움 없이 스스로 자금을 댈 수 있다는 뜻은 아니었습니다.",
+     "outcome": "FDIC가 퍼스트리퍼블릭을 폐쇄하고 JP모건에 매각했다고 발표했습니다."
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/First_Republic_Bank"
+    ]
+   },
+   {
+    "id": "2021-evergrande",
+    "good_news_date": "2021-10-20",
+    "outcome_date": "2021-12-09",
+    "outcome": "hit",
+    "en": {
+     "title": "Evergrande made the payment it had missed.",
+     "good_news": "Evergrande paid US$83.5 million of bond interest it had missed on September 24, inside the 30-day grace period, avoiding a default on those bonds.",
+     "still_open": "One late payment was made. It did not show that the company could meet the payments that were still to come.",
+     "outcome": "Fitch downgraded Evergrande to \"restricted default\"."
+    },
+    "ko": {
+     "title": "헝다는 밀린 이자를 냈다.",
+     "good_news": "헝다는 9월 24일에 내지 못한 채권 이자 8,350만 달러를 30일 유예 기간 안에 지급해 그 채권의 부도를 피했습니다.",
+     "still_open": "밀린 이자 한 번을 낸 것이었습니다. 앞으로 돌아올 지급을 감당할 수 있다는 것은 보여 주지 못했습니다.",
+     "outcome": "피치가 헝다의 등급을 '제한적 부도'로 내렸습니다."
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/Chinese_real_estate_crisis_(2020%E2%80%93present)",
+     "https://en.wikipedia.org/wiki/Evergrande_Group"
+    ]
+   },
+   {
+    "id": "2023-us-debt-ceiling",
+    "good_news_date": "2023-05-27",
+    "outcome_date": "2023-06-03",
+    "outcome": "ok",
+    "en": {
+     "title": "A debt-ceiling deal that did become law.",
+     "good_news": "President Biden and Speaker McCarthy struck a deal to raise the debt ceiling.",
+     "still_open": "A deal between two leaders is not a law. It still had to pass both chambers and be signed.",
+     "outcome": "Biden signed the Fiscal Responsibility Act, which suspended the debt limit until January 2025. The condition was met within a week."
+    },
+    "ko": {
+     "title": "실제로 법이 된 부채 한도 합의.",
+     "good_news": "바이든 대통령과 매카시 하원의장이 부채 한도를 올리는 데 합의했습니다.",
+     "still_open": "두 지도자의 합의는 법이 아닙니다. 상하원을 통과하고 서명까지 돼야 했습니다.",
+     "outcome": "바이든 대통령이 재정책임법에 서명해 부채 한도가 2025년 1월까지 유예됐습니다. 조건은 일주일 안에 채워졌습니다."
+    },
+    "sources": [
+     "https://en.wikipedia.org/wiki/2023_United_States_debt-ceiling_crisis"
+    ]
+   }
+  ]
+ },
  "ko": {
   "2026-ai-buildout-financing": {
    "title": "AI 설비 투자 자금 조달에 대한 의심",

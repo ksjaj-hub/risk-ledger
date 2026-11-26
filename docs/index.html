@@ -41,11 +41,37 @@ button:focus-visible,a:focus-visible{outline:1px solid var(--link);outline-offse
 .hero{padding:30px 0 20px;border-bottom:1px solid var(--line)}
 .hero h1{font-size:40px;line-height:1.06;font-weight:700;font-stretch:112%;letter-spacing:-.012em;margin:8px 0 10px;text-wrap:balance}
 .hero .lead{color:var(--muted);font-size:15px;max-width:60ch;margin:0}
-.tally{display:grid;grid-template-columns:repeat(4,1fr);margin-top:22px;border-top:1px solid var(--line)}
-.tally div{padding:12px 12px 12px 0;border-right:1px solid var(--line);margin-right:12px}
-.tally div:last-child{border-right:0;margin-right:0}
-.tally b{display:block;font-size:34px;line-height:1.05;font-weight:700;font-stretch:108%}
-.tally span{font-size:11px;font-stretch:88%;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.top2{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:0 28px;margin-top:22px;border-top:1px solid var(--line);padding-top:14px}
+.top2 ul{list-style:none;margin:8px 0 0;padding:0}
+.top2 li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:0 10px;padding:5px 0;font-size:14px}
+.top2 li time{color:var(--muted);font-size:12.5px;padding-top:1px;white-space:nowrap}
+.cd{display:grid;grid-template-columns:auto minmax(0,1fr);gap:0 14px;align-items:center;margin-top:8px;color:var(--fg);min-height:44px}
+.cd:hover{text-decoration:none}.cd:hover .t{text-decoration:underline}
+.cd b{font-size:44px;line-height:1;font-weight:700;font-stretch:108%;color:var(--watch)}
+.cd b small{font-size:13px;font-weight:600;color:var(--muted);margin-left:4px;letter-spacing:.04em}
+.cd .t{font-weight:600;font-size:14.5px}
+.cd .w{color:var(--muted);font-size:12.5px}
+.none{color:var(--muted);font-size:13px;margin-top:8px}
+@media(max-width:640px){.top2{grid-template-columns:1fr}.top2>div+div{margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}.cd b{font-size:38px}}
+.tally{color:var(--muted);font-size:12.5px;padding:12px 0 0;border-top:1px solid var(--line)}
+.mine{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;padding:0 0 14px}
+.mine input{flex:1;min-width:150px;max-width:300px;background:transparent;border:1px solid var(--line2);color:var(--fg);font:inherit;font-size:16px;padding:8px 10px;min-height:40px;border-radius:0;outline:none;text-transform:uppercase}
+.mine input:focus{border-color:var(--fg)}
+.mine input::placeholder{color:var(--dim);text-transform:none}
+#minemsg{color:var(--muted);font-size:12.5px;flex-basis:100%}
+#minemsg:empty{display:none}
+.morebtn{width:100%;border-top:1px solid var(--line);padding:13px 0;color:var(--link);font-size:13.5px;text-align:left;min-height:44px}
+.morebtn:hover{background:var(--hover)}
+.tk{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+.tk i{font-style:normal;font-size:11.5px;font-weight:600;letter-spacing:.03em;border:1px solid var(--line2);color:var(--muted);padding:1px 6px}
+.tk i.hit{border-color:var(--watch);color:var(--watch)}
+.hitline{color:var(--watch);font-size:12.5px;margin-top:6px;font-weight:600}
+.case{padding:14px 0;border-top:1px solid var(--line)}
+.case .ti{font-size:16px;font-weight:600}
+.case .out{font-size:10.5px;font-weight:700;font-stretch:90%;letter-spacing:.07em;text-transform:uppercase;margin-left:8px;white-space:nowrap}
+.case .out.hit{color:var(--alert)}.case .out.ok{color:var(--clear)}
+.case .src{color:var(--muted);font-size:12px;margin-top:6px;overflow-wrap:anywhere}
+.hsnote{border:1px solid var(--line2);padding:8px 10px;font-size:12.5px;color:var(--muted);margin:0 0 4px;max-width:none}
 .backdrop{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;margin-top:6px;padding:11px 0 0;border-top:1px solid var(--line);color:var(--fg);min-height:44px}
 .backdrop:hover{text-decoration:none}.backdrop:hover .more{text-decoration:underline}
 .backdrop .bs{font-weight:700;font-size:15px}
@@ -53,7 +79,7 @@ button:focus-visible,a:focus-visible{outline:1px solid var(--link);outline-offse
 .backdrop .more{color:var(--link);font-size:12.5px;margin-left:auto}
 .scale{display:inline-grid;grid-template-columns:repeat(4,18px);gap:2px}
 .scale span{height:4px;background:var(--line2)}
-@media(max-width:560px){.hero h1{font-size:30px}.tally b{font-size:26px}.tally div{margin-right:8px;padding-right:8px}.tally span{font-size:10px;letter-spacing:.03em}}
+@media(max-width:560px){.hero h1{font-size:30px}}
 .asof{color:var(--muted);font-size:12.5px;margin:0 0 4px}
 .comps{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:10px}
 .comp{padding:14px 12px 14px 0;border-right:1px solid var(--line);margin-right:12px;min-width:0}
@@ -103,7 +129,9 @@ button.row:hover{background:var(--hover)}
 #subs:empty{display:none}
 .sub form.done input,.sub form.done button{display:none}
 .sub form.done #subs{color:var(--fg);font-size:13px;margin:0}
-.verify{border-top:1px solid var(--line);margin-top:22px;padding:20px 0 8px}
+.verify{border-top:1px solid var(--line);margin-top:22px;padding:6px 0 8px}
+.verify summary{cursor:pointer;color:var(--muted);font-size:13px;padding:10px 0;min-height:44px}
+.verify summary:hover{color:var(--fg)}
 .verify ol{color:var(--muted);padding-left:18px;margin:8px 0 0;font-size:13px;max-width:68ch}
 .foot{border-top:1px solid var(--line);color:var(--dim);font-size:12px;margin-top:18px}
 .foot .wrap{padding-block:14px 28px}
@@ -119,23 +147,33 @@ button.row:hover{background:var(--hover)}
     <div class="lbl" data-t="kick"></div>
     <h1 data-t="h1"></h1>
     <p class="lead" data-t="lead"></p>
-    <div class="tally" id="tally" aria-live="polite"></div>
+    <div class="top2">
+      <div><div class="lbl" data-t="wk"></div><ul id="week" aria-live="polite"></ul></div>
+      <div><div class="lbl" data-t="up"></div><div id="upcoming"></div></div>
+    </div>
     <a class="backdrop" href="#backdrop"><span class="lbl" data-t="bd"></span><span id="state" class="bs">…</span><span id="score" class="bn"></span><span class="scale" id="scale" aria-hidden="true"></span><span class="more" data-t="bdmore"></span></a>
   </section>
   <section class="sub"><p><b data-t="subh"></b> <span data-t="subp"></span> <a href="weekly/1.html" data-t="subr"></a></p><form id="subf" novalidate><input id="subm" type="email" name="email" autocomplete="email" inputmode="email" required aria-label="Email"><button class="btn" type="submit" data-t="subb"></button><span id="subs" role="status" aria-live="polite"></span></form></section>
-  <section class="sec"><h2 data-t="ev"></h2><p data-t="evp"></p><div id="events"></div></section>
+  <section class="sec"><h2 data-t="ev"></h2><p data-t="evp"></p>
+    <div class="mine"><label class="lbl" for="tk" data-t="mine"></label><input id="tk" type="text" autocomplete="off" autocapitalize="characters" spellcheck="false"><span id="minemsg" role="status" aria-live="polite"></span></div>
+    <div id="events"></div>
+    <button type="button" id="morebtn" class="morebtn" aria-controls="events2" aria-expanded="false"></button>
+    <div id="events2" hidden></div>
+    <div class="tally" id="tally"></div>
+  </section>
+  <section class="sec" id="past"><h2 data-t="hs"></h2><p data-t="hsp"></p><div id="cases"></div></section>
   <section class="sec" id="backdrop"><h2 data-t="bdh"></h2><p data-t="bdp"></p><div class="asof" id="asof"></div><div class="comps" id="comps" aria-label="Components"></div></section>
   <section class="sec"><h2 data-t="chg"></h2><p data-t="chgp"></p><div id="alerts"></div></section>
-  <section class="verify"><h2 data-t="ver"></h2><ol id="verify"></ol></section>
+  <details class="verify"><summary data-t="ver"></summary><ol id="verify"></ol></details>
 </main>
 <footer class="foot"><div class="wrap" data-t="foot"></div></footer>
 <script>
 const $=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e};
 const COLORS=["#79a596","#b9c06a","#e2a43a","#f0594b"], STATES=["Calm","Watch","Elevated","Stress"];
 const REPO="https://github.com/ksjaj-hub/risk-ledger";
-const T={en:{subh:"AFMX Weekly.",subp:"One short note a week: what changed, what is still open, and which good news did not resolve anything. Free.",subb:"Subscribe",subr:"Read No. 1",subph:"you@example.com",subok:"You are on the list. The first issue will arrive by email.",subbad:"Please enter a valid email address.",suberr:"Could not save it. Please try again in a moment.",src:"Source and full history",kick:"AFMX · US market",h1:"What is left after the news.",lead:"Good news moves the price. It does not always remove the risk. AFMX writes down, in advance, what would have to be true for each risk to count as resolved, and keeps the record where it cannot be edited.",tl:["Still open","Worsened","Easing","Resolved"],bd:"Market backdrop",bdmore:"Details",bdh:"Market backdrop",bdp:"A plain reading of five public indicators, for context. It describes current conditions and reacts after markets move; it is not a forecast.",gn:"Good news",need:"Still needed",more:n=>" +"+n+" more",tap:"Full card",chg:"Backdrop changes",chgp:"Recorded automatically each time the state or a component level changes.",ev:"Risks that are still open",
+const T={en:{subh:"AFMX Weekly.",subp:"One short note a week: what changed, what is still open, and which good news did not resolve anything. Free.",subb:"Subscribe",subr:"Read No. 1",subph:"you@example.com",subok:"You are on the list. The first issue will arrive by email.",subbad:"Please enter a valid email address.",suberr:"Could not save it. Please try again in a moment.",src:"Source and full history",kick:"AFMX · US market",h1:"What is left after the news.",lead:"Good news moves the price. It does not always remove the risk. AFMX writes down in advance what would have to be true for each risk to count as resolved, then tracks whether it is.",tl:["open","worsened","easing","resolved"],wk:"This week",up:"Coming up",days:"days",today:"today",nodate:"No dated deadline on the open cards.",nochg:"No changes this week.",opened:(n,d)=>n+" risk"+(n===1?"":"s")+" opened and written down",rulechg:(a,b)=>"Judging rule "+a+" → "+b,bdchg:(a,b)=>"Market backdrop: "+a+" → "+b,stchg:(ti,a,b)=>ti+": "+a+" → "+b,mine:"Your tickers",mineph:"e.g. NVDA, QQQ",minehit:(n,l)=>n+" open risk"+(n===1?"":"s")+" touch"+(n===1?"es":"")+" "+l+". Shown first.",minenone:l=>"No open risk is mapped to "+l+" yet.",touch:"Touches your tickers: ",relt:"Related tickers (AFMX mapping for navigation, not a recommendation)",showmore:n=>"Show the other "+n+" open risks",showless:"Show fewer",hs:"Has this happened before?",hsp:"Past cases where good news arrived while a condition was still unmet.",hsnote:"Written after the fact, with hindsight. These are not part of the AFMX record, which starts on November 26, 2026. One case is included where the good news did hold.",then:"What happened",still:"Was still open",out:{hit:"Risk materialised",ok:"Resolved as stated"},bd:"Market backdrop",bdmore:"Details",bdh:"Market backdrop",bdp:"A plain reading of five public indicators, for context. It describes current conditions and reacts after markets move; it is not a forecast.",gn:"Good news",need:"Still needed",more:n=>" +"+n+" more",tap:"Full card",chg:"Backdrop changes",chgp:"Recorded automatically each time the state or a component level changes.",ev:"Risks that are still open",
  evp:"Each card shows the good news that came out and the condition that is still not met. Conditions were written on the date shown, before the outcome was known. Tap a card for everything, with sources.",
- ver:"How to check that nothing here was changed afterwards",
+ ver:"How to check that nothing here was changed afterwards (hash chain, timestamps, public history)",
  v:[["Every record is its own dated commit in a ","public history",REPO+"/commits/main","."],["Each record contains the fingerprint (SHA-256) of the record before it, so one edit would break the chain."],["Records carry ","OpenTimestamps","https://opentimestamps.org"," proofs anchored to the Bitcoin blockchain."],["The ","judging rule",REPO+"/blob/main/rules/"," is published and versioned. Old versions are never edited."]],
  foot:"This is a description of risk conditions. It is not a forecast, not a recommendation to buy or sell anything, and not investment advice. Inputs via FRED; most lag by about one trading day. VIX data: Copyright Chicago Board Options Exchange, Inc.",
  states:STATES,levels:["Low","Moderate","High","Extreme"],comp:{},of:" of 100",asof:"as of ",
@@ -143,9 +181,9 @@ const T={en:{subh:"AFMX Weekly.",subp:"One short note a week: what changed, what
  rulev:"Rule",held:x=>"The rule indicated "+x+" on the latest day; the state steps down only after 5 trading days in a row.",
  start:"Start",change:"Change",first:"First record: ",state:"State",status:{open:"open",easing:"easing",worsened:"worsened",resolved:"resolved"},
  cond:"conditions written ",what:"What happened",how:"How it reaches markets",res:"Counts as resolved when all of these are true",wor:"Counts as worsened if any of these happens",rel:"Good news that does not resolve it",log:"Log",srcs:"Sources: ",none:"No record yet",fail:"Data could not be loaded",loc:"en-US"},
-ko:{subh:"AFMX 주간 글.",subp:"일주일에 한 번, 짧게 보냅니다. 무엇이 바뀌었고, 무엇이 아직 열려 있으며, 어떤 호재가 아무것도 해소하지 못했는지 정리합니다. 무료이고 영어로 발행합니다.",subb:"구독",subr:"1호 읽기",subph:"이메일 주소",subok:"등록됐습니다. 첫 글부터 이메일로 보내 드립니다.",subbad:"이메일 주소를 다시 확인해 주세요.",suberr:"저장하지 못했습니다. 잠시 뒤 다시 시도해 주세요.",src:"원본과 전체 기록",kick:"AFMX · 미국 시장",h1:"뉴스가 지나간 뒤에 남은 것.",lead:"호재는 가격을 움직이지만 리스크까지 없애 주지는 않습니다. AFMX는 리스크마다 무엇이 확인돼야 해소인지를 미리 적어 두고, 그 기록을 고칠 수 없는 곳에 남깁니다.",tl:["아직 열림","악화","완화","해소"],bd:"시장 배경",bdmore:"자세히",bdh:"시장 배경",bdp:"공개 지표 다섯 가지를 그대로 읽은 참고값입니다. 지금 상태를 설명할 뿐이고 시장이 움직인 뒤에 반응합니다. 예측이 아닙니다.",gn:"나온 호재",need:"남은 조건",more:n=>" 외 "+n+"개",tap:"카드 전체 보기",chg:"시장 배경의 변화",chgp:"상태나 요소의 단계가 바뀔 때마다 자동으로 기록됩니다.",ev:"아직 열려 있는 리스크",
+ko:{subh:"AFMX 주간 글.",subp:"일주일에 한 번, 짧게 보냅니다. 무엇이 바뀌었고, 무엇이 아직 열려 있으며, 어떤 호재가 아무것도 해소하지 못했는지 정리합니다. 무료이고 영어로 발행합니다.",subb:"구독",subr:"1호 읽기",subph:"이메일 주소",subok:"등록됐습니다. 첫 글부터 이메일로 보내 드립니다.",subbad:"이메일 주소를 다시 확인해 주세요.",suberr:"저장하지 못했습니다. 잠시 뒤 다시 시도해 주세요.",src:"원본과 전체 기록",kick:"AFMX · 미국 시장",h1:"뉴스가 지나간 뒤에 남은 것.",lead:"호재는 가격을 움직이지만 리스크까지 없애 주지는 않습니다. AFMX는 리스크마다 무엇이 확인돼야 해소인지를 미리 적어 두고, 실제로 그렇게 됐는지 추적합니다.",tl:["열림","악화","완화","해소"],wk:"이번 주 바뀐 것",up:"다가오는 날짜",days:"일 남음",today:"오늘",nodate:"열린 카드에 정해진 날짜가 없습니다.",nochg:"이번 주에는 바뀐 것이 없습니다.",opened:(n,d)=>"리스크 "+n+"건을 열고 조건을 적음",rulechg:(a,b)=>"판정 규칙 "+a+" → "+b,bdchg:(a,b)=>"시장 배경: "+a+" → "+b,stchg:(ti,a,b)=>ti+": "+a+" → "+b,mine:"내 종목",mineph:"예: NVDA, QQQ",minehit:(n,l)=>l+"와 관련된 열린 리스크가 "+n+"건 있습니다. 맨 위에 보여 드립니다.",minenone:l=>l+"에 연결된 열린 리스크는 아직 없습니다.",touch:"내 종목 관련: ",relt:"관련 종목 (찾아보기 편하도록 AFMX가 연결한 것이며 추천이 아닙니다)",showmore:n=>"나머지 열린 리스크 "+n+"건 보기",showless:"접기",hs:"전에도 이런 일이 있었나",hsp:"호재가 나왔지만 조건이 채워지지 않았던 과거 사례입니다.",hsnote:"결과를 알고 나서 쓴 사후 검증입니다. 2026년 11월 26일에 시작한 AFMX 기록에는 포함되지 않습니다. 호재가 실제로 해소로 이어진 사례도 하나 넣었습니다.",then:"이후 일어난 일",still:"남아 있던 것",out:{hit:"리스크 현실화",ok:"적힌 대로 해소"},bd:"시장 배경",bdmore:"자세히",bdh:"시장 배경",bdp:"공개 지표 다섯 가지를 그대로 읽은 참고값입니다. 지금 상태를 설명할 뿐이고 시장이 움직인 뒤에 반응합니다. 예측이 아닙니다.",gn:"나온 호재",need:"남은 조건",more:n=>" 외 "+n+"개",tap:"카드 전체 보기",chg:"시장 배경의 변화",chgp:"상태나 요소의 단계가 바뀔 때마다 자동으로 기록됩니다.",ev:"아직 열려 있는 리스크",
  evp:"카드마다 나온 호재와 아직 채워지지 않은 조건을 보여 줍니다. 조건은 결과를 알기 전, 표시된 날짜에 적었습니다. 카드를 누르면 출처와 함께 전체가 열립니다. 한국어는 읽기 편하도록 붙인 번역이고, 기록의 원문은 영어입니다.",
- ver:"나중에 고쳐 쓰지 않았다는 것을 확인하는 방법",
+ ver:"나중에 고쳐 쓰지 않았다는 것을 확인하는 방법 (지문 사슬, 시각 증명, 공개 이력)",
  v:[["모든 기록은 날짜가 찍힌 개별 변경으로 ","공개 이력",REPO+"/commits/main","에 남습니다."],["기록마다 바로 앞 기록의 지문(SHA-256)이 들어 있어서, 하나만 고쳐도 사슬이 끊어집니다."],["기록에는 비트코인 블록체인에 시각을 남기는 ","OpenTimestamps","https://opentimestamps.org"," 증명이 붙습니다."],["","판정 규칙",REPO+"/blob/main/rules/","은 공개돼 있고 버전이 붙습니다. 이전 버전은 고치지 않습니다."]],
  foot:"이 페이지는 리스크 상태를 설명합니다. 예측이 아니며, 무엇을 사거나 팔라는 권유나 투자 조언이 아닙니다. 입력 자료는 FRED를 통해 받으며 대부분 약 1거래일 늦습니다. VIX 자료: Copyright Chicago Board Options Exchange, Inc.",
  states:["평온","주의","높음","위기"],levels:["낮음","보통","높음","매우 높음"],
@@ -155,7 +193,8 @@ ko:{subh:"AFMX 주간 글.",subp:"일주일에 한 번, 짧게 보냅니다. 무
  start:"시작",change:"변화",first:"첫 기록: ",state:"상태",status:{open:"진행 중",easing:"완화",worsened:"악화",resolved:"해소"},
  cond:"조건 작성일 ",what:"무슨 일이 있었나",how:"시장에 미치는 경로",res:"아래가 모두 사실이면 해소로 봅니다",wor:"아래 중 하나라도 일어나면 악화로 봅니다",rel:"해소가 아닌 호재",log:"기록 (원문)",srcs:"출처: ",none:"아직 기록이 없습니다",fail:"자료를 불러오지 못했습니다",loc:"ko-KR"}};
 let lang="en";try{lang=localStorage.getItem("lang")||((navigator.language||"").startsWith("ko")?"ko":"en")}catch(e){if((navigator.language||"").startsWith("ko"))lang="ko"}
-let D=null;const open=new Set();
+let D=null,showRest=false;const open=new Set();
+function mine(){let v="";try{v=localStorage.getItem("tickers")||""}catch(e){v=window._tk||""}return [...new Set((v.toUpperCase().match(/[A-Z][A-Z.]{0,5}/g)||[]))].slice(0,20)}
 const fmt=d=>lang==="ko"?d.replaceAll("-","."):new Date(d+"T00:00:00Z").toLocaleDateString(T[lang].loc,{year:"numeric",month:"short",day:"numeric",timeZone:"UTC"});
 function list(title,items){const f=document.createDocumentFragment();if(!items||!items.length)return f;f.append($("h3","lbl",title));const ul=$("ul");items.forEach(i=>ul.append($("li",null,i)));f.append(ul);return f}
 const stName=s=>T[lang].states[STATES.indexOf(s)]||s, lvName=(c)=>T[lang].levels[c.level]||c.label;
@@ -190,33 +229,74 @@ function render(){
     b.append($("div","ti",(a.type==="baseline"?t.first:t.state+" ")+stName(a.state)+" ("+a.score+")"));
     if(a.changes.length)b.append($("div","su",a.changes.map(c=>c.what==="rule_version"?t.rulev+": "+c.from+" → "+c.to:(c.what==="state"?t.state:cn(c.what))+": "+lab(c.from)+" → "+lab(c.to)).join("; ")));
     r.append(b);al.append(r)});
-  const ev=document.getElementById("events");ev.replaceChildren();
-  const tl=document.getElementById("tally");tl.replaceChildren();
-  ["open","worsened","easing","resolved"].forEach((k,i)=>{const d=$("div");const n=D.events.filter(e=>e.status===k).length;const b=$("b",null,String(n));if(n)b.style.color=["var(--watch)","var(--alert)","var(--fg)","var(--clear)"][i];else b.style.color="var(--dim)";d.append(b,$("span",null,t.tl[i]));tl.append(d)});
+  const A=D.aids||{featured:[],dates:[],exposure:{}}, now=new Date(), day=864e5;
+  const ago=d=>(now-new Date(d+"T00:00:00Z"))/day;
+  const tks=mine(), hitsOf=e=>(A.exposure[e.id]||[]).filter(x=>tks.includes(x));
+  const kOf=e=>(lang==="ko"&&D.ko&&D.ko[e.id])||null, title=e=>{const k=kOf(e);return k?k.title:e.title};
+  // this week
+  const wk=document.getElementById("week");wk.replaceChildren();const items=[];
+  const fresh=D.events.filter(e=>ago(e.first_recorded)<=7);
+  if(fresh.length)items.push([fresh.map(e=>e.first_recorded).sort().pop(),t.opened(fresh.length)]);
+  D.events.forEach(e=>e.history.forEach((h,i)=>{if(i&&ago(h.date)<=7)items.push([h.date,t.stchg(title(e),t.status[e.history[i-1].status]||e.history[i-1].status,t.status[h.status]||h.status)])}));
+  D.alerts.forEach(a=>{if(ago(a.issued_at_utc.slice(0,10))>7)return;a.changes.forEach(c=>{if(c.what==="state")items.push([a.issued_at_utc.slice(0,10),t.bdchg(stName(c.from),stName(c.to))]);if(c.what==="rule_version")items.push([a.issued_at_utc.slice(0,10),t.rulechg(c.from,c.to)])})});
+  items.sort((x,y)=>y[0].localeCompare(x[0])).slice(0,5).forEach(([d,x])=>{const li=$("li");const tm=$("time",null,fmt(d));tm.dateTime=d;li.append(tm,$("span",null,x));wk.append(li)});
+  if(!items.length)wk.append($("li","none",t.nochg));
+  // coming up
+  const up=document.getElementById("upcoming");up.replaceChildren();
+  const today=new Date(Date.UTC(now.getUTCFullYear(),now.getUTCMonth(),now.getUTCDate()));
+  const dates=(A.dates||[]).map(x=>({...x,n:Math.round((new Date(x.date+"T00:00:00Z")-today)/day)})).filter(x=>x.n>=0&&D.events.some(e=>e.id===x.event&&e.status!=="resolved")).sort((x,y)=>x.n-y.n).slice(0,2);
+  dates.forEach(x=>{const a=$("a","cd");a.href="#ev-"+x.event;const b=$("b",null,x.n?String(x.n):t.today);if(x.n)b.append($("small",null,t.days));const w=$("div");w.append($("div","t",x[lang]||x.en),$("div","w",fmt(x.date)));a.append(b,w);
+    a.addEventListener("click",()=>{open.add(x.event);render()});up.append(a)});
+  if(!dates.length)up.append($("div","none",t.nodate));
+  // events
+  const ev=document.getElementById("events"),ev2=document.getElementById("events2");ev.replaceChildren();ev2.replaceChildren();
   const order={worsened:0,open:1,easing:2,resolved:3};
-  D.events.slice().sort((a,b)=>(order[a.status]-order[b.status])||b.event_started.localeCompare(a.event_started)||a.title.localeCompare(b.title)).forEach(e=>{
-    const k=(lang==="ko"&&D.ko&&D.ko[e.id])||null, last=e.history[e.history.length-1], id="ev-"+e.id;
+  const mk=(e,rich)=>{
+    const k=kOf(e), last=e.history[e.history.length-1], id="ev-"+e.id, hits=hitsOf(e);
     const r=$("button","row");r.type="button";r.setAttribute("aria-expanded",String(open.has(e.id)));r.setAttribute("aria-controls",id);
     r.append($("div","d",fmt(last.date)));r.append($("span","tag "+e.status,t.status[e.status]||e.status));
-    const b=$("div","body");b.append($("div","ti big",k?k.title:e.title));
+    const b=$("div","body");b.append($("div",rich?"ti big":"ti",title(e)));
     const gn=(k?k.relief:e.relief_headlines_that_do_not_resolve_it)||[], need=(k?k.resolved:e.resolution_conditions.resolved_when_all)||[];
-    if(e.status!=="resolved"&&(gn.length||need.length)){const dl=$("dl","kv");
+    if(rich&&e.status!=="resolved"&&(gn.length||need.length)){const dl=$("dl","kv");
       if(gn.length){dl.append($("dt",null,t.gn));dl.append($("dd","gn",gn[0]))}
       if(need.length){dl.append($("dt","need",t.need));const dd=$("dd",null,need[0]);if(need.length>1)dd.append($("small",null,t.more(need.length-1)));dl.append(dd)}
       b.append(dl)}
-    b.append($("div","su",t.cond+fmt(e.resolution_conditions.written_on)+" · "+t.tap));r.append(b);
+    if(hits.length)b.append($("div","hitline",t.touch+hits.join(", ")));
+    if(rich)b.append($("div","su",t.cond+fmt(e.resolution_conditions.written_on)+" · "+t.tap));r.append(b);
     const d=$("div","det");d.id=id;d.hidden=!open.has(e.id);
     d.append($("h3","lbl",t.what),$("p",null,k?k.what:e.what_happened));
     d.append($("h3","lbl",t.how),$("p",null,k?k.channel:e.how_it_reaches_markets));
     d.append(list(t.res,k?k.resolved:e.resolution_conditions.resolved_when_all));
     d.append(list(t.wor,k?k.worse:e.resolution_conditions.worsened_when_any));
     d.append(list(t.rel,k?k.relief:e.relief_headlines_that_do_not_resolve_it));
+    const xs=A.exposure[e.id]||[];if(xs.length){d.append($("h3","lbl",t.relt));const c=$("div","tk");xs.forEach(x=>c.append($("i",tks.includes(x)?"hit":"",x)));d.append(c)}
     d.append(list(t.log,e.history.map(h=>fmt(h.date)+" · "+(t.status[h.status]||h.status)+" · "+h.note)));
     const s=$("div","src",t.srcs);e.sources.forEach((u,j)=>{const a=$("a",null,new URL(u).hostname.replace(/^www\./,""));a.href=u;a.rel="noopener";if(j)s.append(", ");s.append(a)});d.append(s);
     r.addEventListener("click",()=>{const o=d.hidden;d.hidden=!o;r.setAttribute("aria-expanded",String(o));o?open.add(e.id):open.delete(e.id)});
-    ev.append(r,d)});
+    return [r,d]};
+  const sorted=D.events.slice().sort((a,b)=>(order[a.status]-order[b.status])||b.event_started.localeCompare(a.event_started)||a.title.localeCompare(b.title));
+  const live=sorted.filter(e=>e.status!=="resolved");
+  const mineHits=live.filter(e=>hitsOf(e).length);
+  const feat=[...mineHits,...(A.featured||[]).map(id=>live.find(e=>e.id===id)).filter(Boolean)].filter((e,i,a)=>a.indexOf(e)===i);
+  const top=feat.length?feat:live.slice(0,3), rest=sorted.filter(e=>!top.includes(e));
+  top.forEach(e=>ev.append(...mk(e,true)));rest.forEach(e=>ev2.append(...mk(e,false)));
+  const mb=document.getElementById("morebtn");mb.hidden=!rest.length;
+  const anyOpen=rest.some(e=>open.has(e.id));if(anyOpen)showRest=true;
+  ev2.hidden=!showRest;mb.setAttribute("aria-expanded",String(showRest));mb.textContent=showRest?t.showless:t.showmore(rest.length);
+  const mm=document.getElementById("minemsg"),tk=document.getElementById("tk");tk.placeholder=t.mineph;if(document.activeElement!==tk)tk.value=tks.join(", ");
+  mm.textContent=tks.length?(mineHits.length?t.minehit(mineHits.length,tks.join(", ")):t.minenone(tks.join(", "))):"";
+  document.getElementById("tally").textContent=["open","worsened","easing","resolved"].map((k,i)=>D.events.filter(e=>e.status===k).length+" "+t.tl[i]).join(" · ");
+  // hindsight
+  const cs2=document.getElementById("cases");cs2.replaceChildren();
+  const H=(D.hindsight&&D.hindsight.cases)||[];document.getElementById("past").hidden=!H.length;
+  if(H.length)cs2.append($("p","hsnote",t.hsnote));
+  H.forEach(c=>{const x=c[lang]||c.en,d=$("div","case");const h=$("div","ti",x.title);h.append($("span","out "+c.outcome,t.out[c.outcome]));d.append(h);
+    const dl=$("dl","kv");dl.append($("dt",null,t.gn),$("dd","gn",fmt(c.good_news_date)+" · "+x.good_news),$("dt","need",t.still),$("dd",null,x.still_open),$("dt",null,t.then),$("dd",null,fmt(c.outcome_date)+" · "+x.outcome));d.append(dl);
+    const sr=$("div","src",t.srcs);c.sources.forEach((u,j)=>{const a=$("a",null,new URL(u).hostname.replace(/^www\./,""));a.href=u;a.rel="noopener";if(j)sr.append(", ");sr.append(a)});d.append(sr);cs2.append(d)});
 }
 document.querySelectorAll("[data-lang]").forEach(b=>b.addEventListener("click",()=>{lang=b.dataset.lang;try{localStorage.setItem("lang",lang)}catch(e){}render()}));
+document.getElementById("morebtn").addEventListener("click",()=>{showRest=!showRest;if(!showRest)open.forEach(id=>{if(document.querySelector("#events2 #ev-"+CSS.escape(id)))open.delete(id)});render()});
+(function(){const tk=document.getElementById("tk");const save=()=>{window._tk=tk.value;try{localStorage.setItem("tickers",tk.value)}catch(e){}render()};tk.addEventListener("change",save);tk.addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();tk.blur()}})})();
 render();
 fetch("data.json").then(r=>r.json()).then(d=>{D=d;render()}).catch(()=>{document.getElementById("state").textContent=T[lang].fail});
 

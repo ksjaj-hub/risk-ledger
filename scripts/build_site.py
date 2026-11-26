@@ -19,6 +19,9 @@ data = {
     "history": [{"date": r["recorded_at_utc"][:10], "state": r["state"], "score": r["score"]} for r in records],
     "alerts": load("alerts/us/*/*.json"),
     "events": [e for e in load("events/*.json")],
+    # reading aids and hindsight cases: editorial, not part of the record
+    "aids": json.loads((ROOT / "aids" / "reading.json").read_text()),
+    "hindsight": json.loads((ROOT / "hindsight" / "cases.json").read_text()) if (ROOT / "hindsight" / "cases.json").exists() else {"cases": []},
     # reading aid only: the English cards are the record
     "ko": json.loads((ROOT / "i18n" / "events.ko.json").read_text()),
 }
