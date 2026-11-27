@@ -1891,6 +1891,60 @@
     }
    ]
   },
+  "state_durations": {
+   "since": 1990,
+   "states": [
+    {
+     "state": "Calm",
+     "spells": 85,
+     "median": 16.0,
+     "upper_quartile": 49.0,
+     "moved_up_share": 1.0
+    },
+    {
+     "state": "Guarded",
+     "spells": 142,
+     "median": 10.0,
+     "upper_quartile": 19.0,
+     "moved_up_share": 0.394
+    },
+    {
+     "state": "Watch",
+     "spells": 94,
+     "median": 9.0,
+     "upper_quartile": 19.0,
+     "moved_up_share": 0.468
+    },
+    {
+     "state": "Elevated",
+     "spells": 74,
+     "median": 11.0,
+     "upper_quartile": 29.0,
+     "moved_up_share": 0.297
+    },
+    {
+     "state": "Stress",
+     "spells": 24,
+     "median": 8.5,
+     "upper_quartile": 22.25,
+     "moved_up_share": 0.0
+    }
+   ]
+  },
+  "shadow_breadth": {
+   "sector_funds": {
+    "as_of": "2026-11-24",
+    "below": 6,
+    "members": 11,
+    "level": 2
+   },
+   "industries_49": {
+    "as_of": "2026-09-30",
+    "below": 30,
+    "members": 49,
+    "level": 2
+   }
+  },
   "links": {
    "2026-ai-buildout-financing": {
     "technology": {
