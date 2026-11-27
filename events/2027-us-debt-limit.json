@@ -1,7 +1,7 @@
 {
  "schema": 1,
  "id": "2027-us-debt-limit",
- "title": "US federal debt limit standoff",
+ "title": "US federal debt limit expected to be approached in fiscal year 2027",
  "category": "fiscal policy",
  "markets": [
   "US"
@@ -74,6 +74,11 @@
    "date": "2026-11-27",
    "status": "open",
    "note": "Added forecast 1: by 2027-06-30, 10% resolved, 5% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
+  },
+  {
+   "date": "2026-11-27",
+   "status": "open",
+   "note": "Title was 'US federal debt limit standoff'. Changed to say only what is confirmed. Conditions and forecasts unchanged."
   }
  ],
  "note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",

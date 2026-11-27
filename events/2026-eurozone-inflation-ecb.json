@@ -1,7 +1,7 @@
 {
  "schema": 1,
  "id": "2026-eurozone-inflation-ecb",
- "title": "Eurozone inflation at 4% and further ECB rate rises",
+ "title": "Eurozone inflation up to 3.8% with the ECB on hold",
  "category": "monetary policy",
  "markets": [
   "EU"
@@ -74,6 +74,11 @@
    "date": "2026-11-27",
    "status": "open",
    "note": "Added forecast 1: by 2027-03-31, 10% resolved, 12% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
+  },
+  {
+   "date": "2026-11-27",
+   "status": "open",
+   "note": "Title was 'Eurozone inflation at 4% and further ECB rate rises'. Changed to say only what is confirmed. Conditions and forecasts unchanged."
   }
  ],
  "note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
