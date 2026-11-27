@@ -1705,11 +1705,11 @@
    "sector_band": {
     "en": {
      "term": "Sector band",
-     "def": "High, moderate or low: how many independent open risks touch a sector, weighted by link strength. It counts pressure. It does not predict returns."
+     "def": "Many risks, some risks or few risks: how many independent open risks touch a sector, weighted by link strength. It counts pressure. It does not predict returns."
     },
     "ko": {
      "term": "섹터 단계",
-     "def": "높음, 보통, 낮음입니다. 서로 다른 열린 리스크가 그 섹터에 얼마나 닿는지를 연결 강도로 가중해 셉니다. 압력의 크기이지 수익률 예측이 아닙니다."
+     "def": "리스크 많음, 리스크 일부, 리스크 적음입니다. 서로 다른 열린 리스크가 그 섹터에 얼마나 닿는지를 연결 강도로 가중해 셉니다. 압력의 크기이지 수익률 예측이 아닙니다."
     }
    },
    "hash_chain": {
