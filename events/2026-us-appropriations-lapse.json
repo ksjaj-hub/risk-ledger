@@ -57,6 +57,11 @@
    "date": "2026-11-26",
    "status": "open",
    "note": "Summary rewritten so that it states only what was confirmed at the listed sources and marks the rest as reported. The first version is kept under superseded_sources. Resolution conditions are unchanged."
+  },
+  {
+   "date": "2026-11-27",
+   "status": "open",
+   "note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
   }
  ],
  "note": "Risk state only. Not a forecast and not investment advice.",
@@ -81,5 +86,35 @@
   "notes": [
    "Signature is read from the White House list of signed bills or the public law text."
   ]
+ },
+ "numeric_criteria": {
+  "version": 1,
+  "written_on": "2026-11-27",
+  "note": "How each condition is counted, in numbers, with the latest reading known when this was written. Added on 2026-11-27. The resolution conditions above are unchanged and remain the test; where the two could be read differently, the original wording decides. 'latest' is a snapshot and is updated with a dated history line.",
+  "items": [
+   {
+    "side": "resolved",
+    "measure": "1 signed law that funds the government for at least 30 days beyond 2026-12-11",
+    "latest": "0 of 1. 14 days to the deadline on 2026-11-27",
+    "state": "not_met"
+   },
+   {
+    "side": "worsened",
+    "measure": "Funding lapses: no law in force at 00:00 on 2026-12-12",
+    "latest": "Not reached. Funds run through 2026-12-11",
+    "state": "not_reached"
+   },
+   {
+    "side": "worsened",
+    "measure": "A shutdown lasts more than 14 days",
+    "latest": "0 days",
+    "state": "not_reached"
+   }
+  ]
+ },
+ "counter_view": {
+  "written_on": "2026-11-27",
+  "note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
+  "text": "The date has been known since September, and Congress passed that stopgap without a lapse. A deadline everyone can see is the kind of risk markets tend to deal with early, so the card may overstate a familiar event."
  }
 }

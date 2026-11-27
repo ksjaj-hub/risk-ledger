@@ -64,6 +64,11 @@
    "date": "2026-11-26",
    "status": "open",
    "note": "Summary rewritten so that it states only what was confirmed at the listed sources and marks the rest as reported. The first version is kept under superseded_sources. Resolution conditions are unchanged."
+  },
+  {
+   "date": "2026-11-27",
+   "status": "open",
+   "note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
   }
  ],
  "note": "Risk state only. Not a forecast and not investment advice.",
@@ -89,5 +94,41 @@
   "notes": [
    "'Major rating agency' means S&P, Moody's or Fitch. The X-date is read from a Treasury letter to Congress."
   ]
+ },
+ "numeric_criteria": {
+  "version": 1,
+  "written_on": "2026-11-27",
+  "note": "How each condition is counted, in numbers, with the latest reading known when this was written. Added on 2026-11-27. The resolution conditions above are unchanged and remain the test; where the two could be read differently, the original wording decides. 'latest' is a snapshot and is updated with a dated history line.",
+  "items": [
+   {
+    "side": "resolved",
+    "measure": "1 signed law that raises or suspends the debt limit",
+    "latest": "0 of 1",
+    "state": "not_met"
+   },
+   {
+    "side": "worsened",
+    "measure": "A Treasury letter to Congress gives an X-date fewer than 60 days away, with no law signed",
+    "latest": "No X-date published",
+    "state": "not_reached"
+   },
+   {
+    "side": "worsened",
+    "measure": "1 of 3 agencies (S&P, Moody's, Fitch) downgrades the United States or puts it on negative watch, citing the debt limit",
+    "latest": "0 of 3",
+    "state": "not_reached"
+   },
+   {
+    "side": "added",
+    "measure": "Added gauge: room left under the limit (Daily Treasury Statement). At zero, Treasury has to start extraordinary measures",
+    "latest": "About $597 billion on 2026-11-19, of a $41.1 trillion limit",
+    "state": "info"
+   }
+  ]
+ },
+ "counter_view": {
+  "written_on": "2026-11-27",
+  "note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
+  "text": "There is no X-date yet. With about $597 billion of room and extraordinary measures still unused, any real deadline is probably many months away. This card may be open long before it matters to markets."
  }
 }

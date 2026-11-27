@@ -164,6 +164,38 @@ def _waves():
                                 for e in eps[:2]]}
     return out
 aids["waves"] = _waves()
+# past cases set beside a card (waves/episodes.json) and the market price check (market/README.md). Reading aids.
+def _past():
+    import datetime as _dt
+    wp, ep = ROOT / "waves" / "waves.json", ROOT / "waves" / "episodes.json"
+    if not (wp.exists() and ep.exists()):
+        return {}
+    W, E = json.loads(wp.read_text()), json.loads(ep.read_text())
+    names, out = {x["id"]: x for x in E["episodes"]}, {"cards": {}, "none": E.get("no_past_case", {})}
+    out["base_fall"] = W["oil_rule_summary"]["any_day_since_1990"]["market_largest_fall_pct"]["median"]
+    for cid, ids in E["cards"].items():
+        rows = []
+        for i in ids:
+            n, m = names[i], W["named"].get(i, {}).get("market")
+            if not m:
+                continue
+            r = {"en": n["en"], "ko": n["ko"], "start": n["start"], "src": n["source"], "fall": m["largest_fall_pct"],
+                 "day": m["largest_fall_day"], "rec": m["days_to_recover_half"], "end6": m["at"].get("126")}
+            if n.get("end"):
+                r["end"] = n["end"]
+                r["days"] = n.get("lasted_days") or (_dt.date.fromisoformat(n["end"]) - _dt.date.fromisoformat(n["start"])).days  # the source's own count where it gives one
+            rows.append(r)
+        if rows:
+            out["cards"][cid] = rows
+    return out
+aids["past"] = _past()
+_mk = ROOT / "market" / "check.json"
+if _mk.exists():
+    _m = json.loads(_mk.read_text())
+    aids["market"] = {"as_of": _m["meta"]["generated_at_utc"][:10], "cards": {
+        k: {"verdict": v["verdict"], "none": v.get("none"),
+            "readings": [{x: r[x] for x in ("en", "ko", "unit", "value", "as_of", "percentile_5y", "steps", "shows", "rule") if x in r}
+                         for r in v["readings"] if "shows" in r]} for k, v in _m["cards"].items()}}
 # patterns that passed the scoring rule fixed in advance: reading aid, see patterns/README.md
 def _patterns():
     d = ROOT / "patterns"
@@ -201,5 +233,5 @@ sc_path = ROOT / "sector_scores" / "scorecard.json"
 aids["scorecard"] = json.loads(sc_path.read_text()) if sc_path.exists() else None
 out = ROOT / "docs" / "data.json"
 out.parent.mkdir(exist_ok=True)
-out.write_text(json.dumps(data, indent=1, ensure_ascii=False) + "\n")
+out.write_text(json.dumps(data, indent=0, ensure_ascii=False) + "\n")  # no indent: keeps one value per line for diffs, smaller file
 print(f"wrote {out.relative_to(ROOT)}: {len(records)} records, {len(data['alerts'])} alerts, {len(data['events'])} events")

@@ -2,7 +2,7 @@
 
 `waves.json` measures what followed past shocks that resemble an open event card: how large the move was, in what
 order it spread, and how long it lasted. It is **not** part of the ledger, not a forecast and not a recommendation.
-The public page does not use it yet.
+The public page shows it on event cards: a chart for the oil and tariff cards, and a short list of similar past events for the others.
 
 ## What is measured
 
@@ -23,6 +23,10 @@ The public page does not use it yet.
   its highest close in 252 trading days; no new episode for 126 trading days. The rule was written before the
   results were seen and has not been tuned. Episodes that start on or after `current_from` belong to the open card
   and are kept out of the past range.
+
+- Since 2026-11-27 other cards also have named episodes (shutdowns, debt limit standoffs, rate rises and others). Where the
+  source gives the date the event was settled, `end` records it and the page shows how many days the event lasted.
+  For these only the market measures are shown; they describe the whole US market in those months, not the event alone.
 
 ## Limits
 

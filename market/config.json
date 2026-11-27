@@ -1,0 +1,36 @@
+{
+ "version": 1,
+ "written_on": "2026-11-27",
+ "note": "Which market prices each open card is set against, and the rule for saying a price 'shows' the risk. Written before the first run and not tuned afterwards. A new reading or rule is a new version.",
+ "rules": {
+  "high_in_5y": "The latest value is in the top fifth of its own last 1,260 observations (about five years).",
+  "above_zero": "The latest value is above zero.",
+  "ledger_step_2": "The matching measure in the latest AFMX record is at 2 of 3 steps or higher."
+ },
+ "window_observations": 1260,
+ "top_share": 0.2,
+ "cards": {
+  "2026-us-iran-war-oil": {"readings": [
+   {"id": "brent", "series": ["DCOILBRENTEU"], "rule": "high_in_5y", "unit": "usd", "en": "Brent crude, spot", "ko": "브렌트유 현물", "owner": "U.S. Energy Information Administration"},
+   {"id": "breakeven_5y", "series": ["T5YIE"], "rule": "high_in_5y", "unit": "pct", "en": "Inflation priced into 5-year Treasuries", "ko": "5년 국채에 반영된 기대 물가", "owner": "Federal Reserve Bank of St. Louis, from Treasury yields"}]},
+  "2026-fed-rate-hikes": {"readings": [
+   {"id": "y2_minus_target", "series": ["DGS2", "DFEDTARU"], "rule": "above_zero", "unit": "pt", "en": "2-year Treasury yield minus the top of the Fed's target range", "ko": "2년 국채 금리에서 연준 목표 범위 상단을 뺀 값", "owner": "Board of Governors of the Federal Reserve System"},
+   {"id": "breakeven_5y", "series": ["T5YIE"], "rule": "high_in_5y", "unit": "pct", "en": "Inflation priced into 5-year Treasuries", "ko": "5년 국채에 반영된 기대 물가", "owner": "Federal Reserve Bank of St. Louis, from Treasury yields"}]},
+  "2026-japan-boj-tightening-yen": {"readings": [
+   {"id": "usdjpy", "series": ["DEXJPUS"], "rule": "high_in_5y", "unit": "yen", "en": "Yen per dollar", "ko": "달러당 엔화", "owner": "Board of Governors of the Federal Reserve System (H.10)"}]},
+  "2026-china-domestic-demand-property": {"readings": [
+   {"id": "usdcny", "series": ["DEXCHUS"], "rule": "high_in_5y", "unit": "yuan", "en": "Yuan per dollar", "ko": "달러당 위안화", "owner": "Board of Governors of the Federal Reserve System (H.10)"}]},
+  "2027-us-debt-limit": {"readings": [
+   {"id": "bill_1m_minus_3m", "series": ["DGS1MO", "DGS3MO"], "rule": "high_in_5y", "unit": "pt", "en": "1-month Treasury yield minus 3-month", "ko": "1개월 국채 금리에서 3개월 금리를 뺀 값", "owner": "Board of Governors of the Federal Reserve System (H.15)"}]},
+  "2026-us-private-credit-defaults": {"readings": [
+   {"id": "credit_stress", "ledger": "credit_stress", "rule": "ledger_step_2", "en": "High-yield bond spread (AFMX record)", "ko": "하이일드 채권 스프레드 (AFMX 기록)"}]},
+  "2026-ai-buildout-financing": {"readings": [
+   {"id": "equity_volatility", "ledger": "equity_volatility", "rule": "ledger_step_2", "en": "Equity volatility, VIX (AFMX record)", "ko": "주식 변동성 VIX (AFMX 기록)"},
+   {"id": "equity_drawdown", "ledger": "equity_drawdown", "rule": "ledger_step_2", "en": "S&P 500 fall from its one-year high (AFMX record)", "ko": "S&P 500의 1년 고점 대비 하락 (AFMX 기록)"}]},
+  "2026-eurozone-inflation-ecb": {"none": {"en": "Not checked. Euro-area market rates are not in the sources we are allowed to republish.", "ko": "대조하지 않았습니다. 유로 지역 시장 금리는 저희가 다시 실을 수 있는 출처에 없습니다."}},
+  "2026-nvidia-sec-and-leadership": {"none": {"en": "Not checked. Prices of single stocks and their options are not in the sources we are allowed to republish.", "ko": "대조하지 않았습니다. 개별 종목의 주가와 옵션 가격은 저희가 다시 실을 수 있는 출처에 없습니다."}},
+  "2026-us-ai-chip-export-rules": {"none": {"en": "Not checked. No price in our sources isolates chip export rules.", "ko": "대조하지 않았습니다. 저희 출처에는 반도체 수출 규칙만 따로 보여 주는 가격이 없습니다."}},
+  "2026-us-appropriations-lapse": {"none": {"en": "Not checked. No price in our sources isolates a funding lapse.", "ko": "대조하지 않았습니다. 저희 출처에는 예산 공백만 따로 보여 주는 가격이 없습니다."}},
+  "2026-us-excess-capacity-tariffs": {"none": {"en": "Not checked. No price in our sources isolates these tariffs.", "ko": "대조하지 않았습니다. 저희 출처에는 이 관세만 따로 보여 주는 가격이 없습니다."}}
+ }
+}

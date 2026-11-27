@@ -1,0 +1,235 @@
+{
+ "meta": {
+  "generated_at_utc": "2026-11-27T09:28:18Z",
+  "config_version": 1,
+  "rules": {
+   "high_in_5y": "The latest value is in the top fifth of its own last 1,260 observations (about five years).",
+   "above_zero": "The latest value is above zero.",
+   "ledger_step_2": "The matching measure in the latest AFMX record is at 2 of 3 steps or higher."
+  },
+  "warning": "A reading aid. Whether a price is high says nothing about what it will do next. Not a forecast and not a recommendation.",
+  "sources": "FRED, Federal Reserve Bank of St. Louis. This product uses the FRED API but is not endorsed or certified by the Federal Reserve Bank of St. Louis."
+ },
+ "cards": {
+  "2026-us-iran-war-oil": {
+   "readings": [
+    {
+     "id": "brent",
+     "rule": "high_in_5y",
+     "en": "Brent crude, spot",
+     "ko": "브렌트유 현물",
+     "unit": "usd",
+     "owner": "U.S. Energy Information Administration",
+     "value": 91.8,
+     "as_of": "2026-11-24",
+     "percentile_5y": 73,
+     "observations": 1260,
+     "series": [
+      "DCOILBRENTEU"
+     ],
+     "shows": false
+    },
+    {
+     "id": "breakeven_5y",
+     "rule": "high_in_5y",
+     "en": "Inflation priced into 5-year Treasuries",
+     "ko": "5년 국채에 반영된 기대 물가",
+     "unit": "pct",
+     "owner": "Federal Reserve Bank of St. Louis, from Treasury yields",
+     "value": 2.13,
+     "as_of": "2026-11-25",
+     "percentile_5y": 7,
+     "observations": 1260,
+     "series": [
+      "T5YIE"
+     ],
+     "shows": false
+    }
+   ],
+   "verdict": "does_not_show"
+  },
+  "2026-fed-rate-hikes": {
+   "readings": [
+    {
+     "id": "y2_minus_target",
+     "rule": "above_zero",
+     "en": "2-year Treasury yield minus the top of the Fed's target range",
+     "ko": "2년 국채 금리에서 연준 목표 범위 상단을 뺀 값",
+     "unit": "pt",
+     "owner": "Board of Governors of the Federal Reserve System",
+     "value": 0.63,
+     "as_of": "2026-11-24",
+     "percentile_5y": 80,
+     "observations": 1260,
+     "series": [
+      "DGS2",
+      "DFEDTARU"
+     ],
+     "shows": true
+    },
+    {
+     "id": "breakeven_5y",
+     "rule": "high_in_5y",
+     "en": "Inflation priced into 5-year Treasuries",
+     "ko": "5년 국채에 반영된 기대 물가",
+     "unit": "pct",
+     "owner": "Federal Reserve Bank of St. Louis, from Treasury yields",
+     "value": 2.13,
+     "as_of": "2026-11-25",
+     "percentile_5y": 7,
+     "observations": 1260,
+     "series": [
+      "T5YIE"
+     ],
+     "shows": false
+    }
+   ],
+   "verdict": "shows"
+  },
+  "2026-japan-boj-tightening-yen": {
+   "readings": [
+    {
+     "id": "usdjpy",
+     "rule": "high_in_5y",
+     "en": "Yen per dollar",
+     "ko": "달러당 엔화",
+     "unit": "yen",
+     "owner": "Board of Governors of the Federal Reserve System (H.10)",
+     "value": 158.76,
+     "as_of": "2026-11-20",
+     "percentile_5y": 90,
+     "observations": 1260,
+     "series": [
+      "DEXJPUS"
+     ],
+     "shows": true
+    }
+   ],
+   "verdict": "shows"
+  },
+  "2026-china-domestic-demand-property": {
+   "readings": [
+    {
+     "id": "usdcny",
+     "rule": "high_in_5y",
+     "en": "Yuan per dollar",
+     "ko": "달러당 위안화",
+     "unit": "yuan",
+     "owner": "Board of Governors of the Federal Reserve System (H.10)",
+     "value": 6.68,
+     "as_of": "2026-11-20",
+     "percentile_5y": 12,
+     "observations": 1260,
+     "series": [
+      "DEXCHUS"
+     ],
+     "shows": false
+    }
+   ],
+   "verdict": "does_not_show"
+  },
+  "2027-us-debt-limit": {
+   "readings": [
+    {
+     "id": "bill_1m_minus_3m",
+     "rule": "high_in_5y",
+     "en": "1-month Treasury yield minus 3-month",
+     "ko": "1개월 국채 금리에서 3개월 금리를 뺀 값",
+     "unit": "pt",
+     "owner": "Board of Governors of the Federal Reserve System (H.15)",
+     "value": -0.15,
+     "as_of": "2026-11-24",
+     "percentile_5y": 30,
+     "observations": 1260,
+     "series": [
+      "DGS1MO",
+      "DGS3MO"
+     ],
+     "shows": false
+    }
+   ],
+   "verdict": "does_not_show"
+  },
+  "2026-us-private-credit-defaults": {
+   "readings": [
+    {
+     "id": "credit_stress",
+     "rule": "ledger_step_2",
+     "en": "High-yield bond spread (AFMX record)",
+     "ko": "하이일드 채권 스프레드 (AFMX 기록)",
+     "steps": 1,
+     "as_of": "2026-11-24",
+     "shows": false,
+     "record": "records/us/2026/2026-11-26T1503Z.json"
+    }
+   ],
+   "verdict": "does_not_show"
+  },
+  "2026-ai-buildout-financing": {
+   "readings": [
+    {
+     "id": "equity_volatility",
+     "rule": "ledger_step_2",
+     "en": "Equity volatility, VIX (AFMX record)",
+     "ko": "주식 변동성 VIX (AFMX 기록)",
+     "steps": 2,
+     "as_of": "2026-11-24",
+     "shows": true,
+     "record": "records/us/2026/2026-11-26T1503Z.json",
+     "value": 26.36
+    },
+    {
+     "id": "equity_drawdown",
+     "rule": "ledger_step_2",
+     "en": "S&P 500 fall from its one-year high (AFMX record)",
+     "ko": "S&P 500의 1년 고점 대비 하락 (AFMX 기록)",
+     "steps": 1,
+     "as_of": "2026-11-24",
+     "shows": false,
+     "record": "records/us/2026/2026-11-26T1503Z.json"
+    }
+   ],
+   "verdict": "shows"
+  },
+  "2026-eurozone-inflation-ecb": {
+   "verdict": "not_checked",
+   "none": {
+    "en": "Not checked. Euro-area market rates are not in the sources we are allowed to republish.",
+    "ko": "대조하지 않았습니다. 유로 지역 시장 금리는 저희가 다시 실을 수 있는 출처에 없습니다."
+   },
+   "readings": []
+  },
+  "2026-nvidia-sec-and-leadership": {
+   "verdict": "not_checked",
+   "none": {
+    "en": "Not checked. Prices of single stocks and their options are not in the sources we are allowed to republish.",
+    "ko": "대조하지 않았습니다. 개별 종목의 주가와 옵션 가격은 저희가 다시 실을 수 있는 출처에 없습니다."
+   },
+   "readings": []
+  },
+  "2026-us-ai-chip-export-rules": {
+   "verdict": "not_checked",
+   "none": {
+    "en": "Not checked. No price in our sources isolates chip export rules.",
+    "ko": "대조하지 않았습니다. 저희 출처에는 반도체 수출 규칙만 따로 보여 주는 가격이 없습니다."
+   },
+   "readings": []
+  },
+  "2026-us-appropriations-lapse": {
+   "verdict": "not_checked",
+   "none": {
+    "en": "Not checked. No price in our sources isolates a funding lapse.",
+    "ko": "대조하지 않았습니다. 저희 출처에는 예산 공백만 따로 보여 주는 가격이 없습니다."
+   },
+   "readings": []
+  },
+  "2026-us-excess-capacity-tariffs": {
+   "verdict": "not_checked",
+   "none": {
+    "en": "Not checked. No price in our sources isolates these tariffs.",
+    "ko": "대조하지 않았습니다. 저희 출처에는 이 관세만 따로 보여 주는 가격이 없습니다."
+   },
+   "readings": []
+  }
+ }
+}

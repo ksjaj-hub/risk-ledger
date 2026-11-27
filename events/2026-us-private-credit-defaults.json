@@ -66,6 +66,11 @@
    "date": "2026-11-26",
    "status": "open",
    "note": "Summary rewritten so that it states only what was confirmed at the listed sources and marks the rest as reported. The first version is kept under superseded_sources. Resolution conditions are unchanged."
+  },
+  {
+   "date": "2026-11-27",
+   "status": "open",
+   "note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
   }
  ],
  "note": "Risk state only. Not a forecast and not investment advice.",
@@ -94,5 +99,49 @@
   "notes": [
    "The Fitch rate is read from Fitch's own monthly release or a Reuters or Bloomberg report quoting it. 'Large private credit fund' means one with at least $1 billion in assets."
   ]
+ },
+ "numeric_criteria": {
+  "version": 1,
+  "written_on": "2026-11-27",
+  "note": "How each condition is counted, in numbers, with the latest reading known when this was written. Added on 2026-11-27. The resolution conditions above are unchanged and remain the test; where the two could be read differently, the original wording decides. 'latest' is a snapshot and is updated with a dated history line.",
+  "items": [
+   {
+    "side": "resolved",
+    "measure": "Fitch trailing-12-month private credit default rate below 4.0% in 3 monthly readings in a row",
+    "latest": "0 of 3. October is reported at 6.2% (not yet read at Fitch): 2.2 points above",
+    "state": "not_met"
+   },
+   {
+    "side": "resolved",
+    "measure": "High-yield bond spread below 5.0 percentage points on every day of those same months (this is what 'Moderate or lower' means under rule v3)",
+    "latest": "1 of 3 steps on 2026-11-24. The count only starts with the first month under 4.0%",
+    "state": "holding",
+    "series": "BAMLH0A0HYM2"
+   },
+   {
+    "side": "worsened",
+    "measure": "Fitch default rate above 8.0%",
+    "latest": "Reported 6.2%: 1.8 points below",
+    "state": "not_reached"
+   },
+   {
+    "side": "worsened",
+    "measure": "From 2026-11-26: 1 fund with at least $1 billion in assets newly suspends or limits redemptions, or 1 bank discloses a private-credit loss above $1 billion",
+    "latest": "0 new cases. Limits that were already in place are in the Federal Reserve's November report",
+    "state": "not_reached"
+   },
+   {
+    "side": "worsened",
+    "measure": "High-yield bond spread at 5.0 percentage points or more",
+    "latest": "1 of 3 steps on 2026-11-24, below the line. The value itself is not republished (source license)",
+    "state": "not_reached",
+    "series": "BAMLH0A0HYM2"
+   }
+  ]
+ },
+ "counter_view": {
+  "written_on": "2026-11-27",
+  "note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
+  "text": "Stress has not shown up in traded credit: the high-yield spread in this record is at 1 of 3 steps. The Federal Reserve reports that redemption requests have trended lower. The defaults may stay among small borrowers and never reach banks or public markets."
  }
 }

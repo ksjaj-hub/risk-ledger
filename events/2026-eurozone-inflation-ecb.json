@@ -64,6 +64,11 @@
    "date": "2026-11-26",
    "status": "open",
    "note": "Summary rewritten so that it states only what was confirmed at the listed sources and marks the rest as reported. The first version is kept under superseded_sources. Resolution conditions are unchanged."
+  },
+  {
+   "date": "2026-11-27",
+   "status": "open",
+   "note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
   }
  ],
  "note": "Risk state only. Not a forecast and not investment advice.",
@@ -92,5 +97,41 @@
   "notes": [
    "Inflation is read from the Eurostat final monthly release. 'Signals that it does not expect further rises' is judged only from the published monetary policy statement: it counts when the statement says rates are at their peak or drops any reference to further increases."
   ]
+ },
+ "numeric_criteria": {
+  "version": 1,
+  "written_on": "2026-11-27",
+  "note": "How each condition is counted, in numbers, with the latest reading known when this was written. Added on 2026-11-27. The resolution conditions above are unchanged and remain the test; where the two could be read differently, the original wording decides. 'latest' is a snapshot and is updated with a dated history line.",
+  "items": [
+   {
+    "side": "resolved",
+    "measure": "Headline inflation (Eurostat final release) lower than the month before, 3 months in a row",
+    "latest": "0 of 3. Last confirmed: September 3.8%, up from 3.2% in August",
+    "state": "not_met"
+   },
+   {
+    "side": "resolved",
+    "measure": "One ECB monetary policy statement that says rates are at their peak or drops any reference to further increases",
+    "latest": "0 of 1. On 2026-10-29 rates were held, deposit rate 2.50%",
+    "state": "not_met"
+   },
+   {
+    "side": "worsened",
+    "measure": "Headline inflation at 4.5% or more",
+    "latest": "Last confirmed 3.8% (September): 0.7 points below. October is reported at 4.0%, not yet confirmed",
+    "state": "not_reached"
+   },
+   {
+    "side": "worsened",
+    "measure": "A rise of more than 0.25 percentage points at one meeting",
+    "latest": "Last decision: no change",
+    "state": "not_reached"
+   }
+  ]
+ },
+ "counter_view": {
+  "written_on": "2026-11-27",
+  "note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
+  "text": "Energy prices, up 18.9% in September, are a large part of the rise. Brent has since fallen from an October average of $124 to under $100. If that holds, inflation could turn down without further ECB rises, and this card may be the oil card counted twice."
  }
 }

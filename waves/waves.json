@@ -18661,6 +18661,5180 @@
      ]
     }
    }
+  },
+  "2013-us-shutdown": {
+   "kind": "shutdown",
+   "start": "2013-09-30",
+   "end": "2013-10-17",
+   "en": "2013 US government shutdown",
+   "ko": "2013\ub144 \ubbf8\uad6d \uc815\ubd80 \uc167\ub2e4\uc6b4",
+   "source": "https://history.house.gov/Institution/Shutdown/Government-Shutdowns/",
+   "baseline": "2013-09-27",
+   "day_1": "2013-09-30",
+   "last_equity_day": "2014-09-29",
+   "equity_days": 252,
+   "market": {
+    "at": {
+     "1": -0.5,
+     "5": 0.2,
+     "21": 4.1,
+     "63": 9.4,
+     "126": 11.7
+    },
+    "largest_fall_pct": -2.2,
+    "largest_fall_day": 8,
+    "days_to_recover_half": 1
+   },
+   "sectors": {
+    "technology": {
+     "at": {
+      "1": -0.0,
+      "5": 0.2,
+      "21": -1.4,
+      "63": -0.2,
+      "126": 3.0
+     },
+     "extreme": 3.93,
+     "extreme_day": 122,
+     "arrival_day": 75,
+     "half_life_days": 30,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 130
+    },
+    "communication": {
+     "at": {
+      "1": 0.4,
+      "5": 0.6,
+      "21": 1.0,
+      "63": 2.3,
+      "126": 1.3
+     },
+     "extreme": 7.29,
+     "extreme_day": 109,
+     "arrival_day": 86,
+     "half_life_days": 9,
+     "back_at_baseline_day": 131,
+     "days_observed_after_extreme": 143
+    },
+    "consumer_discretionary": {
+     "at": {
+      "1": 0.0,
+      "5": -0.1,
+      "21": -0.8,
+      "63": -1.3,
+      "126": -3.1
+     },
+     "extreme": -5.3,
+     "extreme_day": 97,
+     "arrival_day": 74,
+     "half_life_days": 18,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 155
+    },
+    "consumer_staples": {
+     "at": {
+      "1": -0.5,
+      "5": -1.1,
+      "21": 1.0,
+      "63": -2.9,
+      "126": -3.7
+     },
+     "extreme": -7.06,
+     "extreme_day": 104,
+     "arrival_day": 70,
+     "half_life_days": 20,
+     "back_at_baseline_day": 145,
+     "days_observed_after_extreme": 148
+    },
+    "energy": {
+     "at": {
+      "1": -0.2,
+      "5": 1.6,
+      "21": 3.3,
+      "63": 1.9,
+      "126": -3.4
+     },
+     "extreme": -6.76,
+     "extreme_day": 112,
+     "arrival_day": 71,
+     "half_life_days": 12,
+     "back_at_baseline_day": 132,
+     "days_observed_after_extreme": 140
+    },
+    "financials": {
+     "at": {
+      "1": -0.0,
+      "5": 0.3,
+      "21": 0.0,
+      "63": 2.5,
+      "126": 1.2
+     },
+     "extreme": 3.61,
+     "extreme_day": 71,
+     "arrival_day": 39,
+     "half_life_days": 10,
+     "back_at_baseline_day": 92,
+     "days_observed_after_extreme": 181
+    },
+    "health_care": {
+     "at": {
+      "1": 0.9,
+      "5": 2.0,
+      "21": 0.8,
+      "63": -1.9,
+      "126": 3.1
+     },
+     "extreme": 4.41,
+     "extreme_day": 101,
+     "arrival_day": 7,
+     "half_life_days": 15,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 151
+    },
+    "industrials": {
+     "at": {
+      "1": 0.2,
+      "5": -0.7,
+      "21": 0.3,
+      "63": 1.8,
+      "126": 1.3
+     },
+     "extreme": 2.92,
+     "extreme_day": 79,
+     "arrival_day": 60,
+     "half_life_days": 10,
+     "back_at_baseline_day": 119,
+     "days_observed_after_extreme": 173
+    },
+    "materials": {
+     "at": {
+      "1": -0.1,
+      "5": -0.1,
+      "21": 1.6,
+      "63": 2.3,
+      "126": 1.7
+     },
+     "extreme": 3.16,
+     "extreme_day": 26,
+     "arrival_day": 17,
+     "half_life_days": 6,
+     "back_at_baseline_day": 41,
+     "days_observed_after_extreme": 226
+    },
+    "real_estate": {
+     "at": {
+      "1": 0.2,
+      "5": -0.8,
+      "21": -0.2,
+      "63": 3.7,
+      "126": 0.4
+     },
+     "extreme": 5.64,
+     "extreme_day": 90,
+     "arrival_day": 46,
+     "half_life_days": 3,
+     "back_at_baseline_day": 123,
+     "days_observed_after_extreme": 162
+    },
+    "utilities": {
+     "at": {
+      "1": 0.4,
+      "5": -0.8,
+      "21": 0.3,
+      "63": -6.6,
+      "126": 0.3
+     },
+     "extreme": -7.45,
+     "extreme_day": 67,
+     "arrival_day": 42,
+     "half_life_days": 14,
+     "back_at_baseline_day": 87,
+     "days_observed_after_extreme": 185
+    }
+   },
+   "macro": {
+    "brent": {
+     "base": 109.45,
+     "at": {
+      "1": -1.46,
+      "5": -0.03,
+      "21": -1.06,
+      "63": 2.38,
+      "126": -2.57
+     },
+     "extreme": -5.82,
+     "extreme_day": 29,
+     "arrival_day": 20,
+     "half_life_days": 3,
+     "back_at_baseline_day": 39,
+     "days_observed_after_extreme": 223
+    },
+    "yield_2y": {
+     "base": 0.34,
+     "at": {
+      "1": -0.01,
+      "5": -0.01,
+      "21": -0.03,
+      "63": 0.04,
+      "126": 0.13
+     },
+     "extreme": 0.13,
+     "extreme_day": 116,
+     "arrival_day": 60,
+     "half_life_days": 14,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 136
+    },
+    "yield_10y": {
+     "base": 2.64,
+     "at": {
+      "1": 0.0,
+      "5": 0.02,
+      "21": -0.11,
+      "63": 0.4,
+      "126": 0.18
+     },
+     "extreme": 0.4,
+     "extreme_day": 63,
+     "arrival_day": 46,
+     "half_life_days": 8,
+     "back_at_baseline_day": 85,
+     "days_observed_after_extreme": 189
+    },
+    "breakeven_5y": {
+     "base": 1.76,
+     "at": {
+      "1": -0.02,
+      "5": 0.03,
+      "21": 0.0,
+      "63": -0.07,
+      "126": -0.04
+     },
+     "extreme": -0.13,
+     "extreme_day": 48,
+     "arrival_day": 42,
+     "half_life_days": 8,
+     "back_at_baseline_day": 67,
+     "days_observed_after_extreme": 204
+    },
+    "credit_spread": {
+     "base": 2.73,
+     "at": {
+      "1": 0.02,
+      "5": 0.03,
+      "21": -0.04,
+      "63": -0.4,
+      "126": -0.48
+     },
+     "extreme": -0.48,
+     "extreme_day": 123,
+     "arrival_day": 56,
+     "half_life_days": null,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 129
+    },
+    "vix": {
+     "base": 15.46,
+     "at": {
+      "1": 1.14,
+      "5": 1.28,
+      "21": -2.15,
+      "63": -3.0,
+      "126": -1.58
+     },
+     "extreme": 5.98,
+     "extreme_day": 87,
+     "arrival_day": 6,
+     "half_life_days": 3,
+     "back_at_baseline_day": 91,
+     "days_observed_after_extreme": 165
+    }
+   },
+   "order": [
+    {
+     "id": "vix",
+     "type": "macro",
+     "arrival_day": 6,
+     "extreme": 5.98,
+     "extreme_day": 87
+    },
+    {
+     "id": "market",
+     "type": "market",
+     "arrival_day": 7,
+     "extreme": -2.18,
+     "extreme_day": 8
+    },
+    {
+     "id": "brent",
+     "type": "macro",
+     "arrival_day": 20,
+     "extreme": -5.82,
+     "extreme_day": 29
+    },
+    {
+     "id": "breakeven_5y",
+     "type": "macro",
+     "arrival_day": 42,
+     "extreme": -0.13,
+     "extreme_day": 48
+    },
+    {
+     "id": "utilities",
+     "type": "sector",
+     "arrival_day": 42,
+     "extreme": -7.45,
+     "extreme_day": 67
+    },
+    {
+     "id": "yield_10y",
+     "type": "macro",
+     "arrival_day": 46,
+     "extreme": 0.4,
+     "extreme_day": 63
+    },
+    {
+     "id": "real_estate",
+     "type": "sector",
+     "arrival_day": 46,
+     "extreme": 5.64,
+     "extreme_day": 90
+    },
+    {
+     "id": "credit_spread",
+     "type": "macro",
+     "arrival_day": 56,
+     "extreme": -0.48,
+     "extreme_day": 123
+    },
+    {
+     "id": "yield_2y",
+     "type": "macro",
+     "arrival_day": 60,
+     "extreme": 0.13,
+     "extreme_day": 116
+    },
+    {
+     "id": "consumer_staples",
+     "type": "sector",
+     "arrival_day": 70,
+     "extreme": -7.06,
+     "extreme_day": 104
+    },
+    {
+     "id": "energy",
+     "type": "sector",
+     "arrival_day": 71,
+     "extreme": -6.76,
+     "extreme_day": 112
+    },
+    {
+     "id": "consumer_discretionary",
+     "type": "sector",
+     "arrival_day": 74,
+     "extreme": -5.3,
+     "extreme_day": 97
+    },
+    {
+     "id": "communication",
+     "type": "sector",
+     "arrival_day": 86,
+     "extreme": 7.29,
+     "extreme_day": 109
+    }
+   ]
+  },
+  "2018-us-shutdown": {
+   "kind": "shutdown",
+   "start": "2018-12-21",
+   "end": "2019-01-25",
+   "en": "2018 US government shutdown",
+   "ko": "2018\ub144 \ubbf8\uad6d \uc815\ubd80 \uc167\ub2e4\uc6b4",
+   "source": "https://history.house.gov/Institution/Shutdown/Government-Shutdowns/",
+   "baseline": "2018-12-20",
+   "day_1": "2018-12-21",
+   "last_equity_day": "2019-12-20",
+   "equity_days": 252,
+   "market": {
+    "at": {
+     "1": -2.1,
+     "5": 1.0,
+     "21": 7.8,
+     "63": 14.6,
+     "126": 20.7
+    },
+    "largest_fall_pct": -4.6,
+    "largest_fall_day": 2,
+    "days_to_recover_half": 1
+   },
+   "sectors": {
+    "technology": {
+     "at": {
+      "1": -0.7,
+      "5": -0.0,
+      "21": -1.4,
+      "63": 6.6,
+      "126": 6.0
+     },
+     "extreme": 11.08,
+     "extreme_day": 84,
+     "arrival_day": 57,
+     "half_life_days": 13,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 168
+    },
+    "communication": {
+     "at": {
+      "1": -1.1,
+      "5": -1.6,
+      "21": 3.6,
+      "63": 3.6,
+      "126": 4.4
+     },
+     "extreme": 6.99,
+     "extreme_day": 16,
+     "arrival_day": 9,
+     "half_life_days": 4,
+     "back_at_baseline_day": 145,
+     "days_observed_after_extreme": 236
+    },
+    "consumer_discretionary": {
+     "at": {
+      "1": 1.0,
+      "5": 1.3,
+      "21": 3.0,
+      "63": 1.0,
+      "126": 5.0
+     },
+     "extreme": 6.7,
+     "extreme_day": 120,
+     "arrival_day": 11,
+     "half_life_days": null,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 132
+    },
+    "consumer_staples": {
+     "at": {
+      "1": 0.8,
+      "5": -2.0,
+      "21": -5.1,
+      "63": -4.1,
+      "126": -4.8
+     },
+     "extreme": -8.38,
+     "extreme_day": 43,
+     "arrival_day": 10,
+     "half_life_days": 20,
+     "back_at_baseline_day": 163,
+     "days_observed_after_extreme": 209
+    },
+    "energy": {
+     "at": {
+      "1": 0.7,
+      "5": 0.2,
+      "21": 2.4,
+      "63": -2.6,
+      "126": -15.0
+     },
+     "extreme": -17.24,
+     "extreme_day": 120,
+     "arrival_day": 104,
+     "half_life_days": null,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 132
+    },
+    "financials": {
+     "at": {
+      "1": 0.3,
+      "5": 0.5,
+      "21": 2.8,
+      "63": -4.9,
+      "126": -1.9
+     },
+     "extreme": -4.96,
+     "extreme_day": 64,
+     "arrival_day": 60,
+     "half_life_days": 23,
+     "back_at_baseline_day": 103,
+     "days_observed_after_extreme": 188
+    },
+    "health_care": {
+     "at": {
+      "1": 0.7,
+      "5": 0.9,
+      "21": 1.8,
+      "63": -0.8,
+      "126": -4.2
+     },
+     "extreme": -12.75,
+     "extreme_day": 82,
+     "arrival_day": 79,
+     "half_life_days": 15,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 170
+    },
+    "industrials": {
+     "at": {
+      "1": 0.1,
+      "5": -0.1,
+      "21": 1.3,
+      "63": 1.2,
+      "126": 1.6
+     },
+     "extreme": 7.17,
+     "extreme_day": 81,
+     "arrival_day": 25,
+     "half_life_days": 16,
+     "back_at_baseline_day": 136,
+     "days_observed_after_extreme": 171
+    },
+    "materials": {
+     "at": {
+      "1": 0.8,
+      "5": 0.1,
+      "21": 1.1,
+      "63": 0.5,
+      "126": -5.1
+     },
+     "extreme": -7.54,
+     "extreme_day": 109,
+     "arrival_day": 89,
+     "half_life_days": 19,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 143
+    },
+    "real_estate": {
+     "at": {
+      "1": 0.1,
+      "5": 0.1,
+      "21": 1.9,
+      "63": 1.9,
+      "126": -6.1
+     },
+     "extreme": 11.97,
+     "extreme_day": 42,
+     "arrival_day": 30,
+     "half_life_days": 12,
+     "back_at_baseline_day": 93,
+     "days_observed_after_extreme": 210
+    },
+    "utilities": {
+     "at": {
+      "1": 1.4,
+      "5": -3.6,
+      "21": -7.0,
+      "63": -3.8,
+      "126": -5.2
+     },
+     "extreme": -11.18,
+     "extreme_day": 83,
+     "arrival_day": 7,
+     "half_life_days": 14,
+     "back_at_baseline_day": 195,
+     "days_observed_after_extreme": 169
+    }
+   },
+   "macro": {
+    "brent": {
+     "base": 52.84,
+     "at": {
+      "1": -1.72,
+      "5": 0.74,
+      "21": 16.37,
+      "63": 27.76,
+      "126": 25.36
+     },
+     "extreme": 41.82,
+     "extreme_day": 84,
+     "arrival_day": 35,
+     "half_life_days": 26,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 168
+    },
+    "yield_2y": {
+     "base": 2.67,
+     "at": {
+      "1": -0.04,
+      "5": -0.15,
+      "21": -0.09,
+      "63": -0.41,
+      "126": -0.95
+     },
+     "extreme": -0.95,
+     "extreme_day": 124,
+     "arrival_day": 97,
+     "half_life_days": null,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 128
+    },
+    "yield_10y": {
+     "base": 2.79,
+     "at": {
+      "1": 0.0,
+      "5": -0.07,
+      "21": -0.03,
+      "63": -0.36,
+      "126": -0.77
+     },
+     "extreme": -0.78,
+     "extreme_day": 124,
+     "arrival_day": 65,
+     "half_life_days": null,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 128
+    },
+    "breakeven_5y": {
+     "base": 1.53,
+     "at": {
+      "1": 0.02,
+      "5": -0.01,
+      "21": 0.11,
+      "63": 0.24,
+      "126": 0.04
+     },
+     "extreme": 0.35,
+     "extreme_day": 58,
+     "arrival_day": 28,
+     "half_life_days": 46,
+     "back_at_baseline_day": 118,
+     "days_observed_after_extreme": 194
+    },
+    "credit_spread": {
+     "base": 2.28,
+     "at": {
+      "1": 0.03,
+      "5": 0.16,
+      "21": 0.09,
+      "63": 0.0,
+      "126": 0.05
+     },
+     "extreme": 0.2,
+     "extreme_day": 8,
+     "arrival_day": 5,
+     "half_life_days": 11,
+     "back_at_baseline_day": 30,
+     "days_observed_after_extreme": 244
+    },
+    "vix": {
+     "base": 28.38,
+     "at": {
+      "1": 1.73,
+      "5": -0.04,
+      "21": -8.86,
+      "63": -12.05,
+      "126": -13.12
+     },
+     "extreme": -16.37,
+     "extreme_day": 77,
+     "arrival_day": 12,
+     "half_life_days": 20,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 175
+    }
+   },
+   "order": [
+    {
+     "id": "market",
+     "type": "market",
+     "arrival_day": 2,
+     "extreme": -4.64,
+     "extreme_day": 2
+    },
+    {
+     "id": "credit_spread",
+     "type": "macro",
+     "arrival_day": 5,
+     "extreme": 0.2,
+     "extreme_day": 8
+    },
+    {
+     "id": "utilities",
+     "type": "sector",
+     "arrival_day": 7,
+     "extreme": -11.18,
+     "extreme_day": 83
+    },
+    {
+     "id": "communication",
+     "type": "sector",
+     "arrival_day": 9,
+     "extreme": 6.99,
+     "extreme_day": 16
+    },
+    {
+     "id": "consumer_staples",
+     "type": "sector",
+     "arrival_day": 10,
+     "extreme": -8.38,
+     "extreme_day": 43
+    },
+    {
+     "id": "consumer_discretionary",
+     "type": "sector",
+     "arrival_day": 11,
+     "extreme": 6.7,
+     "extreme_day": 120
+    },
+    {
+     "id": "vix",
+     "type": "macro",
+     "arrival_day": 12,
+     "extreme": -16.37,
+     "extreme_day": 77
+    },
+    {
+     "id": "industrials",
+     "type": "sector",
+     "arrival_day": 25,
+     "extreme": 7.17,
+     "extreme_day": 81
+    },
+    {
+     "id": "breakeven_5y",
+     "type": "macro",
+     "arrival_day": 28,
+     "extreme": 0.35,
+     "extreme_day": 58
+    },
+    {
+     "id": "real_estate",
+     "type": "sector",
+     "arrival_day": 30,
+     "extreme": 11.97,
+     "extreme_day": 42
+    },
+    {
+     "id": "brent",
+     "type": "macro",
+     "arrival_day": 35,
+     "extreme": 41.82,
+     "extreme_day": 84
+    },
+    {
+     "id": "technology",
+     "type": "sector",
+     "arrival_day": 57,
+     "extreme": 11.08,
+     "extreme_day": 84
+    },
+    {
+     "id": "yield_10y",
+     "type": "macro",
+     "arrival_day": 65,
+     "extreme": -0.78,
+     "extreme_day": 124
+    },
+    {
+     "id": "health_care",
+     "type": "sector",
+     "arrival_day": 79,
+     "extreme": -12.75,
+     "extreme_day": 82
+    },
+    {
+     "id": "materials",
+     "type": "sector",
+     "arrival_day": 89,
+     "extreme": -7.54,
+     "extreme_day": 109
+    },
+    {
+     "id": "yield_2y",
+     "type": "macro",
+     "arrival_day": 97,
+     "extreme": -0.95,
+     "extreme_day": 124
+    },
+    {
+     "id": "energy",
+     "type": "sector",
+     "arrival_day": 104,
+     "extreme": -17.24,
+     "extreme_day": 120
+    }
+   ]
+  },
+  "2011-us-debt-limit": {
+   "kind": "debt_limit",
+   "start": "2011-05-16",
+   "end": "2011-08-02",
+   "en": "2011 US debt limit standoff",
+   "ko": "2011\ub144 \ubbf8\uad6d \ubd80\ucc44 \ud55c\ub3c4 \ub300\uce58",
+   "source": "https://www.gao.gov/assets/600/592835.txt",
+   "baseline": "2011-05-13",
+   "day_1": "2011-05-16",
+   "last_equity_day": "2012-05-14",
+   "equity_days": 252,
+   "market": {
+    "at": {
+     "1": -0.8,
+     "5": -0.4,
+     "21": -3.9,
+     "63": -12.3,
+     "126": -7.6
+    },
+    "largest_fall_pct": -18.7,
+    "largest_fall_day": 98,
+    "days_to_recover_half": 9
+   },
+   "sectors": {
+    "technology": {
+     "at": {
+      "1": -0.8,
+      "5": -1.1,
+      "21": -2.1,
+      "63": 1.5,
+      "126": 2.2
+     },
+     "extreme": 4.69,
+     "extreme_day": 107,
+     "arrival_day": 88,
+     "half_life_days": 4,
+     "back_at_baseline_day": 154,
+     "days_observed_after_extreme": 145
+    },
+    "communication": {
+     "at": {
+      "1": -1.3,
+      "5": 0.2,
+      "21": -0.9,
+      "63": 3.5,
+      "126": -4.6
+     },
+     "extreme": -4.6,
+     "extreme_day": 126,
+     "arrival_day": 97,
+     "half_life_days": 74,
+     "back_at_baseline_day": 231,
+     "days_observed_after_extreme": 126
+    },
+    "consumer_discretionary": {
+     "at": {
+      "1": -0.1,
+      "5": -0.6,
+      "21": -1.2,
+      "63": 1.2,
+      "126": 3.8
+     },
+     "extreme": 5.29,
+     "extreme_day": 119,
+     "arrival_day": 88,
+     "half_life_days": 30,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 133
+    },
+    "consumer_staples": {
+     "at": {
+      "1": 0.5,
+      "5": 1.4,
+      "21": 2.9,
+      "63": 7.4,
+      "126": 6.2
+     },
+     "extreme": 11.78,
+     "extreme_day": 98,
+     "arrival_day": 58,
+     "half_life_days": 18,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 154
+    },
+    "energy": {
+     "at": {
+      "1": 0.3,
+      "5": 1.7,
+      "21": 2.4,
+      "63": -3.2,
+      "126": -9.9
+     },
+     "extreme": -16.46,
+     "extreme_day": 98,
+     "arrival_day": 89,
+     "half_life_days": 19,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 154
+    },
+    "financials": {
+     "at": {
+      "1": 0.4,
+      "5": -0.3,
+      "21": -0.6,
+      "63": -6.6,
+      "126": -9.9
+     },
+     "extreme": -11.54,
+     "extreme_day": 108,
+     "arrival_day": 61,
+     "half_life_days": 105,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 144
+    },
+    "health_care": {
+     "at": {
+      "1": 0.5,
+      "5": 0.1,
+      "21": 0.3,
+      "63": -5.7,
+      "126": -6.1
+     },
+     "extreme": -8.33,
+     "extreme_day": 116,
+     "arrival_day": 49,
+     "half_life_days": null,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 136
+    },
+    "industrials": {
+     "at": {
+      "1": 0.2,
+      "5": 0.0,
+      "21": -0.4,
+      "63": -4.6,
+      "126": -3.4
+     },
+     "extreme": -8.81,
+     "extreme_day": 98,
+     "arrival_day": 57,
+     "half_life_days": 18,
+     "back_at_baseline_day": 172,
+     "days_observed_after_extreme": 154
+    },
+    "materials": {
+     "at": {
+      "1": 0.2,
+      "5": -0.4,
+      "21": 0.4,
+      "63": -2.8,
+      "126": -8.8
+     },
+     "extreme": -12.33,
+     "extreme_day": 98,
+     "arrival_day": 88,
+     "half_life_days": null,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 154
+    },
+    "real_estate": {
+     "at": {
+      "1": 0.4,
+      "5": 0.6,
+      "21": -2.3,
+      "63": -7.8,
+      "126": -13.9
+     },
+     "extreme": -17.31,
+     "extreme_day": 111,
+     "arrival_day": 59,
+     "half_life_days": 64,
+     "back_at_baseline_day": 240,
+     "days_observed_after_extreme": 141
+    },
+    "utilities": {
+     "at": {
+      "1": 0.5,
+      "5": 1.1,
+      "21": 2.2,
+      "63": 6.9,
+      "126": 12.7
+     },
+     "extreme": 14.93,
+     "extreme_day": 98,
+     "arrival_day": 61,
+     "half_life_days": 74,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 154
+    }
+   },
+   "macro": {
+    "brent": {
+     "base": 113.08,
+     "at": {
+      "1": 0.57,
+      "5": -1.62,
+      "21": 6.43,
+      "63": -4.34,
+      "126": 1.19
+     },
+     "extreme": -9.94,
+     "extreme_day": 98,
+     "arrival_day": 29,
+     "half_life_days": 4,
+     "back_at_baseline_day": 106,
+     "days_observed_after_extreme": 154
+    },
+    "yield_2y": {
+     "base": 0.57,
+     "at": {
+      "1": -0.03,
+      "5": -0.02,
+      "21": -0.12,
+      "63": -0.37,
+      "126": -0.33
+     },
+     "extreme": -0.41,
+     "extreme_day": 88,
+     "arrival_day": 28,
+     "half_life_days": 120,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 164
+    },
+    "yield_10y": {
+     "base": 3.18,
+     "at": {
+      "1": -0.03,
+      "5": -0.03,
+      "21": -0.07,
+      "63": -0.94,
+      "126": -1.14
+     },
+     "extreme": -1.46,
+     "extreme_day": 91,
+     "arrival_day": 59,
+     "half_life_days": null,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 161
+    },
+    "breakeven_5y": {
+     "base": 2.15,
+     "at": {
+      "1": -0.03,
+      "5": -0.08,
+      "21": -0.11,
+      "63": -0.31,
+      "126": -0.31
+     },
+     "extreme": -0.67,
+     "extreme_day": 92,
+     "arrival_day": 28,
+     "half_life_days": 22,
+     "back_at_baseline_day": 208,
+     "days_observed_after_extreme": 160
+    },
+    "credit_spread": {
+     "base": 2.64,
+     "at": {
+      "1": -0.04,
+      "5": -0.01,
+      "21": 0.07,
+      "63": 0.5,
+      "126": 0.49
+     },
+     "extreme": 0.75,
+     "extreme_day": 94,
+     "arrival_day": 61,
+     "half_life_days": 22,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 158
+    },
+    "vix": {
+     "base": 17.07,
+     "at": {
+      "1": 1.17,
+      "5": 0.36,
+      "21": 1.19,
+      "63": 19.29,
+      "126": 15.74
+     },
+     "extreme": 30.93,
+     "extreme_day": 59,
+     "arrival_day": 59,
+     "half_life_days": 5,
+     "back_at_baseline_day": 196,
+     "days_observed_after_extreme": 193
+    }
+   },
+   "order": [
+    {
+     "id": "yield_2y",
+     "type": "macro",
+     "arrival_day": 28,
+     "extreme": -0.41,
+     "extreme_day": 88
+    },
+    {
+     "id": "breakeven_5y",
+     "type": "macro",
+     "arrival_day": 28,
+     "extreme": -0.67,
+     "extreme_day": 92
+    },
+    {
+     "id": "brent",
+     "type": "macro",
+     "arrival_day": 29,
+     "extreme": -9.94,
+     "extreme_day": 98
+    },
+    {
+     "id": "health_care",
+     "type": "sector",
+     "arrival_day": 49,
+     "extreme": -8.33,
+     "extreme_day": 116
+    },
+    {
+     "id": "industrials",
+     "type": "sector",
+     "arrival_day": 57,
+     "extreme": -8.81,
+     "extreme_day": 98
+    },
+    {
+     "id": "market",
+     "type": "market",
+     "arrival_day": 57,
+     "extreme": -18.73,
+     "extreme_day": 98
+    },
+    {
+     "id": "consumer_staples",
+     "type": "sector",
+     "arrival_day": 58,
+     "extreme": 11.78,
+     "extreme_day": 98
+    },
+    {
+     "id": "vix",
+     "type": "macro",
+     "arrival_day": 59,
+     "extreme": 30.93,
+     "extreme_day": 59
+    },
+    {
+     "id": "yield_10y",
+     "type": "macro",
+     "arrival_day": 59,
+     "extreme": -1.46,
+     "extreme_day": 91
+    },
+    {
+     "id": "real_estate",
+     "type": "sector",
+     "arrival_day": 59,
+     "extreme": -17.31,
+     "extreme_day": 111
+    },
+    {
+     "id": "credit_spread",
+     "type": "macro",
+     "arrival_day": 61,
+     "extreme": 0.75,
+     "extreme_day": 94
+    },
+    {
+     "id": "utilities",
+     "type": "sector",
+     "arrival_day": 61,
+     "extreme": 14.93,
+     "extreme_day": 98
+    },
+    {
+     "id": "financials",
+     "type": "sector",
+     "arrival_day": 61,
+     "extreme": -11.54,
+     "extreme_day": 108
+    },
+    {
+     "id": "materials",
+     "type": "sector",
+     "arrival_day": 88,
+     "extreme": -12.33,
+     "extreme_day": 98
+    },
+    {
+     "id": "consumer_discretionary",
+     "type": "sector",
+     "arrival_day": 88,
+     "extreme": 5.29,
+     "extreme_day": 119
+    },
+    {
+     "id": "energy",
+     "type": "sector",
+     "arrival_day": 89,
+     "extreme": -16.46,
+     "extreme_day": 98
+    }
+   ]
+  },
+  "2013-us-debt-limit": {
+   "kind": "debt_limit",
+   "start": "2013-05-17",
+   "end": "2013-10-17",
+   "en": "2013 US debt limit standoff",
+   "ko": "2013\ub144 \ubbf8\uad6d \ubd80\ucc44 \ud55c\ub3c4 \ub300\uce58",
+   "source": "https://www.gao.gov/assets/680/671817.pdf",
+   "baseline": "2013-05-16",
+   "day_1": "2013-05-17",
+   "last_equity_day": "2014-05-16",
+   "equity_days": 252,
+   "market": {
+    "at": {
+     "1": 1.0,
+     "5": 0.0,
+     "21": -0.3,
+     "63": 2.3,
+     "126": 10.5
+    },
+    "largest_fall_pct": -4.2,
+    "largest_fall_day": 26,
+    "days_to_recover_half": 3
+   },
+   "sectors": {
+    "technology": {
+     "at": {
+      "1": -0.1,
+      "5": -0.0,
+      "21": 0.8,
+      "63": 1.8,
+      "126": 0.9
+     },
+     "extreme": 2.79,
+     "extreme_day": 62,
+     "arrival_day": 10,
+     "half_life_days": 9,
+     "back_at_baseline_day": 84,
+     "days_observed_after_extreme": 190
+    },
+    "communication": {
+     "at": {
+      "1": -0.3,
+      "5": -1.0,
+      "21": -2.2,
+      "63": -2.0,
+      "126": 3.1
+     },
+     "extreme": 6.22,
+     "extreme_day": 109,
+     "arrival_day": 92,
+     "half_life_days": 13,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 143
+    },
+    "consumer_discretionary": {
+     "at": {
+      "1": 0.4,
+      "5": 0.2,
+      "21": 0.6,
+      "63": 0.9,
+      "126": 3.5
+     },
+     "extreme": 3.8,
+     "extreme_day": 120,
+     "arrival_day": 30,
+     "half_life_days": 31,
+     "back_at_baseline_day": 167,
+     "days_observed_after_extreme": 132
+    },
+    "consumer_staples": {
+     "at": {
+      "1": -0.9,
+      "5": -1.7,
+      "21": -1.9,
+      "63": -5.5,
+      "126": -8.2
+     },
+     "extreme": -9.57,
+     "extreme_day": 96,
+     "arrival_day": 52,
+     "half_life_days": null,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 156
+    },
+    "energy": {
+     "at": {
+      "1": 0.1,
+      "5": 3.1,
+      "21": -5.3,
+      "63": -6.2,
+      "126": -4.2
+     },
+     "extreme": -12.41,
+     "extreme_day": 34,
+     "arrival_day": 26,
+     "half_life_days": 34,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 218
+    },
+    "financials": {
+     "at": {
+      "1": 0.4,
+      "5": 0.1,
+      "21": 2.0,
+      "63": 3.4,
+      "126": 2.3
+     },
+     "extreme": 4.68,
+     "extreme_day": 46,
+     "arrival_day": 9,
+     "half_life_days": 25,
+     "back_at_baseline_day": 233,
+     "days_observed_after_extreme": 206
+    },
+    "health_care": {
+     "at": {
+      "1": -0.7,
+      "5": 0.0,
+      "21": 1.8,
+      "63": -0.4,
+      "126": 0.3
+     },
+     "extreme": 2.37,
+     "extreme_day": 20,
+     "arrival_day": 16,
+     "half_life_days": 3,
+     "back_at_baseline_day": 33,
+     "days_observed_after_extreme": 232
+    },
+    "industrials": {
+     "at": {
+      "1": 0.6,
+      "5": 0.2,
+      "21": -0.5,
+      "63": -2.6,
+      "126": 0.5
+     },
+     "extreme": -3.4,
+     "extreme_day": 50,
+     "arrival_day": 26,
+     "half_life_days": 18,
+     "back_at_baseline_day": 86,
+     "days_observed_after_extreme": 202
+    },
+    "materials": {
+     "at": {
+      "1": 0.3,
+      "5": -0.0,
+      "21": -0.8,
+      "63": 0.1,
+      "126": 0.5
+     },
+     "extreme": -3.77,
+     "extreme_day": 35,
+     "arrival_day": 26,
+     "half_life_days": 11,
+     "back_at_baseline_day": 60,
+     "days_observed_after_extreme": 217
+    },
+    "real_estate": {
+     "at": {
+      "1": -0.7,
+      "5": -1.1,
+      "21": -3.9,
+      "63": -11.5,
+      "126": -12.8
+     },
+     "extreme": -12.78,
+     "extreme_day": 126,
+     "arrival_day": 49,
+     "half_life_days": 57,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 126
+    },
+    "utilities": {
+     "at": {
+      "1": 0.1,
+      "5": -1.2,
+      "21": -3.3,
+      "63": -4.9,
+      "126": -10.8
+     },
+     "extreme": -10.8,
+     "extreme_day": 126,
+     "arrival_day": 64,
+     "half_life_days": 101,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 126
+    }
+   },
+   "macro": {
+    "brent": {
+     "base": 104.27,
+     "at": {
+      "1": -0.42,
+      "5": -3.65,
+      "21": 1.47,
+      "63": 7.01,
+      "126": 2.52
+     },
+     "extreme": 12.35,
+     "extreme_day": 78,
+     "arrival_day": 63,
+     "half_life_days": 7,
+     "back_at_baseline_day": 122,
+     "days_observed_after_extreme": 174
+    },
+    "yield_2y": {
+     "base": 0.23,
+     "at": {
+      "1": 0.03,
+      "5": 0.03,
+      "21": 0.04,
+      "63": 0.13,
+      "126": 0.08
+     },
+     "extreme": 0.29,
+     "extreme_day": 77,
+     "arrival_day": 25,
+     "half_life_days": 9,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 175
+    },
+    "yield_10y": {
+     "base": 1.87,
+     "at": {
+      "1": 0.08,
+      "5": 0.15,
+      "21": 0.32,
+      "63": 0.9,
+      "126": 0.84
+     },
+     "extreme": 1.11,
+     "extreme_day": 77,
+     "arrival_day": 25,
+     "half_life_days": null,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 175
+    },
+    "breakeven_5y": {
+     "base": 1.97,
+     "at": {
+      "1": 0.01,
+      "5": -0.04,
+      "21": -0.17,
+      "63": -0.14,
+      "126": -0.17
+     },
+     "extreme": -0.35,
+     "extreme_day": 26,
+     "arrival_day": 24,
+     "half_life_days": 5,
+     "back_at_baseline_day": 231,
+     "days_observed_after_extreme": 226
+    },
+    "credit_spread": {
+     "base": 2.81,
+     "at": {
+      "1": 0.0,
+      "5": -0.04,
+      "21": 0.12,
+      "63": -0.11,
+      "126": -0.11
+     },
+     "extreme": -0.26,
+     "extreme_day": 76,
+     "arrival_day": 47,
+     "half_life_days": 8,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 176
+    },
+    "vix": {
+     "base": 13.07,
+     "at": {
+      "1": -0.62,
+      "5": 1.0,
+      "21": 3.73,
+      "63": 1.66,
+      "126": -0.55
+     },
+     "extreme": 7.42,
+     "extreme_day": 24,
+     "arrival_day": 13,
+     "half_life_days": 7,
+     "back_at_baseline_day": 44,
+     "days_observed_after_extreme": 228
+    }
+   },
+   "order": [
+    {
+     "id": "vix",
+     "type": "macro",
+     "arrival_day": 13,
+     "extreme": 7.42,
+     "extreme_day": 24
+    },
+    {
+     "id": "market",
+     "type": "market",
+     "arrival_day": 13,
+     "extreme": -4.23,
+     "extreme_day": 26
+    },
+    {
+     "id": "breakeven_5y",
+     "type": "macro",
+     "arrival_day": 24,
+     "extreme": -0.35,
+     "extreme_day": 26
+    },
+    {
+     "id": "yield_2y",
+     "type": "macro",
+     "arrival_day": 25,
+     "extreme": 0.29,
+     "extreme_day": 77
+    },
+    {
+     "id": "yield_10y",
+     "type": "macro",
+     "arrival_day": 25,
+     "extreme": 1.11,
+     "extreme_day": 77
+    },
+    {
+     "id": "energy",
+     "type": "sector",
+     "arrival_day": 26,
+     "extreme": -12.41,
+     "extreme_day": 34
+    },
+    {
+     "id": "credit_spread",
+     "type": "macro",
+     "arrival_day": 47,
+     "extreme": -0.26,
+     "extreme_day": 76
+    },
+    {
+     "id": "real_estate",
+     "type": "sector",
+     "arrival_day": 49,
+     "extreme": -12.78,
+     "extreme_day": 126
+    },
+    {
+     "id": "consumer_staples",
+     "type": "sector",
+     "arrival_day": 52,
+     "extreme": -9.57,
+     "extreme_day": 96
+    },
+    {
+     "id": "brent",
+     "type": "macro",
+     "arrival_day": 63,
+     "extreme": 12.35,
+     "extreme_day": 78
+    },
+    {
+     "id": "utilities",
+     "type": "sector",
+     "arrival_day": 64,
+     "extreme": -10.8,
+     "extreme_day": 126
+    },
+    {
+     "id": "communication",
+     "type": "sector",
+     "arrival_day": 92,
+     "extreme": 6.22,
+     "extreme_day": 109
+    }
+   ]
+  },
+  "1994-fed-hikes": {
+   "kind": "rate_rises",
+   "start": "1994-02-04",
+   "end": "1995-02-01",
+   "en": "1994 Fed rate rises",
+   "ko": "1994\ub144 \uc5f0\uc900 \uae08\ub9ac \uc778\uc0c1",
+   "source": "https://www.federalreserve.gov/monetarypolicy/openmarket_archive.htm",
+   "baseline": "1994-02-03",
+   "day_1": "1994-02-04",
+   "last_equity_day": "1995-02-03",
+   "equity_days": 252,
+   "market": {
+    "at": {
+     "1": -2.3,
+     "5": -2.1,
+     "21": -2.2,
+     "63": -6.6,
+     "126": -5.2
+    },
+    "largest_fall_pct": -8.4,
+    "largest_fall_day": 97,
+    "days_to_recover_half": 34
+   },
+   "sectors": {
+    "technology": {
+     "at": {
+      "1": -1.2,
+      "5": 1.1,
+      "21": 5.8,
+      "63": 2.7,
+      "126": 2.6
+     },
+     "extreme": 8.35,
+     "extreme_day": 29,
+     "arrival_day": 16,
+     "half_life_days": 7,
+     "back_at_baseline_day": 51,
+     "days_observed_after_extreme": 223
+    },
+    "communication": {
+     "at": {
+      "1": -0.4,
+      "5": -0.2,
+      "21": -1.7,
+      "63": -4.5,
+      "126": -2.8
+     },
+     "extreme": -6.05,
+     "extreme_day": 47,
+     "arrival_day": 40,
+     "half_life_days": 24,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 205
+    },
+    "consumer_discretionary": {
+     "at": {
+      "1": 0.3,
+      "5": 1.3,
+      "21": 4.3,
+      "63": 0.1,
+      "126": -4.3
+     },
+     "extreme": 4.42,
+     "extreme_day": 22,
+     "arrival_day": 13,
+     "half_life_days": 16,
+     "back_at_baseline_day": 52,
+     "days_observed_after_extreme": 230
+    },
+    "consumer_staples": {
+     "at": {
+      "1": 0.2,
+      "5": 1.2,
+      "21": -1.1,
+      "63": 0.3,
+      "126": -1.8
+     },
+     "extreme": -3.98,
+     "extreme_day": 28,
+     "arrival_day": 23,
+     "half_life_days": 9,
+     "back_at_baseline_day": 52,
+     "days_observed_after_extreme": 224
+    },
+    "energy": {
+     "at": {
+      "1": 0.9,
+      "5": 1.4,
+      "21": -0.5,
+      "63": 0.1,
+      "126": -1.0
+     },
+     "extreme": -5.21,
+     "extreme_day": 71,
+     "arrival_day": 24,
+     "half_life_days": 2,
+     "back_at_baseline_day": 91,
+     "days_observed_after_extreme": 181
+    },
+    "financials": {
+     "at": {
+      "1": -0.2,
+      "5": -0.6,
+      "21": -2.3,
+      "63": 2.9,
+      "126": 4.6
+     },
+     "extreme": 6.3,
+     "extreme_day": 88,
+     "arrival_day": 50,
+     "half_life_days": 68,
+     "back_at_baseline_day": 180,
+     "days_observed_after_extreme": 164
+    },
+    "health_care": {
+     "at": {
+      "1": -0.3,
+      "5": 0.7,
+      "21": -1.0,
+      "63": -1.2,
+      "126": -2.1
+     },
+     "extreme": -4.01,
+     "extreme_day": 52,
+     "arrival_day": 37,
+     "half_life_days": 7,
+     "back_at_baseline_day": 69,
+     "days_observed_after_extreme": 200
+    },
+    "industrials": {
+     "at": {
+      "1": 0.0,
+      "5": 0.5,
+      "21": 1.4,
+      "63": -1.9,
+      "126": -2.4
+     },
+     "extreme": -3.22,
+     "extreme_day": 76,
+     "arrival_day": 52,
+     "half_life_days": 15,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 176
+    },
+    "materials": {
+     "at": {
+      "1": -0.5,
+      "5": 0.7,
+      "21": 0.1,
+      "63": -1.1,
+      "126": 3.5
+     },
+     "extreme": 3.73,
+     "extreme_day": 125,
+     "arrival_day": 88,
+     "half_life_days": 8,
+     "back_at_baseline_day": 195,
+     "days_observed_after_extreme": 127
+    },
+    "real_estate": {
+     "at": {
+      "1": 3.1,
+      "5": 4.0,
+      "21": 1.3,
+      "63": 1.5,
+      "126": -3.0
+     },
+     "extreme": 4.0,
+     "extreme_day": 5,
+     "arrival_day": 1,
+     "half_life_days": 7,
+     "back_at_baseline_day": 53,
+     "days_observed_after_extreme": 247
+    },
+    "utilities": {
+     "at": {
+      "1": 0.3,
+      "5": -0.9,
+      "21": -0.2,
+      "63": -3.0,
+      "126": -3.2
+     },
+     "extreme": -6.67,
+     "extreme_day": 94,
+     "arrival_day": 64,
+     "half_life_days": 28,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 158
+    }
+   },
+   "macro": {
+    "brent": {
+     "base": 15.03,
+     "at": {
+      "1": -2.86,
+      "5": -12.97,
+      "21": -3.19,
+      "63": 19.29,
+      "126": 13.64
+     },
+     "extreme": 26.61,
+     "extreme_day": 59,
+     "arrival_day": 47,
+     "half_life_days": 8,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 193
+    },
+    "yield_2y": {
+     "base": 4.28,
+     "at": {
+      "1": 0.14,
+      "5": 0.17,
+      "21": 0.59,
+      "63": 1.84,
+      "126": 1.9
+     },
+     "extreme": 2.01,
+     "extreme_day": 107,
+     "arrival_day": 40,
+     "half_life_days": null,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 145
+    },
+    "yield_10y": {
+     "base": 5.81,
+     "at": {
+      "1": 0.13,
+      "5": 0.1,
+      "21": 0.51,
+      "63": 1.54,
+      "126": 1.47
+     },
+     "extreme": 1.68,
+     "extreme_day": 64,
+     "arrival_day": 37,
+     "half_life_days": null,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 188
+    },
+    "credit_spread": {
+     "base": 1.82,
+     "at": {
+      "1": -0.08,
+      "5": 0.0,
+      "21": -0.12,
+      "63": -0.46,
+      "126": -0.35
+     },
+     "extreme": -0.52,
+     "extreme_day": 64,
+     "arrival_day": 38,
+     "half_life_days": 21,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 188
+    },
+    "vix": {
+     "base": 10.75,
+     "at": {
+      "1": 4.5,
+      "5": 3.49,
+      "21": 3.51,
+      "63": 4.33,
+      "126": 1.59
+     },
+     "extreme": 13.12,
+     "extreme_day": 40,
+     "arrival_day": 38,
+     "half_life_days": 3,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 212
+    }
+   },
+   "order": [
+    {
+     "id": "technology",
+     "type": "sector",
+     "arrival_day": 16,
+     "extreme": 8.35,
+     "extreme_day": 29
+    },
+    {
+     "id": "energy",
+     "type": "sector",
+     "arrival_day": 24,
+     "extreme": -5.21,
+     "extreme_day": 71
+    },
+    {
+     "id": "yield_10y",
+     "type": "macro",
+     "arrival_day": 37,
+     "extreme": 1.68,
+     "extreme_day": 64
+    },
+    {
+     "id": "market",
+     "type": "market",
+     "arrival_day": 37,
+     "extreme": -8.4,
+     "extreme_day": 97
+    },
+    {
+     "id": "vix",
+     "type": "macro",
+     "arrival_day": 38,
+     "extreme": 13.12,
+     "extreme_day": 40
+    },
+    {
+     "id": "credit_spread",
+     "type": "macro",
+     "arrival_day": 38,
+     "extreme": -0.52,
+     "extreme_day": 64
+    },
+    {
+     "id": "communication",
+     "type": "sector",
+     "arrival_day": 40,
+     "extreme": -6.05,
+     "extreme_day": 47
+    },
+    {
+     "id": "yield_2y",
+     "type": "macro",
+     "arrival_day": 40,
+     "extreme": 2.01,
+     "extreme_day": 107
+    },
+    {
+     "id": "brent",
+     "type": "macro",
+     "arrival_day": 47,
+     "extreme": 26.61,
+     "extreme_day": 59
+    },
+    {
+     "id": "financials",
+     "type": "sector",
+     "arrival_day": 50,
+     "extreme": 6.3,
+     "extreme_day": 88
+    },
+    {
+     "id": "utilities",
+     "type": "sector",
+     "arrival_day": 64,
+     "extreme": -6.67,
+     "extreme_day": 94
+    }
+   ]
+  },
+  "2022-fed-hikes": {
+   "kind": "rate_rises",
+   "start": "2022-03-17",
+   "end": "2023-07-27",
+   "en": "2022 Fed rate rises",
+   "ko": "2022\ub144 \uc5f0\uc900 \uae08\ub9ac \uc778\uc0c1",
+   "source": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+   "baseline": "2022-03-16",
+   "day_1": "2022-03-17",
+   "last_equity_day": "2023-03-17",
+   "equity_days": 252,
+   "market": {
+    "at": {
+     "1": 1.4,
+     "5": 2.6,
+     "21": 0.8,
+     "63": -13.6,
+     "126": -9.9
+    },
+    "largest_fall_pct": -16.6,
+    "largest_fall_day": 64,
+    "days_to_recover_half": 27
+   },
+   "sectors": {
+    "technology": {
+     "at": {
+      "1": -0.5,
+      "5": 0.5,
+      "21": -3.2,
+      "63": -2.9,
+      "126": -6.0
+     },
+     "extreme": -5.98,
+     "extreme_day": 126,
+     "arrival_day": 21,
+     "half_life_days": 105,
+     "back_at_baseline_day": 249,
+     "days_observed_after_extreme": 126
+    },
+    "communication": {
+     "at": {
+      "1": -0.1,
+      "5": -1.1,
+      "21": -1.1,
+      "63": -9.5,
+      "126": -8.2
+     },
+     "extreme": -13.1,
+     "extreme_day": 39,
+     "arrival_day": 24,
+     "half_life_days": 112,
+     "back_at_baseline_day": 213,
+     "days_observed_after_extreme": 213
+    },
+    "consumer_discretionary": {
+     "at": {
+      "1": 0.3,
+      "5": 1.7,
+      "21": 2.3,
+      "63": -2.5,
+      "126": 1.4
+     },
+     "extreme": -8.23,
+     "extreme_day": 48,
+     "arrival_day": 44,
+     "half_life_days": 4,
+     "back_at_baseline_day": 96,
+     "days_observed_after_extreme": 204
+    },
+    "consumer_staples": {
+     "at": {
+      "1": -0.8,
+      "5": -1.5,
+      "21": 7.2,
+      "63": 12.1,
+      "126": 10.2
+     },
+     "extreme": 17.29,
+     "extreme_day": 42,
+     "arrival_day": 25,
+     "half_life_days": 61,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 210
+    },
+    "energy": {
+     "at": {
+      "1": 3.3,
+      "5": 9.4,
+      "21": 23.1,
+      "63": 35.2,
+      "126": 26.9
+     },
+     "extreme": 42.72,
+     "extreme_day": 57,
+     "arrival_day": 21,
+     "half_life_days": 11,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 195
+    },
+    "financials": {
+     "at": {
+      "1": -0.3,
+      "5": -1.8,
+      "21": -2.4,
+      "63": -0.3,
+      "126": 2.9
+     },
+     "extreme": -4.78,
+     "extreme_day": 13,
+     "arrival_day": 8,
+     "half_life_days": 5,
+     "back_at_baseline_day": 46,
+     "days_observed_after_extreme": 239
+    },
+    "health_care": {
+     "at": {
+      "1": 0.4,
+      "5": -2.1,
+      "21": 1.8,
+      "63": -3.1,
+      "126": 0.6
+     },
+     "extreme": -5.11,
+     "extreme_day": 107,
+     "arrival_day": 13,
+     "half_life_days": 10,
+     "back_at_baseline_day": 126,
+     "days_observed_after_extreme": 145
+    },
+    "industrials": {
+     "at": {
+      "1": -0.0,
+      "5": -2.4,
+      "21": -5.9,
+      "63": -1.9,
+      "126": -1.6
+     },
+     "extreme": -8.26,
+     "extreme_day": 17,
+     "arrival_day": 8,
+     "half_life_days": 10,
+     "back_at_baseline_day": 102,
+     "days_observed_after_extreme": 235
+    },
+    "materials": {
+     "at": {
+      "1": 0.6,
+      "5": 1.3,
+      "21": 4.2,
+      "63": 1.8,
+      "126": -5.4
+     },
+     "extreme": -6.09,
+     "extreme_day": 83,
+     "arrival_day": 68,
+     "half_life_days": 7,
+     "back_at_baseline_day": 162,
+     "days_observed_after_extreme": 169
+    },
+    "real_estate": {
+     "at": {
+      "1": -0.5,
+      "5": -3.5,
+      "21": -6.6,
+      "63": -9.9,
+      "126": -8.4
+     },
+     "extreme": -11.47,
+     "extreme_day": 64,
+     "arrival_day": 15,
+     "half_life_days": 141,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 188
+    },
+    "utilities": {
+     "at": {
+      "1": -0.9,
+      "5": -1.7,
+      "21": 7.3,
+      "63": 9.3,
+      "126": 16.2
+     },
+     "extreme": 17.79,
+     "extreme_day": 125,
+     "arrival_day": 36,
+     "half_life_days": 16,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 127
+    }
+   },
+   "macro": {
+    "brent": {
+     "base": 104.61,
+     "at": {
+      "1": 8.5,
+      "5": 21.9,
+      "21": 5.95,
+      "63": 13.97,
+      "126": -14.65
+     },
+     "extreme": 23.51,
+     "extreme_day": 56,
+     "arrival_day": 3,
+     "half_life_days": 10,
+     "back_at_baseline_day": 96,
+     "days_observed_after_extreme": 196
+    },
+    "yield_2y": {
+     "base": 1.95,
+     "at": {
+      "1": -0.01,
+      "5": 0.18,
+      "21": 0.52,
+      "63": 1.25,
+      "126": 1.92
+     },
+     "extreme": 1.92,
+     "extreme_day": 126,
+     "arrival_day": 60,
+     "half_life_days": null,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 126
+    },
+    "yield_10y": {
+     "base": 2.19,
+     "at": {
+      "1": 0.01,
+      "5": 0.13,
+      "21": 0.64,
+      "63": 1.14,
+      "126": 1.26
+     },
+     "extreme": 1.3,
+     "extreme_day": 62,
+     "arrival_day": 22,
+     "half_life_days": 13,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 190
+    },
+    "breakeven_5y": {
+     "base": 3.34,
+     "at": {
+      "1": 0.17,
+      "5": 0.23,
+      "21": -0.01,
+      "63": -0.34,
+      "126": -0.77
+     },
+     "extreme": -0.88,
+     "extreme_day": 121,
+     "arrival_day": 40,
+     "half_life_days": null,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 131
+    },
+    "credit_spread": {
+     "base": 2.23,
+     "at": {
+      "1": -0.06,
+      "5": -0.2,
+      "21": -0.3,
+      "63": -0.13,
+      "126": -0.11
+     },
+     "extreme": -0.46,
+     "extreme_day": 14,
+     "arrival_day": 7,
+     "half_life_days": 13,
+     "back_at_baseline_day": 41,
+     "days_observed_after_extreme": 238
+    },
+    "vix": {
+     "base": 26.67,
+     "at": {
+      "1": -1.0,
+      "5": -3.1,
+      "21": -3.97,
+      "63": 6.02,
+      "126": -3.88
+     },
+     "extreme": -8.1,
+     "extreme_day": 13,
+     "arrival_day": 6,
+     "half_life_days": 5,
+     "back_at_baseline_day": 26,
+     "days_observed_after_extreme": 239
+    }
+   },
+   "order": [
+    {
+     "id": "brent",
+     "type": "macro",
+     "arrival_day": 3,
+     "extreme": 23.51,
+     "extreme_day": 56
+    },
+    {
+     "id": "vix",
+     "type": "macro",
+     "arrival_day": 6,
+     "extreme": -8.1,
+     "extreme_day": 13
+    },
+    {
+     "id": "credit_spread",
+     "type": "macro",
+     "arrival_day": 7,
+     "extreme": -0.46,
+     "extreme_day": 14
+    },
+    {
+     "id": "industrials",
+     "type": "sector",
+     "arrival_day": 8,
+     "extreme": -8.26,
+     "extreme_day": 17
+    },
+    {
+     "id": "health_care",
+     "type": "sector",
+     "arrival_day": 13,
+     "extreme": -5.11,
+     "extreme_day": 107
+    },
+    {
+     "id": "real_estate",
+     "type": "sector",
+     "arrival_day": 15,
+     "extreme": -11.47,
+     "extreme_day": 64
+    },
+    {
+     "id": "energy",
+     "type": "sector",
+     "arrival_day": 21,
+     "extreme": 42.72,
+     "extreme_day": 57
+    },
+    {
+     "id": "technology",
+     "type": "sector",
+     "arrival_day": 21,
+     "extreme": -5.98,
+     "extreme_day": 126
+    },
+    {
+     "id": "yield_10y",
+     "type": "macro",
+     "arrival_day": 22,
+     "extreme": 1.3,
+     "extreme_day": 62
+    },
+    {
+     "id": "communication",
+     "type": "sector",
+     "arrival_day": 24,
+     "extreme": -13.1,
+     "extreme_day": 39
+    },
+    {
+     "id": "consumer_staples",
+     "type": "sector",
+     "arrival_day": 25,
+     "extreme": 17.29,
+     "extreme_day": 42
+    },
+    {
+     "id": "utilities",
+     "type": "sector",
+     "arrival_day": 36,
+     "extreme": 17.79,
+     "extreme_day": 125
+    },
+    {
+     "id": "market",
+     "type": "market",
+     "arrival_day": 37,
+     "extreme": -16.65,
+     "extreme_day": 64
+    },
+    {
+     "id": "breakeven_5y",
+     "type": "macro",
+     "arrival_day": 40,
+     "extreme": -0.88,
+     "extreme_day": 121
+    },
+    {
+     "id": "consumer_discretionary",
+     "type": "sector",
+     "arrival_day": 44,
+     "extreme": -8.23,
+     "extreme_day": 48
+    },
+    {
+     "id": "yield_2y",
+     "type": "macro",
+     "arrival_day": 60,
+     "extreme": 1.92,
+     "extreme_day": 126
+    },
+    {
+     "id": "materials",
+     "type": "sector",
+     "arrival_day": 68,
+     "extreme": -6.09,
+     "extreme_day": 83
+    }
+   ]
+  },
+  "2011-ecb-hikes": {
+   "kind": "rate_rises",
+   "start": "2011-04-13",
+   "end": "2011-11-09",
+   "en": "2011 ECB rate rises",
+   "ko": "2011\ub144 ECB \uae08\ub9ac \uc778\uc0c1",
+   "source": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+   "baseline": "2011-04-12",
+   "day_1": "2011-04-13",
+   "last_equity_day": "2012-04-12",
+   "equity_days": 252,
+   "market": {
+    "at": {
+     "1": 0.1,
+     "5": -0.1,
+     "21": 2.9,
+     "63": 0.9,
+     "126": -9.3
+    },
+    "largest_fall_pct": -17.1,
+    "largest_fall_day": 120,
+    "days_to_recover_half": 7
+   },
+   "sectors": {
+    "technology": {
+     "at": {
+      "1": 0.6,
+      "5": -0.0,
+      "21": 2.3,
+      "63": -0.2,
+      "126": 5.4
+     },
+     "extreme": 5.62,
+     "extreme_day": 114,
+     "arrival_day": 81,
+     "half_life_days": 57,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 138
+    },
+    "communication": {
+     "at": {
+      "1": 1.1,
+      "5": 1.4,
+      "21": 2.3,
+      "63": 5.8,
+      "126": 1.4
+     },
+     "extreme": 6.87,
+     "extreme_day": 73,
+     "arrival_day": 31,
+     "half_life_days": 8,
+     "back_at_baseline_day": 119,
+     "days_observed_after_extreme": 179
+    },
+    "consumer_discretionary": {
+     "at": {
+      "1": 0.5,
+      "5": 1.2,
+      "21": 3.4,
+      "63": 5.4,
+      "126": 6.9
+     },
+     "extreme": 6.88,
+     "extreme_day": 126,
+     "arrival_day": 22,
+     "half_life_days": null,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 126
+    },
+    "consumer_staples": {
+     "at": {
+      "1": 0.1,
+      "5": 0.8,
+      "21": 2.2,
+      "63": 4.4,
+      "126": 12.0
+     },
+     "extreme": 14.89,
+     "extreme_day": 120,
+     "arrival_day": 79,
+     "half_life_days": 18,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 132
+    },
+    "energy": {
+     "at": {
+      "1": 0.6,
+      "5": 0.8,
+      "21": -5.6,
+      "63": -4.1,
+      "126": -18.6
+     },
+     "extreme": -20.87,
+     "extreme_day": 120,
+     "arrival_day": 81,
+     "half_life_days": null,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 132
+    },
+    "financials": {
+     "at": {
+      "1": -0.6,
+      "5": -2.3,
+      "21": -3.7,
+      "63": -7.3,
+      "126": -13.4
+     },
+     "extreme": -13.95,
+     "extreme_day": 124,
+     "arrival_day": 61,
+     "half_life_days": null,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 128
+    },
+    "health_care": {
+     "at": {
+      "1": -0.0,
+      "5": 1.0,
+      "21": 2.8,
+      "63": 2.0,
+      "126": -5.0
+     },
+     "extreme": -4.96,
+     "extreme_day": 126,
+     "arrival_day": 76,
+     "half_life_days": null,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 126
+    },
+    "industrials": {
+     "at": {
+      "1": -0.3,
+      "5": 0.1,
+      "21": -1.2,
+      "63": -1.4,
+      "126": -7.9
+     },
+     "extreme": -10.21,
+     "extreme_day": 120,
+     "arrival_day": 77,
+     "half_life_days": 23,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 132
+    },
+    "materials": {
+     "at": {
+      "1": -0.1,
+      "5": 0.8,
+      "21": -1.3,
+      "63": -0.4,
+      "126": -12.2
+     },
+     "extreme": -13.69,
+     "extreme_day": 120,
+     "arrival_day": 105,
+     "half_life_days": null,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 132
+    },
+    "real_estate": {
+     "at": {
+      "1": 0.1,
+      "5": -0.7,
+      "21": -0.0,
+      "63": -2.8,
+      "126": -17.0
+     },
+     "extreme": -17.0,
+     "extreme_day": 126,
+     "arrival_day": 80,
+     "half_life_days": 77,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 126
+    },
+    "utilities": {
+     "at": {
+      "1": 0.2,
+      "5": 1.2,
+      "21": 4.3,
+      "63": 6.2,
+      "126": 16.1
+     },
+     "extreme": 19.76,
+     "extreme_day": 120,
+     "arrival_day": 80,
+     "half_life_days": 101,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 132
+    }
+   },
+   "macro": {
+    "brent": {
+     "base": 121.33,
+     "at": {
+      "1": 1.13,
+      "5": 0.02,
+      "21": -6.27,
+      "63": -2.7,
+      "126": -5.77
+     },
+     "extreme": -16.06,
+     "extreme_day": 118,
+     "arrival_day": 22,
+     "half_life_days": 6,
+     "back_at_baseline_day": 213,
+     "days_observed_after_extreme": 134
+    },
+    "yield_2y": {
+     "base": 0.77,
+     "at": {
+      "1": -0.02,
+      "5": -0.09,
+      "21": -0.2,
+      "63": -0.4,
+      "126": -0.48
+     },
+     "extreme": -0.61,
+     "extreme_day": 110,
+     "arrival_day": 33,
+     "half_life_days": null,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 142
+    },
+    "yield_10y": {
+     "base": 3.52,
+     "at": {
+      "1": -0.03,
+      "5": -0.13,
+      "21": -0.3,
+      "63": -0.6,
+      "126": -1.28
+     },
+     "extreme": -1.8,
+     "extreme_day": 113,
+     "arrival_day": 79,
+     "half_life_days": null,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 139
+    },
+    "breakeven_5y": {
+     "base": 2.32,
+     "at": {
+      "1": -0.02,
+      "5": -0.08,
+      "21": -0.12,
+      "63": -0.33,
+      "126": -0.65
+     },
+     "extreme": -0.84,
+     "extreme_day": 114,
+     "arrival_day": 46,
+     "half_life_days": 23,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 138
+    },
+    "credit_spread": {
+     "base": 2.58,
+     "at": {
+      "1": 0.0,
+      "5": -0.02,
+      "21": 0.06,
+      "63": 0.18,
+      "126": 0.75
+     },
+     "extreme": 0.81,
+     "extreme_day": 116,
+     "arrival_day": 82,
+     "half_life_days": null,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 136
+    },
+    "vix": {
+     "base": 17.09,
+     "at": {
+      "1": -0.17,
+      "5": -1.26,
+      "21": -1.06,
+      "63": 2.82,
+      "126": 15.77
+     },
+     "extreme": 30.91,
+     "extreme_day": 81,
+     "arrival_day": 81,
+     "half_life_days": 5,
+     "back_at_baseline_day": 218,
+     "days_observed_after_extreme": 171
+    }
+   },
+   "order": [
+    {
+     "id": "brent",
+     "type": "macro",
+     "arrival_day": 22,
+     "extreme": -16.06,
+     "extreme_day": 118
+    },
+    {
+     "id": "consumer_discretionary",
+     "type": "sector",
+     "arrival_day": 22,
+     "extreme": 6.88,
+     "extreme_day": 126
+    },
+    {
+     "id": "communication",
+     "type": "sector",
+     "arrival_day": 31,
+     "extreme": 6.87,
+     "extreme_day": 73
+    },
+    {
+     "id": "yield_2y",
+     "type": "macro",
+     "arrival_day": 33,
+     "extreme": -0.61,
+     "extreme_day": 110
+    },
+    {
+     "id": "breakeven_5y",
+     "type": "macro",
+     "arrival_day": 46,
+     "extreme": -0.84,
+     "extreme_day": 114
+    },
+    {
+     "id": "financials",
+     "type": "sector",
+     "arrival_day": 61,
+     "extreme": -13.95,
+     "extreme_day": 124
+    },
+    {
+     "id": "industrials",
+     "type": "sector",
+     "arrival_day": 77,
+     "extreme": -10.21,
+     "extreme_day": 120
+    },
+    {
+     "id": "yield_10y",
+     "type": "macro",
+     "arrival_day": 79,
+     "extreme": -1.8,
+     "extreme_day": 113
+    },
+    {
+     "id": "consumer_staples",
+     "type": "sector",
+     "arrival_day": 79,
+     "extreme": 14.89,
+     "extreme_day": 120
+    },
+    {
+     "id": "market",
+     "type": "market",
+     "arrival_day": 79,
+     "extreme": -17.13,
+     "extreme_day": 120
+    },
+    {
+     "id": "utilities",
+     "type": "sector",
+     "arrival_day": 80,
+     "extreme": 19.76,
+     "extreme_day": 120
+    },
+    {
+     "id": "real_estate",
+     "type": "sector",
+     "arrival_day": 80,
+     "extreme": -17.0,
+     "extreme_day": 126
+    },
+    {
+     "id": "vix",
+     "type": "macro",
+     "arrival_day": 81,
+     "extreme": 30.91,
+     "extreme_day": 81
+    },
+    {
+     "id": "technology",
+     "type": "sector",
+     "arrival_day": 81,
+     "extreme": 5.62,
+     "extreme_day": 114
+    },
+    {
+     "id": "energy",
+     "type": "sector",
+     "arrival_day": 81,
+     "extreme": -20.87,
+     "extreme_day": 120
+    },
+    {
+     "id": "credit_spread",
+     "type": "macro",
+     "arrival_day": 82,
+     "extreme": 0.81,
+     "extreme_day": 116
+    },
+    {
+     "id": "materials",
+     "type": "sector",
+     "arrival_day": 105,
+     "extreme": -13.69,
+     "extreme_day": 120
+    }
+   ]
+  },
+  "2022-ecb-hikes": {
+   "kind": "rate_rises",
+   "start": "2022-07-27",
+   "end": "2023-09-20",
+   "en": "2022 ECB rate rises",
+   "ko": "2022\ub144 ECB \uae08\ub9ac \uc778\uc0c1",
+   "source": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+   "baseline": "2022-07-26",
+   "day_1": "2022-07-27",
+   "last_equity_day": "2023-07-27",
+   "equity_days": 252,
+   "market": {
+    "at": {
+     "1": 2.7,
+     "5": 4.7,
+     "21": 6.4,
+     "63": -2.3,
+     "126": 3.6
+    },
+    "largest_fall_pct": -7.6,
+    "largest_fall_day": 57,
+    "days_to_recover_half": 5
+   },
+   "sectors": {
+    "technology": {
+     "at": {
+      "1": 1.3,
+      "5": 1.4,
+      "21": 1.5,
+      "63": -1.9,
+      "126": -2.4
+     },
+     "extreme": -5.04,
+     "extreme_day": 113,
+     "arrival_day": 36,
+     "half_life_days": 11,
+     "back_at_baseline_day": 132,
+     "days_observed_after_extreme": 139
+    },
+    "communication": {
+     "at": {
+      "1": 0.4,
+      "5": -2.2,
+      "21": -3.1,
+      "63": 0.1,
+      "126": 13.3
+     },
+     "extreme": 13.33,
+     "extreme_day": 126,
+     "arrival_day": 113,
+     "half_life_days": 27,
+     "back_at_baseline_day": 244,
+     "days_observed_after_extreme": 126
+    },
+    "consumer_discretionary": {
+     "at": {
+      "1": 1.1,
+      "5": 3.4,
+      "21": 2.1,
+      "63": -5.2,
+      "126": -6.3
+     },
+     "extreme": -11.57,
+     "extreme_day": 107,
+     "arrival_day": 73,
+     "half_life_days": 20,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 145
+    },
+    "consumer_staples": {
+     "at": {
+      "1": -2.4,
+      "5": -3.2,
+      "21": -3.3,
+      "63": -2.2,
+      "126": -1.4
+     },
+     "extreme": -7.4,
+     "extreme_day": 13,
+     "arrival_day": 3,
+     "half_life_days": 6,
+     "back_at_baseline_day": 41,
+     "days_observed_after_extreme": 239
+    },
+    "energy": {
+     "at": {
+      "1": 0.1,
+      "5": -5.2,
+      "21": 10.7,
+      "63": 17.9,
+      "126": 18.3
+     },
+     "extreme": 29.95,
+     "extreme_day": 73,
+     "arrival_day": 50,
+     "half_life_days": 23,
+     "back_at_baseline_day": 204,
+     "days_observed_after_extreme": 179
+    },
+    "financials": {
+     "at": {
+      "1": -1.5,
+      "5": -2.7,
+      "21": -1.0,
+      "63": 3.2,
+      "126": 6.0
+     },
+     "extreme": 9.05,
+     "extreme_day": 75,
+     "arrival_day": 66,
+     "half_life_days": 24,
+     "back_at_baseline_day": 158,
+     "days_observed_after_extreme": 177
+    },
+    "health_care": {
+     "at": {
+      "1": -1.6,
+      "5": -3.9,
+      "21": -5.7,
+      "63": -0.8,
+      "126": -0.4
+     },
+     "extreme": -7.03,
+     "extreme_day": 17,
+     "arrival_day": 3,
+     "half_life_days": 13,
+     "back_at_baseline_day": 46,
+     "days_observed_after_extreme": 235
+    },
+    "industrials": {
+     "at": {
+      "1": -0.4,
+      "5": 0.9,
+      "21": 0.9,
+      "63": -1.0,
+      "126": 9.3
+     },
+     "extreme": 10.72,
+     "extreme_day": 118,
+     "arrival_day": 76,
+     "half_life_days": 58,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 134
+    },
+    "materials": {
+     "at": {
+      "1": -1.1,
+      "5": -1.7,
+      "21": -0.2,
+      "63": -1.6,
+      "126": 9.0
+     },
+     "extreme": 11.83,
+     "extreme_day": 119,
+     "arrival_day": 84,
+     "half_life_days": 39,
+     "back_at_baseline_day": 189,
+     "days_observed_after_extreme": 133
+    },
+    "real_estate": {
+     "at": {
+      "1": -0.3,
+      "5": -1.8,
+      "21": -4.2,
+      "63": -9.2,
+      "126": 2.9
+     },
+     "extreme": -9.51,
+     "extreme_day": 70,
+     "arrival_day": 19,
+     "half_life_days": 6,
+     "back_at_baseline_day": 115,
+     "days_observed_after_extreme": 182
+    },
+    "utilities": {
+     "at": {
+      "1": -2.5,
+      "5": -1.2,
+      "21": 0.8,
+      "63": -7.0,
+      "126": -5.1
+     },
+     "extreme": -7.01,
+     "extreme_day": 63,
+     "arrival_day": 51,
+     "half_life_days": 7,
+     "back_at_baseline_day": 100,
+     "days_observed_after_extreme": 189
+    }
+   },
+   "macro": {
+    "brent": {
+     "base": 107.32,
+     "at": {
+      "1": 2.16,
+      "5": -0.75,
+      "21": -6.94,
+      "63": -14.5,
+      "126": -20.72
+     },
+     "extreme": -29.83,
+     "extreme_day": 111,
+     "arrival_day": 30,
+     "half_life_days": null,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 141
+    },
+    "yield_2y": {
+     "base": 3.02,
+     "at": {
+      "1": -0.06,
+      "5": 0.04,
+      "21": 0.34,
+      "63": 1.4,
+      "126": 1.17
+     },
+     "extreme": 1.7,
+     "extreme_day": 72,
+     "arrival_day": 36,
+     "half_life_days": 88,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 180
+    },
+    "yield_10y": {
+     "base": 2.81,
+     "at": {
+      "1": -0.03,
+      "5": -0.06,
+      "21": 0.3,
+      "63": 1.29,
+      "126": 0.71
+     },
+     "extreme": 1.44,
+     "extreme_day": 62,
+     "arrival_day": 39,
+     "half_life_days": 26,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 190
+    },
+    "breakeven_5y": {
+     "base": 2.56,
+     "at": {
+      "1": 0.05,
+      "5": 0.13,
+      "21": 0.23,
+      "63": 0.06,
+      "126": -0.23
+     },
+     "extreme": -0.47,
+     "extreme_day": 119,
+     "arrival_day": 46,
+     "half_life_days": 7,
+     "back_at_baseline_day": 142,
+     "days_observed_after_extreme": 133
+    },
+    "credit_spread": {
+     "base": 2.29,
+     "at": {
+      "1": 0.01,
+      "5": 0.0,
+      "21": -0.06,
+      "63": 0.08,
+      "126": -0.41
+     },
+     "extreme": -0.41,
+     "extreme_day": 95,
+     "arrival_day": 41,
+     "half_life_days": 61,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 157
+    },
+    "vix": {
+     "base": 24.69,
+     "at": {
+      "1": -1.45,
+      "5": -0.76,
+      "21": -1.87,
+      "63": 5.0,
+      "126": -4.84
+     },
+     "extreme": 8.94,
+     "extreme_day": 55,
+     "arrival_day": 43,
+     "half_life_days": 10,
+     "back_at_baseline_day": 73,
+     "days_observed_after_extreme": 197
+    }
+   },
+   "order": [
+    {
+     "id": "consumer_staples",
+     "type": "sector",
+     "arrival_day": 3,
+     "extreme": -7.4,
+     "extreme_day": 13
+    },
+    {
+     "id": "health_care",
+     "type": "sector",
+     "arrival_day": 3,
+     "extreme": -7.03,
+     "extreme_day": 17
+    },
+    {
+     "id": "real_estate",
+     "type": "sector",
+     "arrival_day": 19,
+     "extreme": -9.51,
+     "extreme_day": 70
+    },
+    {
+     "id": "brent",
+     "type": "macro",
+     "arrival_day": 30,
+     "extreme": -29.83,
+     "extreme_day": 111
+    },
+    {
+     "id": "yield_2y",
+     "type": "macro",
+     "arrival_day": 36,
+     "extreme": 1.7,
+     "extreme_day": 72
+    },
+    {
+     "id": "technology",
+     "type": "sector",
+     "arrival_day": 36,
+     "extreme": -5.04,
+     "extreme_day": 113
+    },
+    {
+     "id": "yield_10y",
+     "type": "macro",
+     "arrival_day": 39,
+     "extreme": 1.44,
+     "extreme_day": 62
+    },
+    {
+     "id": "credit_spread",
+     "type": "macro",
+     "arrival_day": 41,
+     "extreme": -0.41,
+     "extreme_day": 95
+    },
+    {
+     "id": "market",
+     "type": "market",
+     "arrival_day": 42,
+     "extreme": -7.61,
+     "extreme_day": 57
+    },
+    {
+     "id": "vix",
+     "type": "macro",
+     "arrival_day": 43,
+     "extreme": 8.94,
+     "extreme_day": 55
+    },
+    {
+     "id": "breakeven_5y",
+     "type": "macro",
+     "arrival_day": 46,
+     "extreme": -0.47,
+     "extreme_day": 119
+    },
+    {
+     "id": "energy",
+     "type": "sector",
+     "arrival_day": 50,
+     "extreme": 29.95,
+     "extreme_day": 73
+    },
+    {
+     "id": "utilities",
+     "type": "sector",
+     "arrival_day": 51,
+     "extreme": -7.01,
+     "extreme_day": 63
+    },
+    {
+     "id": "financials",
+     "type": "sector",
+     "arrival_day": 66,
+     "extreme": 9.05,
+     "extreme_day": 75
+    },
+    {
+     "id": "consumer_discretionary",
+     "type": "sector",
+     "arrival_day": 73,
+     "extreme": -11.57,
+     "extreme_day": 107
+    },
+    {
+     "id": "industrials",
+     "type": "sector",
+     "arrival_day": 76,
+     "extreme": 10.72,
+     "extreme_day": 118
+    },
+    {
+     "id": "materials",
+     "type": "sector",
+     "arrival_day": 84,
+     "extreme": 11.83,
+     "extreme_day": 119
+    },
+    {
+     "id": "communication",
+     "type": "sector",
+     "arrival_day": 113,
+     "extreme": 13.33,
+     "extreme_day": 126
+    }
+   ]
+  },
+  "2024-boj-hike": {
+   "kind": "rate_rises",
+   "start": "2024-07-31",
+   "en": "2024 Bank of Japan rate rise",
+   "ko": "2024\ub144 \uc77c\ubcf8\uc740\ud589 \uae08\ub9ac \uc778\uc0c1",
+   "source": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2024/k240731a.pdf",
+   "baseline": "2024-07-30",
+   "day_1": "2024-07-31",
+   "last_equity_day": "2025-08-01",
+   "equity_days": 252,
+   "market": {
+    "at": {
+     "1": 1.5,
+     "5": -4.1,
+     "21": 2.5,
+     "63": 7.3,
+     "126": 13.5
+    },
+    "largest_fall_pct": -5.1,
+    "largest_fall_day": 4,
+    "days_to_recover_half": 4
+   },
+   "sectors": {
+    "technology": {
+     "at": {
+      "1": 2.1,
+      "5": -0.2,
+      "21": 1.0,
+      "63": 4.1,
+      "126": 2.8
+     },
+     "extreme": 8.23,
+     "extreme_day": 110,
+     "arrival_day": 58,
+     "half_life_days": 13,
+     "back_at_baseline_day": 147,
+     "days_observed_after_extreme": 142
+    },
+    "communication": {
+     "at": {
+      "1": -0.4,
+      "5": 2.1,
+      "21": 1.5,
+      "63": 6.4,
+      "126": 12.7
+     },
+     "extreme": 15.25,
+     "extreme_day": 91,
+     "arrival_day": 66,
+     "half_life_days": 22,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 161
+    },
+    "consumer_discretionary": {
+     "at": {
+      "1": -0.5,
+      "5": -1.3,
+      "21": -1.8,
+      "63": 1.4,
+      "126": 11.8
+     },
+     "extreme": 14.76,
+     "extreme_day": 98,
+     "arrival_day": 87,
+     "half_life_days": 36,
+     "back_at_baseline_day": 158,
+     "days_observed_after_extreme": 154
+    },
+    "consumer_staples": {
+     "at": {
+      "1": -1.8,
+      "5": 4.8,
+      "21": 1.7,
+      "63": -3.8,
+      "126": -14.5
+     },
+     "extreme": -17.73,
+     "extreme_day": 121,
+     "arrival_day": 70,
+     "half_life_days": 20,
+     "back_at_baseline_day": 152,
+     "days_observed_after_extreme": 131
+    },
+    "energy": {
+     "at": {
+      "1": 0.3,
+      "5": -3.3,
+      "21": -7.3,
+      "63": -10.6,
+      "126": -23.6
+     },
+     "extreme": -24.42,
+     "extreme_day": 124,
+     "arrival_day": 28,
+     "half_life_days": null,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 128
+    },
+    "financials": {
+     "at": {
+      "1": -1.8,
+      "5": -2.1,
+      "21": -1.6,
+      "63": -1.4,
+      "126": 2.9
+     },
+     "extreme": 5.08,
+     "extreme_day": 85,
+     "arrival_day": 70,
+     "half_life_days": 4,
+     "back_at_baseline_day": 94,
+     "days_observed_after_extreme": 167
+    },
+    "health_care": {
+     "at": {
+      "1": -1.9,
+      "5": 2.2,
+      "21": 2.1,
+      "63": -4.6,
+      "126": -8.3
+     },
+     "extreme": -15.24,
+     "extreme_day": 97,
+     "arrival_day": 73,
+     "half_life_days": 31,
+     "back_at_baseline_day": 170,
+     "days_observed_after_extreme": 155
+    },
+    "industrials": {
+     "at": {
+      "1": -0.1,
+      "5": -2.1,
+      "21": -2.7,
+      "63": -3.0,
+      "126": -7.9
+     },
+     "extreme": -10.26,
+     "extreme_day": 103,
+     "arrival_day": 91,
+     "half_life_days": 133,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 149
+    },
+    "materials": {
+     "at": {
+      "1": 0.2,
+      "5": 0.2,
+      "21": -3.3,
+      "63": -3.7,
+      "126": -15.9
+     },
+     "extreme": -17.3,
+     "extreme_day": 109,
+     "arrival_day": 89,
+     "half_life_days": null,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 143
+    },
+    "real_estate": {
+     "at": {
+      "1": -1.2,
+      "5": -2.4,
+      "21": -2.0,
+      "63": 2.3,
+      "126": 2.3
+     },
+     "extreme": -8.22,
+     "extreme_day": 114,
+     "arrival_day": 8,
+     "half_life_days": 3,
+     "back_at_baseline_day": 123,
+     "days_observed_after_extreme": 138
+    },
+    "utilities": {
+     "at": {
+      "1": -0.6,
+      "5": 4.7,
+      "21": 1.6,
+      "63": 5.9,
+      "126": 0.4
+     },
+     "extreme": 8.06,
+     "extreme_day": 46,
+     "arrival_day": 3,
+     "half_life_days": 4,
+     "back_at_baseline_day": 92,
+     "days_observed_after_extreme": 206
+    }
+   },
+   "macro": {
+    "brent": {
+     "base": 79.26,
+     "at": {
+      "1": 2.69,
+      "5": -3.33,
+      "21": 2.89,
+      "63": -9.32,
+      "126": -1.58
+     },
+     "extreme": -11.29,
+     "extreme_day": 30,
+     "arrival_day": 25,
+     "half_life_days": 6,
+     "back_at_baseline_day": 47,
+     "days_observed_after_extreme": 222
+    },
+    "yield_2y": {
+     "base": 4.35,
+     "at": {
+      "1": -0.06,
+      "5": -0.36,
+      "21": -0.52,
+      "63": -0.24,
+      "126": -0.13
+     },
+     "extreme": -0.86,
+     "extreme_day": 39,
+     "arrival_day": 3,
+     "half_life_days": 8,
+     "back_at_baseline_day": 80,
+     "days_observed_after_extreme": 213
+    },
+    "yield_10y": {
+     "base": 4.15,
+     "at": {
+      "1": -0.06,
+      "5": -0.25,
+      "21": -0.31,
+      "63": 0.13,
+      "126": 0.43
+     },
+     "extreme": 0.64,
+     "extreme_day": 113,
+     "arrival_day": 97,
+     "half_life_days": 16,
+     "back_at_baseline_day": 169,
+     "days_observed_after_extreme": 139
+    },
+    "breakeven_5y": {
+     "base": 2.12,
+     "at": {
+      "1": 0.01,
+      "5": -0.16,
+      "21": -0.13,
+      "63": 0.21,
+      "126": 0.42
+     },
+     "extreme": 0.43,
+     "extreme_day": 113,
+     "arrival_day": 64,
+     "half_life_days": 58,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 139
+    },
+    "credit_spread": {
+     "base": 1.65,
+     "at": {
+      "1": 0.03,
+      "5": 0.13,
+      "21": 0.06,
+      "63": -0.16,
+      "126": -0.2
+     },
+     "extreme": -0.29,
+     "extreme_day": 72,
+     "arrival_day": 63,
+     "half_life_days": 71,
+     "back_at_baseline_day": 152,
+     "days_observed_after_extreme": 180
+    },
+    "vix": {
+     "base": 17.69,
+     "at": {
+      "1": -1.33,
+      "5": 10.02,
+      "21": -0.58,
+      "63": 2.64,
+      "126": -2.84
+     },
+     "extreme": 20.88,
+     "extreme_day": 4,
+     "arrival_day": 4,
+     "half_life_days": 1,
+     "back_at_baseline_day": 11,
+     "days_observed_after_extreme": 248
+    }
+   },
+   "order": [
+    {
+     "id": "yield_2y",
+     "type": "macro",
+     "arrival_day": 3,
+     "extreme": -0.86,
+     "extreme_day": 39
+    },
+    {
+     "id": "utilities",
+     "type": "sector",
+     "arrival_day": 3,
+     "extreme": 8.06,
+     "extreme_day": 46
+    },
+    {
+     "id": "vix",
+     "type": "macro",
+     "arrival_day": 4,
+     "extreme": 20.88,
+     "extreme_day": 4
+    },
+    {
+     "id": "market",
+     "type": "market",
+     "arrival_day": 4,
+     "extreme": -5.1,
+     "extreme_day": 4
+    },
+    {
+     "id": "real_estate",
+     "type": "sector",
+     "arrival_day": 8,
+     "extreme": -8.22,
+     "extreme_day": 114
+    },
+    {
+     "id": "brent",
+     "type": "macro",
+     "arrival_day": 25,
+     "extreme": -11.29,
+     "extreme_day": 30
+    },
+    {
+     "id": "energy",
+     "type": "sector",
+     "arrival_day": 28,
+     "extreme": -24.42,
+     "extreme_day": 124
+    },
+    {
+     "id": "technology",
+     "type": "sector",
+     "arrival_day": 58,
+     "extreme": 8.23,
+     "extreme_day": 110
+    },
+    {
+     "id": "credit_spread",
+     "type": "macro",
+     "arrival_day": 63,
+     "extreme": -0.29,
+     "extreme_day": 72
+    },
+    {
+     "id": "breakeven_5y",
+     "type": "macro",
+     "arrival_day": 64,
+     "extreme": 0.43,
+     "extreme_day": 113
+    },
+    {
+     "id": "communication",
+     "type": "sector",
+     "arrival_day": 66,
+     "extreme": 15.25,
+     "extreme_day": 91
+    },
+    {
+     "id": "financials",
+     "type": "sector",
+     "arrival_day": 70,
+     "extreme": 5.08,
+     "extreme_day": 85
+    },
+    {
+     "id": "consumer_staples",
+     "type": "sector",
+     "arrival_day": 70,
+     "extreme": -17.73,
+     "extreme_day": 121
+    },
+    {
+     "id": "health_care",
+     "type": "sector",
+     "arrival_day": 73,
+     "extreme": -15.24,
+     "extreme_day": 97
+    },
+    {
+     "id": "consumer_discretionary",
+     "type": "sector",
+     "arrival_day": 87,
+     "extreme": 14.76,
+     "extreme_day": 98
+    },
+    {
+     "id": "materials",
+     "type": "sector",
+     "arrival_day": 89,
+     "extreme": -17.3,
+     "extreme_day": 109
+    },
+    {
+     "id": "industrials",
+     "type": "sector",
+     "arrival_day": 91,
+     "extreme": -10.26,
+     "extreme_day": 103
+    },
+    {
+     "id": "yield_10y",
+     "type": "macro",
+     "arrival_day": 97,
+     "extreme": 0.64,
+     "extreme_day": 113
+    }
+   ]
+  },
+  "2015-china-yuan": {
+   "kind": "china",
+   "start": "2015-08-11",
+   "en": "2015 China changes its yuan fixing",
+   "ko": "2015\ub144 \uc911\uad6d \uc704\uc548\ud654 \uae30\uc900\ud658\uc728 \ubc29\uc2dd \ubcc0\uacbd",
+   "source": "https://www.imf.org/External/AM/2015/imfc/statement/eng/chn.pdf",
+   "baseline": "2015-08-10",
+   "day_1": "2015-08-11",
+   "last_equity_day": "2016-08-09",
+   "equity_days": 252,
+   "market": {
+    "at": {
+     "1": -1.0,
+     "5": -0.0,
+     "21": -7.1,
+     "63": -0.4,
+     "126": -13.3
+    },
+    "largest_fall_pct": -13.3,
+    "largest_fall_day": 126,
+    "days_to_recover_half": 15
+   },
+   "sectors": {
+    "technology": {
+     "at": {
+      "1": -1.1,
+      "5": -0.6,
+      "21": -0.1,
+      "63": 3.3,
+      "126": -2.5
+     },
+     "extreme": 3.82,
+     "extreme_day": 53,
+     "arrival_day": 40,
+     "half_life_days": 15,
+     "back_at_baseline_day": 104,
+     "days_observed_after_extreme": 199
+    },
+    "communication": {
+     "at": {
+      "1": -0.5,
+      "5": -1.1,
+      "21": -2.7,
+      "63": -2.6,
+      "126": -3.7
+     },
+     "extreme": -5.8,
+     "extreme_day": 35,
+     "arrival_day": 8,
+     "half_life_days": 6,
+     "back_at_baseline_day": 140,
+     "days_observed_after_extreme": 217
+    },
+    "consumer_discretionary": {
+     "at": {
+      "1": -0.2,
+      "5": -0.2,
+      "21": 1.4,
+      "63": 0.1,
+      "126": 0.3
+     },
+     "extreme": 2.69,
+     "extreme_day": 121,
+     "arrival_day": 17,
+     "half_life_days": 3,
+     "back_at_baseline_day": 190,
+     "days_observed_after_extreme": 131
+    },
+    "consumer_staples": {
+     "at": {
+      "1": 0.5,
+      "5": -0.2,
+      "21": -0.0,
+      "63": 0.8,
+      "126": 15.0
+     },
+     "extreme": 14.98,
+     "extreme_day": 126,
+     "arrival_day": 103,
+     "half_life_days": 50,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 126
+    },
+    "energy": {
+     "at": {
+      "1": 0.2,
+      "5": -1.7,
+      "21": 6.3,
+      "63": -14.6,
+      "126": -18.4
+     },
+     "extreme": -31.59,
+     "extreme_day": 112,
+     "arrival_day": 55,
+     "half_life_days": 11,
+     "back_at_baseline_day": 179,
+     "days_observed_after_extreme": 140
+    },
+    "financials": {
+     "at": {
+      "1": -0.2,
+      "5": -0.7,
+      "21": -1.8,
+      "63": -1.8,
+      "126": -6.9
+     },
+     "extreme": -7.46,
+     "extreme_day": 122,
+     "arrival_day": 42,
+     "half_life_days": null,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 130
+    },
+    "health_care": {
+     "at": {
+      "1": 0.2,
+      "5": 0.5,
+      "21": 0.2,
+      "63": -7.1,
+      "126": -7.4
+     },
+     "extreme": -10.89,
+     "extreme_day": 52,
+     "arrival_day": 40,
+     "half_life_days": 53,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 200
+    },
+    "industrials": {
+     "at": {
+      "1": 0.1,
+      "5": 0.6,
+      "21": 2.0,
+      "63": -2.2,
+      "126": -2.9
+     },
+     "extreme": -5.57,
+     "extreme_day": 115,
+     "arrival_day": 89,
+     "half_life_days": 19,
+     "back_at_baseline_day": 152,
+     "days_observed_after_extreme": 137
+    },
+    "materials": {
+     "at": {
+      "1": -1.3,
+      "5": -1.1,
+      "21": 0.1,
+      "63": -3.5,
+      "126": -3.5
+     },
+     "extreme": -10.16,
+     "extreme_day": 115,
+     "arrival_day": 67,
+     "half_life_days": 8,
+     "back_at_baseline_day": 151,
+     "days_observed_after_extreme": 137
+    },
+    "real_estate": {
+     "at": {
+      "1": 1.4,
+      "5": 0.3,
+      "21": -2.1,
+      "63": -3.6,
+      "126": -17.4
+     },
+     "extreme": -17.45,
+     "extreme_day": 125,
+     "arrival_day": 106,
+     "half_life_days": null,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 127
+    },
+    "utilities": {
+     "at": {
+      "1": 1.5,
+      "5": 4.0,
+      "21": 0.8,
+      "63": -4.8,
+      "126": 10.9
+     },
+     "extreme": 10.93,
+     "extreme_day": 126,
+     "arrival_day": 8,
+     "half_life_days": 14,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 126
+    }
+   },
+   "macro": {
+    "brent": {
+     "base": 48.3,
+     "at": {
+      "1": -2.01,
+      "5": -1.1,
+      "21": -0.54,
+      "63": -4.58,
+      "126": -33.02
+     },
+     "extreme": -46.15,
+     "extreme_day": 114,
+     "arrival_day": 88,
+     "half_life_days": 31,
+     "back_at_baseline_day": 195,
+     "days_observed_after_extreme": 138
+    },
+    "yield_2y": {
+     "base": 0.73,
+     "at": {
+      "1": -0.05,
+      "5": -0.01,
+      "21": 0.02,
+      "63": 0.16,
+      "126": -0.09
+     },
+     "extreme": 0.36,
+     "extreme_day": 96,
+     "arrival_day": 70,
+     "half_life_days": 10,
+     "back_at_baseline_day": 120,
+     "days_observed_after_extreme": 156
+    },
+    "yield_10y": {
+     "base": 2.24,
+     "at": {
+      "1": -0.09,
+      "5": -0.08,
+      "21": -0.03,
+      "63": 0.12,
+      "126": -0.61
+     },
+     "extreme": -0.61,
+     "extreme_day": 126,
+     "arrival_day": 119,
+     "half_life_days": 20,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 126
+    },
+    "breakeven_5y": {
+     "base": 1.3,
+     "at": {
+      "1": -0.03,
+      "5": -0.08,
+      "21": -0.15,
+      "63": -0.02,
+      "126": -0.36
+     },
+     "extreme": -0.37,
+     "extreme_day": 124,
+     "arrival_day": 10,
+     "half_life_days": 9,
+     "back_at_baseline_day": 139,
+     "days_observed_after_extreme": 128
+    },
+    "credit_spread": {
+     "base": 2.93,
+     "at": {
+      "1": 0.01,
+      "5": 0.04,
+      "21": 0.17,
+      "63": 0.22,
+      "126": 0.7
+     },
+     "extreme": 0.7,
+     "extreme_day": 126,
+     "arrival_day": 36,
+     "half_life_days": 20,
+     "back_at_baseline_day": 173,
+     "days_observed_after_extreme": 126
+    },
+    "vix": {
+     "base": 12.23,
+     "at": {
+      "1": 1.48,
+      "5": 0.79,
+      "21": 14.0,
+      "63": 2.1,
+      "126": 14.31
+     },
+     "extreme": 28.51,
+     "extreme_day": 10,
+     "arrival_day": 9,
+     "half_life_days": 3,
+     "back_at_baseline_day": 237,
+     "days_observed_after_extreme": 242
+    }
+   },
+   "order": [
+    {
+     "id": "communication",
+     "type": "sector",
+     "arrival_day": 8,
+     "extreme": -5.8,
+     "extreme_day": 35
+    },
+    {
+     "id": "utilities",
+     "type": "sector",
+     "arrival_day": 8,
+     "extreme": 10.93,
+     "extreme_day": 126
+    },
+    {
+     "id": "vix",
+     "type": "macro",
+     "arrival_day": 9,
+     "extreme": 28.51,
+     "extreme_day": 10
+    },
+    {
+     "id": "breakeven_5y",
+     "type": "macro",
+     "arrival_day": 10,
+     "extreme": -0.37,
+     "extreme_day": 124
+    },
+    {
+     "id": "market",
+     "type": "market",
+     "arrival_day": 10,
+     "extreme": -13.31,
+     "extreme_day": 126
+    },
+    {
+     "id": "credit_spread",
+     "type": "macro",
+     "arrival_day": 36,
+     "extreme": 0.7,
+     "extreme_day": 126
+    },
+    {
+     "id": "health_care",
+     "type": "sector",
+     "arrival_day": 40,
+     "extreme": -10.89,
+     "extreme_day": 52
+    },
+    {
+     "id": "financials",
+     "type": "sector",
+     "arrival_day": 42,
+     "extreme": -7.46,
+     "extreme_day": 122
+    },
+    {
+     "id": "energy",
+     "type": "sector",
+     "arrival_day": 55,
+     "extreme": -31.59,
+     "extreme_day": 112
+    },
+    {
+     "id": "materials",
+     "type": "sector",
+     "arrival_day": 67,
+     "extreme": -10.16,
+     "extreme_day": 115
+    },
+    {
+     "id": "yield_2y",
+     "type": "macro",
+     "arrival_day": 70,
+     "extreme": 0.36,
+     "extreme_day": 96
+    },
+    {
+     "id": "brent",
+     "type": "macro",
+     "arrival_day": 88,
+     "extreme": -46.15,
+     "extreme_day": 114
+    },
+    {
+     "id": "industrials",
+     "type": "sector",
+     "arrival_day": 89,
+     "extreme": -5.57,
+     "extreme_day": 115
+    },
+    {
+     "id": "consumer_staples",
+     "type": "sector",
+     "arrival_day": 103,
+     "extreme": 14.98,
+     "extreme_day": 126
+    },
+    {
+     "id": "real_estate",
+     "type": "sector",
+     "arrival_day": 106,
+     "extreme": -17.45,
+     "extreme_day": 125
+    },
+    {
+     "id": "yield_10y",
+     "type": "macro",
+     "arrival_day": 119,
+     "extreme": -0.61,
+     "extreme_day": 126
+    }
+   ]
+  },
+  "2015-third-avenue": {
+   "kind": "credit",
+   "start": "2015-12-10",
+   "en": "2015 Third Avenue credit fund halts redemptions",
+   "ko": "2015\ub144 \uc11c\ub4dc\uc560\ube44\ub274 \uc2e0\uc6a9 \ud380\ub4dc \ud658\ub9e4 \uc911\ub2e8",
+   "source": "https://www.sec.gov/files/rules/ic/2015/ic-31943.pdf",
+   "baseline": "2015-12-09",
+   "day_1": "2015-12-10",
+   "last_equity_day": "2016-12-08",
+   "equity_days": 252,
+   "market": {
+    "at": {
+     "1": 0.3,
+     "5": 1.1,
+     "21": -6.4,
+     "63": -1.4,
+     "126": 3.2
+    },
+    "largest_fall_pct": -11.5,
+    "largest_fall_day": 43,
+    "days_to_recover_half": 6
+   },
+   "sectors": {
+    "technology": {
+     "at": {
+      "1": -0.0,
+      "5": -0.9,
+      "21": -2.1,
+      "63": -1.9,
+      "126": -3.3
+     },
+     "extreme": -6.9,
+     "extreme_day": 106,
+     "arrival_day": 32,
+     "half_life_days": 9,
+     "back_at_baseline_day": 167,
+     "days_observed_after_extreme": 146
+    },
+    "communication": {
+     "at": {
+      "1": -0.6,
+      "5": -0.6,
+      "21": 1.2,
+      "63": 2.2,
+      "126": -0.4
+     },
+     "extreme": 3.67,
+     "extreme_day": 74,
+     "arrival_day": 54,
+     "half_life_days": 15,
+     "back_at_baseline_day": 91,
+     "days_observed_after_extreme": 178
+    },
+    "consumer_discretionary": {
+     "at": {
+      "1": -0.1,
+      "5": 0.1,
+      "21": 1.0,
+      "63": 3.6,
+      "126": -1.2
+     },
+     "extreme": 4.65,
+     "extreme_day": 54,
+     "arrival_day": 36,
+     "half_life_days": 28,
+     "back_at_baseline_day": 110,
+     "days_observed_after_extreme": 198
+    },
+    "consumer_staples": {
+     "at": {
+      "1": -0.4,
+      "5": 1.1,
+      "21": 4.9,
+      "63": 6.6,
+      "126": 6.7
+     },
+     "extreme": 10.16,
+     "extreme_day": 41,
+     "arrival_day": 23,
+     "half_life_days": 45,
+     "back_at_baseline_day": 233,
+     "days_observed_after_extreme": 211
+    },
+    "energy": {
+     "at": {
+      "1": 4.0,
+      "5": -3.3,
+      "21": -2.0,
+      "63": 26.7,
+      "126": 34.3
+     },
+     "extreme": 45.68,
+     "extreme_day": 95,
+     "arrival_day": 59,
+     "half_life_days": null,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 157
+    },
+    "financials": {
+     "at": {
+      "1": 0.0,
+      "5": 0.1,
+      "21": -1.8,
+      "63": -4.9,
+      "126": -6.0
+     },
+     "extreme": -8.56,
+     "extreme_day": 82,
+     "arrival_day": 30,
+     "half_life_days": 10,
+     "back_at_baseline_day": 233,
+     "days_observed_after_extreme": 170
+    },
+    "health_care": {
+     "at": {
+      "1": 0.6,
+      "5": -0.1,
+      "21": 1.2,
+      "63": -1.3,
+      "126": 3.4
+     },
+     "extreme": -4.93,
+     "extreme_day": 67,
+     "arrival_day": 65,
+     "half_life_days": 7,
+     "back_at_baseline_day": 80,
+     "days_observed_after_extreme": 185
+    },
+    "industrials": {
+     "at": {
+      "1": 0.2,
+      "5": 0.0,
+      "21": -1.7,
+      "63": 1.8,
+      "126": 3.4
+     },
+     "extreme": 5.15,
+     "extreme_day": 95,
+     "arrival_day": 67,
+     "half_life_days": 8,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 157
+    },
+    "materials": {
+     "at": {
+      "1": 0.8,
+      "5": -2.1,
+      "21": -3.7,
+      "63": 5.0,
+      "126": 9.9
+     },
+     "extreme": 11.93,
+     "extreme_day": 97,
+     "arrival_day": 67,
+     "half_life_days": null,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 155
+    },
+    "real_estate": {
+     "at": {
+      "1": -0.2,
+      "5": -1.8,
+      "21": -4.5,
+      "63": -8.3,
+      "126": -16.0
+     },
+     "extreme": -17.31,
+     "extreme_day": 111,
+     "arrival_day": 36,
+     "half_life_days": null,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 141
+    },
+    "utilities": {
+     "at": {
+      "1": -1.6,
+      "5": -0.3,
+      "21": 7.0,
+      "63": 14.2,
+      "126": 18.3
+     },
+     "extreme": 18.26,
+     "extreme_day": 126,
+     "arrival_day": 26,
+     "half_life_days": 108,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 126
+    }
+   },
+   "macro": {
+    "brent": {
+     "base": 39.04,
+     "at": {
+      "1": -1.0,
+      "5": -5.33,
+      "21": -22.8,
+      "63": -1.05,
+      "126": 29.59
+     },
+     "extreme": -33.38,
+     "extreme_day": 28,
+     "arrival_day": 20,
+     "half_life_days": 6,
+     "back_at_baseline_day": 61,
+     "days_observed_after_extreme": 224
+    },
+    "yield_2y": {
+     "base": 0.93,
+     "at": {
+      "1": 0.02,
+      "5": 0.09,
+      "21": 0.01,
+      "63": 0.04,
+      "126": -0.2
+     },
+     "extreme": -0.29,
+     "extreme_day": 43,
+     "arrival_day": 34,
+     "half_life_days": 10,
+     "back_at_baseline_day": 62,
+     "days_observed_after_extreme": 209
+    },
+    "yield_10y": {
+     "base": 2.22,
+     "at": {
+      "1": 0.02,
+      "5": 0.08,
+      "21": -0.05,
+      "63": -0.24,
+      "126": -0.58
+     },
+     "extreme": -0.59,
+     "extreme_day": 43,
+     "arrival_day": 36,
+     "half_life_days": 19,
+     "back_at_baseline_day": 233,
+     "days_observed_after_extreme": 209
+    },
+    "breakeven_5y": {
+     "base": 1.21,
+     "at": {
+      "1": -0.01,
+      "5": -0.01,
+      "21": -0.02,
+      "63": 0.2,
+      "126": 0.28
+     },
+     "extreme": 0.4,
+     "extreme_day": 96,
+     "arrival_day": 66,
+     "half_life_days": 37,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 156
+    },
+    "credit_spread": {
+     "base": 3.18,
+     "at": {
+      "1": 0.01,
+      "5": 0.03,
+      "21": 0.12,
+      "63": 0.08,
+      "126": -0.32
+     },
+     "extreme": 0.45,
+     "extreme_day": 43,
+     "arrival_day": 28,
+     "half_life_days": 16,
+     "back_at_baseline_day": 68,
+     "days_observed_after_extreme": 209
+    },
+    "vix": {
+     "base": 19.61,
+     "at": {
+      "1": -0.27,
+      "5": -1.75,
+      "21": 4.69,
+      "63": -3.11,
+      "126": -2.58
+     },
+     "extreme": 8.53,
+     "extreme_day": 43,
+     "arrival_day": 2,
+     "half_life_days": 3,
+     "back_at_baseline_day": 49,
+     "days_observed_after_extreme": 209
+    }
+   },
+   "order": [
+    {
+     "id": "vix",
+     "type": "macro",
+     "arrival_day": 2,
+     "extreme": 8.53,
+     "extreme_day": 43
+    },
+    {
+     "id": "brent",
+     "type": "macro",
+     "arrival_day": 20,
+     "extreme": -33.38,
+     "extreme_day": 28
+    },
+    {
+     "id": "market",
+     "type": "market",
+     "arrival_day": 20,
+     "extreme": -11.53,
+     "extreme_day": 43
+    },
+    {
+     "id": "consumer_staples",
+     "type": "sector",
+     "arrival_day": 23,
+     "extreme": 10.16,
+     "extreme_day": 41
+    },
+    {
+     "id": "utilities",
+     "type": "sector",
+     "arrival_day": 26,
+     "extreme": 18.26,
+     "extreme_day": 126
+    },
+    {
+     "id": "credit_spread",
+     "type": "macro",
+     "arrival_day": 28,
+     "extreme": 0.45,
+     "extreme_day": 43
+    },
+    {
+     "id": "financials",
+     "type": "sector",
+     "arrival_day": 30,
+     "extreme": -8.56,
+     "extreme_day": 82
+    },
+    {
+     "id": "technology",
+     "type": "sector",
+     "arrival_day": 32,
+     "extreme": -6.9,
+     "extreme_day": 106
+    },
+    {
+     "id": "yield_2y",
+     "type": "macro",
+     "arrival_day": 34,
+     "extreme": -0.29,
+     "extreme_day": 43
+    },
+    {
+     "id": "yield_10y",
+     "type": "macro",
+     "arrival_day": 36,
+     "extreme": -0.59,
+     "extreme_day": 43
+    },
+    {
+     "id": "real_estate",
+     "type": "sector",
+     "arrival_day": 36,
+     "extreme": -17.31,
+     "extreme_day": 111
+    },
+    {
+     "id": "energy",
+     "type": "sector",
+     "arrival_day": 59,
+     "extreme": 45.68,
+     "extreme_day": 95
+    },
+    {
+     "id": "breakeven_5y",
+     "type": "macro",
+     "arrival_day": 66,
+     "extreme": 0.4,
+     "extreme_day": 96
+    },
+    {
+     "id": "industrials",
+     "type": "sector",
+     "arrival_day": 67,
+     "extreme": 5.15,
+     "extreme_day": 95
+    },
+    {
+     "id": "materials",
+     "type": "sector",
+     "arrival_day": 67,
+     "extreme": 11.93,
+     "extreme_day": 97
+    }
+   ]
+  },
+  "2002-worldcom": {
+   "kind": "buildout",
+   "start": "2002-06-26",
+   "en": "2002 WorldCom accounting fraud (telecom buildout)",
+   "ko": "2002\ub144 \uc6d4\ub4dc\ucef4 \ud68c\uacc4 \ubd80\uc815 (\ud1b5\uc2e0\ub9dd \ud22c\uc790 \ubd90)",
+   "source": "https://www.sec.gov/enforcement-litigation/litigation-releases/lr-17588",
+   "baseline": "2002-06-25",
+   "day_1": "2002-06-26",
+   "last_equity_day": "2003-06-25",
+   "equity_days": 252,
+   "market": {
+    "at": {
+     "1": -0.3,
+     "5": -3.0,
+     "21": -13.6,
+     "63": -15.3,
+     "126": -6.7
+    },
+    "largest_fall_pct": -19.9,
+    "largest_fall_day": 74,
+    "days_to_recover_half": 4
+   },
+   "sectors": {
+    "technology": {
+     "at": {
+      "1": 0.5,
+      "5": -1.9,
+      "21": 0.9,
+      "63": -5.3,
+      "126": 3.6
+     },
+     "extreme": 12.21,
+     "extreme_day": 111,
+     "arrival_day": 13,
+     "half_life_days": 5,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 141
+    },
+    "communication": {
+     "at": {
+      "1": -1.9,
+      "5": -5.1,
+      "21": -8.9,
+      "63": 0.2,
+      "126": 5.1
+     },
+     "extreme": 12.19,
+     "extreme_day": 111,
+     "arrival_day": 85,
+     "half_life_days": 2,
+     "back_at_baseline_day": 152,
+     "days_observed_after_extreme": 141
+    },
+    "consumer_discretionary": {
+     "at": {
+      "1": -0.2,
+      "5": 0.1,
+      "21": -1.4,
+      "63": -3.7,
+      "126": -10.4
+     },
+     "extreme": -11.08,
+     "extreme_day": 93,
+     "arrival_day": 31,
+     "half_life_days": null,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 159
+    },
+    "consumer_staples": {
+     "at": {
+      "1": 0.3,
+      "5": 2.8,
+      "21": 3.7,
+      "63": 5.9,
+      "126": 0.3
+     },
+     "extreme": 11.4,
+     "extreme_day": 74,
+     "arrival_day": 28,
+     "half_life_days": 4,
+     "back_at_baseline_day": 94,
+     "days_observed_after_extreme": 178
+    },
+    "energy": {
+     "at": {
+      "1": 0.0,
+      "5": 1.1,
+      "21": -13.4,
+      "63": -10.2,
+      "126": -1.9
+     },
+     "extreme": -16.1,
+     "extreme_day": 30,
+     "arrival_day": 17,
+     "half_life_days": 37,
+     "back_at_baseline_day": 167,
+     "days_observed_after_extreme": 222
+    },
+    "financials": {
+     "at": {
+      "1": -1.0,
+      "5": 0.6,
+      "21": -0.6,
+      "63": -0.2,
+      "126": 0.5
+     },
+     "extreme": -3.2,
+     "extreme_day": 72,
+     "arrival_day": 70,
+     "half_life_days": 4,
+     "back_at_baseline_day": 78,
+     "days_observed_after_extreme": 180
+    },
+    "health_care": {
+     "at": {
+      "1": 1.1,
+      "5": -2.2,
+      "21": 1.6,
+      "63": 6.3,
+      "126": -2.4
+     },
+     "extreme": 12.48,
+     "extreme_day": 74,
+     "arrival_day": 63,
+     "half_life_days": 8,
+     "back_at_baseline_day": 91,
+     "days_observed_after_extreme": 178
+    },
+    "industrials": {
+     "at": {
+      "1": 0.3,
+      "5": 0.8,
+      "21": 1.0,
+      "63": -4.9,
+      "126": -5.8
+     },
+     "extreme": -8.44,
+     "extreme_day": 87,
+     "arrival_day": 35,
+     "half_life_days": 68,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 165
+    },
+    "materials": {
+     "at": {
+      "1": -0.1,
+      "5": 1.4,
+      "21": -0.2,
+      "63": -5.6,
+      "126": -6.3
+     },
+     "extreme": -10.83,
+     "extreme_day": 93,
+     "arrival_day": 36,
+     "half_life_days": 38,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 159
+    },
+    "real_estate": {
+     "at": {
+      "1": 0.2,
+      "5": 1.6,
+      "21": 1.2,
+      "63": 5.2,
+      "126": -0.7
+     },
+     "extreme": 7.21,
+     "extreme_day": 72,
+     "arrival_day": 58,
+     "half_life_days": 3,
+     "back_at_baseline_day": 78,
+     "days_observed_after_extreme": 180
+    },
+    "utilities": {
+     "at": {
+      "1": -0.5,
+      "5": 0.4,
+      "21": -4.8,
+      "63": -6.8,
+      "126": -8.0
+     },
+     "extreme": -16.71,
+     "extreme_day": 81,
+     "arrival_day": 19,
+     "half_life_days": 42,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 171
+    }
+   },
+   "macro": {
+    "brent": {
+     "base": 25.32,
+     "at": {
+      "1": 0.28,
+      "5": 1.07,
+      "21": -0.59,
+      "63": 11.45,
+      "126": 28.2
+     },
+     "extreme": 28.24,
+     "extreme_day": 125,
+     "arrival_day": 41,
+     "half_life_days": 22,
+     "back_at_baseline_day": 160,
+     "days_observed_after_extreme": 127
+    },
+    "yield_2y": {
+     "base": 2.92,
+     "at": {
+      "1": -0.15,
+      "5": -0.14,
+      "21": -0.64,
+      "63": -0.99,
+      "126": -1.22
+     },
+     "extreme": -1.24,
+     "extreme_day": 89,
+     "arrival_day": 21,
+     "half_life_days": null,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 163
+    },
+    "yield_10y": {
+     "base": 4.88,
+     "at": {
+      "1": -0.13,
+      "5": -0.11,
+      "21": -0.45,
+      "63": -1.19,
+      "126": -0.95
+     },
+     "extreme": -1.27,
+     "extreme_day": 74,
+     "arrival_day": 33,
+     "half_life_days": 8,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 178
+    },
+    "credit_spread": {
+     "base": 3.03,
+     "at": {
+      "1": 0.09,
+      "5": 0.15,
+      "21": 0.32,
+      "63": 0.62,
+      "126": 0.42
+     },
+     "extreme": 0.87,
+     "extreme_day": 74,
+     "arrival_day": 50,
+     "half_life_days": 29,
+     "back_at_baseline_day": 184,
+     "days_observed_after_extreme": 178
+    },
+    "vix": {
+     "base": 27.84,
+     "at": {
+      "1": 0.58,
+      "5": 1.12,
+      "21": 11.43,
+      "63": 12.68,
+      "126": -1.64
+     },
+     "extreme": 17.24,
+     "extreme_day": 28,
+     "arrival_day": 14,
+     "half_life_days": 3,
+     "back_at_baseline_day": 41,
+     "days_observed_after_extreme": 224
+    }
+   },
+   "order": [
+    {
+     "id": "technology",
+     "type": "sector",
+     "arrival_day": 13,
+     "extreme": 12.21,
+     "extreme_day": 111
+    },
+    {
+     "id": "vix",
+     "type": "macro",
+     "arrival_day": 14,
+     "extreme": 17.24,
+     "extreme_day": 28
+    },
+    {
+     "id": "energy",
+     "type": "sector",
+     "arrival_day": 17,
+     "extreme": -16.1,
+     "extreme_day": 30
+    },
+    {
+     "id": "market",
+     "type": "market",
+     "arrival_day": 17,
+     "extreme": -19.91,
+     "extreme_day": 74
+    },
+    {
+     "id": "utilities",
+     "type": "sector",
+     "arrival_day": 19,
+     "extreme": -16.71,
+     "extreme_day": 81
+    },
+    {
+     "id": "yield_2y",
+     "type": "macro",
+     "arrival_day": 21,
+     "extreme": -1.24,
+     "extreme_day": 89
+    },
+    {
+     "id": "consumer_staples",
+     "type": "sector",
+     "arrival_day": 28,
+     "extreme": 11.4,
+     "extreme_day": 74
+    },
+    {
+     "id": "consumer_discretionary",
+     "type": "sector",
+     "arrival_day": 31,
+     "extreme": -11.08,
+     "extreme_day": 93
+    },
+    {
+     "id": "yield_10y",
+     "type": "macro",
+     "arrival_day": 33,
+     "extreme": -1.27,
+     "extreme_day": 74
+    },
+    {
+     "id": "industrials",
+     "type": "sector",
+     "arrival_day": 35,
+     "extreme": -8.44,
+     "extreme_day": 87
+    },
+    {
+     "id": "materials",
+     "type": "sector",
+     "arrival_day": 36,
+     "extreme": -10.83,
+     "extreme_day": 93
+    },
+    {
+     "id": "brent",
+     "type": "macro",
+     "arrival_day": 41,
+     "extreme": 28.24,
+     "extreme_day": 125
+    },
+    {
+     "id": "credit_spread",
+     "type": "macro",
+     "arrival_day": 50,
+     "extreme": 0.87,
+     "extreme_day": 74
+    },
+    {
+     "id": "real_estate",
+     "type": "sector",
+     "arrival_day": 58,
+     "extreme": 7.21,
+     "extreme_day": 72
+    },
+    {
+     "id": "health_care",
+     "type": "sector",
+     "arrival_day": 63,
+     "extreme": 12.48,
+     "extreme_day": 74
+    },
+    {
+     "id": "communication",
+     "type": "sector",
+     "arrival_day": 85,
+     "extreme": 12.19,
+     "extreme_day": 111
+    }
+   ]
+  },
+  "2022-us-chip-controls": {
+   "kind": "export_rule",
+   "start": "2022-10-07",
+   "en": "2022 US advanced chip export controls",
+   "ko": "2022\ub144 \ubbf8\uad6d \ucca8\ub2e8 \ubc18\ub3c4\uccb4 \uc218\ucd9c \ud1b5\uc81c",
+   "source": "https://www.govinfo.gov/content/pkg/FR-2022-10-13/html/2022-21658.htm",
+   "baseline": "2022-10-06",
+   "day_1": "2022-10-07",
+   "last_equity_day": "2023-10-09",
+   "equity_days": 252,
+   "market": {
+    "at": {
+     "1": -2.9,
+     "5": -2.3,
+     "21": 0.1,
+     "63": 3.1,
+     "126": 9.3
+    },
+    "largest_fall_pct": -4.6,
+    "largest_fall_day": 6,
+    "days_to_recover_half": 1
+   },
+   "sectors": {
+    "technology": {
+     "at": {
+      "1": -1.0,
+      "5": -2.3,
+      "21": -3.3,
+      "63": -3.5,
+      "126": 8.9
+     },
+     "extreme": 9.86,
+     "extreme_day": 115,
+     "arrival_day": 107,
+     "half_life_days": 22,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 137
+    },
+    "communication": {
+     "at": {
+      "1": 0.1,
+      "5": -1.6,
+      "21": 1.8,
+      "63": 10.0,
+      "126": 9.4
+     },
+     "extreme": 15.96,
+     "extreme_day": 75,
+     "arrival_day": 61,
+     "half_life_days": 30,
+     "back_at_baseline_day": 234,
+     "days_observed_after_extreme": 177
+    },
+    "consumer_discretionary": {
+     "at": {
+      "1": -0.4,
+      "5": -0.2,
+      "21": -2.5,
+      "63": -7.3,
+      "126": -4.0
+     },
+     "extreme": -10.07,
+     "extreme_day": 56,
+     "arrival_day": 24,
+     "half_life_days": 17,
+     "back_at_baseline_day": 81,
+     "days_observed_after_extreme": 196
+    },
+    "consumer_staples": {
+     "at": {
+      "1": 1.7,
+      "5": 4.7,
+      "21": 6.3,
+      "63": 11.0,
+      "126": 4.3
+     },
+     "extreme": 13.09,
+     "extreme_day": 56,
+     "arrival_day": 24,
+     "half_life_days": 11,
+     "back_at_baseline_day": 81,
+     "days_observed_after_extreme": 196
+    },
+    "energy": {
+     "at": {
+      "1": 1.4,
+      "5": 2.0,
+      "21": 7.7,
+      "63": -1.1,
+      "126": -9.3
+     },
+     "extreme": -12.73,
+     "extreme_day": 110,
+     "arrival_day": 81,
+     "half_life_days": 120,
+     "back_at_baseline_day": 235,
+     "days_observed_after_extreme": 142
+    },
+    "financials": {
+     "at": {
+      "1": 0.5,
+      "5": 1.6,
+      "21": 6.9,
+      "63": 5.2,
+      "126": -7.7
+     },
+     "extreme": -8.57,
+     "extreme_day": 123,
+     "arrival_day": 107,
+     "half_life_days": null,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 129
+    },
+    "health_care": {
+     "at": {
+      "1": -0.2,
+      "5": 0.9,
+      "21": 1.9,
+      "63": 5.4,
+      "126": -1.3
+     },
+     "extreme": 6.12,
+     "extreme_day": 62,
+     "arrival_day": 43,
+     "half_life_days": 4,
+     "back_at_baseline_day": 76,
+     "days_observed_after_extreme": 190
+    },
+    "industrials": {
+     "at": {
+      "1": 0.2,
+      "5": -0.2,
+      "21": 3.2,
+      "63": 9.1,
+      "126": 5.8
+     },
+     "extreme": 14.36,
+     "extreme_day": 100,
+     "arrival_day": 60,
+     "half_life_days": 23,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 152
+    },
+    "materials": {
+     "at": {
+      "1": 0.4,
+      "5": 2.5,
+      "21": 7.9,
+      "63": 14.6,
+      "126": 5.6
+     },
+     "extreme": 17.45,
+     "extreme_day": 68,
+     "arrival_day": 26,
+     "half_life_days": 41,
+     "back_at_baseline_day": 158,
+     "days_observed_after_extreme": 184
+    },
+    "real_estate": {
+     "at": {
+      "1": -0.5,
+      "5": -0.8,
+      "21": -1.7,
+      "63": 5.5,
+      "126": -5.9
+     },
+     "extreme": 14.54,
+     "extreme_day": 91,
+     "arrival_day": 65,
+     "half_life_days": 15,
+     "back_at_baseline_day": 114,
+     "days_observed_after_extreme": 161
+    },
+    "utilities": {
+     "at": {
+      "1": 0.9,
+      "5": -0.0,
+      "21": 3.5,
+      "63": 7.0,
+      "126": -0.5
+     },
+     "extreme": 9.23,
+     "extreme_day": 56,
+     "arrival_day": 42,
+     "half_life_days": 12,
+     "back_at_baseline_day": 76,
+     "days_observed_after_extreme": 196
+    }
+   },
+   "macro": {
+    "brent": {
+     "base": 95.65,
+     "at": {
+      "1": 3.38,
+      "5": -0.51,
+      "21": 4.06,
+      "63": -20.12,
+      "126": -10.2
+     },
+     "extreme": -25.74,
+     "extreme_day": 113,
+     "arrival_day": 38,
+     "half_life_days": 11,
+     "back_at_baseline_day": 238,
+     "days_observed_after_extreme": 139
+    },
+    "yield_2y": {
+     "base": 4.23,
+     "at": {
+      "1": 0.07,
+      "5": 0.25,
+      "21": 0.49,
+      "63": 0.01,
+      "126": -0.2
+     },
+     "extreme": 0.82,
+     "extreme_day": 102,
+     "arrival_day": 19,
+     "half_life_days": 2,
+     "back_at_baseline_day": 105,
+     "days_observed_after_extreme": 150
+    },
+    "yield_10y": {
+     "base": 3.83,
+     "at": {
+      "1": 0.06,
+      "5": 0.17,
+      "21": 0.39,
+      "63": -0.22,
+      "126": -0.4
+     },
+     "extreme": -0.53,
+     "extreme_day": 122,
+     "arrival_day": 37,
+     "half_life_days": 8,
+     "back_at_baseline_day": 158,
+     "days_observed_after_extreme": 130
+    },
+    "breakeven_5y": {
+     "base": 2.29,
+     "at": {
+      "1": 0.07,
+      "5": 0.15,
+      "21": 0.38,
+      "63": -0.09,
+      "126": 0.07
+     },
+     "extreme": 0.43,
+     "extreme_day": 11,
+     "arrival_day": 9,
+     "half_life_days": 13,
+     "back_at_baseline_day": 29,
+     "days_observed_after_extreme": 241
+    },
+    "credit_spread": {
+     "base": 2.16,
+     "at": {
+      "1": 0.01,
+      "5": 0.12,
+      "21": 0.06,
+      "63": -0.14,
+      "126": -0.08
+     },
+     "extreme": -0.39,
+     "extreme_day": 81,
+     "arrival_day": 41,
+     "half_life_days": 24,
+     "back_at_baseline_day": 107,
+     "days_observed_after_extreme": 171
+    },
+    "vix": {
+     "base": 30.52,
+     "at": {
+      "1": 0.84,
+      "5": 1.42,
+      "21": -5.97,
+      "63": -8.06,
+      "126": -11.52
+     },
+     "extreme": -12.65,
+     "extreme_day": 82,
+     "arrival_day": 25,
+     "half_life_days": 27,
+     "back_at_baseline_day": null,
+     "days_observed_after_extreme": 170
+    }
+   },
+   "order": [
+    {
+     "id": "market",
+     "type": "market",
+     "arrival_day": 1,
+     "extreme": -4.65,
+     "extreme_day": 6
+    },
+    {
+     "id": "breakeven_5y",
+     "type": "macro",
+     "arrival_day": 9,
+     "extreme": 0.43,
+     "extreme_day": 11
+    },
+    {
+     "id": "yield_2y",
+     "type": "macro",
+     "arrival_day": 19,
+     "extreme": 0.82,
+     "extreme_day": 102
+    },
+    {
+     "id": "consumer_discretionary",
+     "type": "sector",
+     "arrival_day": 24,
+     "extreme": -10.07,
+     "extreme_day": 56
+    },
+    {
+     "id": "consumer_staples",
+     "type": "sector",
+     "arrival_day": 24,
+     "extreme": 13.09,
+     "extreme_day": 56
+    },
+    {
+     "id": "vix",
+     "type": "macro",
+     "arrival_day": 25,
+     "extreme": -12.65,
+     "extreme_day": 82
+    },
+    {
+     "id": "materials",
+     "type": "sector",
+     "arrival_day": 26,
+     "extreme": 17.45,
+     "extreme_day": 68
+    },
+    {
+     "id": "yield_10y",
+     "type": "macro",
+     "arrival_day": 37,
+     "extreme": -0.53,
+     "extreme_day": 122
+    },
+    {
+     "id": "brent",
+     "type": "macro",
+     "arrival_day": 38,
+     "extreme": -25.74,
+     "extreme_day": 113
+    },
+    {
+     "id": "credit_spread",
+     "type": "macro",
+     "arrival_day": 41,
+     "extreme": -0.39,
+     "extreme_day": 81
+    },
+    {
+     "id": "utilities",
+     "type": "sector",
+     "arrival_day": 42,
+     "extreme": 9.23,
+     "extreme_day": 56
+    },
+    {
+     "id": "health_care",
+     "type": "sector",
+     "arrival_day": 43,
+     "extreme": 6.12,
+     "extreme_day": 62
+    },
+    {
+     "id": "industrials",
+     "type": "sector",
+     "arrival_day": 60,
+     "extreme": 14.36,
+     "extreme_day": 100
+    },
+    {
+     "id": "communication",
+     "type": "sector",
+     "arrival_day": 61,
+     "extreme": 15.96,
+     "extreme_day": 75
+    },
+    {
+     "id": "real_estate",
+     "type": "sector",
+     "arrival_day": 65,
+     "extreme": 14.54,
+     "extreme_day": 91
+    },
+    {
+     "id": "energy",
+     "type": "sector",
+     "arrival_day": 81,
+     "extreme": -12.73,
+     "extreme_day": 110
+    },
+    {
+     "id": "technology",
+     "type": "sector",
+     "arrival_day": 107,
+     "extreme": 9.86,
+     "extreme_day": 115
+    },
+    {
+     "id": "financials",
+     "type": "sector",
+     "arrival_day": 107,
+     "extreme": -8.57,
+     "extreme_day": 123
+    }
+   ]
   }
  },
  "oil_rule_episodes": [
@@ -26637,6 +31811,37 @@
   "2026-us-excess-capacity-tariffs": [
    "2018-us-china-tariffs",
    "2025-us-reciprocal-tariffs"
+  ],
+  "2026-us-appropriations-lapse": [
+   "2013-us-shutdown",
+   "2018-us-shutdown"
+  ],
+  "2027-us-debt-limit": [
+   "2011-us-debt-limit",
+   "2013-us-debt-limit"
+  ],
+  "2026-fed-rate-hikes": [
+   "1994-fed-hikes",
+   "2022-fed-hikes"
+  ],
+  "2026-eurozone-inflation-ecb": [
+   "2011-ecb-hikes",
+   "2022-ecb-hikes"
+  ],
+  "2026-japan-boj-tightening-yen": [
+   "2024-boj-hike"
+  ],
+  "2026-china-domestic-demand-property": [
+   "2015-china-yuan"
+  ],
+  "2026-us-private-credit-defaults": [
+   "2015-third-avenue"
+  ],
+  "2026-ai-buildout-financing": [
+   "2002-worldcom"
+  ],
+  "2026-us-ai-chip-export-rules": [
+   "2022-us-chip-controls"
   ]
  },
  "oil_rule_summary": {
@@ -27322,7 +32527,7 @@
   "oil_half_life_not_reached": 0
  },
  "meta": {
-  "generated_at_utc": "2026-11-26T10:52:47Z",
+  "generated_at_utc": "2026-11-27T09:30:59Z",
   "warning": "Hindsight measurements of a small number of past episodes. A range of what happened, not a forecast and not a recommendation.",
   "window_trading_days": 126,
   "half_life_search_trading_days": 252,

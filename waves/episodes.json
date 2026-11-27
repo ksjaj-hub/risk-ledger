@@ -1,5 +1,5 @@
 {
- "note": "Past episodes used to measure the wave after a shock. Start dates are quoted from the listed source. The baseline for every episode is the close of the last trading day before the start date. Windows and rules are fixed for all episodes.",
+ "note": "Past episodes used to measure the wave after a shock. Start dates are quoted from the listed source. The baseline for every episode is the close of the last trading day before the start date. Windows and rules are fixed for all episodes. Episodes with an 'end' also carry the date the event itself was settled, quoted from the same or a second source; the calendar days between the two are shown as how long the event lasted.",
  "window_trading_days": 126,
  "half_life_search_trading_days": 252,
  "horizons": [
@@ -27,6 +27,37 @@
   "2026-us-excess-capacity-tariffs": [
    "2018-us-china-tariffs",
    "2025-us-reciprocal-tariffs"
+  ],
+  "2026-us-appropriations-lapse": [
+   "2013-us-shutdown",
+   "2018-us-shutdown"
+  ],
+  "2027-us-debt-limit": [
+   "2011-us-debt-limit",
+   "2013-us-debt-limit"
+  ],
+  "2026-fed-rate-hikes": [
+   "1994-fed-hikes",
+   "2022-fed-hikes"
+  ],
+  "2026-eurozone-inflation-ecb": [
+   "2011-ecb-hikes",
+   "2022-ecb-hikes"
+  ],
+  "2026-japan-boj-tightening-yen": [
+   "2024-boj-hike"
+  ],
+  "2026-china-domestic-demand-property": [
+   "2015-china-yuan"
+  ],
+  "2026-us-private-credit-defaults": [
+   "2015-third-avenue"
+  ],
+  "2026-ai-buildout-financing": [
+   "2002-worldcom"
+  ],
+  "2026-us-ai-chip-export-rules": [
+   "2022-us-chip-controls"
   ]
  },
  "episodes": [
@@ -65,6 +96,139 @@
    "ko": "2025년 미국의 상호 관세",
    "source": "https://www.govinfo.gov/content/pkg/FR-2025-04-07/html/2025-06063.htm",
    "quote": "Executive Order 14257 of April 2, 2025"
+  },
+  {
+   "id": "2013-us-shutdown",
+   "kind": "shutdown",
+   "start": "2013-09-30",
+   "en": "2013 US government shutdown",
+   "ko": "2013년 미국 정부 셧다운",
+   "source": "https://history.house.gov/Institution/Shutdown/Government-Shutdowns/",
+   "quote": "Funding gap table: September 30, 2013, 16 days, October 17, 2013",
+   "end": "2013-10-17",
+   "lasted_days": 16
+  },
+  {
+   "id": "2018-us-shutdown",
+   "kind": "shutdown",
+   "start": "2018-12-21",
+   "en": "2018 US government shutdown",
+   "ko": "2018년 미국 정부 셧다운",
+   "source": "https://history.house.gov/Institution/Shutdown/Government-Shutdowns/",
+   "quote": "Funding gap table: December 21, 2018, 34 days, January 25, 2019",
+   "end": "2019-01-25",
+   "lasted_days": 34
+  },
+  {
+   "id": "2011-us-debt-limit",
+   "kind": "debt_limit",
+   "start": "2011-05-16",
+   "en": "2011 US debt limit standoff",
+   "ko": "2011년 미국 부채 한도 대치",
+   "source": "https://www.gao.gov/assets/600/592835.txt",
+   "quote": "On May 16, 2011 Treasury notified Congress of a debt issuance suspension period. 'On August 2, 2011, Congress and the President enacted the Budget Control Act of 2011'",
+   "end": "2011-08-02"
+  },
+  {
+   "id": "2013-us-debt-limit",
+   "kind": "debt_limit",
+   "start": "2013-05-17",
+   "en": "2013 US debt limit standoff",
+   "ko": "2013년 미국 부채 한도 대치",
+   "source": "https://www.gao.gov/assets/680/671817.pdf",
+   "quote": "'On May 17, 2013, the Secretary of the Treasury notified Congress' (extraordinary measures). 'On October 17, 2013, Congress passed and the President signed the Continuing Appropriations Act, 2014'",
+   "end": "2013-10-17"
+  },
+  {
+   "id": "1994-fed-hikes",
+   "kind": "rate_rises",
+   "start": "1994-02-04",
+   "en": "1994 Fed rate rises",
+   "ko": "1994년 연준 금리 인상",
+   "source": "https://www.federalreserve.gov/monetarypolicy/openmarket_archive.htm",
+   "quote": "Table of target changes: February 4, 1994, +25, 3.25; last increase February 1, 1995, +50, 6.00",
+   "end": "1995-02-01"
+  },
+  {
+   "id": "2022-fed-hikes",
+   "kind": "rate_rises",
+   "start": "2022-03-17",
+   "en": "2022 Fed rate rises",
+   "ko": "2022년 연준 금리 인상",
+   "source": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+   "quote": "Table of target changes: March 17, 2022, +25, 0.25-0.50; last increase July 27, 2023, +25, 5.25-5.50",
+   "end": "2023-07-27"
+  },
+  {
+   "id": "2011-ecb-hikes",
+   "kind": "rate_rises",
+   "start": "2011-04-13",
+   "en": "2011 ECB rate rises",
+   "ko": "2011년 ECB 금리 인상",
+   "source": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+   "quote": "Key ECB interest rates, with effect from: 13 Apr. 2011 deposit facility 0.50; first decrease 9 Nov. 2011",
+   "end": "2011-11-09"
+  },
+  {
+   "id": "2022-ecb-hikes",
+   "kind": "rate_rises",
+   "start": "2022-07-27",
+   "en": "2022 ECB rate rises",
+   "ko": "2022년 ECB 금리 인상",
+   "source": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+   "quote": "Key ECB interest rates, with effect from: 27 Jul. 2022 deposit facility 0.00; last increase 20 Sep. 2023, 4.00",
+   "end": "2023-09-20"
+  },
+  {
+   "id": "2024-boj-hike",
+   "kind": "rate_rises",
+   "start": "2024-07-31",
+   "en": "2024 Bank of Japan rate rise",
+   "ko": "2024년 일본은행 금리 인상",
+   "source": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2024/k240731a.pdf",
+   "quote": "July 31, 2024: 'The Bank will encourage the uncollateralized overnight call rate to remain at around 0.25 percent.'"
+  },
+  {
+   "id": "2015-china-yuan",
+   "kind": "china",
+   "start": "2015-08-11",
+   "en": "2015 China changes its yuan fixing",
+   "ko": "2015년 중국 위안화 기준환율 방식 변경",
+   "source": "https://www.imf.org/External/AM/2015/imfc/statement/eng/chn.pdf",
+   "quote": "'The reform of the RMB central parity on August 11, 2015 was to make the RMB exchange rate more market-based.' (statement by the PBC deputy governor)"
+  },
+  {
+   "id": "2015-third-avenue",
+   "kind": "credit",
+   "start": "2015-12-10",
+   "en": "2015 Third Avenue credit fund halts redemptions",
+   "ko": "2015년 서드애비뉴 신용 펀드 환매 중단",
+   "source": "https://www.sec.gov/files/rules/ic/2015/ic-31943.pdf",
+   "quote": "'On December 9, 2015, the Board adopted a plan of liquidation for the Fund'; redemptions suspended as of December 10, 2015 (SEC Release IC-31943)"
+  },
+  {
+   "id": "2002-worldcom",
+   "kind": "buildout",
+   "start": "2002-06-26",
+   "en": "2002 WorldCom accounting fraud (telecom buildout)",
+   "ko": "2002년 월드컴 회계 부정 (통신망 투자 붐)",
+   "source": "https://www.sec.gov/enforcement-litigation/litigation-releases/lr-17588",
+   "quote": "Litigation Release No. 17588, June 27, 2002: the SEC filed its action 'yesterday' over a 'massive accounting fraud totaling more than $3.8 billion'"
+  },
+  {
+   "id": "2022-us-chip-controls",
+   "kind": "export_rule",
+   "start": "2022-10-07",
+   "en": "2022 US advanced chip export controls",
+   "ko": "2022년 미국 첨단 반도체 수출 통제",
+   "source": "https://www.govinfo.gov/content/pkg/FR-2022-10-13/html/2022-21658.htm",
+   "quote": "Implementation of Additional Export Controls: Certain Advanced Computing and Semiconductor Manufacturing Items. 'Effective on October 7, 2022, are the following instructions'"
   }
- ]
+ ],
+ "no_past_case": {
+  "2026-nvidia-sec-and-leadership": {
+   "en": "No past case is measured for this card. It is about one company, and the market-wide measure used here would not describe it.",
+   "ko": "이 카드에는 과거 사례를 재지 않았습니다. 한 회사의 일이라 여기서 쓰는 시장 전체 지표로는 설명되지 않습니다."
+  }
+ }
 }

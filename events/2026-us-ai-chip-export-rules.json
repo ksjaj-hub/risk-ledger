@@ -77,6 +77,11 @@
    "date": "2026-11-27",
    "status": "open",
    "note": "Spelling changed to American English (licence to license, centres to centers) in the title, summary, facts and notes. No fact changed. The resolution conditions and the first version kept under superseded_sources are left as first written."
+  },
+  {
+   "date": "2026-11-27",
+   "status": "open",
+   "note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
   }
  ],
  "note": "Risk state only. Not a forecast and not investment advice.",
@@ -103,5 +108,41 @@
   "notes": [
    "The rule is an interim final rule already in effect. 'Published in final form' counts when the Bureau of Industry and Security publishes a final rule after the comment period or states that the interim rule stands. 'Major supplier' means TSMC or Samsung."
   ]
+ },
+ "numeric_criteria": {
+  "version": 1,
+  "written_on": "2026-11-27",
+  "note": "How each condition is counted, in numbers, with the latest reading known when this was written. Added on 2026-11-27. The resolution conditions above are unchanged and remain the test; where the two could be read differently, the original wording decides. 'latest' is a snapshot and is updated with a dated history line.",
+  "items": [
+   {
+    "side": "resolved",
+    "measure": "1 final rule from the Bureau of Industry and Security after the 60-day comment period, or its statement that the interim rule stands",
+    "latest": "0 of 1. The comment period is still open",
+    "state": "not_met"
+   },
+   {
+    "side": "resolved",
+    "measure": "At least 1 of 2 suppliers (TSMC, Samsung) confirms in its own statement that suspended shipments have resumed under license",
+    "latest": "0 of 1. The suspensions themselves are reported, not confirmed",
+    "state": "not_met"
+   },
+   {
+    "side": "worsened",
+    "measure": "1 announcement by China of export or import restrictions that cites the rule",
+    "latest": "0",
+    "state": "not_reached"
+   },
+   {
+    "side": "worsened",
+    "measure": "The rule covers more than the 5 listed countries (Indonesia, Malaysia, Singapore, Thailand, Brazil) or adds a chip category",
+    "latest": "5 countries, no addition",
+    "state": "not_reached"
+   }
+  ]
+ },
+ "counter_view": {
+  "written_on": "2026-11-27",
+  "note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
+  "text": "The rule asks for a license, it does not ban. It excludes US-headquartered end users, and a January 2026 rule had already moved chips for China to case-by-case review. Licenses may be granted as a matter of routine, and the reported shipment halts are not confirmed."
  }
 }
