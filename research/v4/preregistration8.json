@@ -1,0 +1,38 @@
+{
+  "written": "2026-11-27, before scripts/research_v4f.py produced any number on real data",
+  "status": "Fixed. Not edited after results exist. Hindsight comparison; not part of the ledger; not a forecast.",
+  "asked_for": "The owner asked for the rights in the input data to be sorted out before anything is sold. A review on 2026-11-27 (rights/README.md) found that four of the five v3 inputs are owned by parties whose terms restrict use beyond personal use (Cboe, ICE Data Indices, S&P Dow Jones Indices, Federal Reserve Bank of Chicago), that the Moody's Baa spread considered earlier is restricted as well, and that the FRED terms themselves restrict commercial use. This round asks one question: can the same five-part rule be run on inputs published by US federal government bodies only, without losing what v3 has?",
+  "this_is_not": "A search for a better score. Rounds 1 to 7 found none on these kinds of inputs and that conclusion stands. This is an equivalence test of a rights-clean replacement.",
+  "inputs": {
+    "ofr": "Office of Financial Research Financial Stress Index, daily file from financialresearch.gov, columns Volatility, Credit, Equity valuation, Funding and the total 'OFR FSI'. Used 2 trading days late, as OFR publishes it. Starts 2000-01-03.",
+    "curve": "10-year minus 3-month Treasury constant maturity yield (US Treasury figures; read here through the same series as rounds 1 to 7)."
+  },
+  "calibration": "2000-01-03 to 2006-12-29 only. Nothing after 2006 is used to set any number.",
+  "candidates": {
+    "open5": {
+      "components": {
+        "equity_volatility": "OFR Volatility contribution",
+        "credit_stress": "OFR Credit contribution",
+        "equity_drawdown": "OFR Equity valuation contribution",
+        "financial_conditions": "OFR Funding contribution",
+        "yield_curve": "10-year minus 3-month Treasury yield, v3 thresholds unchanged"
+      },
+      "thresholds": "For each OFR part, three cut points chosen so that the share of calibration days at each level (Low, Moderate, High, Extreme) equals the share the matching v3 input had on the same days: Volatility against VIX, Equity valuation against the market's fall from its 252-day high, Funding against NFCI. The high-yield spread has no history in those years, so Credit takes the average of the three other inputs' shares. A level that never occurred in the calibration years gets no cut point of its own below the next one (the cut is the calibration maximum).",
+      "everything_else": "Score formula, state bands, floors (yield curve not counted) and the 5-day confirmation step exactly as rules/v3.json."
+    },
+    "ofr_total": {
+      "what": "The OFR index total on its own, cut into five states so that the share of calibration days at or above each state equals v3's. Included as a plain yardstick: if the total alone does as well, the five-part rule adds nothing to a free government index and the page should say so."
+    }
+  },
+  "baseline": "v3_long from round 1 (rules/v3.json thresholds on the long series).",
+  "test": "2007-01-03 on, looked at once. Outcomes as in round 1: O1 market closes 10% or more below today's close within 63 trading days; O2 5% within 21 days; O3 VIX closes at 30 or more within 60 days. AUROC with a 63-day moving-block bootstrap, 2,000 draws, seed 20261126.",
+  "passes_when_all": [
+    "O1 AUROC is no more than 0.01 below v3_long",
+    "O2 and O3 AUROC are each no more than 0.02 below v3_long",
+    "The share of days followed by the 10% fall rises from each published state to the next (same merging of thin states as round 1)",
+    "Published state changes per year are no more than 25% above v3_long",
+    "The published state is the same as v3_long's or the neighbouring state on at least 90% of test days"
+  ],
+  "what_can_come_out": "If open5 passes: it may be put to the owner as rule v4, as a replacement of inputs, not as an improvement, with its thresholds written to rules/candidates/. If it fails: v3 stays, and the remaining ways to clear the rights are permission or a paid licence from the data owners. Either way the result is reported as it is. The rule in force does not change in this round.",
+  "also_reported": "Share of days with exactly the same published state, first Elevated and first Stress dates in the windows used in round 1, the cut points, correlation of each OFR part with the v3 input it stands in for, and the number of calibration days."
+}
