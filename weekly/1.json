@@ -15,8 +15,8 @@
     "desc": "AFMX Weekly No. 1: Watch at 33, what that score has meant before, the good news that left risks in place, and the dates ahead.",
     "lead": "AFMX tracks what is still unresolved after the headlines move on.",
     "revised": "Rebuilt in the new layout on November 27. The facts are the same. The Fed and inflation dates and the October inflation figure were added.",
-    "score_p": "Since 2007 the score was between 30 and 39 on 487 trading days. This is how far the market was down at its lowest close in the three months after those days.",
-    "score_note": "These are counts from the past, not a forecast. The first public check against what actually followed comes after 12 months of record.",
+    "score_p": "Since 2007 the score has been between 30 and 39 on 487 trading days. This is how far the market was down at its lowest close in the three months after those days.",
+    "score_note": "These are counts from the past, not a forecast. The first public check against what actually followed comes after the record has run for 12 months.",
     "score_more": "The score counts five measures, each from 0 to 3 cells. Five of 15 cells are filled, which gives 33. VIX closed at 26.36 on November 24, down from 35.89 on November 20. The other four have not moved up.",
     "cards_p": "All 12 cards are open. None got worse, eased or was resolved this week.",
     "relief": [
@@ -58,10 +58,10 @@
   },
   "ko": {
     "title": "CEO는 돌아왔다. 조사는 사라지지 않았다.",
-    "desc": "AFMX 주간 글 1호: 주의 33점, 이 점수에서 과거에 온 것, 호재 뒤에 남은 리스크, 다가오는 날짜.",
+    "desc": "AFMX 주간 글 1호: 주의 33점, 이 점수 뒤에 과거에 있었던 일, 호재 뒤에 남은 리스크, 다가오는 날짜.",
     "lead": "AFMX는 뉴스가 지나간 뒤에도 해결되지 않고 남아 있는 것을 추적합니다.",
     "revised": "11월 27일에 새 틀로 고쳤습니다. 사실은 그대로입니다. 연준과 물가 발표 날짜, 10월 물가 수치를 더했습니다.",
-    "score_p": "2007년 이후 점수가 30~39점이던 날은 487거래일입니다. 그날들 뒤 석 달 동안, 가장 낮게 마감한 날에 시장이 얼마나 내려가 있었는지입니다.",
+    "score_p": "2007년 이후 점수가 30~39점이던 날은 487거래일입니다. 아래는 그날들 뒤 석 달 동안, 가장 낮게 마감한 날에 시장이 얼마나 내려가 있었는지를 센 것입니다.",
     "score_note": "과거에 있었던 횟수이며 예측이 아닙니다. 실제와 맞았는지는 기록이 12개월 쌓인 뒤 처음 공개 점검합니다.",
     "score_more": "점수는 지표 다섯 개를 각각 0~3칸으로 셉니다. 15칸 중 5칸이 차서 33점입니다. VIX는 11월 20일 35.89에서 11월 24일 26.36으로 내려왔습니다. 나머지 넷은 오르지 않았습니다.",
     "cards_p": "카드 12건이 모두 열려 있습니다. 이번 주에 나빠지거나 풀린 것은 없습니다.",
@@ -75,7 +75,7 @@
        "more": ["해소로 보는 조건: 나스닥 종합지수가 연속 하락 전 수준 위에서 20거래일을 버티고, 변동성 지표가 20거래일 연속 3칸 중 1칸 이하이며, AI 설비 투자가 가장 큰 기업 중 두 곳 이상이 분기 보고에서 투자 계획을 유지하거나 올리는 것입니다.",
                 "연준 이사는 11월 16일 이 설비 투자가 점점 빚으로 조달되고 있다고 말했습니다."],
        "src": [["바 연준 이사 연설, 11월 16일", "https://www.federalreserve.gov/newsevents/speech/barr20261116a.htm"], ["연준 금융안정보고서, 2026년 11월", "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf"]]},
-      {"h": "변동성이 내렸습니다.", "p": "VIX가 11월 20일 35.89에서 11월 24일 26.36이 됐습니다. 이것은 측정값이지 해소가 아닙니다. 남은 것: 관세안, 금리 경로, 유가 충격.", "more": [], "src": []}
+      {"h": "변동성이 내렸습니다.", "p": "VIX가 11월 20일 35.89에서 11월 24일 26.36이 됐습니다. 측정값이 내렸을 뿐 해소는 아닙니다. 남은 것: 관세안, 금리 경로, 유가 충격.", "more": [], "src": []}
     ],
     "new": [
       {"h": "관세.", "p": "미국 무역대표부가 11월 25일 14개 경제권에 상한 15~35%의 관세를 제안했습니다. 의견 접수는 2027년 1월 5일까지이고 시행일은 정해지지 않았습니다.", "src": ["무역대표부 발표", "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/november/ustr-makes-determinations-and-proposes-actions-14-section-301-investigations-relating-structural"]},
@@ -90,14 +90,14 @@
         "지금까지 확인된 것: 연준은 10월 28일 금리를 3.75~4.00%로 유지했습니다. 표결은 10 대 2였고, 반대한 두 명은 0.25%포인트 인상을 원했습니다. 의사록에는 선물 시장이 연말까지 0.25%포인트 인상 가능성을 높게 본다고 적혀 있습니다.",
         "카드가 달라지지 않는 경우: 0.25%포인트 인상. 이미 예상된 것입니다.",
         "나빠지는 경우: 한 번에 0.25%포인트보다 크게 올리거나, 금융 여건 지표가 3칸 중 2칸이 되는 것. 지금은 1칸입니다.",
-        "해소 쪽으로 세는 경우: 성명에서 추가 인상 언급이 빠지거나, 위원 전망 중간값이 내년 말 금리를 지금보다 높게 보지 않는 것. 카드는 물가 하락도 요구하므로 이번 회의만으로는 닫히지 않습니다.",
+        "해소에 가까워지는 경우: 성명에서 추가 인상 언급이 빠지거나, 위원 전망 중간값이 내년 말 금리를 지금보다 높게 보지 않는 것. 카드는 물가 하락도 요구하므로 이번 회의만으로는 닫히지 않습니다.",
         "미국 현지로는 12월 9일 오후 2시이고, 기자회견은 30분 뒤입니다."]},
       {"d": "12월 10일 (목)", "t": "한국 밤 10:30", "h": "미국 11월 소비자물가", "more": [
-        "카드는 1년 전 대비 상승률이 두 번 연속 내려가야 합니다. 10월은 1년 전 대비 수치가 발표되지 않았으므로, 11월 수치 하나로는 조건이 채워지지 않습니다.",
-        "한 번의 낮은 수치는 카드에 '해소가 아닌 호재'로 적혀 있습니다."]},
+        "이 카드가 해소되려면 1년 전 대비 상승률이 두 번 연속 내려가야 합니다. 10월은 1년 전 대비 수치가 발표되지 않았으므로, 11월 수치 하나로는 조건이 채워지지 않습니다.",
+        "한 번 낮게 나온 수치는 카드에 '해소가 아닌 호재'로 적혀 있습니다."]},
       {"d": "12월 11일 (금)", "t": "", "h": "미국 정부 예산 만료", "more": [
         "12월 11일 이후를 다루는 예산법이 서명돼야만 해소입니다.",
-        "30일 미만의 임시 예산은 날짜만 옮깁니다. 리스크는 열린 채입니다."]}
+        "30일 미만의 임시 예산은 날짜만 옮깁니다. 리스크는 그대로 열려 있습니다."]}
     ],
     "dates_src": [["노동통계국 발표 일정", "https://www.bls.gov/schedule/2026/12_sched_list.htm"], ["연준 일정", "https://www.federalreserve.gov/newsevents/2026-december.htm"], ["공법 119-103", "https://www.govinfo.gov/content/pkg/PLAW-119publ103/html/PLAW-119publ103.htm"]],
     "about": "AFMX는 공개된 규칙으로 리스크 상태를 설명합니다. 이번 주에 규칙을 1990년부터의 자료에 돌려 보고 약점을 공개했으며, 지금은 5단계인 <a href=\"https://github.com/ksjaj-hub/risk-ledger/blob/main/rules/v3.ko.md\">3판</a>입니다. 카드의 조건은 결과를 알기 전에 적었고, 기록은 나중에 고칠 수 없습니다. 무엇을 사거나 팔라는 조언이 아닙니다."
