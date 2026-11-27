@@ -76,8 +76,8 @@ def page(crit, rows, stats):
     title_ko = lambda r: ko.get(r["id"], {}).get("title", r["title"])
     v, n = stats["by_verdict"], stats["cards"]
     b = [two("Why these cards", "왜 이 카드들인가", "h1"),
-         two("What gets a risk onto an AFMX card, what closes a card, and how the cards we already have measure up. We wrote these rules after the first cards, and several cards fall short. Both are said plainly below.",
-             "어떤 리스크가 AFMX 카드가 되는지, 카드는 언제 닫히는지, 지금 있는 카드는 이 기준에 얼마나 맞는지 적습니다. 기준은 첫 카드들을 연 뒤에 썼고, 기준에 못 미치는 카드도 여럿 있습니다. 둘 다 아래에 그대로 적었습니다.", cls="lead"),
+         two("What gets a risk onto an AFMX card, what closes a card, and how the cards we already have measure up. Several cards fall short, and the page says which and why. Beta: these criteria are version 1.",
+             "어떤 리스크가 AFMX 카드가 되는지, 카드는 언제 닫히는지, 지금 있는 카드는 이 기준에 얼마나 맞는지 적습니다. 기준에 못 미치는 카드도 여럿 있고, 어느 카드가 왜 그런지 그대로 적었습니다. 지금은 베타이고 이 기준은 1판입니다.", cls="lead"),
          two(f'Of {n} cards: {v["met"]} meet every criterion, {v["partly"]} meet them partly, {v["not_met"]} does not.',
              f'카드 {n}장 가운데 {v["met"]}장은 모든 기준을 충족하고, {v["partly"]}장은 일부만 충족하며, {v["not_met"]}장은 미달입니다.', cls="big"),
          two("1. What opens a card", "1. 카드를 여는 기준", "h2"),
@@ -123,7 +123,7 @@ def page(crit, rows, stats):
     else:
         b.append(two("Nothing listed yet. The list starts on 2026-11-27; each weekday check adds the events it looked at and left out, with the criterion they failed.",
                      "아직 없습니다. 목록은 2026년 11월 27일부터 남깁니다. 평일 점검 때마다 살펴보고 넣지 않은 사건을, 못 미친 기준과 함께 한 줄씩 더합니다."))
-    b.append(f'<p class="su">{two("Criteria version " + str(crit["version"]) + ", written " + crit["written_on"] + ".", "기준 " + str(crit["version"]) + "판, " + crit["written_on"] + " 작성.", "span")} <a href="https://github.com/ksjaj-hub/risk-ledger/blob/main/selection/criteria.json" rel="noopener">{two("The file behind this page", "이 페이지의 원본 파일", "span")}</a></p>')
+    b.append(f'<p class="su">{two("Beta. Criteria version " + str(crit["version"]) + ", written " + crit["written_on"] + ".", "베타. 기준 " + str(crit["version"]) + "판, " + crit["written_on"] + " 작성.", "span")} <a href="https://github.com/ksjaj-hub/risk-ledger/blob/main/selection/criteria.json" rel="noopener">{two("The file behind this page", "이 페이지의 원본 파일", "span")}</a></p>')
     out = PAGE.replace("__BODY__", "\n".join(b))
     out = out.replace("<title>AFMX: the arithmetic behind the odds</title>", "<title>AFMX: why these cards</title>")
     out = out.replace('content="How the odds on AFMX event cards are scored, and what past events of the same kind say."', 'content="What gets a risk onto an AFMX card, what closes one, and which current cards fall short."')

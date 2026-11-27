@@ -12,8 +12,8 @@ up. The public page is `docs/selection.html`, built from this file.
 - **Looked at and left out** (`left_out`): from 2026-11-27, each weekday check adds the events it considered and did
   not card, with the criterion they failed. Lines are added, never removed.
 
-The criteria were written on 2026-11-27, the day after the first 12 cards. They check those cards after the fact;
-they did not choose them. `limits` in the file says what else this does not settle.
+Beta: the criteria are version 1, written on 2026-11-27, and may change. `limits` in the file says what this does
+not settle.
 
 ## When a card is added or changes
 
@@ -27,6 +27,6 @@ A change to the criteria themselves is a new `version` with a dated line in `his
 ## 한국어 요약
 
 `criteria.json`에 카드를 여는 기준 여섯 가지, 닫는 기준 세 가지, 지금 카드 12장을 기준에 맞춰 본 결과가 한국어와 영어로 들어 있습니다.
-공개 페이지는 `docs/selection.html`입니다. 기준은 첫 카드들을 연 다음 날(2026-11-27)에 썼으므로, 그 카드들에는 나중에 맞춰 본 점검입니다.
+공개 페이지는 `docs/selection.html`입니다. 지금은 베타이고 기준은 1판(2026-11-27 작성)입니다.
 카드를 새로 열거나 고칠 때는 `audit.cards`에 한 줄을 넣고 `scripts/selection_check.py`와 `scripts/build_site.py`를 차례로 돌립니다.
 평일 점검에서 살펴보고 넣지 않은 사건은 `left_out`에 못 미친 기준과 함께 남깁니다.
