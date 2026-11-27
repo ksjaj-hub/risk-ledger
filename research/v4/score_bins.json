@@ -1,0 +1,221 @@
+{
+ "generated_at_utc": "2026-11-27T04:18:10Z",
+ "warning": "Hindsight on revised data. Past frequencies, not forecasts. Plan: score_bins_plan.json.",
+ "horizon_trading_days": 63,
+ "market_last": "2026-09-30",
+ "since_2007": {
+  "first": "2007-01-03",
+  "last": "2026-07-01",
+  "days": 4904,
+  "bands": [
+   {
+    "from": 0,
+    "to": 9,
+    "days": 1743,
+    "spells": 98,
+    "share_fall10": 0.108,
+    "share_fall20": 0.022,
+    "median_deepest": -2.703,
+    "p5_deepest": -13.912,
+    "thin": false
+   },
+   {
+    "from": 10,
+    "to": 19,
+    "days": 809,
+    "spells": 173,
+    "share_fall10": 0.158,
+    "share_fall20": 0.016,
+    "median_deepest": -3.267,
+    "p5_deepest": -15.396,
+    "thin": false
+   },
+   {
+    "from": 20,
+    "to": 29,
+    "days": 617,
+    "spells": 162,
+    "share_fall10": 0.146,
+    "share_fall20": 0.013,
+    "median_deepest": -2.98,
+    "p5_deepest": -15.497,
+    "thin": false
+   },
+   {
+    "from": 30,
+    "to": 39,
+    "days": 487,
+    "spells": 114,
+    "share_fall10": 0.129,
+    "share_fall20": 0.004,
+    "median_deepest": -2.35,
+    "p5_deepest": -15.159,
+    "thin": false
+   },
+   {
+    "from": 40,
+    "to": 49,
+    "days": 286,
+    "spells": 86,
+    "share_fall10": 0.196,
+    "share_fall20": 0.007,
+    "median_deepest": -3.146,
+    "p5_deepest": -14.415,
+    "thin": false
+   },
+   {
+    "from": 50,
+    "to": 59,
+    "days": 609,
+    "spells": 91,
+    "share_fall10": 0.256,
+    "share_fall20": 0.085,
+    "median_deepest": -5.452,
+    "p5_deepest": -32.938,
+    "thin": false
+   },
+   {
+    "from": 60,
+    "to": 69,
+    "days": 76,
+    "spells": 19,
+    "share_fall10": 0.013,
+    "share_fall20": 0.013,
+    "median_deepest": -2.46,
+    "p5_deepest": -6.441,
+    "thin": true
+   },
+   {
+    "from": 70,
+    "to": 79,
+    "days": 277,
+    "spells": 12,
+    "share_fall10": 0.404,
+    "share_fall20": 0.217,
+    "median_deepest": -4.646,
+    "p5_deepest": -32.148,
+    "thin": false
+   }
+  ],
+  "check_share_fall10_by_state": {
+   "Guarded": 0.148,
+   "Watch": 0.163,
+   "Calm": 0.103,
+   "Elevated": 0.218,
+   "Stress": 0.366
+  }
+ },
+ "since_1990": {
+  "first": "1990-01-02",
+  "last": "2026-07-01",
+  "days": 9191,
+  "bands": [
+   {
+    "from": 0,
+    "to": 9,
+    "days": 3756,
+    "spells": 179,
+    "share_fall10": 0.05,
+    "share_fall20": 0.01,
+    "median_deepest": -2.246,
+    "p5_deepest": -10.003,
+    "thin": false
+   },
+   {
+    "from": 10,
+    "to": 19,
+    "days": 1409,
+    "spells": 295,
+    "share_fall10": 0.121,
+    "share_fall20": 0.016,
+    "median_deepest": -2.481,
+    "p5_deepest": -15.627,
+    "thin": false
+   },
+   {
+    "from": 20,
+    "to": 29,
+    "days": 1028,
+    "spells": 249,
+    "share_fall10": 0.163,
+    "share_fall20": 0.021,
+    "median_deepest": -3.174,
+    "p5_deepest": -16.883,
+    "thin": false
+   },
+   {
+    "from": 30,
+    "to": 39,
+    "days": 790,
+    "spells": 184,
+    "share_fall10": 0.213,
+    "share_fall20": 0.046,
+    "median_deepest": -2.922,
+    "p5_deepest": -19.447,
+    "thin": false
+   },
+   {
+    "from": 40,
+    "to": 49,
+    "days": 541,
+    "spells": 138,
+    "share_fall10": 0.25,
+    "share_fall20": 0.004,
+    "median_deepest": -4.51,
+    "p5_deepest": -14.987,
+    "thin": false
+   },
+   {
+    "from": 50,
+    "to": 59,
+    "days": 1077,
+    "spells": 162,
+    "share_fall10": 0.285,
+    "share_fall20": 0.08,
+    "median_deepest": -5.378,
+    "p5_deepest": -21.838,
+    "thin": false
+   },
+   {
+    "from": 60,
+    "to": 69,
+    "days": 131,
+    "spells": 31,
+    "share_fall10": 0.221,
+    "share_fall20": 0.008,
+    "median_deepest": -5.376,
+    "p5_deepest": -15.512,
+    "thin": true
+   },
+   {
+    "from": 70,
+    "to": 79,
+    "days": 458,
+    "spells": 35,
+    "share_fall10": 0.325,
+    "share_fall20": 0.131,
+    "median_deepest": -4.222,
+    "p5_deepest": -24.842,
+    "thin": false
+   },
+   {
+    "from": 80,
+    "to": 89,
+    "days": 1,
+    "spells": 1,
+    "share_fall10": 1.0,
+    "share_fall20": 0.0,
+    "median_deepest": -11.118,
+    "p5_deepest": -11.118,
+    "thin": true
+   }
+  ],
+  "check_share_fall10_by_state": {
+   "Watch": 0.221,
+   "Elevated": 0.273,
+   "Guarded": 0.118,
+   "Stress": 0.302,
+   "Calm": 0.048
+  }
+ }
+}
