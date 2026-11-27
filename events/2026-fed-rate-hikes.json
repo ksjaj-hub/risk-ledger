@@ -9,7 +9,7 @@
  "first_recorded": "2026-11-26",
  "event_started": "2026-11 (hawkish minutes released week of 2026-11-16)",
  "status": "open",
- "what_happened": "The Fed held its rate at 3.75% to 4.00% on 2026-10-28 with two members voting for an increase. Its minutes say futures markets put high odds on a quarter-point rise by year-end and two more by summer 2027. PCE inflation was 3.6% in September.",
+ "what_happened": "The Fed held its rate at 3.75% to 4.00% on 2026-10-28 with two members voting for an increase. Its minutes say futures markets put high odds on a quarter-point rise by year-end and two more by summer 2027. PCE inflation was 3.6% in September and 3.8% in October.",
  "how_it_reaches_markets": "Higher discount rates for equities; tighter financing conditions; pressure on highly indebted borrowers.",
  "sourced_facts": [
   {
@@ -29,6 +29,12 @@
    "url": "https://www.bls.gov/news.release/cpi.nr0.htm",
    "tier": "primary",
    "checked": "2026-11-26"
+  },
+  {
+   "text": "October 2026 PCE price index (released 2026-11-25): up 3.8 percent from the same month one year ago and 0.3 percent from the preceding month; excluding food and energy, up 3.3 percent from one year ago and 0.3 percent on the month. The next release is 2026-12-23",
+   "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-october-2026",
+   "tier": "primary",
+   "checked": "2026-11-27"
   }
  ],
  "resolution_conditions": {
@@ -48,7 +54,8 @@
  "sources": [
   "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
   "https://www.federalreserve.gov/monetarypolicy/fomcminutes20261028.htm",
-  "https://www.bls.gov/news.release/cpi.nr0.htm"
+  "https://www.bls.gov/news.release/cpi.nr0.htm",
+  "https://www.bea.gov/news/2026/personal-income-and-outlays-october-2026"
  ],
  "history": [
   {
@@ -75,12 +82,17 @@
    "date": "2026-11-27",
    "status": "open",
    "note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
+  },
+  {
+   "date": "2026-11-27",
+   "status": "open",
+   "note": "Added October PCE inflation (3.8%, core 3.3%) from the Bureau of Economic Analysis release of 2026-11-25, to the facts and the summary. The matching unconfirmed line now covers only the Q3 growth revision. Resolution conditions and numeric criteria are unchanged: they count CPI, not PCE."
   }
  ],
  "note": "Risk state only. Not a forecast and not investment advice.",
  "unconfirmed_facts": [
   "2026-11-20: CME FedWatch 92% chance of a December hike: from a broker commentary; CME itself not read. The Fed minutes above support the direction but not this number",
-  "2026-11-25: October inflation 'increased further' and Q3 growth revised up: the release behind this wording has not been identified"
+  "2026-11-25: Q3 growth reported as revised up: the release behind this wording has not been identified. (The October inflation part of the same report is now confirmed above, from the Bureau of Economic Analysis.)"
  ],
  "superseded_sources": {
   "replaced_on": "2026-11-26",

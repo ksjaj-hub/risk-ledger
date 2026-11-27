@@ -24,4 +24,14 @@ describes. It is **not** part of the ledger, not a forecast and not a recommenda
 - This product uses the FRED® API but is not endorsed or certified by the Federal Reserve Bank of St. Louis.
   Terms: https://fred.stlouisfed.org/docs/api/terms_of_use.html
 
-Rerun: Actions, "market check", Run workflow.
+## When it runs
+
+The workflow `market check` runs by itself three times each weekday and writes only when a reading has changed:
+
+- 03:07 UTC (12:07 in Korea) and 15:07 UTC (00:07 in Korea), with the event checks.
+- 22:10 UTC, after the Federal Reserve posts its daily interest rate release (H.15) at 4:15 p.m. Eastern.
+  On the day after a jobs, inflation or Fed release this is the first run that can see the market's response.
+
+The official sources publish a day's yields and exchange rates on the next business day or later, so a reading is
+never from the same hour as a release. Each reading on the page carries the date it is for, and the note under
+them gives the time the values were last read. To run it by hand: Actions, "market check", Run workflow.
