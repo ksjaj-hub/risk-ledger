@@ -1,16 +1,16 @@
 {
- "measured_at_utc": "2026-11-27T05:01Z",
- "label": "after record fold and read-more",
+ "measured_at_utc": "2026-11-27T05:21Z",
+ "label": "after record fold and show-more",
  "viewport": "390x844",
  "tabs": {
   "ko": {
    "home": {
     "screens": 2.1,
-    "chars": 931,
+    "chars": 925,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
-    "targets": 23,
+    "targets": 22,
     "small_targets": 0,
     "small_target_list": [],
     "jargon": [],
@@ -40,8 +40,8 @@
     "first_card_open_screens": 3.5
    },
    "sectors": {
-    "screens": 1.7,
-    "chars": 832,
+    "screens": 1.8,
+    "chars": 830,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
@@ -57,12 +57,12 @@
     "title": "섹터 · AFMX"
    },
    "past": {
-    "screens": 2.2,
-    "chars": 3127,
+    "screens": 2.3,
+    "chars": 3119,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
-    "targets": 23,
+    "targets": 22,
     "small_targets": 0,
     "small_target_list": [],
     "jargon": [],
@@ -75,11 +75,11 @@
    },
    "record": {
     "screens": 2.9,
-    "chars": 2936,
+    "chars": 2926,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
-    "targets": 19,
+    "targets": 18,
     "small_targets": 0,
     "small_target_list": [],
     "jargon": [],
@@ -109,11 +109,11 @@
    },
    "weekly": {
     "screens": 1,
-    "chars": 208,
+    "chars": 202,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13.5,
-    "targets": 16,
+    "targets": 15,
     "small_targets": 0,
     "small_target_list": [],
     "jargon": [],
@@ -128,11 +128,11 @@
   "en": {
    "home": {
     "screens": 2.4,
-    "chars": 1826,
+    "chars": 1817,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
-    "targets": 23,
+    "targets": 22,
     "small_targets": 0,
     "small_target_list": [],
     "jargon": [],
@@ -161,7 +161,7 @@
     "title": "Risks · AFMX"
    },
    "sectors": {
-    "screens": 2,
+    "screens": 2.1,
     "chars": 1899,
     "small_pct": 0,
     "tiny_pct": 0,
@@ -178,12 +178,12 @@
     "title": "Sectors · AFMX"
    },
    "past": {
-    "screens": 2.4,
-    "chars": 5758,
+    "screens": 2.6,
+    "chars": 5749,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
-    "targets": 24,
+    "targets": 23,
     "small_targets": 0,
     "small_target_list": [],
     "jargon": [
@@ -240,11 +240,11 @@
    },
    "weekly": {
     "screens": 1,
-    "chars": 300,
+    "chars": 291,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13.5,
-    "targets": 16,
+    "targets": 15,
     "small_targets": 0,
     "small_target_list": [],
     "jargon": [],
