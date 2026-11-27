@@ -179,14 +179,11 @@
 ],
 "events": [
 {
-"schema": 1,
 "id": "2026-ai-buildout-financing",
 "title": "Debt-funded AI buildout (sell-off reported, not confirmed)",
-"category": "sector",
 "markets": [
 "US"
 ],
-"first_recorded": "2026-11-26",
 "event_started": "2026-11 (exact start not established)",
 "status": "open",
 "what_happened": "A sell-off concentrated in AI and semiconductor shares, attributed in press reports to doubts about whether the debt-financed AI buildout can earn sufficient returns and to signs of moderating AI spending.",
@@ -252,28 +249,12 @@
 "note": "Title was 'Doubts about financing of the AI buildout'. Changed to say only what is confirmed. Conditions and forecasts unchanged."
 }
 ],
-"note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
 "unconfirmed_facts": [
 "2026-11-20: S&P 500 -3.70% to 6,910.39; Nasdaq Composite -5.28%; seventh straight S&P 500 decline; Nvidia -14%, AMD -13.3%: from a broker commentary; not confirmed at a primary or wire source",
 "2026-11-25: Nasdaq 100 briefly 20% below its record closing high: attributed to Reuters in a repost; original not read"
 ],
-"superseded_sources": {
-"replaced_on": "2026-11-26",
-"reason": "Source rule of 2026-11-26: at least one primary source per card; commentary, blogs and reposts are not used as support",
-"sources": [
-"https://www.schwab.com/learn/story/market-volatility",
-"https://www.abc.net.au/news/2026-11-26/nasdaq-ai-tariffs-rattle-markets/107428016",
-"https://finance.yahoo.com/markets/stocks/articles/stocks-retreat-ai-rebound-stumbles-015155560.html"
-],
-"facts_as_first_written": [
-"2026-11-20: S&P 500 -3.70% to 6,910.39; Nasdaq Composite -5.28%; seventh straight S&P 500 decline (Schwab)",
-"2026-11-20: Nvidia -14%, AMD -13.3% (Schwab)",
-"2026-11-25: Nasdaq 100 briefly 20% below its record closing high (ABC/Reuters)"
-]
-},
 "condition_reading_notes": {
 "written_on": "2026-11-26",
-"note": "How the conditions above are read. The conditions themselves are unchanged.",
 "notes": [
 "'The day before the losing streak began' is read as the last Nasdaq Composite close before the run of declines that ended on 2026-11-20, taken from the FRED series NASDAQCOM. The exact level will be written here once the series has been read; until then this condition cannot be marked as met.",
 "'Largest AI infrastructure spenders' means Microsoft, Alphabet, Amazon, Meta and Oracle. 'Large AI-linked borrower' means one with at least $1 billion of debt outstanding."
@@ -282,7 +263,6 @@
 "numeric_criteria": {
 "version": 1,
 "written_on": "2026-11-27",
-"note": "How each condition is counted, in numbers, with the latest reading known when this was written. Added on 2026-11-27. The resolution conditions above are unchanged and remain the test; where the two could be read differently, the original wording decides. 'latest' is a snapshot and is updated with a dated history line.",
 "items": [
 {
 "side": "resolved",
@@ -320,7 +300,6 @@
 },
 "counter_view": {
 "written_on": "2026-11-27",
-"note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
 "text": "The debt behind the buildout is still small next to the cash these companies earn: a Federal Reserve governor said he is 'less concerned about direct losses'. A fall in share prices is not a failed financing, and no borrower has missed a payment."
 },
 "forecasts": [
@@ -331,18 +310,14 @@
 "p_resolved": 0.2,
 "p_worsened": 0.15
 }
-],
-"_path": "events/2026-ai-buildout-financing.json"
+]
 },
 {
-"schema": 1,
 "id": "2026-china-domestic-demand-property",
 "title": "China: weak domestic demand and property investment slump",
-"category": "macro",
 "markets": [
 "CN"
 ],
-"first_recorded": "2026-11-26",
 "event_started": "2026 (ongoing)",
 "status": "open",
 "what_happened": "October 2026 data showed retail sales growth of 0.4% year over year, fixed-asset investment down 8.1% for January to October, and property development investment down 21.6%.",
@@ -412,25 +387,11 @@
 "note": "Added forecast 1: by 2027-05-31, 3% resolved, 60% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
 }
 ],
-"note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
 "unconfirmed_facts": [
 "Week ending 2026-11-20: Hang Seng -5.19%, CSI 300 -1.54%: from a fund manager's weekly note; not confirmed at a primary or wire source"
 ],
-"superseded_sources": {
-"replaced_on": "2026-11-26",
-"reason": "Source rule of 2026-11-26: at least one primary source per card; commentary, blogs and reposts are not used as support",
-"sources": [
-"https://www.troweprice.com/personal-investing/resources/insights/global-markets-weekly-update.html"
-],
-"facts_as_first_written": [
-"October 2026: industrial output +4.8% y/y (from 5.5%); retail sales +0.4% (from 1.1%) (T. Rowe Price)",
-"January to October 2026: fixed-asset investment -8.1%; property development investment -21.6% (T. Rowe Price)",
-"Week ending 2026-11-20: Hang Seng -5.19%, CSI 300 -1.54% (T. Rowe Price)"
-]
-},
 "condition_reading_notes": {
 "written_on": "2026-11-26",
-"note": "How the conditions above are read. The conditions themselves are unchanged.",
 "notes": [
 "Retail sales and property investment are read from the monthly National Bureau of Statistics release. 'Large' default means a public bond of at least $100 million equivalent."
 ]
@@ -438,7 +399,6 @@
 "numeric_criteria": {
 "version": 1,
 "written_on": "2026-11-27",
-"note": "How each condition is counted, in numbers, with the latest reading known when this was written. Added on 2026-11-27. The resolution conditions above are unchanged and remain the test; where the two could be read differently, the original wording decides. 'latest' is a snapshot and is updated with a dated history line.",
 "items": [
 {
 "side": "resolved",
@@ -468,7 +428,6 @@
 },
 "counter_view": {
 "written_on": "2026-11-27",
-"note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
 "text": "China's property slump is several years old and the US market has lived with it. Industrial output still grew 4.8% in October. This may stay a slow drag that never turns into a US market event."
 },
 "forecasts": [
@@ -479,18 +438,14 @@
 "p_resolved": 0.03,
 "p_worsened": 0.6
 }
-],
-"_path": "events/2026-china-domestic-demand-property.json"
+]
 },
 {
-"schema": 1,
 "id": "2026-eurozone-inflation-ecb",
 "title": "Eurozone inflation up to 3.8% with the ECB on hold",
-"category": "monetary policy",
 "markets": [
 "EU"
 ],
-"first_recorded": "2026-11-26",
 "event_started": "2026-11",
 "status": "open",
 "what_happened": "Euro area inflation rose to 3.8% in September 2026 from 3.2% in August, with energy inflation at 18.9%. The ECB held its deposit rate at 2.50% on 2026-10-29. An October reading of 4.0% has been reported but could not yet be confirmed at Eurostat.",
@@ -565,29 +520,13 @@
 "note": "Title was 'Eurozone inflation at 4% and further ECB rate rises'. Changed to say only what is confirmed. Conditions and forecasts unchanged."
 }
 ],
-"note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
 "unconfirmed_facts": [
 "October 2026 euro area inflation 4.0%: Eurostat release titles of 2026-11-04 and 2026-11-18 read 'annual inflation up to 4.0%', but the pages could not be opened, so the figure is not counted as confirmed; core 2.6% likewise",
 "Week ending 2026-11-20: STOXX 600 -5.80%, DAX -7.28%: not confirmed at a primary or wire source",
 "A fund manager's expectation of one more ECB hike in December to 2.75%: commentary, not used as support"
 ],
-"superseded_sources": {
-"replaced_on": "2026-11-26",
-"reason": "Source rule of 2026-11-26: at least one primary source per card; commentary, blogs and reposts are not used as support",
-"sources": [
-"https://www.troweprice.com/personal-investing/resources/insights/global-markets-weekly-update.html",
-"https://am.gs.com/en-us/advisors/insights/article/market-pulse"
-],
-"facts_as_first_written": [
-"October 2026 eurozone inflation 4.0% y/y (from 3.8%); core revised to 2.6% (T. Rowe Price)",
-"Goldman Sachs Asset Management (2026-11-05) expects one more ECB hike in December, to a peak policy rate of 2.75%",
-"Week ending 2026-11-20: STOXX 600 -5.80%, DAX -7.28% (T. Rowe Price)"
-],
-"summary_as_first_written": "Eurozone inflation rose to 4.0% year over year in October 2026 from 3.8%. The ECB is expected to raise rates again in December. European shares had their steepest weekly fall since March in the week ending 2026-11-20."
-},
 "condition_reading_notes": {
 "written_on": "2026-11-26",
-"note": "How the conditions above are read. The conditions themselves are unchanged.",
 "notes": [
 "Inflation is read from the Eurostat final monthly release. 'Signals that it does not expect further rises' is judged only from the published monetary policy statement: it counts when the statement says rates are at their peak or drops any reference to further increases."
 ]
@@ -595,7 +534,6 @@
 "numeric_criteria": {
 "version": 1,
 "written_on": "2026-11-27",
-"note": "How each condition is counted, in numbers, with the latest reading known when this was written. Added on 2026-11-27. The resolution conditions above are unchanged and remain the test; where the two could be read differently, the original wording decides. 'latest' is a snapshot and is updated with a dated history line.",
 "items": [
 {
 "side": "resolved",
@@ -625,7 +563,6 @@
 },
 "counter_view": {
 "written_on": "2026-11-27",
-"note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
 "text": "Energy prices, up 18.9% in September, are a large part of the rise. Brent has since fallen from an October average of $124 to under $100. If that holds, inflation could turn down without further ECB rises, and this card may be the oil card counted twice."
 },
 "forecasts": [
@@ -636,18 +573,14 @@
 "p_resolved": 0.1,
 "p_worsened": 0.12
 }
-],
-"_path": "events/2026-eurozone-inflation-ecb.json"
+]
 },
 {
-"schema": 1,
 "id": "2026-fed-rate-hikes",
 "title": "Fed expected to raise rates as inflation re-accelerates",
-"category": "monetary policy",
 "markets": [
 "US"
 ],
-"first_recorded": "2026-11-26",
 "event_started": "2026-11 (hawkish minutes released week of 2026-11-16)",
 "status": "open",
 "what_happened": "The Fed held its rate at 3.75% to 4.00% on 2026-10-28 with two members voting for an increase. Its minutes say futures markets put high odds on a quarter-point rise by year-end and two more by summer 2027. PCE inflation was 3.6% in September and 3.8% in October.",
@@ -735,27 +668,12 @@
 "note": "Added forecast 1: by 2027-03-31, 5% resolved, 10% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
 }
 ],
-"note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
 "unconfirmed_facts": [
 "2026-11-20: CME FedWatch 92% chance of a December hike: from a broker commentary; CME itself not read. The Fed minutes above support the direction but not this number",
 "2026-11-25: Q3 growth reported as revised up: the release behind this wording has not been identified. (The October inflation part of the same report is now confirmed above, from the Bureau of Economic Analysis.)"
 ],
-"superseded_sources": {
-"replaced_on": "2026-11-26",
-"reason": "Source rule of 2026-11-26: at least one primary source per card; commentary, blogs and reposts are not used as support",
-"sources": [
-"https://www.schwab.com/learn/story/market-volatility",
-"https://www.abc.net.au/news/2026-11-26/nasdaq-ai-tariffs-rattle-markets/107428016"
-],
-"facts_as_first_written": [
-"2026-11-20: CME FedWatch priced a 92% chance of a December hike; odds of two or more hikes by June 2027 above 80% (Schwab)",
-"2026-11-25: October inflation reported as having 'increased further'; Q3 growth revised up (ABC)"
-],
-"summary_as_first_written": "A strong October jobs report, hot inflation data and hawkish Fed minutes pushed markets to price a rate hike in December 2026 and further hikes in the first half of 2027."
-},
 "condition_reading_notes": {
 "written_on": "2026-11-26",
-"note": "How the conditions above are read. The conditions themselves are unchanged.",
 "notes": [
 "'Signal no further hikes' counts when the FOMC statement drops its reference to possible further increases, or when the median projection shows no higher rate at the end of the following year than the current range.",
 "Year-over-year CPI: months for which BLS publishes no 12-month change (October 2026 is one) are skipped; the condition uses the two most recent months that do have a published figure."
@@ -764,7 +682,6 @@
 "numeric_criteria": {
 "version": 1,
 "written_on": "2026-11-27",
-"note": "How each condition is counted, in numbers, with the latest reading known when this was written. Added on 2026-11-27. The resolution conditions above are unchanged and remain the test; where the two could be read differently, the original wording decides. 'latest' is a snapshot and is updated with a dated history line.",
 "items": [
 {
 "side": "resolved",
@@ -796,7 +713,6 @@
 },
 "counter_view": {
 "written_on": "2026-11-27",
-"note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
 "text": "The Fed's own minutes say futures already put high odds on a rise by year-end and two more by summer 2027. A rise that is already in prices may add little new stress, and oil has come down from its October level."
 },
 "forecasts": [
@@ -807,19 +723,15 @@
 "p_resolved": 0.05,
 "p_worsened": 0.1
 }
-],
-"_path": "events/2026-fed-rate-hikes.json"
+]
 },
 {
-"schema": 1,
 "id": "2026-japan-boj-tightening-yen",
 "title": "Japan: Bank of Japan rate rises and weak yen",
-"category": "monetary policy",
 "markets": [
 "JP",
 "US"
 ],
-"first_recorded": "2026-11-26",
 "event_started": "2026-11",
 "status": "open",
 "what_happened": "The Bank of Japan set its policy rate at around 1.25% in September 2026 and said it would continue to raise it. The yen traded near 159 to 160 per dollar in mid-November. A fall of about 5% in the Nikkei 225 on 2026-11-20 was widely reported but is not yet confirmed here.",
@@ -895,33 +807,14 @@
 "note": "Title was 'Japan: Bank of Japan rate rises, weak yen and equity sell-off'. Changed to say only what is confirmed. Conditions and forecasts unchanged."
 }
 ],
-"note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
 "unconfirmed_facts": [
 "2026-11-12: USD/JPY briefly above 160: an intraday high cannot be settled from the Federal Reserve's noon rates, which stayed below 160 in the week of 2026-11-16",
 "2026-11-20: Nikkei 225 -3,007.81 points to 56,436.65: not confirmed at a primary or wire source",
 "Q3 GDP: outlets report an annualized -0.1%. The Cabinet Office release of 2026-11-16 was opened but its table could not be read reliably, and what was extracted did not match that figure. Treated as unverified until the table is read properly",
 "Reuters survey expecting 1.5% in December; 10-year JGB yield about 2.80%: originals not read"
 ],
-"superseded_sources": {
-"replaced_on": "2026-11-26",
-"reason": "Source rule of 2026-11-26: at least one primary source per card; commentary, blogs and reposts are not used as support",
-"sources": [
-"https://newsonjapan.com/article/151493.php",
-"https://www.mufgresearch.com/rates/japan-economic-financial-weekly-16-november-2026",
-"https://www.troweprice.com/personal-investing/resources/insights/global-markets-weekly-update.html"
-],
-"facts_as_first_written": [
-"2026-11-20: Nikkei 225 -3,007.81 points (about -5.1%) to 56,436.65 (News On Japan)",
-"2026-11-12: USD/JPY briefly above 160 in New York (MUFG)",
-"Policy rate 1.25% since September; a majority in a Reuters survey released 2026-11-20 expect 1.5% in December (News On Japan)",
-"10-year JGB yield about 2.80% (T. Rowe Price, News On Japan)",
-"Q3 GDP annualised -0.1% against +0.2% expected (T. Rowe Price)"
-],
-"summary_as_first_written": "The Bank of Japan raised its policy rate to 1.25% in September 2026 and its governor said on 2026-11-19 that it should keep raising rates. The yen briefly weakened past 160 per dollar on 2026-11-12. The Nikkei 225 fell about 5.1% on 2026-11-20 in what was described as one of the largest declines in its history."
-},
 "condition_reading_notes": {
 "written_on": "2026-11-26",
-"note": "How the conditions above are read. The conditions themselves are unchanged.",
 "notes": [
 "USD/JPY is read from the Federal Reserve H.10 noon rate. 'Reported intervention' means intervention confirmed by Japan's Ministry of Finance. 'Majority forecast' means the median of the Reuters poll published before the meeting."
 ]
@@ -929,7 +822,6 @@
 "numeric_criteria": {
 "version": 1,
 "written_on": "2026-11-27",
-"note": "How each condition is counted, in numbers, with the latest reading known when this was written. Added on 2026-11-27. The resolution conditions above are unchanged and remain the test; where the two could be read differently, the original wording decides. 'latest' is a snapshot and is updated with a dated history line.",
 "items": [
 {
 "side": "resolved",
@@ -967,7 +859,6 @@
 },
 "counter_view": {
 "written_on": "2026-11-27",
-"note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
 "text": "The Bank of Japan has moved in small steps and said in advance that it would keep raising. A weak yen also lifts exporters' earnings. Sharp spillovers from Japan to the US market have been rare, so this may remain a local story."
 },
 "forecasts": [
@@ -978,18 +869,14 @@
 "p_resolved": 0.15,
 "p_worsened": 0.4
 }
-],
-"_path": "events/2026-japan-boj-tightening-yen.json"
+]
 },
 {
-"schema": 1,
 "id": "2026-nvidia-sec-and-leadership",
 "title": "Nvidia: CEO turmoil and government inquiries (SEC probe reported, not confirmed)",
-"category": "company",
 "markets": [
 "US"
 ],
-"first_recorded": "2026-11-26",
 "event_started": "2026-11-20",
 "status": "open",
 "what_happened": "Nvidia announced on 2026-11-12 that Jensen Huang had resigned as CEO, and on 2026-11-23 that the board had reinstated him. The company refers to ongoing government investigations and inquiries without naming an agency. Press reports of an SEC probe have not been confirmed by the company or the SEC.",
@@ -1076,29 +963,12 @@
 "note": "Added forecast 1: by 2027-04-30, 2% resolved, 4% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
 }
 ],
-"note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
 "unconfirmed_facts": [
 "SEC probe: a Reuters dispatch dated 2026-11-17 says the Wall Street Journal reported the SEC is probing Nvidia after Huang's resignation. It does not say the probe concerns accounting. The card's original wording (a Reuters report on 2026-11-20 of an inquiry into accounting practices) is not confirmed as written",
 "2026-11-25: Nvidia -8.7% in early trading: not confirmed at a primary or wire source"
 ],
-"superseded_sources": {
-"replaced_on": "2026-11-26",
-"reason": "Source rule of 2026-11-26: at least one primary source per card; commentary, blogs and reposts are not used as support",
-"sources": [
-"https://www.schwab.com/learn/story/market-volatility",
-"https://www.abc.net.au/news/2026-11-26/nasdaq-ai-tariffs-rattle-markets/107428016",
-"https://finance.yahoo.com/markets/stocks/articles/stocks-retreat-ai-rebound-stumbles-015155560.html"
-],
-"facts_as_first_written": [
-"2026-11-20: Reuters report of SEC inquiry into Nvidia accounting, as cited by Schwab",
-"Week of 2026-11-23: Huang's return as CEO reported; described as a 'temporary reprieve' (ABC/Reuters)",
-"2026-11-25: Nvidia -8.7% in early trading (ABC)"
-],
-"summary_as_first_written": "Reuters reported late on 2026-11-20 that the SEC is investigating Nvidia's accounting practices. Jensen Huang's sudden departure was reported the same week; his return as CEO was reported in the week of 2026-11-23."
-},
 "condition_reading_notes": {
 "written_on": "2026-11-26",
-"note": "How the conditions above are read. The conditions themselves are unchanged.",
 "notes": [
 "'The SEC inquiry' is read as any SEC inquiry disclosed by the company or the SEC. Neither has confirmed one in the documents read so far, so the first condition is judged from company filings and SEC announcements, not from press reports."
 ]
@@ -1106,7 +976,6 @@
 "numeric_criteria": {
 "version": 1,
 "written_on": "2026-11-27",
-"note": "How each condition is counted, in numbers, with the latest reading known when this was written. Added on 2026-11-27. The resolution conditions above are unchanged and remain the test; where the two could be read differently, the original wording decides. 'latest' is a snapshot and is updated with a dated history line.",
 "items": [
 {
 "side": "resolved",
@@ -1136,7 +1005,6 @@
 },
 "counter_view": {
 "written_on": "2026-11-27",
-"note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
 "text": "Neither the company nor the SEC has confirmed an SEC inquiry, and the quarterly results filing does not mention one. If there is none, this card's first condition tracks something that does not exist, and what remains is a leadership episode that the board has already reversed."
 },
 "forecasts": [
@@ -1148,17 +1016,14 @@
 "p_worsened": 0.04
 }
 ],
-"_path": "events/2026-nvidia-sec-and-leadership.json",
 "selection_mark": {
 "en": "Below our selection criteria: one condition waits on an SEC inquiry that nobody has confirmed.",
 "ko": "선정 기준 미달: 조건 하나가 아무도 확인하지 않은 SEC 조사에 걸려 있습니다."
 }
 },
 {
-"schema": 1,
 "id": "2026-us-ai-chip-export-rules",
 "title": "New US license rules on advanced AI chip shipments",
-"category": "trade policy",
 "markets": [
 "US",
 "TW",
@@ -1166,7 +1031,6 @@
 "EU",
 "CN"
 ],
-"first_recorded": "2026-11-26",
 "event_started": "2026-11 (week ending 2026-11-20)",
 "status": "open",
 "what_happened": "A US Commerce Department rule in effect from 2026-11-19 requires licenses for advanced chips going to overseas data centers that give significant computing access to companies from restricted countries, and for advanced-node chips made for non-approved designers. Press reports, not yet confirmed here, say TSMC and Samsung suspended some shipments to Chinese customers pending licenses.",
@@ -1245,27 +1109,12 @@
 "note": "Added forecast 1: by 2027-03-31, 7% resolved, 25% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
 }
 ],
-"note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
 "unconfirmed_facts": [
 "TSMC suspending some orders at 16 nm and below unless customers obtain licenses; FT report that TSMC and Samsung suspended some shipments: read only in a wire reprint dated 2026-11-20",
 "ASML and Infineon share falls: not confirmed"
 ],
-"superseded_sources": {
-"replaced_on": "2026-11-26",
-"reason": "Source rule of 2026-11-26: at least one primary source per card; commentary, blogs and reposts are not used as support",
-"sources": [
-"https://www.troweprice.com/personal-investing/resources/insights/global-markets-weekly-update.html"
-],
-"facts_as_first_written": [
-"Commerce Department announcement in the week ending 2026-11-20; exact date not stated in source (T. Rowe Price)",
-"FT: TSMC and Samsung suspended some chip shipments to Chinese customers pending US licences; Reuters: TSMC halting certain advanced-node orders (both as cited by T. Rowe Price)",
-"ASML and Infineon shares fell on concerns over tighter US chip export restrictions (T. Rowe Price)"
-],
-"summary_as_first_written": "The US Commerce Department announced rules requiring licences for certain shipments of advanced AI chips to overseas data centers that provide substantial computing power to specified Chinese entities. Press reports say TSMC and Samsung Electronics suspended some shipments to Chinese customers pending licences."
-},
 "condition_reading_notes": {
 "written_on": "2026-11-26",
-"note": "How the conditions above are read. The conditions themselves are unchanged.",
 "notes": [
 "The rule is an interim final rule already in effect. 'Published in final form' counts when the Bureau of Industry and Security publishes a final rule after the comment period or states that the interim rule stands. 'Major supplier' means TSMC or Samsung."
 ]
@@ -1273,7 +1122,6 @@
 "numeric_criteria": {
 "version": 1,
 "written_on": "2026-11-27",
-"note": "How each condition is counted, in numbers, with the latest reading known when this was written. Added on 2026-11-27. The resolution conditions above are unchanged and remain the test; where the two could be read differently, the original wording decides. 'latest' is a snapshot and is updated with a dated history line.",
 "items": [
 {
 "side": "resolved",
@@ -1303,7 +1151,6 @@
 },
 "counter_view": {
 "written_on": "2026-11-27",
-"note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
 "text": "The rule asks for a license, it does not ban. It excludes US-headquartered end users, and a January 2026 rule had already moved chips for China to case-by-case review. Licenses may be granted as a matter of routine, and the reported shipment halts are not confirmed."
 },
 "forecasts": [
@@ -1314,18 +1161,14 @@
 "p_resolved": 0.07,
 "p_worsened": 0.25
 }
-],
-"_path": "events/2026-us-ai-chip-export-rules.json"
+]
 },
 {
-"schema": 1,
 "id": "2026-us-appropriations-lapse",
 "title": "US government funding expires on 11 December 2026",
-"category": "fiscal policy",
 "markets": [
 "US"
 ],
-"first_recorded": "2026-11-26",
 "event_started": "2026-11",
 "status": "open",
 "what_happened": "Current federal appropriations run out on 2026-12-11 under Public Law 119-103, during the lame-duck session before the new Congress convenes in January 2027.",
@@ -1388,25 +1231,11 @@
 "note": "Added forecast 1: by 2026-12-12, 70% resolved, 12% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
 }
 ],
-"note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
 "unconfirmed_facts": [
 "A funding bill needs 60 Senate votes: this is the Senate cloture rule; no primary page stating it has been read"
 ],
-"superseded_sources": {
-"replaced_on": "2026-11-26",
-"reason": "Source rule of 2026-11-26: at least one primary source per card; commentary, blogs and reposts are not used as support",
-"sources": [
-"https://fortune.com/2026/11/09/us-debt-limit-outlook-xdate-deadline-default-congress-summer-recess/"
-],
-"facts_as_first_written": [
-"2026-12-11: current appropriations expire (Fortune)",
-"A funding bill needs 60 Senate votes (Fortune)"
-],
-"summary_as_first_written": "Current federal appropriations run out on 2026-12-11, during the lame-duck session before the new Congress convenes in January 2027. A funding bill needs 60 votes in the Senate."
-},
 "condition_reading_notes": {
 "written_on": "2026-11-26",
-"note": "How the conditions above are read. The conditions themselves are unchanged.",
 "notes": [
 "Signature is read from the White House list of signed bills or the public law text."
 ]
@@ -1414,7 +1243,6 @@
 "numeric_criteria": {
 "version": 1,
 "written_on": "2026-11-27",
-"note": "How each condition is counted, in numbers, with the latest reading known when this was written. Added on 2026-11-27. The resolution conditions above are unchanged and remain the test; where the two could be read differently, the original wording decides. 'latest' is a snapshot and is updated with a dated history line.",
 "items": [
 {
 "side": "resolved",
@@ -1438,7 +1266,6 @@
 },
 "counter_view": {
 "written_on": "2026-11-27",
-"note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
 "text": "The date has been known since September, and Congress passed that stopgap without a lapse. A deadline everyone can see is the kind of risk markets tend to deal with early, so the card may overstate a familiar event."
 },
 "forecasts": [
@@ -1449,18 +1276,14 @@
 "p_resolved": 0.7,
 "p_worsened": 0.12
 }
-],
-"_path": "events/2026-us-appropriations-lapse.json"
+]
 },
 {
-"schema": 1,
 "id": "2026-us-excess-capacity-tariffs",
 "title": "Proposed US tariffs on 'excess industrial capacity'",
-"category": "trade policy",
 "markets": [
 "US"
 ],
-"first_recorded": "2026-11-26",
 "event_started": "2026-11-24",
 "status": "open",
 "what_happened": "On 2026-11-25 the US Trade Representative found that 14 economies run structural excess industrial capacity and proposed tariffs on them, with ceilings from 15% to 35%. For China the proposal is up to 20%, with an alternative of up to 40% on all goods. Comments close on 2027-01-05 and no effective date is set.",
@@ -1535,26 +1358,11 @@
 "note": "Added forecast 1: by 2027-06-30, 5% resolved, 30% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
 }
 ],
-"note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
 "unconfirmed_facts": [
 "2026-11-25: MSCI Asia-Pacific ex-Japan -2.3%; South Korea down as much as 5.3% intraday: attributed to Reuters in a repost; original not read"
 ],
-"superseded_sources": {
-"replaced_on": "2026-11-26",
-"reason": "Source rule of 2026-11-26: at least one primary source per card; commentary, blogs and reposts are not used as support",
-"sources": [
-"https://www.abc.net.au/news/2026-11-26/nasdaq-ai-tariffs-rattle-markets/107428016",
-"https://finance.yahoo.com/markets/stocks/articles/stocks-retreat-ai-rebound-stumbles-015155560.html"
-],
-"facts_as_first_written": [
-"2026-11-24/25: proposal reported; effective date not stated in sources",
-"2026-11-25: MSCI Asia-Pacific ex-Japan -2.3%; South Korea down as much as 5.3% intraday (Reuters)"
-],
-"summary_as_first_written": "The US proposed new tariffs on major trading partners over what it calls structural excess industrial capacity. Reports differ on the count (14 partners per ABC, 16 per Reuters). China faces the highest proposed rate, 20% on top of existing duties of roughly 25%."
-},
 "condition_reading_notes": {
 "written_on": "2026-11-26",
-"note": "How the conditions above are read. The conditions themselves are unchanged.",
 "notes": [
 "'Proposed rates' means the ceilings in the USTR notices of 2026-11-25. Final rates and dates are read from the Federal Register."
 ]
@@ -1562,7 +1370,6 @@
 "numeric_criteria": {
 "version": 1,
 "written_on": "2026-11-27",
-"note": "How each condition is counted, in numbers, with the latest reading known when this was written. Added on 2026-11-27. The resolution conditions above are unchanged and remain the test; where the two could be read differently, the original wording decides. 'latest' is a snapshot and is updated with a dated history line.",
 "items": [
 {
 "side": "resolved",
@@ -1592,7 +1399,6 @@
 },
 "counter_view": {
 "written_on": "2026-11-27",
-"note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
 "text": "These are ceilings ('up to') in a proposal with no effective date. Rates could come out lower or be dropped after the hearings. After the 2018 and 2025 tariff announcements the market hit its low within about a week."
 },
 "forecasts": [
@@ -1603,18 +1409,14 @@
 "p_resolved": 0.05,
 "p_worsened": 0.3
 }
-],
-"_path": "events/2026-us-excess-capacity-tariffs.json"
+]
 },
 {
-"schema": 1,
 "id": "2026-us-iran-war-oil",
 "title": "Middle East military action and disrupted oil shipments through the Strait of Hormuz",
-"category": "geopolitical",
 "markets": [
 "US"
 ],
-"first_recorded": "2026-11-26",
 "event_started": "2026-03",
 "status": "open",
 "what_happened": "Military action in the Middle East that began in early March 2026 cut shipments through the Strait of Hormuz and drove oil sharply higher. Brent averaged $124 in October and fell below $100 in early November. New attacks on vessels on 2026-11-24 were reported but are not yet confirmed here.",
@@ -1696,28 +1498,12 @@
 "note": "Title was 'US-Iran war and shipping attacks around the Strait of Hormuz'. Changed to say only what is confirmed. Conditions and forecasts unchanged."
 }
 ],
-"note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
 "unconfirmed_facts": [
 "VIX closing high of 31.05 on 2026-03-27: not yet checked against this record's own VIX series",
 "2026-11-24: Brent settled more than 2% higher after reported attacks on vessels; opened at 90.97 in Asia on 2026-11-25: attributed to Reuters in a repost; original not read"
 ],
-"superseded_sources": {
-"replaced_on": "2026-11-26",
-"reason": "Source rule of 2026-11-26: at least one primary source per card; commentary, blogs and reposts are not used as support",
-"sources": [
-"https://www.abc.net.au/news/2026-11-26/nasdaq-ai-tariffs-rattle-markets/107428016",
-"https://finance.yahoo.com/markets/stocks/articles/stocks-retreat-ai-rebound-stumbles-015155560.html",
-"https://ceoeconomy.com/article/vix-closes-at-2026-high-35-89-wall-street-fear-gauge-nov-2026"
-],
-"facts_as_first_written": [
-"War began March 2026; VIX closing high during that episode 31.05 on 2026-03-27 (ceoeconomy)",
-"2026-11-24: Brent settled more than 2% higher after reported attacks on vessels; opened at 90.97 in Asia on 2026-11-25 (Reuters)"
-],
-"summary_as_first_written": "The US-Iran war that began in March 2026 has driven a sustained rise in oil prices. New attacks on vessels in and around the Strait of Hormuz were reported on 2026-11-24."
-},
 "condition_reading_notes": {
 "written_on": "2026-11-26",
-"note": "How the conditions above are read. The conditions themselves are unchanged.",
 "notes": [
 "'Both governments' means the United States and Iran. Brent is read from the daily spot series published by the EIA (FRED: DCOILBRENTEU). An attack counts when reported by Reuters or AP, or listed by the UK Maritime Trade Operations office."
 ]
@@ -1725,7 +1511,6 @@
 "numeric_criteria": {
 "version": 1,
 "written_on": "2026-11-27",
-"note": "How each condition is counted, in numbers, with the latest reading known when this was written. Added on 2026-11-27. The resolution conditions above are unchanged and remain the test; where the two could be read differently, the original wording decides. 'latest' is a snapshot and is updated with a dated history line.",
 "items": [
 {
 "side": "resolved",
@@ -1769,7 +1554,6 @@
 },
 "counter_view": {
 "written_on": "2026-11-27",
-"note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
 "text": "Supply is coming back: production shut in has fallen from 10.9 to 2.5 million barrels a day and Brent from an October average of $124 to under $100. The $80 line is our own choice. If the economy has adjusted to oil near $100, the risk could fade well before our conditions say so."
 },
 "forecasts": [
@@ -1780,18 +1564,14 @@
 "p_resolved": 0.05,
 "p_worsened": 0.2
 }
-],
-"_path": "events/2026-us-iran-war-oil.json"
+]
 },
 {
-"schema": 1,
 "id": "2026-us-private-credit-defaults",
 "title": "US private credit: fast growth and redemption limits (default rate reported, not confirmed)",
-"category": "credit",
 "markets": [
 "US"
 ],
-"first_recorded": "2026-11-26",
 "event_started": "2026 (default rate at a record 6.0% in April 2026)",
 "status": "open",
 "what_happened": "US private credit has grown to about $1.5 trillion outstanding, up 13.8% in a year. The Federal Reserve reports that some funds kept redemption limits and net flows stayed negative. A Fitch default rate of 6.2% for October has been reported but not yet read at Fitch.",
@@ -1868,29 +1648,12 @@
 "note": "Title was 'Rising defaults in US private credit'. Changed to say only what is confirmed. Conditions and forecasts unchanged."
 }
 ],
-"note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
 "unconfirmed_facts": [
 "Fitch: trailing-12-month default rate 6.2% in October 2026 (6.3% in September); 10.7% for issuers under $25 million EBITDA versus 2.4% above $100 million: matches a trade publication dated 2026-11-17 but has not been read at Fitch. The '90 unique defaulters' figure in the original card was not found",
 "JPMorgan default forecasts and the Moody's figure on bank lending: originals not read"
 ],
-"superseded_sources": {
-"replaced_on": "2026-11-26",
-"reason": "Source rule of 2026-11-26: at least one primary source per card; commentary, blogs and reposts are not used as support",
-"sources": [
-"https://maxsdigest.substack.com/p/maxs-digest-wednesday-november-18",
-"https://www.forbes.com/sites/mayrarodriguezvalladares/2026/05/24/rising-private-credit-defaults-are-testing-banks-and-insurers/"
-],
-"facts_as_first_written": [
-"Fitch: 6.2% trailing-12-month default rate to October 2026, 6.3% in September; 90 unique defaulters; 10.7% for issuers under 25 million dollars EBITDA versus 2.4% above 100 million (Max's Digest, 2026-11-18)",
-"JPMorgan forecasts leveraged-loan defaults of 4.5% in 2027 and 4.75% in 2028 (Max's Digest)",
-"Moody's: banks had extended nearly 300 billion dollars to private credit funds, BDCs and CLOs as of October 2025 (Forbes, 2026-05-24)",
-"No fund redemption gate in November 2026 is stated in these sources"
-],
-"summary_as_first_written": "The Fitch trailing-12-month US private credit default rate stood at 6.2% in October 2026. Most default events are payment deferrals and maturity extensions rather than bankruptcies, and smaller borrowers default far more often. Banks and life insurers have large exposures to private credit funds."
-},
 "condition_reading_notes": {
 "written_on": "2026-11-26",
-"note": "How the conditions above are read. The conditions themselves are unchanged.",
 "notes": [
 "The Fitch rate is read from Fitch's own monthly release or a Reuters or Bloomberg report quoting it. 'Large private credit fund' means one with at least $1 billion in assets."
 ]
@@ -1898,7 +1661,6 @@
 "numeric_criteria": {
 "version": 1,
 "written_on": "2026-11-27",
-"note": "How each condition is counted, in numbers, with the latest reading known when this was written. Added on 2026-11-27. The resolution conditions above are unchanged and remain the test; where the two could be read differently, the original wording decides. 'latest' is a snapshot and is updated with a dated history line.",
 "items": [
 {
 "side": "resolved",
@@ -1936,7 +1698,6 @@
 },
 "counter_view": {
 "written_on": "2026-11-27",
-"note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
 "text": "Stress has not shown up in traded credit: the high-yield spread in this record is at 1 of 3 steps. The Federal Reserve reports that redemption requests have trended lower. The defaults may stay among small borrowers and never reach banks or public markets."
 },
 "forecasts": [
@@ -1947,18 +1708,14 @@
 "p_resolved": 0.02,
 "p_worsened": 0.45
 }
-],
-"_path": "events/2026-us-private-credit-defaults.json"
+]
 },
 {
-"schema": 1,
 "id": "2027-us-debt-limit",
 "title": "US federal debt limit expected to be approached in fiscal year 2027",
-"category": "fiscal policy",
 "markets": [
 "US"
 ],
-"first_recorded": "2026-11-26",
 "event_started": "2026-11",
 "status": "open",
 "what_happened": "The federal debt limit is $41.1 trillion. On 2026-11-19 debt subject to the limit was about $597 billion below it. The Congressional Research Service says borrowing is projected to approach the limit during fiscal year 2027; Treasury has not published a date. Democrats will control both chambers of the next Congress and therefore the vote.",
@@ -2033,26 +1790,11 @@
 "note": "Title was 'US federal debt limit standoff'. Changed to say only what is confirmed. Conditions and forecasts unchanged."
 }
 ],
-"note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
 "unconfirmed_facts": [
 "Bank forecasts (limit reached as early as February 2027; X-date November 2027) and a downgrade warning: from a magazine article citing bank research; originals not read"
 ],
-"superseded_sources": {
-"replaced_on": "2026-11-26",
-"reason": "Source rule of 2026-11-26: at least one primary source per card; commentary, blogs and reposts are not used as support",
-"sources": [
-"https://fortune.com/2026/11/09/us-debt-limit-outlook-xdate-deadline-default-congress-summer-recess/"
-],
-"facts_as_first_written": [
-"2026-11-09: limit 41.1 trillion dollars; about 557 billion dollars of room left (Fortune, citing BofA)",
-"BofA: limit reached as early as February; X-date forecast November 2027, risk from August 2027 (Fortune)",
-"BMO warns of a protracted 2027 standoff with downgrade risk (Fortune)"
-],
-"summary_as_first_written": "The federal borrowing limit of 41.1 trillion dollars is close to being reached. Bank of America analysts estimate it could be reached as early as February (2027 implied), with a central X-date forecast of November 2027 and risk of getting uncomfortably close as early as August 2027. After the midterm elections Democrats will control both chambers of the next Congress and therefore the vote."
-},
 "condition_reading_notes": {
 "written_on": "2026-11-26",
-"note": "How the conditions above are read. The conditions themselves are unchanged.",
 "notes": [
 "'Major rating agency' means S&P, Moody's or Fitch. The X-date is read from a Treasury letter to Congress."
 ]
@@ -2060,7 +1802,6 @@
 "numeric_criteria": {
 "version": 1,
 "written_on": "2026-11-27",
-"note": "How each condition is counted, in numbers, with the latest reading known when this was written. Added on 2026-11-27. The resolution conditions above are unchanged and remain the test; where the two could be read differently, the original wording decides. 'latest' is a snapshot and is updated with a dated history line.",
 "items": [
 {
 "side": "resolved",
@@ -2090,7 +1831,6 @@
 },
 "counter_view": {
 "written_on": "2026-11-27",
-"note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
 "text": "There is no X-date yet. With about $597 billion of room and extraordinary measures still unused, any real deadline is probably many months away. This card may be open long before it matters to markets."
 },
 "forecasts": [
@@ -2101,8 +1841,7 @@
 "p_resolved": 0.1,
 "p_worsened": 0.05
 }
-],
-"_path": "events/2027-us-debt-limit.json"
+]
 }
 ],
 "aids": {
@@ -5296,7 +5035,6 @@
 }
 },
 "hindsight": {
-"note": "Hindsight cases. Written after the outcomes were known, to illustrate the idea of a condition that good news does not meet. Dates and events are as stated in the listed sources (read 2026-11-26). The 'still_open' line is AFMX's own reading with hindsight. None of this is part of the AFMX record, which starts on 2026-11-26.",
 "cases": [
 {
 "id": "2023-us-debt-ceiling",
@@ -5476,15 +5214,7 @@
 "https://www.federalreserve.gov/newsevents/pressreleases/monetary20080316a.htm"
 ]
 }
-],
-"withdrawn": [
-{
-"id": "2021-evergrande",
-"date": "2026-11-26",
-"reason": "Withdrawn until it can be supported by a primary source. It rested on Wikipedia, which no longer meets the source bar."
-}
-],
-"source_rule": "Every case needs at least one primary source (government, central bank, regulator, statute, company filing). Checked 2026-11-26 against the pages listed."
+]
 },
 "ko": {
 "2026-ai-buildout-financing": {

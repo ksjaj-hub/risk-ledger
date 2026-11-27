@@ -241,6 +241,16 @@ def _patterns():
 aids["patterns"] = _patterns()
 sc_path = ROOT / "sector_scores" / "scorecard.json"
 aids["scorecard"] = json.loads(sc_path.read_text()) if sc_path.exists() else None
+# Page weight: the page file carries only what the page shows. Everything dropped here stays in the source files
+# (events/*.json and hindsight/cases.json), which are the record; docs/data.json is a copy for the screen.
+for _e in data["events"]:
+    for _k in ("superseded_sources", "_path", "schema", "note", "category", "first_recorded"):
+        _e.pop(_k, None)
+    for _k in ("numeric_criteria", "counter_view", "condition_reading_notes"):
+        if isinstance(_e.get(_k), dict):
+            _e[_k].pop("note", None)
+for _k in ("withdrawn", "source_rule", "note"):
+    data["hindsight"].pop(_k, None)
 out = ROOT / "docs" / "data.json"
 out.parent.mkdir(exist_ok=True)
 out.write_text(json.dumps(data, indent=0, ensure_ascii=False) + "\n")  # no indent: keeps one value per line for diffs, smaller file
