@@ -4,6 +4,8 @@ One file per event. Each card says what happened, how it reaches markets, and, m
 **what would have to be true for the risk to count as resolved, written down before the outcome is known**.
 
 - `status` is one of `open`, `easing`, `resolved`, `worsened`.
+- Why a risk gets a card at all, and what closes one, is in `selection/criteria.json`. It adds one way to close:
+  `withdrawn`, for a card whose founding fact is taken back or never confirmed. No card has used it yet.
 - The original `resolution_conditions` are not rewritten. If they need to change, the change is added to
   `history` with a date and a reason, so readers can see both versions.
 - `relief_headlines_that_do_not_resolve_it` lists good news that does not meet the conditions.
@@ -19,7 +21,9 @@ One file per event. Each card says what happened, how it reaches markets, and, m
 1. Add its Korean reading aid to `i18n/events.ko.json`.
 2. Add its related tickers to `aids/reading.json` (`exposure`), and any deadline stated in its sources to `dates`.
 3. Review `featured` in `aids/reading.json`: up to three cards that matter most this week.
-4. Run `python3 scripts/build_site.py` and commit `docs/data.json` with the change.
+4. Add or update the card's line in `selection/criteria.json` and run `python3 scripts/selection_check.py`
+   (see `selection/README.md`). An event that was looked at and not carded gets a line under `left_out` there.
+5. Run `python3 scripts/build_site.py` and commit `docs/data.json` with the change.
 
 For a new card also add `risk_factors` (which measured shock it resembles, may be empty) and `about` (sectors it is
 literally about) in `aids/reading.json`. Evidence levels and sector scores are then computed by `build_site.py`

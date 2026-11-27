@@ -1,0 +1,246 @@
+{
+ "version": 1,
+ "written_on": "2026-11-27",
+ "note": "Why a risk gets a card, and what closes one. Written on 2026-11-27, one day after the first 12 cards were opened, so for those 12 it is a check after the fact. A new way of selecting is a new version with a dated line in history; this version stays.",
+ "open_when_all": [
+  {
+   "id": "S1",
+   "name": {"en": "A primary source states it", "ko": "1차 출처가 그 사건을 말한다"},
+   "rule": {
+    "en": "The event in the card's title is stated by at least one primary source that we opened and read: a government, central bank or regulator document, a law, or the company's own filing. Press reports alone do not open a card. If part of the title rests only on press reports, the title says so.",
+    "ko": "카드 제목에 적힌 사건을 1차 출처 한 곳 이상이 직접 말하고, 저희가 그 문서를 열어 읽었어야 합니다. 1차 출처는 정부, 중앙은행, 감독기관의 문서와 법, 회사가 직접 낸 공시입니다. 언론 보도만으로는 카드를 열지 않습니다. 제목의 일부가 보도에만 근거하면 제목에 그렇게 적습니다."
+   },
+   "checked_by": "script: at least one sourced_facts entry with tier 'primary'. By hand: every claim in the title is among the confirmed facts."
+  },
+  {
+   "id": "S2",
+   "name": {"en": "Big enough to move a market", "ko": "시장을 움직일 만큼 크다"},
+   "rule": {
+    "en": "It comes in through one of four doors. (a) A law, decision, proposal or official statistic of the government or central bank of the United States, the euro area, China or Japan. (b) A weakness named in a central bank's financial stability report or in a speech by one of its governors. (c) An armed conflict or supply disruption whose effect on a commodity an official statistics agency has measured. (d) A single company, only if it is one of the ten largest in the S&P 500 and the facts come from its own SEC filings.",
+    "ko": "네 문 가운데 하나로 들어와야 합니다. (가) 미국, 유로존, 중국, 일본의 정부나 중앙은행이 낸 법, 결정, 제안, 공식 통계. (나) 중앙은행의 금융안정보고서나 이사 연설이 이름을 붙여 짚은 약점. (다) 무력 충돌이나 공급 차질 가운데 공식 통계 기관이 원자재에 미친 영향을 잰 것. (라) 개별 회사는 S&P 500에서 가장 큰 10개 회사 안에 들고, 사실이 그 회사의 SEC 공시에서 나올 때만."
+   },
+   "checked_by": "By hand: the door is named in the audit."
+  },
+  {
+   "id": "S3",
+   "name": {"en": "A named route to prices", "ko": "가격에 닿는 길이 적혀 있다"},
+   "rule": {
+    "en": "The card says how the risk reaches markets and lists at least one traded fund or share to watch.",
+    "ko": "카드가 이 리스크가 시장에 닿는 길을 적고, 지켜볼 상장 펀드나 종목을 하나 이상 적어야 합니다."
+   },
+   "checked_by": "script: how_it_reaches_markets is filled and aids/reading.json lists at least one ticker for the card."
+  },
+  {
+   "id": "S4",
+   "name": {"en": "An ending anyone can check", "ko": "누구나 확인할 수 있는 끝이 있다"},
+   "rule": {
+    "en": "There is at least one condition for 'resolved' and one for 'worsened', and each has a counting rule in numbers. No condition tracks something that nobody has confirmed exists. No condition is waiting on a number that we named but have not read.",
+    "ko": "'해소' 조건과 '악화' 조건이 각각 하나 이상 있고, 조건마다 숫자로 세는 방법이 붙어 있어야 합니다. 있는지 아무도 확인하지 않은 것을 따라가는 조건은 안 됩니다. 저희가 출처를 정해 놓고 아직 읽지 않은 숫자에 걸린 조건도 안 됩니다."
+   },
+   "checked_by": "script: both sides present, numeric_criteria covers every condition, and any 'not_measurable_yet' item must be explained in the audit. By hand: why it cannot be counted."
+  },
+  {
+   "id": "S5",
+   "name": {"en": "Written before the outcome", "ko": "결과가 나오기 전에 적었다"},
+   "rule": {
+    "en": "The conditions carry the date they were written, and the card has a deadline with odds that are never edited. For a large new event the card is opened within 24 hours on weekdays.",
+    "ko": "조건에 적은 날짜가 있고, 카드에 기한과 확률이 붙어 있으며 한 번 적은 것은 고치지 않습니다. 큰 사건이 새로 생기면 평일 기준 24시간 안에 카드를 엽니다."
+   },
+   "checked_by": "script: resolution_conditions.written_on is set and at least one forecast has a deadline after that date."
+  },
+  {
+   "id": "S6",
+   "name": {"en": "One card per cause", "ko": "원인 하나에 카드 하나"},
+   "rule": {
+    "en": "If the same fact would resolve two cards, they are one card. Cards with different causes may still hit the same shares; the sector score then counts them as one group so the same exposure is not counted twice.",
+    "ko": "같은 사실 하나로 두 카드가 함께 해소된다면 한 카드로 씁니다. 원인이 다른 카드들이 같은 종목에 닿을 수는 있습니다. 그때는 섹터 점수에서 한 묶음으로 세어 같은 노출을 두 번 세지 않습니다."
+   },
+   "checked_by": "By hand: no two cards share a resolving fact. script: reports how many cards watch the same ticker."
+  }
+ ],
+ "closed_when": [
+  {
+   "id": "resolved",
+   "name": {"en": "Resolved", "ko": "해소"},
+   "rule": {
+    "en": "Every 'resolved' condition is met. The card gets a dated line naming the source and moves to the record. Good news that meets no condition does not close a card.",
+    "ko": "'해소' 조건이 모두 충족됐을 때입니다. 출처와 날짜를 한 줄로 남기고 카드는 기록으로 옮깁니다. 조건을 하나도 채우지 못한 호재로는 카드를 닫지 않습니다."
+   }
+  },
+  {
+   "id": "worsened",
+   "name": {"en": "Worsened", "ko": "악화"},
+   "rule": {
+    "en": "Any one 'worsened' condition is reached. The card is marked and stays open until it resolves.",
+    "ko": "'악화' 조건 가운데 하나라도 닿았을 때입니다. 카드에 표시하고, 해소될 때까지 열어 둡니다."
+   }
+  },
+  {
+   "id": "withdrawn",
+   "name": {"en": "Withdrawn", "ko": "철회"},
+   "rule": {
+    "en": "The source takes back the fact the card stands on. Or: a card fails S4 because one condition tracks something unconfirmed, and it is still unconfirmed when the card's deadline arrives. The card is closed as withdrawn with the reason. Its odds are still scored. If the confirmed part still matters, a new card is opened that uses only confirmed facts.",
+    "ko": "카드가 딛고 선 사실을 출처가 거둬들였을 때입니다. 또는 확인되지 않은 것을 따라가는 조건 때문에 4번 기준에 못 미친 카드가 기한이 될 때까지 그대로일 때입니다. 이유를 적고 철회로 닫습니다. 적어 둔 확률은 그대로 채점합니다. 확인된 부분이 여전히 중요하면 확인된 사실만으로 새 카드를 엽니다."
+   }
+  }
+ ],
+ "never": {
+  "en": "A card is never deleted and its conditions are never rewritten. A closed card stays on the record with its history.",
+  "ko": "카드는 지우지 않고, 조건은 고쳐 쓰지 않습니다. 닫힌 카드도 지나온 기록과 함께 남습니다."
+ },
+ "home_screen": {
+  "en": "The home screen shows up to three cards, picked by hand each week: the nearest dated deadline first, then the newest change at a primary source. Being widely followed can keep a card on the home screen. It does not make the card pass these criteria, and such a card carries a mark.",
+  "ko": "홈 화면에는 카드를 세 장까지 보여 줍니다. 매주 손으로 고르며, 날짜가 정해진 기한이 가장 가까운 것이 먼저이고 그다음은 1차 출처에서 가장 최근에 바뀐 것입니다. 많은 분이 지켜보는 카드는 홈에 둘 수 있습니다. 그렇다고 이 기준을 통과한 것은 아니며, 그런 카드에는 표시를 붙입니다."
+ },
+ "limits": [
+  {
+   "en": "These criteria were written the day after the first 12 cards. They did not choose those cards; they only check them afterwards. The doors in S2 were drawn knowing which cards existed, so all 12 passing S2 proves little.",
+   "ko": "이 기준은 첫 카드 12장을 연 다음 날 썼습니다. 그 카드들을 이 기준으로 고른 것이 아니라 나중에 맞춰 본 것입니다. 2번 기준의 문은 어떤 카드가 있는지 아는 상태에서 정했으므로, 12장이 모두 2번을 통과했다는 사실은 증명하는 것이 거의 없습니다."
+  },
+  {
+   "en": "Before 2026-11-27 we kept no list of events that were looked at and left out. Nobody, including us, can check what the first 12 were chosen over. The list starts now, below.",
+   "ko": "2026년 11월 27일 전에는 살펴보고 넣지 않은 사건의 목록을 남기지 않았습니다. 첫 12장이 무엇을 제치고 뽑혔는지는 저희를 포함해 누구도 확인할 수 없습니다. 목록은 지금부터 아래에 남깁니다."
+  },
+  {
+   "en": "One operator picks the cards and runs this check. No outside reviewer has gone through it.",
+   "ko": "카드를 고르는 사람과 이 점검을 하는 사람이 같은 운영자 한 명입니다. 외부 검토는 받지 않았습니다."
+  },
+  {
+   "en": "Some conditions do not yet say which source settles them, for example who decides that a bond default or a Nikkei close counts.",
+   "ko": "어느 출처로 판정할지 아직 적지 않은 조건이 있습니다. 예를 들어 채권 부도나 닛케이 종가를 어디서 읽을지 정해 두지 않았습니다."
+  },
+  {
+   "en": "This is not a full list of market risks. A risk with no card may simply be one we missed.",
+   "ko": "시장의 리스크를 빠짐없이 모은 목록이 아닙니다. 카드가 없는 리스크는 저희가 놓친 것일 수 있습니다."
+  }
+ ],
+ "audit": {
+  "checked_on": "2026-11-27",
+  "note": "Each of the 12 cards against version 1. 'partly' means the card stands on confirmed facts but its title or one condition runs ahead of them. Only what is in the card files was used; no new source was read for this check.",
+  "cards": {
+   "2026-us-appropriations-lapse": {
+    "door": "a",
+    "results": {"S1": "met", "S2": "met", "S3": "met", "S4": "met", "S5": "met", "S6": "met"}
+   },
+   "2026-us-excess-capacity-tariffs": {
+    "door": "a",
+    "results": {"S1": "met", "S2": "met", "S3": "met", "S4": "met", "S5": "met", "S6": "met"}
+   },
+   "2026-us-ai-chip-export-rules": {
+    "door": "a",
+    "results": {"S1": "met", "S2": "met", "S3": "met", "S4": "met", "S5": "met", "S6": "met"}
+   },
+   "2026-china-domestic-demand-property": {
+    "door": "a",
+    "results": {"S1": "met", "S2": "met", "S3": "met", "S4": "met", "S5": "met", "S6": "met"}
+   },
+   "2026-fed-rate-hikes": {
+    "door": "a",
+    "results": {"S1": "met", "S2": "met", "S3": "met", "S4": "met", "S5": "met", "S6": "met"},
+    "not_measurable": {
+     "en": "The inflation condition cannot be counted this month because the statistics bureau published no 12-month change for October. The number exists at a named source and the card says which months are used instead, so this is not a gap.",
+     "ko": "물가 조건은 이번 달에 셀 수 없습니다. 통계 기관이 10월의 12개월 변화율을 내지 않았기 때문입니다. 숫자가 나오는 곳이 정해져 있고 대신 어느 달을 쓸지도 카드에 적혀 있어, 기준에 못 미친 것으로 보지 않습니다."
+    }
+   },
+   "2026-eurozone-inflation-ecb": {
+    "door": "a",
+    "results": {"S1": "partly", "S2": "met", "S3": "met", "S4": "met", "S5": "met", "S6": "met"},
+    "gap": {
+     "en": "The title says inflation is at 4%. The confirmed figure is 3.8% for September; the 4.0% October reading is still listed as unconfirmed on the card.",
+     "ko": "제목은 물가가 4%라고 말합니다. 확인된 수치는 9월 3.8%이고, 10월 4.0%는 카드에 아직 미확인으로 적혀 있습니다."
+    },
+    "fix": {
+     "en": "Read the Eurostat release, or change the title to the confirmed figure.",
+     "ko": "유로스타트 발표를 읽어 확인하거나, 제목을 확인된 수치로 바꿉니다."
+    }
+   },
+   "2026-japan-boj-tightening-yen": {
+    "door": "a",
+    "results": {"S1": "partly", "S2": "met", "S3": "met", "S4": "met", "S5": "met", "S6": "met"},
+    "gap": {
+     "en": "The title names an equity sell-off. The rate decision and the yen level are confirmed; the fall in the Nikkei is not.",
+     "ko": "제목에 주가 급락이 들어 있습니다. 금리 결정과 엔화 수준은 확인됐지만 닛케이 하락은 확인되지 않았습니다."
+    },
+    "fix": {
+     "en": "Confirm the index move at the exchange or a wire, or take it out of the title.",
+     "ko": "지수 움직임을 거래소나 통신사에서 확인하거나, 제목에서 뺍니다."
+    }
+   },
+   "2026-us-iran-war-oil": {
+    "door": "c",
+    "results": {"S1": "partly", "S2": "met", "S3": "met", "S4": "met", "S5": "partly", "S6": "met"},
+    "gap": {
+     "en": "The title says 'US-Iran war'. The primary source on the card, the US energy agency, says only 'military action in the Middle East' and measures the oil shock. No government document naming the two sides has been read. Also, the event began in March 2026 and the card opened in November, so its conditions were written eight months in.",
+     "ko": "제목은 '미국과 이란 전쟁'이라고 말합니다. 카드의 1차 출처인 미국 에너지정보청은 '중동의 군사 행동'이라고만 쓰고 유가 충격을 잽니다. 두 당사국을 밝힌 정부 문서는 읽지 못했습니다. 또 사건은 2026년 3월에 시작됐는데 카드는 11월에 열어, 조건을 여덟 달이 지난 뒤에 썼습니다."
+    },
+    "fix": {
+     "en": "Add a government document that names the parties.",
+     "ko": "당사국을 밝힌 정부 문서를 찾아 넣습니다."
+    }
+   },
+   "2027-us-debt-limit": {
+    "door": "a",
+    "results": {"S1": "partly", "S2": "met", "S3": "met", "S4": "met", "S5": "met", "S6": "met"},
+    "gap": {
+     "en": "The title says 'standoff'. The confirmed facts are the limit, the room left under it and a projection that it will be approached in fiscal year 2027. No source shows a standoff yet; this card is early.",
+     "ko": "제목은 '대치'라고 말합니다. 확인된 사실은 한도, 남은 여유, 그리고 2027 회계연도에 한도에 가까워진다는 전망입니다. 대치가 벌어졌다고 말한 출처는 아직 없습니다. 이른 카드입니다."
+    },
+    "fix": {
+     "en": "Change the title to what is confirmed: the limit is approaching.",
+     "ko": "제목을 확인된 내용에 맞춰 '한도가 다가온다'로 바꿉니다."
+    }
+   },
+   "2026-us-private-credit-defaults": {
+    "door": "b",
+    "results": {"S1": "partly", "S2": "met", "S3": "met", "S4": "partly", "S5": "partly", "S6": "met"},
+    "gap": {
+     "en": "The title says defaults are rising. The Federal Reserve documents on the card confirm the size of the market and the redemption limits, not a default rate. The main conditions use a rating agency's default rate that we have not read at the agency. The trend began before the card opened.",
+     "ko": "제목은 부도가 늘고 있다고 말합니다. 카드에 있는 연준 문서가 확인해 주는 것은 시장 규모와 환매 제한이고, 부도율은 아닙니다. 핵심 조건은 신용평가사의 부도율에 걸려 있는데 저희는 그 숫자를 평가사에서 직접 읽지 못했습니다. 이 흐름은 카드를 열기 전부터 있었습니다."
+    },
+    "fix": {
+     "en": "Read the default rate at the agency, or move the conditions to a figure a public body publishes.",
+     "ko": "부도율을 평가사에서 직접 읽거나, 조건을 공공 기관이 내는 수치로 옮깁니다."
+    }
+   },
+   "2026-ai-buildout-financing": {
+    "door": "b",
+    "results": {"S1": "partly", "S2": "met", "S3": "met", "S4": "partly", "S5": "met", "S6": "met"},
+    "gap": {
+     "en": "A Federal Reserve governor and its stability report confirm that the buildout is increasingly funded by debt. The sell-off that prompted the card is known only from press and broker notes. One condition needs an index level that we named but have not yet read, so it cannot be counted.",
+     "ko": "설비 투자가 점점 빚으로 이뤄진다는 점은 연준 이사 연설과 금융안정보고서로 확인됩니다. 카드를 연 계기인 주가 급락은 언론과 증권사 자료로만 알려져 있습니다. 조건 하나는 저희가 출처를 정해 놓고 아직 읽지 않은 지수 수준이 필요해 셀 수 없습니다."
+    },
+    "fix": {
+     "en": "Read the index level and write it on the card.",
+     "ko": "지수 수준을 읽어 카드에 적습니다."
+    }
+   },
+   "2026-nvidia-sec-and-leadership": {
+    "door": "d",
+    "results": {"S1": "met", "S2": "partly", "S3": "met", "S4": "not_met", "S5": "met", "S6": "met"},
+    "gap": {
+     "en": "The first 'resolved' condition waits for an SEC inquiry to be closed. Neither the company nor the SEC has confirmed that one exists, so the card cannot resolve as written. The confirmed part is the CEO's resignation and return and the company's own mention of government inquiries. We also have not checked the company's size at a source, only assumed it.",
+     "ko": "첫 '해소' 조건은 SEC 조사가 끝나기를 기다립니다. 그런 조사가 있다는 것을 회사도 SEC도 확인하지 않았으므로, 적힌 대로는 카드가 해소될 수 없습니다. 확인된 것은 CEO의 사임과 복귀, 그리고 회사가 직접 언급한 정부 조사입니다. 회사 규모도 출처에서 확인하지 않고 그렇다고 보았을 뿐입니다."
+    },
+    "fix": {
+     "en": "If an inquiry is confirmed, the card meets S4 from that day. If not by the deadline of 2027-04-30, the card is withdrawn and the confirmed part reopens as a new card.",
+     "ko": "조사가 확인되면 그날부터 4번 기준을 충족합니다. 기한인 2027년 4월 30일까지 확인되지 않으면 카드를 철회하고, 확인된 부분은 새 카드로 엽니다."
+    },
+    "kept": {
+     "en": "Kept open and on the home screen by the operator's decision of 2026-11-27, because the episode is widely reported and widely followed. That is a reason to show it, not a pass.",
+     "ko": "2026년 11월 27일 운영자 결정으로 카드를 열어 두고 홈 화면에도 둡니다. 널리 보도됐고 많은 분이 지켜보는 일이기 때문입니다. 보여 드리는 이유일 뿐, 기준을 통과했다는 뜻은 아닙니다."
+    },
+    "mark": {
+     "en": "Below our selection criteria: one condition waits on an SEC inquiry that nobody has confirmed.",
+     "ko": "선정 기준 미달: 조건 하나가 아무도 확인하지 않은 SEC 조사에 걸려 있습니다."
+    }
+   }
+  }
+ },
+ "left_out": {
+  "note": "Events looked at in the weekday check and not given a card, with the criterion they failed. Kept from 2026-11-27. Lines are added, never removed.",
+  "items": []
+ },
+ "history": [
+  {"date": "2026-11-27", "note": "Version 1 written and the first 12 cards checked against it: 5 meet every criterion, 6 partly, 1 does not."}
+ ]
+}

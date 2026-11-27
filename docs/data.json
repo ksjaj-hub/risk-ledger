@@ -1133,7 +1133,11 @@
 "p_worsened": 0.04
 }
 ],
-"_path": "events/2026-nvidia-sec-and-leadership.json"
+"_path": "events/2026-nvidia-sec-and-leadership.json",
+"selection_mark": {
+"en": "Below our selection criteria: one condition waits on an SEC inquiry that nobody has confirmed.",
+"ko": "선정 기준 미달: 조건 하나가 아무도 확인하지 않은 SEC 조사에 걸려 있습니다."
+}
 },
 {
 "schema": 1,
