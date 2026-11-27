@@ -130,8 +130,8 @@ main section,.det,.row{scroll-margin-top:52px}
 a.row{color:var(--fg)}a.row:hover{background:var(--hover);text-decoration:none}
 a.morebtn{display:flex;align-items:center}a.morebtn:hover{text-decoration:none}
 .iss{list-style:none;margin:0;padding:0}.iss li{border-top:1px solid var(--line)}.iss a{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:0 12px;padding:12px 0;color:var(--fg);min-height:44px;font-size:16px;font-weight:600}.iss a span{color:var(--muted);font-size:13.5px;font-weight:400;padding-top:2px}
-.scale{display:inline-grid;grid-template-columns:repeat(5,16px);gap:2px}
-.scale span{height:4px;background:var(--line2)}
+.scale{display:flex;gap:2px;width:100%;max-width:230px;height:8px;position:relative;margin:2px 0 4px}
+.scale span{height:100%;min-width:0;background:var(--line2)}.scale i{position:absolute;top:-4px;bottom:-4px;width:3px;margin-left:-1.5px;background:var(--fg);border-radius:1px}.now .scale{flex-basis:100%}
 @media(max-width:560px){.hero h1{font-size:24px}.glance .big{font-size:28px}}
 .asof{color:var(--muted);font-size:13.5px;margin:0 0 4px}
 .comps{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:10px}
@@ -289,7 +289,7 @@ brh:"Market breadth: a reference reading under test",brp:"How many sectors are t
  ver:"How to check that nothing here was changed afterwards",morel:"Show more",lessl:"Show less",skip:"Skip to content",langl:"Language",subml:"Email address",close:"Close this card",gst:"Market risk state",glk:"Unfamiliar word? See the terms explained",compd:{equity_volatility:"How much the market expects stock prices to swing (VIX)",credit_stress:"How much extra interest riskier companies pay to borrow",yield_curve:"Whether short-term government rates are above long-term ones",financial_conditions:"How tight it is to borrow and move money",equity_drawdown:"How far stock prices are below their recent high"},verp:"How we can prove that nothing here was changed afterwards",vp:[["Every record is saved as its own dated entry in a version history that AFMX keeps. During this early phase that history is not public."],["Each record contains the fingerprint (SHA-256) of the record before it, so one edit would break the chain."],["Each record is also timestamped on the Bitcoin blockchain (OpenTimestamps). That proof does not depend on AFMX and stays valid whether or not the history is public."],["When the history is opened, anyone will be able to check every record against those proofs. Until then you are taking our word for it, and we say so."]],hist:"History",
  v:[["Every record is its own dated commit in a ","public history",REPO+"/commits/main","."],["Each record contains the fingerprint (SHA-256) of the record before it, so one edit would break the chain."],["Records carry ","OpenTimestamps","https://opentimestamps.org"," proofs anchored to the Bitcoin blockchain."],["The ","judging rule",REPO+"/blob/main/rules/"," is published and versioned. Old versions are never edited."]],
  foot:"This is a description of risk conditions. It is not a forecast, not a recommendation to buy or sell anything, and not investment advice. Inputs via FRED; most lag by about one trading day. VIX data: Copyright Chicago Board Options Exchange, Inc.",
- states:STATES,stepof:(i,n)=>" · step "+i+" of "+n,levels:["Quiet","Normal","Strained","Extreme"],comp:{},of:" of 100",asof:"as of ",
+ states:STATES,stepof:(i,n)=>" · step "+i+" of "+n,inband:(s,a,b)=>` · ${s} is ${a} to ${b}`,levels:["Quiet","Normal","Strained","Extreme"],comp:{},of:" of 100",asof:"as of ",
  rec:(d,t,v,n)=>"Recorded "+d+" at "+t+" (your local time) under rule "+v+". "+n+" record"+(n===1?"":"s")+" so far.",
  rulev:"Rule",held:x=>"The rule indicated "+x+" on the latest day; the state steps down only after 5 trading days in a row.",
  start:"Start",change:"Change",first:"First record: ",state:"State",status:{open:"open",easing:"easing",worsened:"worsened",resolved:"resolved"},
@@ -318,7 +318,7 @@ brh:"시장 폭: 검증 중인 참고 지표",brp:"자기 200일 평균보다 �
  morel:"더 보기",lessl:"접기",ver:"기록을 나중에 고치지 않았다는 것을 확인하는 방법",skip:"본문으로 건너뛰기",langl:"언어",subml:"이메일 주소",close:"이 카드 닫기",gst:"시장 리스크 상태",glk:"모르는 말이 있나요? 용어 풀이 보기",compd:{equity_volatility:"주가가 얼마나 크게 출렁일 것으로 시장이 보는지(VIX)",credit_stress:"신용이 낮은 회사가 돈을 빌릴 때 더 내는 이자가 얼마나 벌어졌는지",yield_curve:"짧은 국채 금리가 긴 국채 금리보다 높은지",financial_conditions:"돈을 빌리고 굴리기가 얼마나 빡빡한지",equity_drawdown:"주가가 최근 고점에서 얼마나 내려왔는지"},verp:"나중에 고쳐 쓰지 않았다는 것을 증명하는 방법",vp:[["모든 기록은 AFMX가 보관하는 변경 이력에 날짜가 찍힌 개별 항목으로 남습니다. 지금 초기 단계에서는 이 이력을 공개하지 않습니다."],["기록마다 바로 앞 기록의 지문(SHA-256)이 들어 있어서, 하나만 고쳐도 사슬이 끊어집니다."],["기록마다 비트코인 블록체인에 시각 증명(OpenTimestamps)도 남깁니다. 이 증명은 AFMX에 의존하지 않고, 이력의 공개 여부와 상관없이 유효합니다."],["이력을 공개하면 누구나 모든 기록을 이 증명과 대조할 수 있습니다. 그 전까지는 저희 말을 믿으셔야 하는 상태이고, 그 점을 숨기지 않습니다."]],hist:"연혁",
  v:[["모든 기록은 날짜가 찍힌 개별 변경으로 ","공개 이력",REPO+"/commits/main","에 남습니다."],["기록마다 바로 앞 기록의 지문(SHA-256)이 들어 있어서, 하나만 고쳐도 사슬이 끊어집니다."],["기록에는 비트코인 블록체인에 시각을 남기는 ","OpenTimestamps","https://opentimestamps.org"," 증명이 붙습니다."],["","판정 규칙",REPO+"/blob/main/rules/","은 공개돼 있고 버전이 붙습니다. 이전 버전은 고치지 않습니다."]],
  foot:"이 페이지는 리스크 상태를 설명합니다. 예측이 아니며, 무엇을 사거나 팔라는 권유나 투자 조언이 아닙니다. 입력 자료는 FRED를 통해 받으며 대부분 약 1거래일 늦습니다. VIX 자료: Copyright Chicago Board Options Exchange, Inc.",
- states:["평온","관심","주의","경계","위기"],stepof:(i,n)=>" · "+n+"단계 중 "+i+"단계",levels:["잠잠","평소","긴장","극심"],
+ states:["평온","관심","주의","경계","위기"],stepof:(i,n)=>" · "+n+"단계 중 "+i+"단계",inband:(s,a,b)=>` · ${s}${(s.charCodeAt(s.length-1)-0xAC00)%28?"은":"는"} ${a}~${b}점`,levels:["잠잠","평소","긴장","극심"],
  comp:{equity_volatility:"주식 변동성",credit_stress:"신용 불안",yield_curve:"금리 곡선",financial_conditions:"금융 여건",equity_drawdown:"주가 낙폭"},of:" / 100",asof:"기준일 ",
  rulev:"규칙",held:x=>"최근 거래일에 규칙이 가리킨 상태는 "+x+"입니다. 상태는 5거래일 연속 확인된 뒤에만 내려갑니다.",
  rec:(d,t,v,n)=>d+" "+t+" 기록(이 기기의 시간대), 규칙 "+v+". 지금까지 기록 "+n+"건.",
@@ -356,6 +356,9 @@ function foldCloses(){const t=T[lang];document.querySelectorAll("details.fold,de
   if(!b){b=$("button","closebtn fclose");b.type="button";b.setAttribute("aria-expanded","true");b.addEventListener("click",()=>{const sm=d.querySelector("summary");d.open=false;sm.focus({preventScroll:true});sm.scrollIntoView({block:"center"})});d.append(b)}
   else if(b!==d.lastElementChild)d.append(b);b.textContent=t.lessl})}
 document.addEventListener("toggle",()=>requestAnimationFrame(()=>{clampAll();foldCloses()}),true);
+function scaleBar(el,score,si){el.replaceChildren();const R=(D.rule.states||[]).map((x,i,a)=>[x.min_score,i+1<a.length?a[i+1].min_score:100]);if(R.length!==STATES.length){STATES.forEach((x,i)=>{const y=$("span");y.style.flex="1";if(i<=si)y.style.background=SCOL[si];el.append(y)});return}
+  R.forEach(([lo,hi])=>{const y=$("span"),p=Math.max(0,Math.min(100,100*(score-lo)/(hi-lo)));y.style.flex=(hi-lo)+" 1 0";y.style.background=`linear-gradient(90deg,${SCOL[si]} ${p}%,var(--line2) ${p}%)`;el.append(y)});const m=$("i");m.style.left=Math.max(0,Math.min(100,score))+"%";el.append(m)}
+const inBand=(t,L,si)=>{const R=D.rule.states||[],j=R.findIndex(x=>x.name===L.state);return j<0?t.stepof(si+1,STATES.length):t.inband(stName(L.state),R[j].min_score,j+1<R.length?R[j+1].min_score-1:100)};
 const stName=s=>T[lang].states[STATES.indexOf(s)]||s, lvName=(c)=>T[lang].levels[c.level]||c.label;
 const sg=v=>(v>0?"+":v<0?"−":"")+Math.abs(v).toFixed(1);
 // past waves: one small line chart per card, drawn at the box's real width so labels stay readable on a phone
@@ -405,9 +408,8 @@ function render(){
   const L=D.latest,sc=document.getElementById("scale"),cs=document.getElementById("comps");sc.replaceChildren();cs.replaceChildren();
   if(L){
     const si=STATES.indexOf(L.state);st.textContent=stName(L.state);st.style.color=SCOL[si];
-    {const n2=document.getElementById("now2"),b=$("span","big",stName(L.state)),s2=$("span","scale");b.style.color=SCOL[si];s2.setAttribute("aria-hidden","true");STATES.forEach((x,i)=>{const y=$("span");if(i<=si)y.style.background=SCOL[si];s2.append(y)});n2.replaceChildren(b,s2,$("span","bn","AFMX "+L.score+t.of+t.stepof(si+1,STATES.length)))}
-    document.getElementById("score").textContent="AFMX "+L.score+t.of+t.stepof(si+1,STATES.length);
-    STATES.forEach((s,i)=>{const b=$("span");if(i<=si)b.style.background=SCOL[si];sc.append(b)});
+    {const n2=document.getElementById("now2"),b=$("span","big",stName(L.state)),s2=$("span","scale");b.style.color=SCOL[si];s2.setAttribute("aria-hidden","true");scaleBar(s2,L.score,si);n2.replaceChildren(b,s2,$("span","bn","AFMX "+L.score+t.of+inBand(t,L,si)))}
+    document.getElementById("score").textContent="AFMX "+L.score+t.of+inBand(t,L,si);scaleBar(sc,L.score,si);
     {const dt=new Date(L.recorded_at_utc),p2=n=>String(n).padStart(2,"0");document.getElementById("asof").textContent=t.rec(fmt(dt.getFullYear()+"-"+p2(dt.getMonth()+1)+"-"+p2(dt.getDate())),p2(dt.getHours())+":"+p2(dt.getMinutes()),L.rule_version,D.history.length)+(L.indicated_state&&L.indicated_state!==L.state?" "+t.held(stName(L.indicated_state)):"")}
     {const cv=Object.values(L.components),sm=cv.reduce((a,c)=>a+c.level,0),mx=3*cv.length;document.getElementById("sumline").textContent=Math.round(100*sm/mx)===L.score?t.sumline(sm,mx,L.score):""}
     {const R=D.aids.state_ranges,x=R&&R.states.find(y=>y.state===L.state);document.getElementById("hl").textContent=x?t.hl(stName(L.state),Math.round(100*x.share)):""}

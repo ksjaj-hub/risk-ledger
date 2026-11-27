@@ -1,12 +1,12 @@
 {
- "measured_at_utc": "2026-11-27T05:37Z",
- "label": "fold close",
+ "measured_at_utc": "2026-11-27T07:00Z",
+ "label": "score bar",
  "viewport": "390x844",
  "tabs": {
   "ko": {
    "home": {
     "screens": 2.1,
-    "chars": 925,
+    "chars": 926,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
@@ -75,7 +75,7 @@
    },
    "record": {
     "screens": 2.9,
-    "chars": 2934,
+    "chars": 2935,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
@@ -128,7 +128,7 @@
   "en": {
    "home": {
     "screens": 2.4,
-    "chars": 1817,
+    "chars": 1823,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
@@ -200,7 +200,7 @@
    },
    "record": {
     "screens": 3.2,
-    "chars": 5490,
+    "chars": 5496,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
