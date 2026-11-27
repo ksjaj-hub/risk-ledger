@@ -1,11 +1,20 @@
 name: market check
 on:
+  schedule:
+    # Weekdays, three times. 03:07 UTC = 12:07 in Korea and 15:07 UTC = 00:07 in Korea, with the event checks.
+    # 22:10 UTC follows the Federal Reserve's daily H.15 release at 4:15 p.m. Eastern.
+    # The script writes nothing when no reading has changed.
+    - cron: "7 3 * * 1-5"
+    - cron: "7 15 * * 0-4"
+    - cron: "10 22 * * 1-5"
   workflow_dispatch:
   push:
     branches: ["claude/**"]
     paths: ["scripts/market_check.py", "market/config.json", ".github/workflows/market.yml"]
 permissions:
   contents: write
+# shares the collector's group so the two never rebuild docs/data.json at the same time
+concurrency: collect
 jobs:
   run:
     runs-on: ubuntu-latest
@@ -18,11 +27,13 @@ jobs:
         env:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         run: python scripts/market_check.py
+      - name: Rebuild the public page data
+        run: python scripts/build_site.py
       - name: Commit
         run: |
           git config user.name "risk-ledger-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add market
+          git add market docs/data.json
           git diff --cached --quiet && { echo "nothing new"; exit 0; }
           git commit -m "market check: $(date -u +%Y-%m-%dT%H:%MZ)"
           git pull --rebase origin "${{ github.ref_name }}"

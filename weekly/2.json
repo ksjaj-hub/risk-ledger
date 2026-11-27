@@ -1,0 +1,406 @@
+{
+ "n": 2,
+ "date": "2026-11-27",
+ "snapshot": {
+  "record": "records/us/2026/2026-11-26T1503Z.json",
+  "state": "Watch",
+  "state_index": 2,
+  "score": 33,
+  "since": "2026-11-26",
+  "typical_days": 9,
+  "band": {
+   "from": 30,
+   "to": 39,
+   "days": 487,
+   "first_year": 2007,
+   "mix": [
+    69,
+    18,
+    13,
+    0.4
+   ]
+  },
+  "components": [
+   [
+    "equity_volatility",
+    2
+   ],
+   [
+    "credit_stress",
+    1
+   ],
+   [
+    "financial_conditions",
+    1
+   ],
+   [
+    "equity_drawdown",
+    1
+   ],
+   [
+    "yield_curve",
+    0
+   ]
+  ],
+  "cards": {
+   "open": 12,
+   "worse": 0,
+   "eased": 0,
+   "resolved": 0
+  },
+  "sectors": {
+   "changed": [],
+   "strained": [
+    "financials",
+    "energy",
+    "materials",
+    "industrials",
+    "technology"
+   ],
+   "quiet": [
+    "utilities"
+   ],
+   "normal": [
+    "real_estate",
+    "consumer_discretionary",
+    "health_care",
+    "communication",
+    "consumer_staples"
+   ]
+  },
+  "checks": {
+   "as_of": "2026-11-27",
+   "measures": 24,
+   "met": 0,
+   "checked": 7,
+   "shows": [
+    {
+     "en": "Doubts about financing of the AI buildout",
+     "ko": "AI 설비 투자 자금 조달에 대한 의심"
+    },
+    {
+     "en": "Fed expected to raise rates as inflation re-accelerates",
+     "ko": "물가 재상승과 연준의 금리 인상 전망"
+    },
+    {
+     "en": "Japan: Bank of Japan rate rises, weak yen and equity sell-off",
+     "ko": "일본: 일본은행 금리 인상, 엔화 약세, 주가 급락"
+    }
+   ]
+  }
+ },
+ "en": {
+  "title": "Inflation is at 3.8%. Five-year bonds price in 2.13%.",
+  "desc": "AFMX Weekly No. 2: Watch at 33, inflation against what bond prices show, what the jobs report can and cannot change, and the dates ahead.",
+  "lead": "AFMX tracks what is still unresolved after the headlines move on.",
+  "score_p": "Since 2007 the score has been between 30 and 39 on 487 trading days. This is how far the market was down at its lowest close in the three months after those days.",
+  "score_note": "These are counts from the past, not a forecast. The first public check against what actually followed comes after the record has run for 12 months.",
+  "score_more": "The score counts five measures, each from 0 to 3 cells. Five of 15 cells are filled, which gives 33. No measure has moved since No. 1. The latest VIX close in the record is 26.36 on November 24. US markets were closed on November 26.",
+  "cards_p": "All 12 cards are open. None got worse, eased or was resolved since No. 1. One card gained a confirmed fact.",
+  "relief": [
+   {
+    "h": "Volatility fell.",
+    "p": "VIX went from 35.89 on November 20 to 26.36 on November 24. The measure it did not move: VIX below 20 for 20 trading days in a row. That count stands at 0 of 20.",
+    "more": [
+     "This measure sits on the AI buildout card. The card also needs at least 2 of 5 large AI spenders to keep or raise their spending plans in a quarterly report. None of the five has reported since the card opened, so that stands at 0 of 2.",
+     "Prices still show this risk: the volatility measure is at 2 of 3 cells."
+    ],
+    "src": [
+     [
+      "How each card is counted",
+      "https://github.com/ksjaj-hub/risk-ledger/blob/main/events/2026-ai-buildout-financing.json"
+     ]
+    ]
+   },
+   {
+    "h": "Nvidia's CEO returned on November 23.",
+    "p": "The measure it did not move: the next quarterly or annual report filed on time, with no late-filing notice and no notice that earlier statements cannot be relied on. No report has been filed since the card opened.",
+    "more": [
+     "The company's release refers to government investigations and inquiries and names no agency. An SEC probe was reported in the press. Neither the company nor the SEC has confirmed it, so that measure cannot be counted yet."
+    ],
+    "src": [
+     [
+      "Nvidia release, November 23 (SEC filing)",
+      "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000090/nov23pressrelease.htm"
+     ]
+    ]
+   }
+  ],
+  "counter": {
+   "h": "Fed expected to raise rates as inflation re-accelerates",
+   "p": "The Fed's own minutes say futures already put high odds on a rise by year-end and two more by summer 2027. A rise that is already in prices may add little new stress, and oil has come down from its October level."
+  },
+  "new": [
+   {
+    "h": "Inflation, now on the Fed card.",
+    "p": "The PCE price index rose 3.8% in the year to October and 0.3% on the month. Excluding food and energy it rose 3.3%. September was 3.6%. The card's conditions count consumer prices (CPI), so this figure does not change the count.",
+    "src": [
+     "BEA release, November 25",
+     "https://www.bea.gov/news/2026/personal-income-and-outlays-october-2026"
+    ]
+   },
+   {
+    "h": "What bond prices show.",
+    "p": "The 2-year Treasury yield was 0.63 points above the top of the Fed's range on November 24. Above zero means bond prices show rate rises ahead. The inflation priced into 5-year Treasuries was 2.13% on November 25, in the lowest tenth of its last five years. Short-term rate risk shows in prices. Lasting inflation does not.",
+    "src": [
+     "Method and sources",
+     "https://github.com/ksjaj-hub/risk-ledger/blob/main/market/README.md"
+    ]
+   },
+   {
+    "h": "Price checks now run by themselves.",
+    "p": "The check of each card against market prices now runs three times each weekday. Every reading shows the date it is for.",
+    "src": [
+     "When it runs",
+     "https://github.com/ksjaj-hub/risk-ledger/blob/main/market/README.md"
+    ]
+   }
+  ],
+  "sectors_p": "No sector changed step since No. 1.",
+  "sectors_more": "The step counts how many open cards reach a sector and how strong the link has been in past data. It says nothing about which way prices will go.",
+  "dates_p": "This is a sample of the briefing planned for members before each scheduled event. This one is free.",
+  "dates": [
+   {
+    "d": "Tue, Dec 1",
+    "t": "10:00 a.m. ET",
+    "h": "US job openings for October",
+    "more": [
+     "No card counts this release."
+    ]
+   },
+   {
+    "d": "Fri, Dec 4",
+    "t": "8:30 a.m. ET",
+    "h": "US jobs report for November",
+    "more": [
+     "On the Fed card: no condition is counted from the jobs report. A strong or a weak number cannot resolve the card or make it worse by itself.",
+     "What it can move is the price check. The 2-year yield stood 0.63 points above the top of the Fed's range on November 24. While that stays above zero, bond prices show rate rises ahead.",
+     "Official yields are published on the next business day, so the first reading that includes the response to the report appears on Monday, December 7 (US time).",
+     "Similar past events: in the six months after the Fed began raising rates in 1994, the largest fall in the US stock market was 8.4%, on trading day 97. In 2022 it was 16.6%, on trading day 64. An ordinary six months since 1990: 3.8%. Two cases are not a pattern."
+    ]
+   },
+   {
+    "d": "Wed, Dec 9",
+    "t": "2:00 p.m. ET",
+    "h": "Fed decision, with new projections",
+    "more": [
+     "Known so far: on October 28 the Fed held its rate at 3.75% to 4.00% by 10 votes to 2. Both dissenters wanted a quarter-point rise. The minutes say futures markets put high odds on a quarter-point rise by year-end.",
+     "Would not change the card: a quarter-point rise. It was expected.",
+     "Would make it worse: a rise of more than a quarter point at one meeting, or the Chicago Fed financial conditions index at 0 or above. It was -0.444 on November 20, which is 0.444 below the line.",
+     "Would count toward resolved: the statement drops its reference to further increases, or the median projection shows no higher rate at the end of next year. That is 1 of the card's 2 measures. The other needs inflation falling, so this meeting alone cannot close the card.",
+     "The press conference starts at 2:30 p.m. ET."
+    ]
+   },
+   {
+    "d": "Thu, Dec 10",
+    "t": "8:30 a.m. ET",
+    "h": "US consumer prices for November",
+    "more": [
+     "The card needs the year-over-year figure to fall in the two most recent months that have one. No 12-month figure was published for October, so the count is 0 of 2 and one November number cannot meet it.",
+     "A single softer reading is on the card's list of good news that does not resolve it."
+    ]
+   },
+   {
+    "d": "Fri, Dec 11",
+    "t": "",
+    "h": "US government funding expires",
+    "more": [
+     "Resolved only by a signed law that funds the government for at least 30 days beyond December 11. The count is 0 of 1.",
+     "A stopgap of under 30 days moves the date. The risk stays open."
+    ]
+   },
+   {
+    "d": "Wed, Dec 23",
+    "t": "8:30 a.m. ET",
+    "h": "US PCE inflation for November",
+    "more": [
+     "This is the figure that rose to 3.8% in October. The card counts CPI, so PCE is added as a fact and does not change the count."
+    ]
+   }
+  ],
+  "dates_src": [
+   [
+    "BLS release schedule",
+    "https://www.bls.gov/schedule/2026/12_sched_list.htm"
+   ],
+   [
+    "Fed calendar",
+    "https://www.federalreserve.gov/newsevents/2026-december.htm"
+   ],
+   [
+    "BEA release, November 25",
+    "https://www.bea.gov/news/2026/personal-income-and-outlays-october-2026"
+   ],
+   [
+    "Fed statement, October 28",
+    "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
+   ],
+   [
+    "Fed minutes",
+    "https://www.federalreserve.gov/monetarypolicy/fomcminutes20261028.htm"
+   ],
+   [
+    "Public Law 119-103",
+    "https://www.govinfo.gov/content/pkg/PLAW-119publ103/html/PLAW-119publ103.htm"
+   ]
+  ],
+  "about": "AFMX describes risk conditions using a published rule, now at <a href=\"https://github.com/ksjaj-hub/risk-ledger/blob/main/rules/v3.md\">version 3</a> with five steps. The conditions on each card were written before the outcomes were known, and the record cannot be edited afterwards. Each card now also shows how its conditions are counted in numbers, the case against our reading, similar past events and whether market prices show the risk. Nothing here is advice to buy or sell anything."
+ },
+ "ko": {
+  "title": "물가는 3.8%. 5년 국채에 반영된 물가는 2.13%.",
+  "desc": "AFMX 주간 글 2호: 주의 33점, 물가 수치와 채권 가격이 보여 주는 것, 고용보고서가 바꿀 수 있는 것과 없는 것, 다가오는 날짜.",
+  "lead": "AFMX는 뉴스가 지나간 뒤에도 해결되지 않고 남아 있는 것을 추적합니다.",
+  "score_p": "2007년 이후 점수가 30~39점이던 날은 487거래일입니다. 아래는 그날들 뒤 석 달 동안, 가장 낮게 마감한 날에 시장이 얼마나 내려가 있었는지를 센 것입니다.",
+  "score_note": "과거에 있었던 횟수이며 예측이 아닙니다. 실제와 맞았는지는 기록이 12개월 쌓인 뒤 처음 공개 점검합니다.",
+  "score_more": "점수는 지표 다섯 개를 각각 0~3칸으로 셉니다. 15칸 중 5칸이 차서 33점입니다. 1호 뒤로 움직인 지표는 없습니다. 기록에 있는 가장 최근 VIX 종가는 11월 24일의 26.36입니다. 11월 26일은 미국 시장이 쉬었습니다.",
+  "cards_p": "카드 12건이 모두 열려 있습니다. 1호 뒤로 나빠지거나 풀린 것은 없습니다. 카드 한 건에 확인된 사실이 하나 늘었습니다.",
+  "relief": [
+   {
+    "h": "변동성이 내렸습니다.",
+    "p": "VIX가 11월 20일 35.89에서 11월 24일 26.36이 됐습니다. 움직이지 않은 기준: VIX가 20 아래인 날이 20거래일 연속. 지금은 20일 중 0일입니다.",
+    "more": [
+     "이 기준은 AI 설비 투자 카드에 있습니다. 이 카드는 AI 설비 투자가 큰 다섯 회사 중 2곳 이상이 분기 보고에서 투자 계획을 유지하거나 올리는 것도 요구합니다. 카드를 연 뒤 다섯 회사의 분기 보고가 아직 없어 2곳 중 0곳입니다.",
+     "이 리스크는 여전히 가격에 보입니다. 변동성 지표가 3칸 중 2칸입니다."
+    ],
+    "src": [
+     [
+      "카드별 세는 방법",
+      "https://github.com/ksjaj-hub/risk-ledger/blob/main/events/2026-ai-buildout-financing.json"
+     ]
+    ]
+   },
+   {
+    "h": "엔비디아 CEO가 11월 23일 복귀했습니다.",
+    "p": "움직이지 않은 기준: 다음 분기 또는 연간 보고서를 기한 안에 내고, 지연 제출 통지와 과거 재무제표를 신뢰할 수 없다는 공시가 없을 것. 카드를 연 뒤 제출된 보고서가 아직 없습니다.",
+    "more": [
+     "회사 발표는 정부 조사와 질의를 언급하지만 기관 이름은 없습니다. SEC가 조사한다는 보도가 있었지만 회사도 SEC도 확인하지 않았으므로, 그 기준은 아직 셀 수 없습니다."
+    ],
+    "src": [
+     [
+      "엔비디아 11월 23일 발표 (SEC 공시)",
+      "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000090/nov23pressrelease.htm"
+     ]
+    ]
+   }
+  ],
+  "counter": {
+   "h": "물가 재상승과 연준의 금리 인상 전망",
+   "p": "연준 의사록에 따르면 선물 시장은 연말까지 한 번, 2027년 여름까지 두 번 더 올릴 가능성을 이미 높게 보고 있습니다. 가격에 이미 들어간 인상은 새로운 긴장을 거의 더하지 않을 수 있고, 유가도 10월보다 내려왔습니다."
+  },
+  "new": [
+   {
+    "h": "물가, 연준 카드에 반영.",
+    "p": "미국 PCE 물가는 10월에 1년 전보다 3.8%, 전달보다 0.3% 올랐습니다. 식품과 에너지를 빼면 3.3%입니다. 9월은 3.6%였습니다. 카드의 조건은 소비자물가(CPI)로 세기 때문에 이 수치로 조건 충족 수가 달라지지는 않습니다.",
+    "src": [
+     "경제분석국 11월 25일 발표",
+     "https://www.bea.gov/news/2026/personal-income-and-outlays-october-2026"
+    ]
+   },
+   {
+    "h": "채권 가격이 보여 주는 것.",
+    "p": "11월 24일 2년 국채 금리는 연준 목표 범위 상단보다 0.63%포인트 높았습니다. 0보다 크면 채권 가격에 금리 인상이 보인다는 뜻입니다. 5년 국채에 반영된 기대 물가는 11월 25일 2.13%로, 최근 5년 중 하위 10% 안입니다. 가까운 금리 인상 리스크는 가격에 보이고, 물가가 오래 높을 것이라는 리스크는 보이지 않습니다.",
+    "src": [
+     "방법과 출처",
+     "https://github.com/ksjaj-hub/risk-ledger/blob/main/market/README.md"
+    ]
+   },
+   {
+    "h": "가격 대조가 자동으로 돕니다.",
+    "p": "카드와 시장 가격을 맞춰 보는 일을 이제 평일 하루 세 번 자동으로 합니다. 값마다 어느 날짜의 값인지 표시합니다.",
+    "src": [
+     "실행 시각",
+     "https://github.com/ksjaj-hub/risk-ledger/blob/main/market/README.md"
+    ]
+   }
+  ],
+  "sectors_p": "1호 뒤로 단계가 바뀐 섹터는 없습니다.",
+  "sectors_more": "단계는 열린 카드가 그 섹터에 몇 건 닿는지, 과거 자료에서 그 연결이 얼마나 뚜렷했는지를 셉니다. 주가가 어느 쪽으로 갈지는 말하지 않습니다.",
+  "dates_p": "앞으로 회원에게 사건 전에 보낼 브리핑의 견본입니다. 이번 것은 무료입니다.",
+  "dates": [
+   {
+    "d": "12월 2일 (수)",
+    "t": "한국 0:00",
+    "h": "미국 10월 구인 건수",
+    "more": [
+     "이 발표로 세는 카드는 없습니다. 미국 현지로는 12월 1일 오전 10시입니다."
+    ]
+   },
+   {
+    "d": "12월 4일 (금)",
+    "t": "한국 밤 10:30",
+    "h": "미국 11월 고용보고서",
+    "more": [
+     "연준 카드: 고용보고서로 세는 조건은 없습니다. 수치가 강하든 약하든 그것만으로 카드가 해소되거나 나빠지지 않습니다.",
+     "바뀔 수 있는 것은 가격 대조입니다. 11월 24일 2년 국채 금리는 연준 목표 범위 상단보다 0.63%포인트 높았습니다. 이 값이 0보다 큰 동안은 채권 가격에 금리 인상이 보입니다.",
+     "공식 금리 자료는 다음 영업일에 나오므로, 고용보고서 뒤의 반응이 담긴 첫 값은 미국 시간 12월 7일(월)에 나옵니다.",
+     "과거 비슷한 사건: 1994년 연준이 금리를 올리기 시작한 뒤 여섯 달 동안 미국 주식시장이 가장 크게 내려간 것은 97거래일째의 8.4%였습니다. 2022년에는 64거래일째의 16.6%였습니다. 1990년 이후 평범한 여섯 달은 3.8%입니다. 두 사례만으로 패턴이라고 할 수는 없습니다."
+    ]
+   },
+   {
+    "d": "12월 10일 (목)",
+    "t": "한국 새벽 4:00",
+    "h": "연준 금리 결정과 새 전망",
+    "more": [
+     "지금까지 확인된 것: 연준은 10월 28일 금리를 3.75~4.00%로 유지했습니다. 표결은 10 대 2였고, 반대한 두 명은 0.25%포인트 인상을 원했습니다. 의사록에는 선물 시장이 연말까지 0.25%포인트 인상 가능성을 높게 본다고 적혀 있습니다.",
+     "카드가 달라지지 않는 경우: 0.25%포인트 인상. 이미 예상된 것입니다.",
+     "나빠지는 경우: 한 번에 0.25%포인트보다 크게 올리거나, 시카고 연은 금융여건지수가 0 이상이 되는 것. 11월 20일 값은 -0.444로, 선까지 0.444 남았습니다.",
+     "해소에 가까워지는 경우: 성명에서 추가 인상 언급이 빠지거나, 위원 전망 중간값이 내년 말 금리를 지금보다 높게 보지 않는 것. 카드의 기준 2개 중 1개입니다. 나머지 하나는 물가 하락이므로 이번 회의만으로는 닫히지 않습니다.",
+     "미국 현지로는 12월 9일 오후 2시이고, 기자회견은 30분 뒤입니다."
+    ]
+   },
+   {
+    "d": "12월 10일 (목)",
+    "t": "한국 밤 10:30",
+    "h": "미국 11월 소비자물가",
+    "more": [
+     "이 카드가 해소되려면 1년 전 대비 상승률이, 수치가 발표된 최근 두 달 연속 내려가야 합니다. 10월은 1년 전 대비 수치가 발표되지 않아 지금은 2개월 중 0개월이고, 11월 수치 하나로는 채워지지 않습니다.",
+     "한 번 낮게 나온 수치는 카드에 '해소가 아닌 호재'로 적혀 있습니다."
+    ]
+   },
+   {
+    "d": "12월 11일 (금)",
+    "t": "",
+    "h": "미국 정부 예산 만료",
+    "more": [
+     "12월 11일 뒤로 30일 이상 예산을 대는 법이 서명돼야만 해소입니다. 지금은 1건 중 0건입니다.",
+     "30일 미만의 임시 예산은 날짜만 옮깁니다. 리스크는 그대로 열려 있습니다."
+    ]
+   },
+   {
+    "d": "12월 23일 (수)",
+    "t": "한국 밤 10:30",
+    "h": "미국 11월 PCE 물가",
+    "more": [
+     "10월에 3.8%로 오른 그 수치입니다. 카드는 CPI로 세기 때문에 PCE는 사실로만 더하고 조건 충족 수는 바뀌지 않습니다."
+    ]
+   }
+  ],
+  "dates_src": [
+   [
+    "노동통계국 발표 일정",
+    "https://www.bls.gov/schedule/2026/12_sched_list.htm"
+   ],
+   [
+    "연준 일정",
+    "https://www.federalreserve.gov/newsevents/2026-december.htm"
+   ],
+   [
+    "경제분석국 11월 25일 발표",
+    "https://www.bea.gov/news/2026/personal-income-and-outlays-october-2026"
+   ],
+   [
+    "연준 10월 28일 성명",
+    "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
+   ],
+   [
+    "연준 의사록",
+    "https://www.federalreserve.gov/monetarypolicy/fomcminutes20261028.htm"
+   ],
+   [
+    "공법 119-103",
+    "https://www.govinfo.gov/content/pkg/PLAW-119publ103/html/PLAW-119publ103.htm"
+   ]
+  ],
+  "about": "AFMX는 공개된 규칙으로 리스크 상태를 설명합니다. 규칙은 지금 5단계인 <a href=\"https://github.com/ksjaj-hub/risk-ledger/blob/main/rules/v3.ko.md\">3판</a>입니다. 카드의 조건은 결과를 알기 전에 적었고, 기록은 나중에 고칠 수 없습니다. 이제 카드마다 조건을 숫자로 세는 방법, 저희 해석에 대한 반론, 과거 비슷한 사건, 리스크가 시장 가격에 보이는지도 함께 보여 줍니다. 무엇을 사거나 팔라는 조언이 아닙니다."
+ }
+}

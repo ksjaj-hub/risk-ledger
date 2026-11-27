@@ -192,7 +192,7 @@ aids["past"] = _past()
 _mk = ROOT / "market" / "check.json"
 if _mk.exists():
     _m = json.loads(_mk.read_text())
-    aids["market"] = {"as_of": _m["meta"]["generated_at_utc"][:10], "cards": {
+    aids["market"] = {"as_of": _m["meta"]["generated_at_utc"][:10], "at": _m["meta"]["generated_at_utc"][11:16], "cards": {
         k: {"verdict": v["verdict"], "none": v.get("none"),
             "readings": [{x: r[x] for x in ("en", "ko", "unit", "value", "as_of", "percentile_5y", "steps", "shows", "rule") if x in r}
                          for r in v["readings"] if "shows" in r]} for k, v in _m["cards"].items()}}

@@ -5,7 +5,8 @@ Reading aid, not part of the ledger, not a forecast and not a recommendation. Th
 fixed in market/config.json before the first run. Only series published by US government bodies are fetched
 here (Energy Information Administration, Federal Reserve Board, Treasury yields); for third-party series the
 check reuses the step already published in the latest AFMX record and fetches nothing new.
-Standard library only. Needs FRED_API_KEY. Writes market/check.json.
+Standard library only. Needs FRED_API_KEY. Writes market/check.json, and only when a reading has changed:
+generated_at_utc is the time the values on file were read, so a scheduled run that finds nothing new writes nothing.
 """
 import bisect, datetime as dt, json, sys, pathlib
 
@@ -57,12 +58,16 @@ def main():
         ok = [x for x in rs if "shows" in x]
         out[cid] = {"readings": rs, "verdict": "not_checked" if not ok else "shows" if any(x["shows"] for x in ok) else "does_not_show"}
         print(cid, out[cid]["verdict"], [(x["id"], x.get("value"), x.get("percentile_5y"), x.get("steps"), x.get("shows"), x.get("error")) for x in rs])
+    path = ROOT / "market" / "check.json"
+    if path.exists() and json.loads(path.read_text()).get("cards") == json.loads(json.dumps(out)):
+        print("no reading changed; file left as it is")
+        return 0
     res = {"meta": {"generated_at_utc": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
                     "config_version": cfg["version"], "rules": cfg["rules"],
                     "warning": "A reading aid. Whether a price is high says nothing about what it will do next. Not a forecast and not a recommendation.",
                     "sources": "FRED, Federal Reserve Bank of St. Louis. This product uses the FRED API but is not endorsed or certified by the Federal Reserve Bank of St. Louis."},
            "cards": out}
-    (ROOT / "market" / "check.json").write_text(json.dumps(res, indent=1, ensure_ascii=False) + "\n")
+    path.write_text(json.dumps(res, indent=1, ensure_ascii=False) + "\n")
     return 0
 
 

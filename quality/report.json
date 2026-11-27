@@ -1,5 +1,5 @@
 {
- "checked_at_utc": "2026-11-27T09:43Z",
+ "checked_at_utc": "2026-11-27T11:29Z",
  "passed": 18,
  "total": 18,
  "checks": [
@@ -28,7 +28,7 @@
    "area": "content",
    "id": "fact_links",
    "pass": true,
-   "now": "34/34 facts carry their own link",
+   "now": "35/35 facts carry their own link",
    "bar": "every fact links to its article"
   },
   {
@@ -126,7 +126,7 @@
    "area": "screen",
    "id": "page_weight",
    "pass": true,
-   "now": "292 KB",
+   "now": "293 KB",
    "bar": "300 KB or less"
   }
  ],
