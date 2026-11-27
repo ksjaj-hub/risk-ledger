@@ -2877,10 +2877,10 @@
 },
 "shadow_breadth": {
 "sector_funds": {
-"as_of": "2026-11-24",
-"below": 6,
+"as_of": "2026-11-25",
+"below": 5,
 "members": 11,
-"level": 2
+"level": 1
 },
 "industries_49": {
 "as_of": "2026-09-30",
