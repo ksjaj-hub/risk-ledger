@@ -1,12 +1,12 @@
 {
- "measured_at_utc": "2026-11-26T16:02Z",
- "label": "final",
+ "measured_at_utc": "2026-11-27T04:54Z",
+ "label": "after record fold",
  "viewport": "390x844",
  "tabs": {
   "ko": {
    "home": {
-    "screens": 2,
-    "chars": 882,
+    "screens": 2.1,
+    "chars": 925,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
@@ -23,7 +23,7 @@
    },
    "risks": {
     "screens": 2.4,
-    "chars": 1124,
+    "chars": 1134,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
@@ -41,7 +41,7 @@
    },
    "sectors": {
     "screens": 1.8,
-    "chars": 905,
+    "chars": 826,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
@@ -74,12 +74,12 @@
     "title": "과거 · AFMX"
    },
    "record": {
-    "screens": 2.3,
-    "chars": 1002,
+    "screens": 2.9,
+    "chars": 2918,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
-    "targets": 12,
+    "targets": 16,
     "small_targets": 0,
     "small_target_list": [],
     "jargon": [],
@@ -91,12 +91,12 @@
     "title": "기록 · AFMX"
    },
    "method": {
-    "screens": 2.1,
-    "chars": 2431,
+    "screens": 2.2,
+    "chars": 2723,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13.5,
-    "targets": 35,
+    "targets": 37,
     "small_targets": 0,
     "small_target_list": [],
     "jargon": [],
@@ -127,8 +127,8 @@
   },
   "en": {
    "home": {
-    "screens": 2.3,
-    "chars": 1703,
+    "screens": 2.4,
+    "chars": 1817,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
@@ -145,7 +145,7 @@
    },
    "risks": {
     "screens": 3,
-    "chars": 2347,
+    "chars": 2372,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
@@ -162,7 +162,7 @@
    },
    "sectors": {
     "screens": 2.1,
-    "chars": 2004,
+    "chars": 1890,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
@@ -199,12 +199,12 @@
     "title": "Past · AFMX"
    },
    "record": {
-    "screens": 2.5,
-    "chars": 1736,
+    "screens": 3.2,
+    "chars": 5418,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
-    "targets": 12,
+    "targets": 16,
     "small_targets": 0,
     "small_target_list": [],
     "jargon": [
@@ -220,12 +220,12 @@
     "title": "Record · AFMX"
    },
    "method": {
-    "screens": 2.1,
-    "chars": 4751,
+    "screens": 2.2,
+    "chars": 5283,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13.5,
-    "targets": 35,
+    "targets": 37,
     "small_targets": 0,
     "small_target_list": [],
     "jargon": [

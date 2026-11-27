@@ -14,7 +14,8 @@ rule = json.loads(rule_path.read_text())
 records = load("records/us/*/*.json")
 data = {
     "rule": {"version": rule["version"], "components": {c["id"]: c["name"] for c in rule["components"]},
-             "labels": rule["level_labels"]},
+             "labels": rule["level_labels"],
+             "states": [{"name": x["name"], "min_score": x["min_score"]} for x in rule.get("states", [])]},
     "latest": records[-1] if records else None,
     "history": [{"date": r["recorded_at_utc"][:10], "state": r["state"], "score": r["score"]} for r in records],
     "alerts": load("alerts/us/*/*.json"),
