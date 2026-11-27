@@ -47,6 +47,15 @@ if _r5.exists():
     aids["state_durations"] = {"since": 1990, "states": [{"state": k, "spells": v["spells"], "median": v["median_trading_days"],
                                                           "upper_quartile": v["upper_quartile"], "moved_up_share": v["share_ended_by_moving_up"]}
                                                          for k, v in _d.items()]}
+# what followed past days at each ten-point band of the score (research/v4/score_bins.json). Reading aid.
+_bn = ROOT / "research" / "v4" / "score_bins.json"
+if _bn.exists():
+    _b = json.loads(_bn.read_text())
+    _long = {x["from"]: x for x in _b["since_1990"]["bands"]}
+    aids["score_bands"] = {"first": _b["since_2007"]["first"], "last": _b["since_2007"]["last"], "long_first": _b["since_1990"]["first"],
+                           "bands": [{"from": x["from"], "to": x["to"], "days": x["days"], "share": x["share_fall10"], "worst5": x["p5_deepest"],
+                                      "thin": x["thin"], "long_share": _long.get(x["from"], {}).get("share_fall10")}
+                                     for x in _b["since_2007"]["bands"]]}
 # market breadth: a reference reading under test, outside the rule (shadow/README.md). Reading aid.
 _sb = ROOT / "shadow" / "breadth.csv"
 if _sb.exists():
