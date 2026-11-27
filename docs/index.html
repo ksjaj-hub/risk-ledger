@@ -543,7 +543,7 @@ document.querySelectorAll("[data-lang]").forEach(b=>b.addEventListener("click",(
 addEventListener("hashchange",()=>route(true));
 document.getElementById("skip").addEventListener("click",ev=>{ev.preventDefault();const f=document.getElementById(tab==="home"?"hh":"vh");f.focus();f.scrollIntoView()});
 route();
-fetch("data.json").then(r=>r.json()).then(d=>{D=d;const LW={Low:"0 of 3 steps (Quiet)",Moderate:"1 of 3 steps (Normal)",High:"2 of 3 steps (Strained)"},cw=x=>/component of this ledger/.test(x)?x.replace(/\b(Low|Moderate|High)\b/g,m=>LW[m]):x;(D.events||[]).forEach(e=>{const c=e.resolution_conditions||{};["resolved_when_all","worsened_when_any"].forEach(k=>{if(c[k])c[k]=c[k].map(cw)})});route()}).catch(()=>{document.getElementById("state").textContent=T[lang].fail});
+fetch("data.json").then(r=>r.json()).then(d=>{D=d;const LW={Low:"0 of 3 steps (Quiet)",Moderate:"1 of 3 steps (Normal)",High:"2 of 3 steps (Strained)"},cw=x=>(/component of this ledger/.test(x)?x.replace(/\b(Low|Moderate|High)\b/g,m=>LW[m]):x).replace(/\blicence/g,"license");(D.events||[]).forEach(e=>{const c=e.resolution_conditions||{};["resolved_when_all","worsened_when_any"].forEach(k=>{if(c[k])c[k]=c[k].map(cw)})});route()}).catch(()=>{document.getElementById("state").textContent=T[lang].fail});
 
 (function(){
   const f=document.getElementById("subf"),m=document.getElementById("subm"),st=document.getElementById("subs"),b=f.querySelector("button");

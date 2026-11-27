@@ -1,7 +1,7 @@
 {
  "schema": 1,
  "id": "2026-us-ai-chip-export-rules",
- "title": "New US licence rules on advanced AI chip shipments",
+ "title": "New US license rules on advanced AI chip shipments",
  "category": "trade policy",
  "markets": [
   "US",
@@ -13,23 +13,23 @@
  "first_recorded": "2026-11-26",
  "event_started": "2026-11 (week ending 2026-11-20)",
  "status": "open",
- "what_happened": "A US Commerce Department rule in effect from 2026-11-19 requires licences for advanced chips going to overseas data centres that give significant computing access to companies from restricted countries, and for advanced-node chips made for non-approved designers. Press reports, not yet confirmed here, say TSMC and Samsung suspended some shipments to Chinese customers pending licences.",
+ "what_happened": "A US Commerce Department rule in effect from 2026-11-19 requires licenses for advanced chips going to overseas data centers that give significant computing access to companies from restricted countries, and for advanced-node chips made for non-approved designers. Press reports, not yet confirmed here, say TSMC and Samsung suspended some shipments to Chinese customers pending licenses.",
  "how_it_reaches_markets": "Lost or delayed sales for chip makers and equipment makers; retaliation risk; adds to pressure on AI-linked shares.",
  "sourced_facts": [
   {
-   "text": "Interim final rule 'Addressing Remote Access to Advanced Semiconductors' (Bureau of Industry and Security), effective on publication, scheduled for 2026-11-19: adds a licence requirement for advanced-node chips from non-approved designers exported by a front-end fabricator or packaging firm, and for exports to overseas data centres that give significant compute access to companies headquartered in restricted countries",
+   "text": "Interim final rule 'Addressing Remote Access to Advanced Semiconductors' (Bureau of Industry and Security), effective on publication, scheduled for 2026-11-19: adds a license requirement for advanced-node chips from non-approved designers exported by a front-end fabricator or packaging firm, and for exports to overseas data centers that give significant compute access to companies headquartered in restricted countries",
    "url": "https://public-inspection.federalregister.gov/2026-23529.pdf",
    "tier": "primary",
    "checked": "2026-11-26"
   },
   {
-   "text": "The same rule requires a licence for advanced chips to Indonesia, Malaysia, Singapore, Thailand and Brazil, with an exclusion for US-headquartered end users; comments are due 60 days after publication",
+   "text": "The same rule requires a license for advanced chips to Indonesia, Malaysia, Singapore, Thailand and Brazil, with an exclusion for US-headquartered end users; comments are due 60 days after publication",
    "url": "https://public-inspection.federalregister.gov/2026-23529.pdf",
    "tier": "primary",
    "checked": "2026-11-26"
   },
   {
-   "text": "Background: a final rule published 2026-01-15 had moved certain advanced computing chips for China and Macau from presumption of denial to case-by-case licence review",
+   "text": "Background: a final rule published 2026-01-15 had moved certain advanced computing chips for China and Macau from presumption of denial to case-by-case license review",
    "url": "https://public-inspection.federalregister.gov/2026-00789.pdf",
    "tier": "primary",
    "checked": "2026-11-26"
@@ -46,7 +46,7 @@
   ]
  },
  "relief_headlines_that_do_not_resolve_it": [
-  "Reports that licences 'will be granted' without confirmed resumed shipments"
+  "Reports that licenses 'will be granted' without confirmed resumed shipments"
  ],
  "sources": [
   "https://public-inspection.federalregister.gov/2026-23529.pdf",
@@ -72,11 +72,16 @@
    "date": "2026-11-26",
    "status": "open",
    "note": "Summary rewritten so that it states only what was confirmed at the listed sources and marks the rest as reported. The first version is kept under superseded_sources. Resolution conditions are unchanged."
+  },
+  {
+   "date": "2026-11-27",
+   "status": "open",
+   "note": "Spelling changed to American English (licence to license, centres to centers) in the title, summary, facts and notes. No fact changed. The resolution conditions and the first version kept under superseded_sources are left as first written."
   }
  ],
  "note": "Risk state only. Not a forecast and not investment advice.",
  "unconfirmed_facts": [
-  "TSMC suspending some orders at 16 nm and below unless customers obtain licences; FT report that TSMC and Samsung suspended some shipments: read only in a wire reprint dated 2026-11-20",
+  "TSMC suspending some orders at 16 nm and below unless customers obtain licenses; FT report that TSMC and Samsung suspended some shipments: read only in a wire reprint dated 2026-11-20",
   "ASML and Infineon share falls: not confirmed"
  ],
  "superseded_sources": {
