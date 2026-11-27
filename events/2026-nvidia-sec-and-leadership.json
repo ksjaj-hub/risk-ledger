@@ -1,7 +1,7 @@
 {
  "schema": 1,
  "id": "2026-nvidia-sec-and-leadership",
- "title": "Nvidia: reported SEC accounting inquiry and CEO turmoil",
+ "title": "Nvidia: CEO turmoil and government inquiries (SEC probe reported, not confirmed)",
  "category": "company",
  "markets": [
   "US"
@@ -76,6 +76,11 @@
    "date": "2026-11-26",
    "status": "open",
    "note": "Summary rewritten so that it states only what was confirmed at the listed sources and marks the rest as reported. The first version is kept under superseded_sources. Resolution conditions are unchanged."
+  },
+  {
+   "date": "2026-11-27",
+   "status": "open",
+   "note": "Title changed from 'Nvidia: reported SEC accounting inquiry and CEO turmoil' so that it matches the correction above: the company refers to government inquiries without naming an agency, and the reported SEC probe is not confirmed. Resolution conditions are unchanged."
   }
  ],
  "note": "Risk state only. Not a forecast and not investment advice.",

@@ -370,11 +370,31 @@
   "sector_band": {
    "en": {
     "term": "Sector band",
-    "def": "Quiet, Normal or Strained: how many independent open risks touch a sector, weighted by link strength. The same words as the market backdrop components, which also have a fourth level, Extreme. Records and rule files store the levels as Low, Moderate, High and Extreme. It counts pressure. It does not predict returns."
+    "def": "Quiet, Normal or Strained: how many independent open risks touch a sector, weighted by link strength. It counts pressure. It does not predict returns."
    },
    "ko": {
     "term": "섹터 단계",
-    "def": "잠잠, 평소, 긴장입니다. 시장 배경 요소와 같은 단어를 쓰며, 요소에는 넷째 단계인 극심이 더 있습니다. 기록 파일과 규칙 문서에는 Low, Moderate, High, Extreme으로 적혀 있습니다. 서로 다른 열린 리스크가 그 섹터에 얼마나 닿는지를 연결 강도로 가중해 셉니다. 압력의 크기이지 수익률 예측이 아닙니다."
+    "def": "잠잠, 평소, 긴장입니다. 서로 다른 열린 리스크가 그 섹터에 얼마나 닿는지를 연결 강도로 가중해 셉니다. 압력의 크기이지 수익률 예측이 아닙니다."
+   }
+  },
+  "component_steps": {
+   "en": {
+    "term": "Steps (of a backdrop measure)",
+    "def": "Each of the five backdrop measures is shown as 0 to 3 filled steps. Record and rule files call them Low (0), Moderate (1), High (2) and Extreme (3); card conditions call them Quiet, Normal, Strained and Extreme. The AFMX score is the filled steps out of 15, as a number out of 100."
+   },
+   "ko": {
+    "term": "칸 (시장 배경 지표)",
+    "def": "시장 배경의 다섯 지표는 각각 0칸에서 3칸까지 채워집니다. 기록 파일과 규칙 문서에는 Low(0칸), Moderate(1칸), High(2칸), Extreme(3칸)으로 적혀 있고, 카드 조건에서는 잠잠, 평소, 긴장, 극심이라고 부릅니다. AFMX 점수는 15칸 중 채워진 칸의 비율을 100점 만점으로 바꾼 것입니다."
+   }
+  },
+  "ma200": {
+   "en": {
+    "term": "200-day average",
+    "def": "The average closing price over the last 200 trading days, about ten months. A price below it is commonly read as a longer downtrend. Here it is only counted: how many sectors are below their own average."
+   },
+   "ko": {
+    "term": "200일 평균",
+    "def": "최근 200거래일(약 열 달) 종가의 평균입니다. 가격이 이보다 아래면 흔히 긴 흐름이 약하다고 읽습니다. 여기서는 자기 평균 아래에 있는 섹터가 몇 개인지만 셉니다."
    }
   },
   "hash_chain": {
