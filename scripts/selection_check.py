@@ -96,8 +96,8 @@ def page(crit, rows, stats):
     b.append(two("3. The home screen", "3. 홈 화면", "h2"))
     b.append(t2(crit["home_screen"]))
     b.append(two("4. The cards against the criteria", "4. 지금 카드를 기준에 맞춰 본 결과", "h2"))
-    b.append(two(f'Checked on {crit["audit"]["checked_on"]}, using only what is on each card. "Partly" means the card stands on confirmed facts, but its title or one of its conditions runs ahead of them.',
-                 f'{crit["audit"]["checked_on"]}에 카드에 적힌 내용만으로 점검했습니다. "일부"는 카드가 확인된 사실 위에 서 있지만 제목이나 조건 하나가 그보다 앞서 나갔다는 뜻입니다.'))
+    b.append(two(f'Checked on {crit["audit"]["checked_on"]}, using only what is on each card. "Partly" means the card stands on confirmed facts, but one of its conditions or its timing falls short.',
+                 f'{crit["audit"]["checked_on"]}에 카드에 적힌 내용만으로 점검했습니다. "일부"는 카드가 확인된 사실 위에 서 있지만 조건 하나나 작성 시점이 기준에 못 미친다는 뜻입니다.'))
     for r in sorted(rows, key=lambda r: (-ORDER[r["verdict"]], r["id"])):
         w = WORD[r["verdict"]]
         short = [k[1:] for k in sorted(r["results"]) if r["results"][k] != "met"]

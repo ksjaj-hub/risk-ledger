@@ -1,7 +1,7 @@
 {
  "schema": 1,
  "id": "2026-ai-buildout-financing",
- "title": "Doubts about financing of the AI buildout",
+ "title": "Debt-funded AI buildout (sell-off reported, not confirmed)",
  "category": "sector",
  "markets": [
   "US"
@@ -65,6 +65,11 @@
    "date": "2026-11-27",
    "status": "open",
    "note": "Added forecast 1: by 2027-03-31, 20% resolved, 15% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
+  },
+  {
+   "date": "2026-11-27",
+   "status": "open",
+   "note": "Title was 'Doubts about financing of the AI buildout'. Changed to say only what is confirmed. Conditions and forecasts unchanged."
   }
  ],
  "note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",

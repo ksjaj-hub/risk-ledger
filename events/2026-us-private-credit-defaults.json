@@ -1,7 +1,7 @@
 {
  "schema": 1,
  "id": "2026-us-private-credit-defaults",
- "title": "Rising defaults in US private credit",
+ "title": "US private credit: fast growth and redemption limits (default rate reported, not confirmed)",
  "category": "credit",
  "markets": [
   "US"
@@ -76,6 +76,11 @@
    "date": "2026-11-27",
    "status": "open",
    "note": "Added forecast 1: by 2027-05-31, 2% resolved, 45% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
+  },
+  {
+   "date": "2026-11-27",
+   "status": "open",
+   "note": "Title was 'Rising defaults in US private credit'. Changed to say only what is confirmed. Conditions and forecasts unchanged."
   }
  ],
  "note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",

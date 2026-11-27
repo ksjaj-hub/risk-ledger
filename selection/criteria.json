@@ -143,7 +143,7 @@
  ],
  "audit": {
   "checked_on": "2026-11-27",
-  "note": "Each of the 12 cards against version 1. 'partly' means the card stands on confirmed facts but its title or one condition runs ahead of them. Only what is in the card files was used; no new source was read for this check.",
+  "note": "Each of the 12 cards against version 1. 'partly' means the card stands on confirmed facts but one condition or its timing falls short. Only what is in the card files was used; no new source was read for this check.",
   "cards": {
    "2026-us-appropriations-lapse": {
     "door": "a",
@@ -207,45 +207,29 @@
    "2026-eurozone-inflation-ecb": {
     "door": "a",
     "results": {
-     "S1": "partly",
+     "S1": "met",
      "S2": "met",
      "S3": "met",
      "S4": "met",
      "S5": "met",
      "S6": "met"
-    },
-    "gap": {
-     "en": "The title says inflation is at 4%. The confirmed figure is 3.8% for September; the 4.0% October reading is still listed as unconfirmed on the card.",
-     "ko": "제목은 물가가 4%라고 말합니다. 확인된 수치는 9월 3.8%이고, 10월 4.0%는 카드에 아직 미확인으로 적혀 있습니다."
-    },
-    "fix": {
-     "en": "Read the Eurostat release, or change the title to the confirmed figure.",
-     "ko": "유로스타트 발표를 읽어 확인하거나, 제목을 확인된 수치로 바꿉니다."
     }
    },
    "2026-japan-boj-tightening-yen": {
     "door": "a",
     "results": {
-     "S1": "partly",
+     "S1": "met",
      "S2": "met",
      "S3": "met",
      "S4": "met",
      "S5": "met",
      "S6": "met"
-    },
-    "gap": {
-     "en": "The title names an equity sell-off. The rate decision and the yen level are confirmed; the fall in the Nikkei is not.",
-     "ko": "제목에 주가 급락이 들어 있습니다. 금리 결정과 엔화 수준은 확인됐지만 닛케이 하락은 확인되지 않았습니다."
-    },
-    "fix": {
-     "en": "Confirm the index move at the exchange or a wire, or take it out of the title.",
-     "ko": "지수 움직임을 거래소나 통신사에서 확인하거나, 제목에서 뺍니다."
     }
    },
    "2026-us-iran-war-oil": {
     "door": "c",
     "results": {
-     "S1": "partly",
+     "S1": "met",
      "S2": "met",
      "S3": "met",
      "S4": "met",
@@ -253,8 +237,8 @@
      "S6": "met"
     },
     "gap": {
-     "en": "The title says 'US-Iran war'. The primary source on the card, the US energy agency, says only 'military action in the Middle East' and measures the oil shock. No government document naming the two sides has been read. Also, the event began in March 2026 and the card opened in November, so its conditions were written eight months in.",
-     "ko": "제목은 '미국과 이란 전쟁'이라고 말합니다. 카드의 1차 출처인 미국 에너지정보청은 '중동의 군사 행동'이라고만 쓰고 유가 충격을 잽니다. 두 당사국을 밝힌 정부 문서는 읽지 못했습니다. 또 사건은 2026년 3월에 시작됐는데 카드는 11월에 열어, 조건을 여덟 달이 지난 뒤에 썼습니다."
+     "en": "The event began in March 2026 and the card opened in November, so its conditions were written eight months in. The conditions also name the United States and Iran, and no government document naming the two sides has been read yet.",
+     "ko": "사건은 2026년 3월에 시작됐는데 카드는 11월에 열어, 조건을 여덟 달이 지난 뒤에 썼습니다. 조건에는 미국과 이란이 적혀 있는데, 두 당사국을 밝힌 정부 문서는 아직 읽지 못했습니다."
     },
     "fix": {
      "en": "Add a government document that names the parties.",
@@ -264,26 +248,18 @@
    "2027-us-debt-limit": {
     "door": "a",
     "results": {
-     "S1": "partly",
+     "S1": "met",
      "S2": "met",
      "S3": "met",
      "S4": "met",
      "S5": "met",
      "S6": "met"
-    },
-    "gap": {
-     "en": "The title says 'standoff'. The confirmed facts are the limit, the room left under it and a projection that it will be approached in fiscal year 2027. No source shows a standoff yet; this card is early.",
-     "ko": "제목은 '대치'라고 말합니다. 확인된 사실은 한도, 남은 여유, 그리고 2027 회계연도에 한도에 가까워진다는 전망입니다. 대치가 벌어졌다고 말한 출처는 아직 없습니다. 이른 카드입니다."
-    },
-    "fix": {
-     "en": "Change the title to what is confirmed: the limit is approaching.",
-     "ko": "제목을 확인된 내용에 맞춰 '한도가 다가온다'로 바꿉니다."
     }
    },
    "2026-us-private-credit-defaults": {
     "door": "b",
     "results": {
-     "S1": "partly",
+     "S1": "met",
      "S2": "met",
      "S3": "met",
      "S4": "partly",
@@ -291,8 +267,8 @@
      "S6": "met"
     },
     "gap": {
-     "en": "The title says defaults are rising. The Federal Reserve documents on the card confirm the size of the market and the redemption limits, not a default rate. The main conditions use a rating agency's default rate that we have not read at the agency. The trend began before the card opened.",
-     "ko": "제목은 부도가 늘고 있다고 말합니다. 카드에 있는 연준 문서가 확인해 주는 것은 시장 규모와 환매 제한이고, 부도율은 아닙니다. 핵심 조건은 신용평가사의 부도율에 걸려 있는데 저희는 그 숫자를 평가사에서 직접 읽지 못했습니다. 이 흐름은 카드를 열기 전부터 있었습니다."
+     "en": "The main conditions use a rating agency's default rate that we have not read at the agency. The trend began before the card opened.",
+     "ko": "핵심 조건은 신용평가사의 부도율에 걸려 있는데 저희는 그 숫자를 평가사에서 직접 읽지 못했습니다. 이 흐름은 카드를 열기 전부터 있었습니다."
     },
     "fix": {
      "en": "Read the default rate at the agency, or move the conditions to a figure a public body publishes.",
@@ -302,7 +278,7 @@
    "2026-ai-buildout-financing": {
     "door": "b",
     "results": {
-     "S1": "partly",
+     "S1": "met",
      "S2": "met",
      "S3": "met",
      "S4": "partly",
@@ -310,8 +286,8 @@
      "S6": "met"
     },
     "gap": {
-     "en": "A Federal Reserve governor and its stability report confirm that the buildout is increasingly funded by debt. The sell-off that prompted the card is known only from press and broker notes. One condition needs an index level that we named but have not yet read, so it cannot be counted.",
-     "ko": "설비 투자가 점점 빚으로 이뤄진다는 점은 연준 이사 연설과 금융안정보고서로 확인됩니다. 카드를 연 계기인 주가 급락은 언론과 증권사 자료로만 알려져 있습니다. 조건 하나는 저희가 출처를 정해 놓고 아직 읽지 않은 지수 수준이 필요해 셀 수 없습니다."
+     "en": "One condition needs an index level that we named but have not yet read, so it cannot be counted.",
+     "ko": "조건 하나는 저희가 출처를 정해 놓고 아직 읽지 않은 지수 수준이 필요해 셀 수 없습니다."
     },
     "fix": {
      "en": "Read the index level and write it on the card.",
@@ -355,6 +331,10 @@
   {
    "date": "2026-11-27",
    "note": "Version 1 written and the first 12 cards checked against it: 5 meet every criterion, 6 partly, 1 does not."
+  },
+  {
+   "date": "2026-11-27",
+   "note": "Six titles changed to say only what is confirmed (each card's history has the old title). Rechecked: 8 meet every criterion, 3 partly, 1 does not."
   }
  ],
  "stage": "beta"

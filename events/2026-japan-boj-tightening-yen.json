@@ -1,7 +1,7 @@
 {
  "schema": 1,
  "id": "2026-japan-boj-tightening-yen",
- "title": "Japan: Bank of Japan rate rises, weak yen and equity sell-off",
+ "title": "Japan: Bank of Japan rate rises and weak yen",
  "category": "monetary policy",
  "markets": [
   "JP",
@@ -76,6 +76,11 @@
    "date": "2026-11-27",
    "status": "open",
    "note": "Added forecast 1: by 2027-03-31, 15% resolved, 40% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
+  },
+  {
+   "date": "2026-11-27",
+   "status": "open",
+   "note": "Title was 'Japan: Bank of Japan rate rises, weak yen and equity sell-off'. Changed to say only what is confirmed. Conditions and forecasts unchanged."
   }
  ],
  "note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",

@@ -1,7 +1,7 @@
 {
  "schema": 1,
  "id": "2026-us-iran-war-oil",
- "title": "US-Iran war and shipping attacks around the Strait of Hormuz",
+ "title": "Middle East military action and disrupted oil shipments through the Strait of Hormuz",
  "category": "geopolitical",
  "markets": [
   "US"
@@ -81,6 +81,11 @@
    "date": "2026-11-27",
    "status": "open",
    "note": "Added forecast 1: by 2027-05-31, 5% resolved, 20% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
+  },
+  {
+   "date": "2026-11-27",
+   "status": "open",
+   "note": "Title was 'US-Iran war and shipping attacks around the Strait of Hormuz'. Changed to say only what is confirmed. Conditions and forecasts unchanged."
   }
  ],
  "note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
