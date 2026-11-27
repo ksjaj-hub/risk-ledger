@@ -30,7 +30,10 @@ def summarise(rows, lo_day):
             continue
         f = np.array([rows[k]["fall"] for k in idx])
         spells = 1 + sum(1 for a, b in zip(idx, idx[1:]) if b != a + 1)
-        out.append({"from": lo, "to": hi, "days": len(idx), "spells": spells,
+        t10 = np.array([rows[k]["t10"] for k in idx if rows[k]["t10"] is not None])
+        mix = [r3((f > -5).mean()), r3(((f <= -5) & (f > -10)).mean()), r3(((f <= -10) & (f > -20)).mean()), r3((f <= -20).mean())]
+        out.append({"from": lo, "to": hi, "days": len(idx), "spells": spells, "mix_lt5_5to10_10to20_ge20": mix,
+                    "median_days_to_fall10": r3(np.median(t10)) if len(t10) else None,
                     "share_fall10": r3((f <= -10).mean()), "share_fall20": r3((f <= -20).mean()),
                     "median_deepest": r3(np.median(f)), "p5_deepest": r3(np.percentile(f, 5)),
                     "thin": bool(len(idx) < 250 or spells < 10)})
@@ -55,7 +58,10 @@ def main():
         if i is None:
             continue
         fall = 100 * (P[i + 1: i + 64].min() / P[i] - 1) if i + 63 < len(days) else None
-        rows.append({"day": r["date"], "score": int(r["v3_long_score"]), "state": r["v3_long_state"], "fall": fall})
+        t10 = None
+        if fall is not None and fall <= -10:
+            t10 = int(np.argmax(P[i + 1: i + 64] <= 0.9 * P[i])) + 1
+        rows.append({"day": r["date"], "score": int(r["v3_long_score"]), "state": r["v3_long_state"], "fall": fall, "t10": t10})
     res = {"generated_at_utc": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
            "warning": "Hindsight on revised data. Past frequencies, not forecasts. Plan: score_bins_plan.json.",
            "horizon_trading_days": 63, "market_last": days[-1],
