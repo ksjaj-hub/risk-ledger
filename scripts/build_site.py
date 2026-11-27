@@ -54,7 +54,7 @@ if _bn.exists():
     _long = {x["from"]: x for x in _b["since_1990"]["bands"]}
     aids["score_bands"] = {"first": _b["since_2007"]["first"], "last": _b["since_2007"]["last"], "long_first": _b["since_1990"]["first"],
                            "bands": [{"from": x["from"], "to": x["to"], "days": x["days"], "share": x["share_fall10"], "worst5": x["p5_deepest"],
-                                      "thin": x["thin"], "long_share": _long.get(x["from"], {}).get("share_fall10")}
+                                      "thin": x["thin"], "mix": x.get("mix_lt5_5to10_10to20_ge20"), "days_to_fall": x.get("median_days_to_fall10"), "long_share": _long.get(x["from"], {}).get("share_fall10")}
                                      for x in _b["since_2007"]["bands"]]}
 # market breadth: a reference reading under test, outside the rule (shadow/README.md). Reading aid.
 _sb = ROOT / "shadow" / "breadth.csv"
