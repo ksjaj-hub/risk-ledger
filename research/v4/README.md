@@ -284,3 +284,27 @@ For reference, v3 scores 0.835 / 0.625 and v3 plus breadth (E1) 0.818 / 0.662, n
 - Rank correlation with breadth since 1990: dispersion 0.33, margin-loan growth 0.089, rate rise -0.063.
 
 **Where this leaves things:** breadth is the one lead. Record it live outside the rule (49 industries when published, sector funds daily, dispersion alongside) and judge it on days that have not happened yet.
+
+## Round 9: the absorption ratio (random-matrix measure of how tightly industries move together)
+
+Approved by the owner. Fixed beforehand in `preregistration9.json` (first committed as `preregistration8.json` in 3f79396, before the script existed; renamed, text unchanged, because another branch took the number 8). Numbers in `results9.json`; script `scripts/research_v4g.py`. Hindsight, not a forecast.
+
+**Outcome: all three candidates fail every bar and are dropped. No v4, nothing recorded live, no further settings tried.**
+
+Candidates, from the 49 French industries: H1 the absorption ratio of Kritzman, Li, Page and Rigobon (2011), 500-day exponentially weighted covariance, top fifth of eigenvectors; H2 the paper's standardized shift (15-day against one-year); H3 the share of correlation-matrix variance above the Marchenko-Pastur edge, 252 days.
+
+AUROC for a 10% fall within 63 trading days (0.5 is a coin toss):
+
+| | 1990-2006 | 2007 on | 1927-1985 | v3 plus it, 2007 on (v3 = 0.625) | difference to v3, 90% |
+|---|---|---|---|---|---|
+| H1 level | 0.436 | 0.458 | 0.648 | 0.604 | -0.062 to +0.011 |
+| H2 shift | 0.566 | 0.558 | 0.528 | 0.616 | -0.032 to +0.015 |
+| H3 filtered | 0.436 | 0.465 | 0.601 | 0.603 | -0.060 to +0.010 |
+
+- Alone: none reaches 0.58 on train and test. Since 1990 the two level measures point the wrong way (below 0.5); they worked only before 1986.
+- In the rule: each makes v3 worse on train, on the test period, and on the 5%-in-21-days outcome. The clean check on 1927-1985 fails for all three; the shift makes the drawdown level significantly worse (-0.065 to -0.016).
+- Price-only (the licensing motive): added to drawdown plus realized volatility, each lowers the AUROC on both the test period (0.642-0.647 against 0.660) and 1927-1985. No help in replacing licensed inputs.
+- On top of breadth: all three lower it (0.645-0.650 against 0.662).
+- As expected beforehand, the level measures are mostly round 5's average correlation again (rank correlation 0.70 and 0.72), which had already failed. The Marchenko-Pastur filter changes nothing.
+
+Why it probably fails here: at the level of 49 industry portfolios one market factor already carries about three quarters of the variance (H1 is 0.776 today), so the measure moves little and mostly with volatility that v3 already reads. The paper's result was for a different sample and outcome; it does not carry over to this test.

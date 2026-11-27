@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Round 8: the absorption ratio (Kritzman, Li, Page, Rigobon 2011) from the 49 French industries.
+"""Round 9: the absorption ratio (Kritzman, Li, Page, Rigobon 2011) from the 49 French industries.
 
 Hindsight; not part of the ledger; not a forecast. Everything here is fixed in
-research/v4/preregistration8.json, committed before this file existed.
+research/v4/preregistration9.json (first committed as preregistration8.json in 3f79396, renamed because another branch took the number), committed before this file existed.
 
-  python scripts/research_v4f.py
-  python scripts/research_v4f.py --fixture DIR --draws 50   # smoke test on made-up data
+  python scripts/research_v4g.py
+  python scripts/research_v4g.py --fixture DIR --draws 50   # smoke test on made-up data
 """
 import argparse, bisect, copy, csv, datetime as dt, json, pathlib, sys
 
@@ -288,7 +288,7 @@ def main():
         print(name, e["reading"], ad, e["near_high_O1"], rin["test_O1"], rin["test_O1_minus_v3_90"], e["price_only"]["test_difference_90"], e["price_only"]["1927_1985_difference_90"])
     out["outcome"] = {k: v["reading"] for k, v in out["candidates"].items()}
     pathlib.Path(a.out).mkdir(parents=True, exist_ok=True)
-    (pathlib.Path(a.out) / "results8.json").write_text(json.dumps(out, indent=1) + "\n")
+    (pathlib.Path(a.out) / "results9.json").write_text(json.dumps(out, indent=1) + "\n")
     print(json.dumps(out["outcome"]))
 
 
