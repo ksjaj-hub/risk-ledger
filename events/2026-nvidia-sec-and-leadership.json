@@ -86,9 +86,14 @@
    "date": "2026-11-27",
    "status": "open",
    "note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
+  },
+  {
+   "date": "2026-11-27",
+   "status": "open",
+   "note": "Added forecast 1: by 2027-04-30, 2% resolved, 4% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
   }
  ],
- "note": "Risk state only. Not a forecast and not investment advice.",
+ "note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
  "unconfirmed_facts": [
   "SEC probe: a Reuters dispatch dated 2026-11-17 says the Wall Street Journal reported the SEC is probing Nvidia after Huang's resignation. It does not say the probe concerns accounting. The card's original wording (a Reuters report on 2026-11-20 of an inquiry into accounting practices) is not confirmed as written",
   "2026-11-25: Nvidia -8.7% in early trading: not confirmed at a primary or wire source"
@@ -150,5 +155,16 @@
   "written_on": "2026-11-27",
   "note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
   "text": "Neither the company nor the SEC has confirmed an SEC inquiry, and the quarterly results filing does not mention one. If there is none, this card's first condition tracks something that does not exist, and what remains is a leadership episode that the board has already reversed."
- }
+ },
+ "forecasts": [
+  {
+   "n": 1,
+   "written_on": "2026-11-27",
+   "deadline": "2027-04-30",
+   "p_resolved": 0.02,
+   "p_worsened": 0.04,
+   "basis": "The first condition cannot be met unless an SEC inquiry is first confirmed and then closed, and none is confirmed. The annual report is due by about 2027-04-01. Restatements and late filings at companies of this size are rare.",
+   "outcome": null
+  }
+ ]
 }

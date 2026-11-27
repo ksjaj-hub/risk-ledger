@@ -76,9 +76,14 @@
    "date": "2026-11-27",
    "status": "open",
    "note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
+  },
+  {
+   "date": "2026-11-27",
+   "status": "open",
+   "note": "Added forecast 1: by 2027-05-31, 5% resolved, 20% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
   }
  ],
- "note": "Risk state only. Not a forecast and not investment advice.",
+ "note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
  "unconfirmed_facts": [
   "VIX closing high of 31.05 on 2026-03-27: not yet checked against this record's own VIX series",
   "2026-11-24: Brent settled more than 2% higher after reported attacks on vessels; opened at 90.97 in Asia on 2026-11-25: attributed to Reuters in a repost; original not read"
@@ -153,5 +158,16 @@
   "written_on": "2026-11-27",
   "note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
   "text": "Supply is coming back: production shut in has fallen from 10.9 to 2.5 million barrels a day and Brent from an October average of $124 to under $100. The $80 line is our own choice. If the economy has adjusted to oil near $100, the risk could fade well before our conditions say so."
- }
+ },
+ "forecasts": [
+  {
+   "n": 1,
+   "written_on": "2026-11-27",
+   "deadline": "2027-05-31",
+   "p_resolved": 0.05,
+   "p_worsened": 0.2,
+   "basis": "All three are needed: an announced ceasefire, 60 days without a reported attack and Brent under $80 for 20 days, from a price near $92 with attacks still reported. Brent above $110 on any day worsens the card; it averaged $124 in October.",
+   "outcome": null
+  }
+ ]
 }

@@ -71,9 +71,14 @@
    "date": "2026-11-27",
    "status": "open",
    "note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
+  },
+  {
+   "date": "2026-11-27",
+   "status": "open",
+   "note": "Added forecast 1: by 2027-03-31, 15% resolved, 40% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
   }
  ],
- "note": "Risk state only. Not a forecast and not investment advice.",
+ "note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
  "unconfirmed_facts": [
   "2026-11-12: USD/JPY briefly above 160: an intraday high cannot be settled from the Federal Reserve's noon rates, which stayed below 160 in the week of 2026-11-16",
   "2026-11-20: Nikkei 225 -3,007.81 points to 56,436.65: not confirmed at a primary or wire source",
@@ -147,5 +152,16 @@
   "written_on": "2026-11-27",
   "note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
   "text": "The Bank of Japan has moved in small steps and said in advance that it would keep raising. A weak yen also lifts exporters' earnings. Sharp spillovers from Japan to the US market have been rare, so this may remain a local story."
- }
+ },
+ "forecasts": [
+  {
+   "n": 1,
+   "written_on": "2026-11-27",
+   "deadline": "2027-03-31",
+   "p_resolved": 0.15,
+   "p_worsened": 0.4,
+   "basis": "A Bank of Japan meeting that matches forecasts is likely; the yen staying below 155 for 20 days from about 159 is not. Any one of three things worsens the card: confirmed intervention, a 5% one-day fall in the Nikkei, or a 10-year yield above 3.0% (reported near 2.8%).",
+   "outcome": null
+  }
+ ]
 }

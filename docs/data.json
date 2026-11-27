@@ -240,9 +240,14 @@
 "date": "2026-11-27",
 "status": "open",
 "note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Added forecast 1: by 2027-03-31, 20% resolved, 15% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
 }
 ],
-"note": "Risk state only. Not a forecast and not investment advice.",
+"note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
 "unconfirmed_facts": [
 "2026-11-20: S&P 500 -3.70% to 6,910.39; Nasdaq Composite -5.28%; seventh straight S&P 500 decline; Nvidia -14%, AMD -13.3%: from a broker commentary; not confirmed at a primary or wire source",
 "2026-11-25: Nasdaq 100 briefly 20% below its record closing high: attributed to Reuters in a repost; original not read"
@@ -313,6 +318,15 @@
 "note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
 "text": "The debt behind the buildout is still small next to the cash these companies earn: a Federal Reserve governor said he is 'less concerned about direct losses'. A fall in share prices is not a failed financing, and no borrower has missed a payment."
 },
+"forecasts": [
+{
+"n": 1,
+"written_on": "2026-11-27",
+"deadline": "2027-03-31",
+"p_resolved": 0.2,
+"p_worsened": 0.15
+}
+],
 "_path": "events/2026-ai-buildout-financing.json"
 },
 {
@@ -386,9 +400,14 @@
 "date": "2026-11-27",
 "status": "open",
 "note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Added forecast 1: by 2027-05-31, 3% resolved, 60% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
 }
 ],
-"note": "Risk state only. Not a forecast and not investment advice.",
+"note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
 "unconfirmed_facts": [
 "Week ending 2026-11-20: Hang Seng -5.19%, CSI 300 -1.54%: from a fund manager's weekly note; not confirmed at a primary or wire source"
 ],
@@ -447,6 +466,15 @@
 "note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
 "text": "China's property slump is several years old and the US market has lived with it. Industrial output still grew 4.8% in October. This may stay a slow drag that never turns into a US market event."
 },
+"forecasts": [
+{
+"n": 1,
+"written_on": "2026-11-27",
+"deadline": "2027-05-31",
+"p_resolved": 0.03,
+"p_worsened": 0.6
+}
+],
 "_path": "events/2026-china-domestic-demand-property.json"
 },
 {
@@ -520,9 +548,14 @@
 "date": "2026-11-27",
 "status": "open",
 "note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Added forecast 1: by 2027-03-31, 10% resolved, 12% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
 }
 ],
-"note": "Risk state only. Not a forecast and not investment advice.",
+"note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
 "unconfirmed_facts": [
 "October 2026 euro area inflation 4.0%: Eurostat release titles of 2026-11-04 and 2026-11-18 read 'annual inflation up to 4.0%', but the pages could not be opened, so the figure is not counted as confirmed; core 2.6% likewise",
 "Week ending 2026-11-20: STOXX 600 -5.80%, DAX -7.28%: not confirmed at a primary or wire source",
@@ -585,6 +618,15 @@
 "note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
 "text": "Energy prices, up 18.9% in September, are a large part of the rise. Brent has since fallen from an October average of $124 to under $100. If that holds, inflation could turn down without further ECB rises, and this card may be the oil card counted twice."
 },
+"forecasts": [
+{
+"n": 1,
+"written_on": "2026-11-27",
+"deadline": "2027-03-31",
+"p_resolved": 0.1,
+"p_worsened": 0.12
+}
+],
 "_path": "events/2026-eurozone-inflation-ecb.json"
 },
 {
@@ -676,9 +718,14 @@
 "date": "2026-11-27",
 "status": "open",
 "note": "Added October PCE inflation (3.8%, core 3.3%) from the Bureau of Economic Analysis release of 2026-11-25, to the facts and the summary. The matching unconfirmed line now covers only the Q3 growth revision. Resolution conditions and numeric criteria are unchanged: they count CPI, not PCE."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Added forecast 1: by 2027-03-31, 5% resolved, 10% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
 }
 ],
-"note": "Risk state only. Not a forecast and not investment advice.",
+"note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
 "unconfirmed_facts": [
 "2026-11-20: CME FedWatch 92% chance of a December hike: from a broker commentary; CME itself not read. The Fed minutes above support the direction but not this number",
 "2026-11-25: Q3 growth reported as revised up: the release behind this wording has not been identified. (The October inflation part of the same report is now confirmed above, from the Bureau of Economic Analysis.)"
@@ -742,6 +789,15 @@
 "note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
 "text": "The Fed's own minutes say futures already put high odds on a rise by year-end and two more by summer 2027. A rise that is already in prices may add little new stress, and oil has come down from its October level."
 },
+"forecasts": [
+{
+"n": 1,
+"written_on": "2026-11-27",
+"deadline": "2027-03-31",
+"p_resolved": 0.05,
+"p_worsened": 0.1
+}
+],
 "_path": "events/2026-fed-rate-hikes.json"
 },
 {
@@ -817,9 +873,14 @@
 "date": "2026-11-27",
 "status": "open",
 "note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Added forecast 1: by 2027-03-31, 15% resolved, 40% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
 }
 ],
-"note": "Risk state only. Not a forecast and not investment advice.",
+"note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
 "unconfirmed_facts": [
 "2026-11-12: USD/JPY briefly above 160: an intraday high cannot be settled from the Federal Reserve's noon rates, which stayed below 160 in the week of 2026-11-16",
 "2026-11-20: Nikkei 225 -3,007.81 points to 56,436.65: not confirmed at a primary or wire source",
@@ -894,6 +955,15 @@
 "note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
 "text": "The Bank of Japan has moved in small steps and said in advance that it would keep raising. A weak yen also lifts exporters' earnings. Sharp spillovers from Japan to the US market have been rare, so this may remain a local story."
 },
+"forecasts": [
+{
+"n": 1,
+"written_on": "2026-11-27",
+"deadline": "2027-03-31",
+"p_resolved": 0.15,
+"p_worsened": 0.4
+}
+],
 "_path": "events/2026-japan-boj-tightening-yen.json"
 },
 {
@@ -984,9 +1054,14 @@
 "date": "2026-11-27",
 "status": "open",
 "note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Added forecast 1: by 2027-04-30, 2% resolved, 4% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
 }
 ],
-"note": "Risk state only. Not a forecast and not investment advice.",
+"note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
 "unconfirmed_facts": [
 "SEC probe: a Reuters dispatch dated 2026-11-17 says the Wall Street Journal reported the SEC is probing Nvidia after Huang's resignation. It does not say the probe concerns accounting. The card's original wording (a Reuters report on 2026-11-20 of an inquiry into accounting practices) is not confirmed as written",
 "2026-11-25: Nvidia -8.7% in early trading: not confirmed at a primary or wire source"
@@ -1049,6 +1124,15 @@
 "note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
 "text": "Neither the company nor the SEC has confirmed an SEC inquiry, and the quarterly results filing does not mention one. If there is none, this card's first condition tracks something that does not exist, and what remains is a leadership episode that the board has already reversed."
 },
+"forecasts": [
+{
+"n": 1,
+"written_on": "2026-11-27",
+"deadline": "2027-04-30",
+"p_resolved": 0.02,
+"p_worsened": 0.04
+}
+],
 "_path": "events/2026-nvidia-sec-and-leadership.json"
 },
 {
@@ -1135,9 +1219,14 @@
 "date": "2026-11-27",
 "status": "open",
 "note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Added forecast 1: by 2027-03-31, 7% resolved, 25% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
 }
 ],
-"note": "Risk state only. Not a forecast and not investment advice.",
+"note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
 "unconfirmed_facts": [
 "TSMC suspending some orders at 16 nm and below unless customers obtain licenses; FT report that TSMC and Samsung suspended some shipments: read only in a wire reprint dated 2026-11-20",
 "ASML and Infineon share falls: not confirmed"
@@ -1198,6 +1287,15 @@
 "note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
 "text": "The rule asks for a license, it does not ban. It excludes US-headquartered end users, and a January 2026 rule had already moved chips for China to case-by-case review. Licenses may be granted as a matter of routine, and the reported shipment halts are not confirmed."
 },
+"forecasts": [
+{
+"n": 1,
+"written_on": "2026-11-27",
+"deadline": "2027-03-31",
+"p_resolved": 0.07,
+"p_worsened": 0.25
+}
+],
 "_path": "events/2026-us-ai-chip-export-rules.json"
 },
 {
@@ -1264,9 +1362,14 @@
 "date": "2026-11-27",
 "status": "open",
 "note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Added forecast 1: by 2026-12-12, 70% resolved, 12% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
 }
 ],
-"note": "Risk state only. Not a forecast and not investment advice.",
+"note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
 "unconfirmed_facts": [
 "A funding bill needs 60 Senate votes: this is the Senate cloture rule; no primary page stating it has been read"
 ],
@@ -1319,6 +1422,15 @@
 "note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
 "text": "The date has been known since September, and Congress passed that stopgap without a lapse. A deadline everyone can see is the kind of risk markets tend to deal with early, so the card may overstate a familiar event."
 },
+"forecasts": [
+{
+"n": 1,
+"written_on": "2026-11-27",
+"deadline": "2026-12-12",
+"p_resolved": 0.7,
+"p_worsened": 0.12
+}
+],
 "_path": "events/2026-us-appropriations-lapse.json"
 },
 {
@@ -1397,9 +1509,14 @@
 "date": "2026-11-27",
 "status": "open",
 "note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Added forecast 1: by 2027-06-30, 5% resolved, 30% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
 }
 ],
-"note": "Risk state only. Not a forecast and not investment advice.",
+"note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
 "unconfirmed_facts": [
 "2026-11-25: MSCI Asia-Pacific ex-Japan -2.3%; South Korea down as much as 5.3% intraday: attributed to Reuters in a repost; original not read"
 ],
@@ -1459,6 +1576,15 @@
 "note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
 "text": "These are ceilings ('up to') in a proposal with no effective date. Rates could come out lower or be dropped after the hearings. After the 2018 and 2025 tariff announcements the market hit its low within about a week."
 },
+"forecasts": [
+{
+"n": 1,
+"written_on": "2026-11-27",
+"deadline": "2027-06-30",
+"p_resolved": 0.05,
+"p_worsened": 0.3
+}
+],
 "_path": "events/2026-us-excess-capacity-tariffs.json"
 },
 {
@@ -1539,9 +1665,14 @@
 "date": "2026-11-27",
 "status": "open",
 "note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Added forecast 1: by 2027-05-31, 5% resolved, 20% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
 }
 ],
-"note": "Risk state only. Not a forecast and not investment advice.",
+"note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
 "unconfirmed_facts": [
 "VIX closing high of 31.05 on 2026-03-27: not yet checked against this record's own VIX series",
 "2026-11-24: Brent settled more than 2% higher after reported attacks on vessels; opened at 90.97 in Asia on 2026-11-25: attributed to Reuters in a repost; original not read"
@@ -1617,6 +1748,15 @@
 "note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
 "text": "Supply is coming back: production shut in has fallen from 10.9 to 2.5 million barrels a day and Brent from an October average of $124 to under $100. The $80 line is our own choice. If the economy has adjusted to oil near $100, the risk could fade well before our conditions say so."
 },
+"forecasts": [
+{
+"n": 1,
+"written_on": "2026-11-27",
+"deadline": "2027-05-31",
+"p_resolved": 0.05,
+"p_worsened": 0.2
+}
+],
 "_path": "events/2026-us-iran-war-oil.json"
 },
 {
@@ -1692,9 +1832,14 @@
 "date": "2026-11-27",
 "status": "open",
 "note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Added forecast 1: by 2027-05-31, 2% resolved, 45% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
 }
 ],
-"note": "Risk state only. Not a forecast and not investment advice.",
+"note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
 "unconfirmed_facts": [
 "Fitch: trailing-12-month default rate 6.2% in October 2026 (6.3% in September); 10.7% for issuers under $25 million EBITDA versus 2.4% above $100 million: matches a trade publication dated 2026-11-17 but has not been read at Fitch. The '90 unique defaulters' figure in the original card was not found",
 "JPMorgan default forecasts and the Moody's figure on bank lending: originals not read"
@@ -1765,6 +1910,15 @@
 "note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
 "text": "Stress has not shown up in traded credit: the high-yield spread in this record is at 1 of 3 steps. The Federal Reserve reports that redemption requests have trended lower. The defaults may stay among small borrowers and never reach banks or public markets."
 },
+"forecasts": [
+{
+"n": 1,
+"written_on": "2026-11-27",
+"deadline": "2027-05-31",
+"p_resolved": 0.02,
+"p_worsened": 0.45
+}
+],
 "_path": "events/2026-us-private-credit-defaults.json"
 },
 {
@@ -1838,9 +1992,14 @@
 "date": "2026-11-27",
 "status": "open",
 "note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Added forecast 1: by 2027-06-30, 10% resolved, 5% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
 }
 ],
-"note": "Risk state only. Not a forecast and not investment advice.",
+"note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
 "unconfirmed_facts": [
 "Bank forecasts (limit reached as early as February 2027; X-date November 2027) and a downgrade warning: from a magazine article citing bank research; originals not read"
 ],
@@ -1900,6 +2059,15 @@
 "note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
 "text": "There is no X-date yet. With about $597 billion of room and extraordinary measures still unused, any real deadline is probably many months away. This card may be open long before it matters to markets."
 },
+"forecasts": [
+{
+"n": 1,
+"written_on": "2026-11-27",
+"deadline": "2027-06-30",
+"p_resolved": 0.1,
+"p_worsened": 0.05
+}
+],
 "_path": "events/2027-us-debt-limit.json"
 }
 ],
@@ -2487,6 +2655,12 @@
 "def": "여러 종목을 한 바구니에 담아 주식처럼 사고파는 펀드입니다. 카드에 적힌 섹터 ETF는 그 섹터를 찾아보기 쉽게 하려는 것이고 추천이 아닙니다."
 }
 }
+},
+"forecast_score": {
+"settled": 0,
+"brier": null,
+"yardstick_nothing_happens": null,
+"next_deadline": "2026-12-12"
 },
 "state_ranges": {
 "first": "2007-01-03",

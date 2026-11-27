@@ -60,9 +60,14 @@
    "date": "2026-11-27",
    "status": "open",
    "note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
+  },
+  {
+   "date": "2026-11-27",
+   "status": "open",
+   "note": "Added forecast 1: by 2027-03-31, 20% resolved, 15% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
   }
  ],
- "note": "Risk state only. Not a forecast and not investment advice.",
+ "note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
  "unconfirmed_facts": [
   "2026-11-20: S&P 500 -3.70% to 6,910.39; Nasdaq Composite -5.28%; seventh straight S&P 500 decline; Nvidia -14%, AMD -13.3%: from a broker commentary; not confirmed at a primary or wire source",
   "2026-11-25: Nasdaq 100 briefly 20% below its record closing high: attributed to Reuters in a repost; original not read"
@@ -132,5 +137,16 @@
   "written_on": "2026-11-27",
   "note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
   "text": "The debt behind the buildout is still small next to the cash these companies earn: a Federal Reserve governor said he is 'less concerned about direct losses'. A fall in share prices is not a failed financing, and no borrower has missed a payment."
- }
+ },
+ "forecasts": [
+  {
+   "n": 1,
+   "written_on": "2026-11-27",
+   "deadline": "2027-03-31",
+   "p_resolved": 0.2,
+   "p_worsened": 0.15,
+   "basis": "Capital spending is likely to be reaffirmed in the January and February reports. The hard parts are the index above its pre-streak close and VIX under 20, each for 20 days, from a VIX of 26.",
+   "outcome": null
+  }
+ ]
 }

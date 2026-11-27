@@ -26,6 +26,11 @@ data = {
     # reading aid only: the English cards are the record
     "ko": json.loads((ROOT / "i18n" / "events.ko.json").read_text()),
 }
+# forecasts: the page shows deadline and odds only; the reasoning stays in the card file. Score summary from forecasts/scorecard.json
+for _e in data["events"]:
+    _e["forecasts"] = [{k: v for k, v in f.items() if k != "basis" and v is not None} for f in _e.get("forecasts", [])]
+_fs = json.loads((ROOT / "forecasts" / "scorecard.json").read_text()) if (ROOT / "forecasts" / "scorecard.json").exists() else {}
+data["aids"]["forecast_score"] = {k: _fs.get(k) for k in ("settled", "brier", "yardstick_nothing_happens", "next_deadline")}
 # card -> sector links with an evidence level, and a per-sector score. Reading aid, see sensitivity/README.md
 def _j(name, default):
     p = ROOT / "sensitivity" / name

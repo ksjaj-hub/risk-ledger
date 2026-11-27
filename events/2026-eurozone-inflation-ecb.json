@@ -69,9 +69,14 @@
    "date": "2026-11-27",
    "status": "open",
    "note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
+  },
+  {
+   "date": "2026-11-27",
+   "status": "open",
+   "note": "Added forecast 1: by 2027-03-31, 10% resolved, 12% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
   }
  ],
- "note": "Risk state only. Not a forecast and not investment advice.",
+ "note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
  "unconfirmed_facts": [
   "October 2026 euro area inflation 4.0%: Eurostat release titles of 2026-11-04 and 2026-11-18 read 'annual inflation up to 4.0%', but the pages could not be opened, so the figure is not counted as confirmed; core 2.6% likewise",
   "Week ending 2026-11-20: STOXX 600 -5.80%, DAX -7.28%: not confirmed at a primary or wire source",
@@ -133,5 +138,16 @@
   "written_on": "2026-11-27",
   "note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
   "text": "Energy prices, up 18.9% in September, are a large part of the rise. Brent has since fallen from an October average of $124 to under $100. If that holds, inflation could turn down without further ECB rises, and this card may be the oil card counted twice."
- }
+ },
+ "forecasts": [
+  {
+   "n": 1,
+   "written_on": "2026-11-27",
+   "deadline": "2027-03-31",
+   "p_resolved": 0.1,
+   "p_worsened": 0.12,
+   "basis": "Oil has fallen from its October level, so three falling monthly readings are possible by March, but the ECB must also signal the peak. Worsening needs 4.5%; the last reported reading is 4.0% and not yet confirmed.",
+   "outcome": null
+  }
+ ]
 }
