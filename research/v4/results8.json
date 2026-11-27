@@ -1,0 +1,337 @@
+{
+ "generated_at_utc": "2026-11-27T11:53Z",
+ "warning": "Hindsight. Not part of the ledger. Not a forecast.",
+ "sample": {
+  "last_day": "2026-09-30",
+  "industries_in_file": 49,
+  "industries_in_500_day_window": {
+   "first_day": "1928-03-01",
+   "min": 39,
+   "max": 49,
+   "in_1990": 49,
+   "last": 49
+  }
+ },
+ "v3": {
+  "train_O1": 0.835,
+  "test_O1": 0.625,
+  "test_O2": 0.658,
+  "test_state_changes": 244
+ },
+ "E1_v3_plus_breadth": {
+  "train_O1": 0.818,
+  "test_O1": 0.662
+ },
+ "price_only_base": {
+  "train_O1": 0.798,
+  "test_O1": 0.66,
+  "1927_1985_O1": 0.754
+ },
+ "candidates": {
+  "H1_level": {
+   "first_day": "1928-03-01",
+   "now": {
+    "day": "2026-09-30",
+    "value": 0.776
+   },
+   "all_days_O1": {
+    "train": 0.436,
+    "test": 0.458,
+    "1927_1985": 0.648
+   },
+   "near_high_O1": {
+    "train": 0.484,
+    "test": 0.419,
+    "1927_1985": 0.606
+   },
+   "test_interval_90": [
+    0.336,
+    0.568
+   ],
+   "test_lower_end_widened": 0.319,
+   "bar_alone": false,
+   "in_the_rule": {
+    "levels": [
+     0.763,
+     0.794,
+     0.812
+    ],
+    "train_O1": 0.792,
+    "test_O1": 0.604,
+    "test_O2": 0.638,
+    "test_near_high_O1": 0.491,
+    "v3_test_near_high_O1": 0.515,
+    "test_O1_minus_v3_90": [
+     -0.062,
+     0.011
+    ],
+    "test_O1_minus_v3_lower_end_widened": -0.067,
+    "test_share_followed_by_10pct_fall_by_state": {
+     "Calm": 0.107,
+     "Guarded": 0.124,
+     "Watch": 0.142,
+     "Elevated": 0.201,
+     "Stress": 0.366
+    },
+    "test_state_changes": 209,
+    "clean_check_1927_1985": {
+     "drawdown_level_same_days": 0.715,
+     "with_candidate": 0.715,
+     "difference_90": [
+      -0.034,
+      0.035
+     ]
+    },
+    "bar": {
+     "test_gain_at_least_0.02_and_widened_interval_above_zero": false,
+     "train_not_more_than_0.02_below": false,
+     "O2_not_more_than_0.01_below": false,
+     "ladder_rises_allowing_one_tie": true,
+     "state_changes_within_25pct": true,
+     "clean_check": false
+    }
+   },
+   "price_only": {
+    "with_candidate": {
+     "train_O1": 0.724,
+     "test_O1": 0.642,
+     "1927_1985_O1": 0.746
+    },
+    "base_same_days": {
+     "test_O1": 0.66,
+     "1927_1985_O1": 0.751
+    },
+    "test_difference_90": [
+     -0.045,
+     0.001
+    ],
+    "1927_1985_difference_90": [
+     -0.029,
+     0.017
+    ],
+    "bar": false
+   },
+   "on_top_of_breadth_for_information": {
+    "test_O1": 0.647,
+    "minus_E1_90": [
+     -0.047,
+     0.01
+    ]
+   },
+   "rank_correlation_1990_on": {
+    "vix": 0.219,
+    "v3": 0.354,
+    "breadth": 0.002,
+    "average_correlation_63d": 0.697,
+    "drawdown": 0.121,
+    "realized_vol_21d": 0.287
+   },
+   "reading": "dropped"
+  },
+  "H2_shift": {
+   "first_day": "1929-01-07",
+   "now": {
+    "day": "2026-09-30",
+    "value": -1.464
+   },
+   "all_days_O1": {
+    "train": 0.566,
+    "test": 0.558,
+    "1927_1985": 0.528
+   },
+   "near_high_O1": {
+    "train": 0.399,
+    "test": 0.539,
+    "1927_1985": 0.413
+   },
+   "test_interval_90": [
+    0.423,
+    0.679
+   ],
+   "test_lower_end_widened": 0.402,
+   "bar_alone": false,
+   "in_the_rule": {
+    "levels": [
+     -0.285,
+     1.089,
+     2.155
+    ],
+    "train_O1": 0.814,
+    "test_O1": 0.616,
+    "test_O2": 0.645,
+    "test_near_high_O1": 0.521,
+    "v3_test_near_high_O1": 0.515,
+    "test_O1_minus_v3_90": [
+     -0.032,
+     0.015
+    ],
+    "test_O1_minus_v3_lower_end_widened": -0.036,
+    "test_share_followed_by_10pct_fall_by_state": {
+     "Calm": 0.115,
+     "Guarded": 0.145,
+     "Watch": 0.166,
+     "Elevated": 0.214,
+     "Stress": 0.385
+    },
+    "test_state_changes": 219,
+    "clean_check_1927_1985": {
+     "drawdown_level_same_days": 0.713,
+     "with_candidate": 0.673,
+     "difference_90": [
+      -0.065,
+      -0.016
+     ]
+    },
+    "bar": {
+     "test_gain_at_least_0.02_and_widened_interval_above_zero": false,
+     "train_not_more_than_0.02_below": false,
+     "O2_not_more_than_0.01_below": false,
+     "ladder_rises_allowing_one_tie": true,
+     "state_changes_within_25pct": true,
+     "clean_check": false
+    }
+   },
+   "price_only": {
+    "with_candidate": {
+     "train_O1": 0.755,
+     "test_O1": 0.643,
+     "1927_1985_O1": 0.713
+    },
+    "base_same_days": {
+     "test_O1": 0.66,
+     "1927_1985_O1": 0.75
+    },
+    "test_difference_90": [
+     -0.054,
+     0.018
+    ],
+    "1927_1985_difference_90": [
+     -0.058,
+     -0.017
+    ],
+    "bar": false
+   },
+   "on_top_of_breadth_for_information": {
+    "test_O1": 0.65,
+    "minus_E1_90": [
+     -0.029,
+     0.004
+    ]
+   },
+   "rank_correlation_1990_on": {
+    "vix": 0.384,
+    "v3": 0.4,
+    "breadth": 0.316,
+    "average_correlation_63d": 0.378,
+    "drawdown": 0.366,
+    "realized_vol_21d": 0.377
+   },
+   "reading": "dropped"
+  },
+  "H3_filtered": {
+   "first_day": "1927-05-04",
+   "now": {
+    "day": "2026-09-30",
+    "value": 0.523
+   },
+   "all_days_O1": {
+    "train": 0.436,
+    "test": 0.465,
+    "1927_1985": 0.601
+   },
+   "near_high_O1": {
+    "train": 0.508,
+    "test": 0.411,
+    "1927_1985": 0.58
+   },
+   "test_interval_90": [
+    0.34,
+    0.572
+   ],
+   "test_lower_end_widened": 0.331,
+   "bar_alone": false,
+   "in_the_rule": {
+    "levels": [
+     0.541,
+     0.59,
+     0.632
+    ],
+    "train_O1": 0.802,
+    "test_O1": 0.603,
+    "test_O2": 0.643,
+    "test_near_high_O1": 0.464,
+    "v3_test_near_high_O1": 0.515,
+    "test_O1_minus_v3_90": [
+     -0.06,
+     0.01
+    ],
+    "test_O1_minus_v3_lower_end_widened": -0.064,
+    "test_share_followed_by_10pct_fall_by_state": {
+     "Calm": 0.081,
+     "Guarded": 0.126,
+     "Watch": 0.151,
+     "Elevated": 0.196,
+     "Stress": 0.366
+    },
+    "test_state_changes": 209,
+    "clean_check_1927_1985": {
+     "drawdown_level_same_days": 0.717,
+     "with_candidate": 0.704,
+     "difference_90": [
+      -0.045,
+      0.02
+     ]
+    },
+    "bar": {
+     "test_gain_at_least_0.02_and_widened_interval_above_zero": false,
+     "train_not_more_than_0.02_below": false,
+     "O2_not_more_than_0.01_below": false,
+     "ladder_rises_allowing_one_tie": true,
+     "state_changes_within_25pct": true,
+     "clean_check": false
+    }
+   },
+   "price_only": {
+    "with_candidate": {
+     "train_O1": 0.726,
+     "test_O1": 0.647,
+     "1927_1985_O1": 0.73
+    },
+    "base_same_days": {
+     "test_O1": 0.66,
+     "1927_1985_O1": 0.754
+    },
+    "test_difference_90": [
+     -0.036,
+     0.005
+    ],
+    "1927_1985_difference_90": [
+     -0.047,
+     -0.0
+    ],
+    "bar": false
+   },
+   "on_top_of_breadth_for_information": {
+    "test_O1": 0.645,
+    "minus_E1_90": [
+     -0.05,
+     0.01
+    ]
+   },
+   "rank_correlation_1990_on": {
+    "vix": 0.26,
+    "v3": 0.382,
+    "breadth": 0.05,
+    "average_correlation_63d": 0.722,
+    "drawdown": 0.162,
+    "realized_vol_21d": 0.316
+   },
+   "reading": "dropped"
+  }
+ },
+ "outcome": {
+  "H1_level": "dropped",
+  "H2_shift": "dropped",
+  "H3_filtered": "dropped"
+ }
+}
