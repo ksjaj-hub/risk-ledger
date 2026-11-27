@@ -87,9 +87,14 @@
    "date": "2026-11-27",
    "status": "open",
    "note": "Added October PCE inflation (3.8%, core 3.3%) from the Bureau of Economic Analysis release of 2026-11-25, to the facts and the summary. The matching unconfirmed line now covers only the Q3 growth revision. Resolution conditions and numeric criteria are unchanged: they count CPI, not PCE."
+  },
+  {
+   "date": "2026-11-27",
+   "status": "open",
+   "note": "Added forecast 1: by 2027-03-31, 5% resolved, 10% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
   }
  ],
- "note": "Risk state only. Not a forecast and not investment advice.",
+ "note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
  "unconfirmed_facts": [
   "2026-11-20: CME FedWatch 92% chance of a December hike: from a broker commentary; CME itself not read. The Fed minutes above support the direction but not this number",
   "2026-11-25: Q3 growth reported as revised up: the release behind this wording has not been identified. (The October inflation part of the same report is now confirmed above, from the Bureau of Economic Analysis.)"
@@ -152,5 +157,16 @@
   "written_on": "2026-11-27",
   "note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
   "text": "The Fed's own minutes say futures already put high odds on a rise by year-end and two more by summer 2027. A rise that is already in prices may add little new stress, and oil has come down from its October level."
- }
+ },
+ "forecasts": [
+  {
+   "n": 1,
+   "written_on": "2026-11-27",
+   "deadline": "2027-03-31",
+   "p_resolved": 0.05,
+   "p_worsened": 0.1,
+   "basis": "Three meetings fall before the date. The minutes say futures put high odds on rises, so a statement that drops further increases together with two falling CPI months is unlikely. Worsening needs a half-point move or NFCI at zero, about 0.44 away.",
+   "outcome": null
+  }
+ ]
 }

@@ -1,0 +1,587 @@
+{
+ "plan": "research/v4/preregistration8.json",
+ "ofr_columns": [
+  "Date",
+  "OFR FSI",
+  "Credit",
+  "Equity valuation",
+  "Safe assets",
+  "Funding",
+  "Volatility",
+  "United States",
+  "Other advanced economies",
+  "Emerging markets"
+ ],
+ "ofr_first": "2000-01-03",
+ "calibration": {
+  "from": "2000-01-03",
+  "to": "2006-12-29",
+  "days": 1757,
+  "v3_level_shares_at_or_above": {
+   "equity_volatility": [
+    0.688,
+    0.446,
+    0.099
+   ],
+   "equity_drawdown": [
+    0.502,
+    0.382,
+    0.179
+   ],
+   "financial_conditions": [
+    0.397,
+    0.022,
+    0.0
+   ],
+   "credit_stress": [
+    0.529,
+    0.283,
+    0.093
+   ]
+  },
+  "v3_state_shares_at_or_above": [
+   0.626,
+   0.446,
+   0.268,
+   0.096
+  ]
+ },
+ "open5_thresholds": {
+  "equity_volatility": [
+   -0.871,
+   0.157,
+   1.045
+  ],
+  "equity_drawdown": [
+   0.05,
+   0.172,
+   0.682
+  ],
+  "financial_conditions": [
+   0.202,
+   1.193,
+   2.134
+  ],
+  "credit_stress": [
+   -0.819,
+   1.754,
+   2.419
+  ]
+ },
+ "ofr_total_state_cuts": [
+  -1.773,
+  1.803,
+  3.216,
+  4.623
+ ],
+ "test": {
+  "days": 4967,
+  "first": "2007-01-03",
+  "last": "2026-09-30",
+  "auroc": {
+   "O1": {
+    "days_scored": 4904,
+    "share_of_days_with_outcome": 0.162,
+    "auroc": {
+     "v3_long": 0.625,
+     "open5": 0.636,
+     "ofr_total": 0.662
+    },
+    "interval_90": {
+     "v3_long": [
+      0.513,
+      0.722
+     ],
+     "open5": [
+      0.524,
+      0.729
+     ],
+     "ofr_total": [
+      0.541,
+      0.764
+     ]
+    },
+    "difference_to_v3_long_interval_90": {
+     "open5": [
+      -0.023,
+      0.043
+     ],
+     "ofr_total": [
+      -0.031,
+      0.098
+     ]
+    },
+    "days_in_bootstrap": 4904
+   },
+   "O2": {
+    "days_scored": 4946,
+    "share_of_days_with_outcome": 0.192,
+    "auroc": {
+     "v3_long": 0.658,
+     "open5": 0.642,
+     "ofr_total": 0.639
+    },
+    "interval_90": {
+     "v3_long": [
+      0.587,
+      0.716
+     ],
+     "open5": [
+      0.569,
+      0.707
+     ],
+     "ofr_total": [
+      0.563,
+      0.704
+     ]
+    },
+    "difference_to_v3_long_interval_90": {
+     "open5": [
+      -0.037,
+      0.005
+     ],
+     "ofr_total": [
+      -0.056,
+      0.015
+     ]
+    },
+    "days_in_bootstrap": 4946
+   },
+   "O3": {
+    "days_scored": 4907,
+    "share_of_days_with_outcome": 0.353,
+    "auroc": {
+     "v3_long": 0.725,
+     "open5": 0.672,
+     "ofr_total": 0.668
+    },
+    "interval_90": {
+     "v3_long": [
+      0.645,
+      0.796
+     ],
+     "open5": [
+      0.582,
+      0.75
+     ],
+     "ofr_total": [
+      0.57,
+      0.75
+     ]
+    },
+    "difference_to_v3_long_interval_90": {
+     "open5": [
+      -0.093,
+      -0.016
+     ],
+     "ofr_total": [
+      -0.119,
+      -0.003
+     ]
+    },
+    "days_in_bootstrap": 4907
+   },
+   "R1": {
+    "days_scored": 4589,
+    "share_of_days_with_outcome": 0.174,
+    "auroc": {
+     "v3_long": 0.668,
+     "open5": 0.68,
+     "ofr_total": 0.548
+    },
+    "interval_90": {
+     "v3_long": [
+      0.566,
+      0.781
+     ],
+     "open5": [
+      0.562,
+      0.802
+     ],
+     "ofr_total": [
+      0.385,
+      0.739
+     ]
+    },
+    "difference_to_v3_long_interval_90": {
+     "open5": [
+      -0.032,
+      0.052
+     ],
+     "ofr_total": [
+      -0.213,
+      -0.011
+     ]
+    },
+    "days_in_bootstrap": 4589
+   }
+  },
+  "states": {
+   "v3_long": {
+    "by_state": [
+     {
+      "state": "Calm",
+      "days": 1642,
+      "share_O1": 0.103,
+      "fall63_median": -2.647,
+      "fall63_5th_percentile": -13.785
+     },
+     {
+      "state": "Guarded",
+      "days": 1346,
+      "share_O1": 0.148,
+      "fall63_median": -3.347,
+      "fall63_5th_percentile": -15.668
+     },
+     {
+      "state": "Watch",
+      "days": 821,
+      "share_O1": 0.163,
+      "fall63_median": -2.219,
+      "fall63_5th_percentile": -14.583
+     },
+     {
+      "state": "Elevated",
+      "days": 841,
+      "share_O1": 0.218,
+      "fall63_median": -4.815,
+      "fall63_5th_percentile": -26.068
+     },
+     {
+      "state": "Stress",
+      "days": 317,
+      "share_O1": 0.366,
+      "fall63_median": -3.794,
+      "fall63_5th_percentile": -28.444
+     }
+    ],
+    "ladder_groups": [
+     [
+      "Calm"
+     ],
+     [
+      "Guarded"
+     ],
+     [
+      "Watch"
+     ],
+     [
+      "Elevated"
+     ],
+     [
+      "Stress"
+     ]
+    ],
+    "ladder_share_O1": [
+     0.103,
+     0.148,
+     0.163,
+     0.218,
+     0.366
+    ],
+    "ladder_rises": true,
+    "state_changes": 244,
+    "state_changes_per_year": 12.379,
+    "timing": {
+     "2007-2009": {
+      "first_elevated_or_above": "2007-07-27",
+      "first_stress": "2008-03-14"
+     },
+     "2011": {
+      "first_elevated_or_above": "2011-08-04",
+      "first_stress": "2011-10-03"
+     },
+     "2015-16": {
+      "first_elevated_or_above": "2015-08-24",
+      "first_stress": null
+     },
+     "2018": {
+      "first_elevated_or_above": "2018-02-05",
+      "first_stress": "2018-12-24"
+     },
+     "2020": {
+      "first_elevated_or_above": "2020-02-27",
+      "first_stress": "2020-03-12"
+     },
+     "2022": {
+      "first_elevated_or_above": "2022-01-25",
+      "first_stress": "2022-06-13"
+     },
+     "2025": {
+      "first_elevated_or_above": "2025-04-03",
+      "first_stress": null
+     }
+    }
+   },
+   "open5": {
+    "by_state": [
+     {
+      "state": "Calm",
+      "days": 2238,
+      "share_O1": 0.119,
+      "fall63_median": -2.82,
+      "fall63_5th_percentile": -15.305
+     },
+     {
+      "state": "Guarded",
+      "days": 1034,
+      "share_O1": 0.208,
+      "fall63_median": -3.265,
+      "fall63_5th_percentile": -17.002
+     },
+     {
+      "state": "Watch",
+      "days": 729,
+      "share_O1": 0.041,
+      "fall63_median": -2.28,
+      "fall63_5th_percentile": -9.128
+     },
+     {
+      "state": "Elevated",
+      "days": 517,
+      "share_O1": 0.193,
+      "fall63_median": -4.129,
+      "fall63_5th_percentile": -13.52
+     },
+     {
+      "state": "Stress",
+      "days": 449,
+      "share_O1": 0.425,
+      "fall63_median": -7.097,
+      "fall63_5th_percentile": -37.473
+     }
+    ],
+    "ladder_groups": [
+     [
+      "Calm"
+     ],
+     [
+      "Guarded"
+     ],
+     [
+      "Watch"
+     ],
+     [
+      "Elevated"
+     ],
+     [
+      "Stress"
+     ]
+    ],
+    "ladder_share_O1": [
+     0.119,
+     0.208,
+     0.041,
+     0.193,
+     0.425
+    ],
+    "ladder_rises": false,
+    "state_changes": 170,
+    "state_changes_per_year": 8.625,
+    "timing": {
+     "2007-2009": {
+      "first_elevated_or_above": "2007-08-27",
+      "first_stress": "2008-01-24"
+     },
+     "2011": {
+      "first_elevated_or_above": "2011-08-09",
+      "first_stress": "2011-08-10"
+     },
+     "2015-16": {
+      "first_elevated_or_above": "2015-08-26",
+      "first_stress": "2016-02-11"
+     },
+     "2018": {
+      "first_elevated_or_above": "2018-12-24",
+      "first_stress": null
+     },
+     "2020": {
+      "first_elevated_or_above": "2020-03-10",
+      "first_stress": "2020-03-11"
+     },
+     "2022": {
+      "first_elevated_or_above": "2022-03-03",
+      "first_stress": null
+     },
+     "2025": {
+      "first_elevated_or_above": "2025-04-08",
+      "first_stress": null
+     }
+    }
+   },
+   "ofr_total": {
+    "by_state": [
+     {
+      "state": "Calm",
+      "days": 1931,
+      "share_O1": 0.078,
+      "fall63_median": -2.59,
+      "fall63_5th_percentile": -13.17
+     },
+     {
+      "state": "Guarded",
+      "days": 2102,
+      "share_O1": 0.187,
+      "fall63_median": -3.347,
+      "fall63_5th_percentile": -15.482
+     },
+     {
+      "state": "Watch",
+      "days": 277,
+      "share_O1": 0.029,
+      "fall63_median": -2.334,
+      "fall63_5th_percentile": -8.914
+     },
+     {
+      "state": "Elevated",
+      "days": 113,
+      "share_O1": 0.133,
+      "fall63_median": -2.431,
+      "fall63_5th_percentile": -11.763
+     },
+     {
+      "state": "Stress",
+      "days": 544,
+      "share_O1": 0.425,
+      "fall63_median": -7.777,
+      "fall63_5th_percentile": -35.594
+     }
+    ],
+    "ladder_groups": [
+     [
+      "Calm"
+     ],
+     [
+      "Guarded"
+     ],
+     [
+      "Watch"
+     ],
+     [
+      "Elevated"
+     ],
+     [
+      "Stress"
+     ]
+    ],
+    "ladder_share_O1": [
+     0.078,
+     0.187,
+     0.029,
+     0.133,
+     0.425
+    ],
+    "ladder_rises": false,
+    "state_changes": 160,
+    "state_changes_per_year": 8.118,
+    "timing": {
+     "2007-2009": {
+      "first_elevated_or_above": "2007-08-20",
+      "first_stress": "2007-11-26"
+     },
+     "2011": {
+      "first_elevated_or_above": "2011-08-10",
+      "first_stress": "2011-08-12"
+     },
+     "2015-16": {
+      "first_elevated_or_above": "2016-02-16",
+      "first_stress": null
+     },
+     "2018": {
+      "first_elevated_or_above": null,
+      "first_stress": null
+     },
+     "2020": {
+      "first_elevated_or_above": "2020-03-11",
+      "first_stress": "2020-03-11"
+     },
+     "2022": {
+      "first_elevated_or_above": "2022-09-30",
+      "first_stress": null
+     },
+     "2025": {
+      "first_elevated_or_above": null,
+      "first_stress": null
+     }
+    }
+   }
+  }
+ },
+ "agreement_with_v3_published_state": {
+  "open5": {
+   "days": 4967,
+   "same_state": 0.643,
+   "same_or_neighbour": 0.963,
+   "higher_than_v3": 0.098,
+   "lower_than_v3": 0.259
+  },
+  "ofr_total": {
+   "days": 4967,
+   "same_state": 0.483,
+   "same_or_neighbour": 0.898,
+   "higher_than_v3": 0.146,
+   "lower_than_v3": 0.371
+  }
+ },
+ "verdict": {
+  "open5": {
+   "difference_to_v3": {
+    "O1": 0.011,
+    "O2": -0.016,
+    "O3": -0.053
+   },
+   "checks": {
+    "O1_within_0.01": true,
+    "O2_O3_within_0.02": false,
+    "ladder_rises": false,
+    "changes_within_25pct": true,
+    "same_or_neighbour_90pct": true
+   },
+   "passes": false
+  },
+  "ofr_total": {
+   "difference_to_v3": {
+    "O1": 0.037,
+    "O2": -0.019,
+    "O3": -0.057
+   },
+   "checks": {
+    "O1_within_0.01": true,
+    "O2_O3_within_0.02": false,
+    "ladder_rises": false,
+    "changes_within_25pct": true,
+    "same_or_neighbour_90pct": false
+   },
+   "passes": false
+  }
+ },
+ "correlation_with_v3_input": {
+  "equity_volatility": {
+   "ofr_part": "Volatility",
+   "against": "vol",
+   "spearman": 0.759
+  },
+  "equity_drawdown": {
+   "ofr_part": "Equity valuation",
+   "against": "dd",
+   "spearman": 0.653
+  },
+  "financial_conditions": {
+   "ofr_part": "Funding",
+   "against": "nfci",
+   "spearman": 0.773
+  },
+  "credit_stress": {
+   "ofr_part": "Credit",
+   "against": "baa10y (stand-in)",
+   "spearman": 0.828
+  }
+ },
+ "latest": {
+  "date": "2026-09-30",
+  "open5_score": 7.0,
+  "open5_state": "Calm",
+  "v3_long_state": "Calm"
+ },
+ "warning": "Hindsight. The OFR index is re-estimated when its inputs are corrected; today's history is what is downloaded."
+}

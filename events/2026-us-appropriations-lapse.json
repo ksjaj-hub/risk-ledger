@@ -62,9 +62,14 @@
    "date": "2026-11-27",
    "status": "open",
    "note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
+  },
+  {
+   "date": "2026-11-27",
+   "status": "open",
+   "note": "Added forecast 1: by 2026-12-12, 70% resolved, 12% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
   }
  ],
- "note": "Risk state only. Not a forecast and not investment advice.",
+ "note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
  "unconfirmed_facts": [
   "A funding bill needs 60 Senate votes: this is the Senate cloture rule; no primary page stating it has been read"
  ],
@@ -116,5 +121,16 @@
   "written_on": "2026-11-27",
   "note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
   "text": "The date has been known since September, and Congress passed that stopgap without a lapse. A deadline everyone can see is the kind of risk markets tend to deal with early, so the card may overstate a familiar event."
- }
+ },
+ "forecasts": [
+  {
+   "n": 1,
+   "written_on": "2026-11-27",
+   "deadline": "2026-12-12",
+   "p_resolved": 0.7,
+   "p_worsened": 0.12,
+   "basis": "Congress passed the September stopgap without a lapse and the date is known. The resolved side needs a law of at least 30 days; a shorter stopgap, the usual lame-duck outcome when talks run late, counts for neither side.",
+   "outcome": null
+  }
+ ]
 }

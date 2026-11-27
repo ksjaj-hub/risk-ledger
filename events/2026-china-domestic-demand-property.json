@@ -69,9 +69,14 @@
    "date": "2026-11-27",
    "status": "open",
    "note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
+  },
+  {
+   "date": "2026-11-27",
+   "status": "open",
+   "note": "Added forecast 1: by 2027-05-31, 3% resolved, 60% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
   }
  ],
- "note": "Risk state only. Not a forecast and not investment advice.",
+ "note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
  "unconfirmed_facts": [
   "Week ending 2026-11-20: Hang Seng -5.19%, CSI 300 -1.54%: from a fund manager's weekly note; not confirmed at a primary or wire source"
  ],
@@ -129,5 +134,16 @@
   "written_on": "2026-11-27",
   "note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
   "text": "China's property slump is several years old and the US market has lived with it. Industrial output still grew 4.8% in October. This may stay a slow drag that never turns into a US market event."
- }
+ },
+ "forecasts": [
+  {
+   "n": 1,
+   "written_on": "2026-11-27",
+   "deadline": "2027-05-31",
+   "p_resolved": 0.03,
+   "p_worsened": 0.6,
+   "basis": "Retail sales grew 0.4% and would need three months above 3%. One monthly reading below zero, or one default on a public bond of $100 million or more by a developer or local financing vehicle, worsens the card; both have been common in recent years.",
+   "outcome": null
+  }
+ ]
 }
