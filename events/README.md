@@ -9,6 +9,10 @@ One file per event. Each card says what happened, how it reaches markets, and, m
 - `relief_headlines_that_do_not_resolve_it` lists good news that does not meet the conditions.
 - Every status change is a dated entry appended to `history`. Git history shows when each line was written.
 - Facts are limited to what the listed sources state. Where sources disagree, the card says so.
+- `numeric_criteria` says how each condition is counted in numbers (measure, threshold, latest reading, state). It is
+  versioned and dated, and it never replaces `resolution_conditions`: if the two could be read differently, the
+  original wording decides. A new way of counting is a new version with a history line, not an edit.
+- `counter_view` is one short statement of why the card's reading may be wrong.
 
 ## When a card is added or its status changes
 

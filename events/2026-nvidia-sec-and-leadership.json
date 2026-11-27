@@ -81,6 +81,11 @@
    "date": "2026-11-27",
    "status": "open",
    "note": "Title changed from 'Nvidia: reported SEC accounting inquiry and CEO turmoil' so that it matches the correction above: the company refers to government inquiries without naming an agency, and the reported SEC probe is not confirmed. Resolution conditions are unchanged."
+  },
+  {
+   "date": "2026-11-27",
+   "status": "open",
+   "note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
   }
  ],
  "note": "Risk state only. Not a forecast and not investment advice.",
@@ -109,5 +114,41 @@
   "notes": [
    "'The SEC inquiry' is read as any SEC inquiry disclosed by the company or the SEC. Neither has confirmed one in the documents read so far, so the first condition is judged from company filings and SEC announcements, not from press reports."
   ]
+ },
+ "numeric_criteria": {
+  "version": 1,
+  "written_on": "2026-11-27",
+  "note": "How each condition is counted, in numbers, with the latest reading known when this was written. Added on 2026-11-27. The resolution conditions above are unchanged and remain the test; where the two could be read differently, the original wording decides. 'latest' is a snapshot and is updated with a dated history line.",
+  "items": [
+   {
+    "side": "resolved",
+    "measure": "An SEC inquiry confirmed by the company or the SEC is closed without action, or settled with terms disclosed",
+    "latest": "Confirmed inquiries: 0. This cannot be counted until one is confirmed",
+    "state": "not_measurable_yet"
+   },
+   {
+    "side": "resolved",
+    "measure": "The next annual or quarterly report is filed by its SEC deadline, with 0 late-filing notices (Form 12b-25) and 0 notices that earlier statements cannot be relied on (Form 8-K, Item 4.02)",
+    "latest": "No report filed since the card opened. No such notice in the filings read for this card",
+    "state": "not_met"
+   },
+   {
+    "side": "worsened",
+    "measure": "1 late-filing notice (Form 12b-25) or 1 non-reliance notice (Form 8-K, Item 4.02)",
+    "latest": "None in the filings read",
+    "state": "not_reached"
+   },
+   {
+    "side": "worsened",
+    "measure": "1 announcement of formal charges by the SEC or the Department of Justice",
+    "latest": "0",
+    "state": "not_reached"
+   }
+  ]
+ },
+ "counter_view": {
+  "written_on": "2026-11-27",
+  "note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
+  "text": "Neither the company nor the SEC has confirmed an SEC inquiry, and the quarterly results filing does not mention one. If there is none, this card's first condition tracks something that does not exist, and what remains is a leadership episode that the board has already reversed."
  }
 }

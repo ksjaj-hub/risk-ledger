@@ -71,6 +71,11 @@
    "date": "2026-11-26",
    "status": "open",
    "note": "Summary rewritten so that it states only what was confirmed at the listed sources and marks the rest as reported. The first version is kept under superseded_sources. Resolution conditions are unchanged."
+  },
+  {
+   "date": "2026-11-27",
+   "status": "open",
+   "note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
   }
  ],
  "note": "Risk state only. Not a forecast and not investment advice.",
@@ -98,5 +103,55 @@
   "notes": [
    "'Both governments' means the United States and Iran. Brent is read from the daily spot series published by the EIA (FRED: DCOILBRENTEU). An attack counts when reported by Reuters or AP, or listed by the UK Maritime Trade Operations office."
   ]
+ },
+ "numeric_criteria": {
+  "version": 1,
+  "written_on": "2026-11-27",
+  "note": "How each condition is counted, in numbers, with the latest reading known when this was written. Added on 2026-11-27. The resolution conditions above are unchanged and remain the test; where the two could be read differently, the original wording decides. 'latest' is a snapshot and is updated with a dated history line.",
+  "items": [
+   {
+    "side": "resolved",
+    "measure": "1 ceasefire or agreement announced by both the United States and Iran",
+    "latest": "0 of 1",
+    "state": "not_met"
+   },
+   {
+    "side": "resolved",
+    "measure": "60 days in a row with no reported attack on commercial shipping in or around the Strait of Hormuz",
+    "latest": "At most 2 of 60, if the attack reported on 2026-11-24 is confirmed",
+    "state": "not_met"
+   },
+   {
+    "side": "resolved",
+    "measure": "Brent spot below $80.00 on 20 trading days in a row",
+    "latest": "0 of 20. Under $100 since 2026-11-04, October average $124",
+    "state": "not_met",
+    "series": "DCOILBRENTEU"
+   },
+   {
+    "side": "worsened",
+    "measure": "The Strait of Hormuz is closed to commercial traffic",
+    "latest": "Not closed. Shipments are reduced",
+    "state": "not_reached"
+   },
+   {
+    "side": "worsened",
+    "measure": "Brent spot above $110.00 on any day from 2026-11-26",
+    "latest": "Under $100 since 2026-11-04",
+    "state": "not_reached",
+    "series": "DCOILBRENTEU"
+   },
+   {
+    "side": "added",
+    "measure": "Added gauge: Middle East production shut in, as estimated by the EIA",
+    "latest": "2.5 million barrels a day in October, down from 10.9 million at the May peak",
+    "state": "info"
+   }
+  ]
+ },
+ "counter_view": {
+  "written_on": "2026-11-27",
+  "note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
+  "text": "Supply is coming back: production shut in has fallen from 10.9 to 2.5 million barrels a day and Brent from an October average of $124 to under $100. The $80 line is our own choice. If the economy has adjusted to oil near $100, the risk could fade well before our conditions say so."
  }
 }

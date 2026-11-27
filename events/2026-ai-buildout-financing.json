@@ -55,6 +55,11 @@
    "date": "2026-11-26",
    "status": "open",
    "note": "Sources upgraded. The debt-financing concern is now supported by a Federal Reserve governor's speech and the Financial Stability Report. The index and share-price moves of 2026-11-20 and 2026-11-25 are not yet confirmed at an accepted source and were moved to unconfirmed_facts."
+  },
+  {
+   "date": "2026-11-27",
+   "status": "open",
+   "note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
   }
  ],
  "note": "Risk state only. Not a forecast and not investment advice.",
@@ -83,5 +88,49 @@
    "'The day before the losing streak began' is read as the last Nasdaq Composite close before the run of declines that ended on 2026-11-20, taken from the FRED series NASDAQCOM. The exact level will be written here once the series has been read; until then this condition cannot be marked as met.",
    "'Largest AI infrastructure spenders' means Microsoft, Alphabet, Amazon, Meta and Oracle. 'Large AI-linked borrower' means one with at least $1 billion of debt outstanding."
   ]
+ },
+ "numeric_criteria": {
+  "version": 1,
+  "written_on": "2026-11-27",
+  "note": "How each condition is counted, in numbers, with the latest reading known when this was written. Added on 2026-11-27. The resolution conditions above are unchanged and remain the test; where the two could be read differently, the original wording decides. 'latest' is a snapshot and is updated with a dated history line.",
+  "items": [
+   {
+    "side": "resolved",
+    "measure": "Nasdaq Composite closes above the pre-streak close on 20 trading days in a row",
+    "latest": "0 of 20. The pre-streak close has not been read from the series yet, so no day can be counted",
+    "state": "not_measurable_yet",
+    "series": "NASDAQCOM"
+   },
+   {
+    "side": "resolved",
+    "measure": "VIX closes below 20 on 20 trading days in a row (this is what 'Moderate or lower' means under rule v3)",
+    "latest": "0 of 20. VIX 26.36 on 2026-11-24",
+    "state": "not_met",
+    "series": "VIXCLS"
+   },
+   {
+    "side": "resolved",
+    "measure": "At least 2 of 5 companies (Microsoft, Alphabet, Amazon, Meta, Oracle) state capital spending guidance equal to or above their previous guidance in a quarterly report released after 2026-11-26",
+    "latest": "0 of 2. No quarterly report from the five since the card opened",
+    "state": "not_met"
+   },
+   {
+    "side": "worsened",
+    "measure": "A borrower with at least $1 billion of debt misses a payment or cancels an announced financing: 1 case is enough",
+    "latest": "0 cases recorded",
+    "state": "not_reached"
+   },
+   {
+    "side": "worsened",
+    "measure": "Any one of the five companies lowers its stated capital spending guidance",
+    "latest": "0 of 5",
+    "state": "not_reached"
+   }
+  ]
+ },
+ "counter_view": {
+  "written_on": "2026-11-27",
+  "note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
+  "text": "The debt behind the buildout is still small next to the cash these companies earn: a Federal Reserve governor said he is 'less concerned about direct losses'. A fall in share prices is not a failed financing, and no borrower has missed a payment."
  }
 }

@@ -69,6 +69,11 @@
    "date": "2026-11-26",
    "status": "open",
    "note": "Summary rewritten so that it states only what was confirmed at the listed sources and marks the rest as reported. The first version is kept under superseded_sources. Resolution conditions are unchanged."
+  },
+  {
+   "date": "2026-11-27",
+   "status": "open",
+   "note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
   }
  ],
  "note": "Risk state only. Not a forecast and not investment advice.",
@@ -94,5 +99,41 @@
   "notes": [
    "'Proposed rates' means the ceilings in the USTR notices of 2026-11-25. Final rates and dates are read from the Federal Register."
   ]
+ },
+ "numeric_criteria": {
+  "version": 1,
+  "written_on": "2026-11-27",
+  "note": "How each condition is counted, in numbers, with the latest reading known when this was written. Added on 2026-11-27. The resolution conditions above are unchanged and remain the test; where the two could be read differently, the original wording decides. 'latest' is a snapshot and is updated with a dated history line.",
+  "items": [
+   {
+    "side": "resolved",
+    "measure": "Final rates and effective dates published in the Federal Register for the 14 economies",
+    "latest": "0 of 14. Comments close 2027-01-05, hearings begin 2027-01-25",
+    "state": "not_met"
+   },
+   {
+    "side": "resolved",
+    "measure": "The measures are withdrawn, or agreements covering them are announced with both China and the EU",
+    "latest": "0 of 2 agreements",
+    "state": "not_met"
+   },
+   {
+    "side": "worsened",
+    "measure": "A tariff takes effect at or above its proposed ceiling (for example China 20%, EU 15%, Vietnam 35%)",
+    "latest": "0 of 14 in effect",
+    "state": "not_reached"
+   },
+   {
+    "side": "worsened",
+    "measure": "1 of the 14 economies announces retaliation",
+    "latest": "0 of 14",
+    "state": "not_reached"
+   }
+  ]
+ },
+ "counter_view": {
+  "written_on": "2026-11-27",
+  "note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
+  "text": "These are ceilings ('up to') in a proposal with no effective date. Rates could come out lower or be dropped after the hearings. After the 2018 and 2025 tariff announcements the market hit its low within about a week."
  }
 }
