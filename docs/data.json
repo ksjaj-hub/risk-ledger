@@ -40,21 +40,13 @@
 "latest": {
 "schema": 1,
 "market": "US",
-"recorded_at_utc": "2026-11-26T15:03:38Z",
+"recorded_at_utc": "2026-11-27T22:09:17Z",
 "rule_version": "v3",
 "rule_sha256": "e138d7b24c9fc22d9c626419f56458721bb7e556d4e3a5b3ab526958ea409305",
 "state": "Watch",
 "score": 33,
 "indicated_state": "Watch",
 "recent_indicated_states": [
-{
-"date": "2026-11-19",
-"indicated": "Watch"
-},
-{
-"date": "2026-11-20",
-"indicated": "Elevated"
-},
 {
 "date": "2026-11-23",
 "indicated": "Watch"
@@ -66,26 +58,34 @@
 {
 "date": "2026-11-25",
 "indicated": "Watch"
+},
+{
+"date": "2026-11-26",
+"indicated": "Watch"
+},
+{
+"date": "2026-11-27",
+"indicated": "Watch"
 }
 ],
 "components": {
 "equity_volatility": {
-"observation_date": "2026-11-24",
+"observation_date": "2026-11-26",
 "level": 2,
 "label": "High",
-"value": 26.36
+"value": 26.8
 },
 "credit_stress": {
-"observation_date": "2026-11-24",
+"observation_date": "2026-11-26",
 "level": 1,
 "label": "Moderate",
 "value_withheld": "source license does not allow republishing"
 },
 "yield_curve": {
-"observation_date": "2026-11-25",
+"observation_date": "2026-11-27",
 "level": 0,
 "label": "Low",
-"value": 0.51
+"value": 0.59
 },
 "financial_conditions": {
 "observation_date": "2026-11-20",
@@ -94,18 +94,18 @@
 "value": -0.444
 },
 "equity_drawdown": {
-"observation_date": "2026-11-24",
+"observation_date": "2026-11-25",
 "level": 1,
 "label": "Moderate",
 "value_withheld": "source license does not allow republishing"
 }
 },
 "previous_record": {
-"path": "records/us/2026/2026-11-26T0529Z.json",
-"sha256": "cfc900255b21f5d579464578077c8689097075065ebb25a3046da7bdec1a8f8a"
+"path": "records/us/2026/2026-11-26T1503Z.json",
+"sha256": "33e5a22f1c02604df94ed1ffa712f5fc333e8bc5f0bba40a4962bcfe5aa8f470"
 },
 "note": "Risk state only. Not a forecast and not investment advice.",
-"_path": "records/us/2026/2026-11-26T1503Z.json"
+"_path": "records/us/2026/2026-11-27.json"
 },
 "history": [
 {
@@ -120,6 +120,11 @@
 },
 {
 "date": "2026-11-26",
+"state": "Watch",
+"score": 33
+},
+{
+"date": "2026-11-27",
 "state": "Watch",
 "score": 33
 }
