@@ -19,6 +19,7 @@ anything, and not investment advice.**
 | `records/us/` | One file per day with new data: the state, the score, and each component's level. |
 | `alerts/us/` | One file each time the state or a component level changes. |
 | `events/` | Event risk cards with resolution conditions written in advance. |
+| `market/` | Whether market prices show the risk on each open card. Readings and rules fixed in advance; a reading aid, not part of the ledger. |
 | `backtest/` | Hindsight runs of each rule over past data. Kept apart from the ledger on purpose. |
 | `docs/` | The public page (served by GitHub Pages). `data.json` is rebuilt from the files above. |
 | `scripts/` | `collect.py` produces records. `verify.py` checks the chain. |
@@ -42,6 +43,8 @@ Inputs come from [FRED](https://fred.stlouisfed.org) (Federal Reserve Bank of St
 are copyrighted by their owners (S&P Dow Jones Indices, ICE Data Indices, Cboe). Where the owner does
 not allow republishing, the record shows only the level we derived, not the underlying number.
 VIX data: Copyright Chicago Board Options Exchange, Inc.
+This product uses the FRED® API but is not endorsed or certified by the Federal Reserve Bank of St. Louis
+([terms](https://fred.stlouisfed.org/docs/api/terms_of_use.html)).
 
 Most inputs are published with a one-day lag, so a record reflects the latest available close, shown
 in each component's `observation_date`.

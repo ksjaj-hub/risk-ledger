@@ -105,7 +105,8 @@
    "ko": "2013년 미국 정부 셧다운",
    "source": "https://history.house.gov/Institution/Shutdown/Government-Shutdowns/",
    "quote": "Funding gap table: September 30, 2013, 16 days, October 17, 2013",
-   "end": "2013-10-17"
+   "end": "2013-10-17",
+   "lasted_days": 16
   },
   {
    "id": "2018-us-shutdown",
@@ -115,7 +116,8 @@
    "ko": "2018년 미국 정부 셧다운",
    "source": "https://history.house.gov/Institution/Shutdown/Government-Shutdowns/",
    "quote": "Funding gap table: December 21, 2018, 34 days, January 25, 2019",
-   "end": "2019-01-25"
+   "end": "2019-01-25",
+   "lasted_days": 34
   },
   {
    "id": "2011-us-debt-limit",
