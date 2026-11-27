@@ -17,7 +17,10 @@ T = {"en": dict(lbl=lambda n, d: f"AFMX Weekly · No. {n} · {d}", of="out of 10
                 since=lambda d, m, s: f"Since {d} · in the past {s} typically lasted {m} trading days",
                 h_score=lambda a, b: f"What a score of {a} to {b} has meant", mix=["Within 5%", "Down 5 to 10%", "Down 10 to 20%", "Down more than 20%"],
                 under1="under 1%", more="Read more", less="Show less", cells=lambda n: f"{n} of 3 cells",
-                h_cards="Event cards", counts=["Open", "Worse", "Eased", "Resolved"], h_relief="Good news that left the risk in place",
+                h_cards="Event cards", counts=["Open", "Worse", "Eased", "Resolved"],
+                met=lambda m, n: f"Resolution measures met: {m} of {n}.",
+                shows=lambda k, n, names: f"Prices show the risk on {k} of the {n} cards checked" + (f": {names}." if names else "."),
+                h_counter="The case against one of our cards", h_relief="Good news that left the risk in place",
                 h_new="New facts this week", src="Sources", h_sectors="Sectors", strained="Strained", quiet="Quiet", normal="Normal",
                 changed="Changed this week", all_sectors="All sector steps", h_dates="Dates ahead", sample="Sample briefing",
                 h_about="What this is and is not", all_cards="See all 12 cards", cta="Get the next one by email", ko_note=""),
@@ -25,7 +28,10 @@ T = {"en": dict(lbl=lambda n, d: f"AFMX Weekly · No. {n} · {d}", of="out of 10
                 since=lambda d, m, s: f"{d}부터 · 과거 {s}는 보통 {m}거래일",
                 h_score=lambda a, b: f"{a}~{b}점 뒤에 과거에 있었던 일", mix=["5% 안쪽", "5~10% 조정", "10~20% 하락", "20% 넘게 하락"],
                 under1="1% 미만", more="더 보기", less="접기", cells=lambda n: f"3칸 중 {n}칸",
-                h_cards="사건 카드", counts=["열림", "악화", "완화", "해소"], h_relief="호재 뒤에 남은 것",
+                h_cards="사건 카드", counts=["열림", "악화", "완화", "해소"],
+                met=lambda m, n: f"해소 기준 {n}개 중 {m}개 충족.",
+                shows=lambda k, n, names: f"가격과 대조한 카드 {n}장 중 {k}장은 가격에 리스크가 보입니다" + (f": {names}." if names else "."),
+                h_counter="저희 카드 하나에 대한 반론", h_relief="호재 뒤에 남은 것",
                 h_new="이번 주 새로 확인한 사실", src="출처", h_sectors="섹터", strained="긴장", quiet="잠잠", normal="평소",
                 changed="이번 주 바뀜", all_sectors="섹터 단계 전체", h_dates="다가오는 날짜", sample="브리핑 견본",
                 h_about="이 글이 하는 것과 하지 않는 것", all_cards="카드 12건 모두 보기", cta="다음 글을 이메일로 받기",
@@ -127,9 +133,13 @@ def article(I, lang, names):
     o.append(fold(t, [c["score_more"]]).replace("</div></details>", comp + "</div></details>"))
     # 2. event cards
     o.append(f'<h2>{t["h_cards"]}</h2><div class="counts">' + "".join(f'<div><b>{s["cards"][k]}</b>{t["counts"][i]}</div>' for i, k in enumerate(["open", "worse", "eased", "resolved"])) + "</div>")
-    o.append(f'<p class="note">{E(c["cards_p"])}</p><h3>{t["h_relief"]}</h3><ul>')
+    ck = s.get("checks")  # from No. 2 on: the cards' numeric count and price check, see weekly/README.md
+    ckp = f'<p>{t["met"](ck["met"], ck["measures"])} {E(t["shows"](len(ck["shows"]), ck["checked"], ", ".join(x[lang] for x in ck["shows"])))}</p>' if ck else ""
+    o.append(f'<p class="note">{E(c["cards_p"])}</p>{ckp}<h3>{t["h_relief"]}</h3><ul>')
     for r in c["relief"]:
         o.append(f'<li><p class="h">{E(r["h"])}</p><p>{E(r["p"])}</p>{fold(t, r["more"], r["src"])}</li>')
+    if c.get("counter"):  # one counter view of the week, quoted from a card
+        o.append(f'</ul><h3>{t["h_counter"]}</h3><ul><li><p class="h">{E(c["counter"]["h"])}</p><p>{E(c["counter"]["p"])}</p></li>')
     o.append(f'</ul><h3>{t["h_new"]}</h3><ul>')
     for r in c["new"]:
         o.append(f'<li><p><b>{E(r["h"])}</b> {E(r["p"])} <a href="{E(r["src"][1])}">{E(r["src"][0])}</a></p></li>')
@@ -203,7 +213,22 @@ set();
 """
 
 
+def checks():
+    """Prints the snapshot.checks block for a new issue from the current docs/data.json."""
+    D = json.loads((ROOT / "docs" / "data.json").read_text(encoding="utf-8"))
+    live = [e for e in D["events"] if e["status"] != "resolved"]
+    its = [x for e in live for x in e.get("numeric_criteria", {}).get("items", []) if x["side"] == "resolved"]
+    mk = D["aids"].get("market", {}).get("cards", {})
+    checked = [e for e in live if mk.get(e["id"], {}).get("verdict") in ("shows", "does_not_show")]
+    print(json.dumps({"checks": {"as_of": D["aids"].get("market", {}).get("as_of"), "measures": len(its), "met": sum(x["state"] == "met" for x in its),
+                                 "checked": len(checked),
+                                 "shows": [{"en": e["title"], "ko": D["ko"][e["id"]]["title"]} for e in checked if mk[e["id"]]["verdict"] == "shows"]}},
+                     indent=1, ensure_ascii=False))
+
+
 def main():
+    if sys.argv[1] == "--checks":
+        return checks()
     n = sys.argv[1]
     I = json.loads((ROOT / "weekly" / f"{n}.json").read_text(encoding="utf-8"))
     names = json.loads((ROOT / "aids" / "reading.json").read_text(encoding="utf-8"))["sector_names"]

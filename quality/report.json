@@ -1,5 +1,5 @@
 {
- "checked_at_utc": "2026-11-27T09:30Z",
+ "checked_at_utc": "2026-11-27T09:43Z",
  "passed": 18,
  "total": 18,
  "checks": [
@@ -70,7 +70,7 @@
    "area": "content",
    "id": "glossary",
    "pass": true,
-   "now": "25 terms explained",
+   "now": "29 terms explained",
    "bar": "8 or more terms"
   },
   {
@@ -126,7 +126,7 @@
    "area": "screen",
    "id": "page_weight",
    "pass": true,
-   "now": "285 KB",
+   "now": "292 KB",
    "bar": "300 KB or less"
   }
  ],
