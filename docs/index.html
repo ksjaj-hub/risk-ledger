@@ -109,7 +109,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible{ou
 .cl{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden;-webkit-mask-image:linear-gradient(#000 40%,rgba(0,0,0,.25));mask-image:linear-gradient(#000 40%,rgba(0,0,0,.25))}
 .sec p.cl,.cl{margin-bottom:0}.hsnote.cl{padding-bottom:0;border-bottom:0}
 button.mbtn{width:auto;display:flex;align-items:center;gap:7px;min-height:44px;margin:-4px 0 4px;color:var(--link);font-size:14px;font-weight:600}
-button.mbtn::after{content:"";width:7px;height:7px;border-right:2px solid;border-bottom:2px solid;transform:translateY(-2px) rotate(45deg)}button.mbtn[aria-expanded=true]::after{transform:translateY(2px) rotate(-135deg)}
+button.mbtn::after{content:"";width:7px;height:7px;border-right:2px solid;border-bottom:2px solid;transform:translateY(-2px) rotate(45deg)}details.case>.fclose{margin-left:18px}.fold>.fclose{margin-top:6px}button.mbtn[aria-expanded=true]::after{transform:translateY(2px) rotate(-135deg)}
 .comp .ds.slow{color:var(--fg);border-left:2px solid var(--line2);padding-left:7px}
 .hsnote{border:1px solid var(--line2);padding:8px 10px;font-size:13.5px;color:var(--muted);margin:0 0 4px;max-width:none}
 .bar a.brand{color:var(--fg);font-size:14px}.bar a.brand:hover{text-decoration:none}
@@ -351,7 +351,11 @@ function clampAll(){const t=T[lang];document.querySelectorAll("main p,main div.s
   if((e.clientHeight-parseFloat(cs.paddingTop)-parseFloat(cs.paddingBottom))/lh<4.6)return;
   const b=$("button","mbtn"),set=o=>{e.classList.toggle("cl",!o);b.textContent=o?t.lessl:t.morel;b.setAttribute("aria-expanded",String(o));e.querySelectorAll("a").forEach(a=>o?a.removeAttribute("tabindex"):a.tabIndex=-1)};
   b.type="button";e.dataset.cl="1";e.after(b);set(false);b.addEventListener("click",()=>set(e.classList.contains("cl")))})}
-document.addEventListener("toggle",()=>requestAnimationFrame(clampAll),true);
+// an opened fold gets a "show less" at its foot, so the reader need not scroll back up to its heading
+function foldCloses(){const t=T[lang];document.querySelectorAll("details.fold,details.case").forEach(d=>{let b=d.querySelector(":scope>.fclose");
+  if(!b){b=$("button","closebtn fclose");b.type="button";b.setAttribute("aria-expanded","true");b.addEventListener("click",()=>{const sm=d.querySelector("summary");d.open=false;sm.focus({preventScroll:true});sm.scrollIntoView({block:"center"})});d.append(b)}
+  else if(b!==d.lastElementChild)d.append(b);b.textContent=t.lessl})}
+document.addEventListener("toggle",()=>requestAnimationFrame(()=>{clampAll();foldCloses()}),true);
 const stName=s=>T[lang].states[STATES.indexOf(s)]||s, lvName=(c)=>T[lang].levels[c.level]||c.label;
 const sg=v=>(v>0?"+":v<0?"−":"")+Math.abs(v).toFixed(1);
 // past waves: one small line chart per card, drawn at the box's real width so labels stay readable on a phone
@@ -531,7 +535,7 @@ function render(){
   H.forEach(c=>{const x=c[lang]||c.en,d=$("details","case");d.open=openC.has(c.id);d.addEventListener("toggle",()=>{d.open?openC.add(c.id):openC.delete(c.id)});const h=$("summary","ti",x.title);h.append($("span","out "+c.outcome,t.out[c.outcome]));d.append(h);
     const dl=$("dl","kv");dl.append($("dt",null,t.gn),$("dd","gn",fmt(c.good_news_date)+" · "+x.good_news),$("dt","need",t.still),$("dd",null,x.still_open),$("dt",null,t.then),$("dd",null,fmt(c.outcome_date)+" · "+x.outcome));d.append(dl);
     const sr=$("div","src",t.srcs);c.sources.forEach((u,j)=>{const a=$("a",null,new URL(u).hostname.replace(/^www\./,""));a.href=u;a.rel="noopener";if(j)sr.append(", ");sr.append(a)});d.append(sr);cs2.append(d)});
-  document.querySelectorAll(".mbtn").forEach(b=>b.remove());document.querySelectorAll("[data-cl]").forEach(e=>{delete e.dataset.cl;e.classList.remove("cl");e.querySelectorAll("a").forEach(x=>x.removeAttribute("tabindex"))});requestAnimationFrame(clampAll);
+  document.querySelectorAll(".mbtn").forEach(b=>b.remove());foldCloses();document.querySelectorAll("[data-cl]").forEach(e=>{delete e.dataset.cl;e.classList.remove("cl");e.querySelectorAll("a").forEach(x=>x.removeAttribute("tabindex"))});requestAnimationFrame(clampAll);
 }
 document.querySelectorAll("[data-lang]").forEach(b=>b.addEventListener("click",()=>{lang=b.dataset.lang;try{localStorage.setItem("lang",lang)}catch(e){}render()}));
 addEventListener("hashchange",()=>route(true));
