@@ -23,7 +23,7 @@ T = {"en": dict(lbl=lambda n, d: f"AFMX Weekly · No. {n} · {d}", of="out of 10
                 h_about="What this is and is not", all_cards="See all 12 cards", cta="Get the next one by email", ko_note=""),
      "ko": dict(lbl=lambda n, d: f"AFMX 주간 글 · {n}호 · {d}", of="100점 중",
                 since=lambda d, m, s: f"{d}부터 · 과거 {s}는 보통 {m}거래일",
-                h_score=lambda a, b: f"{a}~{b}점에서 과거에 온 것", mix=["5% 안쪽", "5~10% 조정", "10~20% 하락", "20% 넘게 하락"],
+                h_score=lambda a, b: f"{a}~{b}점 뒤에 과거에 있었던 일", mix=["5% 안쪽", "5~10% 조정", "10~20% 하락", "20% 넘게 하락"],
                 under1="1% 미만", more="더 보기", less="접기", cells=lambda n: f"3칸 중 {n}칸",
                 h_cards="사건 카드", counts=["열림", "악화", "완화", "해소"], h_relief="호재 뒤에 남은 것",
                 h_new="이번 주 새로 확인한 사실", src="출처", h_sectors="섹터", strained="긴장", quiet="잠잠", normal="평소",

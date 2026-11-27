@@ -632,7 +632,7 @@
    "unconfirmed_facts": [
     "2026-11-12: USD/JPY briefly above 160: an intraday high cannot be settled from the Federal Reserve's noon rates, which stayed below 160 in the week of 2026-11-16",
     "2026-11-20: Nikkei 225 -3,007.81 points to 56,436.65: not confirmed at a primary or wire source",
-    "Q3 GDP: outlets report an annualised -0.1%. The Cabinet Office release of 2026-11-16 was opened but its table could not be read reliably, and what was extracted did not match that figure. Treated as unverified until the table is read properly",
+    "Q3 GDP: outlets report an annualized -0.1%. The Cabinet Office release of 2026-11-16 was opened but its table could not be read reliably, and what was extracted did not match that figure. Treated as unverified until the table is read properly",
     "Reuters survey expecting 1.5% in December; 10-year JGB yield about 2.80%: originals not read"
    ],
    "superseded_sources": {
@@ -778,7 +778,7 @@
   {
    "schema": 1,
    "id": "2026-us-ai-chip-export-rules",
-   "title": "New US licence rules on advanced AI chip shipments",
+   "title": "New US license rules on advanced AI chip shipments",
    "category": "trade policy",
    "markets": [
     "US",
@@ -790,23 +790,23 @@
    "first_recorded": "2026-11-26",
    "event_started": "2026-11 (week ending 2026-11-20)",
    "status": "open",
-   "what_happened": "A US Commerce Department rule in effect from 2026-11-19 requires licences for advanced chips going to overseas data centres that give significant computing access to companies from restricted countries, and for advanced-node chips made for non-approved designers. Press reports, not yet confirmed here, say TSMC and Samsung suspended some shipments to Chinese customers pending licences.",
+   "what_happened": "A US Commerce Department rule in effect from 2026-11-19 requires licenses for advanced chips going to overseas data centers that give significant computing access to companies from restricted countries, and for advanced-node chips made for non-approved designers. Press reports, not yet confirmed here, say TSMC and Samsung suspended some shipments to Chinese customers pending licenses.",
    "how_it_reaches_markets": "Lost or delayed sales for chip makers and equipment makers; retaliation risk; adds to pressure on AI-linked shares.",
    "sourced_facts": [
     {
-     "text": "Interim final rule 'Addressing Remote Access to Advanced Semiconductors' (Bureau of Industry and Security), effective on publication, scheduled for 2026-11-19: adds a licence requirement for advanced-node chips from non-approved designers exported by a front-end fabricator or packaging firm, and for exports to overseas data centres that give significant compute access to companies headquartered in restricted countries",
+     "text": "Interim final rule 'Addressing Remote Access to Advanced Semiconductors' (Bureau of Industry and Security), effective on publication, scheduled for 2026-11-19: adds a license requirement for advanced-node chips from non-approved designers exported by a front-end fabricator or packaging firm, and for exports to overseas data centers that give significant compute access to companies headquartered in restricted countries",
      "url": "https://public-inspection.federalregister.gov/2026-23529.pdf",
      "tier": "primary",
      "checked": "2026-11-26"
     },
     {
-     "text": "The same rule requires a licence for advanced chips to Indonesia, Malaysia, Singapore, Thailand and Brazil, with an exclusion for US-headquartered end users; comments are due 60 days after publication",
+     "text": "The same rule requires a license for advanced chips to Indonesia, Malaysia, Singapore, Thailand and Brazil, with an exclusion for US-headquartered end users; comments are due 60 days after publication",
      "url": "https://public-inspection.federalregister.gov/2026-23529.pdf",
      "tier": "primary",
      "checked": "2026-11-26"
     },
     {
-     "text": "Background: a final rule published 2026-01-15 had moved certain advanced computing chips for China and Macau from presumption of denial to case-by-case licence review",
+     "text": "Background: a final rule published 2026-01-15 had moved certain advanced computing chips for China and Macau from presumption of denial to case-by-case license review",
      "url": "https://public-inspection.federalregister.gov/2026-00789.pdf",
      "tier": "primary",
      "checked": "2026-11-26"
@@ -823,7 +823,7 @@
     ]
    },
    "relief_headlines_that_do_not_resolve_it": [
-    "Reports that licences 'will be granted' without confirmed resumed shipments"
+    "Reports that licenses 'will be granted' without confirmed resumed shipments"
    ],
    "sources": [
     "https://public-inspection.federalregister.gov/2026-23529.pdf",
@@ -849,11 +849,16 @@
      "date": "2026-11-26",
      "status": "open",
      "note": "Summary rewritten so that it states only what was confirmed at the listed sources and marks the rest as reported. The first version is kept under superseded_sources. Resolution conditions are unchanged."
+    },
+    {
+     "date": "2026-11-27",
+     "status": "open",
+     "note": "Spelling changed to American English (licence to license, centres to centers) in the title, summary, facts and notes. No fact changed. The resolution conditions and the first version kept under superseded_sources are left as first written."
     }
    ],
    "note": "Risk state only. Not a forecast and not investment advice.",
    "unconfirmed_facts": [
-    "TSMC suspending some orders at 16 nm and below unless customers obtain licences; FT report that TSMC and Samsung suspended some shipments: read only in a wire reprint dated 2026-11-20",
+    "TSMC suspending some orders at 16 nm and below unless customers obtain licenses; FT report that TSMC and Samsung suspended some shipments: read only in a wire reprint dated 2026-11-20",
     "ASML and Infineon share falls: not confirmed"
    ],
    "superseded_sources": {
@@ -1786,7 +1791,7 @@
     },
     "ko": {
      "term": "임시예산",
-     "def": "정규 예산이 끝나지 않았을 때 정해진 날까지 미국 정부를 운영하게 해 주는 단기 예산법입니다."
+     "def": "정규 예산이 확정되지 않았을 때 정해진 날까지 미국 정부를 운영하게 해 주는 단기 예산법입니다."
     }
    },
    "trading_day": {
@@ -1816,7 +1821,7 @@
     },
     "ko": {
      "term": "변동성과 VIX",
-     "def": "변동성은 가격이 얼마나 크게 출렁이는지입니다. VIX는 앞으로 한 달 동안 S&P 500이 얼마나 출렁일지에 대한 옵션 시장의 예상을 숫자로 만든 지수이고, 흔히 공포지수라고 부릅니다."
+     "def": "변동성은 가격이 얼마나 크게 출렁이는지를 말합니다. VIX는 앞으로 한 달 동안 S&P 500이 얼마나 출렁일지에 대한 옵션 시장의 예상을 숫자로 만든 지수이고, 흔히 공포지수라고 부릅니다."
     }
    },
    "credit_spread": {
@@ -1856,7 +1861,7 @@
     },
     "ko": {
      "term": "낙폭",
-     "def": "가격이 최근 고점에서 얼마나 내려와 있는지입니다."
+     "def": "가격이 최근 고점에서 얼마나 내려와 있는지를 말합니다."
     }
    },
    "percentage_point": {
@@ -4180,7 +4185,7 @@
     "ko": {
      "title": "예정대로 끝난 영국 국채시장 임시 지원.",
      "good_news": "영란은행이 시장 질서를 되찾기 위해 장기 국채를 임시로 사들이기 시작했고, 기한은 10월 14일로 정했습니다.",
-     "still_open": "임시 지원은 수리가 아닙니다. 관건은 정해 둔 날에 실제로 멈출 수 있느냐였습니다.",
+     "still_open": "임시 지원은 근본 해결이 아닙니다. 관건은 정해 둔 날에 실제로 멈출 수 있느냐였습니다.",
      "outcome": "영란은행은 예정한 날에 매입을 모두 끝냈고, 11월 29일부터 사들인 국채를 되팔기 시작했습니다."
     },
     "sources": [
@@ -4220,7 +4225,7 @@
      "title": "Greece received a €110 billion package. It needed another.",
      "good_news": "The IMF approved a €30 billion loan for Greece, part of a €110 billion package with the European Union.",
      "still_open": "New loans covered payments coming due. They did not show that the debt itself could be repaid.",
-     "outcome": "The IMF approved a new €28 billion loan, the first arrangement was cancelled, and private investors agreed to write down 75 percent of their Greek bond holdings."
+     "outcome": "The IMF approved a new €28 billion loan, the first arrangement was canceled, and private investors agreed to write down 75 percent of their Greek bond holdings."
     },
     "ko": {
      "title": "그리스는 1,100억 유로를 지원받았다. 한 번 더 필요했다.",
@@ -4240,7 +4245,7 @@
     "outcome": "hit",
     "en": {
      "title": "Bear Stearns was rescued. Lehman was not.",
-     "good_news": "Bear Stearns was taken over by JPMorgan Chase, after the New York Fed agreed an emergency loan two days earlier.",
+     "good_news": "Bear Stearns was taken over by JPMorgan Chase, after the New York Fed agreed to an emergency loan two days earlier.",
      "still_open": "The takeover dealt with one firm. It did not show that other investment banks were free of the same losses and funding strain.",
      "outcome": "Lehman Brothers filed for Chapter 11 bankruptcy protection."
     },
@@ -4299,7 +4304,7 @@
     "AI 설비 투자 규모가 가장 큰 기업 중 최소 두 곳이 분기 보고에서 설비 투자 계획을 유지하거나 올림"
    ],
    "worse": [
-    "AI 관련 대형 차입 기업이 빚 상환을 놓치거나 공개 발표한 자금 조달을 취소",
+    "AI 관련 대형 차입 기업이 빚을 제때 갚지 못하거나 공개 발표한 자금 조달을 취소",
     "주요 AI 설비 투자 기업이 설비 투자 계획을 공개적으로 축소"
    ],
    "relief": [
@@ -4322,9 +4327,9 @@
   "2026-nvidia-sec-and-leadership": {
    "title": "엔비디아: CEO 혼란과 정부 조사 (SEC 조사 보도는 미확인)",
    "what": "엔비디아는 2026-11-12에 젠슨 황이 CEO에서 물러났다고 발표했고, 11-23에 이사회가 그를 복귀시켰다고 발표했습니다. 회사는 기관 이름 없이 '진행 중인 정부 조사와 질의'를 언급합니다. SEC 조사 보도는 회사나 SEC가 확인하지 않았습니다.",
-   "channel": "엔비디아의 지수 비중이 크고 AI 수요의 기준 역할을 합니다. 발표된 실적에 대한 불확실성과 반도체 수출 제한 가능성도 있습니다.",
+   "channel": "엔비디아의 지수 비중이 크고 AI 수요를 가늠하는 잣대 역할을 합니다. 발표된 실적에 대한 불확실성과 반도체 수출 제한 가능성도 있습니다.",
    "resolved": [
-    "SEC 조사가 제재 없이 공개적으로 종결되거나, 조건이 공개된 채 합의됨",
+    "SEC 조사가 제재 없이 공개적으로 종결되거나, 조건을 공개하고 합의로 끝남",
     "엔비디아가 다음 정기 보고서를 과거 실적 정정 없이 제때 제출"
    ],
    "worse": [
@@ -4387,7 +4392,7 @@
     "이 기록의 금융 여건 지표가 3칸 중 2칸(긴장)에 도달"
    ],
    "relief": [
-    "한 번의 낮은 물가 수치",
+    "한 번 낮게 나온 물가 수치",
     "이미 다 예상된 인상이 예상대로 이뤄지는 것"
    ],
    "facts": [
@@ -4400,7 +4405,7 @@
     "2026-11-25 '10월 물가가 더 올랐고 3분기 성장률이 상향됐다'는 내용: 어떤 발표를 가리키는지 찾지 못했습니다."
    ],
    "reading": [
-    "'추가 인상이 없다는 신호'는 연준 성명에서 추가 인상 가능성 언급이 빠지거나, 위원 전망 중간값이 다음 해 말 금리를 현재 범위보다 높게 보지 않을 때 충족으로 봅니다.",
+    "'추가 인상이 없음을 시사'는 연준 성명에서 추가 인상 가능성 언급이 빠지거나, 위원 전망 중간값이 다음 해 말 금리를 현재 범위보다 높게 보지 않을 때 충족으로 봅니다.",
     "전년 대비 소비자물가: 노동통계국이 전년 대비 수치를 발표하지 않는 달(2026년 10월 포함)은 건너뛰고, 수치가 발표된 가장 최근 두 달을 씁니다."
    ]
   },
@@ -4414,7 +4419,7 @@
     "브렌트유가 20거래일 연속 80달러 아래에서 마감"
    ],
    "worse": [
-    "호르무즈 해협이 상선 통행에 폐쇄됨",
+    "호르무즈 해협에서 상선 통행이 막힘",
     "브렌트유가 110달러 위에서 마감"
    ],
    "relief": [
@@ -4437,7 +4442,7 @@
   "2027-us-debt-limit": {
    "title": "미국 연방 부채 한도 대치",
    "what": "연방 부채 한도는 41조 1,000억 달러입니다. 2026-11-19 기준 한도까지 약 5,970억 달러가 남았습니다. 의회조사국은 2027 회계연도 중 한도에 가까워질 것으로 전망하며, 재무부는 날짜를 발표하지 않았습니다. 다음 의회는 민주당이 양원을 차지해 표결을 좌우합니다.",
-   "channel": "국채 지급이 늦어질 위험, 자금 소진일 근처에서 단기 국채와 환매 시장의 왜곡, 국가 신용등급 강등 위험이 있습니다.",
+   "channel": "재무부의 지급이 늦어질 위험, 자금 소진일 근처에서 단기 국채와 레포(환매조건부채권) 시장의 왜곡, 국가 신용등급 강등 위험이 있습니다.",
    "resolved": [
     "부채 한도를 올리거나 유예하는 법이 서명됨"
    ],
@@ -4463,7 +4468,7 @@
   },
   "2026-us-appropriations-lapse": {
    "title": "미국 정부 예산 2026년 12월 11일 만료",
-   "what": "현재 연방 예산은 공법 119-103에 따라 2026-12-11에 끝납니다. 2027년 1월 새 의회가 열리기 전 레임덕 회기 중입니다.",
+   "what": "현재 연방 예산은 공법 119-103에 따라 2026-12-11에 끝납니다. 이날은 2027년 1월 새 의회가 열리기 전의 레임덕 회기에 들어 있습니다.",
    "channel": "예산이 끊기면 연방 정부 일부가 문을 닫고, 연준과 시장이 쓰는 공식 경제 통계 발표가 늦어지며, 심리에 부담을 줍니다.",
    "resolved": [
     "2026-12-11 이후 기간을 다루는 예산법이 서명됨"
@@ -4488,7 +4493,7 @@
   },
   "2026-us-ai-chip-export-rules": {
    "title": "미국의 첨단 AI 칩 수출 허가 규칙",
-   "what": "2026-11-19부터 시행된 미 상무부 규칙은 제한 국가 기업에 큰 연산 접근을 주는 해외 데이터센터로 가는 첨단 칩과, 승인받지 않은 설계사를 위해 만든 첨단 공정 칩에 허가를 요구합니다. TSMC와 삼성이 중국 고객 대상 일부 출하를 중단했다는 보도는 아직 확인하지 못했습니다.",
+   "what": "2026-11-19부터 시행된 미 상무부 규칙은 제한 국가 기업이 연산 자원을 크게 쓸 수 있게 해 주는 해외 데이터센터로 가는 첨단 칩과, 승인받지 않은 설계사를 위해 만든 첨단 공정 칩에 허가를 요구합니다. TSMC와 삼성이 중국 고객 대상 일부 출하를 중단했다는 보도는 아직 확인하지 못했습니다.",
    "channel": "반도체와 장비 기업의 매출이 줄거나 늦어지고, 보복 위험이 있으며, AI 관련 주식에 대한 압박이 더해집니다.",
    "resolved": [
     "규칙이 허가 기준과 함께 최종 공표되고, 동시에 주요 공급사 최소 한 곳이 중단했던 출하를 허가 아래 재개했다고 공개 확인"
@@ -4501,7 +4506,7 @@
     "출하 재개 확인 없이 '허가가 날 것'이라는 보도"
    ],
    "facts": [
-    "산업안보국 잠정 최종 규칙 '첨단 반도체 원격 접근 대응'(관보 게재일 2026-11-19부터 적용): 승인받지 않은 설계사의 첨단 공정 칩을 파운드리나 패키징 업체가 수출할 때, 그리고 제한 국가에 본사를 둔 기업에 큰 연산 접근을 주는 해외 데이터센터로 수출할 때 허가를 받도록 했습니다.",
+    "산업안보국 잠정 최종 규칙 '첨단 반도체 원격 접근 대응'(관보 게재일 2026-11-19부터 적용): 승인받지 않은 설계사의 첨단 공정 칩을 파운드리나 패키징 업체가 수출할 때, 그리고 제한 국가에 본사를 둔 기업이 연산 자원을 크게 쓸 수 있게 해 주는 해외 데이터센터로 수출할 때 허가를 받도록 했습니다.",
     "같은 규칙은 인도네시아, 말레이시아, 싱가포르, 태국, 브라질로 가는 첨단 칩에도 허가를 요구합니다(미국 본사 최종 사용자는 제외). 의견 접수는 게재 후 60일입니다.",
     "배경: 2026-01-15 게재된 최종 규칙은 중국과 마카오로 가는 일부 첨단 컴퓨팅 칩을 원칙적 거부에서 건별 심사로 바꿨습니다."
    ],
@@ -4510,7 +4515,7 @@
     "ASML과 인피니언 주가 하락: 확인하지 못했습니다."
    ],
    "reading": [
-    "이 규칙은 이미 시행 중인 잠정 최종 규칙입니다. '최종 형태로 게재'는 의견 접수 뒤 산업안보국이 최종 규칙을 내거나 잠정 규칙을 그대로 둔다고 밝힐 때 충족으로 봅니다. '주요 공급사'는 TSMC 또는 삼성입니다."
+    "이 규칙은 이미 시행 중인 잠정 최종 규칙입니다. '최종 공표'는 의견 접수 뒤 산업안보국이 최종 규칙을 내거나 잠정 규칙을 그대로 둔다고 밝힐 때 충족으로 봅니다. '주요 공급사'는 TSMC 또는 삼성입니다."
    ]
   },
   "2026-japan-boj-tightening-yen": {
@@ -4546,8 +4551,8 @@
   },
   "2026-us-private-credit-defaults": {
    "title": "미국 사모대출 부도 증가",
-   "what": "미국 사모신용 잔액은 약 1조 5,000억 달러로 1년 새 13.8% 늘었습니다. 연준은 일부 펀드가 환매 한도를 유지했고 순유출이 이어졌다고 보고했습니다. 피치의 10월 부도율 6.2%는 보도됐지만 피치 원문으로는 아직 확인하지 못했습니다.",
-   "channel": "사모대출에 돈을 빌려주거나 보유한 투자회사, 은행, 보험사의 손실, 비상장 펀드의 환매 압력, 중견 기업의 대출 여건 악화로 이어집니다.",
+   "what": "미국 사모대출 잔액은 약 1조 5,000억 달러로 1년 새 13.8% 늘었습니다. 연준은 일부 펀드가 환매 한도를 유지했고 순유출이 이어졌다고 보고했습니다. 피치의 10월 부도율 6.2%는 보도됐지만 피치 원문으로는 아직 확인하지 못했습니다.",
+   "channel": "사모대출 펀드에 돈을 빌려줬거나 사모대출을 들고 있는 투자회사(BDC), 은행, 보험사가 손실을 볼 수 있습니다. 비상장 펀드에는 환매 압력이 생기고, 중견 기업은 돈을 빌리기 어려워집니다.",
    "resolved": [
     "피치의 최근 12개월 사모대출 부도율이 세 달 연속 4.0% 아래",
     "같은 기간 내내 이 기록의 신용 불안 지표가 3칸 중 1칸(평소) 이하"
@@ -4562,16 +4567,16 @@
     "부도율의 한 달짜리 하락 (2026년 9월 6.3%에서 10월 6.2%)"
    ],
    "facts": [
-    "연준 금융안정보고서(2026년 11월): 사모신용 잔액 1조 5,040억 달러, 2025년 2분기부터 1년간 13.8% 증가(표 1.1)",
+    "연준 금융안정보고서(2026년 11월): 사모대출 잔액 1조 5,040억 달러, 2025년 2분기부터 1년간 13.8% 증가(표 1.1)",
     "같은 보고서: 일부 기업성장집합투자기구(BDC)의 환매 요청은 줄었지만, 펀드들은 환매 한도를 유지했고 순유출이 이어졌습니다.",
-    "연준 직원 보고서(2026-11-09): 미국 사모신용 기구의 자산은 2025년 말 약 1조 9,000억 달러였고, BDC는 부채 대 자본 비율이 평균 1 안팎으로 더 많이 빚을 씁니다."
+    "연준 직원 보고서(2026-11-09): 미국 사모대출 기구의 자산은 2025년 말 약 1조 9,000억 달러였고, BDC는 부채 대 자본 비율이 평균 1 안팎으로 더 많이 빚을 씁니다."
    ],
    "unconfirmed": [
     "피치: 2026년 10월 최근 12개월 부도율 6.2%(9월 6.3%), EBITDA 2,500만 달러 미만 10.7%, 1억 달러 초과 2.4%: 11월 17일자 업계지 기사와 일치하지만 피치 원문은 읽지 못했습니다. 원래 카드의 '부도 기업 90곳'은 찾지 못했습니다.",
     "JP모건의 부도율 전망과 무디스의 은행 대출 수치: 원문을 읽지 못했습니다."
    ],
    "reading": [
-    "피치 부도율은 피치의 월간 발표, 또는 이를 인용한 로이터나 블룸버그 기사로 읽습니다. '대형 사모신용 펀드'는 자산 10억 달러 이상입니다."
+    "피치 부도율은 피치의 월간 발표, 또는 이를 인용한 로이터나 블룸버그 기사로 읽습니다. '대형 사모대출 펀드'는 자산 10억 달러 이상입니다."
    ]
   },
   "2026-eurozone-inflation-ecb": {
@@ -4579,16 +4584,16 @@
    "what": "유로존 물가상승률은 2026년 8월 3.2%에서 9월 3.8%로 올랐고, 에너지 물가는 18.9% 올랐습니다. 유럽중앙은행은 10월 29일 예금금리를 2.50%로 동결했습니다. 10월 4.0%라는 보도는 유럽통계청에서 아직 확인하지 못했습니다.",
    "channel": "미국, 일본과 동시에 유럽 금리가 오르면 세계 자금 조달 여건이 빡빡해집니다. 스페인, 프랑스, 이탈리아 선거를 앞두고 빚이 많은 유로 국가 정부에 부담이 됩니다.",
    "resolved": [
-    "유로존 물가 상승률이 세 달 연속 하락",
+    "유로존 물가상승률이 세 달 연속 하락",
     "유럽중앙은행이 회의에서 추가 인상을 예상하지 않는다고 시사"
    ],
    "worse": [
-    "유로존 물가 상승률이 4.5% 이상",
+    "유로존 물가상승률이 4.5% 이상",
     "유럽중앙은행이 한 번의 회의에서 0.25%포인트보다 크게 인상"
    ],
    "relief": [
     "이미 다 예상된 인상이 이뤄지는 것",
-    "한 번의 낮은 물가 수치"
+    "한 번 낮게 나온 물가 수치"
    ],
    "facts": [
     "2026-10-29: 유럽중앙은행이 정책금리 3종을 동결했습니다. 예금금리 2.50%, 기준금리 2.65%, 한계대출금리 2.90%입니다.",
@@ -4600,20 +4605,20 @@
     "12월에 2.75%로 한 번 더 올린다는 운용사 전망: 논평이라 근거로 쓰지 않습니다."
    ],
    "reading": [
-    "물가는 유럽통계청 월간 확정치로 읽습니다. '추가 인상을 예상하지 않는다는 신호'는 공개된 통화정책 성명문만으로 판단합니다. 성명문이 금리가 정점이라고 말하거나 추가 인상 언급을 뺄 때 충족으로 봅니다."
+    "물가는 유럽통계청 월간 확정치로 읽습니다. '추가 인상을 예상하지 않는다고 시사'는 공개된 통화정책 성명문만으로 판단합니다. 성명문이 금리가 정점이라고 말하거나 추가 인상 언급을 뺄 때 충족으로 봅니다."
    ]
   },
   "2026-china-domestic-demand-property": {
    "title": "중국: 내수 부진과 부동산 투자 급감",
-   "what": "2026년 10월 지표에서 소매 판매 증가율은 전년 대비 0.4%, 1~10월 고정자산 투자는 8.1% 감소, 부동산 개발 투자는 21.6% 감소였습니다.",
+   "what": "2026년 10월 지표에서 소매판매 증가율은 전년 대비 0.4%, 1~10월 고정자산 투자는 8.1% 감소, 부동산 개발 투자는 21.6% 감소였습니다.",
    "channel": "원자재 수요와 중국에 물건을 파는 해외 기업의 매출이 줄고, 중국과 홍콩 주식에 압박이 됩니다. 싼 상품을 통해 물가 하락 압력이 수출되고, 이는 관세 분쟁에도 영향을 줍니다.",
    "resolved": [
-    "소매 판매 증가율이 세 달 연속 전년 대비 3% 초과",
+    "소매판매 증가율이 세 달 연속 전년 대비 3% 초과",
     "연초 이후 부동산 개발 투자 감소 폭이 10%보다 작아짐"
    ],
    "worse": [
-    "소매 판매가 전년 대비 감소",
-    "대형 개발사나 지방정부 자금조달기구가 공모 채권을 부도냄"
+    "소매판매가 전년 대비 감소",
+    "대형 개발사나 지방정부 자금조달기구가 공모 채권을 갚지 못함"
    ],
    "relief": [
     "월간 지표 개선이 뒤따르지 않는 부양책 발표"

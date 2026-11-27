@@ -1,5 +1,5 @@
 {
- "checked_at_utc": "2026-11-27T07:00Z",
+ "checked_at_utc": "2026-11-27T08:50Z",
  "passed": 18,
  "total": 18,
  "checks": [
@@ -126,7 +126,7 @@
    "area": "screen",
    "id": "page_weight",
    "pass": true,
-   "now": "254 KB",
+   "now": "255 KB",
    "bar": "300 KB or less"
   }
  ],

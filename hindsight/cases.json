@@ -81,7 +81,7 @@
    "ko": {
     "title": "예정대로 끝난 영국 국채시장 임시 지원.",
     "good_news": "영란은행이 시장 질서를 되찾기 위해 장기 국채를 임시로 사들이기 시작했고, 기한은 10월 14일로 정했습니다.",
-    "still_open": "임시 지원은 수리가 아닙니다. 관건은 정해 둔 날에 실제로 멈출 수 있느냐였습니다.",
+    "still_open": "임시 지원은 근본 해결이 아닙니다. 관건은 정해 둔 날에 실제로 멈출 수 있느냐였습니다.",
     "outcome": "영란은행은 예정한 날에 매입을 모두 끝냈고, 11월 29일부터 사들인 국채를 되팔기 시작했습니다."
    },
    "sources": [
@@ -121,7 +121,7 @@
     "title": "Greece received a €110 billion package. It needed another.",
     "good_news": "The IMF approved a €30 billion loan for Greece, part of a €110 billion package with the European Union.",
     "still_open": "New loans covered payments coming due. They did not show that the debt itself could be repaid.",
-    "outcome": "The IMF approved a new €28 billion loan, the first arrangement was cancelled, and private investors agreed to write down 75 percent of their Greek bond holdings."
+    "outcome": "The IMF approved a new €28 billion loan, the first arrangement was canceled, and private investors agreed to write down 75 percent of their Greek bond holdings."
    },
    "ko": {
     "title": "그리스는 1,100억 유로를 지원받았다. 한 번 더 필요했다.",
@@ -141,7 +141,7 @@
    "outcome": "hit",
    "en": {
     "title": "Bear Stearns was rescued. Lehman was not.",
-    "good_news": "Bear Stearns was taken over by JPMorgan Chase, after the New York Fed agreed an emergency loan two days earlier.",
+    "good_news": "Bear Stearns was taken over by JPMorgan Chase, after the New York Fed agreed to an emergency loan two days earlier.",
     "still_open": "The takeover dealt with one firm. It did not show that other investment banks were free of the same losses and funding strain.",
     "outcome": "Lehman Brothers filed for Chapter 11 bankruptcy protection."
    },
