@@ -19,6 +19,7 @@ anything, and not investment advice.**
 | `records/us/` | One file per day with new data: the state, the score, and each component's level. |
 | `alerts/us/` | One file each time the state or a component level changes. |
 | `events/` | Event risk cards with resolution conditions written in advance. Each card also says how its conditions are counted in numbers and why its reading may be wrong. |
+| `selection/` | Why these cards: the criteria for opening and closing a card, and each current card checked against them, including the ones that fall short. |
 | `market/` | Whether market prices show the risk on each open card. Readings and rules fixed in advance; a reading aid, not part of the ledger. |
 | `waves/` | What followed similar past events: how long they lasted and how the market moved. Hindsight, kept apart from the ledger. |
 | `backtest/` | Hindsight runs of each rule over past data. Kept apart from the ledger on purpose. |

@@ -37,6 +37,7 @@ add("content","glossary",gl>=8,`${gl} terms explained`,"8 or more terms");
 const BAD=[/\b(you should|we recommend|strong buy|buy now|sell now|time to (buy|sell)|price target)\b/i,/(매수하세요|매도하세요|사세요|파세요|사야 합니다|팔아야 합니다|매수 추천|매도 추천|목표가)/];
 const texts=[];const walk=(v)=>{if(typeof v==="string")texts.push(v);else if(v&&typeof v==="object")Object.values(v).forEach(walk)};walk(D.events);walk(D.ko);walk(D.hindsight);walk(D.aids.history||[]);
 texts.push(fs.readFileSync(path.join(ROOT,"docs/odds.html"),"utf8").replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>|<[^>]+>/g," "));
+texts.push(fs.readFileSync(path.join(ROOT,"docs/selection.html"),"utf8").replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>|<[^>]+>/g," "));
 for(const f of fs.readdirSync(path.join(ROOT,"docs/weekly")))texts.push(fs.readFileSync(path.join(ROOT,"docs/weekly",f),"utf8").replace(/<[^>]+>/g," "));
 const hits=texts.flatMap(t=>t.split(/(?<=[.!?。])\s+/)).filter(s=>BAD.some(r=>r.test(s))&&!/\b(not|no|never)\b|아닙니다|않습니다|금지/.test(s));
 add("content","advice_wording",hits.length===0,`${hits.length} sentences flagged${hits.length?": "+hits.slice(0,3).join(" | ").slice(0,300):""}`,"0 sentences");
@@ -47,7 +48,7 @@ add("content","advice_wording",hits.length===0,`${hits.length} sentences flagged
   try{
     for(const [w,loc] of [[390,"ko-KR"],[390,"en-US"],[1200,"en-US"]]){
       const c=await b.newContext({viewport:{width:w,height:900},locale:loc});const p=await c.newPage();p.on("pageerror",()=>errs++);
-      for(const u of ["/","/#risks","/#sectors","/#past","/#record","/#method","/#weekly","/weekly/1.html","/weekly/1.ko.html","/odds.html"]){await p.goto("http://localhost:8791"+u);await p.waitForTimeout(500);
+      for(const u of ["/","/#risks","/#sectors","/#past","/#record","/#method","/#weekly","/weekly/1.html","/weekly/1.ko.html","/odds.html","/selection.html"]){await p.goto("http://localhost:8791"+u);await p.waitForTimeout(500);
         if(u==="/#sectors")await p.evaluate(()=>document.querySelector("#secs button")?.click());
         if(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth))scroll++;
         if(w===390){const r=await p.evaluate(()=>{document.querySelectorAll(".det").forEach(d=>d.hidden=false);document.querySelectorAll("details").forEach(d=>d.open=true);
