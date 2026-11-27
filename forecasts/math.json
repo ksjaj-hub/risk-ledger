@@ -1,0 +1,241 @@
+{
+ "note": "Arithmetic on the card forecasts. Part A scores them; part B reads past events as a second opinion. Thin evidence: see the limits on docs/odds.html.",
+ "as_of": "2026-11-27",
+ "cards_open": 12,
+ "scoring": {
+  "settled": 0,
+  "min_settled_for_any_claim": 30,
+  "brier": null,
+  "nothing_happens": null,
+  "always_50pct": 0.25,
+  "if_exactly_right": {
+   "questions": 24,
+   "expected_brier": 0.1147,
+   "expected_nothing_happens": 0.18,
+   "expected_edge": 0.0653,
+   "edge_sd": 0.0463,
+   "edge_share_of_top_4_cards": 0.8,
+   "chance_no_better_than_nothing_happens": 0.089,
+   "rounds_for_95pct": 2
+  },
+  "next_deadline": {
+   "card": "2026-us-appropriations-lapse",
+   "title": "US government funding expires on 11 December 2026",
+   "title_ko": "미국 정부 예산 2026년 12월 11일 만료",
+   "deadline": "2026-12-12",
+   "p_resolved": 0.7,
+   "p_worsened": 0.12,
+   "what_if": [
+    {
+     "outcome": "resolved",
+     "afmx": 0.0522,
+     "nothing_happens": 0.5
+    },
+    {
+     "outcome": "neither",
+     "afmx": 0.2522,
+     "nothing_happens": 0.0
+    },
+    {
+     "outcome": "worsened",
+     "afmx": 0.6322,
+     "nothing_happens": 0.5
+    }
+   ]
+  }
+ },
+ "history": [
+  {
+   "card": "2026-us-appropriations-lapse",
+   "title": "US government funding expires on 11 December 2026",
+   "class": "us-funding-gaps",
+   "class_en": "US federal funding gaps since 1976",
+   "class_ko": "1976년 이후 미국 연방 예산 공백",
+   "cases": 20,
+   "sources": [
+    "https://history.house.gov/Institution/Shutdown/Government-Shutdowns/"
+   ],
+   "unchecked": false,
+   "use": "exceed",
+   "question_en": "If funding lapses, how often did the gap last more than 14 days?",
+   "question_ko": "예산이 끊기면, 공백이 14일 넘게 이어진 적은 얼마나 되나?",
+   "fit_en": "Answers only the second worsening condition, and only if a lapse happens. It says nothing about whether a law is signed in time: that would need a count of every funding deadline, which we have not read.",
+   "fit_ko": "두 번째 악화 조건에만, 그리고 예산이 실제로 끊겼을 때에만 해당합니다. 기한 안에 법이 서명될지는 말해 주지 않습니다. 그러려면 모든 예산 기한을 세어야 하는데 아직 읽지 못했습니다.",
+   "deadline": "2026-12-12",
+   "judgment": {
+    "p_resolved": 0.7,
+    "p_worsened": 0.12
+   },
+   "threshold_days": 14,
+   "cuts": [
+    {
+     "cut": "all",
+     "over": 4,
+     "of": 20,
+     "share": 0.2,
+     "range90": [
+      0.093,
+      0.378
+     ]
+    },
+    {
+     "cut": "shutdown",
+     "over": 3,
+     "of": 10,
+     "share": 0.3,
+     "range90": [
+      0.127,
+      0.558
+     ]
+    },
+    {
+     "cut": "since_1990",
+     "over": 3,
+     "of": 6,
+     "share": 0.5,
+     "range90": [
+      0.221,
+      0.779
+     ]
+    }
+   ],
+   "lengths": [
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    5,
+    8,
+    8,
+    10,
+    11,
+    12,
+    16,
+    17,
+    21,
+    34
+   ]
+  },
+  {
+   "card": "2026-fed-rate-hikes",
+   "title": "Fed expected to raise rates as inflation re-accelerates",
+   "class": "fed-hike-cycles",
+   "class_en": "Federal Reserve rate-rise cycles since 1990",
+   "class_ko": "1990년 이후 연준 금리 인상기",
+   "cases": 6,
+   "sources": [
+    "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+    "https://www.federalreserve.gov/monetarypolicy/openmarket_archive.htm"
+   ],
+   "unchecked": false,
+   "use": "ends_by_deadline",
+   "question_en": "Will the last increase of this cycle have happened by the deadline?",
+   "question_ko": "기한까지 이번 인상기의 마지막 인상이 나올까?",
+   "fit_en": "Looser than the card. The card also needs the Fed to signal no further rises and two falling CPI readings, and a last increase is only known to be the last afterwards. So this is an upper limit on the resolved side, not an estimate of it.",
+   "fit_ko": "카드보다 느슨한 질문입니다. 카드는 연준이 추가 인상이 없다는 신호를 내고 CPI가 두 번 내려야 하며, 마지막 인상은 지나고 나서야 마지막인 줄 압니다. 그래서 해소 확률의 추정치가 아니라 상한으로 읽어야 합니다.",
+   "deadline": "2027-03-31",
+   "judgment": {
+    "p_resolved": 0.05,
+    "p_worsened": 0.1
+   },
+   "lengths": [
+    0,
+    321,
+    362,
+    497,
+    729,
+    1099
+   ],
+   "started": "2026-09-17",
+   "running_days": 71,
+   "deadline_day": 195,
+   "past_cases_that_ran_this_long": 5,
+   "of_those_ended_by_deadline_day": 0,
+   "km_ends_by_deadline": 0.0,
+   "constant_rate_ends_by_deadline": 0.211,
+   "range90": [
+    0.1,
+    0.345
+   ]
+  },
+  {
+   "card": "2026-eurozone-inflation-ecb",
+   "title": "Eurozone inflation at 4% and further ECB rate rises",
+   "class": "ecb-hike-cycles",
+   "class_en": "ECB rate-rise cycles since 1999",
+   "class_ko": "1999년 이후 ECB 금리 인상기",
+   "cases": 4,
+   "sources": [
+    "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html"
+   ],
+   "unchecked": true,
+   "use": "ends_by_deadline",
+   "question_en": "Will the last increase of this cycle have happened by the deadline?",
+   "question_ko": "기한까지 이번 인상기의 마지막 인상이 나올까?",
+   "fit_en": "Looser than the card, which also needs three falling inflation readings and an ECB signal. An upper limit on the resolved side. The dates of this class are not yet checked row by row.",
+   "fit_ko": "카드보다 느슨한 질문입니다. 카드는 물가상승률이 세 번 연속 내리고 ECB의 신호도 있어야 합니다. 해소 확률의 상한으로 읽어야 합니다. 이 묶음의 날짜는 아직 표와 한 줄씩 대조하지 못했습니다.",
+   "deadline": "2027-03-31",
+   "judgment": {
+    "p_resolved": 0.1,
+    "p_worsened": 0.12
+   },
+   "lengths": [
+    91,
+    336,
+    420,
+    946
+   ],
+   "started": "2026-06-17",
+   "running_days": 163,
+   "deadline_day": 287,
+   "past_cases_that_ran_this_long": 3,
+   "of_those_ended_by_deadline_day": 0,
+   "km_ends_by_deadline": 0.0,
+   "constant_rate_ends_by_deadline": 0.218,
+   "range90": [
+    0.083,
+    0.388
+   ]
+  },
+  {
+   "card": "2027-us-debt-limit",
+   "title": "US federal debt limit standoff",
+   "class": "us-debt-limit-standoffs",
+   "class_en": "US debt limit standoffs (2011, 2013)",
+   "class_ko": "미국 부채 한도 대치 (2011, 2013)",
+   "cases": 2,
+   "sources": [
+    "https://www.gao.gov/assets/600/592835.txt",
+    "https://www.gao.gov/assets/680/671817.pdf"
+   ],
+   "unchecked": false,
+   "use": "not_started",
+   "question_en": "How long from extraordinary measures to a signed law?",
+   "question_ko": "비상조치 시작부터 법 서명까지 얼마나 걸렸나?",
+   "fit_en": "The clock has not started: Treasury has not begun extraordinary measures. Two cases only.",
+   "fit_ko": "아직 시계가 돌지 않습니다. 재무부가 비상조치를 시작하지 않았습니다. 사례는 두 건뿐입니다.",
+   "deadline": "2027-06-30",
+   "judgment": {
+    "p_resolved": 0.1,
+    "p_worsened": 0.05
+   },
+   "lengths": [
+    78,
+    153
+   ]
+  }
+ ],
+ "own_cards": {
+  "cards": 12,
+  "resolved": 0,
+  "card_days": 12,
+  "curve": null,
+  "note": "A curve is drawn from 10 resolved cards on."
+ }
+}

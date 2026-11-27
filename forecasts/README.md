@@ -31,5 +31,30 @@ output and not advice. They may be badly wrong. That is why they are fixed and s
 6. When a deadline passes and the card is still open, the next forecast gets a new deadline.
 7. Fewer than about 30 settled questions say very little. The count is shown with the score.
 
+## The arithmetic
+
+`python scripts/forecast_math.py` (after `forecast_score.py`) writes `math.json` and the public page `docs/odds.html`.
+
+**Scoring.** Besides the two yardsticks above it reports, once questions settle: skill against each yardstick
+(1 - Brier / yardstick Brier); from 10 settled cards, a 90% range of the difference found by resampling whole cards,
+because a card's two questions move together; from 30 settled questions, a table of what was said against what came
+true with Murphy's split into reliability, resolution and uncertainty. Before any result it also works out what a
+round would look like if every probability were exactly right, so that a result cannot be explained away afterwards.
+
+**History as a second opinion.** `reference_classes.json` lists past events of the same kind for the cards that have
+them, with dates from primary sources. Durations are read with survival methods (Kaplan-Meier, and a constant-rate
+model with a 90% range), so an event still running counts as "not ended yet". Each link says which part of the card
+the history answers and where it does not fit. The history never changes a forecast and is not averaged into it.
+AFMX's own cards get the same treatment once 10 have resolved.
+
+**Limits.** 2 to 20 past cases per kind, picked and read in hindsight. Cards share causes, so the count of questions
+overstates the evidence. The ECB dates are not yet checked row by row against the ECB table.
+
+**Not built yet.** Updating a probability by a stated rule as facts arrive (Bayesian updating), and measuring the
+market move around each card's dates (event study). Both need more settled cards to be worth more than the judgment.
+
+The append-only guard (`.github/workflows/guard.yml`) fails if a forecast that exists on the base branch is changed
+or removed, or a recorded outcome is altered.
+
 `scorecard.json` is written by `python scripts/forecast_score.py`. First settlement: the US funding card,
 2026-12-12.

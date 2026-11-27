@@ -1,0 +1,94 @@
+{
+ "note": "Past events of the same kind as an open card, used by scripts/forecast_math.py as a second opinion next to AFMX's judgment. Dates are read from the listed source. A class is attached to a card only for the part of the card it actually answers; 'fit' says where it does not match. Hindsight, few cases.",
+ "read_on": "2026-11-27",
+ "classes": {
+  "us-funding-gaps": {
+   "en": "US federal funding gaps since 1976",
+   "ko": "1976년 이후 미국 연방 예산 공백",
+   "source": "https://history.house.gov/Institution/Shutdown/Government-Shutdowns/",
+   "how_read": "All 20 rows of the House table of funding gaps that lasted at least one full day, as listed when read. 'shutdown' is the table's 'Shutdown Procedures Followed' column. The table is read from page text; the row layout was rebuilt from it.",
+   "kind": "lengths",
+   "episodes": [
+    {"start": "1976-09-30", "days": 10, "shutdown": false}, {"start": "1977-09-30", "days": 12, "shutdown": false},
+    {"start": "1977-10-31", "days": 8, "shutdown": false}, {"start": "1977-11-30", "days": 8, "shutdown": false},
+    {"start": "1978-09-30", "days": 17, "shutdown": false}, {"start": "1979-09-30", "days": 11, "shutdown": false},
+    {"start": "1981-11-20", "days": 2, "shutdown": true}, {"start": "1982-09-30", "days": 1, "shutdown": true},
+    {"start": "1982-12-17", "days": 3, "shutdown": false}, {"start": "1983-11-10", "days": 3, "shutdown": false},
+    {"start": "1984-09-30", "days": 2, "shutdown": false}, {"start": "1984-10-03", "days": 1, "shutdown": true},
+    {"start": "1986-10-16", "days": 1, "shutdown": true}, {"start": "1987-12-18", "days": 1, "shutdown": false},
+    {"start": "1990-10-05", "days": 3, "shutdown": true}, {"start": "1995-11-13", "days": 5, "shutdown": true},
+    {"start": "1995-12-15", "days": 21, "shutdown": true}, {"start": "2013-09-30", "days": 16, "shutdown": true},
+    {"start": "2018-01-19", "days": 2, "shutdown": true}, {"start": "2018-12-21", "days": 34, "shutdown": true}
+   ]
+  },
+  "fed-hike-cycles": {
+   "en": "Federal Reserve rate-rise cycles since 1990",
+   "ko": "1990년 이후 연준 금리 인상기",
+   "source": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+   "source2": "https://www.federalreserve.gov/monetarypolicy/openmarket_archive.htm",
+   "how_read": "From the Fed's tables of target changes. A cycle runs from the first increase after a decrease to the last increase before the next decrease. Its length is the calendar days between those two dates, so a single increase has length 0. The rule is mechanical and was fixed before the lengths were computed.",
+   "kind": "durations",
+   "episodes": [
+    {"start": "1994-02-04", "end": "1995-02-01"}, {"start": "1997-03-25", "end": "1997-03-25"},
+    {"start": "1999-06-30", "end": "2000-05-16"}, {"start": "2004-06-30", "end": "2006-06-29"},
+    {"start": "2015-12-17", "end": "2018-12-20"}, {"start": "2022-03-17", "end": "2023-07-27"}
+   ],
+   "open": {"start": "2026-09-17"}
+  },
+  "ecb-hike-cycles": {
+   "en": "ECB rate-rise cycles since 1999",
+   "ko": "1999년 이후 ECB 금리 인상기",
+   "source": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+   "how_read": "Same rule as the Fed class, on the main refinancing rate. Caution: the ECB table reached us through a text summary of the page, not row by row, so these dates are not yet checked against the table itself.",
+   "kind": "durations",
+   "unchecked": true,
+   "episodes": [
+    {"start": "1999-11-05", "end": "2000-10-06"}, {"start": "2005-12-06", "end": "2008-07-09"},
+    {"start": "2011-04-13", "end": "2011-07-13"}, {"start": "2022-07-27", "end": "2023-09-20"}
+   ],
+   "open": {"start": "2026-06-17"}
+  },
+  "us-debt-limit-standoffs": {
+   "en": "US debt limit standoffs (2011, 2013)",
+   "ko": "미국 부채 한도 대치 (2011, 2013)",
+   "source": "https://www.gao.gov/assets/600/592835.txt",
+   "source2": "https://www.gao.gov/assets/680/671817.pdf",
+   "how_read": "From the day Treasury told Congress it had started extraordinary measures to the day a law was signed (the two cases already in waves/episodes.json). Later standoffs are not yet read from a primary source.",
+   "kind": "durations",
+   "episodes": [
+    {"start": "2011-05-16", "end": "2011-08-02"}, {"start": "2013-05-17", "end": "2013-10-17"}
+   ],
+   "open": null
+  }
+ },
+ "cards": {
+  "2026-us-appropriations-lapse": {
+   "class": "us-funding-gaps", "use": "exceed", "threshold_days": 14,
+   "en": "If funding lapses, how often did the gap last more than 14 days?",
+   "ko": "예산이 끊기면, 공백이 14일 넘게 이어진 적은 얼마나 되나?",
+   "fit_en": "Answers only the second worsening condition, and only if a lapse happens. It says nothing about whether a law is signed in time: that would need a count of every funding deadline, which we have not read.",
+   "fit_ko": "두 번째 악화 조건에만, 그리고 예산이 실제로 끊겼을 때에만 해당합니다. 기한 안에 법이 서명될지는 말해 주지 않습니다. 그러려면 모든 예산 기한을 세어야 하는데 아직 읽지 못했습니다."
+  },
+  "2026-fed-rate-hikes": {
+   "class": "fed-hike-cycles", "use": "ends_by_deadline",
+   "en": "Will the last increase of this cycle have happened by the deadline?",
+   "ko": "기한까지 이번 인상기의 마지막 인상이 나올까?",
+   "fit_en": "Looser than the card. The card also needs the Fed to signal no further rises and two falling CPI readings, and a last increase is only known to be the last afterwards. So this is an upper limit on the resolved side, not an estimate of it.",
+   "fit_ko": "카드보다 느슨한 질문입니다. 카드는 연준이 추가 인상이 없다는 신호를 내고 CPI가 두 번 내려야 하며, 마지막 인상은 지나고 나서야 마지막인 줄 압니다. 그래서 해소 확률의 추정치가 아니라 상한으로 읽어야 합니다."
+  },
+  "2026-eurozone-inflation-ecb": {
+   "class": "ecb-hike-cycles", "use": "ends_by_deadline",
+   "en": "Will the last increase of this cycle have happened by the deadline?",
+   "ko": "기한까지 이번 인상기의 마지막 인상이 나올까?",
+   "fit_en": "Looser than the card, which also needs three falling inflation readings and an ECB signal. An upper limit on the resolved side. The dates of this class are not yet checked row by row.",
+   "fit_ko": "카드보다 느슨한 질문입니다. 카드는 물가상승률이 세 번 연속 내리고 ECB의 신호도 있어야 합니다. 해소 확률의 상한으로 읽어야 합니다. 이 묶음의 날짜는 아직 표와 한 줄씩 대조하지 못했습니다."
+  },
+  "2027-us-debt-limit": {
+   "class": "us-debt-limit-standoffs", "use": "not_started",
+   "en": "How long from extraordinary measures to a signed law?",
+   "ko": "비상조치 시작부터 법 서명까지 얼마나 걸렸나?",
+   "fit_en": "The clock has not started: Treasury has not begun extraordinary measures. Two cases only.",
+   "fit_ko": "아직 시계가 돌지 않습니다. 재무부가 비상조치를 시작하지 않았습니다. 사례는 두 건뿐입니다."
+  }
+ }
+}

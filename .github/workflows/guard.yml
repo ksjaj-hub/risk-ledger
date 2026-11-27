@@ -21,3 +21,11 @@ jobs:
         with:
           python-version: "3.12"
       - run: python scripts/verify.py
+      - name: The arithmetic behind the odds still checks out
+        run: python scripts/forecast_math.py --selftest
+      - name: A forecast, once written, is never changed or removed
+        run: |
+          base="${{ github.event.before }}"
+          [ "${{ github.event_name }}" = "pull_request" ] && base="origin/${{ github.base_ref }}"
+          if [ -z "$base" ] || ! git cat-file -e "$base^{commit}" 2>/dev/null; then echo "no base commit; skipping"; exit 0; fi
+          python scripts/forecast_math.py --guard "$base"
