@@ -1,0 +1,33 @@
+{
+ "written": "2026-11-27 (UTC), before scripts/research_v4f.py existed or produced any number on real data",
+ "status": "Fixed. Not edited after results exist. Hindsight; not part of the ledger; not a forecast.",
+ "asked_for": "The owner approved a test of a random-matrix measure, the absorption ratio (Kritzman, Li, Page and Rigobon 2011, 'Principal Components as a Measure of Systemic Risk'), computed from US industry returns, as a possible input to the score or a replacement for inputs whose owners restrict commercial use.",
+ "what_has_already_been_seen": "Round 5 part B tested the average pairwise correlation of the 49 French industries over 63 days. It failed: near highs 0.463 / 0.509 / 0.514 (train / test / 1927-1985) and on all days 0.382 / 0.514. The share of variance on the first eigenvector of a correlation matrix is close to a rescaling of the average correlation, so the prior for the level candidates below is that they fail too. Not seen: any eigenvalue measure, any 500-day window, the standardized shift, anything filtered by the Marchenko-Pastur edge.",
+ "data": "49 French industry portfolios, daily, value weighted (the series of round 5). Industries with a missing day inside a window are left out of that window; a day needs at least 20 industries. Market, outcomes, v3 and the bootstrap exactly as in round 5.",
+ "periods": {"train": "1990-01-02 to 2006-12-29", "test": "2007-01-03 on", "old": "1927-01-03 to 1985-12-31"},
+ "outcomes": {"O1": "market closes 10% or more below today's close within 63 trading days", "O2": "5% within 21 days", "near_high": "within 5% of the 252-day high"},
+ "uncertainty": "Moving-block bootstrap, 63-day blocks, 2,000 draws, seed 20261134, 90% intervals. Widened for 3 candidates where stated (the 10%/3 percentile).",
+ "candidates_and_direction": {
+  "H1_level": "Absorption ratio as in the paper: covariance of daily returns over 500 trading days, exponentially weighted with a 250-day half-life; share of total variance on the largest round(K/5) eigenvalues, K = industries in the window. Higher = riskier.",
+  "H2_shift": "The paper's signal: (15-day average of H1 minus its 252-day average) divided by the standard deviation of H1 over those 252 days. Higher = riskier.",
+  "H3_filtered": "Correlation matrix over 252 trading days, equal weights. Share of the eigenvalue sum that lies above the Marchenko-Pastur upper edge (1 + sqrt(K/252))^2. Higher = riskier."
+ },
+ "no_tuning": "Windows, half-life, number of eigenvectors and the edge are the paper's or the textbook values. No other setting is tried. If a setting has to change for a technical reason it is said in the results.",
+ "bars": {
+  "alone": "O1 AUROC on all days at least 0.58 on BOTH train and test and at least 0.55 on 1927-1985, and on the test period the lower end of the interval widened for 3 candidates above 0.50.",
+  "in_the_rule": "v3 plus the candidate as one more component (levels at its 50th, 75th and 95th percentile of 1990-2006, not counted toward floors) must clear the round 5 part A bar: test O1 at least 0.02 above v3 with the lower end of the difference, widened for 3 candidates, above zero; train not more than 0.02 below; test O2 not more than 0.01 below; ladder rises from Calm to Stress allowing one tie; state changes within 25% of v3. And the clean check: on 1927-1985 the average of the drawdown level (5/10/20) and the candidate's level beats the drawdown level alone with the 90% interval above zero.",
+  "price_only": "Because of the licensing question. Base = average of the percentile ranks (ranks taken within 1990-2006 values, applied everywhere) of the 252-day drawdown and 21-day realized volatility. Base plus the candidate's rank must beat the base on O1 with the 90% interval of the difference above zero on BOTH the test period and 1927-1985."
+ },
+ "reported_whatever_happens": [
+  "near-high O1 AUROC on all three periods",
+  "rank correlation of each candidate with VIX, with v3, with breadth and with round 5's average correlation, 1990 on",
+  "v3 plus breadth plus the candidate against v3 plus breadth (round 5b's E1), test period, for information only"
+ ],
+ "reading": {
+  "propose": "A candidate that clears 'alone' and 'in_the_rule': proposed to the owner as a v4 input. The live rule changes only if the owner says so.",
+  "replace_inputs": "A candidate that clears 'price_only': proposed as part of a price-only score to replace licensed inputs.",
+  "record_live": "A candidate that clears 'in_the_rule' except the clean check, or 'alone' only: recorded live as a shadow measure like breadth, no rule change.",
+  "otherwise": "Dropped and published as a failure. No further settings of the same measure are tried."
+ },
+ "what_this_cannot_show": "Whether anyone pays for it. A measure that passes still has to be explainable on one line on a phone; a measure that fails costs nothing but this record."
+}
