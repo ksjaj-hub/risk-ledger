@@ -1931,6 +1931,85 @@
     }
    ]
   },
+  "score_bands": {
+   "first": "2007-01-03",
+   "last": "2026-07-01",
+   "long_first": "1990-01-02",
+   "bands": [
+    {
+     "from": 0,
+     "to": 9,
+     "days": 1743,
+     "share": 0.108,
+     "worst5": -13.912,
+     "thin": false,
+     "long_share": 0.05
+    },
+    {
+     "from": 10,
+     "to": 19,
+     "days": 809,
+     "share": 0.158,
+     "worst5": -15.396,
+     "thin": false,
+     "long_share": 0.121
+    },
+    {
+     "from": 20,
+     "to": 29,
+     "days": 617,
+     "share": 0.146,
+     "worst5": -15.497,
+     "thin": false,
+     "long_share": 0.163
+    },
+    {
+     "from": 30,
+     "to": 39,
+     "days": 487,
+     "share": 0.129,
+     "worst5": -15.159,
+     "thin": false,
+     "long_share": 0.213
+    },
+    {
+     "from": 40,
+     "to": 49,
+     "days": 286,
+     "share": 0.196,
+     "worst5": -14.415,
+     "thin": false,
+     "long_share": 0.25
+    },
+    {
+     "from": 50,
+     "to": 59,
+     "days": 609,
+     "share": 0.256,
+     "worst5": -32.938,
+     "thin": false,
+     "long_share": 0.285
+    },
+    {
+     "from": 60,
+     "to": 69,
+     "days": 76,
+     "share": 0.013,
+     "worst5": -6.441,
+     "thin": true,
+     "long_share": 0.221
+    },
+    {
+     "from": 70,
+     "to": 79,
+     "days": 277,
+     "share": 0.404,
+     "worst5": -32.148,
+     "thin": false,
+     "long_share": 0.325
+    }
+   ]
+  },
   "shadow_breadth": {
    "sector_funds": {
     "as_of": "2026-11-24",
