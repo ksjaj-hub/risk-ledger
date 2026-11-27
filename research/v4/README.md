@@ -284,3 +284,11 @@ For reference, v3 scores 0.835 / 0.625 and v3 plus breadth (E1) 0.818 / 0.662, n
 - Rank correlation with breadth since 1990: dispersion 0.33, margin-loan growth 0.089, rate rise -0.063.
 
 **Where this leaves things:** breadth is the one lead. Record it live outside the rule (49 industries when published, sector funds daily, dispersion alongside) and judge it on days that have not happened yet.
+
+## Round 8: government inputs only (2026-11-27)
+
+Plan `preregistration8.json`, script `scripts/research_v4f.py`, results `results8.json`. An equivalence test of the
+five-part rule on the OFR Financial Stress Index parts and the Treasury curve, asked because of the rights review in
+`rights/README.md`. **Did not pass; v3 stays.** The 10% fall measure held (0.636 against 0.625) but the states did not
+form a ladder (Watch was followed by fewer falls than Calm), the VIX-30 measure was 0.053 lower, and Elevated came
+later in 2018, 2020 and 2022.

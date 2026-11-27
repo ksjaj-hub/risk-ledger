@@ -36,11 +36,25 @@ and the end of the Chicago Fed notice were read in summary only.
    does not make today's free, credited, public ledger wrong, but it has to be settled before the first payment.
 2. There are only two ways out: **permission or a licence** from Cboe, S&P, ICE and the Chicago Fed, or **a rule
    that runs on US federal government publications only**.
-3. The second way is tested in research round 8 (`research/v4/preregistration8.json`, results in
-   `research/v4/results8.json`): the same five-part rule with the OFR index's Volatility, Credit, Equity valuation
-   and Funding parts in place of VIX, the high-yield spread, the S&P 500 fall and NFCI. It is an equivalence test,
-   not an attempt at a better score. The rule in force does not change until the owner decides.
-4. The cost of the second way is known in advance: the OFR index is published two business days late (today's
-   inputs are one day late), and the score becomes, openly, a reading of a free government index. That is an
-   honest description of what the score already is; see round 4, where the OFR index ranked above AFMX.
+3. The second way was tested in research round 8 (plan `research/v4/preregistration8.json`, fixed before the run;
+   results `research/v4/results8.json`): the same five-part rule with the OFR index's Volatility, Credit, Equity
+   valuation and Funding parts in place of VIX, the high-yield spread, the S&P 500 fall and NFCI.
+   **It did not pass, and v3 stays.** On 2007-01 to 2026-09 (4,967 days):
+
+   | Check fixed in advance | Result | |
+   | --- | --- | --- |
+   | 10% fall within 63 days: no more than 0.01 below v3 | 0.636 against 0.625 | passed |
+   | 5% fall and VIX 30: no more than 0.02 below v3 | -0.016 and -0.053 | failed |
+   | Each state followed by more falls than the one below | Calm 11.9%, Guarded 20.8%, Watch 4.1%, Elevated 19.3%, Stress 42.5% | failed |
+   | State changes no more than 25% above v3 | 8.6 a year against 12.4 | passed |
+   | Same or neighbouring state as v3 on 90% of days | 96.3% (same state 64.3%) | passed |
+
+   It also reached Elevated later than v3 in 2018 (December against February), 2020 (10 March against 27 February)
+   and 2022 (March against January). The OFR total on its own failed as well.
+4. So there is no free swap. What is left: **permission or a licence** from Cboe, S&P Dow Jones Indices, ICE Data
+   Indices and the Chicago Fed; or **keeping the score out of what is sold**, so that the paid product rests on the
+   event cards, which are built from government and company filings. Four cards name a score input in a condition
+   (the Fed, private credit, AI buildout and Iran cards) and would need those lines read from a government source.
+   A different government-only rule could be tried, but rounds 1 to 8 give little reason to expect one to pass, and
+   trying until something passes is exactly what the fixed plans are there to prevent.
 5. Whatever is chosen, fetching should move from the FRED API to the publishing agencies before anything is sold.
