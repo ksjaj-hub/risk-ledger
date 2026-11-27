@@ -153,8 +153,8 @@ def main():
     result = {"named": {}, "oil_rule_episodes": [], "cards": cfg["cards"]}
     for ep in cfg["episodes"]:
         i = bisect.bisect_left(days, ep["start"]) - 1
-        m = measure(i, True)
-        result["named"][ep["id"]] = {**{k: ep[k] for k in ("kind", "start", "en", "ko", "source")}, **m}
+        m = measure(i, ep["kind"] in ("oil", "tariff"))  # full paths only where the page draws a chart
+        result["named"][ep["id"]] = {**{k: ep[k] for k in ("kind", "start", "end", "en", "ko", "source") if k in ep}, **m}
         print(ep["id"], json.dumps({k: m[k] for k in ("baseline", "market", "order") if k in m})[:1500])
 
     # rule-based oil episodes
