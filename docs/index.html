@@ -475,7 +475,7 @@ function render(){
     d.append(list(t.res,k?k.resolved:e.resolution_conditions.resolved_when_all));
     d.append(list(t.wor,k?k.worse:e.resolution_conditions.worsened_when_any));
     d.append(list(t.rel,k?k.relief:e.relief_headlines_that_do_not_resolve_it));
-    {const fc=(e.forecasts||[]).slice(-1)[0];if(fc&&e.status!=="resolved"){const P=x=>Math.round(x*100),n=$("p","su",t.fcn((A.forecast_score||{}).settled||0)),a=$("a",null,t.fck);a.href="https://github.com/ksjaj-hub/risk-ledger/blob/main/forecasts/README.md";a.rel="noopener";n.append(a);d.append($("h3","lbl",t.fch),$("p",null,t.fcl(fmt(fc.deadline),P(fc.p_resolved),P(fc.p_worsened))),n)}}
+    {const fc=(e.forecasts||[]).slice(-1)[0];if(fc&&e.status!=="resolved"){const P=x=>Math.round(x*100),n=$("p","su",t.fcn((A.forecast_score||{}).settled||0)),a=$("a",null,t.fck);a.href="odds.html";n.append(a);d.append($("h3","lbl",t.fch),$("p",null,t.fcl(fmt(fc.deadline),P(fc.p_resolved),P(fc.p_worsened))),n)}}
     if(e.counter_view)d.append($("h3","lbl",t.cv),$("p",null,(k&&k.counter)||e.counter_view.text));
     {const nc=e.numeric_criteria,its=(nc&&nc.items)||[];if(its.length){const rs=its.filter(x=>x.side==="resolved"),f=$("details","fold nums");f.append($("summary",null,t.num(rs.filter(x=>x.state==="met").length,rs.length)));
       ["resolved","worsened","added"].forEach(g=>{const ul=$("ul","nm");its.forEach((x,i)=>{if(x.side!==g)return;const kk=k&&k.numeric&&k.numeric[i],li=$("li",x.state==="met"||x.state==="reached"?"on":"");li.append($("span",null,(kk&&kk.m)||x.measure));const nw=$("small",null,t.now+((kk&&kk.now)||x.latest));if(t.nst[x.state])nw.append($("i",null,t.nst[x.state]));li.append(nw);ul.append(li)});if(ul.childNodes.length)f.append($("h3","lbl",t.numg[g]),ul)});

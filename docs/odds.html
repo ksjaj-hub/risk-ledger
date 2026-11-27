@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AFMX: the arithmetic behind the odds</title>
+<meta name="description" content="How the odds on AFMX event cards are scored, and what past events of the same kind say.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..700&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<style>
+:root{color-scheme:dark;--bg:#07080a;--line:#1c2026;--line2:#2b3139;--fg:#e9ebee;--muted:#8d959e;--link:#86b4ee;--sans:"Archivo","Noto Sans KR",system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box}
+html,body{background:var(--bg);margin:0}
+html[lang="ko"] body{word-break:keep-all;overflow-wrap:anywhere}
+html[lang="ko"] [lang="en"],html[lang="en"] [lang="ko"]{display:none}
+body{color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-text-size-adjust:100%}
+a{color:var(--link);text-decoration:underline;text-underline-offset:3px}
+.wrap{max-width:680px;margin:0 auto;padding:0 16px}
+.bar{border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;height:48px}
+.brand{display:flex;align-items:center;font-weight:700;font-stretch:118%;letter-spacing:.09em;font-size:13px;color:var(--fg);min-height:44px;text-decoration:none}
+.lang{display:flex;border:1px solid var(--line2)}
+.lang button{background:none;border:0;font:inherit;cursor:pointer;padding:0 12px;min-height:44px;font-size:13px;font-weight:600;color:var(--muted)}
+.lang button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+main{padding:28px 0 56px}
+h1{font-size:30px;line-height:1.15;font-stretch:108%;margin:0 0 12px}
+h2{font-size:20px;margin:40px 0 10px;padding-top:18px;border-top:1px solid var(--line2)}
+h3{font-size:16px;margin:24px 0 6px}
+p{margin:0 0 12px}
+.lead{color:var(--muted)}
+.big{font-size:19px;font-weight:600;line-height:1.4}
+.big2{font-weight:600}
+.q,.su{color:var(--muted);font-size:14px}
+.card{border-top:1px solid var(--line);margin-top:18px}
+table{border-collapse:collapse;width:100%;margin:0 0 12px;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:8px 8px 8px 0;border-bottom:1px solid var(--line);font-size:14px}
+th{color:var(--muted);font-weight:500}
+ul{padding-left:18px;margin:0 0 12px}li{margin-bottom:6px}
+</style>
+</head>
+<body>
+<div class="bar"><div class="wrap"><a class="brand" href="./">AFMX</a><div class="lang" role="group" aria-label="Language"><button type="button" data-lang="en">EN</button><button type="button" data-lang="ko">한국어</button></div></div></div>
+<main class="wrap">
+<h1><span lang="en">The arithmetic behind the odds</span><span lang="ko">확률 뒤의 계산</span></h1>
+<p class="lead"><span lang="en">The odds on AFMX cards are our own judgment. This page checks that judgment with arithmetic: how it will be scored, and what past events of the same kind say. It is thin so far, and the page says where.</span><span lang="ko">AFMX 카드의 확률은 저희 판단입니다. 이 페이지는 그 판단을 계산으로 점검합니다. 어떻게 채점하는지, 같은 종류의 과거 사건은 무엇을 말하는지 적습니다. 아직은 근거가 얇고, 어디가 얇은지도 함께 적습니다.</span></p>
+<h2><span lang="en">1. The score</span><span lang="ko">1. 채점</span></h2>
+<p class="big"><span lang="en">Settled questions: 0. There is no score yet.</span><span lang="ko">결과가 나온 질문 0개. 아직 점수가 없습니다.</span></p>
+<p><span lang="en">Each card asks two questions: resolved by the deadline, worsened by the deadline. The score is the Brier score, the squared gap between the probability and what happened. We compare it with two fixed yardsticks: always saying 50%, and always saying "nothing will happen". The second is the hard one, because most risks stay open.</span><span lang="ko">카드마다 질문이 둘입니다. 기한까지 해소되는가, 기한까지 악화되는가. 점수는 브라이어 점수로, 말한 확률과 실제 결과의 차이를 제곱한 값입니다. 기준 두 가지와 비교합니다. 항상 50%라고 말하기, 그리고 항상 "아무 일도 없다"고 말하기. 어려운 쪽은 뒤의 것입니다. 리스크는 대부분 그대로 남기 때문입니다.</span></p>
+<h3><span lang="en">How much can this round prove?</span><span lang="ko">이번 묶음으로 얼마나 증명할 수 있나</span></h3>
+<p><span lang="en">We can work this out before any result is in. Suppose every probability on the 12 open cards were exactly right. We would expect 0.1147 against 0.18 for "nothing happens", and we would still fail to beat that yardstick in about 9 of 100 such rounds by chance alone. So this round is a real test: if we do not beat "nothing happens", that counts against us and we will say so. A win counts for less than it looks, because 80% of the expected margin comes from four cards where we gave high odds.</span><span lang="ko">결과가 나오기 전에도 계산할 수 있습니다. 열린 카드 12장의 확률이 모두 정확하다고 가정하면 저희 점수는 0.1147, "아무 일도 없다"는 0.18로 기대됩니다. 그래도 이런 묶음 100번 가운데 약 9번은 운만으로 그 기준을 이기지 못합니다. 그러니 이번 묶음은 실제 시험입니다. "아무 일도 없다"를 이기지 못하면 저희에게 불리한 증거이고, 그대로 적겠습니다. 이기더라도 보이는 것만큼의 증거는 아닙니다. 기대되는 차이의 80%가 높은 확률을 적은 카드 네 장에서 나오기 때문입니다.</span></p>
+<p><span lang="en">Cards are also not independent: several depend on the same oil price and the same central banks. The calculation above treats them as independent, so the real amount of evidence is smaller than it suggests.</span><span lang="ko">카드끼리 독립도 아닙니다. 여러 장이 같은 유가와 같은 중앙은행에 달려 있습니다. 위 계산은 카드가 서로 독립이라고 보았으므로 실제 증거는 그보다 적습니다.</span></p>
+<h3><span lang="en">First settlement: US government funding expires on 11 December 2026, 2026-12-12</span><span lang="ko">첫 채점: 미국 정부 예산 2026년 12월 11일 만료, 2026-12-12</span></h3>
+<p><span lang="en">We said 70% resolved and 12% worsened. What each outcome would score:</span><span lang="ko">저희는 해소 70%, 악화 12%라고 적었습니다. 결과별 점수는 이렇습니다.</span></p>
+<table><tr><th><span lang="en">Outcome</span><span lang="ko">결과</span></th><th>AFMX</th><th><span lang="en">"Nothing happens"</span><span lang="ko">"아무 일도 없다"</span></th></tr><tr><td><span lang="en">Resolved</span><span lang="ko">해소</span></td><td>0.052</td><td>0.500</td></tr><tr><td><span lang="en">Neither</span><span lang="ko">둘 다 아님</span></td><td>0.252</td><td>0.000</td></tr><tr><td><span lang="en">Worsened</span><span lang="ko">악화</span></td><td>0.632</td><td>0.500</td></tr></table>
+<p class="su"><span lang="en">One card settles nothing about skill. It is shown so the result cannot be dressed up afterwards.</span><span lang="ko">카드 한 장으로 실력은 가려지지 않습니다. 결과가 나온 뒤에 꾸밀 수 없도록 미리 적어 둡니다.</span></p>
+<p><span lang="en">A table of what we said against what came true appears once 30 questions are settled. Before that it would be noise.</span><span lang="ko">말한 확률과 실제 결과를 나란히 놓은 표는 질문 30개의 결과가 나온 뒤에 싣습니다. 그 전에는 잡음입니다.</span></p>
+<h2><span lang="en">2. What history says</span><span lang="ko">2. 과거는 무엇을 말하나</span></h2>
+<p><span lang="en">For some cards there are past events of the same kind with dated starts and ends. We read them as a second opinion, kept apart from our judgment. Neither number replaces the other.</span><span lang="ko">일부 카드에는 시작과 끝 날짜가 있는 같은 종류의 과거 사건이 있습니다. 저희 판단과 따로 두고 두 번째 의견으로 읽습니다. 어느 숫자도 다른 숫자를 대신하지 않습니다.</span></p>
+<section class="card"><h3><span lang="en">US government funding expires on 11 December 2026</span><span lang="ko">미국 정부 예산 2026년 12월 11일 만료</span></h3>
+<p class="q"><span lang="en">If funding lapses, how often did the gap last more than 14 days?</span><span lang="ko">예산이 끊기면, 공백이 14일 넘게 이어진 적은 얼마나 되나?</span></p>
+<p class="big2"><span lang="en">History: 4 of 20 funding gaps since 1976 lasted more than 14 days (20%, 90% range 9% to 38%). Counting only gaps where agencies actually closed: 3 of 10. Counting only gaps since 1990: 3 of 6.</span><span lang="ko">과거: 1976년 이후 예산 공백 20번 중 4번이 14일 넘게 이어졌습니다(20%, 90% 범위 9%~38%). 기관이 실제로 문을 닫은 공백만 세면 10번 중 3번, 1990년 이후만 세면 6번 중 3번입니다.</span></p>
+<p><span lang="en">The answer moves from one in five to one in two depending on which past is counted. That choice is a judgment too.</span><span lang="ko">어느 과거를 세느냐에 따라 답이 다섯 번에 한 번에서 두 번에 한 번으로 바뀝니다. 그 선택도 판단입니다.</span></p>
+<p><span lang="en">AFMX judgment: 12% that any worsening condition is reached by 2026-12-12. That covers a lapse of any length, so the two numbers answer different questions.</span><span lang="ko">AFMX 판단: 2026-12-12까지 악화 조건 가운데 하나라도 닿을 확률 12%. 길이와 상관없이 예산이 끊기는 경우를 모두 포함하므로 두 숫자는 서로 다른 질문의 답입니다.</span></p>
+<p class="su"><span lang="en">Where it does not fit: Answers only the second worsening condition, and only if a lapse happens. It says nothing about whether a law is signed in time: that would need a count of every funding deadline, which we have not read.</span><span lang="ko">맞지 않는 부분: 두 번째 악화 조건에만, 그리고 예산이 실제로 끊겼을 때에만 해당합니다. 기한 안에 법이 서명될지는 말해 주지 않습니다. 그러려면 모든 예산 기한을 세어야 하는데 아직 읽지 못했습니다.</span></p>
+<p class="su"><span><span lang="en">US federal funding gaps since 1976. Lengths in days: 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 5, 8, 8, 10, 11, 12, 16, 17, 21, 34.</span><span lang="ko">1976년 이후 미국 연방 예산 공백. 길이(일): 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 5, 8, 8, 10, 11, 12, 16, 17, 21, 34.</span></span> <a href="https://history.house.gov/Institution/Shutdown/Government-Shutdowns/" rel="noopener"><span><span lang="en">source</span><span lang="ko">출처</span></span></a></p></section>
+<section class="card"><h3><span lang="en">Fed expected to raise rates as inflation re-accelerates</span><span lang="ko">물가 재상승과 연준의 금리 인상 전망</span></h3>
+<p class="q"><span lang="en">Will the last increase of this cycle have happened by the deadline?</span><span lang="ko">기한까지 이번 인상기의 마지막 인상이 나올까?</span></p>
+<p class="big2"><span lang="en">History: this cycle began on 2026-09-17 and has run 71 days. 5 of 6 past cycles ran at least this long, and 0 of those had ended by the point the deadline marks (day 195). A simple constant-rate model gives 21%, with a 90% range of 10% to 34%.</span><span lang="ko">과거: 이번 인상기는 2026-09-17에 시작해 71일째입니다. 과거 인상기 6번 가운데 5번이 이만큼 이어졌고, 그중 기한에 해당하는 시점(195일째)까지 끝난 것은 0번입니다. 끝날 가능성이 매일 같다고 보는 단순한 모형으로는 21%, 90% 범위는 10%~34%입니다.</span></p>
+<p><span lang="en">AFMX judgment: 5% resolved by 2027-03-31.</span><span lang="ko">AFMX 판단: 2027-03-31까지 해소 5%.</span></p>
+<p class="su"><span lang="en">Where it does not fit: Looser than the card. The card also needs the Fed to signal no further rises and two falling CPI readings, and a last increase is only known to be the last afterwards. So this is an upper limit on the resolved side, not an estimate of it.</span><span lang="ko">맞지 않는 부분: 카드보다 느슨한 질문입니다. 카드는 연준이 추가 인상이 없다는 신호를 내고 CPI가 두 번 내려야 하며, 마지막 인상은 지나고 나서야 마지막인 줄 압니다. 그래서 해소 확률의 추정치가 아니라 상한으로 읽어야 합니다.</span></p>
+<p class="su"><span><span lang="en">Federal Reserve rate-rise cycles since 1990. Lengths in days: 0, 321, 362, 497, 729, 1099.</span><span lang="ko">1990년 이후 연준 금리 인상기. 길이(일): 0, 321, 362, 497, 729, 1099.</span></span> <a href="https://www.federalreserve.gov/monetarypolicy/openmarket.htm" rel="noopener"><span><span lang="en">source</span><span lang="ko">출처</span></span></a> · <a href="https://www.federalreserve.gov/monetarypolicy/openmarket_archive.htm" rel="noopener"><span><span lang="en">source</span><span lang="ko">출처</span></span></a></p></section>
+<section class="card"><h3><span lang="en">Eurozone inflation at 4% and further ECB rate rises</span><span lang="ko">유로존 물가 4%와 유럽중앙은행 추가 인상</span></h3>
+<p class="q"><span lang="en">Will the last increase of this cycle have happened by the deadline?</span><span lang="ko">기한까지 이번 인상기의 마지막 인상이 나올까?</span></p>
+<p class="big2"><span lang="en">History: this cycle began on 2026-06-17 and has run 163 days. 3 of 4 past cycles ran at least this long, and 0 of those had ended by the point the deadline marks (day 287). A simple constant-rate model gives 22%, with a 90% range of 8% to 39%.</span><span lang="ko">과거: 이번 인상기는 2026-06-17에 시작해 163일째입니다. 과거 인상기 4번 가운데 3번이 이만큼 이어졌고, 그중 기한에 해당하는 시점(287일째)까지 끝난 것은 0번입니다. 끝날 가능성이 매일 같다고 보는 단순한 모형으로는 22%, 90% 범위는 8%~39%입니다.</span></p>
+<p><span lang="en">AFMX judgment: 10% resolved by 2027-03-31.</span><span lang="ko">AFMX 판단: 2027-03-31까지 해소 10%.</span></p>
+<p class="su"><span lang="en">Where it does not fit: Looser than the card, which also needs three falling inflation readings and an ECB signal. An upper limit on the resolved side. The dates of this class are not yet checked row by row.</span><span lang="ko">맞지 않는 부분: 카드보다 느슨한 질문입니다. 카드는 물가상승률이 세 번 연속 내리고 ECB의 신호도 있어야 합니다. 해소 확률의 상한으로 읽어야 합니다. 이 묶음의 날짜는 아직 표와 한 줄씩 대조하지 못했습니다.</span></p>
+<p class="su"><span><span lang="en">ECB rate-rise cycles since 1999. Lengths in days: 91, 336, 420, 946.</span><span lang="ko">1999년 이후 ECB 금리 인상기. 길이(일): 91, 336, 420, 946.</span></span> <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html" rel="noopener"><span><span lang="en">source</span><span lang="ko">출처</span></span></a></p></section>
+<section class="card"><h3><span lang="en">US federal debt limit standoff</span><span lang="ko">미국 연방 부채 한도 대치</span></h3>
+<p class="q"><span lang="en">How long from extraordinary measures to a signed law?</span><span lang="ko">비상조치 시작부터 법 서명까지 얼마나 걸렸나?</span></p>
+<p class="big2"><span lang="en">History: 78, 153 days in the 2 cases read so far.</span><span lang="ko">과거: 지금까지 읽은 2건은 78, 153일이었습니다.</span></p>
+<p><span lang="en">AFMX judgment: 10% resolved by 2027-06-30.</span><span lang="ko">AFMX 판단: 2027-06-30까지 해소 10%.</span></p>
+<p class="su"><span lang="en">Where it does not fit: The clock has not started: Treasury has not begun extraordinary measures. Two cases only.</span><span lang="ko">맞지 않는 부분: 아직 시계가 돌지 않습니다. 재무부가 비상조치를 시작하지 않았습니다. 사례는 두 건뿐입니다.</span></p>
+<p class="su"><span><span lang="en">US debt limit standoffs (2011, 2013). Lengths in days: 78, 153.</span><span lang="ko">미국 부채 한도 대치 (2011, 2013). 길이(일): 78, 153.</span></span> <a href="https://www.gao.gov/assets/600/592835.txt" rel="noopener"><span><span lang="en">source</span><span lang="ko">출처</span></span></a> · <a href="https://www.gao.gov/assets/680/671817.pdf" rel="noopener"><span><span lang="en">source</span><span lang="ko">출처</span></span></a></p></section>
+<p><span lang="en">The other 8 open cards have no such history yet. Their past cases have a start date but no dated end, or the event is one of a kind. For those the judgment stands alone.</span><span lang="ko">나머지 열린 카드 8장에는 아직 이런 과거가 없습니다. 과거 사례에 시작일만 있고 끝난 날짜가 없거나, 비슷한 사건이 없습니다. 이 카드들은 판단만 있습니다.</span></p>
+<h2><span lang="en">3. Our own cards</span><span lang="ko">3. AFMX의 카드</span></h2>
+<p><span lang="en">The better evidence will be our own record: how long AFMX cards take to close, counted so that cards still open are included as "not closed yet". Today: 12 cards, 0 resolved, 12 card-days of record. That is nothing yet. A curve is drawn from 10 resolved cards on, which will take years at the current pace.</span><span lang="ko">더 나은 근거는 저희 기록 자체입니다. AFMX 카드가 닫히기까지 걸린 시간을, 아직 열린 카드도 "아직 닫히지 않음"으로 넣어 셉니다. 지금은 카드 12장, 해소 0장, 기록은 모두 합쳐 12일입니다. 아직 아무것도 아닙니다. 곡선은 해소된 카드가 10장이 되면 그리며, 지금 속도로는 몇 해가 걸립니다.</span></p>
+<h2><span lang="en">Limits</span><span lang="ko">한계</span></h2>
+<ul><li><span lang="en">The odds are judgment. The arithmetic checks them; it does not produce them.</span><span lang="ko">확률은 판단입니다. 계산은 판단을 점검할 뿐 만들어 내지 않습니다.</span></li><li><span lang="en">History here is 2 to 20 cases per kind, chosen and read by us, in hindsight.</span><span lang="ko">여기의 과거는 종류마다 2~20건이고, 저희가 고르고 읽었으며, 지나고 나서 본 것입니다.</span></li><li><span lang="en">A past event rarely matches a card's conditions exactly. Each card says where it does not.</span><span lang="ko">과거 사건이 카드의 조건과 꼭 맞는 경우는 드뭅니다. 어디가 맞지 않는지 카드마다 적었습니다.</span></li><li><span lang="en">A forecast is never edited. A change to one fails an automatic check on the repository.</span><span lang="ko">한 번 적은 예측은 고치지 않습니다. 고치면 저장소의 자동 점검에서 걸립니다.</span></li><li><span lang="en">Not investment advice.</span><span lang="ko">투자 조언이 아닙니다.</span></li></ul>
+<p class="su"><span><span lang="en">Computed for 2026-11-27.</span><span lang="ko">2026-11-27 기준 계산.</span></span> <a href="https://github.com/ksjaj-hub/risk-ledger/blob/main/forecasts/README.md" rel="noopener"><span><span lang="en">Rules and method</span><span lang="ko">규칙과 방법</span></span></a> · <a href="https://github.com/ksjaj-hub/risk-ledger/blob/main/forecasts/math.json" rel="noopener"><span><span lang="en">All numbers</span><span lang="ko">전체 숫자</span></span></a></p>
+</main>
+<script>
+let lang="en";try{lang=localStorage.getItem("lang")||((navigator.language||"").startsWith("ko")?"ko":"en")}catch(e){}
+const set=()=>{document.documentElement.lang=lang;document.querySelectorAll("[data-lang]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.lang===lang))};
+document.querySelectorAll("[data-lang]").forEach(b=>b.addEventListener("click",()=>{lang=b.dataset.lang;try{localStorage.setItem("lang",lang)}catch(e){}set()}));set();
+</script>
+</body>
+</html>
