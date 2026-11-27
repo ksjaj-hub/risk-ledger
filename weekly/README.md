@@ -4,6 +4,16 @@ One JSON file per issue (`N.json`), built into `docs/weekly/N.html` (English, wi
 `docs/weekly/N.ko.html` (Korean) by `python3 scripts/build_weekly.py N`. English is the original.
 After a new issue, add it to the `ISSUES` list in `docs/index.html`.
 
+## When it comes out
+
+One issue a week, on Monday morning Korea time. It looks back at the week that ended and ahead at the dates of the week that starts.
+
+- Sunday evening Korea time: the next issue is drafted from the record as it stands (`weekly/N.json`, both HTML files, the `ISSUES` line)
+  and opened as a pull request. Every date and figure is read again from its primary source on that day.
+- The issue is public once that pull request is merged. Nothing is published without that approval.
+- A `weekly/N.json` with no `docs/weekly/N.html` is a draft. `weekly/2.json` was written on Friday, November 27, one day after
+  No. 1, and was held back for Monday, November 30. It is rewritten with that day's numbers before it goes out.
+
 The layout is fixed, in this order:
 
 1. **One line at the top**: state, score, since when (from the latest record and `state_durations`).

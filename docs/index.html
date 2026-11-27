@@ -329,7 +329,7 @@ brh:"시장 폭: 검증 중인 참고 지표",brp:"자기 200일 평균보다 �
 let lang="en";try{lang=localStorage.getItem("lang")||((navigator.language||"").startsWith("ko")?"ko":"en")}catch(e){if((navigator.language||"").startsWith("ko"))lang="ko"}{const q=new URLSearchParams(location.search).get("lang");if(q==="ko"||q==="en")lang=q}
 let D=null,tab="home";const open=new Set(),openC=new Set(),openG=new Set();
 const TABS=["home","risks","sectors","past","record","method","weekly"],LEG={backdrop:"record",bands:"record",ranges:"record",stages:"record",breadth:"record",durations:"record",patterns:"past","cases-sec":"past",glossary:"method",history:"method",subf:"weekly"};
-const ISSUES=[{n:1,date:"2026-11-26",en:["weekly/1.html","The CEO came back. The inquiry did not go away."],ko:["weekly/1.ko.html","CEO는 돌아왔다. 조사는 사라지지 않았다."]},{n:2,date:"2026-11-27",en:["weekly/2.html","Inflation is at 3.8%. Five-year bonds price in 2.13%."],ko:["weekly/2.ko.html","물가는 3.8%. 5년 국채에 반영된 물가는 2.13%."]}];
+const ISSUES=[{n:1,date:"2026-11-26",en:["weekly/1.html","The CEO came back. The inquiry did not go away."],ko:["weekly/1.ko.html","CEO는 돌아왔다. 조사는 사라지지 않았다."]}];
 // one page, seven sections: the hash picks the section; old anchors (#backdrop, #ev-...) still land in the right place
 function route(user){
   let h="";try{h=decodeURIComponent(location.hash.slice(1))}catch(e){}let to=null;
