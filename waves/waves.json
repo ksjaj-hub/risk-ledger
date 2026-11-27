@@ -32527,7 +32527,7 @@
   "oil_half_life_not_reached": 0
  },
  "meta": {
-  "generated_at_utc": "2026-11-27T09:28:21Z",
+  "generated_at_utc": "2026-11-27T09:30:59Z",
   "warning": "Hindsight measurements of a small number of past episodes. A range of what happened, not a forecast and not a recommendation.",
   "window_trading_days": 126,
   "half_life_search_trading_days": 252,
