@@ -1,6 +1,6 @@
 {
- "measured_at_utc": "2026-11-27T05:21Z",
- "label": "after record fold and show-more",
+ "measured_at_utc": "2026-11-27T05:37Z",
+ "label": "fold close",
  "viewport": "390x844",
  "tabs": {
   "ko": {
@@ -58,11 +58,11 @@
    },
    "past": {
     "screens": 2.3,
-    "chars": 3119,
+    "chars": 3135,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
-    "targets": 22,
+    "targets": 30,
     "small_targets": 0,
     "small_target_list": [],
     "jargon": [],
@@ -75,11 +75,11 @@
    },
    "record": {
     "screens": 2.9,
-    "chars": 2926,
+    "chars": 2934,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
-    "targets": 18,
+    "targets": 22,
     "small_targets": 0,
     "small_target_list": [],
     "jargon": [],
@@ -179,11 +179,11 @@
    },
    "past": {
     "screens": 2.6,
-    "chars": 5749,
+    "chars": 5821,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
-    "targets": 23,
+    "targets": 31,
     "small_targets": 0,
     "small_target_list": [],
     "jargon": [
@@ -200,11 +200,11 @@
    },
    "record": {
     "screens": 3.2,
-    "chars": 5454,
+    "chars": 5490,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
-    "targets": 20,
+    "targets": 24,
     "small_targets": 0,
     "small_target_list": [],
     "jargon": [
