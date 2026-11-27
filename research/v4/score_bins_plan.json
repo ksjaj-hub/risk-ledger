@@ -6,8 +6,23 @@
  "period_main": "2007-01-03 to the last day with 63 trading days after it (the same period as the state table on the page)",
  "period_also_reported": "1990-01-02 onward, shown beside the main period so the reader can see whether the picture holds",
  "bins": "ten-point bands of the score: 0-9, 10-19, ... 90-100. Fixed before looking at outcomes by band.",
- "per_band": ["days", "separate spells (runs of consecutive trading days in the band)", "share of days followed by a close 10% or more lower within 63 trading days", "the same for 20% or more", "median of the deepest close within 63 trading days", "5th percentile of the same"],
+ "per_band": [
+  "days",
+  "separate spells (runs of consecutive trading days in the band)",
+  "share of days followed by a close 10% or more lower within 63 trading days",
+  "the same for 20% or more",
+  "median of the deepest close within 63 trading days",
+  "5th percentile of the same"
+ ],
  "thin_sample": "a band is marked thin when it has fewer than 250 days or fewer than 10 separate spells. Days in a spell are not independent, so the spell count is the honest sample size.",
  "wording": "past frequencies, never a probability of a future fall",
- "no_rule_change": true
+ "no_rule_change": true,
+ "addendum_2026-11-27_outcome_mix": {
+  "written_before_computing": "2026-11-27",
+  "per_band": [
+   "share of days by the deepest close within 63 trading days, in four groups fixed here: less than 5% down, 5% to under 10%, 10% to under 20%, 20% or more",
+   "for days followed by a 10% fall: median trading days until the first close 10% or more lower"
+  ],
+  "forward_check": "These are past frequencies. From the first record (2026-11-26) the published score and what followed will be compared with these shares in public; first review after 12 months of records. Until then nothing here is called a forecast."
+ }
 }

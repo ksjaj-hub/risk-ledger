@@ -1,5 +1,5 @@
 {
- "generated_at_utc": "2026-11-27T04:18:10Z",
+ "generated_at_utc": "2026-11-27T04:30:27Z",
  "warning": "Hindsight on revised data. Past frequencies, not forecasts. Plan: score_bins_plan.json.",
  "horizon_trading_days": 63,
  "market_last": "2026-09-30",
@@ -13,6 +13,13 @@
     "to": 9,
     "days": 1743,
     "spells": 98,
+    "mix_lt5_5to10_10to20_ge20": [
+     0.727,
+     0.165,
+     0.086,
+     0.022
+    ],
+    "median_days_to_fall10": 43.5,
     "share_fall10": 0.108,
     "share_fall20": 0.022,
     "median_deepest": -2.703,
@@ -24,6 +31,13 @@
     "to": 19,
     "days": 809,
     "spells": 173,
+    "mix_lt5_5to10_10to20_ge20": [
+     0.634,
+     0.208,
+     0.142,
+     0.016
+    ],
+    "median_days_to_fall10": 32.0,
     "share_fall10": 0.158,
     "share_fall20": 0.016,
     "median_deepest": -3.267,
@@ -35,6 +49,13 @@
     "to": 29,
     "days": 617,
     "spells": 162,
+    "mix_lt5_5to10_10to20_ge20": [
+     0.666,
+     0.188,
+     0.133,
+     0.013
+    ],
+    "median_days_to_fall10": 38.5,
     "share_fall10": 0.146,
     "share_fall20": 0.013,
     "median_deepest": -2.98,
@@ -46,6 +67,13 @@
     "to": 39,
     "days": 487,
     "spells": 114,
+    "mix_lt5_5to10_10to20_ge20": [
+     0.694,
+     0.177,
+     0.125,
+     0.004
+    ],
+    "median_days_to_fall10": 27.0,
     "share_fall10": 0.129,
     "share_fall20": 0.004,
     "median_deepest": -2.35,
@@ -57,6 +85,13 @@
     "to": 49,
     "days": 286,
     "spells": 86,
+    "mix_lt5_5to10_10to20_ge20": [
+     0.615,
+     0.189,
+     0.189,
+     0.007
+    ],
+    "median_days_to_fall10": 23.5,
     "share_fall10": 0.196,
     "share_fall20": 0.007,
     "median_deepest": -3.146,
@@ -68,6 +103,13 @@
     "to": 59,
     "days": 609,
     "spells": 91,
+    "mix_lt5_5to10_10to20_ge20": [
+     0.471,
+     0.273,
+     0.171,
+     0.085
+    ],
+    "median_days_to_fall10": 33.0,
     "share_fall10": 0.256,
     "share_fall20": 0.085,
     "median_deepest": -5.452,
@@ -79,6 +121,13 @@
     "to": 69,
     "days": 76,
     "spells": 19,
+    "mix_lt5_5to10_10to20_ge20": [
+     0.776,
+     0.211,
+     0.0,
+     0.013
+    ],
+    "median_days_to_fall10": 9.0,
     "share_fall10": 0.013,
     "share_fall20": 0.013,
     "median_deepest": -2.46,
@@ -90,6 +139,13 @@
     "to": 79,
     "days": 277,
     "spells": 12,
+    "mix_lt5_5to10_10to20_ge20": [
+     0.509,
+     0.087,
+     0.188,
+     0.217
+    ],
+    "median_days_to_fall10": 12.5,
     "share_fall10": 0.404,
     "share_fall20": 0.217,
     "median_deepest": -4.646,
@@ -115,6 +171,13 @@
     "to": 9,
     "days": 3756,
     "spells": 179,
+    "mix_lt5_5to10_10to20_ge20": [
+     0.789,
+     0.161,
+     0.04,
+     0.01
+    ],
+    "median_days_to_fall10": 43.5,
     "share_fall10": 0.05,
     "share_fall20": 0.01,
     "median_deepest": -2.246,
@@ -126,6 +189,13 @@
     "to": 19,
     "days": 1409,
     "spells": 295,
+    "mix_lt5_5to10_10to20_ge20": [
+     0.712,
+     0.167,
+     0.104,
+     0.016
+    ],
+    "median_days_to_fall10": 33.0,
     "share_fall10": 0.121,
     "share_fall20": 0.016,
     "median_deepest": -2.481,
@@ -137,6 +207,13 @@
     "to": 29,
     "days": 1028,
     "spells": 249,
+    "mix_lt5_5to10_10to20_ge20": [
+     0.654,
+     0.183,
+     0.142,
+     0.021
+    ],
+    "median_days_to_fall10": 41.0,
     "share_fall10": 0.163,
     "share_fall20": 0.021,
     "median_deepest": -3.174,
@@ -148,6 +225,13 @@
     "to": 39,
     "days": 790,
     "spells": 184,
+    "mix_lt5_5to10_10to20_ge20": [
+     0.647,
+     0.141,
+     0.167,
+     0.046
+    ],
+    "median_days_to_fall10": 25.0,
     "share_fall10": 0.213,
     "share_fall20": 0.046,
     "median_deepest": -2.922,
@@ -159,6 +243,13 @@
     "to": 49,
     "days": 541,
     "spells": 138,
+    "mix_lt5_5to10_10to20_ge20": [
+     0.527,
+     0.224,
+     0.246,
+     0.004
+    ],
+    "median_days_to_fall10": 27.0,
     "share_fall10": 0.25,
     "share_fall20": 0.004,
     "median_deepest": -4.51,
@@ -170,6 +261,13 @@
     "to": 59,
     "days": 1077,
     "spells": 162,
+    "mix_lt5_5to10_10to20_ge20": [
+     0.479,
+     0.236,
+     0.205,
+     0.08
+    ],
+    "median_days_to_fall10": 32.0,
     "share_fall10": 0.285,
     "share_fall20": 0.08,
     "median_deepest": -5.378,
@@ -181,6 +279,13 @@
     "to": 69,
     "days": 131,
     "spells": 31,
+    "mix_lt5_5to10_10to20_ge20": [
+     0.489,
+     0.29,
+     0.214,
+     0.008
+    ],
+    "median_days_to_fall10": 47.0,
     "share_fall10": 0.221,
     "share_fall20": 0.008,
     "median_deepest": -5.376,
@@ -192,6 +297,13 @@
     "to": 79,
     "days": 458,
     "spells": 35,
+    "mix_lt5_5to10_10to20_ge20": [
+     0.535,
+     0.14,
+     0.194,
+     0.131
+    ],
+    "median_days_to_fall10": 15.0,
     "share_fall10": 0.325,
     "share_fall20": 0.131,
     "median_deepest": -4.222,
@@ -203,6 +315,13 @@
     "to": 89,
     "days": 1,
     "spells": 1,
+    "mix_lt5_5to10_10to20_ge20": [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    "median_days_to_fall10": 61.0,
     "share_fall10": 1.0,
     "share_fall20": 0.0,
     "median_deepest": -11.118,
