@@ -15,7 +15,7 @@ jobs:
           base="${{ github.event.before }}"
           [ "${{ github.event_name }}" = "pull_request" ] && base="origin/${{ github.base_ref }}"
           if [ -z "$base" ] || ! git cat-file -e "$base^{commit}" 2>/dev/null; then echo "no base commit; skipping"; exit 0; fi
-          changed=$(git diff --name-only --diff-filter=MDRT "$base" HEAD -- records alerts 'rules/v*' | grep -v '\.ots$' || true)
+          changed=$(git diff --name-only --diff-filter=MDRT "$base" HEAD -- records alerts 'rules/v*' 'residual/preregistration*.json' | grep -v '\.ots$' || true)
           if [ -n "$changed" ]; then echo "Changed or removed:"; echo "$changed"; exit 1; fi
       - uses: actions/setup-python@v5
         with:
@@ -25,6 +25,10 @@ jobs:
         run: python scripts/forecast_math.py --selftest && python scripts/questions.py --selftest
       - name: The watch-share count still hides small counts and drops fake signups
         run: python scripts/worry_index.py --selftest
+      - name: The residual risk index arithmetic still checks out, and the published value matches the cards
+        run: |
+          python scripts/residual.py --selftest
+          python scripts/residual.py --check
       - name: Every card is checked against the selection criteria
         run: python scripts/selection_check.py --check
       - name: A forecast, once written, is never changed or removed

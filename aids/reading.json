@@ -581,6 +581,16 @@
     "term": "ETF",
     "def": "여러 종목을 한 바구니에 담아 주식처럼 사고파는 펀드입니다. 카드에 적힌 섹터 ETF는 그 섹터를 찾아보기 쉽게 하려는 것이고 추천이 아닙니다."
    }
+  },
+  "residual": {
+   "en": {
+    "term": "Residual risk index",
+    "def": "One number for how much unresolved risk is on AFMX's open cards. Each card counts as its reach (how much of the market it touches) times its expected stage (0 resolved, 1 still open, 2 worsened, from AFMX's own odds). It adds up AFMX's judgment. It does not measure the market, and its relation to prices has not been tested."
+   },
+   "ko": {
+    "term": "남은 리스크 지수",
+    "def": "AFMX의 열린 카드에 풀리지 않은 리스크가 얼마나 쌓여 있는지를 숫자 하나로 나타낸 것입니다. 카드마다 닿는 범위(시장의 얼마만큼에 닿는지)에 기대 단계(해소 0, 그대로 1, 악화 2. AFMX가 적은 확률로 계산)를 곱해 더합니다. AFMX의 판단을 더한 값이고 시장을 잰 값이 아닙니다. 가격과의 관계는 아직 시험하지 않았습니다."
+   }
   }
  }
 }

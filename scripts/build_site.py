@@ -241,6 +241,12 @@ def _patterns():
 aids["patterns"] = _patterns()
 sc_path = ROOT / "sector_scores" / "scorecard.json"
 aids["scorecard"] = json.loads(sc_path.read_text()) if sc_path.exists() else None
+# residual risk index (residual/preregistration.json): a sum of AFMX's own judgment, shown with its limits
+_rp = ROOT / "residual" / "index.json"
+if _rp.exists():
+    _r = json.loads(_rp.read_text())
+    aids["residual"] = {**{k: _r["latest"][k] for k in ("date", "index", "open_cards", "equal_reach")}, "max": _r["max_if_all_worsened"],
+                        "cards": [[c["card"], c["share"]] for c in _r["cards"][:5]], "history": [[h["date"], h["index"]] for h in _r["history"]]}
 # Page weight: the page file carries only what the page shows. Everything dropped here stays in the source files
 # (events/*.json and hindsight/cases.json), which are the record; docs/data.json is a copy for the screen.
 for _e in data["events"]:
