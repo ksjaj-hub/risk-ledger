@@ -23,6 +23,8 @@ jobs:
           python-version: "3.12"
       - run: pip install numpy
       - name: Run stages
+        env:
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
         run: |
           for s in ${{ github.event.inputs.stages || '$(cat research/disclosure/stage.txt)' }}; do
             echo "== $s"; python scripts/disclosure_index.py "$s"

@@ -12,13 +12,13 @@ SEC fair access: declared User-Agent, at most 6 requests per second in total.
   python scripts/disclosure_index.py analyze          # tests -> research/disclosure/results.json
   python scripts/disclosure_index.py analyze --offline DIR   # smoke test: DIR/filings.csv and DIR/MKT.csv, no network
 """
-import argparse, bisect, csv, datetime as dt, gzip, html, json, math, pathlib, random, re, sys, time
+import argparse, bisect, csv, datetime as dt, gzip, html, json, math, os, pathlib, random, re, sys, time
 import urllib.error, urllib.parse, urllib.request
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "research" / "disclosure"
 PLAN = json.loads((OUT / "preregistration.json").read_text())
-UA = "AFMX risk-ledger research (github.com/ksjaj-hub/risk-ledger) 325890826+ksjaj-hub@users.noreply.github.com"
+UA = os.environ.get("SEC_USER_AGENT") or "AFMX risk-ledger research (github.com/ksjaj-hub/risk-ledger) 325890826+ksjaj-hub@users.noreply.github.com"
 THEMES = list(PLAN["themes"])
 PAT = {k: re.compile(v) for k, v in PLAN["themes"].items()}
 GENERIC = re.compile(r"\brisks?\b|\buncertaint(?:y|ies)\b|\buncertain\b|\badverse(?:ly)?\b")

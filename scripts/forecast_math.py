@@ -187,6 +187,38 @@ def own_cards(cards, asof):
 
 
 # ---------- page ----------
+def residual(live, asof, horizon=90):
+    """Residual risk index: how many of the open risks are expected to worsen, and to resolve, within `horizon` days.
+    A forecast covers written_on to deadline; a constant rate inside that span cuts it to the horizon.
+    Nothing is assumed past a deadline. Cards are treated as independent for the range (they are not)."""
+    rows = []
+    for c in live:
+        f = c["forecasts"][-1]
+        total, left = (D(f["deadline"]) - D(f["written_on"])).days, (D(f["deadline"]) - asof).days
+        if total <= 0 or left <= 0:
+            continue
+        frac = min(horizon, left) / total
+        rows.append({"card": c["id"], "days_counted": min(horizon, left),
+                     "p_worsened": round(1 - (1 - f["p_worsened"]) ** frac, 4), "p_resolved": round(1 - (1 - f["p_resolved"]) ** frac, 4)})
+
+    def rng80(ps):
+        dist = [1.0]
+        for q in ps:
+            dist = [(dist[k] if k < len(dist) else 0) * (1 - q) + (dist[k - 1] * q if k else 0) for k in range(len(dist) + 1)]
+        cum, lo, hi = 0, None, None
+        for k, v in enumerate(dist):
+            cum += v
+            if lo is None and cum >= 0.1:
+                lo = k
+            if hi is None and cum >= 0.9:
+                hi = k
+        return [lo, hi]
+    w, r = [x["p_worsened"] for x in rows], [x["p_resolved"] for x in rows]
+    return {"horizon_days": horizon, "cards_counted": len(rows), "expected_worsened": round(sum(w), 2), "worsened_range80": rng80(w),
+            "expected_resolved": round(sum(r), 2), "resolved_range80": rng80(r), "chance_none_worsens": round(math.prod(1 - q for q in w), 3),
+            "top": sorted(rows, key=lambda x: -x["p_worsened"])[:3], "rows": rows}
+
+
 def page(m):
     e, pc = html.escape, lambda x: f"{round(x * 100)}%"
     two = lambda en, ko, tag="p", cls="": f'<{tag}{" class=" + chr(34) + cls + chr(34) if cls else ""}><span lang="en">{en}</span><span lang="ko">{ko}</span></{tag}>'
@@ -258,6 +290,16 @@ def page(m):
     b.append(two("3. Our own cards", "3. AFMX의 카드", "h2"))
     b.append(two(f'The better evidence will be our own record: how long AFMX cards take to close, counted so that cards still open are included as "not closed yet". Today: {o["cards"]} cards, {o["resolved"]} resolved, {o["card_days"]} card-days of record. That is nothing yet. A curve is drawn from {MIN_CARDS} resolved cards on, which will take years at the current pace.',
                  f'더 나은 근거는 저희 기록 자체입니다. AFMX 카드가 닫히기까지 걸린 시간을, 아직 열린 카드도 "아직 닫히지 않음"으로 넣어 셉니다. 지금은 카드 {o["cards"]}장, 해소 {o["resolved"]}장, 기록은 모두 합쳐 {o["card_days"]}일입니다. 아직 아무것도 아닙니다. 곡선은 해소된 카드가 {MIN_CARDS}장이 되면 그리며, 지금 속도로는 몇 해가 걸립니다.'))
+    rs = m.get("residual")
+    if rs and rs["cards_counted"]:
+        tk = lambda x, k: e((x["title"], ko_title.get(x["card"], x["title"]))[k])
+        b.append(two("4. Residual risk index", "4. 남은 리스크 지수", "h2"))
+        b.append(two(f'Of the {rs["cards_counted"]} open risks, {rs["expected_worsened"]} are expected to worsen in the next {rs["horizon_days"]} days (80% range {rs["worsened_range80"][0]} to {rs["worsened_range80"][1]}), and {rs["expected_resolved"]} to resolve.',
+                     f'열린 리스크 {rs["cards_counted"]}건 가운데 앞으로 {rs["horizon_days"]}일 안에 악화가 예상되는 것은 {rs["expected_worsened"]}건(80% 범위 {rs["worsened_range80"][0]}~{rs["worsened_range80"][1]}건), 해소가 예상되는 것은 {rs["expected_resolved"]}건입니다.', cls="big"))
+        b.append(two(f'This adds up the card odds, each cut to the same {rs["horizon_days"]} days. The chance that none worsens is {pc(rs["chance_none_worsens"])}. Largest shares: ' + "; ".join(f'{tk(x, 0)} {pc(x["p_worsened"])}' for x in rs["top"]) + ".",
+                     f'카드의 확률을 같은 {rs["horizon_days"]}일로 맞춰 더한 값입니다. 한 건도 악화되지 않을 확률은 {pc(rs["chance_none_worsens"])}입니다. 비중이 큰 카드: ' + "; ".join(f'{tk(x, 1)} {pc(x["p_worsened"])}' for x in rs["top"]) + "."))
+        b.append(two("It rests on our own odds, so it is only as good as they are. It counts cards, not size: a worsening in one card is not the same weight as in another, and we have no measured size to weight by. It treats cards as independent. It is recorded daily and will be checked against how many cards actually worsened.",
+                     "저희가 적은 확률에 기대는 숫자라 그 확률만큼만 믿을 수 있습니다. 크기가 아니라 건수를 셉니다. 카드마다 악화의 무게가 다르지만 잴 수 있는 크기가 아직 없습니다. 카드가 서로 독립이라고 보았습니다. 매일 기록하고, 실제로 악화된 건수와 비교해 점검합니다.", cls="su"))
     b.append(two("Limits", "한계", "h2"))
     b.append("<ul>" + "".join(two(a, k, "li") for a, k in (
         ("The odds are judgment. The arithmetic checks them; it does not produce them.", "확률은 판단입니다. 계산은 판단을 점검할 뿐 만들어 내지 않습니다."),
@@ -349,6 +391,14 @@ def build(asof):
     m = {"note": "Arithmetic on the card forecasts. Part A scores them; part B reads past events as a second opinion. Thin evidence: see the limits on docs/odds.html.",
          "as_of": asof.isoformat(), "cards_open": sum(c["status"] == "open" for c in cards.values()),
          "scoring": scoring, "history": history(cards, asof), "own_cards": own_cards(cards, asof), "titles_ko": titles_ko}
+    m["residual"] = residual(live, asof)
+    for x in m["residual"]["top"]:
+        x["title"] = cards[x["card"]]["title"]
+    rp, rs = ROOT / "forecasts" / "residual.csv", m["residual"]
+    old = rp.read_text().splitlines() if rp.exists() else ["date,cards,expected_worsened_90d,expected_resolved_90d"]
+    line = f'{asof.isoformat()},{rs["cards_counted"]},{rs["expected_worsened"]},{rs["expected_resolved"]}'
+    if not any(l.startswith(asof.isoformat()) for l in old):
+        rp.write_text("\n".join(old + [line]) + "\n")
     (ROOT / "docs" / "odds.html").write_text(page(m))
     del m["titles_ko"]
     (ROOT / "forecasts" / "math.json").write_text(json.dumps(m, indent=1, ensure_ascii=False) + "\n")
@@ -389,6 +439,10 @@ def selftest():
     assert abs(x["expected_brier"] - 0.125) < 1e-9 and abs(x["expected_edge"] - 0.125) < 1e-9 and abs(x["chance_no_better_than_nothing_happens"] - 0.5) < 0.02
     w = what_if(0.7, 0.12)
     assert w[0]["afmx"] == round((0.09 + 0.0144) / 2, 4) and w[0]["nothing_happens"] == 0.5
+    rs = residual([{"id": "a", "forecasts": [{"written_on": "2026-01-01", "deadline": "2026-07-01", "p_worsened": 0.5, "p_resolved": 0.0}]},
+                   {"id": "b", "forecasts": [{"written_on": "2026-01-01", "deadline": "2026-01-11", "p_worsened": 0.2, "p_resolved": 1.0}]}], D("2026-01-01"))
+    assert rs["rows"][0]["p_worsened"] == round(1 - 0.5 ** (90 / 181), 4) and rs["rows"][1] == {"card": "b", "days_counted": 10, "p_worsened": 0.2, "p_resolved": 1.0}, rs
+    assert rs["resolved_range80"] == [1, 1] and rs["worsened_range80"] == [0, 1]
     print("selftest ok")
 
 
