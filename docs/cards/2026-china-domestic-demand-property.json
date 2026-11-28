@@ -1,0 +1,201 @@
+{
+"event": {
+"what_happened": "October 2026 data showed retail sales growth of 0.4% year over year, fixed-asset investment down 8.1% for January to October, and property development investment down 21.6%.",
+"how_it_reaches_markets": "Weaker demand for commodities and for foreign companies selling into China; pressure on Chinese and Hong Kong shares; deflationary pressure exported through cheap goods, which also feeds the tariff dispute.",
+"sourced_facts": [
+{
+"text": "October 2026: value added of industry above designated size +4.8% y/y; retail sales of consumer goods +0.4% y/y (National Bureau of Statistics, released 2026-11-16)",
+"url": "https://www.stats.gov.cn/english/PressRelease//202611/t20261116_1965843.html",
+"tier": "primary",
+"checked": "2026-11-26"
+},
+{
+"text": "September 2026, for comparison: industry +5.5% y/y; retail sales +1.1% y/y (National Bureau of Statistics, released 2026-10-19)",
+"url": "https://www.stats.gov.cn/english/PressRelease/202610/t20261019_1965619.html",
+"tier": "primary",
+"checked": "2026-11-26"
+},
+{
+"text": "January to October 2026: fixed-asset investment -8.1% y/y; real estate development investment -21.6% y/y (National Bureau of Statistics)",
+"url": "https://www.stats.gov.cn/english/PressRelease//202611/t20261116_1965843.html",
+"tier": "primary",
+"checked": "2026-11-26"
+}
+],
+"sources": [
+"https://www.stats.gov.cn/english/PressRelease//202611/t20261116_1965843.html",
+"https://www.stats.gov.cn/english/PressRelease/202610/t20261019_1965619.html"
+],
+"history": [
+{
+"date": "2026-11-26",
+"status": "open",
+"note": "Card opened. Resolution conditions written before the outcome is known."
+},
+{
+"date": "2026-11-26",
+"status": "open",
+"note": "Sources upgraded. The four October activity figures were confirmed on the National Bureau of Statistics release. The September comparison figures and the weekly index moves are not yet confirmed at an accepted source and were moved to unconfirmed_facts."
+},
+{
+"date": "2026-11-26",
+"status": "open",
+"note": "Second pass. The September comparison figures were confirmed on the National Bureau of Statistics release of 2026-10-19 and moved back to the facts."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Added forecast 1: by 2027-05-31, 3% resolved, 60% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
+}
+],
+"unconfirmed_facts": [
+"Week ending 2026-11-20: Hang Seng -5.19%, CSI 300 -1.54%: from a fund manager's weekly note; not confirmed at a primary or wire source"
+],
+"condition_reading_notes": {
+"written_on": "2026-11-26",
+"notes": [
+"Retail sales and property investment are read from the monthly National Bureau of Statistics release. 'Large' default means a public bond of at least $100 million equivalent."
+]
+},
+"numeric_criteria": {
+"version": 1,
+"written_on": "2026-11-27",
+"items": [
+{
+"side": "resolved",
+"measure": "Retail sales growth above 3.0% year over year in 3 monthly releases in a row",
+"latest": "0 of 3. October +0.4% (released 2026-11-16)",
+"state": "not_met"
+},
+{
+"side": "resolved",
+"measure": "Year-to-date property development investment down by less than 10.0%",
+"latest": "January to October -21.6%: 11.6 points short",
+"state": "not_met"
+},
+{
+"side": "worsened",
+"measure": "Retail sales growth below 0.0% year over year in any monthly release",
+"latest": "October +0.4%: 0.4 points above the line",
+"state": "not_reached"
+},
+{
+"side": "worsened",
+"measure": "A default on a public bond of at least $100 million equivalent by a developer or local-government financing vehicle: 1 case is enough",
+"latest": "0 cases recorded since 2026-11-26",
+"state": "not_reached"
+}
+]
+},
+"counter_view": {
+"written_on": "2026-11-27",
+"text": "China's property slump is several years old and the US market has lived with it. Industrial output still grew 4.8% in October. This may stay a slow drag that never turns into a US market event."
+},
+"worsened_when_any": [
+"Retail sales fall year over year",
+"A large developer or local-government financing vehicle defaults on a public bond"
+]
+},
+"aids": {
+"links": {
+"technology": {
+"level": "unconfirmed",
+"direction": "lagged"
+},
+"consumer_discretionary": {
+"level": "unconfirmed",
+"direction": "lagged"
+},
+"consumer_staples": {
+"level": "strong",
+"direction": "led",
+"factor": "yuan_weakening",
+"mean_excess_pct": 0.25,
+"t": 4.1,
+"n": 263,
+"since": "2005"
+},
+"energy": {
+"level": "strong",
+"direction": "lagged",
+"factor": "yuan_weakening",
+"mean_excess_pct": -0.44,
+"t": -3.3,
+"n": 263,
+"since": "2005"
+},
+"health_care": {
+"level": "moderate",
+"direction": "led",
+"factor": "yuan_weakening",
+"mean_excess_pct": 0.09,
+"t": 2.3,
+"n": 263,
+"since": "2005"
+},
+"industrials": {
+"level": "unconfirmed",
+"direction": "lagged"
+},
+"materials": {
+"level": "strong",
+"direction": "lagged",
+"factor": "yuan_weakening",
+"mean_excess_pct": -0.3,
+"t": -5.6,
+"n": 263,
+"since": "2005"
+},
+"utilities": {
+"level": "strong",
+"direction": "led",
+"factor": "yuan_weakening",
+"mean_excess_pct": 0.26,
+"t": 4.0,
+"n": 263,
+"since": "2005"
+}
+},
+"exposure": [
+"FXI",
+"MCHI",
+"KWEB"
+],
+"card_factors": [
+"yuan_weakening"
+],
+"market": {
+"verdict": "does_not_show",
+"none": null,
+"readings": [
+{
+"en": "Yuan per dollar",
+"ko": "달러당 위안화",
+"unit": "yuan",
+"value": 6.68,
+"as_of": "2026-11-20",
+"percentile_5y": 12,
+"shows": false,
+"rule": "high_in_5y"
+}
+]
+},
+"past": [
+{
+"en": "2015 China changes its yuan fixing",
+"ko": "2015년 중국 위안화 기준환율 방식 변경",
+"start": "2015-08-11",
+"src": "https://www.imf.org/External/AM/2015/imfc/statement/eng/chn.pdf",
+"fall": -13.3,
+"day": 126,
+"rec": 15,
+"end6": -13.3
+}
+]
+}
+}

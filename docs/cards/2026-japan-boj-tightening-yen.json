@@ -1,0 +1,187 @@
+{
+"event": {
+"what_happened": "The Bank of Japan set its policy rate at around 1.25% in September 2026 and said it would continue to raise it. The yen traded near 159 to 160 per dollar in mid-November. A fall of about 5% in the Nikkei 225 on 2026-11-20 was widely reported but is not yet confirmed here.",
+"how_it_reaches_markets": "Higher Japanese yields can pull Japanese capital home from US and other foreign bonds; sharp yen moves can force unwinding of yen-funded positions; possible currency intervention.",
+"sourced_facts": [
+{
+"text": "2026-09-18: Bank of Japan set the guideline for the uncollateralized overnight call rate at around 1.25 percent, effective 2026-09-24, by a 7-2 vote; the statement says the Bank will continue to raise the policy interest rate",
+"url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260918a.pdf",
+"tier": "primary",
+"checked": "2026-11-26"
+},
+{
+"text": "Yen per dollar, Federal Reserve noon rates: 159.65 on 2026-11-16, 159.76 on 2026-11-19, 158.76 on 2026-11-20 (H.10 release of 2026-11-23)",
+"url": "https://www.federalreserve.gov/releases/h10/current/",
+"tier": "primary",
+"checked": "2026-11-26"
+}
+],
+"sources": [
+"https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260918a.pdf",
+"https://www.federalreserve.gov/releases/h10/current/"
+],
+"history": [
+{
+"date": "2026-11-26",
+"status": "open",
+"note": "Card opened. Resolution conditions written before the outcome is known."
+},
+{
+"date": "2026-11-26",
+"status": "open",
+"note": "Sources upgraded. The policy rate is confirmed on the Bank of Japan statement. Market levels, the survey and GDP are not yet confirmed at an accepted source and were moved to unconfirmed_facts."
+},
+{
+"date": "2026-11-26",
+"status": "open",
+"note": "Second pass. Yen levels were added from the Federal Reserve H.10 release. The Q3 GDP figure is flagged: the Cabinet Office table could not be read reliably and the partial reading did not match the widely reported -0.1%."
+},
+{
+"date": "2026-11-26",
+"status": "open",
+"note": "Summary rewritten so that it states only what was confirmed at the listed sources and marks the rest as reported. The first version is kept under superseded_sources. Resolution conditions are unchanged."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Added forecast 1: by 2027-03-31, 15% resolved, 40% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Title was 'Japan: Bank of Japan rate rises, weak yen and equity sell-off'. Changed to say only what is confirmed. Conditions and forecasts unchanged."
+}
+],
+"unconfirmed_facts": [
+"2026-11-12: USD/JPY briefly above 160: an intraday high cannot be settled from the Federal Reserve's noon rates, which stayed below 160 in the week of 2026-11-16",
+"2026-11-20: Nikkei 225 -3,007.81 points to 56,436.65: not confirmed at a primary or wire source",
+"Q3 GDP: outlets report an annualized -0.1%. The Cabinet Office release of 2026-11-16 was opened but its table could not be read reliably, and what was extracted did not match that figure. Treated as unverified until the table is read properly",
+"Reuters survey expecting 1.5% in December; 10-year JGB yield about 2.80%: originals not read"
+],
+"condition_reading_notes": {
+"written_on": "2026-11-26",
+"notes": [
+"USD/JPY is read from the Federal Reserve H.10 noon rate. 'Reported intervention' means intervention confirmed by Japan's Ministry of Finance. 'Majority forecast' means the median of the Reuters poll published before the meeting."
+]
+},
+"numeric_criteria": {
+"version": 1,
+"written_on": "2026-11-27",
+"items": [
+{
+"side": "resolved",
+"measure": "Yen per dollar (Federal Reserve noon rate) below 155.00 on 20 trading days in a row, with no intervention confirmed by Japan's Ministry of Finance",
+"latest": "0 of 20. 158.76 on 2026-11-20",
+"state": "not_met",
+"series": "DEXJPUS"
+},
+{
+"side": "resolved",
+"measure": "One Bank of Japan meeting whose decision equals the median of the Reuters poll, with the Nikkei 225 down no more than 3.0% on that day and the next",
+"latest": "0 of 1. No meeting since the card opened",
+"state": "not_met"
+},
+{
+"side": "worsened",
+"measure": "Intervention confirmed by Japan's Ministry of Finance: 1 is enough",
+"latest": "0 since 2026-11-26",
+"state": "not_reached"
+},
+{
+"side": "worsened",
+"measure": "Nikkei 225 down more than 5.0% in one day",
+"latest": "0 days since 2026-11-26",
+"state": "not_reached",
+"series": "NIKKEI225"
+},
+{
+"side": "worsened",
+"measure": "Japan's 10-year government bond yield closes above 3.00%",
+"latest": "Reported at about 2.80%, original not read",
+"state": "not_reached"
+}
+]
+},
+"counter_view": {
+"written_on": "2026-11-27",
+"text": "The Bank of Japan has moved in small steps and said in advance that it would keep raising. A weak yen also lifts exporters' earnings. Sharp spillovers from Japan to the US market have been rare, so this may remain a local story."
+},
+"worsened_when_any": [
+"Japanese authorities confirm currency intervention",
+"The Nikkei 225 falls more than 5% in a day again",
+"Japan's 10-year government bond yield closes above 3.0%"
+]
+},
+"aids": {
+"links": {
+"consumer_staples": {
+"level": "strong",
+"direction": "led",
+"factor": "yen_surge",
+"mean_excess_pct": 0.18,
+"t": 3.7,
+"n": 458,
+"since": "1990"
+},
+"financials": {
+"level": "strong",
+"direction": "lagged",
+"factor": "yen_surge",
+"mean_excess_pct": -0.18,
+"t": -4.4,
+"n": 458,
+"since": "1990"
+},
+"utilities": {
+"level": "strong",
+"direction": "led",
+"factor": "yen_surge",
+"mean_excess_pct": 0.19,
+"t": 3.6,
+"n": 458,
+"since": "1990"
+}
+},
+"exposure": [
+"EWJ",
+"DXJ",
+"FXY"
+],
+"card_factors": [
+"yen_surge"
+],
+"market": {
+"verdict": "shows",
+"none": null,
+"readings": [
+{
+"en": "Yen per dollar",
+"ko": "달러당 엔화",
+"unit": "yen",
+"value": 158.76,
+"as_of": "2026-11-20",
+"percentile_5y": 90,
+"shows": true,
+"rule": "high_in_5y"
+}
+]
+},
+"past": [
+{
+"en": "2024 Bank of Japan rate rise",
+"ko": "2024년 일본은행 금리 인상",
+"start": "2024-07-31",
+"src": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2024/k240731a.pdf",
+"fall": -5.1,
+"day": 4,
+"rec": 4,
+"end6": 13.5
+}
+]
+}
+}

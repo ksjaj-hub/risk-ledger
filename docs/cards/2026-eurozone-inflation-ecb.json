@@ -1,0 +1,214 @@
+{
+"event": {
+"what_happened": "Euro area inflation rose to 3.8% in September 2026 from 3.2% in August, with energy inflation at 18.9%. The ECB held its deposit rate at 2.50% on 2026-10-29. An October reading of 4.0% has been reported but could not yet be confirmed at Eurostat.",
+"how_it_reaches_markets": "Higher rates in Europe at the same time as in the US and Japan tighten global financing conditions; pressure on highly indebted euro governments ahead of elections in Spain, France and Italy.",
+"sourced_facts": [
+{
+"text": "2026-10-29: the ECB kept its three key rates unchanged: deposit facility 2.50%, main refinancing operations 2.65%, marginal lending facility 2.90%",
+"url": "https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/shared/pdf/ecb.ds261029~3abd26884e.en.pdf",
+"tier": "primary",
+"checked": "2026-11-26"
+},
+{
+"text": "ECB statement of 2026-10-29: 'Inflation rose to 3.8 per cent in September, from 3.2 per cent in August'; energy inflation was 18.9% in September",
+"url": "https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/shared/pdf/ecb.ds261029~3abd26884e.en.pdf",
+"tier": "primary",
+"checked": "2026-11-26"
+}
+],
+"sources": [
+"https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp261029~9a493adf17.en.html",
+"https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/shared/pdf/ecb.ds261029~3abd26884e.en.pdf"
+],
+"history": [
+{
+"date": "2026-11-26",
+"status": "open",
+"note": "Card opened. Resolution conditions written before the outcome is known."
+},
+{
+"date": "2026-11-26",
+"status": "open",
+"note": "Sources upgraded in part. The policy decision is taken from the ECB release, read only in part. The Eurostat inflation release could not be opened and the figure stays unconfirmed until it is read."
+},
+{
+"date": "2026-11-26",
+"status": "open",
+"note": "Second pass. Rate levels and the September inflation figure were confirmed verbatim on the ECB monetary policy statement of 2026-10-29."
+},
+{
+"date": "2026-11-26",
+"status": "open",
+"note": "Summary rewritten so that it states only what was confirmed at the listed sources and marks the rest as reported. The first version is kept under superseded_sources. Resolution conditions are unchanged."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Added forecast 1: by 2027-03-31, 10% resolved, 12% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Title was 'Eurozone inflation at 4% and further ECB rate rises'. Changed to say only what is confirmed. Conditions and forecasts unchanged."
+}
+],
+"unconfirmed_facts": [
+"October 2026 euro area inflation 4.0%: Eurostat release titles of 2026-11-04 and 2026-11-18 read 'annual inflation up to 4.0%', but the pages could not be opened, so the figure is not counted as confirmed; core 2.6% likewise",
+"Week ending 2026-11-20: STOXX 600 -5.80%, DAX -7.28%: not confirmed at a primary or wire source",
+"A fund manager's expectation of one more ECB hike in December to 2.75%: commentary, not used as support"
+],
+"condition_reading_notes": {
+"written_on": "2026-11-26",
+"notes": [
+"Inflation is read from the Eurostat final monthly release. 'Signals that it does not expect further rises' is judged only from the published monetary policy statement: it counts when the statement says rates are at their peak or drops any reference to further increases."
+]
+},
+"numeric_criteria": {
+"version": 1,
+"written_on": "2026-11-27",
+"items": [
+{
+"side": "resolved",
+"measure": "Headline inflation (Eurostat final release) lower than the month before, 3 months in a row",
+"latest": "0 of 3. Last confirmed: September 3.8%, up from 3.2% in August",
+"state": "not_met"
+},
+{
+"side": "resolved",
+"measure": "One ECB monetary policy statement that says rates are at their peak or drops any reference to further increases",
+"latest": "0 of 1. On 2026-10-29 rates were held, deposit rate 2.50%",
+"state": "not_met"
+},
+{
+"side": "worsened",
+"measure": "Headline inflation at 4.5% or more",
+"latest": "Last confirmed 3.8% (September): 0.7 points below. October is reported at 4.0%, not yet confirmed",
+"state": "not_reached"
+},
+{
+"side": "worsened",
+"measure": "A rise of more than 0.25 percentage points at one meeting",
+"latest": "Last decision: no change",
+"state": "not_reached"
+}
+]
+},
+"counter_view": {
+"written_on": "2026-11-27",
+"text": "Energy prices, up 18.9% in September, are a large part of the rise. Brent has since fallen from an October average of $124 to under $100. If that holds, inflation could turn down without further ECB rises, and this card may be the oil card counted twice."
+},
+"worsened_when_any": [
+"Eurozone headline inflation reaches 4.5% or more",
+"The ECB raises by more than 0.25 percentage points at one meeting"
+]
+},
+"aids": {
+"links": {
+"technology": {
+"level": "moderate",
+"direction": "led",
+"factor": "euro_drop",
+"mean_excess_pct": 0.17,
+"t": 2.5,
+"n": 345,
+"since": "1999"
+},
+"energy": {
+"level": "strong",
+"direction": "lagged",
+"factor": "euro_drop",
+"mean_excess_pct": -0.47,
+"t": -4.2,
+"n": 345,
+"since": "1999"
+},
+"financials": {
+"level": "unconfirmed",
+"direction": "lagged"
+},
+"industrials": {
+"level": "strong",
+"direction": "lagged",
+"factor": "euro_drop",
+"mean_excess_pct": -0.13,
+"t": -3.5,
+"n": 345,
+"since": "1999"
+},
+"materials": {
+"level": "strong",
+"direction": "lagged",
+"factor": "euro_drop",
+"mean_excess_pct": -0.3,
+"t": -6.0,
+"n": 345,
+"since": "1999"
+},
+"real_estate": {
+"level": "moderate",
+"direction": "lagged",
+"factor": "euro_drop",
+"mean_excess_pct": -0.23,
+"t": -2.6,
+"n": 345,
+"since": "1999"
+},
+"utilities": {
+"level": "moderate",
+"direction": "lagged",
+"factor": "euro_drop",
+"mean_excess_pct": -0.14,
+"t": -2.1,
+"n": 345,
+"since": "1999"
+}
+},
+"exposure": [
+"EZU",
+"FEZ",
+"FXE"
+],
+"card_factors": [
+"euro_drop"
+],
+"market": {
+"verdict": "not_checked",
+"none": {
+"en": "Not checked. Euro-area market rates are not in the sources we are allowed to republish.",
+"ko": "대조하지 않았습니다. 유로 지역 시장 금리는 저희가 다시 실을 수 있는 출처에 없습니다."
+},
+"readings": []
+},
+"past": [
+{
+"en": "2011 ECB rate rises",
+"ko": "2011년 ECB 금리 인상",
+"start": "2011-04-13",
+"src": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+"fall": -17.1,
+"day": 120,
+"rec": 7,
+"end6": -9.3,
+"end": "2011-11-09",
+"days": 210
+},
+{
+"en": "2022 ECB rate rises",
+"ko": "2022년 ECB 금리 인상",
+"start": "2022-07-27",
+"src": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+"fall": -7.6,
+"day": 57,
+"rec": 5,
+"end6": 3.6,
+"end": "2023-09-20",
+"days": 420
+}
+]
+}
+}

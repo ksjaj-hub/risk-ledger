@@ -1,0 +1,251 @@
+{
+"event": {
+"what_happened": "US private credit has grown to about $1.5 trillion outstanding, up 13.8% in a year. The Federal Reserve reports that some funds kept redemption limits and net flows stayed negative. At the two largest listed lenders, loans that have stopped paying interest stood at 2.4% and 2.9% of the portfolio at cost on 2026-09-30, up from earlier in the year.",
+"how_it_reaches_markets": "Losses at business development companies, banks and insurers that lend to or hold private credit; redemption pressure on non-traded funds; tighter credit for mid-sized companies.",
+"sourced_facts": [
+{
+"text": "Federal Reserve Financial Stability Report (November 2026): private credit outstanding $1,504 billion, up 13.8% from 2025:Q2 to 2026:Q2 (Table 1.1)",
+"url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
+"tier": "primary",
+"checked": "2026-11-28"
+},
+{
+"text": "Same report: 'Redemption requests at certain business development companies trended lower, though funds maintained redemption limits and net flows remained negative.'",
+"url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
+"tier": "primary",
+"checked": "2026-11-28"
+},
+{
+"text": "Federal Reserve staff note, 2026-11-09: U.S.-domiciled private credit vehicles held about $1.9 trillion in assets at the end of 2025; BDCs 'tend to be more highly levered with an average debt-to-equity ratio around 1'",
+"url": "https://www.federalreserve.gov/econres/notes/feds-notes/u-s-private-credit-vehicles-institutional-structure-and-aggregate-balance-sheets-20261109.html",
+"tier": "primary",
+"checked": "2026-11-28"
+},
+{
+"text": "Same report (Overview): 'private companies and public firms with lower credit ratings demonstrated weaker debt-servicing capacity'. The report gives no private credit default rate in the part we could read word for word",
+"url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
+"tier": "primary",
+"checked": "2026-11-28"
+},
+{
+"text": "Ares Capital, results for 2026-09-30 (filed with the SEC, 2026-10-27): loans on non-accrual status were 2.4% of total investments at amortized cost (1.4% at fair value), against 1.8% (1.2%) on 2025-12-31; portfolio $29.2 billion at fair value",
+"url": "https://www.sec.gov/Archives/edgar/data/1287750/000162828026067382/arccq3-2026exhibit991.htm",
+"tier": "primary",
+"checked": "2026-11-28"
+},
+{
+"text": "Blue Owl Capital Corporation, results for 2026-09-30 (filed with the SEC, 2026-11-04): investments on non-accrual were 2.9% of the portfolio at cost (0.8% at fair value), against 2.8% (0.8%) on 2026-06-30; portfolio $15.1 billion at fair value",
+"url": "https://www.sec.gov/Archives/edgar/data/1655888/000165588826000070/exhibit991pressrelease-ann.htm",
+"tier": "primary",
+"checked": "2026-11-28"
+}
+],
+"sources": [
+"https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
+"https://www.federalreserve.gov/econres/notes/feds-notes/u-s-private-credit-vehicles-institutional-structure-and-aggregate-balance-sheets-20261109.html",
+"https://www.sec.gov/Archives/edgar/data/1287750/000162828026067382/arccq3-2026exhibit991.htm",
+"https://www.sec.gov/Archives/edgar/data/1655888/000165588826000070/exhibit991pressrelease-ann.htm"
+],
+"history": [
+{
+"date": "2026-11-26",
+"status": "open",
+"note": "Card opened. Resolution conditions written before the outcome is known."
+},
+{
+"date": "2026-11-26",
+"status": "open",
+"note": "Sources upgraded in part. Market size and redemption wording now come from the Federal Reserve Financial Stability Report. The Fitch default rates match a trade publication but have not been read at Fitch; the '90 unique defaulters' figure was not found and should be treated as unverified."
+},
+{
+"date": "2026-11-26",
+"status": "open",
+"note": "Summary rewritten so that it states only what was confirmed at the listed sources and marks the rest as reported. The first version is kept under superseded_sources. Resolution conditions are unchanged."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Added forecast 1: by 2027-05-31, 2% resolved, 45% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Title was 'Rising defaults in US private credit'. Changed to say only what is confirmed. Conditions and forecasts unchanged."
+},
+{
+"date": "2026-11-28",
+"status": "open",
+"note": "Sources read again: the three Federal Reserve facts match. 'Record 6.0% in April' removed from the start line; nothing we read calls it a record. '90 unique defaulters' was found in a trade publication. Fitch's own report is still unread. Conditions unchanged."
+},
+{
+"date": "2026-11-28",
+"status": "open",
+"note": "Conditions changed, with the reason. Was: 'Fitch trailing-12-month private credit default rate below 4.0% for three consecutive monthly readings' (resolved) and 'Fitch default rate above 8.0%' (worsened). We could not read that figure at Fitch. Now: non-accrual loans at Ares Capital and Blue Owl Capital Corporation, from SEC filings. Counting is version 2. Forecast 2 added for the new conditions (1% resolved, 45% worsened by 2027-05-31); forecast 1 stays scored on the first wording. Title was 'US private credit: fast growth and redemption limits (default rate reported, not confirmed)'."
+}
+],
+"unconfirmed_facts": [
+"Fitch (report of 2026-11-16): trailing-12-month default rate 6.2% in October 2026 (6.3% in September), 90 unique defaulters; 10.7% for issuers under $25 million EBITDA versus 2.4% above $100 million: the same in two trade publications (Investment Executive 2026-11-17, ABF Journal 2026-11-18). Fitch's own report has not been read. Neither calls the rate a record",
+"JPMorgan default forecasts and the Moody's figure on bank lending: originals not read"
+],
+"condition_reading_notes": {
+"written_on": "2026-11-26",
+"notes": [
+"Added 2026-11-28: 'non-accrual' loans are loans on which the lender has stopped booking interest because it doubts it will be paid. The figure is read from each company's quarterly results as filed with the SEC, as a share of the portfolio at amortized cost. Ares Capital and Blue Owl Capital Corporation are used because they are the two largest listed lenders of this kind (business development companies). 1.8% is where Ares stood at the end of 2025. 'Large private credit fund' means one with at least $1 billion in assets.",
+"The Fitch default rate named in the first version is still listed under unconfirmed facts as background. It no longer decides anything on this card."
+]
+},
+"numeric_criteria": {
+"version": 2,
+"written_on": "2026-11-28",
+"items": [
+{
+"side": "resolved",
+"measure": "Non-accrual loans at cost at 1.8% or less at both Ares Capital and Blue Owl Capital Corporation, in 2 quarterly reports in a row",
+"latest": "0 of 2. On 2026-09-30: Ares 2.4%, Blue Owl 2.9%",
+"state": "not_met"
+},
+{
+"side": "resolved",
+"measure": "High-yield bond spread below 5.0 percentage points on every day of those same quarters (this is what 'Moderate or lower' means under rule v3)",
+"latest": "1 of 3 steps on 2026-11-24. The count only starts with the first quarter at 1.8% or less",
+"state": "holding",
+"series": "BAMLH0A0HYM2"
+},
+{
+"side": "worsened",
+"measure": "Non-accrual loans at cost at 3.5% or more at either company",
+"latest": "Ares 2.4%, Blue Owl 2.9%: 0.6 points below the line at the nearer one",
+"state": "not_reached"
+},
+{
+"side": "worsened",
+"measure": "From 2026-11-26: 1 fund with at least $1 billion in assets newly suspends or limits redemptions, or 1 bank discloses a private-credit loss above $1 billion",
+"latest": "0 new cases. Limits that were already in place are in the Federal Reserve's November report",
+"state": "not_reached"
+},
+{
+"side": "worsened",
+"measure": "High-yield bond spread at 5.0 percentage points or more",
+"latest": "1 of 3 steps on 2026-11-24, below the line. The value itself is not republished (source license)",
+"state": "not_reached",
+"series": "BAMLH0A0HYM2"
+}
+]
+},
+"counter_view": {
+"written_on": "2026-11-27",
+"text": "Stress has not shown up in traded credit: the high-yield spread in this record is at 1 of 3 steps. The Federal Reserve reports that redemption requests have trended lower. The two lenders we count are the largest and may be the best run; trouble among small borrowers could stay there, or could be building where these two numbers do not show it."
+},
+"worsened_when_any": [
+"Loans on non-accrual reach 3.5% or more of the portfolio at cost at either Ares Capital or Blue Owl Capital Corporation",
+"A large private credit fund suspends or limits redemptions, or a bank discloses a private-credit-related loss above 1 billion dollars",
+"Credit stress component of this ledger reaches High"
+]
+},
+"aids": {
+"links": {
+"technology": {
+"level": "strong",
+"direction": "lagged",
+"factor": "credit_widening",
+"mean_excess_pct": -0.16,
+"t": -5.2,
+"n": 734,
+"since": "1990"
+},
+"consumer_staples": {
+"level": "strong",
+"direction": "led",
+"factor": "credit_widening",
+"mean_excess_pct": 0.28,
+"t": 7.1,
+"n": 734,
+"since": "1990"
+},
+"financials": {
+"level": "direct",
+"direction": "lagged",
+"factor": "credit_widening",
+"mean_excess_pct": -0.12,
+"t": -4.0,
+"n": 734,
+"since": "1990"
+},
+"health_care": {
+"level": "strong",
+"direction": "led",
+"factor": "credit_widening",
+"mean_excess_pct": 0.18,
+"t": 5.8,
+"n": 734,
+"since": "1990"
+},
+"industrials": {
+"level": "moderate",
+"direction": "lagged",
+"factor": "credit_widening",
+"mean_excess_pct": -0.06,
+"t": -2.7,
+"n": 734,
+"since": "1990"
+},
+"materials": {
+"level": "moderate",
+"direction": "lagged",
+"factor": "credit_widening",
+"mean_excess_pct": -0.07,
+"t": -2.1,
+"n": 734,
+"since": "1990"
+},
+"utilities": {
+"level": "strong",
+"direction": "led",
+"factor": "credit_widening",
+"mean_excess_pct": 0.24,
+"t": 6.0,
+"n": 734,
+"since": "1990"
+}
+},
+"exposure": [
+"BIZD",
+"BKLN",
+"HYG"
+],
+"card_factors": [
+"credit_widening"
+],
+"market": {
+"verdict": "does_not_show",
+"none": null,
+"readings": [
+{
+"en": "High-yield bond spread (AFMX record)",
+"ko": "하이일드 채권 스프레드 (AFMX 기록)",
+"as_of": "2026-11-26",
+"steps": 1,
+"shows": false,
+"rule": "ledger_step_2"
+}
+]
+},
+"past": [
+{
+"en": "2015 Third Avenue credit fund halts redemptions",
+"ko": "2015년 서드애비뉴 신용 펀드 환매 중단",
+"start": "2015-12-10",
+"src": "https://www.sec.gov/files/rules/ic/2015/ic-31943.pdf",
+"fall": -11.5,
+"day": 43,
+"rec": 6,
+"end6": 3.2
+}
+]
+}
+}

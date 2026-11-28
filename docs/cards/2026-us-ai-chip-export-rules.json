@@ -1,0 +1,150 @@
+{
+"event": {
+"what_happened": "A US Commerce Department rule in effect from 2026-11-19 requires licenses for advanced chips going to overseas data centers that give significant computing access to companies from restricted countries, and for advanced-node chips made for non-approved designers. Press reports, not yet confirmed here, say TSMC and Samsung suspended some shipments to Chinese customers pending licenses.",
+"how_it_reaches_markets": "Lost or delayed sales for chip makers and equipment makers; retaliation risk; adds to pressure on AI-linked shares.",
+"sourced_facts": [
+{
+"text": "Interim final rule 'Addressing Remote Access to Advanced Semiconductors' (Bureau of Industry and Security), effective on publication, scheduled for 2026-11-19: adds a license requirement for advanced-node chips from non-approved designers exported by a front-end fabricator or packaging firm, and for exports to overseas data centers that give significant compute access to companies headquartered in restricted countries",
+"url": "https://public-inspection.federalregister.gov/2026-23529.pdf",
+"tier": "primary",
+"checked": "2026-11-26"
+},
+{
+"text": "The same rule requires a license for advanced chips to Indonesia, Malaysia, Singapore, Thailand and Brazil, with an exclusion for US-headquartered end users; comments are due 60 days after publication",
+"url": "https://public-inspection.federalregister.gov/2026-23529.pdf",
+"tier": "primary",
+"checked": "2026-11-26"
+},
+{
+"text": "Background: a final rule published 2026-01-15 had moved certain advanced computing chips for China and Macau from presumption of denial to case-by-case license review",
+"url": "https://public-inspection.federalregister.gov/2026-00789.pdf",
+"tier": "primary",
+"checked": "2026-11-26"
+}
+],
+"sources": [
+"https://public-inspection.federalregister.gov/2026-23529.pdf",
+"https://public-inspection.federalregister.gov/2026-00789.pdf"
+],
+"history": [
+{
+"date": "2026-11-26",
+"status": "open",
+"note": "Card opened. Resolution conditions written before the outcome is known."
+},
+{
+"date": "2026-11-26",
+"status": "open",
+"note": "Sources upgraded in part. Only the January 2026 rule has been read at the primary source. The November 2026 rule is known so far only through a wire reprint, which gives an effective date of 2026-11-19; the Federal Register text is still to be found. The reprint is not listed as a source under the source rule."
+},
+{
+"date": "2026-11-26",
+"status": "open",
+"note": "Second pass. The November rule was found and read: an interim final rule of the Bureau of Industry and Security, effective on publication on 2026-11-19. The earlier note that the rule text had not been located no longer applies."
+},
+{
+"date": "2026-11-26",
+"status": "open",
+"note": "Summary rewritten so that it states only what was confirmed at the listed sources and marks the rest as reported. The first version is kept under superseded_sources. Resolution conditions are unchanged."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Spelling changed to American English (licence to license, centres to centers) in the title, summary, facts and notes. No fact changed. The resolution conditions and the first version kept under superseded_sources are left as first written."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Added forecast 1: by 2027-03-31, 7% resolved, 25% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
+}
+],
+"unconfirmed_facts": [
+"TSMC suspending some orders at 16 nm and below unless customers obtain licenses; FT report that TSMC and Samsung suspended some shipments: read only in a wire reprint dated 2026-11-20",
+"ASML and Infineon share falls: not confirmed"
+],
+"condition_reading_notes": {
+"written_on": "2026-11-26",
+"notes": [
+"The rule is an interim final rule already in effect. 'Published in final form' counts when the Bureau of Industry and Security publishes a final rule after the comment period or states that the interim rule stands. 'Major supplier' means TSMC or Samsung."
+]
+},
+"numeric_criteria": {
+"version": 1,
+"written_on": "2026-11-27",
+"items": [
+{
+"side": "resolved",
+"measure": "1 final rule from the Bureau of Industry and Security after the 60-day comment period, or its statement that the interim rule stands",
+"latest": "0 of 1. The comment period is still open",
+"state": "not_met"
+},
+{
+"side": "resolved",
+"measure": "At least 1 of 2 suppliers (TSMC, Samsung) confirms in its own statement that suspended shipments have resumed under license",
+"latest": "0 of 1. The suspensions themselves are reported, not confirmed",
+"state": "not_met"
+},
+{
+"side": "worsened",
+"measure": "1 announcement by China of export or import restrictions that cites the rule",
+"latest": "0",
+"state": "not_reached"
+},
+{
+"side": "worsened",
+"measure": "The rule covers more than the 5 listed countries (Indonesia, Malaysia, Singapore, Thailand, Brazil) or adds a chip category",
+"latest": "5 countries, no addition",
+"state": "not_reached"
+}
+]
+},
+"counter_view": {
+"written_on": "2026-11-27",
+"text": "The rule asks for a license, it does not ban. It excludes US-headquartered end users, and a January 2026 rule had already moved chips for China to case-by-case review. Licenses may be granted as a matter of routine, and the reported shipment halts are not confirmed."
+},
+"worsened_when_any": [
+"China announces retaliatory export or import restrictions citing the rules",
+"The rules are widened to cover additional chip categories or countries"
+]
+},
+"aids": {
+"links": {
+"technology": {
+"level": "direct",
+"direction": "lagged"
+}
+},
+"exposure": [
+"NVDA",
+"AMD",
+"SMH",
+"SOXX"
+],
+"card_factors": [],
+"market": {
+"verdict": "not_checked",
+"none": {
+"en": "Not checked. No price in our sources isolates chip export rules.",
+"ko": "대조하지 않았습니다. 저희 출처에는 반도체 수출 규칙만 따로 보여 주는 가격이 없습니다."
+},
+"readings": []
+},
+"past": [
+{
+"en": "2022 US advanced chip export controls",
+"ko": "2022년 미국 첨단 반도체 수출 통제",
+"start": "2022-10-07",
+"src": "https://www.govinfo.gov/content/pkg/FR-2022-10-13/html/2022-21658.htm",
+"fall": -4.6,
+"day": 6,
+"rec": 1,
+"end6": 9.3
+}
+]
+}
+}

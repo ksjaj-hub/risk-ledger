@@ -24,7 +24,7 @@ One file per event. Each card says what happened, how it reaches markets, and, m
 3. Review `featured` in `aids/reading.json`: up to three cards that matter most this week.
 4. Add or update the card's line in `selection/criteria.json` and run `python3 scripts/selection_check.py`
    (see `selection/README.md`). An event that was looked at and not carded gets a line under `left_out` there.
-5. Run `python3 scripts/residual.py` (the residual risk index, `residual/README.md`), then `python3 scripts/build_site.py` and commit `docs/data.json` with the change.
+5. Run `python3 scripts/residual.py` (the residual risk index, `residual/README.md`), then `python3 scripts/build_site.py` and commit everything it changes under `docs/` (`data.json`, `ko.json`, `cards/`, `tabs/`) with the change.
 
 For a new card also add `risk_factors` (which measured shock it resembles, may be empty) and `about` (sectors it is
 literally about) in `aids/reading.json`. Evidence levels and sector scores are then computed by `build_site.py`

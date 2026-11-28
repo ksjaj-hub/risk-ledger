@@ -1,5 +1,5 @@
 {
- "checked_at_utc": "2026-11-28T12:31Z",
+ "checked_at_utc": "2026-11-28T12:53Z",
  "passed": 18,
  "total": 18,
  "checks": [
@@ -126,8 +126,8 @@
    "area": "screen",
    "id": "page_weight",
    "pass": true,
-   "now": "253 KB in English, 296 KB in Korean (adds ko.json)",
-   "bar": "300 KB or less in English, the default"
+   "now": "first screen 120 KB in English, 128 KB in Korean; with every card and tab opened 228 KB and 280 KB",
+   "bar": "300 KB or less on the first screen, in both languages"
   }
  ],
  "not_automated": [

@@ -191,141 +191,6 @@
 ],
 "event_started": "2026-11 (Nasdaq Composite fell 11.2% from 2026-11-11 to 2026-11-20)",
 "status": "open",
-"what_happened": "The Nasdaq Composite fell 11.2% between 2026-11-11 and 2026-11-20, 5.28% of it on the last day. Press reports tie the fall to doubts about whether enthusiasm for AI had peaked, slower data-center expansion and higher borrowing costs. That link is reported, not confirmed. Separately, the Federal Reserve says the buildout is increasingly funded by debt.",
-"how_it_reaches_markets": "Large index weight of AI-linked companies; debt used to fund data centers; possible regulatory opposition to data center construction.",
-"sourced_facts": [
-{
-"text": "Federal Reserve Governor Barr, 2026-11-16: 'the AI buildout has been increasingly funded by debt'; on-balance-sheet debt of the seven largest AI firms 'is expected to exceed $800 billion before year's end'; he adds that he is 'less concerned about direct losses' given the still-limited debt behind the boom",
-"url": "https://www.federalreserve.gov/newsevents/speech/barr20261116a.htm",
-"tier": "primary",
-"checked": "2026-11-28"
-},
-{
-"text": "Federal Reserve Financial Stability Report (November 2026, data to 2026-10-28): 'Bond issuance by the largest investment-grade firms involved in operating data centers was greater than $150 billion year to date'; 'Measures of equity valuations have remained elevated since the previous report'",
-"url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
-"tier": "primary",
-"checked": "2026-11-28"
-},
-{
-"text": "Nasdaq Composite closed at 25,466.19 on 2026-11-11, 24,429.88 on 2026-11-18 and 22,617.73 on 2026-11-20 (down 5.28% that day), then 24,129.50 on 2026-11-27 (FRED series NASDAQCOM)",
-"url": "https://fred.stlouisfed.org/series/NASDAQCOM",
-"tier": "primary",
-"checked": "2026-11-28"
-},
-{
-"text": "Governor Barr, same speech: 'Anyone watching the news or their retirement plans these past couple of weeks is aware of the questions that investors have raised about the sustainability of the AI investment boom'",
-"url": "https://www.federalreserve.gov/newsevents/speech/barr20261116a.htm",
-"tier": "primary",
-"checked": "2026-11-28"
-}
-],
-"resolution_conditions": {
-"written_on": "2026-11-26",
-"resolved_when_all": [
-"Nasdaq Composite closes above its close of the day before the losing streak began for 20 consecutive trading days",
-"Equity volatility component of this ledger is Moderate or lower for 20 consecutive trading days",
-"At least two of the largest AI infrastructure spenders reaffirm or raise capital spending plans in a quarterly report"
-],
-"worsened_when_any": [
-"A large AI-linked borrower misses a debt payment or cancels a publicly announced financing",
-"A major AI infrastructure spender publicly cuts its capital spending plan"
-]
-},
-"relief_headlines_that_do_not_resolve_it": [
-"Single-day rebounds in AI shares",
-"One company's strong results"
-],
-"sources": [
-"https://www.federalreserve.gov/newsevents/speech/barr20261116a.htm",
-"https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
-"https://fred.stlouisfed.org/series/NASDAQCOM"
-],
-"history": [
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Card opened. Resolution conditions written before the outcome is known."
-},
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Sources upgraded. The debt-financing concern is now supported by a Federal Reserve governor's speech and the Financial Stability Report. The index and share-price moves of 2026-11-20 and 2026-11-25 are not yet confirmed at an accepted source and were moved to unconfirmed_facts."
-},
-{
-"date": "2026-11-27",
-"status": "open",
-"note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
-},
-{
-"date": "2026-11-27",
-"status": "open",
-"note": "Added forecast 1: by 2027-03-31, 20% resolved, 15% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
-},
-{
-"date": "2026-11-27",
-"status": "open",
-"note": "Title was 'Doubts about financing of the AI buildout'. Changed to say only what is confirmed. Conditions and forecasts unchanged."
-},
-{
-"date": "2026-11-28",
-"status": "open",
-"note": "Sources read again: both Federal Reserve facts match. The Nasdaq level for the first condition is now read: 25,466.19. Title was 'Debt-funded AI buildout (sell-off reported, not confirmed)'; the fall is confirmed from the index series, its link to AI debt is not. The Dell example was moved to unconfirmed. Conditions unchanged."
-}
-],
-"unconfirmed_facts": [
-"2026-11-20: S&P 500 seventh straight decline; -3.70% to 6,910.39; Nvidia about -14%: Fortune (read directly) reports the seventh straight loss but gives -3.59% to 6,918.45, and a market-wrap site gives -3.70% and Nvidia -13.8%. The two disagree and neither is on our list of accepted sources. AMD -13.3% was not found",
-"2026-11-25: Nasdaq 100 briefly 20% below its record closing high: not found in anything we read",
-"Dell beat forecasts on 2026-11-24 and its shares fell about 7% the next day: Dell's release of that date shows record revenue and a higher full-year outlook (read as a repost, not at Dell); the share move was not found"
-],
-"condition_reading_notes": {
-"written_on": "2026-11-26",
-"notes": [
-"'The day before the losing streak began' is read as 2026-11-11, the last close before the S&P 500's seven straight declines that press reports say ended on 2026-11-20. The Nasdaq Composite closed at 25,466.19 that day (FRED series NASDAQCOM, read 2026-11-28). The Nasdaq itself rose on 2026-11-18, so its own unbroken run of declines began from 24,429.88; the higher level is used because it is harder to meet.",
-"'Largest AI infrastructure spenders' means Microsoft, Alphabet, Amazon, Meta and Oracle. 'Large AI-linked borrower' means one with at least $1 billion of debt outstanding."
-]
-},
-"numeric_criteria": {
-"version": 1,
-"written_on": "2026-11-27",
-"items": [
-{
-"side": "resolved",
-"measure": "Nasdaq Composite closes above 25,466.19 (its close on 2026-11-11) on 20 trading days in a row",
-"latest": "0 of 20. Closed at 24,129.50 on 2026-11-27: 5.2% below",
-"state": "not_met",
-"series": "NASDAQCOM"
-},
-{
-"side": "resolved",
-"measure": "VIX closes below 20 on 20 trading days in a row (this is what 'Moderate or lower' means under rule v3)",
-"latest": "0 of 20. VIX 26.36 on 2026-11-24",
-"state": "not_met",
-"series": "VIXCLS"
-},
-{
-"side": "resolved",
-"measure": "At least 2 of 5 companies (Microsoft, Alphabet, Amazon, Meta, Oracle) state capital spending guidance equal to or above their previous guidance in a quarterly report released after 2026-11-26",
-"latest": "0 of 2. No quarterly report from the five since the card opened",
-"state": "not_met"
-},
-{
-"side": "worsened",
-"measure": "A borrower with at least $1 billion of debt misses a payment or cancels an announced financing: 1 case is enough",
-"latest": "0 cases recorded",
-"state": "not_reached"
-},
-{
-"side": "worsened",
-"measure": "Any one of the five companies lowers its stated capital spending guidance",
-"latest": "0 of 5",
-"state": "not_reached"
-}
-]
-},
-"counter_view": {
-"written_on": "2026-11-27",
-"text": "The debt behind the buildout is still small next to the cash these companies earn: a Federal Reserve governor said he is 'less concerned about direct losses'. A fall in share prices is not a failed financing, and no borrower has missed a payment."
-},
 "forecasts": [
 {
 "n": 1,
@@ -334,6 +199,23 @@
 "p_resolved": 0.2,
 "p_worsened": 0.15
 }
+],
+"relief_headlines_that_do_not_resolve_it": [
+"Single-day rebounds in AI shares",
+"One company's strong results"
+],
+"last_date": "2026-11-28",
+"resolution_conditions": {
+"written_on": "2026-11-26",
+"resolved_when_all": [
+"Nasdaq Composite closes above its close of the day before the losing streak began for 20 consecutive trading days",
+"Equity volatility component of this ledger is Moderate or lower for 20 consecutive trading days",
+"At least two of the largest AI infrastructure spenders reaffirm or raise capital spending plans in a quarterly report"
+]
+},
+"nres": [
+0,
+3
 ]
 },
 {
@@ -344,116 +226,6 @@
 ],
 "event_started": "2026 (ongoing)",
 "status": "open",
-"what_happened": "October 2026 data showed retail sales growth of 0.4% year over year, fixed-asset investment down 8.1% for January to October, and property development investment down 21.6%.",
-"how_it_reaches_markets": "Weaker demand for commodities and for foreign companies selling into China; pressure on Chinese and Hong Kong shares; deflationary pressure exported through cheap goods, which also feeds the tariff dispute.",
-"sourced_facts": [
-{
-"text": "October 2026: value added of industry above designated size +4.8% y/y; retail sales of consumer goods +0.4% y/y (National Bureau of Statistics, released 2026-11-16)",
-"url": "https://www.stats.gov.cn/english/PressRelease//202611/t20261116_1965843.html",
-"tier": "primary",
-"checked": "2026-11-26"
-},
-{
-"text": "September 2026, for comparison: industry +5.5% y/y; retail sales +1.1% y/y (National Bureau of Statistics, released 2026-10-19)",
-"url": "https://www.stats.gov.cn/english/PressRelease/202610/t20261019_1965619.html",
-"tier": "primary",
-"checked": "2026-11-26"
-},
-{
-"text": "January to October 2026: fixed-asset investment -8.1% y/y; real estate development investment -21.6% y/y (National Bureau of Statistics)",
-"url": "https://www.stats.gov.cn/english/PressRelease//202611/t20261116_1965843.html",
-"tier": "primary",
-"checked": "2026-11-26"
-}
-],
-"resolution_conditions": {
-"written_on": "2026-11-26",
-"resolved_when_all": [
-"Retail sales growth above 3% year over year for three consecutive months",
-"Year-to-date property development investment decline narrower than 10%"
-],
-"worsened_when_any": [
-"Retail sales fall year over year",
-"A large developer or local-government financing vehicle defaults on a public bond"
-]
-},
-"relief_headlines_that_do_not_resolve_it": [
-"Announcements of stimulus without subsequent improvement in the monthly data"
-],
-"sources": [
-"https://www.stats.gov.cn/english/PressRelease//202611/t20261116_1965843.html",
-"https://www.stats.gov.cn/english/PressRelease/202610/t20261019_1965619.html"
-],
-"history": [
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Card opened. Resolution conditions written before the outcome is known."
-},
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Sources upgraded. The four October activity figures were confirmed on the National Bureau of Statistics release. The September comparison figures and the weekly index moves are not yet confirmed at an accepted source and were moved to unconfirmed_facts."
-},
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Second pass. The September comparison figures were confirmed on the National Bureau of Statistics release of 2026-10-19 and moved back to the facts."
-},
-{
-"date": "2026-11-27",
-"status": "open",
-"note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
-},
-{
-"date": "2026-11-27",
-"status": "open",
-"note": "Added forecast 1: by 2027-05-31, 3% resolved, 60% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
-}
-],
-"unconfirmed_facts": [
-"Week ending 2026-11-20: Hang Seng -5.19%, CSI 300 -1.54%: from a fund manager's weekly note; not confirmed at a primary or wire source"
-],
-"condition_reading_notes": {
-"written_on": "2026-11-26",
-"notes": [
-"Retail sales and property investment are read from the monthly National Bureau of Statistics release. 'Large' default means a public bond of at least $100 million equivalent."
-]
-},
-"numeric_criteria": {
-"version": 1,
-"written_on": "2026-11-27",
-"items": [
-{
-"side": "resolved",
-"measure": "Retail sales growth above 3.0% year over year in 3 monthly releases in a row",
-"latest": "0 of 3. October +0.4% (released 2026-11-16)",
-"state": "not_met"
-},
-{
-"side": "resolved",
-"measure": "Year-to-date property development investment down by less than 10.0%",
-"latest": "January to October -21.6%: 11.6 points short",
-"state": "not_met"
-},
-{
-"side": "worsened",
-"measure": "Retail sales growth below 0.0% year over year in any monthly release",
-"latest": "October +0.4%: 0.4 points above the line",
-"state": "not_reached"
-},
-{
-"side": "worsened",
-"measure": "A default on a public bond of at least $100 million equivalent by a developer or local-government financing vehicle: 1 case is enough",
-"latest": "0 cases recorded since 2026-11-26",
-"state": "not_reached"
-}
-]
-},
-"counter_view": {
-"written_on": "2026-11-27",
-"text": "China's property slump is several years old and the US market has lived with it. Industrial output still grew 4.8% in October. This may stay a slow drag that never turns into a US market event."
-},
 "forecasts": [
 {
 "n": 1,
@@ -462,6 +234,21 @@
 "p_resolved": 0.03,
 "p_worsened": 0.6
 }
+],
+"relief_headlines_that_do_not_resolve_it": [
+"Announcements of stimulus without subsequent improvement in the monthly data"
+],
+"last_date": "2026-11-27",
+"resolution_conditions": {
+"written_on": "2026-11-26",
+"resolved_when_all": [
+"Retail sales growth above 3% year over year for three consecutive months",
+"Year-to-date property development investment decline narrower than 10%"
+]
+},
+"nres": [
+0,
+2
 ]
 },
 {
@@ -472,123 +259,6 @@
 ],
 "event_started": "2026-11",
 "status": "open",
-"what_happened": "Euro area inflation rose to 3.8% in September 2026 from 3.2% in August, with energy inflation at 18.9%. The ECB held its deposit rate at 2.50% on 2026-10-29. An October reading of 4.0% has been reported but could not yet be confirmed at Eurostat.",
-"how_it_reaches_markets": "Higher rates in Europe at the same time as in the US and Japan tighten global financing conditions; pressure on highly indebted euro governments ahead of elections in Spain, France and Italy.",
-"sourced_facts": [
-{
-"text": "2026-10-29: the ECB kept its three key rates unchanged: deposit facility 2.50%, main refinancing operations 2.65%, marginal lending facility 2.90%",
-"url": "https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/shared/pdf/ecb.ds261029~3abd26884e.en.pdf",
-"tier": "primary",
-"checked": "2026-11-26"
-},
-{
-"text": "ECB statement of 2026-10-29: 'Inflation rose to 3.8 per cent in September, from 3.2 per cent in August'; energy inflation was 18.9% in September",
-"url": "https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/shared/pdf/ecb.ds261029~3abd26884e.en.pdf",
-"tier": "primary",
-"checked": "2026-11-26"
-}
-],
-"resolution_conditions": {
-"written_on": "2026-11-26",
-"resolved_when_all": [
-"Eurozone headline inflation falls for three consecutive monthly readings",
-"The ECB signals at a policy meeting that it does not expect further rises"
-],
-"worsened_when_any": [
-"Eurozone headline inflation reaches 4.5% or more",
-"The ECB raises by more than 0.25 percentage points at one meeting"
-]
-},
-"relief_headlines_that_do_not_resolve_it": [
-"A hike that was fully expected being delivered",
-"A single lower inflation reading"
-],
-"sources": [
-"https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp261029~9a493adf17.en.html",
-"https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/shared/pdf/ecb.ds261029~3abd26884e.en.pdf"
-],
-"history": [
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Card opened. Resolution conditions written before the outcome is known."
-},
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Sources upgraded in part. The policy decision is taken from the ECB release, read only in part. The Eurostat inflation release could not be opened and the figure stays unconfirmed until it is read."
-},
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Second pass. Rate levels and the September inflation figure were confirmed verbatim on the ECB monetary policy statement of 2026-10-29."
-},
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Summary rewritten so that it states only what was confirmed at the listed sources and marks the rest as reported. The first version is kept under superseded_sources. Resolution conditions are unchanged."
-},
-{
-"date": "2026-11-27",
-"status": "open",
-"note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
-},
-{
-"date": "2026-11-27",
-"status": "open",
-"note": "Added forecast 1: by 2027-03-31, 10% resolved, 12% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
-},
-{
-"date": "2026-11-27",
-"status": "open",
-"note": "Title was 'Eurozone inflation at 4% and further ECB rate rises'. Changed to say only what is confirmed. Conditions and forecasts unchanged."
-}
-],
-"unconfirmed_facts": [
-"October 2026 euro area inflation 4.0%: Eurostat release titles of 2026-11-04 and 2026-11-18 read 'annual inflation up to 4.0%', but the pages could not be opened, so the figure is not counted as confirmed; core 2.6% likewise",
-"Week ending 2026-11-20: STOXX 600 -5.80%, DAX -7.28%: not confirmed at a primary or wire source",
-"A fund manager's expectation of one more ECB hike in December to 2.75%: commentary, not used as support"
-],
-"condition_reading_notes": {
-"written_on": "2026-11-26",
-"notes": [
-"Inflation is read from the Eurostat final monthly release. 'Signals that it does not expect further rises' is judged only from the published monetary policy statement: it counts when the statement says rates are at their peak or drops any reference to further increases."
-]
-},
-"numeric_criteria": {
-"version": 1,
-"written_on": "2026-11-27",
-"items": [
-{
-"side": "resolved",
-"measure": "Headline inflation (Eurostat final release) lower than the month before, 3 months in a row",
-"latest": "0 of 3. Last confirmed: September 3.8%, up from 3.2% in August",
-"state": "not_met"
-},
-{
-"side": "resolved",
-"measure": "One ECB monetary policy statement that says rates are at their peak or drops any reference to further increases",
-"latest": "0 of 1. On 2026-10-29 rates were held, deposit rate 2.50%",
-"state": "not_met"
-},
-{
-"side": "worsened",
-"measure": "Headline inflation at 4.5% or more",
-"latest": "Last confirmed 3.8% (September): 0.7 points below. October is reported at 4.0%, not yet confirmed",
-"state": "not_reached"
-},
-{
-"side": "worsened",
-"measure": "A rise of more than 0.25 percentage points at one meeting",
-"latest": "Last decision: no change",
-"state": "not_reached"
-}
-]
-},
-"counter_view": {
-"written_on": "2026-11-27",
-"text": "Energy prices, up 18.9% in September, are a large part of the rise. Brent has since fallen from an October average of $124 to under $100. If that holds, inflation could turn down without further ECB rises, and this card may be the oil card counted twice."
-},
 "forecasts": [
 {
 "n": 1,
@@ -597,6 +267,22 @@
 "p_resolved": 0.1,
 "p_worsened": 0.12
 }
+],
+"relief_headlines_that_do_not_resolve_it": [
+"A hike that was fully expected being delivered",
+"A single lower inflation reading"
+],
+"last_date": "2026-11-27",
+"resolution_conditions": {
+"written_on": "2026-11-26",
+"resolved_when_all": [
+"Eurozone headline inflation falls for three consecutive monthly readings",
+"The ECB signals at a policy meeting that it does not expect further rises"
+]
+},
+"nres": [
+0,
+2
 ]
 },
 {
@@ -607,138 +293,6 @@
 ],
 "event_started": "2026-11 (hawkish minutes released week of 2026-11-16)",
 "status": "open",
-"what_happened": "The Fed held its rate at 3.75% to 4.00% on 2026-10-28 with two members voting for an increase. Its minutes say futures markets put high odds on a quarter-point rise by year-end and two more by summer 2027. PCE inflation was 3.6% in September and 3.8% in October.",
-"how_it_reaches_markets": "Higher discount rates for equities; tighter financing conditions; pressure on highly indebted borrowers.",
-"sourced_facts": [
-{
-"text": "2026-10-28: the FOMC kept the federal funds target range at 3-3/4 to 4 percent by a 10-2 vote; the two dissenters preferred a quarter-point increase; the statement says inflation remains elevated",
-"url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
-"tier": "primary",
-"checked": "2026-11-26"
-},
-{
-"text": "Minutes of that meeting: futures prices assigned 'high probabilities' to 'a 25 basis point hike by year-end and two more by the summer of 2027'; 12-month PCE inflation 'rose to 3.6 percent in September', core 3.1 percent",
-"url": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20261028.htm",
-"tier": "primary",
-"checked": "2026-11-26"
-},
-{
-"text": "October 2026 CPI (released 2026-11-10): all items +0.4% on the month, core +0.3%, seasonally adjusted. BLS did not publish 12-month changes for October because October 2025 data are missing after the 2025 appropriations lapse",
-"url": "https://www.bls.gov/news.release/cpi.nr0.htm",
-"tier": "primary",
-"checked": "2026-11-26"
-},
-{
-"text": "October 2026 PCE price index (released 2026-11-25): up 3.8 percent from the same month one year ago and 0.3 percent from the preceding month; excluding food and energy, up 3.3 percent from one year ago and 0.3 percent on the month. The next release is 2026-12-23",
-"url": "https://www.bea.gov/news/2026/personal-income-and-outlays-october-2026",
-"tier": "primary",
-"checked": "2026-11-27"
-}
-],
-"resolution_conditions": {
-"written_on": "2026-11-26",
-"resolved_when_all": [
-"The Fed's statement or projections signal no further hikes, AND the two most recent monthly CPI readings show year-over-year inflation falling"
-],
-"worsened_when_any": [
-"The Fed raises by more than 0.25 percentage points at one meeting",
-"Financial conditions component of this ledger reaches High"
-]
-},
-"relief_headlines_that_do_not_resolve_it": [
-"A single softer inflation reading",
-"A hike that was fully priced in being delivered as expected"
-],
-"sources": [
-"https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
-"https://www.federalreserve.gov/monetarypolicy/fomcminutes20261028.htm",
-"https://www.bls.gov/news.release/cpi.nr0.htm",
-"https://www.bea.gov/news/2026/personal-income-and-outlays-october-2026"
-],
-"history": [
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Card opened. Resolution conditions written before the outcome is known."
-},
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Sources upgraded. The policy rate and the dissents now come from the Federal Reserve statement and the monthly price change from the Bureau of Labor Statistics. Market-implied odds and the 2026-11-25 data wording were moved to unconfirmed_facts."
-},
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Second pass. The market-implied path of rate increases and September PCE inflation were confirmed in the FOMC minutes. A reading note was added because BLS published no 12-month CPI change for October 2026, which the first resolution condition relies on."
-},
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Summary rewritten so that it states only what was confirmed at the listed sources and marks the rest as reported. The first version is kept under superseded_sources. Resolution conditions are unchanged."
-},
-{
-"date": "2026-11-27",
-"status": "open",
-"note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
-},
-{
-"date": "2026-11-27",
-"status": "open",
-"note": "Added October PCE inflation (3.8%, core 3.3%) from the Bureau of Economic Analysis release of 2026-11-25, to the facts and the summary. The matching unconfirmed line now covers only the Q3 growth revision. Resolution conditions and numeric criteria are unchanged: they count CPI, not PCE."
-},
-{
-"date": "2026-11-27",
-"status": "open",
-"note": "Added forecast 1: by 2027-03-31, 5% resolved, 10% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
-}
-],
-"unconfirmed_facts": [
-"2026-11-20: CME FedWatch 92% chance of a December hike: from a broker commentary; CME itself not read. The Fed minutes above support the direction but not this number",
-"2026-11-25: Q3 growth reported as revised up: the release behind this wording has not been identified. (The October inflation part of the same report is now confirmed above, from the Bureau of Economic Analysis.)"
-],
-"condition_reading_notes": {
-"written_on": "2026-11-26",
-"notes": [
-"'Signal no further hikes' counts when the FOMC statement drops its reference to possible further increases, or when the median projection shows no higher rate at the end of the following year than the current range.",
-"Year-over-year CPI: months for which BLS publishes no 12-month change (October 2026 is one) are skipped; the condition uses the two most recent months that do have a published figure."
-]
-},
-"numeric_criteria": {
-"version": 1,
-"written_on": "2026-11-27",
-"items": [
-{
-"side": "resolved",
-"measure": "One FOMC statement without a reference to possible further increases, or a median projection showing no higher rate at the end of the following year than the current range",
-"latest": "0 of 1. On 2026-10-28 the range was held at 3.75% to 4.00% with 2 of 12 votes for an increase",
-"state": "not_met"
-},
-{
-"side": "resolved",
-"measure": "12-month CPI inflation lower than the month before, in the 2 most recent months that have a published figure",
-"latest": "0 of 2. No 12-month figure was published for October 2026",
-"state": "not_measurable_yet",
-"series": "CPIAUCSL"
-},
-{
-"side": "worsened",
-"measure": "A rise of more than 0.25 percentage points at one meeting",
-"latest": "Last decision: no change",
-"state": "not_reached"
-},
-{
-"side": "worsened",
-"measure": "Chicago Fed financial conditions index (NFCI) at 0 or above (this is what 'High' means under rule v3)",
-"latest": "-0.444 on 2026-11-20: 0.444 below the line",
-"state": "not_reached",
-"series": "NFCI"
-}
-]
-},
-"counter_view": {
-"written_on": "2026-11-27",
-"text": "The Fed's own minutes say futures already put high odds on a rise by year-end and two more by summer 2027. A rise that is already in prices may add little new stress, and oil has come down from its October level."
-},
 "forecasts": [
 {
 "n": 1,
@@ -747,6 +301,21 @@
 "p_resolved": 0.05,
 "p_worsened": 0.1
 }
+],
+"relief_headlines_that_do_not_resolve_it": [
+"A single softer inflation reading",
+"A hike that was fully priced in being delivered as expected"
+],
+"last_date": "2026-11-27",
+"resolution_conditions": {
+"written_on": "2026-11-26",
+"resolved_when_all": [
+"The Fed's statement or projections signal no further hikes, AND the two most recent monthly CPI readings show year-over-year inflation falling"
+]
+},
+"nres": [
+0,
+2
 ]
 },
 {
@@ -758,133 +327,6 @@
 ],
 "event_started": "2026-11",
 "status": "open",
-"what_happened": "The Bank of Japan set its policy rate at around 1.25% in September 2026 and said it would continue to raise it. The yen traded near 159 to 160 per dollar in mid-November. A fall of about 5% in the Nikkei 225 on 2026-11-20 was widely reported but is not yet confirmed here.",
-"how_it_reaches_markets": "Higher Japanese yields can pull Japanese capital home from US and other foreign bonds; sharp yen moves can force unwinding of yen-funded positions; possible currency intervention.",
-"sourced_facts": [
-{
-"text": "2026-09-18: Bank of Japan set the guideline for the uncollateralized overnight call rate at around 1.25 percent, effective 2026-09-24, by a 7-2 vote; the statement says the Bank will continue to raise the policy interest rate",
-"url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260918a.pdf",
-"tier": "primary",
-"checked": "2026-11-26"
-},
-{
-"text": "Yen per dollar, Federal Reserve noon rates: 159.65 on 2026-11-16, 159.76 on 2026-11-19, 158.76 on 2026-11-20 (H.10 release of 2026-11-23)",
-"url": "https://www.federalreserve.gov/releases/h10/current/",
-"tier": "primary",
-"checked": "2026-11-26"
-}
-],
-"resolution_conditions": {
-"written_on": "2026-11-26",
-"resolved_when_all": [
-"USD/JPY stays below 155 for 20 consecutive trading days without reported intervention",
-"The Bank of Japan completes a policy meeting whose decision matches the majority forecast and the Nikkei 225 does not fall more than 3% on that day or the next"
-],
-"worsened_when_any": [
-"Japanese authorities confirm currency intervention",
-"The Nikkei 225 falls more than 5% in a day again",
-"Japan's 10-year government bond yield closes above 3.0%"
-]
-},
-"relief_headlines_that_do_not_resolve_it": [
-"Single-day rebounds (the Nikkei rose 3.91% on 2026-11-24 and fell 2.78% on 2026-11-25)",
-"Verbal warnings by officials against excessive currency moves"
-],
-"sources": [
-"https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260918a.pdf",
-"https://www.federalreserve.gov/releases/h10/current/"
-],
-"history": [
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Card opened. Resolution conditions written before the outcome is known."
-},
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Sources upgraded. The policy rate is confirmed on the Bank of Japan statement. Market levels, the survey and GDP are not yet confirmed at an accepted source and were moved to unconfirmed_facts."
-},
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Second pass. Yen levels were added from the Federal Reserve H.10 release. The Q3 GDP figure is flagged: the Cabinet Office table could not be read reliably and the partial reading did not match the widely reported -0.1%."
-},
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Summary rewritten so that it states only what was confirmed at the listed sources and marks the rest as reported. The first version is kept under superseded_sources. Resolution conditions are unchanged."
-},
-{
-"date": "2026-11-27",
-"status": "open",
-"note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
-},
-{
-"date": "2026-11-27",
-"status": "open",
-"note": "Added forecast 1: by 2027-03-31, 15% resolved, 40% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
-},
-{
-"date": "2026-11-27",
-"status": "open",
-"note": "Title was 'Japan: Bank of Japan rate rises, weak yen and equity sell-off'. Changed to say only what is confirmed. Conditions and forecasts unchanged."
-}
-],
-"unconfirmed_facts": [
-"2026-11-12: USD/JPY briefly above 160: an intraday high cannot be settled from the Federal Reserve's noon rates, which stayed below 160 in the week of 2026-11-16",
-"2026-11-20: Nikkei 225 -3,007.81 points to 56,436.65: not confirmed at a primary or wire source",
-"Q3 GDP: outlets report an annualized -0.1%. The Cabinet Office release of 2026-11-16 was opened but its table could not be read reliably, and what was extracted did not match that figure. Treated as unverified until the table is read properly",
-"Reuters survey expecting 1.5% in December; 10-year JGB yield about 2.80%: originals not read"
-],
-"condition_reading_notes": {
-"written_on": "2026-11-26",
-"notes": [
-"USD/JPY is read from the Federal Reserve H.10 noon rate. 'Reported intervention' means intervention confirmed by Japan's Ministry of Finance. 'Majority forecast' means the median of the Reuters poll published before the meeting."
-]
-},
-"numeric_criteria": {
-"version": 1,
-"written_on": "2026-11-27",
-"items": [
-{
-"side": "resolved",
-"measure": "Yen per dollar (Federal Reserve noon rate) below 155.00 on 20 trading days in a row, with no intervention confirmed by Japan's Ministry of Finance",
-"latest": "0 of 20. 158.76 on 2026-11-20",
-"state": "not_met",
-"series": "DEXJPUS"
-},
-{
-"side": "resolved",
-"measure": "One Bank of Japan meeting whose decision equals the median of the Reuters poll, with the Nikkei 225 down no more than 3.0% on that day and the next",
-"latest": "0 of 1. No meeting since the card opened",
-"state": "not_met"
-},
-{
-"side": "worsened",
-"measure": "Intervention confirmed by Japan's Ministry of Finance: 1 is enough",
-"latest": "0 since 2026-11-26",
-"state": "not_reached"
-},
-{
-"side": "worsened",
-"measure": "Nikkei 225 down more than 5.0% in one day",
-"latest": "0 days since 2026-11-26",
-"state": "not_reached",
-"series": "NIKKEI225"
-},
-{
-"side": "worsened",
-"measure": "Japan's 10-year government bond yield closes above 3.00%",
-"latest": "Reported at about 2.80%, original not read",
-"state": "not_reached"
-}
-]
-},
-"counter_view": {
-"written_on": "2026-11-27",
-"text": "The Bank of Japan has moved in small steps and said in advance that it would keep raising. A weak yen also lifts exporters' earnings. Sharp spillovers from Japan to the US market have been rare, so this may remain a local story."
-},
 "forecasts": [
 {
 "n": 1,
@@ -893,6 +335,22 @@
 "p_resolved": 0.15,
 "p_worsened": 0.4
 }
+],
+"relief_headlines_that_do_not_resolve_it": [
+"Single-day rebounds (the Nikkei rose 3.91% on 2026-11-24 and fell 2.78% on 2026-11-25)",
+"Verbal warnings by officials against excessive currency moves"
+],
+"last_date": "2026-11-27",
+"resolution_conditions": {
+"written_on": "2026-11-26",
+"resolved_when_all": [
+"USD/JPY stays below 155 for 20 consecutive trading days without reported intervention",
+"The Bank of Japan completes a policy meeting whose decision matches the majority forecast and the Nikkei 225 does not fall more than 3% on that day or the next"
+]
+},
+"nres": [
+0,
+2
 ]
 },
 {
@@ -903,134 +361,6 @@
 ],
 "event_started": "2026-11-20",
 "status": "open",
-"what_happened": "Nvidia announced on 2026-11-12 that Jensen Huang had resigned as CEO, and on 2026-11-23 that the board had reinstated him. The company refers to ongoing government investigations and inquiries without naming an agency. Press reports of an SEC probe have not been confirmed by the company or the SEC.",
-"how_it_reaches_markets": "Nvidia's index weight and its role as a bellwether for AI demand; uncertainty about reported results; possible chip-export restrictions.",
-"sourced_facts": [
-{
-"text": "2026-11-12: Nvidia announced that Jensen Huang 'has resigned as President, Chief Executive Officer, and a member of the Board, effective immediately'; no reason is stated; CFO Colette Kress became interim CEO",
-"url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvidiaannouncesceotransiti.htm",
-"tier": "primary",
-"checked": "2026-11-26"
-},
-{
-"text": "2026-11-23: the board reinstated Huang as President, CEO and director, effective immediately",
-"url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000090/nov23pressrelease.htm",
-"tier": "primary",
-"checked": "2026-11-26"
-},
-{
-"text": "The 2026-11-23 release refers to 'ongoing government investigations and inquiries' without naming an agency, and to a committee review after reporting that Mr. Huang had been the target of a foreign intelligence effort",
-"url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000090/nov23pressrelease.htm",
-"tier": "primary",
-"checked": "2026-11-26"
-},
-{
-"text": "The company's 8-K of 2026-11-17 (quarterly results) does not mention an SEC inquiry",
-"url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/nvda-20261117.htm",
-"tier": "primary",
-"checked": "2026-11-26"
-}
-],
-"resolution_conditions": {
-"written_on": "2026-11-26",
-"resolved_when_all": [
-"The SEC inquiry is publicly closed without enforcement action, or settled with terms disclosed",
-"Nvidia files its next periodic report on time with no restatement of prior results"
-],
-"worsened_when_any": [
-"Nvidia announces a restatement or delays a periodic filing",
-"The SEC or DOJ announces formal charges"
-]
-},
-"relief_headlines_that_do_not_resolve_it": [
-"The CEO's return: the reported accounting inquiry is unchanged by it (press described the return as a temporary reprieve)"
-],
-"sources": [
-"https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvidiaannouncesceotransiti.htm",
-"https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000090/nov23pressrelease.htm",
-"https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/nvda-20261117.htm"
-],
-"history": [
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Card opened. Resolution conditions written before the outcome is known."
-},
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Sources upgraded and a correction recorded. Huang's reinstatement on 2026-11-23 is confirmed by the company's SEC-filed release. The original statement that Reuters reported on 2026-11-20 an SEC investigation of accounting practices is not confirmed as written: the wire text read says the WSJ reported an SEC probe on 2026-11-17 and does not state its subject. what_happened is left as first written; read it with this note."
-},
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Second pass. The resignation of 2026-11-12 was confirmed on the company's SEC-filed release. The 8-K of 2026-11-17 does not mention an SEC inquiry."
-},
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Summary rewritten so that it states only what was confirmed at the listed sources and marks the rest as reported. The first version is kept under superseded_sources. Resolution conditions are unchanged."
-},
-{
-"date": "2026-11-27",
-"status": "open",
-"note": "Title changed from 'Nvidia: reported SEC accounting inquiry and CEO turmoil' so that it matches the correction above: the company refers to government inquiries without naming an agency, and the reported SEC probe is not confirmed. Resolution conditions are unchanged."
-},
-{
-"date": "2026-11-27",
-"status": "open",
-"note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
-},
-{
-"date": "2026-11-27",
-"status": "open",
-"note": "Added forecast 1: by 2027-04-30, 2% resolved, 4% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
-}
-],
-"unconfirmed_facts": [
-"SEC probe: a Reuters dispatch dated 2026-11-17 says the Wall Street Journal reported the SEC is probing Nvidia after Huang's resignation. It does not say the probe concerns accounting. The card's original wording (a Reuters report on 2026-11-20 of an inquiry into accounting practices) is not confirmed as written",
-"2026-11-25: Nvidia -8.7% in early trading: not confirmed at a primary or wire source"
-],
-"condition_reading_notes": {
-"written_on": "2026-11-26",
-"notes": [
-"'The SEC inquiry' is read as any SEC inquiry disclosed by the company or the SEC. Neither has confirmed one in the documents read so far, so the first condition is judged from company filings and SEC announcements, not from press reports."
-]
-},
-"numeric_criteria": {
-"version": 1,
-"written_on": "2026-11-27",
-"items": [
-{
-"side": "resolved",
-"measure": "An SEC inquiry confirmed by the company or the SEC is closed without action, or settled with terms disclosed",
-"latest": "Confirmed inquiries: 0. This cannot be counted until one is confirmed",
-"state": "not_measurable_yet"
-},
-{
-"side": "resolved",
-"measure": "The next annual or quarterly report is filed by its SEC deadline, with 0 late-filing notices (Form 12b-25) and 0 notices that earlier statements cannot be relied on (Form 8-K, Item 4.02)",
-"latest": "No report filed since the card opened. No such notice in the filings read for this card",
-"state": "not_met"
-},
-{
-"side": "worsened",
-"measure": "1 late-filing notice (Form 12b-25) or 1 non-reliance notice (Form 8-K, Item 4.02)",
-"latest": "None in the filings read",
-"state": "not_reached"
-},
-{
-"side": "worsened",
-"measure": "1 announcement of formal charges by the SEC or the Department of Justice",
-"latest": "0",
-"state": "not_reached"
-}
-]
-},
-"counter_view": {
-"written_on": "2026-11-27",
-"text": "Neither the company nor the SEC has confirmed an SEC inquiry, and the quarterly results filing does not mention one. If there is none, this card's first condition tracks something that does not exist, and what remains is a leadership episode that the board has already reversed."
-},
 "forecasts": [
 {
 "n": 1,
@@ -1043,7 +373,22 @@
 "selection_mark": {
 "en": "Below our selection criteria: one condition waits on an SEC inquiry that nobody has confirmed.",
 "ko": "선정 기준 미달: 조건 하나가 아무도 확인하지 않은 SEC 조사에 걸려 있습니다."
-}
+},
+"relief_headlines_that_do_not_resolve_it": [
+"The CEO's return: the reported accounting inquiry is unchanged by it (press described the return as a temporary reprieve)"
+],
+"last_date": "2026-11-27",
+"resolution_conditions": {
+"written_on": "2026-11-26",
+"resolved_when_all": [
+"The SEC inquiry is publicly closed without enforcement action, or settled with terms disclosed",
+"Nvidia files its next periodic report on time with no restatement of prior results"
+]
+},
+"nres": [
+0,
+2
+]
 },
 {
 "id": "2026-us-ai-chip-export-rules",
@@ -1057,126 +402,6 @@
 ],
 "event_started": "2026-11 (week ending 2026-11-20)",
 "status": "open",
-"what_happened": "A US Commerce Department rule in effect from 2026-11-19 requires licenses for advanced chips going to overseas data centers that give significant computing access to companies from restricted countries, and for advanced-node chips made for non-approved designers. Press reports, not yet confirmed here, say TSMC and Samsung suspended some shipments to Chinese customers pending licenses.",
-"how_it_reaches_markets": "Lost or delayed sales for chip makers and equipment makers; retaliation risk; adds to pressure on AI-linked shares.",
-"sourced_facts": [
-{
-"text": "Interim final rule 'Addressing Remote Access to Advanced Semiconductors' (Bureau of Industry and Security), effective on publication, scheduled for 2026-11-19: adds a license requirement for advanced-node chips from non-approved designers exported by a front-end fabricator or packaging firm, and for exports to overseas data centers that give significant compute access to companies headquartered in restricted countries",
-"url": "https://public-inspection.federalregister.gov/2026-23529.pdf",
-"tier": "primary",
-"checked": "2026-11-26"
-},
-{
-"text": "The same rule requires a license for advanced chips to Indonesia, Malaysia, Singapore, Thailand and Brazil, with an exclusion for US-headquartered end users; comments are due 60 days after publication",
-"url": "https://public-inspection.federalregister.gov/2026-23529.pdf",
-"tier": "primary",
-"checked": "2026-11-26"
-},
-{
-"text": "Background: a final rule published 2026-01-15 had moved certain advanced computing chips for China and Macau from presumption of denial to case-by-case license review",
-"url": "https://public-inspection.federalregister.gov/2026-00789.pdf",
-"tier": "primary",
-"checked": "2026-11-26"
-}
-],
-"resolution_conditions": {
-"written_on": "2026-11-26",
-"resolved_when_all": [
-"The rules are published in final form with licence criteria, AND at least one major supplier publicly confirms that suspended shipments have resumed under licence"
-],
-"worsened_when_any": [
-"China announces retaliatory export or import restrictions citing the rules",
-"The rules are widened to cover additional chip categories or countries"
-]
-},
-"relief_headlines_that_do_not_resolve_it": [
-"Reports that licenses 'will be granted' without confirmed resumed shipments"
-],
-"sources": [
-"https://public-inspection.federalregister.gov/2026-23529.pdf",
-"https://public-inspection.federalregister.gov/2026-00789.pdf"
-],
-"history": [
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Card opened. Resolution conditions written before the outcome is known."
-},
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Sources upgraded in part. Only the January 2026 rule has been read at the primary source. The November 2026 rule is known so far only through a wire reprint, which gives an effective date of 2026-11-19; the Federal Register text is still to be found. The reprint is not listed as a source under the source rule."
-},
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Second pass. The November rule was found and read: an interim final rule of the Bureau of Industry and Security, effective on publication on 2026-11-19. The earlier note that the rule text had not been located no longer applies."
-},
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Summary rewritten so that it states only what was confirmed at the listed sources and marks the rest as reported. The first version is kept under superseded_sources. Resolution conditions are unchanged."
-},
-{
-"date": "2026-11-27",
-"status": "open",
-"note": "Spelling changed to American English (licence to license, centres to centers) in the title, summary, facts and notes. No fact changed. The resolution conditions and the first version kept under superseded_sources are left as first written."
-},
-{
-"date": "2026-11-27",
-"status": "open",
-"note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
-},
-{
-"date": "2026-11-27",
-"status": "open",
-"note": "Added forecast 1: by 2027-03-31, 7% resolved, 25% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
-}
-],
-"unconfirmed_facts": [
-"TSMC suspending some orders at 16 nm and below unless customers obtain licenses; FT report that TSMC and Samsung suspended some shipments: read only in a wire reprint dated 2026-11-20",
-"ASML and Infineon share falls: not confirmed"
-],
-"condition_reading_notes": {
-"written_on": "2026-11-26",
-"notes": [
-"The rule is an interim final rule already in effect. 'Published in final form' counts when the Bureau of Industry and Security publishes a final rule after the comment period or states that the interim rule stands. 'Major supplier' means TSMC or Samsung."
-]
-},
-"numeric_criteria": {
-"version": 1,
-"written_on": "2026-11-27",
-"items": [
-{
-"side": "resolved",
-"measure": "1 final rule from the Bureau of Industry and Security after the 60-day comment period, or its statement that the interim rule stands",
-"latest": "0 of 1. The comment period is still open",
-"state": "not_met"
-},
-{
-"side": "resolved",
-"measure": "At least 1 of 2 suppliers (TSMC, Samsung) confirms in its own statement that suspended shipments have resumed under license",
-"latest": "0 of 1. The suspensions themselves are reported, not confirmed",
-"state": "not_met"
-},
-{
-"side": "worsened",
-"measure": "1 announcement by China of export or import restrictions that cites the rule",
-"latest": "0",
-"state": "not_reached"
-},
-{
-"side": "worsened",
-"measure": "The rule covers more than the 5 listed countries (Indonesia, Malaysia, Singapore, Thailand, Brazil) or adds a chip category",
-"latest": "5 countries, no addition",
-"state": "not_reached"
-}
-]
-},
-"counter_view": {
-"written_on": "2026-11-27",
-"text": "The rule asks for a license, it does not ban. It excludes US-headquartered end users, and a January 2026 rule had already moved chips for China to case-by-case review. Licenses may be granted as a matter of routine, and the reported shipment halts are not confirmed."
-},
 "forecasts": [
 {
 "n": 1,
@@ -1185,6 +410,20 @@
 "p_resolved": 0.07,
 "p_worsened": 0.25
 }
+],
+"relief_headlines_that_do_not_resolve_it": [
+"Reports that licenses 'will be granted' without confirmed resumed shipments"
+],
+"last_date": "2026-11-27",
+"resolution_conditions": {
+"written_on": "2026-11-26",
+"resolved_when_all": [
+"The rules are published in final form with licence criteria, AND at least one major supplier publicly confirms that suspended shipments have resumed under licence"
+]
+},
+"nres": [
+0,
+2
 ]
 },
 {
@@ -1195,103 +434,6 @@
 ],
 "event_started": "2026-11",
 "status": "open",
-"what_happened": "Current federal appropriations run out on 2026-12-11 under Public Law 119-103, during the lame-duck session before the new Congress convenes in January 2027.",
-"how_it_reaches_markets": "A lapse in funding would shut parts of the federal government, delay official economic data used by the Fed and markets, and weigh on confidence.",
-"sourced_facts": [
-{
-"text": "Public Law 119-103 (Continuing Appropriations and Extensions Act, 2027), enacted 2026-09-02: funds are available until regular appropriations are enacted or 'December 11, 2026', whichever comes first (Sec. 106)",
-"url": "https://www.govinfo.gov/content/pkg/PLAW-119publ103/html/PLAW-119publ103.htm",
-"tier": "primary",
-"checked": "2026-11-26"
-},
-{
-"text": "White House, 2026-09-02: the act 'includes a short-term continuing resolution that provides fiscal year 2027 appropriations to Federal agencies through December 11, 2026'",
-"url": "https://www.whitehouse.gov/briefings-statements/2026/09/congressional-bill-h-r-6500-signed-into-law/",
-"tier": "primary",
-"checked": "2026-11-26"
-}
-],
-"resolution_conditions": {
-"written_on": "2026-11-26",
-"resolved_when_all": [
-"A funding law covering the period beyond 2026-12-11 is signed"
-],
-"worsened_when_any": [
-"Funding lapses and a shutdown begins",
-"A shutdown lasts more than 14 days"
-]
-},
-"relief_headlines_that_do_not_resolve_it": [
-"A short stopgap of under 30 days (the deadline moves, the risk stays open; record the new date in history)"
-],
-"sources": [
-"https://www.govinfo.gov/content/pkg/PLAW-119publ103/html/PLAW-119publ103.htm",
-"https://www.whitehouse.gov/briefings-statements/2026/09/congressional-bill-h-r-6500-signed-into-law/"
-],
-"history": [
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Card opened. Resolution conditions written before the outcome is known."
-},
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Sources upgraded. The 2026-12-11 expiry is now taken from the text of Public Law 119-103 and the White House signing statement instead of a magazine article."
-},
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Summary rewritten so that it states only what was confirmed at the listed sources and marks the rest as reported. The first version is kept under superseded_sources. Resolution conditions are unchanged."
-},
-{
-"date": "2026-11-27",
-"status": "open",
-"note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
-},
-{
-"date": "2026-11-27",
-"status": "open",
-"note": "Added forecast 1: by 2026-12-12, 70% resolved, 12% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
-}
-],
-"unconfirmed_facts": [
-"A funding bill needs 60 Senate votes: this is the Senate cloture rule; no primary page stating it has been read"
-],
-"condition_reading_notes": {
-"written_on": "2026-11-26",
-"notes": [
-"Signature is read from the White House list of signed bills or the public law text."
-]
-},
-"numeric_criteria": {
-"version": 1,
-"written_on": "2026-11-27",
-"items": [
-{
-"side": "resolved",
-"measure": "1 signed law that funds the government for at least 30 days beyond 2026-12-11",
-"latest": "0 of 1. 14 days to the deadline on 2026-11-27",
-"state": "not_met"
-},
-{
-"side": "worsened",
-"measure": "Funding lapses: no law in force at 00:00 on 2026-12-12",
-"latest": "Not reached. Funds run through 2026-12-11",
-"state": "not_reached"
-},
-{
-"side": "worsened",
-"measure": "A shutdown lasts more than 14 days",
-"latest": "0 days",
-"state": "not_reached"
-}
-]
-},
-"counter_view": {
-"written_on": "2026-11-27",
-"text": "The date has been known since September, and Congress passed that stopgap without a lapse. A deadline everyone can see is the kind of risk markets tend to deal with early, so the card may overstate a familiar event."
-},
 "forecasts": [
 {
 "n": 1,
@@ -1300,6 +442,20 @@
 "p_resolved": 0.7,
 "p_worsened": 0.12
 }
+],
+"relief_headlines_that_do_not_resolve_it": [
+"A short stopgap of under 30 days (the deadline moves, the risk stays open; record the new date in history)"
+],
+"last_date": "2026-11-27",
+"resolution_conditions": {
+"written_on": "2026-11-26",
+"resolved_when_all": [
+"A funding law covering the period beyond 2026-12-11 is signed"
+]
+},
+"nres": [
+0,
+1
 ]
 },
 {
@@ -1310,121 +466,6 @@
 ],
 "event_started": "2026-11-24",
 "status": "open",
-"what_happened": "On 2026-11-25 the US Trade Representative found that 14 economies run structural excess industrial capacity and proposed tariffs on them, with ceilings from 15% to 35%. For China the proposal is up to 20%, with an alternative of up to 40% on all goods. Comments close on 2027-01-05 and no effective date is set.",
-"how_it_reaches_markets": "Higher import costs feed inflation while rates are already expected to rise; retaliation risk for US exporters; direct hit to Asian and European equity markets.",
-"sourced_facts": [
-{
-"text": "2026-11-25: USTR determined that structural excess capacity practices of 14 economies (China, EU, Singapore, Switzerland, Indonesia, Malaysia, Cambodia, Thailand, Korea, Vietnam, Taiwan, Bangladesh, Japan, India) are actionable under Section 301 and proposed to consider tariffs",
-"url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/november/ustr-makes-determinations-and-proposes-actions-14-section-301-investigations-relating-structural",
-"tier": "primary",
-"checked": "2026-11-26"
-},
-{
-"text": "Proposed ceilings include: Vietnam up to 35%, India up to 25%, China and Singapore up to 20%, five Southeast and South Asian economies up to 18%, EU 15%, Japan, Korea, Switzerland and Taiwan up to 15%",
-"url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/november/ustr-makes-determinations-and-proposes-actions-14-section-301-investigations-relating-structural",
-"tier": "primary",
-"checked": "2026-11-26"
-},
-{
-"text": "The notice for China adds an alternative of 'a tariff of up to 40 percent' on all goods of China if engagement is inadequate",
-"url": "https://ustr.gov/sites/default/files/files/Press/Releases/2026/China%20FRN.pdf",
-"tier": "primary",
-"checked": "2026-11-26"
-},
-{
-"text": "Written comments are due 2027-01-05 and hearings begin 2027-01-25; no effective date is stated",
-"url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/november/ustr-makes-determinations-and-proposes-actions-14-section-301-investigations-relating-structural",
-"tier": "primary",
-"checked": "2026-11-26"
-}
-],
-"resolution_conditions": {
-"written_on": "2026-11-26",
-"resolved_when_all": [
-"Final rates and effective dates are published, AND either the measures are withdrawn or agreements are announced with China and the EU covering them"
-],
-"worsened_when_any": [
-"Tariffs take effect at or above the proposed rates",
-"A named trading partner announces retaliation"
-]
-},
-"relief_headlines_that_do_not_resolve_it": [
-"Reports of talks or delays without a published change to the proposed rates"
-],
-"sources": [
-"https://ustr.gov/about/policy-offices/press-office/press-releases/2026/november/ustr-makes-determinations-and-proposes-actions-14-section-301-investigations-relating-structural",
-"https://ustr.gov/sites/default/files/files/Press/Releases/2026/China%20FRN.pdf"
-],
-"history": [
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Card opened. Resolution conditions written before the outcome is known."
-},
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Sources upgraded. The proposal is now taken from the USTR release of 2026-11-25, which adds the list of 14 economies, the proposed ceilings and the comment and hearing dates. The Asian market moves were moved to unconfirmed_facts."
-},
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Summary rewritten so that it states only what was confirmed at the listed sources and marks the rest as reported. The first version is kept under superseded_sources. Resolution conditions are unchanged."
-},
-{
-"date": "2026-11-27",
-"status": "open",
-"note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
-},
-{
-"date": "2026-11-27",
-"status": "open",
-"note": "Added forecast 1: by 2027-06-30, 5% resolved, 30% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
-}
-],
-"unconfirmed_facts": [
-"2026-11-25: MSCI Asia-Pacific ex-Japan -2.3%; South Korea down as much as 5.3% intraday: attributed to Reuters in a repost; original not read"
-],
-"condition_reading_notes": {
-"written_on": "2026-11-26",
-"notes": [
-"'Proposed rates' means the ceilings in the USTR notices of 2026-11-25. Final rates and dates are read from the Federal Register."
-]
-},
-"numeric_criteria": {
-"version": 1,
-"written_on": "2026-11-27",
-"items": [
-{
-"side": "resolved",
-"measure": "Final rates and effective dates published in the Federal Register for the 14 economies",
-"latest": "0 of 14. Comments close 2027-01-05, hearings begin 2027-01-25",
-"state": "not_met"
-},
-{
-"side": "resolved",
-"measure": "The measures are withdrawn, or agreements covering them are announced with both China and the EU",
-"latest": "0 of 2 agreements",
-"state": "not_met"
-},
-{
-"side": "worsened",
-"measure": "A tariff takes effect at or above its proposed ceiling (for example China 20%, EU 15%, Vietnam 35%)",
-"latest": "0 of 14 in effect",
-"state": "not_reached"
-},
-{
-"side": "worsened",
-"measure": "1 of the 14 economies announces retaliation",
-"latest": "0 of 14",
-"state": "not_reached"
-}
-]
-},
-"counter_view": {
-"written_on": "2026-11-27",
-"text": "These are ceilings ('up to') in a proposal with no effective date. Rates could come out lower or be dropped after the hearings. After the 2018 and 2025 tariff announcements the market hit its low within about a week."
-},
 "forecasts": [
 {
 "n": 1,
@@ -1433,6 +474,20 @@
 "p_resolved": 0.05,
 "p_worsened": 0.3
 }
+],
+"relief_headlines_that_do_not_resolve_it": [
+"Reports of talks or delays without a published change to the proposed rates"
+],
+"last_date": "2026-11-27",
+"resolution_conditions": {
+"written_on": "2026-11-26",
+"resolved_when_all": [
+"Final rates and effective dates are published, AND either the measures are withdrawn or agreements are announced with China and the EU covering them"
+]
+},
+"nres": [
+0,
+2
 ]
 },
 {
@@ -1443,163 +498,6 @@
 ],
 "event_started": "2026-02-28",
 "status": "open",
-"what_happened": "The US-Iran conflict that began on 2026-02-28 cut shipments through the Strait of Hormuz and drove oil sharply higher. Brent averaged $124 in October and fell below $100 in early November as flows through the strait recovered. Attacks continue: Reuters reported three vessels struck in the strait on 2026-11-23.",
-"how_it_reaches_markets": "Oil prices feed inflation and therefore rate expectations; shipping disruption; risk-off moves on escalation.",
-"sourced_facts": [
-{
-"text": "EIA, 2026-03-10: Brent 'has risen sharply following the onset of military action in the Middle East' and 'settled at $94 per barrel on March 9'; shipments through the Strait of Hormuz had fallen",
-"url": "https://www.eia.gov/pressroom/releases/press584.php",
-"tier": "primary",
-"checked": "2026-11-28"
-},
-{
-"text": "Brent spot averaged $124 a barrel in October 2026 and fell below $100 on 2026-11-04; EIA forecasts about $100 for November and December (Short-Term Energy Outlook, November 2026 edition, released 2026-11-10)",
-"url": "https://www.eia.gov/outlooks/steo/archives/nov26.pdf",
-"tier": "primary",
-"checked": "2026-11-28"
-},
-{
-"text": "EIA estimates Middle East production shut-ins at 2.5 million barrels a day in October, down from 10.9 million at the peak in May, and expects exports from Iran to remain constrained through the forecast period",
-"url": "https://www.eia.gov/outlooks/steo/archives/nov26.pdf",
-"tier": "primary",
-"checked": "2026-11-28"
-},
-{
-"text": "Same outlook: 'the U.S.-Iran conflict began on February 28'; attacks on oil tankers continued, and flows through the strait continued 'using ship-to-ship transfers along Oman's coast'",
-"url": "https://www.eia.gov/outlooks/steo/archives/nov26.pdf",
-"tier": "primary",
-"checked": "2026-11-28"
-},
-{
-"text": "EIA, 2026-11-19: oil shipments through the Strait of Hormuz rose in the third quarter and stayed near that level in October; by 2026-11-18 Brent had fallen more than $30 from its October average",
-"url": "https://www.eia.gov/todayinenergy/detail.php?id=68485",
-"tier": "primary",
-"checked": "2026-11-28"
-}
-],
-"resolution_conditions": {
-"written_on": "2026-11-26",
-"resolved_when_all": [
-"A ceasefire or agreement is publicly announced by both governments",
-"No reported attack on commercial shipping in or around the Strait of Hormuz for 60 consecutive days",
-"Brent settles below 80 dollars for 20 consecutive trading days"
-],
-"worsened_when_any": [
-"Strait of Hormuz closed to commercial traffic",
-"Brent settles above 110 dollars"
-]
-},
-"relief_headlines_that_do_not_resolve_it": [
-"Announcements of talks without a ceasefire",
-"Single-day falls in oil prices"
-],
-"sources": [
-"https://www.eia.gov/outlooks/steo/archives/nov26.pdf",
-"https://www.eia.gov/pressroom/releases/press584.php",
-"https://www.eia.gov/todayinenergy/detail.php?id=68485"
-],
-"history": [
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Card opened. Resolution conditions written before the outcome is known."
-},
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Sources upgraded. Oil price and supply facts now come from the EIA Short-Term Energy Outlook of 2026-11-10. The start date, the VIX figure and the 2026-11-24 price move were moved to unconfirmed_facts."
-},
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Second pass. The start of the conflict in early March 2026 is now supported by the EIA release of 2026-03-10."
-},
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Summary rewritten so that it states only what was confirmed at the listed sources and marks the rest as reported. The first version is kept under superseded_sources. Resolution conditions are unchanged."
-},
-{
-"date": "2026-11-27",
-"status": "open",
-"note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
-},
-{
-"date": "2026-11-27",
-"status": "open",
-"note": "Added forecast 1: by 2027-05-31, 5% resolved, 20% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
-},
-{
-"date": "2026-11-27",
-"status": "open",
-"note": "Title was 'US-Iran war and shipping attacks around the Strait of Hormuz'. Changed to say only what is confirmed. Conditions and forecasts unchanged."
-},
-{
-"date": "2026-11-28",
-"status": "open",
-"note": "Sources read again. Start corrected from early March to 2026-02-28 (EIA). Title was 'Middle East military action and disrupted oil shipments through the Strait of Hormuz'; EIA names the US-Iran conflict. The attack reported on 11-24 happened on 11-23. Outlook link moved to the fixed November edition. VIX 31.05 on 2026-03-27 matches the series and was dropped as unneeded. Conditions unchanged."
-}
-],
-"unconfirmed_facts": [
-"Reuters, 2026-11-24: three vessels were struck by unidentified projectiles on 2026-11-23 while sailing east through the Strait of Hormuz, citing the UK Maritime Trade Operations office; all crew accounted for. Read as carried by The Jerusalem Post and The Times of Israel, not at Reuters or at the UK office",
-"2026-11-24: Brent settled more than 2% higher; opened at 90.97 in Asia on 2026-11-25: attributed to Reuters in a repost; original not read",
-"A US-Iran memorandum of understanding signed in June 2026 and a US naval blockade of Iranian ports: reported by ABC News; no government document read"
-],
-"condition_reading_notes": {
-"written_on": "2026-11-26",
-"notes": [
-"'Both governments' means the United States and Iran. Brent is read from the daily spot series published by the EIA (FRED: DCOILBRENTEU). An attack counts when reported by Reuters or AP, or listed by the UK Maritime Trade Operations office.",
-"Added 2026-11-28: the first condition counts a ceasefire or agreement announced on or after 2026-11-26, the day the conditions were written. A memorandum reported for June 2026 did not stop the attacks and is not counted."
-]
-},
-"numeric_criteria": {
-"version": 1,
-"written_on": "2026-11-27",
-"items": [
-{
-"side": "resolved",
-"measure": "1 ceasefire or agreement announced by both the United States and Iran on or after 2026-11-26",
-"latest": "0 of 1",
-"state": "not_met"
-},
-{
-"side": "resolved",
-"measure": "60 days in a row with no reported attack on commercial shipping in or around the Strait of Hormuz",
-"latest": "At most 5 of 60 on 2026-11-28. Last counted attack: 2026-11-23 (Reuters)",
-"state": "not_met"
-},
-{
-"side": "resolved",
-"measure": "Brent spot below $80.00 on 20 trading days in a row",
-"latest": "0 of 20. Under $100 since 2026-11-04, October average $124",
-"state": "not_met",
-"series": "DCOILBRENTEU"
-},
-{
-"side": "worsened",
-"measure": "The Strait of Hormuz is closed to commercial traffic",
-"latest": "Not closed. EIA reports flows rising since the second quarter",
-"state": "not_reached"
-},
-{
-"side": "worsened",
-"measure": "Brent spot above $110.00 on any day from 2026-11-26",
-"latest": "Under $100 since 2026-11-04",
-"state": "not_reached",
-"series": "DCOILBRENTEU"
-},
-{
-"side": "added",
-"measure": "Added gauge: Middle East production shut in, as estimated by the EIA",
-"latest": "2.5 million barrels a day in October, down from 10.9 million at the May peak",
-"state": "info"
-}
-]
-},
-"counter_view": {
-"written_on": "2026-11-27",
-"text": "Supply is coming back: production shut in has fallen from 10.9 to 2.5 million barrels a day and Brent from an October average of $124 to under $100. The $80 line is our own choice. If the economy has adjusted to oil near $100, the risk could fade well before our conditions say so."
-},
 "forecasts": [
 {
 "n": 1,
@@ -1608,6 +506,23 @@
 "p_resolved": 0.05,
 "p_worsened": 0.2
 }
+],
+"relief_headlines_that_do_not_resolve_it": [
+"Announcements of talks without a ceasefire",
+"Single-day falls in oil prices"
+],
+"last_date": "2026-11-28",
+"resolution_conditions": {
+"written_on": "2026-11-26",
+"resolved_when_all": [
+"A ceasefire or agreement is publicly announced by both governments",
+"No reported attack on commercial shipping in or around the Strait of Hormuz for 60 consecutive days",
+"Brent settles below 80 dollars for 20 consecutive trading days"
+]
+},
+"nres": [
+0,
+3
 ]
 },
 {
@@ -1618,164 +533,6 @@
 ],
 "event_started": "2026 (default rate reported at or above 6.0% since April 2026)",
 "status": "open",
-"what_happened": "US private credit has grown to about $1.5 trillion outstanding, up 13.8% in a year. The Federal Reserve reports that some funds kept redemption limits and net flows stayed negative. At the two largest listed lenders, loans that have stopped paying interest stood at 2.4% and 2.9% of the portfolio at cost on 2026-09-30, up from earlier in the year.",
-"how_it_reaches_markets": "Losses at business development companies, banks and insurers that lend to or hold private credit; redemption pressure on non-traded funds; tighter credit for mid-sized companies.",
-"sourced_facts": [
-{
-"text": "Federal Reserve Financial Stability Report (November 2026): private credit outstanding $1,504 billion, up 13.8% from 2025:Q2 to 2026:Q2 (Table 1.1)",
-"url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
-"tier": "primary",
-"checked": "2026-11-28"
-},
-{
-"text": "Same report: 'Redemption requests at certain business development companies trended lower, though funds maintained redemption limits and net flows remained negative.'",
-"url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
-"tier": "primary",
-"checked": "2026-11-28"
-},
-{
-"text": "Federal Reserve staff note, 2026-11-09: U.S.-domiciled private credit vehicles held about $1.9 trillion in assets at the end of 2025; BDCs 'tend to be more highly levered with an average debt-to-equity ratio around 1'",
-"url": "https://www.federalreserve.gov/econres/notes/feds-notes/u-s-private-credit-vehicles-institutional-structure-and-aggregate-balance-sheets-20261109.html",
-"tier": "primary",
-"checked": "2026-11-28"
-},
-{
-"text": "Same report (Overview): 'private companies and public firms with lower credit ratings demonstrated weaker debt-servicing capacity'. The report gives no private credit default rate in the part we could read word for word",
-"url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
-"tier": "primary",
-"checked": "2026-11-28"
-},
-{
-"text": "Ares Capital, results for 2026-09-30 (filed with the SEC, 2026-10-27): loans on non-accrual status were 2.4% of total investments at amortized cost (1.4% at fair value), against 1.8% (1.2%) on 2025-12-31; portfolio $29.2 billion at fair value",
-"url": "https://www.sec.gov/Archives/edgar/data/1287750/000162828026067382/arccq3-2026exhibit991.htm",
-"tier": "primary",
-"checked": "2026-11-28"
-},
-{
-"text": "Blue Owl Capital Corporation, results for 2026-09-30 (filed with the SEC, 2026-11-04): investments on non-accrual were 2.9% of the portfolio at cost (0.8% at fair value), against 2.8% (0.8%) on 2026-06-30; portfolio $15.1 billion at fair value",
-"url": "https://www.sec.gov/Archives/edgar/data/1655888/000165588826000070/exhibit991pressrelease-ann.htm",
-"tier": "primary",
-"checked": "2026-11-28"
-}
-],
-"resolution_conditions": {
-"written_on": "2026-11-26",
-"resolved_when_all": [
-"Loans on non-accrual are 1.8% or less of the portfolio at cost at both Ares Capital and Blue Owl Capital Corporation in two quarterly reports in a row",
-"Credit stress component of this ledger is Moderate or lower throughout the same period"
-],
-"worsened_when_any": [
-"Loans on non-accrual reach 3.5% or more of the portfolio at cost at either Ares Capital or Blue Owl Capital Corporation",
-"A large private credit fund suspends or limits redemptions, or a bank discloses a private-credit-related loss above 1 billion dollars",
-"Credit stress component of this ledger reaches High"
-],
-"revised_on": "2026-11-28"
-},
-"relief_headlines_that_do_not_resolve_it": [
-"Record fundraising by private credit managers (new money raised says nothing about existing loans)",
-"A one-quarter dip in non-accrual loans at one lender"
-],
-"sources": [
-"https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
-"https://www.federalreserve.gov/econres/notes/feds-notes/u-s-private-credit-vehicles-institutional-structure-and-aggregate-balance-sheets-20261109.html",
-"https://www.sec.gov/Archives/edgar/data/1287750/000162828026067382/arccq3-2026exhibit991.htm",
-"https://www.sec.gov/Archives/edgar/data/1655888/000165588826000070/exhibit991pressrelease-ann.htm"
-],
-"history": [
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Card opened. Resolution conditions written before the outcome is known."
-},
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Sources upgraded in part. Market size and redemption wording now come from the Federal Reserve Financial Stability Report. The Fitch default rates match a trade publication but have not been read at Fitch; the '90 unique defaulters' figure was not found and should be treated as unverified."
-},
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Summary rewritten so that it states only what was confirmed at the listed sources and marks the rest as reported. The first version is kept under superseded_sources. Resolution conditions are unchanged."
-},
-{
-"date": "2026-11-27",
-"status": "open",
-"note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
-},
-{
-"date": "2026-11-27",
-"status": "open",
-"note": "Added forecast 1: by 2027-05-31, 2% resolved, 45% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
-},
-{
-"date": "2026-11-27",
-"status": "open",
-"note": "Title was 'Rising defaults in US private credit'. Changed to say only what is confirmed. Conditions and forecasts unchanged."
-},
-{
-"date": "2026-11-28",
-"status": "open",
-"note": "Sources read again: the three Federal Reserve facts match. 'Record 6.0% in April' removed from the start line; nothing we read calls it a record. '90 unique defaulters' was found in a trade publication. Fitch's own report is still unread. Conditions unchanged."
-},
-{
-"date": "2026-11-28",
-"status": "open",
-"note": "Conditions changed, with the reason. Was: 'Fitch trailing-12-month private credit default rate below 4.0% for three consecutive monthly readings' (resolved) and 'Fitch default rate above 8.0%' (worsened). We could not read that figure at Fitch. Now: non-accrual loans at Ares Capital and Blue Owl Capital Corporation, from SEC filings. Counting is version 2. Forecast 2 added for the new conditions (1% resolved, 45% worsened by 2027-05-31); forecast 1 stays scored on the first wording. Title was 'US private credit: fast growth and redemption limits (default rate reported, not confirmed)'."
-}
-],
-"unconfirmed_facts": [
-"Fitch (report of 2026-11-16): trailing-12-month default rate 6.2% in October 2026 (6.3% in September), 90 unique defaulters; 10.7% for issuers under $25 million EBITDA versus 2.4% above $100 million: the same in two trade publications (Investment Executive 2026-11-17, ABF Journal 2026-11-18). Fitch's own report has not been read. Neither calls the rate a record",
-"JPMorgan default forecasts and the Moody's figure on bank lending: originals not read"
-],
-"condition_reading_notes": {
-"written_on": "2026-11-26",
-"notes": [
-"Added 2026-11-28: 'non-accrual' loans are loans on which the lender has stopped booking interest because it doubts it will be paid. The figure is read from each company's quarterly results as filed with the SEC, as a share of the portfolio at amortized cost. Ares Capital and Blue Owl Capital Corporation are used because they are the two largest listed lenders of this kind (business development companies). 1.8% is where Ares stood at the end of 2025. 'Large private credit fund' means one with at least $1 billion in assets.",
-"The Fitch default rate named in the first version is still listed under unconfirmed facts as background. It no longer decides anything on this card."
-]
-},
-"numeric_criteria": {
-"version": 2,
-"written_on": "2026-11-28",
-"items": [
-{
-"side": "resolved",
-"measure": "Non-accrual loans at cost at 1.8% or less at both Ares Capital and Blue Owl Capital Corporation, in 2 quarterly reports in a row",
-"latest": "0 of 2. On 2026-09-30: Ares 2.4%, Blue Owl 2.9%",
-"state": "not_met"
-},
-{
-"side": "resolved",
-"measure": "High-yield bond spread below 5.0 percentage points on every day of those same quarters (this is what 'Moderate or lower' means under rule v3)",
-"latest": "1 of 3 steps on 2026-11-24. The count only starts with the first quarter at 1.8% or less",
-"state": "holding",
-"series": "BAMLH0A0HYM2"
-},
-{
-"side": "worsened",
-"measure": "Non-accrual loans at cost at 3.5% or more at either company",
-"latest": "Ares 2.4%, Blue Owl 2.9%: 0.6 points below the line at the nearer one",
-"state": "not_reached"
-},
-{
-"side": "worsened",
-"measure": "From 2026-11-26: 1 fund with at least $1 billion in assets newly suspends or limits redemptions, or 1 bank discloses a private-credit loss above $1 billion",
-"latest": "0 new cases. Limits that were already in place are in the Federal Reserve's November report",
-"state": "not_reached"
-},
-{
-"side": "worsened",
-"measure": "High-yield bond spread at 5.0 percentage points or more",
-"latest": "1 of 3 steps on 2026-11-24, below the line. The value itself is not republished (source license)",
-"state": "not_reached",
-"series": "BAMLH0A0HYM2"
-}
-]
-},
-"counter_view": {
-"written_on": "2026-11-27",
-"text": "Stress has not shown up in traded credit: the high-yield spread in this record is at 1 of 3 steps. The Federal Reserve reports that redemption requests have trended lower. The two lenders we count are the largest and may be the best run; trouble among small borrowers could stay there, or could be building where these two numbers do not show it."
-},
 "forecasts": [
 {
 "n": 1,
@@ -1791,6 +548,23 @@
 "p_resolved": 0.01,
 "p_worsened": 0.45
 }
+],
+"relief_headlines_that_do_not_resolve_it": [
+"Record fundraising by private credit managers (new money raised says nothing about existing loans)",
+"A one-quarter dip in non-accrual loans at one lender"
+],
+"last_date": "2026-11-28",
+"resolution_conditions": {
+"written_on": "2026-11-26",
+"resolved_when_all": [
+"Loans on non-accrual are 1.8% or less of the portfolio at cost at both Ares Capital and Blue Owl Capital Corporation in two quarterly reports in a row",
+"Credit stress component of this ledger is Moderate or lower throughout the same period"
+],
+"revised_on": "2026-11-28"
+},
+"nres": [
+0,
+2
 ]
 },
 {
@@ -1801,121 +575,6 @@
 ],
 "event_started": "2026-11",
 "status": "open",
-"what_happened": "The federal debt limit is $41.1 trillion. On 2026-11-19 debt subject to the limit was about $597 billion below it. The Congressional Research Service says borrowing is projected to approach the limit during fiscal year 2027; Treasury has not published a date. Democrats will control both chambers of the next Congress and therefore the vote.",
-"how_it_reaches_markets": "Risk of delayed Treasury payments; distortions in Treasury bill and repo markets near the X-date; sovereign rating downgrade risk.",
-"sourced_facts": [
-{
-"text": "The statutory debt limit was raised by $5.0 trillion to $41.1 trillion in July 2025 by P.L. 119-21 (Congressional Research Service, IF10292, updated 2025-12-05)",
-"url": "https://www.congress.gov/crs_external_products/IF/PDF/IF10292/IF10292.21.pdf",
-"tier": "primary",
-"checked": "2026-11-26"
-},
-{
-"text": "2026-11-19: debt subject to limit $40,507,450 million against a statutory limit of $41,103,996 million, leaving about $597 billion (our subtraction) (Daily Treasury Statement, Table III-C)",
-"url": "https://fiscaldata.treasury.gov/static-data/published-reports/dts/DailyTreasuryStatement_20261119.pdf",
-"tier": "primary",
-"checked": "2026-11-26"
-},
-{
-"text": "CRS: projections suggest borrowing will approach the limit sometime in fiscal year 2027, with considerable uncertainty; no date is given",
-"url": "https://www.congress.gov/crs_external_products/IF/PDF/IF10292/IF10292.21.pdf",
-"tier": "primary",
-"checked": "2026-11-26"
-}
-],
-"resolution_conditions": {
-"written_on": "2026-11-26",
-"resolved_when_all": [
-"A law raising or suspending the debt limit is signed"
-],
-"worsened_when_any": [
-"Treasury announces an X-date less than 60 days away with no law passed",
-"A major rating agency downgrades the US sovereign rating or places it on negative watch citing the debt limit"
-]
-},
-"relief_headlines_that_do_not_resolve_it": [
-"Statements that leaders are 'close to a deal' without a signed law",
-"Treasury starting extraordinary measures (this postpones the X-date, it does not remove it)"
-],
-"sources": [
-"https://www.congress.gov/crs_external_products/IF/PDF/IF10292/IF10292.21.pdf",
-"https://fiscaldata.treasury.gov/static-data/published-reports/dts/DailyTreasuryStatement_20261119.pdf"
-],
-"history": [
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Card opened. Resolution conditions written before the outcome is known."
-},
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Sources upgraded. The limit and the remaining room now come from the Congressional Research Service and the Daily Treasury Statement. The room figure changes from about $557 billion (a bank estimate dated 2026-11-09) to about $597 billion (Treasury, 2026-11-19); the dates differ, so this is an update rather than a contradiction. Bank forecasts of the timing were moved to unconfirmed_facts."
-},
-{
-"date": "2026-11-26",
-"status": "open",
-"note": "Summary rewritten so that it states only what was confirmed at the listed sources and marks the rest as reported. The first version is kept under superseded_sources. Resolution conditions are unchanged."
-},
-{
-"date": "2026-11-27",
-"status": "open",
-"note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
-},
-{
-"date": "2026-11-27",
-"status": "open",
-"note": "Added forecast 1: by 2027-06-30, 10% resolved, 5% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
-},
-{
-"date": "2026-11-27",
-"status": "open",
-"note": "Title was 'US federal debt limit standoff'. Changed to say only what is confirmed. Conditions and forecasts unchanged."
-}
-],
-"unconfirmed_facts": [
-"Bank forecasts (limit reached as early as February 2027; X-date November 2027) and a downgrade warning: from a magazine article citing bank research; originals not read"
-],
-"condition_reading_notes": {
-"written_on": "2026-11-26",
-"notes": [
-"'Major rating agency' means S&P, Moody's or Fitch. The X-date is read from a Treasury letter to Congress."
-]
-},
-"numeric_criteria": {
-"version": 1,
-"written_on": "2026-11-27",
-"items": [
-{
-"side": "resolved",
-"measure": "1 signed law that raises or suspends the debt limit",
-"latest": "0 of 1",
-"state": "not_met"
-},
-{
-"side": "worsened",
-"measure": "A Treasury letter to Congress gives an X-date fewer than 60 days away, with no law signed",
-"latest": "No X-date published",
-"state": "not_reached"
-},
-{
-"side": "worsened",
-"measure": "1 of 3 agencies (S&P, Moody's, Fitch) downgrades the United States or puts it on negative watch, citing the debt limit",
-"latest": "0 of 3",
-"state": "not_reached"
-},
-{
-"side": "added",
-"measure": "Added gauge: room left under the limit (Daily Treasury Statement). At zero, Treasury has to start extraordinary measures",
-"latest": "About $597 billion on 2026-11-19, of a $41.1 trillion limit",
-"state": "info"
-}
-]
-},
-"counter_view": {
-"written_on": "2026-11-27",
-"text": "There is no X-date yet. With about $597 billion of room and extraordinary measures still unused, any real deadline is probably many months away. This card may be open long before it matters to markets."
-},
 "forecasts": [
 {
 "n": 1,
@@ -1924,6 +583,21 @@
 "p_resolved": 0.1,
 "p_worsened": 0.05
 }
+],
+"relief_headlines_that_do_not_resolve_it": [
+"Statements that leaders are 'close to a deal' without a signed law",
+"Treasury starting extraordinary measures (this postpones the X-date, it does not remove it)"
+],
+"last_date": "2026-11-27",
+"resolution_conditions": {
+"written_on": "2026-11-26",
+"resolved_when_all": [
+"A law raising or suspending the debt limit is signed"
+]
+},
+"nres": [
+0,
+1
 ]
 }
 ],
@@ -1942,73 +616,7 @@
 "ko": "미국 정부 예산 만료"
 }
 ],
-"exposure": {
-"2026-us-appropriations-lapse": [
-"SPY",
-"TLT"
-],
-"2026-nvidia-sec-and-leadership": [
-"NVDA",
-"SMH",
-"SOXX",
-"QQQ"
-],
-"2026-us-excess-capacity-tariffs": [
-"SPY",
-"XLI",
-"FXI",
-"EZU"
-],
-"2026-ai-buildout-financing": [
-"NVDA",
-"DELL",
-"SMH",
-"QQQ"
-],
-"2026-us-ai-chip-export-rules": [
-"NVDA",
-"AMD",
-"SMH",
-"SOXX"
-],
-"2026-fed-rate-hikes": [
-"TLT",
-"SHY",
-"SPY",
-"QQQ"
-],
-"2026-us-iran-war-oil": [
-"USO",
-"BNO",
-"XLE",
-"JETS"
-],
-"2027-us-debt-limit": [
-"TLT",
-"BIL",
-"SPY"
-],
-"2026-japan-boj-tightening-yen": [
-"EWJ",
-"DXJ",
-"FXY"
-],
-"2026-us-private-credit-defaults": [
-"BIZD",
-"BKLN",
-"HYG"
-],
-"2026-eurozone-inflation-ecb": [
-"EZU",
-"FEZ",
-"FXE"
-],
-"2026-china-domestic-demand-property": [
-"FXI",
-"MCHI",
-"KWEB"
-]
-},
+"exposure": {},
 "sector_names": {
 "technology": {
 "en": "Technology",
@@ -2176,350 +784,6 @@
 "chip_selloff": {
 "en": "chip stocks fell hard",
 "ko": "반도체주가 급락한 날"
-}
-},
-"history": [
-{
-"date": "2026-11-26",
-"en": "First record written. Twelve event cards opened, each with resolution conditions written before the outcome.",
-"ko": "첫 기록을 남겼습니다. 사건 카드 12건을 열고, 결과가 나오기 전에 해소 조건을 적었습니다."
-},
-{
-"date": "2026-11-26",
-"en": "Rule 1 tested on data from 1990. Its weak points were published and rule 2 took its place.",
-"ko": "규칙 1판을 1990년부터의 자료로 점검했습니다. 약점을 공개하고 2판으로 바꿨습니다."
-},
-{
-"date": "2026-11-26",
-"en": "The first screen changed from an index to open risks and the conditions still unmet.",
-"ko": "첫 화면을 지수에서 열린 리스크와 남은 조건 중심으로 바꿨습니다."
-},
-{
-"date": "2026-11-26",
-"en": "Sector links backed by data since 1990, with evidence levels. Monthly public grading set up.",
-"ko": "섹터 연결에 1990년 이후 데이터 근거와 근거 수준을 붙였습니다. 매달 공개 채점 틀을 만들었습니다."
-},
-{
-"date": "2026-11-26",
-"en": "AFMX Weekly No. 1 published in English and Korean.",
-"ko": "AFMX 주간 글 1호를 영어와 한국어로 냈습니다."
-},
-{
-"date": "2026-11-26",
-"en": "Source rule adopted: every card and past case rests on at least one primary source. Unconfirmed reports are shown separately.",
-"ko": "출처 기준을 세웠습니다. 모든 카드와 과거 사례는 1차 출처를 하나 이상 갖고, 확인하지 못한 보도는 따로 표시합니다."
-},
-{
-"date": "2026-11-26",
-"en": "Rule 3: the market state now has five steps instead of four. Five and seven steps were compared on past data first.",
-"ko": "규칙 3판: 시장 상태를 4단계에서 5단계로 늘렸습니다. 먼저 5단계와 7단계를 과거 자료로 비교했습니다."
-},
-{
-"date": "2026-11-27",
-"en": "Every card now also shows its conditions counted in numbers, the case against its own reading, similar past events, and a check against market prices.",
-"ko": "모든 카드에 숫자로 센 기준, 틀릴 수 있는 이유, 과거 비슷한 사건, 시장 가격과 맞춰 본 결과를 더했습니다."
-}
-],
-"glossary": {
-"risk_state": {
-"en": {
-"term": "Risk state",
-"def": "What the record says about market stress right now, in five steps: Calm, Guarded, Watch, Elevated, Stress. It describes conditions. It is not a forecast and not advice to buy or sell."
-},
-"ko": {
-"term": "리스크 상태",
-"def": "지금 시장의 긴장 정도를 평온, 관심, 주의, 경계, 위기의 다섯 단계로 적은 것입니다. 상황을 설명할 뿐, 전망이나 매매 권유가 아닙니다."
-}
-},
-"event_card": {
-"en": {
-"term": "Event card",
-"def": "One risk that is still open: what happened, how it reaches markets, and what has to be true for it to count as resolved. Each card also carries the same conditions counted in numbers, the case against its own reading, similar past events, and a check against market prices."
-},
-"ko": {
-"term": "사건 카드",
-"def": "아직 끝나지 않은 리스크 하나를 다룹니다. 무슨 일이 있었는지, 시장에 어떻게 닿는지, 무엇이 일어나야 해소로 볼지를 적습니다. 카드마다 같은 조건을 숫자로 센 것, 이 판단이 틀릴 수 있는 이유, 과거 비슷한 사건, 시장 가격과 맞춰 본 결과도 함께 있습니다."
-}
-},
-"resolution_condition": {
-"en": {
-"term": "Resolution condition",
-"def": "A checkable event written down before the outcome is known. The card closes only when every one of them has happened."
-},
-"ko": {
-"term": "해소 조건",
-"def": "결과가 나오기 전에 미리 적어 둔, 확인할 수 있는 사건입니다. 모두 일어나야 카드가 닫힙니다."
-}
-},
-"worsening_condition": {
-"en": {
-"term": "Worsening condition",
-"def": "A checkable event that would mark the risk as worse. One is enough."
-},
-"ko": {
-"term": "악화 조건",
-"def": "리스크가 나빠졌다고 볼 확인 가능한 사건입니다. 하나만 일어나도 해당됩니다."
-}
-},
-"relief_headline": {
-"en": {
-"term": "Relief headline",
-"def": "Good news that makes a risk feel smaller without meeting any resolution condition, such as a one-day rally or a deal that is not yet law."
-},
-"ko": {
-"term": "안도 뉴스",
-"def": "리스크가 줄어든 듯 보이게 하지만 해소 조건은 하나도 채우지 못하는 호재입니다. 하루짜리 반등이나 아직 법이 아닌 합의가 그 예입니다."
-}
-},
-"numeric_criteria": {
-"en": {
-"term": "Counted in numbers",
-"def": "How a resolution or worsening condition is counted: what is measured, where the line is, and where it stands now. It explains the condition and never replaces it. If the two could be read differently, the original wording decides."
-},
-"ko": {
-"term": "숫자 기준",
-"def": "해소 조건이나 악화 조건을 어떻게 세는지 적은 것입니다. 무엇을 재는지, 기준선이 어디인지, 지금 어디에 있는지를 담습니다. 조건을 풀어 쓴 것이지 대신하는 것이 아니며, 둘이 다르게 읽히면 조건 원문을 따릅니다."
-}
-},
-"counter_view": {
-"en": {
-"term": "Why this reading may be wrong",
-"def": "The strongest case against our own card, built from the facts on the card. It is there so that the card is not read as certain."
-},
-"ko": {
-"term": "틀릴 수 있는 이유",
-"def": "저희 카드에 대한 가장 강한 반론입니다. 카드에 적힌 사실로 씁니다. 카드를 확실한 것으로 읽지 않게 하려고 둡니다."
-}
-},
-"past_case": {
-"en": {
-"term": "Similar past event",
-"def": "An earlier event of the same kind, with a start date taken from a primary source. The card shows how long it lasted and how the US market moved afterwards. The market figure covers the whole market in those months, not that event alone."
-},
-"ko": {
-"term": "과거 비슷한 사건",
-"def": "같은 종류의 지난 사건입니다. 시작일은 1차 출처에서 가져옵니다. 카드에는 그 사건이 며칠 이어졌고 그 뒤 미국 시장이 어떻게 움직였는지를 싣습니다. 시장 수치는 그 사건만이 아니라 그 시기 시장 전체의 움직임입니다."
-}
-},
-"market_check": {
-"en": {
-"term": "Prices show it",
-"def": "A price tied to the risk is high against its own last five years, or a spread is above zero, or the matching AFMX measure is at 2 of 3 steps or more. The rule was fixed before the first reading. It says where a price stands now, not where it will go."
-},
-"ko": {
-"term": "가격에 보임",
-"def": "그 리스크와 이어진 가격이 자기 최근 5년에 비춰 높거나, 금리 차이가 0보다 크거나, 해당 AFMX 지표가 3칸 중 2칸 이상이라는 뜻입니다. 기준은 첫 수치를 읽기 전에 정했습니다. 가격이 지금 어디에 있는지를 말할 뿐, 어디로 갈지는 말하지 않습니다."
-}
-},
-"primary_source": {
-"en": {
-"term": "Primary source",
-"def": "The body that made the decision or produced the number: a government, central bank, regulator, statute or company filing. Every card has at least one."
-},
-"ko": {
-"term": "1차 출처",
-"def": "결정을 내렸거나 숫자를 만든 곳입니다. 정부, 중앙은행, 감독기관, 법 원문, 기업 공시가 해당합니다. 모든 카드에 하나 이상 있습니다."
-}
-},
-"unconfirmed_fact": {
-"en": {
-"term": "Not yet confirmed",
-"def": "Something reported that we could not check at a primary source or a major wire. It is shown separately and never used to support a card."
-},
-"ko": {
-"term": "미확인 사실",
-"def": "보도는 됐지만 1차 출처나 주요 통신사 원문으로 확인하지 못한 내용입니다. 따로 표시하며 카드의 근거로 쓰지 않습니다."
-}
-},
-"sector_link": {
-"en": {
-"term": "Sector link",
-"def": "How strongly a risk has reached a sector in past data: direct, strong, moderate, case, or unconfirmed. 'Unconfirmed' means the data did not show a reliable pattern."
-},
-"ko": {
-"term": "섹터 연결",
-"def": "과거 자료에서 리스크가 섹터에 닿은 정도입니다. 직접, 강함, 보통, 사례, 미확인으로 나눕니다. '미확인'은 자료에서 믿을 만한 패턴이 나오지 않았다는 뜻입니다."
-}
-},
-"sector_band": {
-"en": {
-"term": "Sector band",
-"def": "Quiet, Normal or Strained: how many independent open risks touch a sector, weighted by link strength. It counts pressure. It does not predict returns."
-},
-"ko": {
-"term": "섹터 단계",
-"def": "잠잠, 평소, 긴장입니다. 서로 다른 열린 리스크가 그 섹터에 얼마나 닿는지를 연결 강도로 가중해 셉니다. 압력의 크기이지 수익률 예측이 아닙니다."
-}
-},
-"component_steps": {
-"en": {
-"term": "Steps (of a backdrop measure)",
-"def": "Each of the five backdrop measures is shown as 0 to 3 filled steps. Record and rule files call them Low (0), Moderate (1), High (2) and Extreme (3); card conditions call them Quiet, Normal, Strained and Extreme. The AFMX score is the filled steps out of 15, as a number out of 100."
-},
-"ko": {
-"term": "칸 (시장 배경 지표)",
-"def": "시장 배경의 다섯 지표는 각각 0칸에서 3칸까지 채워집니다. 기록 파일과 규칙 문서에는 Low(0칸), Moderate(1칸), High(2칸), Extreme(3칸)으로 적혀 있고, 카드 조건에서는 잠잠, 평소, 긴장, 극심이라고 부릅니다. AFMX 점수는 15칸 중 채워진 칸의 비율을 100점 만점으로 바꾼 것입니다."
-}
-},
-"ma200": {
-"en": {
-"term": "200-day average",
-"def": "The average closing price over the last 200 trading days, about ten months. A price below it is commonly read as a longer downtrend. Here it is only counted: how many sectors are below their own average."
-},
-"ko": {
-"term": "200일 평균",
-"def": "최근 200거래일(약 열 달) 종가의 평균입니다. 가격이 이보다 아래면 흔히 긴 흐름이 약하다고 읽습니다. 여기서는 자기 평균 아래에 있는 섹터가 몇 개인지만 셉니다."
-}
-},
-"hash_chain": {
-"en": {
-"term": "Hash chain",
-"def": "Each record carries a fingerprint of the one before it, so a past record cannot be changed without breaking every later one."
-},
-"ko": {
-"term": "해시 사슬",
-"def": "각 기록이 바로 앞 기록의 지문을 담고 있습니다. 그래서 과거 기록을 고치면 그 뒤 기록이 모두 어긋납니다."
-}
-},
-"x_date": {
-"en": {
-"term": "X-date",
-"def": "The day the US Treasury would run out of room to pay all its bills if the debt limit is not raised."
-},
-"ko": {
-"term": "자금 소진일",
-"def": "부채 한도를 올리지 않을 경우 미국 재무부가 모든 지출을 감당할 여력이 바닥나는 날입니다."
-}
-},
-"continuing_resolution": {
-"en": {
-"term": "Continuing resolution",
-"def": "A short-term US funding law that keeps the government open until a set date when the regular budget is not finished."
-},
-"ko": {
-"term": "임시예산",
-"def": "정규 예산이 확정되지 않았을 때 정해진 날까지 미국 정부를 운영하게 해 주는 단기 예산법입니다."
-}
-},
-"trading_day": {
-"en": {
-"term": "Trading day",
-"def": "A day the stock market is open. Weekends and holidays do not count, so 21 trading days is about a month and 63 about three months."
-},
-"ko": {
-"term": "거래일",
-"def": "주식시장이 열리는 날입니다. 주말과 공휴일은 세지 않으므로 21거래일이 약 한 달, 63거래일이 약 석 달입니다."
-}
-},
-"median": {
-"en": {
-"term": "Median",
-"def": "The middle value when past cases are lined up by size. One or two unusually large cases do not pull it, which is why it is used here in place of the average."
-},
-"ko": {
-"term": "중간값",
-"def": "과거 사례를 크기 순으로 줄 세웠을 때 한가운데 값입니다. 유난히 컸던 한두 번에 끌려가지 않아서 평균 대신 씁니다."
-}
-},
-"volatility": {
-"en": {
-"term": "Volatility and VIX",
-"def": "Volatility is how much prices swing. VIX is an index of how much the options market expects the S&P 500 to swing over the next month. It is often called the fear index."
-},
-"ko": {
-"term": "변동성과 VIX",
-"def": "변동성은 가격이 얼마나 크게 출렁이는지를 말합니다. VIX는 앞으로 한 달 동안 S&P 500이 얼마나 출렁일지에 대한 옵션 시장의 예상을 숫자로 만든 지수이고, 흔히 공포지수라고 부릅니다."
-}
-},
-"credit_spread": {
-"en": {
-"term": "Credit spread",
-"def": "The extra interest a company pays to borrow, compared with the government. When the spread widens, lenders are more worried about not being repaid."
-},
-"ko": {
-"term": "신용 스프레드",
-"def": "회사가 돈을 빌릴 때 정부보다 더 내야 하는 이자입니다. 이 차이가 벌어지면 돈을 빌려주는 쪽이 떼일 것을 더 걱정한다는 뜻입니다."
-}
-},
-"yield_curve": {
-"en": {
-"term": "Yield curve",
-"def": "The gap between interest rates on long and short government debt. Short rates above long rates is called an inversion, and in the past a recession often followed."
-},
-"ko": {
-"term": "금리 곡선",
-"def": "만기가 긴 국채와 짧은 국채의 금리 차이입니다. 짧은 쪽 금리가 더 높아지는 것을 역전이라고 하며, 과거에는 그 뒤에 경기 침체가 온 경우가 많았습니다."
-}
-},
-"financial_conditions": {
-"en": {
-"term": "Financial conditions",
-"def": "How easy it is to borrow and move money, summed up from interest rates, credit and markets. AFMX uses the Chicago Fed's index (NFCI)."
-},
-"ko": {
-"term": "금융 여건",
-"def": "돈을 빌리고 굴리기가 얼마나 쉬운지를 금리, 신용, 시장 지표로 종합한 것입니다. AFMX는 시카고 연준의 지수(NFCI)를 씁니다."
-}
-},
-"drawdown": {
-"en": {
-"term": "Drawdown",
-"def": "How far the price is below its recent high."
-},
-"ko": {
-"term": "낙폭",
-"def": "가격이 최근 고점에서 얼마나 내려와 있는지를 말합니다."
-}
-},
-"percentage_point": {
-"en": {
-"term": "Points against the market",
-"def": "The difference between two percentages, in percentage points. If the market rose 5% and a sector rose 2%, the sector is 3 points against the market."
-},
-"ko": {
-"term": "%p (퍼센트포인트)",
-"def": "두 퍼센트 수치의 차이입니다. 시장이 5% 오르고 어떤 섹터가 2% 올랐다면 그 섹터는 시장보다 3%p 뒤처진 것입니다."
-}
-},
-"hindsight": {
-"en": {
-"term": "Hindsight",
-"def": "A look back made after the outcome is known. Unlike conditions written in advance, it can be fitted to what happened, so it is kept apart from the AFMX record."
-},
-"ko": {
-"term": "사후 검증",
-"def": "결과를 이미 아는 상태에서 과거를 돌아본 것입니다. 미리 적어 둔 조건과 달리 결과에 맞춰 쓸 수 있으므로 AFMX 기록과 따로 둡니다."
-}
-},
-"timestamp": {
-"en": {
-"term": "Fingerprint and timestamp",
-"def": "A fingerprint (SHA-256) is a value computed from a file's contents; change one letter and the value changes. A timestamp proves the file already existed at a given time. AFMX uses OpenTimestamps, which anchors the proof to the Bitcoin blockchain."
-},
-"ko": {
-"term": "지문과 시각 증명",
-"def": "지문(SHA-256)은 파일 내용에서 계산한 값으로, 한 글자만 달라도 값이 바뀝니다. 시각 증명은 그 파일이 어느 시각에 이미 있었다는 것을 보여 줍니다. AFMX는 OpenTimestamps를 써서 비트코인 블록체인에 증명을 남깁니다."
-}
-},
-"etf": {
-"en": {
-"term": "ETF",
-"def": "A fund that holds a basket of stocks and trades like a single stock. Sector ETFs are listed on cards only to help you find the sector, not as a recommendation."
-},
-"ko": {
-"term": "ETF",
-"def": "여러 종목을 한 바구니에 담아 주식처럼 사고파는 펀드입니다. 카드에 적힌 섹터 ETF는 그 섹터를 찾아보기 쉽게 하려는 것이고 추천이 아닙니다."
-}
-},
-"residual": {
-"en": {
-"term": "Residual risk index",
-"def": "One number for how much unresolved risk is on AFMX's open cards. Each card counts as its reach (how much of the market it touches) times its expected stage (0 resolved, 1 still open, 2 worsened, from AFMX's own odds). It adds up AFMX's judgment. It does not measure the market, and its relation to prices has not been tested."
-},
-"ko": {
-"term": "남은 리스크 지수",
-"def": "AFMX의 열린 카드에 풀리지 않은 리스크가 얼마나 쌓여 있는지를 숫자 하나로 나타낸 것입니다. 카드마다 닿는 범위(시장의 얼마만큼에 닿는지)에 기대 단계(해소 0, 그대로 1, 악화 2. AFMX가 적은 확률로 계산)를 곱해 더합니다. AFMX의 판단을 더한 값이고 시장을 잰 값이 아닙니다. 가격과의 관계는 아직 시험하지 않았습니다."
-}
 }
 },
 "forecast_score": {
@@ -2759,12 +1023,7 @@
 "2026-ai-buildout-financing": {
 "technology": {
 "level": "direct",
-"direction": "lagged",
-"factor": "credit_widening",
-"mean_excess_pct": -0.16,
-"t": -5.2,
-"n": 734,
-"since": "1990"
+"direction": "lagged"
 },
 "communication": {
 "level": "direct",
@@ -2772,57 +1031,27 @@
 },
 "consumer_staples": {
 "level": "strong",
-"direction": "led",
-"factor": "credit_widening",
-"mean_excess_pct": 0.28,
-"t": 7.1,
-"n": 734,
-"since": "1990"
+"direction": "led"
 },
 "financials": {
 "level": "strong",
-"direction": "lagged",
-"factor": "credit_widening",
-"mean_excess_pct": -0.12,
-"t": -4.0,
-"n": 734,
-"since": "1990"
+"direction": "lagged"
 },
 "health_care": {
 "level": "strong",
-"direction": "led",
-"factor": "credit_widening",
-"mean_excess_pct": 0.18,
-"t": 5.8,
-"n": 734,
-"since": "1990"
+"direction": "led"
 },
 "industrials": {
 "level": "moderate",
-"direction": "lagged",
-"factor": "credit_widening",
-"mean_excess_pct": -0.06,
-"t": -2.7,
-"n": 734,
-"since": "1990"
+"direction": "lagged"
 },
 "materials": {
 "level": "moderate",
-"direction": "lagged",
-"factor": "credit_widening",
-"mean_excess_pct": -0.07,
-"t": -2.1,
-"n": 734,
-"since": "1990"
+"direction": "lagged"
 },
 "utilities": {
 "level": "strong",
-"direction": "led",
-"factor": "credit_widening",
-"mean_excess_pct": 0.24,
-"t": 6.0,
-"n": 734,
-"since": "1990"
+"direction": "led"
 }
 },
 "2026-china-domestic-demand-property": {
@@ -2836,30 +1065,15 @@
 },
 "consumer_staples": {
 "level": "strong",
-"direction": "led",
-"factor": "yuan_weakening",
-"mean_excess_pct": 0.25,
-"t": 4.1,
-"n": 263,
-"since": "2005"
+"direction": "led"
 },
 "energy": {
 "level": "strong",
-"direction": "lagged",
-"factor": "yuan_weakening",
-"mean_excess_pct": -0.44,
-"t": -3.3,
-"n": 263,
-"since": "2005"
+"direction": "lagged"
 },
 "health_care": {
 "level": "moderate",
-"direction": "led",
-"factor": "yuan_weakening",
-"mean_excess_pct": 0.09,
-"t": 2.3,
-"n": 263,
-"since": "2005"
+"direction": "led"
 },
 "industrials": {
 "level": "unconfirmed",
@@ -2867,41 +1081,21 @@
 },
 "materials": {
 "level": "strong",
-"direction": "lagged",
-"factor": "yuan_weakening",
-"mean_excess_pct": -0.3,
-"t": -5.6,
-"n": 263,
-"since": "2005"
+"direction": "lagged"
 },
 "utilities": {
 "level": "strong",
-"direction": "led",
-"factor": "yuan_weakening",
-"mean_excess_pct": 0.26,
-"t": 4.0,
-"n": 263,
-"since": "2005"
+"direction": "led"
 }
 },
 "2026-eurozone-inflation-ecb": {
 "technology": {
 "level": "moderate",
-"direction": "led",
-"factor": "euro_drop",
-"mean_excess_pct": 0.17,
-"t": 2.5,
-"n": 345,
-"since": "1999"
+"direction": "led"
 },
 "energy": {
 "level": "strong",
-"direction": "lagged",
-"factor": "euro_drop",
-"mean_excess_pct": -0.47,
-"t": -4.2,
-"n": 345,
-"since": "1999"
+"direction": "lagged"
 },
 "financials": {
 "level": "unconfirmed",
@@ -2909,68 +1103,33 @@
 },
 "industrials": {
 "level": "strong",
-"direction": "lagged",
-"factor": "euro_drop",
-"mean_excess_pct": -0.13,
-"t": -3.5,
-"n": 345,
-"since": "1999"
+"direction": "lagged"
 },
 "materials": {
 "level": "strong",
-"direction": "lagged",
-"factor": "euro_drop",
-"mean_excess_pct": -0.3,
-"t": -6.0,
-"n": 345,
-"since": "1999"
+"direction": "lagged"
 },
 "real_estate": {
 "level": "moderate",
-"direction": "lagged",
-"factor": "euro_drop",
-"mean_excess_pct": -0.23,
-"t": -2.6,
-"n": 345,
-"since": "1999"
+"direction": "lagged"
 },
 "utilities": {
 "level": "moderate",
-"direction": "lagged",
-"factor": "euro_drop",
-"mean_excess_pct": -0.14,
-"t": -2.1,
-"n": 345,
-"since": "1999"
+"direction": "lagged"
 }
 },
 "2026-fed-rate-hikes": {
 "technology": {
 "level": "strong",
-"direction": "led",
-"factor": "short_rates_up",
-"mean_excess_pct": 0.25,
-"t": 4.6,
-"n": 468,
-"since": "1990"
+"direction": "led"
 },
 "consumer_staples": {
 "level": "strong",
-"direction": "lagged",
-"factor": "long_rates_up",
-"mean_excess_pct": -0.27,
-"t": -5.4,
-"n": 469,
-"since": "1990"
+"direction": "lagged"
 },
 "energy": {
 "level": "moderate",
-"direction": "led",
-"factor": "long_rates_up",
-"mean_excess_pct": 0.2,
-"t": 2.2,
-"n": 469,
-"since": "1990"
+"direction": "led"
 },
 "financials": {
 "level": "unconfirmed",
@@ -2978,21 +1137,11 @@
 },
 "health_care": {
 "level": "strong",
-"direction": "lagged",
-"factor": "long_rates_up",
-"mean_excess_pct": -0.24,
-"t": -5.8,
-"n": 469,
-"since": "1990"
+"direction": "lagged"
 },
 "materials": {
 "level": "strong",
-"direction": "led",
-"factor": "long_rates_up",
-"mean_excess_pct": 0.13,
-"t": 3.4,
-"n": 469,
-"since": "1990"
+"direction": "led"
 },
 "real_estate": {
 "level": "unconfirmed",
@@ -3000,41 +1149,21 @@
 },
 "utilities": {
 "level": "strong",
-"direction": "lagged",
-"factor": "long_rates_up",
-"mean_excess_pct": -0.36,
-"t": -6.1,
-"n": 469,
-"since": "1990"
+"direction": "lagged"
 }
 },
 "2026-japan-boj-tightening-yen": {
 "consumer_staples": {
 "level": "strong",
-"direction": "led",
-"factor": "yen_surge",
-"mean_excess_pct": 0.18,
-"t": 3.7,
-"n": 458,
-"since": "1990"
+"direction": "led"
 },
 "financials": {
 "level": "strong",
-"direction": "lagged",
-"factor": "yen_surge",
-"mean_excess_pct": -0.18,
-"t": -4.4,
-"n": 458,
-"since": "1990"
+"direction": "lagged"
 },
 "utilities": {
 "level": "strong",
-"direction": "led",
-"factor": "yen_surge",
-"mean_excess_pct": 0.19,
-"t": 3.6,
-"n": 458,
-"since": "1990"
+"direction": "led"
 }
 },
 "2026-nvidia-sec-and-leadership": {
@@ -3052,48 +1181,23 @@
 "2026-us-appropriations-lapse": {
 "technology": {
 "level": "strong",
-"direction": "lagged",
-"factor": "volatility_spike",
-"mean_excess_pct": -0.37,
-"t": -9.1,
-"n": 463,
-"since": "1990"
+"direction": "lagged"
 },
 "consumer_staples": {
 "level": "strong",
-"direction": "led",
-"factor": "volatility_spike",
-"mean_excess_pct": 0.93,
-"t": 19.0,
-"n": 463,
-"since": "1990"
+"direction": "led"
 },
 "financials": {
 "level": "strong",
-"direction": "lagged",
-"factor": "volatility_spike",
-"mean_excess_pct": -0.4,
-"t": -8.2,
-"n": 463,
-"since": "1990"
+"direction": "lagged"
 },
 "health_care": {
 "level": "strong",
-"direction": "led",
-"factor": "volatility_spike",
-"mean_excess_pct": 0.41,
-"t": 10.4,
-"n": 463,
-"since": "1990"
+"direction": "led"
 },
 "utilities": {
 "level": "strong",
-"direction": "led",
-"factor": "volatility_spike",
-"mean_excess_pct": 0.91,
-"t": 17.2,
-"n": 463,
-"since": "1990"
+"direction": "led"
 }
 },
 "2026-us-excess-capacity-tariffs": {
@@ -3103,123 +1207,57 @@
 },
 "consumer_discretionary": {
 "level": "case",
-"direction": "led",
-"case": "2018-us-china-tariffs",
-"excess_pct": 5.7,
-"start": "2018-03-22",
-"end": "2018-09-19",
-"case_en": "2018 US tariffs on Chinese goods",
-"case_ko": "2018년 미국의 대중국 관세"
+"direction": "led"
 },
 "consumer_staples": {
 "level": "strong",
-"direction": "led",
-"factor": "dollar_surge",
-"mean_excess_pct": 0.31,
-"t": 4.4,
-"n": 257,
-"since": "2006"
+"direction": "led"
 },
 "energy": {
 "level": "strong",
-"direction": "lagged",
-"factor": "dollar_surge",
-"mean_excess_pct": -0.93,
-"t": -6.1,
-"n": 257,
-"since": "2006"
+"direction": "lagged"
 },
 "financials": {
 "level": "moderate",
-"direction": "lagged",
-"factor": "dollar_surge",
-"mean_excess_pct": -0.16,
-"t": -2.0,
-"n": 257,
-"since": "2006"
+"direction": "lagged"
 },
 "health_care": {
 "level": "strong",
-"direction": "led",
-"factor": "dollar_surge",
-"mean_excess_pct": 0.2,
-"t": 3.7,
-"n": 257,
-"since": "2006"
+"direction": "led"
 },
 "industrials": {
 "level": "strong",
-"direction": "lagged",
-"factor": "dollar_surge",
-"mean_excess_pct": -0.36,
-"t": -7.1,
-"n": 257,
-"since": "2006"
+"direction": "lagged"
 },
 "materials": {
 "level": "strong",
-"direction": "lagged",
-"factor": "dollar_surge",
-"mean_excess_pct": -0.5,
-"t": -8.3,
-"n": 257,
-"since": "2006"
+"direction": "lagged"
 },
 "real_estate": {
 "level": "strong",
-"direction": "lagged",
-"factor": "dollar_surge",
-"mean_excess_pct": -0.59,
-"t": -5.1,
-"n": 257,
-"since": "2006"
+"direction": "lagged"
 },
 "utilities": {
 "level": "strong",
-"direction": "led",
-"factor": "yuan_weakening",
-"mean_excess_pct": 0.26,
-"t": 4.0,
-"n": 263,
-"since": "2005"
+"direction": "led"
 }
 },
 "2026-us-iran-war-oil": {
 "consumer_discretionary": {
 "level": "strong",
-"direction": "lagged",
-"factor": "oil_spike",
-"mean_excess_pct": -0.19,
-"t": -5.0,
-"n": 423,
-"since": "1990"
+"direction": "lagged"
 },
 "consumer_staples": {
 "level": "strong",
-"direction": "lagged",
-"factor": "oil_spike",
-"mean_excess_pct": -0.24,
-"t": -4.6,
-"n": 423,
-"since": "1990"
+"direction": "lagged"
 },
 "energy": {
 "level": "direct",
-"direction": "led",
-"factor": "oil_spike",
-"mean_excess_pct": 1.37,
-"t": 12.9,
-"n": 423,
-"since": "1990"
+"direction": "led"
 },
 "health_care": {
 "level": "strong",
-"direction": "lagged",
-"factor": "oil_spike",
-"mean_excess_pct": -0.17,
-"t": -3.9,
-"n": 423,
-"since": "1990"
+"direction": "lagged"
 },
 "industrials": {
 "level": "unconfirmed",
@@ -3227,142 +1265,67 @@
 },
 "materials": {
 "level": "strong",
-"direction": "led",
-"factor": "oil_spike",
-"mean_excess_pct": 0.18,
-"t": 3.9,
-"n": 423,
-"since": "1990"
+"direction": "led"
 }
 },
 "2026-us-private-credit-defaults": {
 "technology": {
 "level": "strong",
-"direction": "lagged",
-"factor": "credit_widening",
-"mean_excess_pct": -0.16,
-"t": -5.2,
-"n": 734,
-"since": "1990"
+"direction": "lagged"
 },
 "consumer_staples": {
 "level": "strong",
-"direction": "led",
-"factor": "credit_widening",
-"mean_excess_pct": 0.28,
-"t": 7.1,
-"n": 734,
-"since": "1990"
+"direction": "led"
 },
 "financials": {
 "level": "direct",
-"direction": "lagged",
-"factor": "credit_widening",
-"mean_excess_pct": -0.12,
-"t": -4.0,
-"n": 734,
-"since": "1990"
+"direction": "lagged"
 },
 "health_care": {
 "level": "strong",
-"direction": "led",
-"factor": "credit_widening",
-"mean_excess_pct": 0.18,
-"t": 5.8,
-"n": 734,
-"since": "1990"
+"direction": "led"
 },
 "industrials": {
 "level": "moderate",
-"direction": "lagged",
-"factor": "credit_widening",
-"mean_excess_pct": -0.06,
-"t": -2.7,
-"n": 734,
-"since": "1990"
+"direction": "lagged"
 },
 "materials": {
 "level": "moderate",
-"direction": "lagged",
-"factor": "credit_widening",
-"mean_excess_pct": -0.07,
-"t": -2.1,
-"n": 734,
-"since": "1990"
+"direction": "lagged"
 },
 "utilities": {
 "level": "strong",
-"direction": "led",
-"factor": "credit_widening",
-"mean_excess_pct": 0.24,
-"t": 6.0,
-"n": 734,
-"since": "1990"
+"direction": "led"
 }
 },
 "2027-us-debt-limit": {
 "technology": {
 "level": "strong",
-"direction": "lagged",
-"factor": "volatility_spike",
-"mean_excess_pct": -0.37,
-"t": -9.1,
-"n": 463,
-"since": "1990"
+"direction": "lagged"
 },
 "consumer_staples": {
 "level": "strong",
-"direction": "led",
-"factor": "volatility_spike",
-"mean_excess_pct": 0.93,
-"t": 19.0,
-"n": 463,
-"since": "1990"
+"direction": "led"
 },
 "financials": {
 "level": "strong",
-"direction": "lagged",
-"factor": "volatility_spike",
-"mean_excess_pct": -0.4,
-"t": -8.2,
-"n": 463,
-"since": "1990"
+"direction": "lagged"
 },
 "health_care": {
 "level": "strong",
-"direction": "led",
-"factor": "volatility_spike",
-"mean_excess_pct": 0.41,
-"t": 10.4,
-"n": 463,
-"since": "1990"
+"direction": "led"
 },
 "industrials": {
 "level": "moderate",
-"direction": "lagged",
-"factor": "credit_widening",
-"mean_excess_pct": -0.06,
-"t": -2.7,
-"n": 734,
-"since": "1990"
+"direction": "lagged"
 },
 "materials": {
 "level": "moderate",
-"direction": "lagged",
-"factor": "credit_widening",
-"mean_excess_pct": -0.07,
-"t": -2.1,
-"n": 734,
-"since": "1990"
+"direction": "lagged"
 },
 "utilities": {
 "level": "strong",
-"direction": "led",
-"factor": "volatility_spike",
-"mean_excess_pct": 0.91,
-"t": 17.2,
-"n": 463,
-"since": "1990"
+"direction": "led"
 }
 }
 },
@@ -3559,763 +1522,12 @@
 },
 "score_version": 2,
 "mapping_version": 1,
-"card_factors": {
-"2026-us-appropriations-lapse": [
-"volatility_spike"
-],
-"2027-us-debt-limit": [
-"volatility_spike",
-"credit_widening"
-],
-"2026-nvidia-sec-and-leadership": [],
-"2026-us-ai-chip-export-rules": [],
-"2026-ai-buildout-financing": [
-"credit_widening"
-],
-"2026-us-excess-capacity-tariffs": [
-"dollar_surge",
-"yuan_weakening"
-],
-"2026-fed-rate-hikes": [
-"short_rates_up",
-"long_rates_up"
-],
-"2026-us-iran-war-oil": [
-"oil_spike"
-],
-"2026-japan-boj-tightening-yen": [
-"yen_surge"
-],
-"2026-us-private-credit-defaults": [
-"credit_widening"
-],
-"2026-eurozone-inflation-ecb": [
-"euro_drop"
-],
-"2026-china-domestic-demand-property": [
-"yuan_weakening"
-]
-},
+"card_factors": {},
 "sensitivity_generated": "2026-11-26T07:01:45Z",
 "waves": {
 "2026-us-iran-war-oil": {
 "kind": "oil",
 "n": 14,
-"series": [
-{
-"k": "now",
-"y": "2026",
-"now": true,
-"p": [
-26.8,
-37.0,
-35.0,
-28.6,
-30.2,
-46.5,
-47.7,
-44.6,
-55.1,
-69.0,
-58.9,
-69.5,
-48.5,
-55.2,
-56.2,
-62.3,
-73.9,
-74.4,
-81.3,
-71.1,
-82.6,
-97.8,
-74.8,
-70.4,
-70.4,
-76.4,
-69.9,
-64.5,
-66.9,
-41.2,
-48.0,
-51.9,
-62.4,
-62.1,
-60.1,
-63.0,
-68.3,
-77.7,
-77.8,
-69.3,
-63.9,
-48.4,
-45.7,
-48.1,
-51.9,
-59.4,
-57.8,
-58.7,
-63.1,
-67.1,
-64.1,
-55.9,
-51.5,
-53.0,
-47.1,
-39.0,
-36.6,
-32.9,
-40.7,
-41.0,
-45.5,
-41.7,
-39.2,
-39.5,
-34.8,
-37.0,
-32.9,
-26.9,
-20.7,
-15.2,
-15.0,
-13.6,
-15.2,
-9.5,
-8.3,
-3.2,
-5.5,
-0.4,
-2.5,
-0.8,
--0.9,
--1.9,
--1.7,
--0.4,
-2.7,
-9.5,
-6.6,
-6.4,
-16.8,
-19.8,
-18.9,
-16.3,
-21.7,
-24.5,
-34.3,
-34.7,
-50.7,
-43.6,
-31.4,
-22.4,
-31.6,
-31.5,
-38.8,
-27.2,
-23.8,
-24.0,
-28.3,
-25.4,
-32.7,
-33.5,
-32.4,
-31.7,
-31.7,
-32.3,
-36.4,
-32.2,
-34.5,
-38.7,
-32.7,
-26.3,
-25.6,
-29.1,
-28.5,
-37.4,
-39.7,
-43.9,
-46.3,
-49.5,
-51.9,
-56.7,
-73.2,
-69.0,
-73.5,
-87.2,
-83.0,
-73.4,
-71.3,
-66.2,
-64.4,
-68.1,
-73.1,
-66.0,
-71.7,
-63.1,
-65.9,
-64.3,
-93.9,
-79.6,
-79.5,
-80.3,
-86.3,
-86.1,
-86.0,
-80.0,
-81.1,
-80.8,
-70.8,
-70.1,
-64.9,
-68.0,
-79.5,
-83.6,
-83.4,
-76.2,
-70.6,
-65.0,
-72.0,
-53.7,
-53.2,
-31.4,
-40.2,
-40.0,
-30.3,
-29.0,
-31.9,
-36.6,
-36.2,
-33.0,
-33.0,
-32.9,
-36.2,
-32.8,
-30.5,
-31.4
-]
-},
-{
-"k": "a",
-"y": "1990",
-"en": "1990 Iraq invades Kuwait",
-"ko": "1990년 이라크의 쿠웨이트 침공",
-"p": [
-57.2,
-77.7,
-78.2,
-63.8,
-68.7,
-71.3,
-73.5,
-76.5,
-72.8,
-77.2,
-85.3,
-88.3,
-89.3,
-98.4,
-110.7,
-106.2,
-80.1,
-80.1,
-80.1,
-79.2,
-81.1,
-98.9,
-96.0,
-103.5,
-109.4,
-104.9,
-104.9,
-109.1,
-103.8,
-107.7,
-117.3,
-127.4,
-134.2,
-128.5,
-132.2,
-140.7,
-165.5,
-159.9,
-166.1,
-170.0,
-167.1,
-153.7,
-130.9,
-144.6,
-142.3,
-154.4,
-155.4,
-166.4,
-161.9,
-168.1,
-159.9,
-149.4,
-153.6,
-130.2,
-132.2,
-116.3,
-78.8,
-88.6,
-96.1,
-114.3,
-119.7,
-125.7,
-131.3,
-123.5,
-132.2,
-128.3,
-120.2,
-116.3,
-125.1,
-127.0,
-123.1,
-114.0,
-119.2,
-108.1,
-109.8,
-99.0,
-101.0,
-96.1,
-99.7,
-104.6,
-108.8,
-128.7,
-126.9,
-122.1,
-125.7,
-103.3,
-103.6,
-105.2,
-96.7,
-78.2,
-84.4,
-87.3,
-82.6,
-77.7,
-81.1,
-85.3,
-83.7,
-79.5,
-83.3,
-79.5,
-75.2,
-80.5,
-80.5,
-76.2,
-78.7,
-84.7,
-74.5,
-63.2,
-56.9,
-68.9,
-67.6,
-45.6,
-73.2,
-69.7,
-92.5,
-90.6,
-97.3,
-37.5,
-24.4,
-25.4,
-35.0,
-44.3,
-36.2,
-35.5,
-32.9,
-35.2,
-36.5,
-34.9,
-35.5,
-33.2,
-31.6,
-36.4,
-36.2,
-34.5,
-38.3,
-37.5,
-36.8,
-33.6,
-19.5,
-15.2,
-16.3,
-22.1,
-20.8,
-16.0,
-16.2,
-17.3,
-21.5,
-27.0,
-25.9,
-31.6,
-30.6,
-29.3,
-28.0,
-24.4,
-21.2,
-20.1,
-32.4,
-30.2,
-24.1,
-19.2,
-23.5,
-23.6,
-22.5,
-23.5,
-21.2,
-19.5,
-18.2,
-17.3,
-17.3,
-14.9,
-15.6,
-17.3,
-19.5,
-21.0,
-21.2,
-25.4,
-27.0,
-29.8,
-31.8,
-29.6,
-29.3,
-26.4,
-25.0,
-28.9,
-27.7,
-27.4,
-27.7,
-27.9,
-30.0,
-28.3,
-28.3,
-28.3,
-27.4,
-29.0,
-29.3,
-29.0,
-30.8,
-27.2,
-25.4,
-23.5,
-22.5,
-22.1,
-22.1,
-23.1,
-24.0,
-21.0,
-22.3,
-22.7,
-23.8,
-22.1,
-22.0,
-23.8,
-23.8,
-22.7,
-21.4,
-17.5,
-19.1,
-17.3,
-16.3,
-15.5,
-17.3,
-15.3,
-16.3,
-17.3,
-16.5,
-18.2,
-20.1,
-18.4,
-18.2,
-17.9,
-17.8,
-20.4,
-20.7,
-20.8,
-20.5,
-20.4,
-21.8,
-23.6,
-24.0,
-25.3,
-25.1,
-28.9,
-27.7,
-29.2,
-31.1,
-32.1,
-32.1,
-30.8,
-27.6,
-25.9,
-28.5,
-27.6,
-26.9
-]
-},
-{
-"k": "b",
-"y": "2022",
-"en": "2022 Russia invades Ukraine",
-"ko": "2022년 러시아의 우크라이나 침공",
-"p": [
-21.7,
-22.8,
-23.0,
-23.0,
-20.2,
-22.6,
-25.0,
-24.3,
-25.4,
-26.6,
-23.7,
-25.3,
-27.4,
-32.7,
-33.3,
-31.7,
-30.1,
-32.1,
-33.6,
-39.3,
-34.9,
-33.5,
-30.6,
-31.8,
-35.6,
-35.3,
-36.1,
-38.8,
-35.1,
-41.3,
-52.0,
-63.0,
-58.1,
-69.7,
-76.8,
-82.5,
-59.8,
-57.0,
-61.9,
-51.3,
-44.1,
-43.4,
-55.5,
-56.7,
-67.6,
-66.5,
-74.8,
-69.9,
-68.1,
-56.9,
-54.6,
-58.4,
-47.0,
-45.4,
-48.2,
-46.1,
-38.2,
-36.8,
-38.8,
-34.2,
-43.1,
-48.7,
-51.9,
-44.6,
-44.0,
-46.9,
-44.1,
-36.0,
-41.0,
-41.6,
-45.0,
-48.5,
-43.8,
-51.5,
-53.6,
-56.0,
-46.2,
-40.6,
-47.6,
-48.1,
-53.7,
-57.4,
-54.7,
-50.8,
-55.2,
-55.7,
-57.8,
-58.7,
-59.5,
-64.2,
-66.1,
-68.6,
-72.0,
-67.5,
-72.2,
-71.3,
-73.9,
-77.1,
-76.1,
-74.6,
-76.0,
-74.1,
-71.2,
-72.4,
-63.4,
-62.1,
-62.4,
-58.3,
-56.9,
-60.8,
-64.0,
-67.5,
-65.5,
-64.1,
-63.4,
-66.9,
-51.4,
-48.7,
-55.4,
-56.2,
-57.4,
-46.6,
-46.9,
-47.6,
-53.8,
-60.7,
-57.5,
-58.8,
-54.6,
-46.3,
-48.3,
-47.1,
-50.3,
-50.3,
-52.8,
-45.4,
-46.0,
-39.5,
-34.3,
-37.5,
-41.8,
-42.3,
-44.0,
-46.9,
-42.1,
-34.6,
-30.7,
-33.2,
-32.0,
-32.2,
-30.3,
-36.3,
-36.9,
-35.4,
-38.6,
-36.1,
-32.3,
-26.4,
-27.6,
-29.1,
-25.3,
-19.0,
-20.6,
-25.6,
-28.1,
-26.1,
-27.2,
-22.4,
-22.6,
-22.8,
-23.1,
-23.9,
-15.5,
-13.1,
-17.8,
-22.7,
-22.5,
-21.8,
-24.3,
-28.5,
-29.3,
-31.1,
-35.5,
-33.1,
-30.4,
-28.1,
-30.4,
-26.4,
-24.8,
-22.6,
-25.2,
-25.4,
-25.8,
-25.5,
-25.8,
-27.4,
-29.1,
-29.7,
-27.9,
-30.4,
-31.7,
-30.6,
-36.4,
-36.9,
-32.7,
-27.5,
-29.2,
-32.1,
-28.3,
-29.2,
-26.9,
-24.7,
-21.9,
-21.2,
-21.5,
-17.7,
-17.3,
-14.3,
-14.4,
-14.0,
-17.3,
-18.2,
-18.6,
-14.2,
-9.5,
-5.7,
-4.2,
-4.7,
-6.9,
-9.8,
-14.2,
-12.8,
-9.9,
-11.9,
-8.9,
-10.0,
-9.1,
-13.0,
-12.0,
-10.9,
-13.5,
-10.1,
-3.2,
-5.2,
-4.7,
-6.2,
-7.4,
-11.2,
-13.2,
-14.3,
-13.3,
-15.6,
-14.8
-]
-}
-],
 "x0": 0,
 "fall_med": -8.1,
 "fall_min": -20.8,
@@ -4340,276 +1552,6 @@
 "2026-us-excess-capacity-tariffs": {
 "kind": "tariff",
 "x0": 1,
-"series": [
-{
-"k": "a",
-"y": "2018",
-"en": "2018 US tariffs on Chinese goods",
-"ko": "2018년 미국의 대중국 관세",
-"p": [
--2.5,
--4.6,
--2.0,
--3.8,
--4.2,
--2.8,
--5.0,
--3.8,
--2.7,
--2.0,
--4.1,
--3.8,
--2.1,
--2.6,
--1.7,
--2.1,
--1.3,
--0.2,
--0.0,
--0.5,
--1.3,
--1.4,
--2.6,
--2.5,
--1.6,
--1.6,
--2.3,
--2.1,
--2.7,
--2.9,
--1.6,
--1.2,
--1.2,
--0.3,
-0.6,
-0.8,
-0.9,
-0.3,
-0.8,
-0.9,
-0.6,
-1.4,
-0.9,
-1.3,
-1.1,
-0.9,
--0.1,
-1.2,
-0.5,
-1.6,
-2.1,
-2.2,
-3.1,
-3.0,
-3.3,
-3.4,
-3.7,
-3.4,
-3.7,
-3.6,
-3.5,
-3.1,
-3.4,
-2.6,
-2.8,
-1.2,
-1.5,
-0.5,
-1.1,
-1.2,
-1.5,
-1.1,
-2.0,
-2.9,
-3.9,
-4.1,
-3.4,
-4.3,
-4.4,
-4.2,
-4.7,
-5.0,
-4.7,
-4.6,
-4.7,
-5.0,
-5.9,
-5.7,
-4.8,
-4.1,
-4.6,
-4.5,
-5.2,
-5.5,
-6.0,
-6.3,
-6.3,
-6.3,
-5.6,
-5.2,
-5.9,
-5.0,
-5.9,
-6.2,
-6.5,
-6.8,
-6.9,
-6.7,
-7.4,
-8.2,
-8.2,
-8.8,
-8.4,
-8.5,
-8.4,
-7.9,
-7.5,
-7.3,
-7.5,
-7.9,
-8.0,
-8.5,
-8.6,
-7.9,
-8.5,
-8.5
-]
-},
-{
-"k": "b",
-"y": "2025",
-"en": "2025 US 'reciprocal' tariffs",
-"ko": "2025년 미국의 상호 관세",
-"p": [
-0.8,
--4.3,
--10.0,
--10.2,
--11.6,
--3.1,
--6.5,
--4.8,
--4.1,
--4.2,
--6.3,
--6.1,
--8.3,
--5.9,
--4.3,
--2.2,
--1.6,
--1.5,
--0.9,
--0.8,
--0.2,
-1.4,
-0.7,
--0.1,
-0.3,
-1.1,
-1.0,
-4.4,
-5.3,
-5.4,
-5.7,
-6.5,
-6.6,
-6.2,
-4.4,
-4.4,
-3.7,
-5.9,
-5.2,
-5.6,
-5.6,
-6.0,
-6.8,
-6.8,
-6.2,
-7.4,
-7.5,
-8.1,
-7.8,
-8.1,
-6.9,
-7.9,
-7.0,
-7.1,
-6.9,
-7.9,
-9.2,
-9.1,
-10.1,
-10.6,
-11.2,
-11.1,
-11.7,
-12.7,
-11.8,
-11.7,
-12.5,
-12.8,
-12.3,
-12.6,
-12.0,
-12.4,
-13.1,
-13.1,
-13.2,
-13.3,
-14.2,
-14.2,
-14.7,
-14.8,
-14.4,
-14.2,
-13.9,
-11.9,
-13.7,
-13.2,
-14.0,
-13.9,
-14.7,
-14.5,
-15.9,
-16.4,
-16.3,
-16.0,
-16.1,
-15.3,
-15.0,
-14.6,
-16.5,
-16.0,
-16.5,
-16.8,
-17.2,
-16.5,
-15.8,
-16.3,
-17.3,
-17.1,
-17.4,
-17.7,
-18.2,
-19.2,
-19.0,
-19.7,
-19.6,
-19.5,
-20.2,
-20.7,
-21.3,
-20.6,
-20.2,
-19.5,
-20.2,
-20.6,
-20.9,
-21.4
-]
-}
-],
 "eps": [
 {
 "y": "2018",
@@ -4633,222 +1575,6 @@
 }
 },
 "past": {
-"cards": {
-"2026-us-iran-war-oil": [
-{
-"en": "1990 Iraq invades Kuwait",
-"ko": "1990년 이라크의 쿠웨이트 침공",
-"start": "1990-08-02",
-"src": "https://digitallibrary.un.org/record/94220",
-"fall": -17.5,
-"day": 50,
-"rec": 37,
-"end6": -2.8
-},
-{
-"en": "2022 Russia invades Ukraine",
-"ko": "2022년 러시아의 우크라이나 침공",
-"start": "2022-02-24",
-"src": "https://www.eia.gov/todayinenergy/detail.php?id=51498",
-"fall": -14.0,
-"day": 79,
-"rec": 22,
-"end6": -1.8
-}
-],
-"2026-us-excess-capacity-tariffs": [
-{
-"en": "2018 US tariffs on Chinese goods",
-"ko": "2018년 미국의 대중국 관세",
-"start": "2018-03-22",
-"src": "https://trumpwhitehouse.archives.gov/presidential-actions/presidential-memorandum-actions-united-states-related-section-301-investigation/",
-"fall": -5.0,
-"day": 7,
-"rec": 3,
-"end6": 8.5
-},
-{
-"en": "2025 US 'reciprocal' tariffs",
-"ko": "2025년 미국의 상호 관세",
-"start": "2025-04-02",
-"src": "https://www.govinfo.gov/content/pkg/FR-2025-04-07/html/2025-06063.htm",
-"fall": -11.6,
-"day": 5,
-"rec": 1,
-"end6": 21.4
-}
-],
-"2026-us-appropriations-lapse": [
-{
-"en": "2013 US government shutdown",
-"ko": "2013년 미국 정부 셧다운",
-"start": "2013-09-30",
-"src": "https://history.house.gov/Institution/Shutdown/Government-Shutdowns/",
-"fall": -2.2,
-"day": 8,
-"rec": 1,
-"end6": 11.7,
-"end": "2013-10-17",
-"days": 16
-},
-{
-"en": "2018 US government shutdown",
-"ko": "2018년 미국 정부 셧다운",
-"start": "2018-12-21",
-"src": "https://history.house.gov/Institution/Shutdown/Government-Shutdowns/",
-"fall": -4.6,
-"day": 2,
-"rec": 1,
-"end6": 20.7,
-"end": "2019-01-25",
-"days": 34
-}
-],
-"2027-us-debt-limit": [
-{
-"en": "2011 US debt limit standoff",
-"ko": "2011년 미국 부채 한도 대치",
-"start": "2011-05-16",
-"src": "https://www.gao.gov/assets/600/592835.txt",
-"fall": -18.7,
-"day": 98,
-"rec": 9,
-"end6": -7.6,
-"end": "2011-08-02",
-"days": 78
-},
-{
-"en": "2013 US debt limit standoff",
-"ko": "2013년 미국 부채 한도 대치",
-"start": "2013-05-17",
-"src": "https://www.gao.gov/assets/680/671817.pdf",
-"fall": -4.2,
-"day": 26,
-"rec": 3,
-"end6": 10.5,
-"end": "2013-10-17",
-"days": 153
-}
-],
-"2026-fed-rate-hikes": [
-{
-"en": "1994 Fed rate rises",
-"ko": "1994년 연준 금리 인상",
-"start": "1994-02-04",
-"src": "https://www.federalreserve.gov/monetarypolicy/openmarket_archive.htm",
-"fall": -8.4,
-"day": 97,
-"rec": 34,
-"end6": -5.2,
-"end": "1995-02-01",
-"days": 362
-},
-{
-"en": "2022 Fed rate rises",
-"ko": "2022년 연준 금리 인상",
-"start": "2022-03-17",
-"src": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
-"fall": -16.6,
-"day": 64,
-"rec": 27,
-"end6": -9.9,
-"end": "2023-07-27",
-"days": 497
-}
-],
-"2026-eurozone-inflation-ecb": [
-{
-"en": "2011 ECB rate rises",
-"ko": "2011년 ECB 금리 인상",
-"start": "2011-04-13",
-"src": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
-"fall": -17.1,
-"day": 120,
-"rec": 7,
-"end6": -9.3,
-"end": "2011-11-09",
-"days": 210
-},
-{
-"en": "2022 ECB rate rises",
-"ko": "2022년 ECB 금리 인상",
-"start": "2022-07-27",
-"src": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
-"fall": -7.6,
-"day": 57,
-"rec": 5,
-"end6": 3.6,
-"end": "2023-09-20",
-"days": 420
-}
-],
-"2026-japan-boj-tightening-yen": [
-{
-"en": "2024 Bank of Japan rate rise",
-"ko": "2024년 일본은행 금리 인상",
-"start": "2024-07-31",
-"src": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2024/k240731a.pdf",
-"fall": -5.1,
-"day": 4,
-"rec": 4,
-"end6": 13.5
-}
-],
-"2026-china-domestic-demand-property": [
-{
-"en": "2015 China changes its yuan fixing",
-"ko": "2015년 중국 위안화 기준환율 방식 변경",
-"start": "2015-08-11",
-"src": "https://www.imf.org/External/AM/2015/imfc/statement/eng/chn.pdf",
-"fall": -13.3,
-"day": 126,
-"rec": 15,
-"end6": -13.3
-}
-],
-"2026-us-private-credit-defaults": [
-{
-"en": "2015 Third Avenue credit fund halts redemptions",
-"ko": "2015년 서드애비뉴 신용 펀드 환매 중단",
-"start": "2015-12-10",
-"src": "https://www.sec.gov/files/rules/ic/2015/ic-31943.pdf",
-"fall": -11.5,
-"day": 43,
-"rec": 6,
-"end6": 3.2
-}
-],
-"2026-ai-buildout-financing": [
-{
-"en": "2002 WorldCom accounting fraud (telecom buildout)",
-"ko": "2002년 월드컴 회계 부정 (통신망 투자 붐)",
-"start": "2002-06-26",
-"src": "https://www.sec.gov/enforcement-litigation/litigation-releases/lr-17588",
-"fall": -19.9,
-"day": 74,
-"rec": 4,
-"end6": -6.7
-}
-],
-"2026-us-ai-chip-export-rules": [
-{
-"en": "2022 US advanced chip export controls",
-"ko": "2022년 미국 첨단 반도체 수출 통제",
-"start": "2022-10-07",
-"src": "https://www.govinfo.gov/content/pkg/FR-2022-10-13/html/2022-21658.htm",
-"fall": -4.6,
-"day": 6,
-"rec": 1,
-"end6": 9.3
-}
-]
-},
-"none": {
-"2026-nvidia-sec-and-leadership": {
-"en": "No past case is measured for this card. It is about one company, and the market-wide measure used here would not describe it.",
-"ko": "이 카드에는 과거 사례를 재지 않았습니다. 한 회사의 일이라 여기서 쓰는 시장 전체 지표로는 설명되지 않습니다."
-}
-},
 "base_fall": -3.8
 },
 "market": {
@@ -4856,181 +1582,40 @@
 "at": "03:53",
 "cards": {
 "2026-us-iran-war-oil": {
-"verdict": "does_not_show",
-"none": null,
-"readings": [
-{
-"en": "Brent crude, spot",
-"ko": "브렌트유 현물",
-"unit": "usd",
-"value": 91.8,
-"as_of": "2026-11-24",
-"percentile_5y": 73,
-"shows": false,
-"rule": "high_in_5y"
-},
-{
-"en": "Inflation priced into 5-year Treasuries",
-"ko": "5년 국채에 반영된 기대 물가",
-"unit": "pct",
-"value": 2.16,
-"as_of": "2026-11-27",
-"percentile_5y": 10,
-"shows": false,
-"rule": "high_in_5y"
-}
-]
+"verdict": "does_not_show"
 },
 "2026-fed-rate-hikes": {
-"verdict": "shows",
-"none": null,
-"readings": [
-{
-"en": "2-year Treasury yield minus the top of the Fed's target range",
-"ko": "2년 국채 금리에서 연준 목표 범위 상단을 뺀 값",
-"unit": "pt",
-"value": 0.61,
-"as_of": "2026-11-25",
-"percentile_5y": 80,
-"shows": true,
-"rule": "above_zero"
-},
-{
-"en": "Inflation priced into 5-year Treasuries",
-"ko": "5년 국채에 반영된 기대 물가",
-"unit": "pct",
-"value": 2.16,
-"as_of": "2026-11-27",
-"percentile_5y": 10,
-"shows": false,
-"rule": "high_in_5y"
-}
-]
+"verdict": "shows"
 },
 "2026-japan-boj-tightening-yen": {
-"verdict": "shows",
-"none": null,
-"readings": [
-{
-"en": "Yen per dollar",
-"ko": "달러당 엔화",
-"unit": "yen",
-"value": 158.76,
-"as_of": "2026-11-20",
-"percentile_5y": 90,
-"shows": true,
-"rule": "high_in_5y"
-}
-]
+"verdict": "shows"
 },
 "2026-china-domestic-demand-property": {
-"verdict": "does_not_show",
-"none": null,
-"readings": [
-{
-"en": "Yuan per dollar",
-"ko": "달러당 위안화",
-"unit": "yuan",
-"value": 6.68,
-"as_of": "2026-11-20",
-"percentile_5y": 12,
-"shows": false,
-"rule": "high_in_5y"
-}
-]
+"verdict": "does_not_show"
 },
 "2027-us-debt-limit": {
-"verdict": "does_not_show",
-"none": null,
-"readings": [
-{
-"en": "1-month Treasury yield minus 3-month",
-"ko": "1개월 국채 금리에서 3개월 금리를 뺀 값",
-"unit": "pt",
-"value": -0.07,
-"as_of": "2026-11-25",
-"percentile_5y": 40,
-"shows": false,
-"rule": "high_in_5y"
-}
-]
+"verdict": "does_not_show"
 },
 "2026-us-private-credit-defaults": {
-"verdict": "does_not_show",
-"none": null,
-"readings": [
-{
-"en": "High-yield bond spread (AFMX record)",
-"ko": "하이일드 채권 스프레드 (AFMX 기록)",
-"as_of": "2026-11-26",
-"steps": 1,
-"shows": false,
-"rule": "ledger_step_2"
-}
-]
+"verdict": "does_not_show"
 },
 "2026-ai-buildout-financing": {
-"verdict": "shows",
-"none": null,
-"readings": [
-{
-"en": "Equity volatility, VIX (AFMX record)",
-"ko": "주식 변동성 VIX (AFMX 기록)",
-"value": 26.8,
-"as_of": "2026-11-26",
-"steps": 2,
-"shows": true,
-"rule": "ledger_step_2"
-},
-{
-"en": "S&P 500 fall from its one-year high (AFMX record)",
-"ko": "S&P 500의 1년 고점 대비 하락 (AFMX 기록)",
-"as_of": "2026-11-25",
-"steps": 1,
-"shows": false,
-"rule": "ledger_step_2"
-}
-]
+"verdict": "shows"
 },
 "2026-eurozone-inflation-ecb": {
-"verdict": "not_checked",
-"none": {
-"en": "Not checked. Euro-area market rates are not in the sources we are allowed to republish.",
-"ko": "대조하지 않았습니다. 유로 지역 시장 금리는 저희가 다시 실을 수 있는 출처에 없습니다."
-},
-"readings": []
+"verdict": "not_checked"
 },
 "2026-nvidia-sec-and-leadership": {
-"verdict": "not_checked",
-"none": {
-"en": "Not checked. Prices of single stocks and their options are not in the sources we are allowed to republish.",
-"ko": "대조하지 않았습니다. 개별 종목의 주가와 옵션 가격은 저희가 다시 실을 수 있는 출처에 없습니다."
-},
-"readings": []
+"verdict": "not_checked"
 },
 "2026-us-ai-chip-export-rules": {
-"verdict": "not_checked",
-"none": {
-"en": "Not checked. No price in our sources isolates chip export rules.",
-"ko": "대조하지 않았습니다. 저희 출처에는 반도체 수출 규칙만 따로 보여 주는 가격이 없습니다."
-},
-"readings": []
+"verdict": "not_checked"
 },
 "2026-us-appropriations-lapse": {
-"verdict": "not_checked",
-"none": {
-"en": "Not checked. No price in our sources isolates a funding lapse.",
-"ko": "대조하지 않았습니다. 저희 출처에는 예산 공백만 따로 보여 주는 가격이 없습니다."
-},
-"readings": []
+"verdict": "not_checked"
 },
 "2026-us-excess-capacity-tariffs": {
-"verdict": "not_checked",
-"none": {
-"en": "Not checked. No price in our sources isolates these tariffs.",
-"ko": "대조하지 않았습니다. 저희 출처에는 이 관세만 따로 보여 주는 가격이 없습니다."
-},
-"readings": []
+"verdict": "not_checked"
 }
 }
 },
@@ -5170,186 +1755,35 @@
 ]
 }
 },
-"hindsight": {
-"cases": [
-{
-"id": "2023-us-debt-ceiling",
-"good_news_date": "2023-05-27",
-"outcome_date": "2023-06-03",
-"outcome": "ok",
-"en": {
-"title": "A debt-ceiling deal that did become law.",
-"good_news": "President Biden and Speaker McCarthy struck a deal to raise the debt ceiling.",
-"still_open": "A deal between two leaders is not a law. It still had to pass both chambers and be signed.",
-"outcome": "Biden signed the Fiscal Responsibility Act, which suspended the debt limit until January 2025. The condition was met within a week."
-},
-"ko": {
-"title": "실제로 법이 된 부채 한도 합의.",
-"good_news": "바이든 대통령과 매카시 하원의장이 부채 한도를 올리는 데 합의했습니다.",
-"still_open": "두 지도자의 합의는 법이 아닙니다. 상하원을 통과하고 서명까지 돼야 했습니다.",
-"outcome": "바이든 대통령이 재정책임법에 서명해 부채 한도가 2025년 1월까지 유예됐습니다. 조건은 일주일 안에 채워졌습니다."
-},
-"sources": [
-"https://bidenwhitehouse.archives.gov/briefing-room/statements-releases/2023/05/27/statement-from-president-joe-biden-on-bipartisan-budget-agreement-in-principle/",
-"https://bidenwhitehouse.archives.gov/briefing-room/legislation/2023/06/03/press-release-bills-signed-h-r-346-h-r-3746/"
-]
-},
-{
-"id": "2023-first-republic",
-"good_news_date": "2023-03-16",
-"outcome_date": "2023-05-01",
-"outcome": "hit",
-"en": {
-"title": "Eleven banks put $30 billion into First Republic.",
-"good_news": "Eleven American banks, including JPMorgan Chase, deposited $30 billion with First Republic.",
-"still_open": "Money from other banks did not show that the bank's own customers had stopped leaving, or that it could fund itself without help.",
-"outcome": "The FDIC announced that First Republic had been closed and sold to JPMorgan Chase."
-},
-"ko": {
-"title": "은행 11곳이 퍼스트리퍼블릭에 300억 달러를 넣었다.",
-"good_news": "JP모건을 비롯한 미국 은행 11곳이 퍼스트리퍼블릭에 300억 달러를 예치했습니다.",
-"still_open": "다른 은행의 돈이 들어왔다고 해서 이 은행의 고객 이탈이 멈췄거나, 도움 없이 스스로 자금을 댈 수 있다는 뜻은 아니었습니다.",
-"outcome": "FDIC가 퍼스트리퍼블릭을 폐쇄하고 JP모건에 매각했다고 발표했습니다."
-},
-"sources": [
-"https://home.treasury.gov/news/press-releases/jy1349",
-"https://www.fdic.gov/news/press-releases/2023/pr23034.html"
-]
-},
-{
-"id": "2023-credit-suisse",
-"good_news_date": "2023-03-15",
-"outcome_date": "2023-03-19",
-"outcome": "hit",
-"en": {
-"title": "Regulators said Credit Suisse met its requirements. Four days later it was sold.",
-"good_news": "The Swiss regulator and central bank said Credit Suisse 'meets the capital and liquidity requirements' and that the central bank would provide liquidity if necessary.",
-"still_open": "Meeting the rules on paper did not show that clients had stopped withdrawing money.",
-"outcome": "UBS announced the takeover of Credit Suisse, backed by central bank liquidity of up to CHF 100 billion."
-},
-"ko": {
-"title": "당국은 크레디트스위스가 기준을 충족한다고 했다. 나흘 뒤 매각됐다.",
-"good_news": "스위스 금융당국과 중앙은행이 크레디트스위스가 자본과 유동성 기준을 충족하며, 필요하면 중앙은행이 유동성을 공급하겠다고 밝혔습니다.",
-"still_open": "서류상 기준을 충족한다고 해서 고객의 자금 인출이 멈췄다는 뜻은 아니었습니다.",
-"outcome": "UBS가 크레디트스위스 인수를 발표했고, 중앙은행이 최대 1,000억 스위스프랑의 유동성을 지원했습니다."
-},
-"sources": [
-"https://www.finma.ch/en/news/2023/03/20230315-mm-statement",
-"https://www.snb.ch/en/publications/communication/press-releases/2023/pre_20230319_1"
-]
-},
-{
-"id": "2022-uk-gilt-market",
-"good_news_date": "2022-09-28",
-"outcome_date": "2022-10-14",
-"outcome": "ok",
-"en": {
-"title": "A temporary rescue of the UK bond market that ended on schedule.",
-"good_news": "The Bank of England began temporary purchases of long-dated government bonds 'to restore orderly market conditions', to run until 14 October.",
-"still_open": "A temporary backstop is not a repair. The test was whether the Bank could stop on the date it had set.",
-"outcome": "The Bank 'terminated these operations and ceased all bond purchases' on the planned date, and began selling the bonds back from 29 November."
-},
-"ko": {
-"title": "예정대로 끝난 영국 국채시장 임시 지원.",
-"good_news": "영란은행이 시장 질서를 되찾기 위해 장기 국채를 임시로 사들이기 시작했고, 기한은 10월 14일로 정했습니다.",
-"still_open": "임시 지원은 근본 해결이 아닙니다. 관건은 정해 둔 날에 실제로 멈출 수 있느냐였습니다.",
-"outcome": "영란은행은 예정한 날에 매입을 모두 끝냈고, 11월 29일부터 사들인 국채를 되팔기 시작했습니다."
-},
-"sources": [
-"https://www.bankofengland.co.uk/news/2022/september/bank-of-england-announces-gilt-market-operation",
-"https://www.bankofengland.co.uk/news/2022/october/statement-on-end-of-gilt-market-operations",
-"https://www.bankofengland.co.uk/markets/market-notices/2022/november/unwind-of-financial-stability-gilt-purchases-market-notice-23-november-2022"
-]
-},
-{
-"id": "2020-fed-corporate-credit",
-"good_news_date": "2020-03-23",
-"outcome_date": "2020-12-31",
-"outcome": "ok",
-"en": {
-"title": "The Fed's 2020 corporate credit backstop closed on schedule.",
-"good_news": "The Federal Reserve announced two facilities to support credit to large employers, for new bond issuance and for outstanding corporate bonds.",
-"still_open": "An announced backstop is not a working market. The test was whether the emergency support could be withdrawn.",
-"outcome": "The primary market facility 'ceased purchasing eligible assets on December 31, 2020'."
-},
-"ko": {
-"title": "연준의 2020년 회사채 지원은 예정대로 문을 닫았다.",
-"good_news": "연준이 대기업 신용을 지원하는 두 가지 기구를 발표했습니다. 하나는 신규 채권 발행, 다른 하나는 이미 발행된 회사채를 위한 것이었습니다.",
-"still_open": "지원을 발표했다고 시장이 돌아가는 것은 아닙니다. 관건은 긴급 지원을 거둘 수 있느냐였습니다.",
-"outcome": "발행시장 지원 기구는 2020년 12월 31일에 매입을 끝냈습니다."
-},
-"sources": [
-"https://www.federalreserve.gov/newsevents/pressreleases/monetary20200323b.htm",
-"https://www.federalreserve.gov/monetarypolicy/pmccf.htm"
-]
-},
-{
-"id": "2010-greece-first-programme",
-"good_news_date": "2010-05-09",
-"outcome_date": "2012-03-15",
-"outcome": "hit",
-"en": {
-"title": "Greece received a €110 billion package. It needed another.",
-"good_news": "The IMF approved a €30 billion loan for Greece, part of a €110 billion package with the European Union.",
-"still_open": "New loans covered payments coming due. They did not show that the debt itself could be repaid.",
-"outcome": "The IMF approved a new €28 billion loan, the first arrangement was canceled, and private investors agreed to write down 75 percent of their Greek bond holdings."
-},
-"ko": {
-"title": "그리스는 1,100억 유로를 지원받았다. 한 번 더 필요했다.",
-"good_news": "IMF가 그리스에 300억 유로 대출을 승인했습니다. 유럽연합과 합쳐 1,100억 유로 규모였습니다.",
-"still_open": "새 대출은 만기가 돌아오는 돈을 막아 줬을 뿐, 빚 자체를 갚을 수 있다는 것을 보여 주지는 못했습니다.",
-"outcome": "IMF가 280억 유로의 새 대출을 승인했고 첫 지원은 취소됐으며, 민간 투자자들은 보유한 그리스 국채의 75%를 탕감하기로 했습니다."
-},
-"sources": [
-"https://www.imf.org/en/News/Articles/2015/09/14/01/49/pr10187",
-"https://www.imf.org/en/news/articles/2015/09/28/04/53/socar031512b"
-]
-},
-{
-"id": "2008-bear-stearns-lehman",
-"good_news_date": "2008-03-16",
-"outcome_date": "2008-09-15",
-"outcome": "hit",
-"en": {
-"title": "Bear Stearns was rescued. Lehman was not.",
-"good_news": "Bear Stearns was taken over by JPMorgan Chase, after the New York Fed agreed to an emergency loan two days earlier.",
-"still_open": "The takeover dealt with one firm. It did not show that other investment banks were free of the same losses and funding strain.",
-"outcome": "Lehman Brothers filed for Chapter 11 bankruptcy protection."
-},
-"ko": {
-"title": "베어스턴스는 구제됐다. 리먼은 아니었다.",
-"good_news": "뉴욕 연준이 이틀 전 긴급 대출에 합의한 뒤, JP모건이 베어스턴스를 인수했습니다.",
-"still_open": "인수는 한 회사의 문제만 처리했습니다. 다른 투자은행들이 같은 손실과 자금 압박에서 벗어났다는 것은 보여 주지 못했습니다.",
-"outcome": "리먼브러더스가 파산보호(챕터 11)를 신청했습니다."
-},
-"sources": [
-"https://www.federalreserve.gov/newsevents/pressreleases/monetary20080316a.htm",
-"https://www.federalreserve.gov/monetarypolicy/files/129bearstearnsbridgeloan.pdf",
-"https://www.federalreservehistory.org/-/media/Project/FedHistory/FedHistory/Documents/essaysPDFs/Support-for-Specific-Institutions-_-Federal-Reserve-History.pdf"
-]
-},
-{
-"id": "2007-fed-discount-rate",
-"good_news_date": "2007-08-17",
-"outcome_date": "2008-03-16",
-"outcome": "hit",
-"en": {
-"title": "The Fed cut its discount rate. The strain kept building.",
-"good_news": "The Federal Reserve cut its discount rate by half a point to 5.75% 'to promote the restoration of orderly conditions in financial markets'.",
-"still_open": "Cheaper emergency loans did not show how large the mortgage losses were or which firms held them.",
-"outcome": "Seven months later the Fed backed the emergency takeover of Bear Stearns."
-},
-"ko": {
-"title": "연준이 재할인율을 내렸다. 압박은 계속 쌓였다.",
-"good_news": "연준이 금융시장의 질서를 되찾기 위해 재할인율을 0.5%포인트 내려 5.75%로 정했습니다.",
-"still_open": "긴급 대출이 싸졌다고 해서 주택담보 손실이 얼마나 크고 누가 떠안고 있는지가 드러난 것은 아니었습니다.",
-"outcome": "일곱 달 뒤 연준은 베어스턴스 긴급 인수를 지원했습니다."
-},
-"sources": [
-"https://www.federalreserve.gov/newsevents/pressreleases/monetary20070817a.htm",
-"https://www.federalreserve.gov/newsevents/pressreleases/monetary20080316a.htm"
-]
-}
-]
+"v": {
+"cards/2026-ai-buildout-financing.json": "373000",
+"cards/2026-ai-buildout-financing.ko.json": "09ea41",
+"cards/2026-china-domestic-demand-property.json": "5eed9f",
+"cards/2026-china-domestic-demand-property.ko.json": "3cef96",
+"cards/2026-eurozone-inflation-ecb.json": "07a5cc",
+"cards/2026-eurozone-inflation-ecb.ko.json": "4b06c9",
+"cards/2026-fed-rate-hikes.json": "1cf17a",
+"cards/2026-fed-rate-hikes.ko.json": "ba212b",
+"cards/2026-japan-boj-tightening-yen.json": "21aa08",
+"cards/2026-japan-boj-tightening-yen.ko.json": "b40eb7",
+"cards/2026-nvidia-sec-and-leadership.json": "c127d4",
+"cards/2026-nvidia-sec-and-leadership.ko.json": "9eabca",
+"cards/2026-us-ai-chip-export-rules.json": "41601c",
+"cards/2026-us-ai-chip-export-rules.ko.json": "9a56d3",
+"cards/2026-us-appropriations-lapse.json": "85bed2",
+"cards/2026-us-appropriations-lapse.ko.json": "2f4401",
+"cards/2026-us-excess-capacity-tariffs.json": "1e1b21",
+"cards/2026-us-excess-capacity-tariffs.ko.json": "ff1b60",
+"cards/2026-us-iran-war-oil.json": "e43879",
+"cards/2026-us-iran-war-oil.ko.json": "28bbe1",
+"cards/2026-us-private-credit-defaults.json": "436fd9",
+"cards/2026-us-private-credit-defaults.ko.json": "676711",
+"cards/2027-us-debt-limit.json": "84638f",
+"cards/2027-us-debt-limit.ko.json": "39505e",
+"ko.json": "d602f0",
+"tabs/method.en.json": "1f24cc",
+"tabs/method.ko.json": "f0c649",
+"tabs/past.en.json": "77f7ca",
+"tabs/past.ko.json": "01b091"
 }
 }
