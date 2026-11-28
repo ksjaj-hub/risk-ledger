@@ -1,0 +1,39 @@
+name: disclosure index research
+on:
+  workflow_dispatch:
+  push:
+    branches: ["claude/**"]
+    paths: ["research/disclosure/stage.txt"]
+permissions:
+  contents: write
+concurrency:
+  group: disclosure-${{ github.ref_name }}
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install numpy
+      - name: Run stages
+        env:
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+        run: |
+          # one line of research/disclosure/stage.txt per step, for example "fetch --round2"
+          while read -r line; do
+            [ -z "$line" ] && continue
+            echo "== $line"; python scripts/disclosure_index.py $line
+          done < research/disclosure/stage.txt
+      - name: Commit
+        if: always()
+        run: |
+          git config user.name "risk-ledger-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add research/disclosure
+          git diff --cached --quiet && { echo "nothing new"; exit 0; }
+          git commit -m "disclosure research: $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull --rebase origin "${{ github.ref_name }}"
+          git push origin "HEAD:${{ github.ref_name }}"

@@ -1,0 +1,557 @@
+{
+ "computed": "2026-11-28T14:06Z",
+ "plan": "research/disclosure/preregistration2.json",
+ "data": {
+  "companies": 150,
+  "filings": 10901,
+  "eligible_filings": 10230
+ },
+ "V1b_known_events": {
+  "passed_pairs": 16,
+  "needed": 13,
+  "pass": true,
+  "pairs": [
+   {
+    "theme": "recession",
+    "window": [
+     "2008-10-01",
+     "2009-03-31"
+    ],
+    "peak_quarter": "2009Q1",
+    "peak_share": 0.3036,
+    "p90": 0.0727,
+    "median": 0.0079,
+    "rank_from_top": 2,
+    "quarters": 79,
+    "pass": true
+   },
+   {
+    "theme": "debt_ceiling",
+    "window": [
+     "2011-07-15",
+     "2011-11-30"
+    ],
+    "peak_quarter": "2011Q3",
+    "peak_share": 0.087,
+    "p90": 0.0212,
+    "median": 0.0,
+    "rank_from_top": 1,
+    "quarters": 79,
+    "pass": true
+   },
+   {
+    "theme": "gov_shutdown",
+    "window": [
+     "2013-10-01",
+     "2014-02-28"
+    ],
+    "peak_quarter": "2013Q4",
+    "peak_share": 0.096,
+    "p90": 0.0162,
+    "median": 0.0,
+    "rank_from_top": 3,
+    "quarters": 79,
+    "pass": true
+   },
+   {
+    "theme": "brexit",
+    "window": [
+     "2016-06-24",
+     "2016-10-31"
+    ],
+    "peak_quarter": "2016Q3",
+    "peak_share": 0.2362,
+    "p90": 0.023,
+    "median": 0.0,
+    "rank_from_top": 1,
+    "quarters": 79,
+    "pass": true
+   },
+   {
+    "theme": "tariffs",
+    "window": [
+     "2018-03-01",
+     "2018-09-30"
+    ],
+    "peak_quarter": "2018Q2",
+    "peak_share": 0.0992,
+    "p90": 0.0839,
+    "median": 0.014,
+    "rank_from_top": 6,
+    "quarters": 79,
+    "pass": true
+   },
+   {
+    "theme": "gov_shutdown",
+    "window": [
+     "2019-01-01",
+     "2019-04-30"
+    ],
+    "peak_quarter": "2019Q1",
+    "peak_share": 0.1603,
+    "p90": 0.0162,
+    "median": 0.0,
+    "rank_from_top": 1,
+    "quarters": 79,
+    "pass": true
+   },
+   {
+    "theme": "pandemic",
+    "window": [
+     "2020-02-01",
+     "2020-06-30"
+    ],
+    "peak_quarter": "2020Q2",
+    "peak_share": 0.9779,
+    "p90": 0.0361,
+    "median": 0.0,
+    "rank_from_top": 1,
+    "quarters": 79,
+    "pass": true
+   },
+   {
+    "theme": "supply_chain",
+    "window": [
+     "2021-04-01",
+     "2021-11-30"
+    ],
+    "peak_quarter": "2021Q4",
+    "peak_share": 0.2071,
+    "p90": 0.0352,
+    "median": 0.0079,
+    "rank_from_top": 2,
+    "quarters": 79,
+    "pass": true
+   },
+   {
+    "theme": "inflation",
+    "window": [
+     "2021-07-01",
+     "2022-03-31"
+    ],
+    "peak_quarter": "2022Q1",
+    "peak_share": 0.2098,
+    "p90": 0.0386,
+    "median": 0.0078,
+    "rank_from_top": 2,
+    "quarters": 79,
+    "pass": true
+   },
+   {
+    "theme": "ukraine",
+    "window": [
+     "2022-02-24",
+     "2022-06-30"
+    ],
+    "peak_quarter": "2022Q2",
+    "peak_share": 0.7113,
+    "p90": 0.0183,
+    "median": 0.0,
+    "rank_from_top": 1,
+    "quarters": 79,
+    "pass": true
+   },
+   {
+    "theme": "export_controls",
+    "window": [
+     "2022-10-07",
+     "2023-02-28"
+    ],
+    "peak_quarter": "2023Q1",
+    "peak_share": 0.0833,
+    "p90": 0.0343,
+    "median": 0.0081,
+    "rank_from_top": 1,
+    "quarters": 79,
+    "pass": true
+   },
+   {
+    "theme": "bank_stress",
+    "window": [
+     "2023-03-10",
+     "2023-06-30"
+    ],
+    "peak_quarter": "2023Q2",
+    "peak_share": 0.1667,
+    "p90": 0.0139,
+    "median": 0.0,
+    "rank_from_top": 1,
+    "quarters": 79,
+    "pass": true
+   },
+   {
+    "theme": "debt_ceiling",
+    "window": [
+     "2023-05-01",
+     "2023-08-31"
+    ],
+    "peak_quarter": "2023Q2",
+    "peak_share": 0.0764,
+    "p90": 0.0212,
+    "median": 0.0,
+    "rank_from_top": 2,
+    "quarters": 79,
+    "pass": true
+   },
+   {
+    "theme": "middle_east",
+    "window": [
+     "2023-10-07",
+     "2024-02-29"
+    ],
+    "peak_quarter": "2024Q1",
+    "peak_share": 0.1888,
+    "p90": 0.0207,
+    "median": 0.0,
+    "rank_from_top": 2,
+    "quarters": 79,
+    "pass": true
+   },
+   {
+    "theme": "tariffs",
+    "window": [
+     "2025-02-01",
+     "2025-06-30"
+    ],
+    "peak_quarter": "2025Q2",
+    "peak_share": 0.5793,
+    "p90": 0.0839,
+    "median": 0.014,
+    "rank_from_top": 1,
+    "quarters": 79,
+    "pass": true
+   },
+   {
+    "theme": "gov_shutdown",
+    "window": [
+     "2025-10-01",
+     "2026-02-28"
+    ],
+    "peak_quarter": "2025Q4",
+    "peak_share": 0.1293,
+    "p90": 0.0162,
+    "median": 0.0,
+    "rank_from_top": 2,
+    "quarters": 79,
+    "pass": true
+   }
+  ]
+ },
+ "S2_saturated_events": {
+  "passed_pairs": 5,
+  "needed": 6,
+  "pass": false,
+  "pairs": [
+   {
+    "theme": "tariffs",
+    "window": [
+     "2019-05-01",
+     "2019-09-30"
+    ],
+    "peak_quarter": "2019Q2",
+    "peak_share": 0.0301,
+    "p90": 0.056,
+    "median": 0.0079,
+    "rank_from_top": 14,
+    "quarters": 79,
+    "pass": false
+   },
+   {
+    "theme": "tariffs",
+    "window": [
+     "2025-02-01",
+     "2025-06-30"
+    ],
+    "peak_quarter": "2025Q2",
+    "peak_share": 0.5103,
+    "p90": 0.056,
+    "median": 0.0079,
+    "rank_from_top": 1,
+    "quarters": 79,
+    "pass": true
+   },
+   {
+    "theme": "pandemic",
+    "window": [
+     "2020-04-01",
+     "2020-08-31"
+    ],
+    "peak_quarter": "2020Q2",
+    "peak_share": 0.6618,
+    "p90": 0.0069,
+    "median": 0.0,
+    "rank_from_top": 2,
+    "quarters": 79,
+    "pass": true
+   },
+   {
+    "theme": "recession",
+    "window": [
+     "2020-03-01",
+     "2020-06-30"
+    ],
+    "peak_quarter": "2020Q2",
+    "peak_share": 0.0662,
+    "p90": 0.0258,
+    "median": 0.0,
+    "rank_from_top": 5,
+    "quarters": 79,
+    "pass": true
+   },
+   {
+    "theme": "inflation",
+    "window": [
+     "2022-04-01",
+     "2022-09-30"
+    ],
+    "peak_quarter": "2022Q3",
+    "peak_share": 0.0709,
+    "p90": 0.0136,
+    "median": 0.0,
+    "rank_from_top": 2,
+    "quarters": 79,
+    "pass": true
+   },
+   {
+    "theme": "supply_chain",
+    "window": [
+     "2022-01-01",
+     "2022-06-30"
+    ],
+    "peak_quarter": "2022Q1",
+    "peak_share": 0.1608,
+    "p90": 0.0152,
+    "median": 0.0,
+    "rank_from_top": 1,
+    "quarters": 79,
+    "pass": true
+   },
+   {
+    "theme": "export_controls",
+    "window": [
+     "2023-10-17",
+     "2024-02-29"
+    ],
+    "peak_quarter": "2024Q1",
+    "peak_share": 0.007,
+    "p90": 0.0149,
+    "median": 0.0,
+    "rank_from_top": 22,
+    "quarters": 79,
+    "pass": false
+   },
+   {
+    "theme": "gov_shutdown",
+    "window": [
+     "2025-10-01",
+     "2026-02-28"
+    ],
+    "peak_quarter": "2026Q1",
+    "peak_share": 0.027,
+    "p90": 0.0071,
+    "median": 0.0,
+    "rank_from_top": 1,
+    "quarters": 79,
+    "pass": false
+   }
+  ]
+ },
+ "V3b_reading_check": {
+  "read": 60,
+  "about_the_risk": 57,
+  "share": 0.95,
+  "new": [
+   29,
+   30
+  ],
+  "surge": [
+   28,
+   30
+  ],
+  "per_theme": {
+   "tariffs": [
+    6,
+    6
+   ],
+   "export_controls": [
+    6,
+    6
+   ],
+   "ukraine": [
+    6,
+    6
+   ],
+   "pandemic": [
+    5,
+    6
+   ],
+   "bank_stress": [
+    6,
+    6
+   ],
+   "debt_ceiling": [
+    5,
+    6
+   ],
+   "gov_shutdown": [
+    3,
+    4
+   ],
+   "inflation": [
+    4,
+    4
+   ],
+   "supply_chain": [
+    4,
+    4
+   ],
+   "middle_east": [
+    4,
+    4
+   ],
+   "recession": [
+    4,
+    4
+   ],
+   "brexit": [
+    4,
+    4
+   ]
+  },
+  "themes_removed": [],
+  "pass": true
+ },
+ "P1_persistence": {
+  "new_events_with_a_next_filing": 1290,
+  "still_there": 1043,
+  "share": 0.8085,
+  "per_theme": {
+   "tariffs": [
+    99,
+    104
+   ],
+   "export_controls": [
+    65,
+    74
+   ],
+   "ukraine": [
+    125,
+    149
+   ],
+   "pandemic": [
+    127,
+    131
+   ],
+   "bank_stress": [
+    33,
+    47
+   ],
+   "debt_ceiling": [
+    27,
+    58
+   ],
+   "gov_shutdown": [
+    48,
+    79
+   ],
+   "inflation": [
+    122,
+    145
+   ],
+   "supply_chain": [
+    109,
+    146
+   ],
+   "middle_east": [
+    74,
+    91
+   ],
+   "recession": [
+    144,
+    176
+   ],
+   "brexit": [
+    70,
+    90
+   ]
+  },
+  "pass": true
+ },
+ "P2_flag_rate": {
+  "median_company_flags_per_year": 1.2727,
+  "p10": 0.6091,
+  "p90": 1.9364,
+  "filings_with_any_flag": 0.2373,
+  "filings_with_3_or_more": 0.0145,
+  "pass": true
+ },
+ "latest_quarter": {
+  "quarter": "2026Q4",
+  "companies": 135,
+  "raised": {
+   "tariffs": 0.0,
+   "export_controls": 0.0,
+   "ukraine": 0.0148,
+   "pandemic": 0.0,
+   "bank_stress": 0.0,
+   "debt_ceiling": 0.0,
+   "gov_shutdown": 0.0,
+   "inflation": 0.0148,
+   "supply_chain": 0.0,
+   "middle_east": 0.0148,
+   "recession": 0.0074,
+   "brexit": 0.0
+  }
+ },
+ "latest_filing_flags": [
+  {
+   "ticker": "ADI",
+   "form": "10-K",
+   "filed": "2026-11-24",
+   "new": [
+    "middle_east"
+   ],
+   "surge": []
+  },
+  {
+   "ticker": "DIS",
+   "form": "10-K",
+   "filed": "2026-11-17",
+   "new": [
+    "middle_east"
+   ],
+   "surge": [
+    "ukraine"
+   ]
+  },
+  {
+   "ticker": "CME",
+   "form": "10-Q",
+   "filed": "2026-10-23",
+   "new": [
+    "ukraine",
+    "inflation"
+   ],
+   "surge": []
+  },
+  {
+   "ticker": "LRCX",
+   "form": "10-Q",
+   "filed": "2026-10-22",
+   "new": [],
+   "surge": [
+    "inflation",
+    "recession"
+   ]
+  },
+  {
+   "ticker": "WMT",
+   "form": "10-Q",
+   "filed": "2026-08-28",
+   "new": [],
+   "surge": [
+    "tariffs"
+   ]
+  }
+ ]
+}
