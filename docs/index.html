@@ -197,8 +197,8 @@ button.tm{width:auto;display:inline-flex;align-items:center;gap:6px;min-height:4
 button.tm::after{content:"?";flex:none;display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border:1px solid var(--line2);border-radius:50%;font-size:11px;font-weight:700;color:var(--muted);letter-spacing:0}
 button.tm[aria-expanded=true]::after{border-color:var(--fg);color:var(--fg)}
 .tdef{border-left:2px solid var(--line2);padding:6px 0 6px 10px;margin:6px 0 10px;font-size:14px;line-height:1.55;color:var(--fg);max-width:68ch;font-weight:400}.tdef b{font-weight:600}.tdef a{white-space:nowrap}
-.hsec .secs a{display:inline-flex;align-items:center;border:1px solid var(--line2);color:var(--fg);font-size:14px;padding:9px 12px;min-height:44px;text-decoration:none}.hsec .secs a:hover{border-color:var(--muted)}.hsec .secs a small{margin-left:6px;font-size:13px;font-weight:600;color:var(--muted)}.hsec .secs a small.high{color:var(--watch)}.hsec .secs a.all{border-color:transparent;color:var(--link);padding-left:4px}.hsec{padding-bottom:0}
-.glk a+a{margin-left:18px}
+.hsec .secs a{display:inline-flex;align-items:center;border:1px solid var(--line2);color:var(--fg);font-size:14px;padding:9px 12px;min-height:44px;text-decoration:none}.hsec .secs a:hover{border-color:var(--muted)}.hsec .secs a small{margin-left:6px;font-size:13px;font-weight:600;color:var(--muted)}.hsec .secs a small.high{color:var(--watch)}.hsh{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:-10px}.hsec .secs{margin-top:0}.hsec{padding-bottom:0}.glk{display:flex;flex-wrap:wrap;gap:0 18px}
+
 ol.verify{color:var(--muted);padding-left:18px;margin:8px 0 0;font-size:14px;max-width:68ch}
 .foot{border-top:1px solid var(--line);color:var(--dim);font-size:13.5px;margin-top:18px}
 .foot .wrap{padding-block:14px 28px}
@@ -244,8 +244,8 @@ main a{text-decoration:underline;text-decoration-thickness:1px;text-underline-of
     </div>
     <div class="top1"><h2 class="lbl" data-t="up"></h2><div id="upcoming"></div></div>
   </section>
-  <section class="sec hsec" data-v="home"><h2 data-t="hsec"></h2><p id="hsecp"></p><div id="hsecs" class="secs"></div></section>
-  <section class="sec" data-v="home"><h2 data-t="top"></h2><p data-t="topp"></p>
+  <section class="sec hsec" data-v="home"><div class="hsh"><h2 id="hsech"></h2><a class="more" id="hsall" href="#sectors"></a></div><div id="hsecs" class="secs"></div></section>
+  <section class="sec" data-v="home"><h2 data-t="top"></h2>
     <div id="feat"></div>
     <a id="alllink" class="morebtn" href="#risks"></a>
   </section>
@@ -453,7 +453,7 @@ function render(){
     if(rich&&e.selection_mark)b.append($("div","su",e.selection_mark[lang]));
     const wv=(A.waves||{})[e.id];if(rich===2&&wv&&e.status!=="resolved")b.append($("div","su",wv.kind==="oil"?t.woOne(wv,sg):t.wtOne(wv.eps[0],wv.eps[1])));
     {const fc1=(e.forecasts||[]).slice(-1)[0],nr=e.nres||[0,0],mv=(((A.market||{}).cards||{})[e.id]||{}).verdict;if(rich&&e.status!=="resolved"&&nr[1])b.append($("div","su",t.rowm(nr[0],nr[1])+(mv?" · "+t.rowk[mv]:"")+(fc1?" · "+t.fcs(fmt(fc1.deadline),Math.round(fc1.p_resolved*100)):"")))}
-    if(rich===2)b.append($("div","su",t.cond+fmt(e.resolution_conditions.written_on)+" · "+t.tap));r.append(b);if(link)return [r];
+r.append(b);if(link)return [r];
     const d=$("div","det");d.id=id;d.hidden=!open.has(e.id);let wb=null;
     // the detail is built when the card is opened, once its file has arrived
     const fill=()=>{const k=kOf(e),wv=(A.waves||{})[e.id];
@@ -504,8 +504,8 @@ function render(){
   document.getElementById("alllink").textContent=t.all(live.length);document.getElementById("nopen").textContent=live.length;
   const mm=document.getElementById("minemsg"),sb=document.getElementById("secs");sb.setAttribute("aria-label",t.mine);sb.replaceChildren();
   Object.keys(SN).forEach(x=>{const bt=$("button",null,sn(x));if(SS[x])bt.append($("small","bd "+SS[x].band,t.band[SS[x].band]));bt.type="button";bt.setAttribute("aria-pressed",String(tks.includes(x)));bt.addEventListener("click",()=>{const c=mine();setMine(c.includes(x)?c.filter(y=>y!==x):[...c,x]);render()});sb.append(bt)});
-  {const hb=document.getElementById("hsecs"),hot=Object.keys(SN).filter(x=>SS[x]&&SS[x].band==="high"),sh=tks.length?tks:hot;hb.replaceChildren();document.getElementById("hsecp").textContent=tks.length?t.hsecm:t.hsecp;
-   sh.forEach(x=>{const a=$("a",null,sn(x));a.href="#sectors";if(SS[x])a.append($("small",SS[x].band,t.band[SS[x].band]));if(!tks.length)a.addEventListener("click",()=>setMine([x]));hb.append(a)});{const a=$("a","all",t.hsecall(Object.keys(SN).length));a.href="#sectors";hb.append(a)}}
+  {const hb=document.getElementById("hsecs"),hot=Object.keys(SN).filter(x=>SS[x]&&SS[x].band==="high"),sh=tks.length?tks:hot;hb.replaceChildren();document.getElementById("hsech").textContent=tks.length?t.hsecm:t.sechigh;document.getElementById("hsall").textContent=t.hsecall(Object.keys(SN).length);
+   sh.forEach(x=>{const a=$("a",null,sn(x));a.href="#sectors";if(SS[x]&&tks.length)a.append($("small",SS[x].band,t.band[SS[x].band]));if(!tks.length)a.addEventListener("click",()=>setMine([x]));hb.append(a)})}
   const nmw=live.filter(e=>isMW(e)&&!hitsOf(e).length).length, names=tks.map(sn).join(", ");
   mm.replaceChildren();const show=tks.length?tks:Object.keys(SN).filter(x=>SS[x]&&SS[x].band==="high");if(show.length){const bx=$("div","scs");if(!tks.length)mm.append($("div","lbl mmt",t.sechigh));show.forEach(x=>{const v=SS[x];if(!v)return;const r=$("div","sc");const h=$("div","sch");h.append($("b",null,sn(x)),tm("sector_band",t.band[v.band],"num "+v.band));const why=(v.reasons||[]).map(id=>D.events.find(e=>e.id===id)).filter(Boolean).map(title);r.append(h);if(why.length)r.append($("div","why",t.why+why.join(" / ")));r.append($("div","su",t.scline(v.open_cards,v.groups)));bx.append(r)});const K=A.scorecard,g=K?K.graded_months:0;mm.append(bx,$("div","su",t.scnote),$("div","su",g?t.graded(g,K.as_expected_months):t.nograde));if(tks.length)mm.append($("div","mmt",mineHits.length?t.minehit(mineHits.length,nmw,names):t.minenone(nmw,names)))}
   ["tally","tally1"].forEach(id=>{const el=document.getElementById(id);el.replaceChildren();["open","worsened","easing","resolved"].forEach(k=>{const n=D.events.filter(e=>e.status===k).length;if(!n&&k!=="open")return;if(el.childNodes.length)el.append(" · ");const w=$("span");if(id==="tally")w.append(tm("card_status",(t.status[k]||k)+" "+n));else w.textContent=(t.status[k]||k)+" "+n;el.append(w)})});

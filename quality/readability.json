@@ -1,12 +1,12 @@
 {
- "measured_at_utc": "2026-11-28T14:03Z",
- "label": "inline terms, sticky card title, sectors strip",
+ "measured_at_utc": "2026-11-28T14:07Z",
+ "label": "home trimmed to 2.5 screens",
  "viewport": "390x844",
  "tabs": {
   "ko": {
    "home": {
-    "screens": 2.8,
-    "chars": 1349,
+    "screens": 2.5,
+    "chars": 1164,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
@@ -25,7 +25,7 @@
    },
    "risks": {
     "screens": 3.4,
-    "chars": 2417,
+    "chars": 2400,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
@@ -45,7 +45,7 @@
    },
    "sectors": {
     "screens": 2,
-    "chars": 1024,
+    "chars": 1007,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
@@ -61,8 +61,8 @@
     "title": "섹터 · AFMX"
    },
    "past": {
-    "screens": 2.5,
-    "chars": 3155,
+    "screens": 2.4,
+    "chars": 3138,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
@@ -85,8 +85,8 @@
     "title": "과거 · AFMX"
    },
    "record": {
-    "screens": 3.1,
-    "chars": 2991,
+    "screens": 3,
+    "chars": 2974,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
@@ -149,8 +149,8 @@
   },
   "en": {
    "home": {
-    "screens": 3.2,
-    "chars": 2641,
+    "screens": 2.9,
+    "chars": 2274,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
@@ -168,8 +168,8 @@
     "title": "AFMX: What is left after the news"
    },
    "risks": {
-    "screens": 4,
-    "chars": 4665,
+    "screens": 3.9,
+    "chars": 4623,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
@@ -188,7 +188,7 @@
    },
    "sectors": {
     "screens": 2.3,
-    "chars": 2278,
+    "chars": 2236,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
@@ -205,7 +205,7 @@
    },
    "past": {
     "screens": 2.7,
-    "chars": 5875,
+    "chars": 5833,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
@@ -228,8 +228,8 @@
     "title": "Past · AFMX"
    },
    "record": {
-    "screens": 3.4,
-    "chars": 5533,
+    "screens": 3.3,
+    "chars": 5491,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
