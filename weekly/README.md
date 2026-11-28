@@ -39,3 +39,15 @@ Rules of writing:
 - Level words: five market states and three sector steps only. Measures are shown as cells out of 3.
 - "Down more than 20%", not "crash". No buy or sell wording.
 - Corrections stay visible in the issue with their date.
+
+## The email
+
+`python3 scripts/build_weekly.py --email N` writes `weekly/email/N.en.html`, `N.ko.html` and a plain-text copy of each
+(first line is the subject). The email is a shorter cut of the same JSON, not the page:
+
+- Mail apps drop style blocks, scripts, web fonts and folds, so the page cannot be mailed as it is. The email uses tables,
+  inline styles and system fonts, one language per file.
+- It carries the state line, the title, good news that left the risk in place, new facts, sectors and the dates,
+  then one button to the full note. Conditions, sources and briefings stay on the page.
+- Every email ends with why the reader gets it, how to stop, the privacy page and the contact address.
+- As of 2026-11-28 nothing sends these. Signing up stores an address; no mail has gone out yet.
