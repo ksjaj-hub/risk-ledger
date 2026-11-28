@@ -20,7 +20,8 @@ output and not advice. They may be badly wrong. That is why they are fixed and s
 ## Rules
 
 1. A forecast is never edited. A new view is a new forecast (`n` + 1) with its own date; the old one stays and is
-   still scored.
+   still scored. If a card's conditions change, forecasts written before the change are scored on the wording they
+   were written for (`conditions_as_first_written` on the card).
 2. A question is settled early when its event happens before the deadline (outcome 1), otherwise on the deadline
    (outcome 0). The card's `history` records the date and the source.
 3. Score: the Brier score, (probability - outcome)^2, lower is better. Each card has two questions.
@@ -58,19 +59,3 @@ or removed, or a recorded outcome is altered.
 
 `scorecard.json` is written by `python scripts/forecast_score.py`. First settlement: the US funding card,
 2026-12-12.
-
-## Residual risk index
-
-`forecast_math.py` also writes one number from the open cards: **how many of them are expected to worsen in the next
-90 days**, with an 80% range, and how many to resolve (`math.json` → `residual`, shown as part 4 of `docs/odds.html`,
-one line a day in `forecasts/residual.csv`).
-
-- Each card's latest forecast covers its writing date to its deadline. A constant rate inside that span cuts it to
-  90 days; nothing is assumed past a deadline. The cut probabilities are added up.
-- **It counts cards, not size.** No card has a measured size, and a made-up weight would be one more opinion.
-- It inherits every weakness of the odds themselves, and the range treats cards as independent, which they are not.
-- Check, fixed on 2026-11-28 before any card settled: for each recorded day that is at least 90 days old, the number
-  of cards whose worsening condition was reached in the following 90 days is compared with the expected number and
-  its 80% range. With 12 cards this says little before about 20 non-overlapping-quarter readings; until then the index
-  is a summary of AFMX's judgment, not a measurement.
-

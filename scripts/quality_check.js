@@ -3,6 +3,7 @@
 // Needs Playwright and python3 (to serve docs/). Writes quality/report.json. Reading aid for the maintainer, not part of the record.
 const fs=require("fs"),path=require("path"),{spawn}=require("child_process"),{chromium}=require("playwright");
 const ROOT=path.resolve(__dirname,".."),D=JSON.parse(fs.readFileSync(path.join(ROOT,"docs/data.json"),"utf8"));
+D.ko=JSON.parse(fs.readFileSync(path.join(ROOT,"docs/ko.json"),"utf8"));  // Korean card text is a separate file, fetched only in Korean
 const out=[],add=(area,id,pass,now,bar)=>out.push({area,id,pass,now,bar});
 const ev=D.events,live=ev.filter(e=>e.status!=="resolved"),day=864e5,today=Date.now();
 // content
@@ -37,7 +38,7 @@ add("content","glossary",gl>=8,`${gl} terms explained`,"8 or more terms");
 const BAD=[/\b(you should|we recommend|strong buy|buy now|sell now|time to (buy|sell)|price target)\b/i,/(매수하세요|매도하세요|사세요|파세요|사야 합니다|팔아야 합니다|매수 추천|매도 추천|목표가)/];
 const texts=[];const walk=(v)=>{if(typeof v==="string")texts.push(v);else if(v&&typeof v==="object")Object.values(v).forEach(walk)};walk(D.events);walk(D.ko);walk(D.hindsight);walk(D.aids.history||[]);
 texts.push(fs.readFileSync(path.join(ROOT,"docs/odds.html"),"utf8").replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>|<[^>]+>/g," "));
-texts.push(fs.readFileSync(path.join(ROOT,"docs/selection.html"),"utf8").replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>|<[^>]+>/g," "));
+for(const f of ["selection.html","alerts.html","privacy.html"])texts.push(fs.readFileSync(path.join(ROOT,"docs",f),"utf8").replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>|<[^>]+>/g," "));
 for(const f of fs.readdirSync(path.join(ROOT,"docs/weekly")))texts.push(fs.readFileSync(path.join(ROOT,"docs/weekly",f),"utf8").replace(/<[^>]+>/g," "));
 const hits=texts.flatMap(t=>t.split(/(?<=[.!?。])\s+/)).filter(s=>BAD.some(r=>r.test(s))&&!/\b(not|no|never)\b|아닙니다|않습니다|금지/.test(s));
 add("content","advice_wording",hits.length===0,`${hits.length} sentences flagged${hits.length?": "+hits.slice(0,3).join(" | ").slice(0,300):""}`,"0 sentences");
@@ -48,7 +49,7 @@ add("content","advice_wording",hits.length===0,`${hits.length} sentences flagged
   try{
     for(const [w,loc] of [[390,"ko-KR"],[390,"en-US"],[1200,"en-US"]]){
       const c=await b.newContext({viewport:{width:w,height:900},locale:loc});const p=await c.newPage();p.on("pageerror",()=>errs++);
-      for(const u of ["/","/#risks","/#sectors","/#past","/#record","/#method","/#weekly","/weekly/1.html","/weekly/1.ko.html","/odds.html","/selection.html"]){await p.goto("http://localhost:8791"+u);await p.waitForTimeout(500);
+      for(const u of ["/","/#risks","/#sectors","/#past","/#record","/#method","/#weekly","/weekly/1.html","/weekly/1.ko.html","/odds.html","/selection.html","/alerts.html","/privacy.html"]){await p.goto("http://localhost:8791"+u);await p.waitForTimeout(500);
         if(u==="/#sectors")await p.evaluate(()=>document.querySelector("#secs button")?.click());
         if(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth))scroll++;
         if(w===390){const r=await p.evaluate(()=>{document.querySelectorAll(".det").forEach(d=>d.hidden=false);document.querySelectorAll("details").forEach(d=>d.open=true);
@@ -76,8 +77,8 @@ add("content","advice_wording",hits.length===0,`${hits.length} sentences flagged
   add("screen","text_contrast",lowc.length===0,`${lowc.length} texts below the AA contrast ratio${lowc.length?": "+[...new Set(lowc)].slice(0,3).join("; "):""}`,"0 (4.5:1 for normal text, 3:1 for large)");
   add("screen","keyboard_and_labels",kbd.length===0,`${kbd.length} problems${kbd.length?": "+[...new Set(kbd)].slice(0,3).join("; "):""}`,"0 (every card opens by keyboard; inputs, buttons and images are named)");
   add("screen","two_languages_match",missing.length===0,`${missing.length} strings missing${missing.length?": "+missing.slice(0,5).join(", "):""}`,"0");
-  const kb=Math.round((fs.statSync(path.join(ROOT,"docs/index.html")).size+fs.statSync(path.join(ROOT,"docs/data.json")).size)/1024);
-  add("screen","page_weight",kb<=300,`${kb} KB`,"300 KB or less");
+  const size=f=>fs.statSync(path.join(ROOT,"docs",f)).size,kb=Math.round((size("index.html")+size("data.json"))/1024),kbKo=Math.round((size("index.html")+size("data.json")+size("ko.json"))/1024);
+  add("screen","page_weight",kb<=300,`${kb} KB in English, ${kbKo} KB in Korean (adds ko.json)`,"300 KB or less in English, the default");
   const rep={checked_at_utc:new Date().toISOString().slice(0,16)+"Z",passed:out.filter(x=>x.pass).length,total:out.length,checks:out,
     not_automated:["numbers on cards checked against sources","each resolution condition decidable by one public fact","accessibility contrast and keyboard","friends' feedback bars"]};
   fs.mkdirSync(path.join(ROOT,"quality"),{recursive:true});fs.writeFileSync(path.join(ROOT,"quality/report.json"),JSON.stringify(rep,null,1)+"\n");

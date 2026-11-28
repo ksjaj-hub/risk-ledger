@@ -10,8 +10,8 @@
   "always_50pct": 0.25,
   "if_exactly_right": {
    "questions": 24,
-   "expected_brier": 0.1147,
-   "expected_nothing_happens": 0.18,
+   "expected_brier": 0.1143,
+   "expected_nothing_happens": 0.1796,
    "expected_edge": 0.0653,
    "edge_sd": 0.0463,
    "edge_share_of_top_4_cards": 0.8,
@@ -237,120 +237,5 @@
   "card_days": 24,
   "curve": null,
   "note": "A curve is drawn from 10 resolved cards on."
- },
- "residual": {
-  "horizon_days": 90,
-  "cards_counted": 12,
-  "expected_worsened": 1.78,
-  "worsened_range80": [
-   0,
-   3
-  ],
-  "expected_resolved": 1.22,
-  "resolved_range80": [
-   0,
-   2
-  ],
-  "chance_none_worsens": 0.132,
-  "top": [
-   {
-    "card": "2026-china-domestic-demand-property",
-    "days_counted": 90,
-    "p_worsened": 0.3597,
-    "p_resolved": 0.0147,
-    "title": "China: weak domestic demand and property investment slump"
-   },
-   {
-    "card": "2026-japan-boj-tightening-yen",
-    "days_counted": 90,
-    "p_worsened": 0.3098,
-    "p_resolved": 0.1113,
-    "title": "Japan: Bank of Japan rate rises and weak yen"
-   },
-   {
-    "card": "2026-us-private-credit-defaults",
-    "days_counted": 90,
-    "p_worsened": 0.2524,
-    "p_resolved": 0.0098,
-    "title": "US private credit: fast growth and redemption limits (default rate reported, not confirmed)"
-   }
-  ],
-  "rows": [
-   {
-    "card": "2026-ai-buildout-financing",
-    "days_counted": 90,
-    "p_worsened": 0.1113,
-    "p_resolved": 0.1495
-   },
-   {
-    "card": "2026-china-domestic-demand-property",
-    "days_counted": 90,
-    "p_worsened": 0.3597,
-    "p_resolved": 0.0147,
-    "title": "China: weak domestic demand and property investment slump"
-   },
-   {
-    "card": "2026-eurozone-inflation-ecb",
-    "days_counted": 90,
-    "p_worsened": 0.0886,
-    "p_resolved": 0.0736
-   },
-   {
-    "card": "2026-fed-rate-hikes",
-    "days_counted": 90,
-    "p_worsened": 0.0736,
-    "p_resolved": 0.0365
-   },
-   {
-    "card": "2026-japan-boj-tightening-yen",
-    "days_counted": 90,
-    "p_worsened": 0.3098,
-    "p_resolved": 0.1113,
-    "title": "Japan: Bank of Japan rate rises and weak yen"
-   },
-   {
-    "card": "2026-nvidia-sec-and-leadership",
-    "days_counted": 90,
-    "p_worsened": 0.0236,
-    "p_resolved": 0.0117
-   },
-   {
-    "card": "2026-us-ai-chip-export-rules",
-    "days_counted": 90,
-    "p_worsened": 0.1884,
-    "p_resolved": 0.0513
-   },
-   {
-    "card": "2026-us-appropriations-lapse",
-    "days_counted": 14,
-    "p_worsened": 0.1125,
-    "p_resolved": 0.6749
-   },
-   {
-    "card": "2026-us-excess-capacity-tariffs",
-    "days_counted": 90,
-    "p_worsened": 0.1387,
-    "p_resolved": 0.0212
-   },
-   {
-    "card": "2026-us-iran-war-oil",
-    "days_counted": 90,
-    "p_worsened": 0.1029,
-    "p_resolved": 0.0246
-   },
-   {
-    "card": "2026-us-private-credit-defaults",
-    "days_counted": 90,
-    "p_worsened": 0.2524,
-    "p_resolved": 0.0098,
-    "title": "US private credit: fast growth and redemption limits (default rate reported, not confirmed)"
-   },
-   {
-    "card": "2027-us-debt-limit",
-    "days_counted": 90,
-    "p_worsened": 0.0212,
-    "p_resolved": 0.0431
-   }
-  ]
  }
 }

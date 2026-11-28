@@ -1,0 +1,84 @@
+{
+ "schema": 1,
+ "note": "Short questions on scheduled releases. Rules: questions/README.md. A question is never edited after it is written; only its outcome is filled in.",
+ "questions": [
+  {
+   "id": "2026-12-04-jobs-unemployment",
+   "written_on": "2026-11-28",
+   "release": {"name": "Employment Situation, November 2026", "agency": "BLS", "date": "2026-12-04", "time_et": "08:30", "url": "https://www.bls.gov/news.release/empsit.nr0.htm"},
+   "question": {"en": "Will the November unemployment rate be 4.2% or higher?", "ko": "11월 실업률이 4.2% 이상으로 나올까요?"},
+   "reading": "Unemployment rate, seasonally adjusted, as first printed in the release for November 2026.",
+   "unit": "%", "threshold": 4.2,
+   "previous": {"value": 4.1, "period": "October 2026", "url": "https://www.bls.gov/news.release/empsit.nr0.htm", "checked": "2026-11-28"},
+   "no_change_answer": 0,
+   "p": 0.35,
+   "basis": "The rate was 4.1% in October and BLS says it has stayed between 4.1% and 4.3% since March. A rounded rate moves up by a tenth or more in roughly one month in three, and payrolls were firm in October.",
+   "outcome": null
+  },
+  {
+   "id": "2026-12-04-jobs-payrolls",
+   "written_on": "2026-11-28",
+   "release": {"name": "Employment Situation, November 2026", "agency": "BLS", "date": "2026-12-04", "time_et": "08:30", "url": "https://www.bls.gov/news.release/empsit.nr0.htm"},
+   "question": {"en": "Will November payrolls rise by 100,000 or more?", "ko": "11월 비농업 고용이 10만 명 이상 늘까요?"},
+   "reading": "Change in total nonfarm payroll employment, seasonally adjusted, in thousands, as first printed for November 2026. Later revisions do not count.",
+   "unit": "thousand", "threshold": 100,
+   "previous": {"value": 165, "period": "October 2026", "url": "https://www.bls.gov/news.release/empsit.nr0.htm", "checked": "2026-11-28"},
+   "no_change_answer": 1,
+   "p": 0.55,
+   "basis": "October was +165,000, August +186,000 and September +60,000 after revision, but the 12-month average is only +48,000. The first print swings by tens of thousands on sampling alone, so this is close to even.",
+   "outcome": null
+  },
+  {
+   "id": "2026-12-04-jobs-earnings",
+   "written_on": "2026-11-28",
+   "release": {"name": "Employment Situation, November 2026", "agency": "BLS", "date": "2026-12-04", "time_et": "08:30", "url": "https://www.bls.gov/news.release/empsit.nr0.htm"},
+   "question": {"en": "Will average hourly earnings rise 0.4% or more on the month?", "ko": "시간당 평균 임금이 전월보다 0.4% 이상 오를까요?"},
+   "reading": "Average hourly earnings of all employees on private nonfarm payrolls, percent change from the prior month as stated in the release text for November 2026.",
+   "unit": "%", "threshold": 0.4,
+   "previous": {"value": 0.4, "period": "October 2026", "url": "https://www.bls.gov/news.release/empsit.nr0.htm", "checked": "2026-11-28"},
+   "no_change_answer": 1,
+   "p": 0.25,
+   "basis": "October was +0.4%, but the 12-month rise of 3.1% works out to about 0.26% a month. A second 0.4% in a row would be well above that pace.",
+   "outcome": null
+  },
+  {
+   "id": "2026-12-09-fomc-hike",
+   "written_on": "2026-11-28",
+   "release": {"name": "FOMC statement, December 8-9 meeting", "agency": "Federal Reserve", "date": "2026-12-09", "time_et": "14:00", "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"},
+   "question": {"en": "Will the Fed raise its target range on December 9?", "ko": "연준이 12월 9일에 목표 금리를 올릴까요?"},
+   "reading": "Change in the upper bound of the federal funds target range in the statement of the December 8-9 meeting, in percentage points. An increase of 0.25 or more counts as yes.",
+   "unit": "pp", "threshold": 0.25,
+   "previous": {"value": 0, "period": "October 27-28 meeting (held at 3.75% to 4.00%, two votes for an increase)", "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm", "checked": "2026-11-28"},
+   "no_change_answer": 0,
+   "p": 0.8,
+   "basis": "Two members already voted to raise in October, PCE inflation went from 3.6% to 3.8%, and the minutes say futures gave high odds to a rise by year-end. This number mostly follows what markets already price; AFMX has not read the futures itself.",
+   "outcome": null
+  },
+  {
+   "id": "2026-12-10-cpi-all-items",
+   "written_on": "2026-11-28",
+   "release": {"name": "Consumer Price Index, November 2026", "agency": "BLS", "date": "2026-12-10", "time_et": "08:30", "url": "https://www.bls.gov/news.release/cpi.nr0.htm"},
+   "question": {"en": "Will November consumer prices rise 0.4% or more on the month?", "ko": "11월 소비자물가가 전월보다 0.4% 이상 오를까요?"},
+   "reading": "CPI-U, all items, seasonally adjusted percent change from the prior month, as first printed for November 2026.",
+   "unit": "%", "threshold": 0.4,
+   "previous": {"value": 0.4, "period": "October 2026", "url": "https://www.bls.gov/news.release/cpi.nr0.htm", "checked": "2026-11-28"},
+   "no_change_answer": 1,
+   "p": 0.4,
+   "basis": "Four of the last seven months were 0.4% or more, mostly when energy jumped. Gasoline fell 0.7% before seasonal adjustment in October. AFMX has not read November fuel prices, so this is the recent rate shaded down a little.",
+   "outcome": null
+  },
+  {
+   "id": "2026-12-10-cpi-core",
+   "written_on": "2026-11-28",
+   "release": {"name": "Consumer Price Index, November 2026", "agency": "BLS", "date": "2026-12-10", "time_et": "08:30", "url": "https://www.bls.gov/news.release/cpi.nr0.htm"},
+   "question": {"en": "Will November core consumer prices rise 0.3% or more on the month?", "ko": "11월 근원 소비자물가가 전월보다 0.3% 이상 오를까요?"},
+   "reading": "CPI-U, all items less food and energy, seasonally adjusted percent change from the prior month, as first printed for November 2026.",
+   "unit": "%", "threshold": 0.3,
+   "previous": {"value": 0.3, "period": "October 2026", "url": "https://www.bls.gov/news.release/cpi.nr0.htm", "checked": "2026-11-28"},
+   "no_change_answer": 1,
+   "p": 0.6,
+   "basis": "Core rose 0.3% in each of August, September and October, with shelter at 0.3% to 0.4%. Four of the last seven months were 0.3% or more.",
+   "outcome": null
+  }
+ ]
+}
