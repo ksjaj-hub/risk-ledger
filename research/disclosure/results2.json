@@ -1,5 +1,5 @@
 {
- "computed": "2026-11-28T14:05Z",
+ "computed": "2026-11-28T14:06Z",
  "plan": "research/disclosure/preregistration2.json",
  "data": {
   "companies": 150,
@@ -356,7 +356,71 @@
    }
   ]
  },
- "V3b_reading_check": "not read yet",
+ "V3b_reading_check": {
+  "read": 60,
+  "about_the_risk": 57,
+  "share": 0.95,
+  "new": [
+   29,
+   30
+  ],
+  "surge": [
+   28,
+   30
+  ],
+  "per_theme": {
+   "tariffs": [
+    6,
+    6
+   ],
+   "export_controls": [
+    6,
+    6
+   ],
+   "ukraine": [
+    6,
+    6
+   ],
+   "pandemic": [
+    5,
+    6
+   ],
+   "bank_stress": [
+    6,
+    6
+   ],
+   "debt_ceiling": [
+    5,
+    6
+   ],
+   "gov_shutdown": [
+    3,
+    4
+   ],
+   "inflation": [
+    4,
+    4
+   ],
+   "supply_chain": [
+    4,
+    4
+   ],
+   "middle_east": [
+    4,
+    4
+   ],
+   "recession": [
+    4,
+    4
+   ],
+   "brexit": [
+    4,
+    4
+   ]
+  },
+  "themes_removed": [],
+  "pass": true
+ },
  "P1_persistence": {
   "new_events_with_a_next_filing": 1290,
   "still_there": 1043,
