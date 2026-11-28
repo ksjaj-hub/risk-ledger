@@ -18,7 +18,7 @@ import urllib.error, urllib.parse, urllib.request
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "research" / "disclosure"
 PLAN = json.loads((OUT / "preregistration.json").read_text())
-UA = os.environ.get("SEC_USER_AGENT") or "AFMX risk-ledger research (github.com/ksjaj-hub/risk-ledger) 325890826+ksjaj-hub@users.noreply.github.com"
+UA = os.environ.get("SEC_USER_AGENT") or "AFMX risk-ledger AFMX.risk@gmail.com"
 THEMES = list(PLAN["themes"])
 PAT = {k: re.compile(v) for k, v in PLAN["themes"].items()}
 GENERIC = re.compile(r"\brisks?\b|\buncertaint(?:y|ies)\b|\buncertain\b|\badverse(?:ly)?\b")
@@ -81,8 +81,7 @@ def count_one(job):
 def probe():
     global UA
     works = None
-    for ua in (UA, "AFMX risk-ledger 325890826+ksjaj-hub@users.noreply.github.com",
-               "AFMX risk-ledger ksjaj-hub@users.noreply.github.com"):
+    for ua in (UA,):
         for url in ("https://www.sec.gov/files/company_tickers.json", "https://data.sec.gov/submissions/CIK0000320193.json"):
             time.sleep(1)
             req = urllib.request.Request(url, headers={"User-Agent": ua, "Accept-Encoding": "gzip, deflate"})
