@@ -1,0 +1,49 @@
+{
+ "name": "AFMX residual risk index",
+ "version": 1,
+ "written_on": "2026-11-28",
+ "note": "Written and committed before the index was computed for the first time and before any comparison with market prices. This file is not edited afterwards. A different formula is version 2 in a new file, and both are shown.",
+ "what_the_author_had_seen": "The 12 open cards and their forecast probabilities (they are the inputs). Not seen: the index value, its history, or any relation between it and any market price.",
+ "what_it_is": "One number for how much unresolved event risk is on AFMX's open cards. It adds up AFMX's own judgment. It is a summary of opinions that are scored in public, not a measurement of the market and not a forecast of prices.",
+ "formula": {
+  "per_card_stage": {
+   "resolved_or_withdrawn": "0, and the card leaves the sum",
+   "worsened": "2",
+   "open_or_easing_without_a_forecast": "1",
+   "open_or_easing_with_a_forecast": "1 - p_resolved + p_worsened, from the newest forecast written on or before the day. This is the expected stage at that forecast's deadline when resolved counts 0, still open 1 and worsened 2. Kept between 0 and 2.",
+   "after_a_deadline_passes": "The last forecast keeps counting until a new one is written."
+  },
+  "per_card_reach": "1 if aids/reading.json marks the card market_wide; otherwise the number of sectors it names as direct, divided by 11; never less than 1/11. Reach says how much of the US market a card touches. It is a count of sectors, not a measured size of damage.",
+  "index": "The sum over open cards of reach times stage. Unit: 'market-wide open risks'. A value of 5 reads as: the same as five risks that each touch the whole market and are expected to stay open.",
+  "published_with_it": [
+   "the number of open cards",
+   "the same sum with every reach set to 1 (a check on how much the reach weights matter)",
+   "each card's share of the index",
+   "tilt: the sum of reach times (p_worsened - p_resolved); above zero means the cards lean toward getting worse"
+  ],
+  "no_scale": "The index is not rescaled to 0 to 100 and has no bands such as low or high. There is no history to set bands from. Bands may be proposed as version 2 after the first review."
+ },
+ "history": {
+  "how": "Recomputed from the card files for every day on which a card was opened, changed status or got a new forecast. The day's status is the last status in the card's history on or before that day.",
+  "starts": "2026-11-26, the day the first cards were recorded. Nothing is back-filled before that.",
+  "reach_over_time": "The reach in today's aids/reading.json is used for every day. If a card's reach is changed, the history shifts; such a change is recorded in residual/README.md with its date."
+ },
+ "market_test": {
+  "status": "Not run. Until it is run and passed, AFMX makes no claim that this index says anything about prices.",
+  "earliest": "2027-11-26, and only with at least 52 weekly values and at least 10 weeks in each group below.",
+  "question": "After the index rose over four weeks, was the AFMX market backdrop score (rule v3, 0 to 100, from records/) higher four weeks later than after the index fell or stayed the same?",
+  "method": "Friday values. Group A: weeks where the index is higher than four weeks earlier. Group B: all other weeks. Outcome: backdrop score four weeks later minus the score that Friday. Statistic: mean of A minus mean of B, with a 90% range from a block bootstrap in blocks of four weeks.",
+  "passes_if": "The whole 90% range is above zero.",
+  "if_it_fails_or_cannot_be_run": "The page says so in plain words, and the index stays labeled as a summary of open cards only.",
+  "one_look": "The test is run once on the date above. Looking earlier, or trying other outcomes, is reported as exploratory and cannot pass."
+ },
+ "known_limits": [
+  "Every input is AFMX's own judgment. The index moves only when AFMX edits a card, so it can lag events by up to a day and can be moved by AFMX's own mistakes.",
+  "12 cards. One card with wide reach can move the index by a fifth.",
+  "The number of cards is an editorial choice (selection/criteria.json). Opening more cards raises the index even if the world did not change.",
+  "Forecast deadlines differ from 2026-12-12 to 2027-06-30, so the stages are not over the same horizon.",
+  "Cards share causes (rates, AI spending). Adding them up counts shared causes more than once.",
+  "Reach is a count of sectors. A card that touches one sector can still do more damage than a market-wide one.",
+  "Two days of history on the day this was written."
+ ]
+}
