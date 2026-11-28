@@ -1,0 +1,602 @@
+[
+ {
+  "kind": "new",
+  "theme": "tariffs",
+  "ticker": "ORCL",
+  "form": "10-K",
+  "filed": "2019-06-21",
+  "count": 1,
+  "url": "https://www.sec.gov/Archives/edgar/data/1341439/000156459019023119/orcl-10k_20190531.htm",
+  "snippet": " local laws which include data privacy requirements, labor relations laws, tax laws, foreign currency-related regulations, anti-competition regulations, prohibitions on payments to governmental officials, market access, tariffs, import, export and general trade regulations, including but not limited to economic sanctions and embargos. violations of these laws and regulations could result in fines and penalties, criminal sanctions against us, o"
+ },
+ {
+  "kind": "new",
+  "theme": "export_controls",
+  "ticker": "BRK-B",
+  "form": "10-K",
+  "filed": "2011-02-28",
+  "count": 1,
+  "url": "https://www.sec.gov/Archives/edgar/data/1067983/000119312511048914/d10k.htm",
+  "snippet": "ations, economic climate and other unpredictable factors. fol has secured contracts to purchase cotton to meet production plans for 2011. in 2010, cotton market prices increased by 80% due to lower worldwide crop yield, export restrictions in india and increasing global demand. these conditions resulted in increased raw material prices across the apparel industry. fol's markets are highly competitive, consisting of many domestic and foreign manufacturers "
+ },
+ {
+  "kind": "new",
+  "theme": "ukraine",
+  "ticker": "IBKR",
+  "form": "10-Q",
+  "filed": "2022-05-09",
+  "count": 2,
+  "url": "https://www.sec.gov/Archives/edgar/data/1381197/000138119722000023/ibkr-20220331x10q.htm",
+  "snippet": "hong kong and in the chinese and hong kong capital markets could result in adverse effects on our business and loss of assets we hold in the region. additionally, although our direct and indirect exposures to russia and ukraine are not material, the war in ukraine and related sanctions have created substantial uncertainty in the global economy and financial markets. we continue to monitor the war and assess any potential impact to our business"
+ },
+ {
+  "kind": "new",
+  "theme": "pandemic",
+  "ticker": "CTAS",
+  "form": "10-Q",
+  "filed": "2020-03-31",
+  "count": 35,
+  "url": "https://www.sec.gov/Archives/edgar/data/723254/000072325420000014/ctas-20200229.htm",
+  "snippet": "bruary 28, 2019 for the two reportable operating segments and all other is presented in note 12 entitled segment information of “notes to consolidated condensed financial statements.” in december 2019, a novel strain of coronavirus (covid-19) was reported to have surfaced in wuhan, china, and has since spread to a number of other countries, including the united states. in march 2020, the world health organization characterized covid-19 as a pandem"
+ },
+ {
+  "kind": "new",
+  "theme": "bank_stress",
+  "ticker": "AMAT",
+  "form": "10-Q",
+  "filed": "2023-05-26",
+  "count": 1,
+  "url": "https://www.sec.gov/Archives/edgar/data/6951/000000695123000022/amat-20230430.htm",
+  "snippet": "uncertain or adverse economic and business conditions, including uncertainties and volatility in the financial markets, national debt, fiscal or monetary concerns, rising inflation and interest rates in various regions, bank failures, failure of the u.s. government to timely raise the debt ceiling, and economic recession, could materially adversely impact our operating results. markets for semiconductors and displays depend largely on business and c"
+ },
+ {
+  "kind": "new",
+  "theme": "debt_ceiling",
+  "ticker": "PNC",
+  "form": "10-K",
+  "filed": "2013-03-01",
+  "count": 1,
+  "url": "https://www.sec.gov/Archives/edgar/data/713676/000119312513085012/d446794d10k.htm",
+  "snippet": "he economy and capital markets in the united states as well. although the so-called “fiscal cliff” was averted in early 2013, congress and the president still need to resolve issues with respect to the u.s. government's debt ceiling and other budgetary and spending matters. uncertainty as to whether these issues can be resolved or how effective a resolution might be increases the risk of slower economic growth. the nature and ultimate resolution of"
+ },
+ {
+  "kind": "new",
+  "theme": "gov_shutdown",
+  "ticker": "MCK",
+  "form": "10-K",
+  "filed": "2026-05-08",
+  "count": 1,
+  "url": "https://www.sec.gov/Archives/edgar/data/927653/000092765326000069/mck-20260331.htm",
+  "snippet": "rcumstances (including changes in international relations), changes or uncertainty in government policies (including with respect to u.s. or international trade), actual or announced tariffs or other trade restrictions, government shutdowns, or changes in laws or their interpretation. these conditions and events can disrupt operations for us, our suppliers, our vendors, and our customers, as well as impair product manufacturing, supply, and transport avail"
+ },
+ {
+  "kind": "new",
+  "theme": "inflation",
+  "ticker": "CAT",
+  "form": "10-K",
+  "filed": "2022-02-16",
+  "count": 1,
+  "url": "https://www.sec.gov/Archives/edgar/data/18230/000001823022000050/cat-20211231.htm",
+  "snippet": "mic caused a global recession and the sustainability of the economic recovery observed in 2021 remains unclear. the covid-19 pandemic has also significantly increased economic and customer demand uncertainty, has caused inflationary pressure in the u.s. and elsewhere and has led to volatility in customer demand for the company's products and services and caused supply chain disruptions. economic uncertainties could continue to affect customer demand for the"
+ },
+ {
+  "kind": "new",
+  "theme": "supply_chain",
+  "ticker": "ORCL",
+  "form": "10-Q",
+  "filed": "2021-12-10",
+  "count": 2,
+  "url": "https://www.sec.gov/Archives/edgar/data/1341439/000156459021060022/orcl-10q_20211130.htm",
+  "snippet": "re affected by many factors, including our manufacturing partners' abilities to timely manufacture or deliver a few large hardware transactions, with this factor becoming more pronounced in recent quarters due to global supply chain constraints for certain technology components; our strategy for and the position of our hardware products relative to competitor offerings; customer demand for competing offerings, including cloud infrastructure offerings; the stre"
+ },
+ {
+  "kind": "new",
+  "theme": "middle_east",
+  "ticker": "ABNB",
+  "form": "10-Q",
+  "filed": "2026-05-07",
+  "count": 1,
+  "url": "https://www.sec.gov/Archives/edgar/data/1559720/000155972026000014/abnb-20260331.htm",
+  "snippet": "political conditions on our business, including inflation, interest rates, foreign currency fluctuations, tariffs and trade controls, wars and other geopolitical conflicts, and potential decreased consumer spending. the conflict in the middle east has had and is expected to continue to have a slight impact on near-term booking trends, including increased cancellations in europe, the middle east, and africa (“emea”) and asia pacific. to date, these conditions have"
+ },
+ {
+  "kind": "new",
+  "theme": "recession",
+  "ticker": "MA",
+  "form": "10-Q",
+  "filed": "2020-04-29",
+  "count": 1,
+  "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139120000091/ma03312020-10xq.htm",
+  "snippet": "nomic and operating conditions can resume. even after the covid-19 outbreak has subsided, we may continue to experience materially adverse impacts to our business as a result of its global economic impact, including any recession that has occurred or may occur in the future. there are no comparable recent events which may provide guidance as to the effect of the spread of covid-19 and a global pandemic, and, as a result, the ultimate impact of c"
+ },
+ {
+  "kind": "new",
+  "theme": "brexit",
+  "ticker": "TMO",
+  "form": "10-Q",
+  "filed": "2016-08-05",
+  "count": 3,
+  "url": "https://www.sec.gov/Archives/edgar/data/97745/000009774516000065/tmoq2201610q.htm",
+  "snippet": " , currency translation had an unfavorable effect of $77 million on revenues due to the strengthening of the u.s. dollar relative to other currencies in which the company sells products and services. the approval of the brexit referendum in the united kingdom may have an adverse impact on our results of operations. in a referendum vote held on june 23, 2016, the united kingdom voted to leave the european union. in 2015 , 4.6% of our revenues "
+ },
+ {
+  "kind": "new",
+  "theme": "tariffs",
+  "ticker": "SPGI",
+  "form": "10-Q",
+  "filed": "2016-07-28",
+  "count": 1,
+  "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404016000090/spgi-2016630xq2.htm",
+  "snippet": "iate a process to leave the eu (often referred to as brexit) and begin negotiating the terms of the u.k.'s future relationship with the eu. • any impact from brexit on the company will depend, in part, on the outcome of tariff, trade and other negotiations. in addition, brexit could lead to legal uncertainty and potentially divergent national laws and regulations between the u.k and the eu as the u.k. determines which eu laws to replace or re"
+ },
+ {
+  "kind": "new",
+  "theme": "export_controls",
+  "ticker": "ORCL",
+  "form": "10-K",
+  "filed": "2023-06-20",
+  "count": 4,
+  "url": "https://www.sec.gov/Archives/edgar/data/1341439/000095017023028914/orcl-20230531.htm",
+  "snippet": " meet our contractual service level commitments; • there is a delay in market acceptance of and difficulty in transitioning new and existing customers to new, enhanced or acquired product lines or services; • sanctions, export controls or other regulatory, legislative or other barriers prevent us from serving certain customers or restrict our customers from operating in specific jurisdictions; • there are changes in it trends that we do not adequately"
+ },
+ {
+  "kind": "new",
+  "theme": "ukraine",
+  "ticker": "WFC",
+  "form": "10-Q",
+  "filed": "2022-05-03",
+  "count": 2,
+  "url": "https://www.sec.gov/Archives/edgar/data/72971/000007297122000113/wfc-20220331.htm",
+  "snippet": "ur customers, shareholders, regulators and other stakeholders. we continue to monitor our business, including our loan portfolios, for potential direct, indirect, and macro-economic impacts stemming from the conflict in ukraine and any associated economic sanctions. for additional information about how we manage risk, see the “risk management” section in our 2021 form 10-k. the discussion that follows supplements our discussion of the manageme"
+ },
+ {
+  "kind": "new",
+  "theme": "pandemic",
+  "ticker": "AMGN",
+  "form": "10-K",
+  "filed": "2020-02-12",
+  "count": 3,
+  "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815420000017/amgn-12312019x10kq42019.htm",
+  "snippet": " and delivery of the clinical supply of our product candidates to numerous and varied clinical trial sites. additionally, regional disruptions, including natural disasters or health emergencies (such as novel viruses or pandemics), could significantly disrupt the timing of clinical trials. if we fail to adequately manage the design, execution and diverse regulatory aspects of our large and complex clinical trials or to manage the production or d"
+ },
+ {
+  "kind": "new",
+  "theme": "bank_stress",
+  "ticker": "IBM",
+  "form": "10-Q",
+  "filed": "2023-04-25",
+  "count": 2,
+  "url": "https://www.sec.gov/Archives/edgar/data/51143/000155837023006656/ibm-20230331x10q.htm",
+  "snippet": "ot eliminate the impact of currency. the (gains)/losses from these hedging programs are reflected primarily in other income and expense. see “currency rate fluctuations,” for additional information. ​ in march 2023, the bank failures of silicon valley bank and signature bank created significant market disruption and uncertainty within the u.s. banking sector, in particular with respect to regional banks. we hold minimal cash balances with regional b"
+ },
+ {
+  "kind": "new",
+  "theme": "debt_ceiling",
+  "ticker": "PGR",
+  "form": "10-Q",
+  "filed": "2025-05-05",
+  "count": 1,
+  "url": "https://www.sec.gov/Archives/edgar/data/80661/000008066125000023/pgr-20250331.htm",
+  "snippet": "overnment obligations, including payments related to u.s. treasury securities, could occur as soon as this summer. although not likely probable, it is possible that the federal government could fail to raise the federal debt ceiling to avoid default. any such default would likely have a material adverse impact on our cash flows and the value of our portfolio and our capital position. see item 1a, risk factors in our form 10-k filed with the u.s. se"
+ },
+ {
+  "kind": "new",
+  "theme": "gov_shutdown",
+  "ticker": "COST",
+  "form": "10-Q",
+  "filed": "2020-06-04",
+  "count": 2,
+  "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983220000009/cost-20200510.htm",
+  "snippet": "varying degrees. there is uncertainty regarding the expected extent and duration of counter-measures that impact our business, such as travel bans and restrictions, quarantines, shelter-in-place orders, and business and government shutdowns. therefore, the ultimate impacts to our results of operations, financial position, and liquidity, cannot now be reasonably estimated. results of operations net sales 12 weeks ended 36 weeks ended may 10, 2020 may 12, 20"
+ },
+ {
+  "kind": "new",
+  "theme": "inflation",
+  "ticker": "GE",
+  "form": "10-K",
+  "filed": "2019-02-26",
+  "count": 2,
+  "url": "https://www.sec.gov/Archives/edgar/data/40545/000004054519000014/ge10-k2018.htm",
+  "snippet": "ear) over shorter durations (between 12 and 20 years based on the average attained age of the underlying books of business) which adversely impacted our reserve margin by $1.2 billion; • higher interest rates leading to higher inflation which increased projected utilization on long-term care insurance policies which adversely impacted our reserve margin by $0.3 billion; • lower policy terminations on long-term care insurance policies and revisions to a"
+ },
+ {
+  "kind": "new",
+  "theme": "supply_chain",
+  "ticker": "USB",
+  "form": "10-Q",
+  "filed": "2022-08-04",
+  "count": 1,
+  "url": "https://www.sec.gov/Archives/edgar/data/36104/000119312522212040/d322057d10q.htm",
+  "snippet": "r and preferences; breaches in data security, including as a result of work-from-home arrangements; failures to safeguard personal information; the impacts of international hostilities or geopolitical events; impacts of supply chain disruptions and rising inflation; effects of mergers and acquisitions and related integration; effects of critical accounting policies and judgments; and management's ability to effectively manage credit risk, market risk, operatio"
+ },
+ {
+  "kind": "new",
+  "theme": "middle_east",
+  "ticker": "MDLZ",
+  "form": "10-K",
+  "filed": "2025-02-05",
+  "count": 4,
+  "url": "https://www.sec.gov/Archives/edgar/data/1103982/000110398225000030/mdlz-20241231.htm",
+  "snippet": "or resources; tariffs or other trade barriers; currency fluctuations; geopolitical conditions or conflicts (including the ongoing war in ukraine and international sanctions imposed on russia for its invasion of ukraine, conflicts in the middle east and rising tensions between china and taiwan); inflationary pressures related to domestic and global economic conditions or supply chain issues; transportation and labor disruptions; government intervention to introduce"
+ },
+ {
+  "kind": "new",
+  "theme": "recession",
+  "ticker": "IBKR",
+  "form": "10-Q",
+  "filed": "2010-08-09",
+  "count": 1,
+  "url": "https://www.sec.gov/Archives/edgar/data/1381197/000138119710000017/ibkr_2q10q2010.htm",
+  "snippet": "omers 30 business environment the financial markets exhibited heightened turbulence during the second quarter of 2010, with major stock indexes falling on concerns over the european debt crises and fears of a double-dip recession. investors were further shaken by the may 6 th “flash crash”, in which the dow jones industrials average experienced its largest decline in a single day, followed by a partial rebound. these events drove volatility leve"
+ },
+ {
+  "kind": "new",
+  "theme": "brexit",
+  "ticker": "SYK",
+  "form": "10-K",
+  "filed": "2020-02-06",
+  "count": 1,
+  "url": "https://www.sec.gov/Archives/edgar/data/310764/000031076420000014/syk10k12312019.htm",
+  "snippet": "and managing foreign operations, introduction of new internal business structures and programs, and political and economic instability (such as the united kingdom's exit from the european union, commonly referred to as \"brexit\"). our business could be adversely impacted if we are unable to successfully manage these and other risks of global operations in an increasingly volatile environment. we may be unable to capitalize on previous or futur"
+ },
+ {
+  "kind": "new",
+  "theme": "tariffs",
+  "ticker": "VZ",
+  "form": "10-Q",
+  "filed": "2025-04-25",
+  "count": 6,
+  "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271225000024/vz-20250331.htm",
+  "snippet": "c. (frontier), a u.s. provider of broadband internet and other communication services, as part of our fiber expansion strategy, and we expect to increase the capital expenditures we devote to our fiber networks in 2025. tariffs and other government initiatives the u.s. government recently announced tariffs on goods imported from various countries to the u.s. countries subject to such tariffs have imposed or may in the future impose reciprocal "
+ },
+ {
+  "kind": "new",
+  "theme": "export_controls",
+  "ticker": "NFLX",
+  "form": "10-K",
+  "filed": "2013-02-01",
+  "count": 1,
+  "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528013000008/nflx1231201210kdoc.htm",
+  "snippet": "and costs associated with staffing and managing foreign operations; • management distraction; • political or social unrest and economic instability; • compliance with u.s. laws such as the foreign corrupt practices act, export controls and economic sanctions, and local laws prohibiting corrupt payments to government officials; • difficulties in understanding and complying with local laws, regulations and customs in foreign jurisdictions; • unexpected "
+ },
+ {
+  "kind": "new",
+  "theme": "ukraine",
+  "ticker": "MRK",
+  "form": "10-K",
+  "filed": "2022-02-25",
+  "count": 1,
+  "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015822000003/mrk-20211231.htm",
+  "snippet": "sm, riot, civil insurrection or social unrest; and natural or man-made disasters, including famine, flood, fire, earthquake, storm or disease. in particular, in february 2022, armed conflict escalated between russia and ukraine. it is not possible to predict the broader consequences of this conflict, which could include sanctions, embargoes, regional instability, geopolitical shifts and adverse effects on macroeconomic conditions, currency exc"
+ },
+ {
+  "kind": "new",
+  "theme": "pandemic",
+  "ticker": "WDC",
+  "form": "10-Q",
+  "filed": "2020-05-08",
+  "count": 41,
+  "url": "https://www.sec.gov/Archives/edgar/data/106040/000010604020000024/wdc-20200403.htm",
+  "snippet": " may also be forward-looking if they imply a continuation of current conditions. examples of forward-looking statements include, but are not limited to, statements concerning: • expectations regarding the effects of the covid-19 pandemic and measures intended to reduce its spread; • expectations regarding our flash ventures joint venture with kioxia corporation, the flash industry and our flash wafer output plans; • expectations regarding prici"
+ },
+ {
+  "kind": "new",
+  "theme": "bank_stress",
+  "ticker": "ADI",
+  "form": "10-K",
+  "filed": "2023-11-21",
+  "count": 2,
+  "url": "https://www.sec.gov/Archives/edgar/data/6281/000000628123000203/adi-20231028.htm",
+  "snippet": "t rate fluctuations, including the potential impact of elevated interest rates; • instability of global credit and financial markets due to adverse macroeconomic conditions such as rising inflation, high interest rates, bank failures and slower economic growth or recession that could, among other impacts, affect our ability to access external financing sources on acceptable terms or lead to financial difficulties or uncertainty of our customers, sup"
+ },
+ {
+  "kind": "new",
+  "theme": "debt_ceiling",
+  "ticker": "ISRG",
+  "form": "10-Q",
+  "filed": "2013-10-18",
+  "count": 2,
+  "url": "https://www.sec.gov/Archives/edgar/data/1035267/000103526713000040/isrg-2013930x10q.htm",
+  "snippet": "act of global and regional economic and credit market conditions on health care spending; the potential impact of the recent shutdown of the u.s. federal government and the ongoing debates related to the u.s. budget and debt ceiling ; health care reform legislation in the united states and its impact on hospital spending, reimbursement and fees which will be levied on certain medical device revenues; decreases in hospital admissions and actions by "
+ },
+ {
+  "kind": "surge",
+  "theme": "tariffs",
+  "ticker": "UPS",
+  "form": "10-K",
+  "filed": "2017-02-21",
+  "count": 3,
+  "url": "https://www.sec.gov/Archives/edgar/data/1090727/000109072717000011/ups-12312016x10k.htm",
+  "snippet": "r governmental laws, regulations and policies, both in the u.s. and in the other countries in which we operate. in addition, our business is impacted by laws, regulations and policies that affect global trade, including tariff and trade policies, export requirements, taxes, monetary policies and other restrictions and charges. changes in laws, regulations and policies and the related interpretations may alter the landscape in which we do busi"
+ },
+ {
+  "kind": "surge",
+  "theme": "export_controls",
+  "ticker": "BA",
+  "form": "10-Q",
+  "filed": "2022-04-27",
+  "count": 3,
+  "url": "https://www.sec.gov/Archives/edgar/data/12927/000001292722000022/ba-20220331.htm",
+  "snippet": "s. we have also suspended our business in russia, including parts, maintenance and technical support for russian airlines, and purchases from russian suppliers. we are complying with u.s. and international sanctions and export control restrictions. we have sufficient material and parts to avoid production disruptions in the near-term, but future impacts to our production from disruptions in our supply chain are possible. the war in ukraine is also im"
+ },
+ {
+  "kind": "surge",
+  "theme": "ukraine",
+  "ticker": "AMGN",
+  "form": "10-Q",
+  "filed": "2024-05-03",
+  "count": 5,
+  "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815424000020/amgn-20240331.htm",
+  "snippet": "may intensify as governments take actions to address budgets strained by high inflation, expenditures to respond to the covid-19 pandemic and weak economic conditions, including in europe where the effects of the russia–ukraine conflict have challenged the economies in that region. further, the eu is currently undergoing a review and revision of its pharmaceutical legislation that, while full implementation is not expected before 2027, could l"
+ },
+ {
+  "kind": "surge",
+  "theme": "pandemic",
+  "ticker": "GD",
+  "form": "10-K",
+  "filed": "2021-02-09",
+  "count": 85,
+  "url": "https://www.sec.gov/Archives/edgar/data/40533/000004053321000010/gd-20201231.htm",
+  "snippet": "s in recent years and a shift to large-scale, end-to-end, highly engineered solutions that require critical mass and a broad array of technology services and hardware offerings to meet these customer demands. the recent coronavirus (covid-19) pandemic has only accelerated these trends, which have included an expansion of remote connectivity and added urgency to required technology investments. these market shifts have resulted in significant conso"
+ },
+ {
+  "kind": "surge",
+  "theme": "bank_stress",
+  "ticker": "C",
+  "form": "10-K",
+  "filed": "2012-02-24",
+  "count": 3,
+  "url": "https://www.sec.gov/Archives/edgar/data/831001/000120677412000799/citigroup_10k.htm",
+  "snippet": " the ongoing eurozone debt crisis could have significant adverse effects on citi's business, results of operations, financial condition and liquidity, particularly if it leads to any sovereign debt defaults, significant bank failures or defaults and/or the exit of one or more countries from the european monetary union. the ongoing eurozone debt crisis has caused, and is likely to continue to cause, disruption in global financial markets, particularl"
+ },
+ {
+  "kind": "surge",
+  "theme": "debt_ceiling",
+  "ticker": "GS",
+  "form": "10-K",
+  "filed": "2023-02-24",
+  "count": 3,
+  "url": "https://www.sec.gov/Archives/edgar/data/886982/000088698223000003/gs-20221231.htm",
+  "snippet": "es, exchange rate or basic commodity price volatility or default rates; high levels of inflation or stagflation; concerns about sovereign defaults; uncertainty concerning fiscal or monetary policy, government shutdowns, debt ceilings or funding; the extent of and uncertainty about potential increases in tax rates and other regulatory changes; limitations on international trade and travel; laws and regulations that limit trading in, or the issuance "
+ },
+ {
+  "kind": "surge",
+  "theme": "gov_shutdown",
+  "ticker": "FTNT",
+  "form": "10-Q",
+  "filed": "2019-05-08",
+  "count": 3,
+  "url": "https://www.sec.gov/Archives/edgar/data/1262039/000126203919000014/ftnt-0331201910xq.htm",
+  "snippet": "ened demand for our products and services and difficulty for us in forecasting our financial results and managing inventory levels. political developments impacting government spending and international trade, including government shutdowns in the united states, continued uncertainty surrounding the united kingdom's departure from the eu and trade disputes and tariffs, may negatively impact markets and cause weaker macroeconomic conditions. the effects of "
+ },
+ {
+  "kind": "surge",
+  "theme": "inflation",
+  "ticker": "AMT",
+  "form": "10-K",
+  "filed": "2023-02-23",
+  "count": 5,
+  "url": "https://www.sec.gov/Archives/edgar/data/1053507/000105350723000023/amt-20221231.htm",
+  "snippet": " interest rates in march 2022 for the first time in over three years, significantly increased the federal funds rate during 2022 and has indicated that further rate increases may be announced in the short-term to combat rising inflation in the united states. such rate increases have corresponding impact to our costs of borrowing and may have an adverse impact on our ability to raise funds through the offering of our securities or through the issuance o"
+ },
+ {
+  "kind": "surge",
+  "theme": "supply_chain",
+  "ticker": "DELL",
+  "form": "10-K",
+  "filed": "2020-03-27",
+  "count": 5,
+  "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199620000017/delltechnologiesfy2010k.htm",
+  "snippet": "technologies to a greater risk of shortages and reduced control over delivery schedules of components and products, as well as a greater risk of increases in product and component costs. dell technologies may experience supply shortages and price increases caused by changes to raw material availability, manufacturing capacity, labor shortages, public health issues, such as the outbreak of the coronavirus disease 2019 (covid-19), tariffs, trade disputes"
+ },
+ {
+  "kind": "surge",
+  "theme": "middle_east",
+  "ticker": "FTNT",
+  "form": "10-K",
+  "filed": "2026-02-25",
+  "count": 18,
+  "url": "https://www.sec.gov/Archives/edgar/data/1262039/000126203926000007/ftnt-20251231.htm",
+  "snippet": "n and harm our financial position. • weakening product demand caused by geopolitical instability, changes in trade agreements, wars and foreign conflicts, such as the war in ukraine, tensions between china and taiwan or conflicts in the middle east, could adversely affect our business and financial performance. 2 table of contents part i item 1. business overview fortinet is a leader in cybersecurity, driving the convergence of networking and security. our mission"
+ },
+ {
+  "kind": "surge",
+  "theme": "recession",
+  "ticker": "SO",
+  "form": "10-K",
+  "filed": "2010-02-25",
+  "count": 68,
+  "url": "https://www.sec.gov/Archives/edgar/data/92122/000009212210000009/g21794e10vk.htm",
+  "snippet": "ry of additional competition in the markets in which southern company's subsidiaries operate; • variations in demand for electricity, including those relating to weather, the general economy and recovery from the recent recession, population and business growth (and declines), and the effects of energy conservation measures; • available sources and costs of fuels; • effects of inflation; • ability to control costs and avoid cost overruns during "
+ },
+ {
+  "kind": "surge",
+  "theme": "brexit",
+  "ticker": "WAT",
+  "form": "10-K",
+  "filed": "2020-02-25",
+  "count": 5,
+  "url": "https://www.sec.gov/Archives/edgar/data/1000697/000119312520048303/d862312d10k.htm",
+  "snippet": "ased sales in the u.s., canada, japan and the rest of asia being offset by a decrease in sales in other geographies on weaker demand for our products due to uncertainty caused by macroeconomic conditions, primarily from brexit as well as latin america, and governmental policy changes in china. in addition, the effect of foreign currency translation negatively impacted sales by 2% overall. the company's sales growth in 2018 was primarily drive"
+ },
+ {
+  "kind": "surge",
+  "theme": "tariffs",
+  "ticker": "BMY",
+  "form": "10-K",
+  "filed": "2026-02-11",
+  "count": 18,
+  "url": "https://www.sec.gov/Archives/edgar/data/14272/000001427226000004/bmy-20251231.htm",
+  "snippet": "ced prices and reimbursement for certain of our or competing products and may impact our cash flows and results of operations. further, the u.s. and other countries have recently imposed, and may continue to impose, new tariffs. while pharmaceuticals are largely exempt from the tariffs imposed in 2025, such exemptions may be terminated or may not apply to any future tariffs. in accordance with the u.s. government agreement, bms will receive ce"
+ },
+ {
+  "kind": "surge",
+  "theme": "export_controls",
+  "ticker": "PEP",
+  "form": "10-Q",
+  "filed": "2022-07-12",
+  "count": 3,
+  "url": "https://www.sec.gov/Archives/edgar/data/77476/000007747622000043/pep-20220611.htm",
+  "snippet": "d availability and increased costs for transportation, energy, packaging, raw materials and other input costs, environmental, health and safety risks related to securing and maintaining facilities, additional sanctions, export controls and other regulations (including restrictions on the transfer of funds to and from russia). the ongoing c onflict could result in loss of assets or result in additional impairment charges. we cannot predict how and the "
+ },
+ {
+  "kind": "surge",
+  "theme": "ukraine",
+  "ticker": "CSCO",
+  "form": "10-K",
+  "filed": "2022-09-08",
+  "count": 17,
+  "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887722000013/csco-20220730.htm",
+  "snippet": "lobal credit markets, the impact of uncertainty regarding global central bank monetary policy, the instability in the geopolitical environment in many parts of the world (including as a result of the on-going russia and ukraine war, and china-taiwan relations), the current economic challenges in china, including global economic ramifications of chinese economic difficulties, and other disruptions may continue to put pressure on global economic"
+ },
+ {
+  "kind": "surge",
+  "theme": "pandemic",
+  "ticker": "DE",
+  "form": "10-Q",
+  "filed": "2020-05-28",
+  "count": 24,
+  "url": "https://www.sec.gov/Archives/edgar/data/315189/000155837020007066/de-20200503x10q.htm",
+  "snippet": "conformity with accounting principles generally accepted in the u.s. requires management to make estimates and assumptions that affect the reported amounts and related disclosures. the identification and rapid spread of covid-19 (covid) has resulted in governments and other authorities implementing numerous measures designed to contain the virus. these and other actions have resulted in uncertainties in the company's business, which may result "
+ },
+ {
+  "kind": "surge",
+  "theme": "bank_stress",
+  "ticker": "BAC",
+  "form": "10-K",
+  "filed": "2024-02-20",
+  "count": 7,
+  "url": "https://www.sec.gov/Archives/edgar/data/70858/000007085824000122/bac-20231231.htm",
+  "snippet": "e to time, including in connection with systemic risk events. for example, on november 16, 2023, the fdic issued its final rule to impose a special assessment to recover the loss to the dif resulting from the closure of silicon valley bank and signature bank. for more information on the impact to the corporation of the fdic special assessment, see executive summary – recent developments in the md&a on page 26. for more information regarding deposit insura"
+ },
+ {
+  "kind": "surge",
+  "theme": "debt_ceiling",
+  "ticker": "BAC",
+  "form": "10-Q",
+  "filed": "2013-10-30",
+  "count": 3,
+  "url": "https://www.sec.gov/Archives/edgar/data/70858/000007085813000248/bac-9302013x10q.htm",
+  "snippet": " of the corporation's 2012 annual report on form 10-k , and in any of the corporation's subsequent securities and exchange commission filings: the potential impact of the recent and any future government shutdown and/or debt ceiling impasse; the corporation's ability to resolve representations and warranties repurchase claims made by monolines and private-label and other investors, including as a result of any adverse court rulings, and the chance "
+ },
+ {
+  "kind": "surge",
+  "theme": "gov_shutdown",
+  "ticker": "SNOW",
+  "form": "10-Q",
+  "filed": "2025-12-05",
+  "count": 3,
+  "url": "https://www.sec.gov/Archives/edgar/data/1640147/000164014725000211/snow-20251031.htm",
+  "snippet": "impacted by public sector budgetary cycles, changes in government procurement policies, and funding availability that in any given fiscal cycle may be reduced or delayed, including in connection with an extended federal government shutdown. further, if we or our partners are successful in receiving a competitive contract award, that award could be challenged by one or more competitive bidders in a legal action known as a “bid protest.” bid protests may re"
+ },
+ {
+  "kind": "surge",
+  "theme": "inflation",
+  "ticker": "AMGN",
+  "form": "10-Q",
+  "filed": "2023-04-28",
+  "count": 4,
+  "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815423000029/amgn-20230331.htm",
+  "snippet": "cyto, amjevita/amgevita, tezspire, parsabiv, lumakras/lumykras, aimovig, epogen, kanjinti and tavneos. macroeconomic challenges, including effects from the covid-19 pandemic uncertain macroeconomic conditions, including higher inflation, rising interest rates and instability in the financial system, geopolitical conflicts and rising healthcare costs continue to pose challenges to our business. as a result of public and private healthcare-provider focus"
+ },
+ {
+  "kind": "surge",
+  "theme": "supply_chain",
+  "ticker": "STX",
+  "form": "10-K",
+  "filed": "2011-08-17",
+  "count": 3,
+  "url": "https://www.sec.gov/Archives/edgar/data/1137789/000104746911007483/a2205181z10-k.htm",
+  "snippet": "rst half of fiscal year 2011, our industry experienced a period of relative balance between supply and demand. we also believe there was unmet demand in the last quarter of fiscal year 2011 due to a reaction to possible supply chain disruptions stemming from the earthquake and tsunami in japan. however, the industry returned to a relatively balanced supply environment at the end of the fiscal year. 6 table of contents disk drive technology overview the design "
+ },
+ {
+  "kind": "surge",
+  "theme": "middle_east",
+  "ticker": "PLTR",
+  "form": "10-K",
+  "filed": "2026-02-17",
+  "count": 4,
+  "url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000011/pltr-20251231.htm",
+  "snippet": "siness growth, uncertainty about macroeconomic conditions (including as a result of the ongoing russia-ukraine conflict and related economic sanctions, the conflict resulting from hamas' attack on israel and the ongoing conflict in the middle east, fluctuating interest rates, monetary policy changes, foreign currency fluctuations, or the potential or actual imposition of tariffs or other impacts on trade relations), capital budgets, anticipated cost savings from "
+ },
+ {
+  "kind": "surge",
+  "theme": "recession",
+  "ticker": "BRK-B",
+  "form": "10-K",
+  "filed": "2010-03-01",
+  "count": 12,
+  "url": "https://www.sec.gov/Archives/edgar/data/1067983/000119312510043450/d10k.htm",
+  "snippet": "ditions could hurt our operating businesses. our operating businesses are subject to normal economic cycles affecting the economy in general or the industries in which we operate. to the extent that the current economic recession in the u.s. and worldwide continues for a prolonged period of time, one or more of our significant operations could be materially harmed. in addition, our utilities and energy businesses, our railroad business and our m"
+ },
+ {
+  "kind": "surge",
+  "theme": "brexit",
+  "ticker": "MS",
+  "form": "10-K",
+  "filed": "2020-02-27",
+  "count": 4,
+  "url": "https://www.sec.gov/Archives/edgar/data/895421/000089542120000265/msq4201910k.htm",
+  "snippet": "our ability to effectively respond to an economic downturn, or other market disruptions; • the effect of social, economic and political conditions and geopolitical events, including the u.k.'s withdrawal from the e.u. (\"brexit\"), and sovereign risk; • the actions and initiatives of current and potential competitors as well as governments, central banks, regulators and self-regulatory organizations; • our ability to provide innovative products"
+ },
+ {
+  "kind": "surge",
+  "theme": "tariffs",
+  "ticker": "BX",
+  "form": "10-K",
+  "filed": "2025-02-28",
+  "count": 12,
+  "url": "https://www.sec.gov/Archives/edgar/data/1393818/000119312525042469/d912273d10k.htm",
+  "snippet": "cts or other hostilities). for example, in the u.s., the current presidential administration has stated its intention to make governmental policy and regulatory changes in a variety of areas, including the imposition of tariffs or other trade barriers. in that connection, certain countries subject to those changes have expressed an intent to impose similar measures in return. outside the u.s., ongoing wars in the middle east and ukraine, as we"
+ },
+ {
+  "kind": "surge",
+  "theme": "export_controls",
+  "ticker": "AMD",
+  "form": "10-Q",
+  "filed": "2010-05-04",
+  "count": 3,
+  "url": "https://www.sec.gov/Archives/edgar/data/2488/000119312510106750/d10q.htm",
+  "snippet": "perations in foreign countries include, without limitation: • expropriation; • changes in a specific country's or region's political or economic conditions; • changes in tax laws, trade protection measures and import or export licensing requirements; • difficulties in protecting our intellectual property; • difficulties in achieving headcount reductions; • changes in foreign currency exchange rates; • restrictions on transfers of funds and other assets of our subsi"
+ },
+ {
+  "kind": "surge",
+  "theme": "ukraine",
+  "ticker": "GS",
+  "form": "10-Q",
+  "filed": "2022-05-02",
+  "count": 8,
+  "url": "https://www.sec.gov/Archives/edgar/data/886982/000119312522134459/d475438d10q.htm",
+  "snippet": "oints. business environment during the first quarter of 2022, global economic activity was impacted by macroeconomic uncertainty and market volatility resulting from geopolitical concerns, including russia's invasion of ukraine, increased inflationary and labor market pressures and stress on supply chains, rising prices of commodities and continued covid-19 concerns. governments around the world responded to russia's invasion of ukraine by imp"
+ },
+ {
+  "kind": "surge",
+  "theme": "pandemic",
+  "ticker": "AAPL",
+  "form": "10-Q",
+  "filed": "2025-05-02",
+  "count": 3,
+  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000057/aapl-20250329.htm",
+  "snippet": " and operations, an industrial accident could occur and could result in serious injuries or loss of life, disruption to the company's business, and harm to the company's reputation. major public health issues, including pandemics such as the covid-19 pandemic, have adversely affected, and could in the future materially adversely affect, the company due to their impact on the global economy and demand for consumer products; the imposition of prot"
+ },
+ {
+  "kind": "surge",
+  "theme": "bank_stress",
+  "ticker": "JPM",
+  "form": "10-K",
+  "filed": "2013-02-28",
+  "count": 3,
+  "url": "https://www.sec.gov/Archives/edgar/data/19617/000001961713000221/corp10k2012.htm",
+  "snippet": "nce : the fdic deposit insurance fund provides insurance coverage for certain deposits, which insurance is funded through assessments on banks, such as jpmorgan chase bank, n.a. and chase bank usa, n.a. higher levels of bank failures during the financial crisis have dramatically increased resolution costs of the fdic. in addition, the amount of fdic insurance coverage for insured deposits has been increased from $100,000 per depositor to $250,000 pe"
+ },
+ {
+  "kind": "surge",
+  "theme": "debt_ceiling",
+  "ticker": "LMT",
+  "form": "10-K",
+  "filed": "2018-02-06",
+  "count": 4,
+  "url": "https://www.sec.gov/Archives/edgar/data/936468/000093646818000009/lmtq4201710k.htm",
+  "snippet": "e circumstances where sequestration is implemented across-the-board without regard to national priorities), or other budget cuts in lieu of sequestration. on september 8, 2017, congress passed legislation suspending the debt ceiling through december 8, 2017. on december 9, 2017, the debt limit was increased to the amount of debt the u.s. government held outstanding on that date. however, despite using cash on hand and measures employed by the depar"
+ }
+]
