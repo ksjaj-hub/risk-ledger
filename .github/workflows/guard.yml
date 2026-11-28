@@ -29,6 +29,8 @@ jobs:
         run: |
           python scripts/residual.py --selftest
           python scripts/residual.py --check
+      - name: The page asks for the current copy of its screen text
+        run: python scripts/build_site.py --check-strings
       - name: Every card is checked against the selection criteria
         run: python scripts/selection_check.py --check
       - name: A forecast, once written, is never changed or removed

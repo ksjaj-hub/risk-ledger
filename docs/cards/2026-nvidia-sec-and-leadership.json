@@ -1,0 +1,149 @@
+{
+"event": {
+"what_happened": "Nvidia announced on 2026-11-12 that Jensen Huang had resigned as CEO, and on 2026-11-23 that the board had reinstated him. The company refers to ongoing government investigations and inquiries without naming an agency. Press reports of an SEC probe have not been confirmed by the company or the SEC.",
+"how_it_reaches_markets": "Nvidia's index weight and its role as a bellwether for AI demand; uncertainty about reported results; possible chip-export restrictions.",
+"sourced_facts": [
+{
+"text": "2026-11-12: Nvidia announced that Jensen Huang 'has resigned as President, Chief Executive Officer, and a member of the Board, effective immediately'; no reason is stated; CFO Colette Kress became interim CEO",
+"url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvidiaannouncesceotransiti.htm",
+"tier": "primary",
+"checked": "2026-11-26"
+},
+{
+"text": "2026-11-23: the board reinstated Huang as President, CEO and director, effective immediately",
+"url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000090/nov23pressrelease.htm",
+"tier": "primary",
+"checked": "2026-11-26"
+},
+{
+"text": "The 2026-11-23 release refers to 'ongoing government investigations and inquiries' without naming an agency, and to a committee review after reporting that Mr. Huang had been the target of a foreign intelligence effort",
+"url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000090/nov23pressrelease.htm",
+"tier": "primary",
+"checked": "2026-11-26"
+},
+{
+"text": "The company's 8-K of 2026-11-17 (quarterly results) does not mention an SEC inquiry",
+"url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/nvda-20261117.htm",
+"tier": "primary",
+"checked": "2026-11-26"
+}
+],
+"sources": [
+"https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvidiaannouncesceotransiti.htm",
+"https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000090/nov23pressrelease.htm",
+"https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/nvda-20261117.htm"
+],
+"history": [
+{
+"date": "2026-11-26",
+"status": "open",
+"note": "Card opened. Resolution conditions written before the outcome is known."
+},
+{
+"date": "2026-11-26",
+"status": "open",
+"note": "Sources upgraded and a correction recorded. Huang's reinstatement on 2026-11-23 is confirmed by the company's SEC-filed release. The original statement that Reuters reported on 2026-11-20 an SEC investigation of accounting practices is not confirmed as written: the wire text read says the WSJ reported an SEC probe on 2026-11-17 and does not state its subject. what_happened is left as first written; read it with this note."
+},
+{
+"date": "2026-11-26",
+"status": "open",
+"note": "Second pass. The resignation of 2026-11-12 was confirmed on the company's SEC-filed release. The 8-K of 2026-11-17 does not mention an SEC inquiry."
+},
+{
+"date": "2026-11-26",
+"status": "open",
+"note": "Summary rewritten so that it states only what was confirmed at the listed sources and marks the rest as reported. The first version is kept under superseded_sources. Resolution conditions are unchanged."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Title changed from 'Nvidia: reported SEC accounting inquiry and CEO turmoil' so that it matches the correction above: the company refers to government inquiries without naming an agency, and the reported SEC probe is not confirmed. Resolution conditions are unchanged."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Added forecast 1: by 2027-04-30, 2% resolved, 4% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
+}
+],
+"unconfirmed_facts": [
+"SEC probe: a Reuters dispatch dated 2026-11-17 says the Wall Street Journal reported the SEC is probing Nvidia after Huang's resignation. It does not say the probe concerns accounting. The card's original wording (a Reuters report on 2026-11-20 of an inquiry into accounting practices) is not confirmed as written",
+"2026-11-25: Nvidia -8.7% in early trading: not confirmed at a primary or wire source"
+],
+"condition_reading_notes": {
+"written_on": "2026-11-26",
+"notes": [
+"'The SEC inquiry' is read as any SEC inquiry disclosed by the company or the SEC. Neither has confirmed one in the documents read so far, so the first condition is judged from company filings and SEC announcements, not from press reports."
+]
+},
+"numeric_criteria": {
+"version": 1,
+"written_on": "2026-11-27",
+"items": [
+{
+"side": "resolved",
+"measure": "An SEC inquiry confirmed by the company or the SEC is closed without action, or settled with terms disclosed",
+"latest": "Confirmed inquiries: 0. This cannot be counted until one is confirmed",
+"state": "not_measurable_yet"
+},
+{
+"side": "resolved",
+"measure": "The next annual or quarterly report is filed by its SEC deadline, with 0 late-filing notices (Form 12b-25) and 0 notices that earlier statements cannot be relied on (Form 8-K, Item 4.02)",
+"latest": "No report filed since the card opened. No such notice in the filings read for this card",
+"state": "not_met"
+},
+{
+"side": "worsened",
+"measure": "1 late-filing notice (Form 12b-25) or 1 non-reliance notice (Form 8-K, Item 4.02)",
+"latest": "None in the filings read",
+"state": "not_reached"
+},
+{
+"side": "worsened",
+"measure": "1 announcement of formal charges by the SEC or the Department of Justice",
+"latest": "0",
+"state": "not_reached"
+}
+]
+},
+"counter_view": {
+"written_on": "2026-11-27",
+"text": "Neither the company nor the SEC has confirmed an SEC inquiry, and the quarterly results filing does not mention one. If there is none, this card's first condition tracks something that does not exist, and what remains is a leadership episode that the board has already reversed."
+},
+"worsened_when_any": [
+"Nvidia announces a restatement or delays a periodic filing",
+"The SEC or DOJ announces formal charges"
+]
+},
+"aids": {
+"links": {
+"technology": {
+"level": "direct",
+"direction": "lagged"
+}
+},
+"exposure": [
+"NVDA",
+"SMH",
+"SOXX",
+"QQQ"
+],
+"card_factors": [],
+"market": {
+"verdict": "not_checked",
+"none": {
+"en": "Not checked. Prices of single stocks and their options are not in the sources we are allowed to republish.",
+"ko": "대조하지 않았습니다. 개별 종목의 주가와 옵션 가격은 저희가 다시 실을 수 있는 출처에 없습니다."
+},
+"readings": []
+},
+"past_none": {
+"en": "No past case is measured for this card. It is about one company, and the market-wide measure used here would not describe it.",
+"ko": "이 카드에는 과거 사례를 재지 않았습니다. 한 회사의 일이라 여기서 쓰는 시장 전체 지표로는 설명되지 않습니다."
+}
+}
+}

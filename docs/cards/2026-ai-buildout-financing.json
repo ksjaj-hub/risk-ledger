@@ -1,0 +1,242 @@
+{
+"event": {
+"what_happened": "The Nasdaq Composite fell 11.2% between 2026-11-11 and 2026-11-20, 5.28% of it on the last day. Press reports tie the fall to doubts about whether enthusiasm for AI had peaked, slower data-center expansion and higher borrowing costs. That link is reported, not confirmed. Separately, the Federal Reserve says the buildout is increasingly funded by debt.",
+"how_it_reaches_markets": "Large index weight of AI-linked companies; debt used to fund data centers; possible regulatory opposition to data center construction.",
+"sourced_facts": [
+{
+"text": "Federal Reserve Governor Barr, 2026-11-16: 'the AI buildout has been increasingly funded by debt'; on-balance-sheet debt of the seven largest AI firms 'is expected to exceed $800 billion before year's end'; he adds that he is 'less concerned about direct losses' given the still-limited debt behind the boom",
+"url": "https://www.federalreserve.gov/newsevents/speech/barr20261116a.htm",
+"tier": "primary",
+"checked": "2026-11-28"
+},
+{
+"text": "Federal Reserve Financial Stability Report (November 2026, data to 2026-10-28): 'Bond issuance by the largest investment-grade firms involved in operating data centers was greater than $150 billion year to date'; 'Measures of equity valuations have remained elevated since the previous report'",
+"url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
+"tier": "primary",
+"checked": "2026-11-28"
+},
+{
+"text": "Nasdaq Composite closed at 25,466.19 on 2026-11-11, 24,429.88 on 2026-11-18 and 22,617.73 on 2026-11-20 (down 5.28% that day), then 24,129.50 on 2026-11-27 (FRED series NASDAQCOM)",
+"url": "https://fred.stlouisfed.org/series/NASDAQCOM",
+"tier": "primary",
+"checked": "2026-11-28"
+},
+{
+"text": "Governor Barr, same speech: 'Anyone watching the news or their retirement plans these past couple of weeks is aware of the questions that investors have raised about the sustainability of the AI investment boom'",
+"url": "https://www.federalreserve.gov/newsevents/speech/barr20261116a.htm",
+"tier": "primary",
+"checked": "2026-11-28"
+}
+],
+"sources": [
+"https://www.federalreserve.gov/newsevents/speech/barr20261116a.htm",
+"https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
+"https://fred.stlouisfed.org/series/NASDAQCOM"
+],
+"history": [
+{
+"date": "2026-11-26",
+"status": "open",
+"note": "Card opened. Resolution conditions written before the outcome is known."
+},
+{
+"date": "2026-11-26",
+"status": "open",
+"note": "Sources upgraded. The debt-financing concern is now supported by a Federal Reserve governor's speech and the Financial Stability Report. The index and share-price moves of 2026-11-20 and 2026-11-25 are not yet confirmed at an accepted source and were moved to unconfirmed_facts."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Added forecast 1: by 2027-03-31, 20% resolved, 15% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Title was 'Doubts about financing of the AI buildout'. Changed to say only what is confirmed. Conditions and forecasts unchanged."
+},
+{
+"date": "2026-11-28",
+"status": "open",
+"note": "Sources read again: both Federal Reserve facts match. The Nasdaq level for the first condition is now read: 25,466.19. Title was 'Debt-funded AI buildout (sell-off reported, not confirmed)'; the fall is confirmed from the index series, its link to AI debt is not. The Dell example was moved to unconfirmed. Conditions unchanged."
+}
+],
+"unconfirmed_facts": [
+"2026-11-20: S&P 500 seventh straight decline; -3.70% to 6,910.39; Nvidia about -14%: Fortune (read directly) reports the seventh straight loss but gives -3.59% to 6,918.45, and a market-wrap site gives -3.70% and Nvidia -13.8%. The two disagree and neither is on our list of accepted sources. AMD -13.3% was not found",
+"2026-11-25: Nasdaq 100 briefly 20% below its record closing high: not found in anything we read",
+"Dell beat forecasts on 2026-11-24 and its shares fell about 7% the next day: Dell's release of that date shows record revenue and a higher full-year outlook (read as a repost, not at Dell); the share move was not found"
+],
+"condition_reading_notes": {
+"written_on": "2026-11-26",
+"notes": [
+"'The day before the losing streak began' is read as 2026-11-11, the last close before the S&P 500's seven straight declines that press reports say ended on 2026-11-20. The Nasdaq Composite closed at 25,466.19 that day (FRED series NASDAQCOM, read 2026-11-28). The Nasdaq itself rose on 2026-11-18, so its own unbroken run of declines began from 24,429.88; the higher level is used because it is harder to meet.",
+"'Largest AI infrastructure spenders' means Microsoft, Alphabet, Amazon, Meta and Oracle. 'Large AI-linked borrower' means one with at least $1 billion of debt outstanding."
+]
+},
+"numeric_criteria": {
+"version": 1,
+"written_on": "2026-11-27",
+"items": [
+{
+"side": "resolved",
+"measure": "Nasdaq Composite closes above 25,466.19 (its close on 2026-11-11) on 20 trading days in a row",
+"latest": "0 of 20. Closed at 24,129.50 on 2026-11-27: 5.2% below",
+"state": "not_met",
+"series": "NASDAQCOM"
+},
+{
+"side": "resolved",
+"measure": "VIX closes below 20 on 20 trading days in a row (this is what 'Moderate or lower' means under rule v3)",
+"latest": "0 of 20. VIX 26.36 on 2026-11-24",
+"state": "not_met",
+"series": "VIXCLS"
+},
+{
+"side": "resolved",
+"measure": "At least 2 of 5 companies (Microsoft, Alphabet, Amazon, Meta, Oracle) state capital spending guidance equal to or above their previous guidance in a quarterly report released after 2026-11-26",
+"latest": "0 of 2. No quarterly report from the five since the card opened",
+"state": "not_met"
+},
+{
+"side": "worsened",
+"measure": "A borrower with at least $1 billion of debt misses a payment or cancels an announced financing: 1 case is enough",
+"latest": "0 cases recorded",
+"state": "not_reached"
+},
+{
+"side": "worsened",
+"measure": "Any one of the five companies lowers its stated capital spending guidance",
+"latest": "0 of 5",
+"state": "not_reached"
+}
+]
+},
+"counter_view": {
+"written_on": "2026-11-27",
+"text": "The debt behind the buildout is still small next to the cash these companies earn: a Federal Reserve governor said he is 'less concerned about direct losses'. A fall in share prices is not a failed financing, and no borrower has missed a payment."
+},
+"worsened_when_any": [
+"A large AI-linked borrower misses a debt payment or cancels a publicly announced financing",
+"A major AI infrastructure spender publicly cuts its capital spending plan"
+]
+},
+"aids": {
+"links": {
+"technology": {
+"level": "direct",
+"direction": "lagged",
+"factor": "credit_widening",
+"mean_excess_pct": -0.16,
+"t": -5.2,
+"n": 734,
+"since": "1990"
+},
+"communication": {
+"level": "direct",
+"direction": "lagged"
+},
+"consumer_staples": {
+"level": "strong",
+"direction": "led",
+"factor": "credit_widening",
+"mean_excess_pct": 0.28,
+"t": 7.1,
+"n": 734,
+"since": "1990"
+},
+"financials": {
+"level": "strong",
+"direction": "lagged",
+"factor": "credit_widening",
+"mean_excess_pct": -0.12,
+"t": -4.0,
+"n": 734,
+"since": "1990"
+},
+"health_care": {
+"level": "strong",
+"direction": "led",
+"factor": "credit_widening",
+"mean_excess_pct": 0.18,
+"t": 5.8,
+"n": 734,
+"since": "1990"
+},
+"industrials": {
+"level": "moderate",
+"direction": "lagged",
+"factor": "credit_widening",
+"mean_excess_pct": -0.06,
+"t": -2.7,
+"n": 734,
+"since": "1990"
+},
+"materials": {
+"level": "moderate",
+"direction": "lagged",
+"factor": "credit_widening",
+"mean_excess_pct": -0.07,
+"t": -2.1,
+"n": 734,
+"since": "1990"
+},
+"utilities": {
+"level": "strong",
+"direction": "led",
+"factor": "credit_widening",
+"mean_excess_pct": 0.24,
+"t": 6.0,
+"n": 734,
+"since": "1990"
+}
+},
+"exposure": [
+"NVDA",
+"DELL",
+"SMH",
+"QQQ"
+],
+"card_factors": [
+"credit_widening"
+],
+"market": {
+"verdict": "shows",
+"none": null,
+"readings": [
+{
+"en": "Equity volatility, VIX (AFMX record)",
+"ko": "주식 변동성 VIX (AFMX 기록)",
+"value": 26.8,
+"as_of": "2026-11-26",
+"steps": 2,
+"shows": true,
+"rule": "ledger_step_2"
+},
+{
+"en": "S&P 500 fall from its one-year high (AFMX record)",
+"ko": "S&P 500의 1년 고점 대비 하락 (AFMX 기록)",
+"as_of": "2026-11-25",
+"steps": 1,
+"shows": false,
+"rule": "ledger_step_2"
+}
+]
+},
+"past": [
+{
+"en": "2002 WorldCom accounting fraud (telecom buildout)",
+"ko": "2002년 월드컴 회계 부정 (통신망 투자 붐)",
+"start": "2002-06-26",
+"src": "https://www.sec.gov/enforcement-litigation/litigation-releases/lr-17588",
+"fall": -19.9,
+"day": 74,
+"rec": 4,
+"end6": -6.7
+}
+]
+}
+}

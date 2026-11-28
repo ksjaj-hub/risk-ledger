@@ -1,0 +1,218 @@
+{
+"glossary": {
+"risk_state": {
+"en": {
+"term": "Risk state",
+"def": "What the record says about market stress right now, in five steps: Calm, Guarded, Watch, Elevated, Stress. It describes conditions. It is not a forecast and not advice to buy or sell."
+}
+},
+"event_card": {
+"en": {
+"term": "Event card",
+"def": "One risk that is still open: what happened, how it reaches markets, and what has to be true for it to count as resolved. Each card also carries the same conditions counted in numbers, the case against its own reading, similar past events, and a check against market prices."
+}
+},
+"resolution_condition": {
+"en": {
+"term": "Resolution condition",
+"def": "A checkable event written down before the outcome is known. The card closes only when every one of them has happened."
+}
+},
+"worsening_condition": {
+"en": {
+"term": "Worsening condition",
+"def": "A checkable event that would mark the risk as worse. One is enough."
+}
+},
+"relief_headline": {
+"en": {
+"term": "Relief headline",
+"def": "Good news that makes a risk feel smaller without meeting any resolution condition, such as a one-day rally or a deal that is not yet law."
+}
+},
+"numeric_criteria": {
+"en": {
+"term": "Counted in numbers",
+"def": "How a resolution or worsening condition is counted: what is measured, where the line is, and where it stands now. It explains the condition and never replaces it. If the two could be read differently, the original wording decides."
+}
+},
+"counter_view": {
+"en": {
+"term": "Why this reading may be wrong",
+"def": "The strongest case against our own card, built from the facts on the card. It is there so that the card is not read as certain."
+}
+},
+"past_case": {
+"en": {
+"term": "Similar past event",
+"def": "An earlier event of the same kind, with a start date taken from a primary source. The card shows how long it lasted and how the US market moved afterwards. The market figure covers the whole market in those months, not that event alone."
+}
+},
+"market_check": {
+"en": {
+"term": "Prices show it",
+"def": "A price tied to the risk is high against its own last five years, or a spread is above zero, or the matching AFMX measure is at 2 of 3 steps or more. The rule was fixed before the first reading. It says where a price stands now, not where it will go."
+}
+},
+"primary_source": {
+"en": {
+"term": "Primary source",
+"def": "The body that made the decision or produced the number: a government, central bank, regulator, statute or company filing. Every card has at least one."
+}
+},
+"unconfirmed_fact": {
+"en": {
+"term": "Not yet confirmed",
+"def": "Something reported that we could not check at a primary source or a major wire. It is shown separately and never used to support a card."
+}
+},
+"sector_link": {
+"en": {
+"term": "Sector link",
+"def": "How strongly a risk has reached a sector in past data: direct, strong, moderate, case, or unconfirmed. 'Unconfirmed' means the data did not show a reliable pattern."
+}
+},
+"sector_band": {
+"en": {
+"term": "Sector band",
+"def": "Quiet, Normal or Strained: how many independent open risks touch a sector, weighted by link strength. It counts pressure. It does not predict returns."
+}
+},
+"component_steps": {
+"en": {
+"term": "Steps (of a backdrop measure)",
+"def": "Each of the five backdrop measures is shown as 0 to 3 filled steps. Record and rule files call them Low (0), Moderate (1), High (2) and Extreme (3); card conditions call them Quiet, Normal, Strained and Extreme. The AFMX score is the filled steps out of 15, as a number out of 100."
+}
+},
+"ma200": {
+"en": {
+"term": "200-day average",
+"def": "The average closing price over the last 200 trading days, about ten months. A price below it is commonly read as a longer downtrend. Here it is only counted: how many sectors are below their own average."
+}
+},
+"hash_chain": {
+"en": {
+"term": "Hash chain",
+"def": "Each record carries a fingerprint of the one before it, so a past record cannot be changed without breaking every later one."
+}
+},
+"x_date": {
+"en": {
+"term": "X-date",
+"def": "The day the US Treasury would run out of room to pay all its bills if the debt limit is not raised."
+}
+},
+"continuing_resolution": {
+"en": {
+"term": "Continuing resolution",
+"def": "A short-term US funding law that keeps the government open until a set date when the regular budget is not finished."
+}
+},
+"trading_day": {
+"en": {
+"term": "Trading day",
+"def": "A day the stock market is open. Weekends and holidays do not count, so 21 trading days is about a month and 63 about three months."
+}
+},
+"median": {
+"en": {
+"term": "Median",
+"def": "The middle value when past cases are lined up by size. One or two unusually large cases do not pull it, which is why it is used here in place of the average."
+}
+},
+"volatility": {
+"en": {
+"term": "Volatility and VIX",
+"def": "Volatility is how much prices swing. VIX is an index of how much the options market expects the S&P 500 to swing over the next month. It is often called the fear index."
+}
+},
+"credit_spread": {
+"en": {
+"term": "Credit spread",
+"def": "The extra interest a company pays to borrow, compared with the government. When the spread widens, lenders are more worried about not being repaid."
+}
+},
+"yield_curve": {
+"en": {
+"term": "Yield curve",
+"def": "The gap between interest rates on long and short government debt. Short rates above long rates is called an inversion, and in the past a recession often followed."
+}
+},
+"financial_conditions": {
+"en": {
+"term": "Financial conditions",
+"def": "How easy it is to borrow and move money, summed up from interest rates, credit and markets. AFMX uses the Chicago Fed's index (NFCI)."
+}
+},
+"drawdown": {
+"en": {
+"term": "Drawdown",
+"def": "How far the price is below its recent high."
+}
+},
+"percentage_point": {
+"en": {
+"term": "Points against the market",
+"def": "The difference between two percentages, in percentage points. If the market rose 5% and a sector rose 2%, the sector is 3 points against the market."
+}
+},
+"hindsight": {
+"en": {
+"term": "Hindsight",
+"def": "A look back made after the outcome is known. Unlike conditions written in advance, it can be fitted to what happened, so it is kept apart from the AFMX record."
+}
+},
+"timestamp": {
+"en": {
+"term": "Fingerprint and timestamp",
+"def": "A fingerprint (SHA-256) is a value computed from a file's contents; change one letter and the value changes. A timestamp proves the file already existed at a given time. AFMX uses OpenTimestamps, which anchors the proof to the Bitcoin blockchain."
+}
+},
+"etf": {
+"en": {
+"term": "ETF",
+"def": "A fund that holds a basket of stocks and trades like a single stock. Sector ETFs are listed on cards only to help you find the sector, not as a recommendation."
+}
+},
+"residual": {
+"en": {
+"term": "Residual risk index",
+"def": "One number for how much unresolved risk is on AFMX's open cards. Each card counts as its reach (how much of the market it touches) times its expected stage (0 resolved, 1 still open, 2 worsened, from AFMX's own odds). It adds up AFMX's judgment. It does not measure the market, and its relation to prices has not been tested."
+}
+}
+},
+"history": [
+{
+"date": "2026-11-26",
+"en": "First record written. Twelve event cards opened, each with resolution conditions written before the outcome."
+},
+{
+"date": "2026-11-26",
+"en": "Rule 1 tested on data from 1990. Its weak points were published and rule 2 took its place."
+},
+{
+"date": "2026-11-26",
+"en": "The first screen changed from an index to open risks and the conditions still unmet."
+},
+{
+"date": "2026-11-26",
+"en": "Sector links backed by data since 1990, with evidence levels. Monthly public grading set up."
+},
+{
+"date": "2026-11-26",
+"en": "AFMX Weekly No. 1 published in English and Korean."
+},
+{
+"date": "2026-11-26",
+"en": "Source rule adopted: every card and past case rests on at least one primary source. Unconfirmed reports are shown separately."
+},
+{
+"date": "2026-11-26",
+"en": "Rule 3: the market state now has five steps instead of four. Five and seven steps were compared on past data first."
+},
+{
+"date": "2026-11-27",
+"en": "Every card now also shows its conditions counted in numbers, the case against its own reading, similar past events, and a check against market prices."
+}
+]
+}

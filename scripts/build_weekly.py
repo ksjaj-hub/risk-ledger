@@ -218,10 +218,10 @@ def checks():
     D = json.loads((ROOT / "docs" / "data.json").read_text(encoding="utf-8"))
     D["ko"] = json.loads((ROOT / "docs" / "ko.json").read_text(encoding="utf-8"))
     live = [e for e in D["events"] if e["status"] != "resolved"]
-    its = [x for e in live for x in e.get("numeric_criteria", {}).get("items", []) if x["side"] == "resolved"]
+    met, measures = (sum(e.get("nres", [0, 0])[i] for e in live) for i in (0, 1))  # counted per card by build_site.py
     mk = D["aids"].get("market", {}).get("cards", {})
     checked = [e for e in live if mk.get(e["id"], {}).get("verdict") in ("shows", "does_not_show")]
-    print(json.dumps({"checks": {"as_of": D["aids"].get("market", {}).get("as_of"), "measures": len(its), "met": sum(x["state"] == "met" for x in its),
+    print(json.dumps({"checks": {"as_of": D["aids"].get("market", {}).get("as_of"), "measures": measures, "met": met,
                                  "checked": len(checked),
                                  "shows": [{"en": e["title"], "ko": D["ko"][e["id"]]["title"]} for e in checked if mk[e["id"]]["verdict"] == "shows"]}},
                      indent=1, ensure_ascii=False))

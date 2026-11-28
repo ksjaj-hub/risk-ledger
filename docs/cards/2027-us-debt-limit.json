@@ -1,0 +1,227 @@
+{
+"event": {
+"what_happened": "The federal debt limit is $41.1 trillion. On 2026-11-19 debt subject to the limit was about $597 billion below it. The Congressional Research Service says borrowing is projected to approach the limit during fiscal year 2027; Treasury has not published a date. Democrats will control both chambers of the next Congress and therefore the vote.",
+"how_it_reaches_markets": "Risk of delayed Treasury payments; distortions in Treasury bill and repo markets near the X-date; sovereign rating downgrade risk.",
+"sourced_facts": [
+{
+"text": "The statutory debt limit was raised by $5.0 trillion to $41.1 trillion in July 2025 by P.L. 119-21 (Congressional Research Service, IF10292, updated 2025-12-05)",
+"url": "https://www.congress.gov/crs_external_products/IF/PDF/IF10292/IF10292.21.pdf",
+"tier": "primary",
+"checked": "2026-11-26"
+},
+{
+"text": "2026-11-19: debt subject to limit $40,507,450 million against a statutory limit of $41,103,996 million, leaving about $597 billion (our subtraction) (Daily Treasury Statement, Table III-C)",
+"url": "https://fiscaldata.treasury.gov/static-data/published-reports/dts/DailyTreasuryStatement_20261119.pdf",
+"tier": "primary",
+"checked": "2026-11-26"
+},
+{
+"text": "CRS: projections suggest borrowing will approach the limit sometime in fiscal year 2027, with considerable uncertainty; no date is given",
+"url": "https://www.congress.gov/crs_external_products/IF/PDF/IF10292/IF10292.21.pdf",
+"tier": "primary",
+"checked": "2026-11-26"
+}
+],
+"sources": [
+"https://www.congress.gov/crs_external_products/IF/PDF/IF10292/IF10292.21.pdf",
+"https://fiscaldata.treasury.gov/static-data/published-reports/dts/DailyTreasuryStatement_20261119.pdf"
+],
+"history": [
+{
+"date": "2026-11-26",
+"status": "open",
+"note": "Card opened. Resolution conditions written before the outcome is known."
+},
+{
+"date": "2026-11-26",
+"status": "open",
+"note": "Sources upgraded. The limit and the remaining room now come from the Congressional Research Service and the Daily Treasury Statement. The room figure changes from about $557 billion (a bank estimate dated 2026-11-09) to about $597 billion (Treasury, 2026-11-19); the dates differ, so this is an update rather than a contradiction. Bank forecasts of the timing were moved to unconfirmed_facts."
+},
+{
+"date": "2026-11-26",
+"status": "open",
+"note": "Summary rewritten so that it states only what was confirmed at the listed sources and marks the rest as reported. The first version is kept under superseded_sources. Resolution conditions are unchanged."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Added forecast 1: by 2027-06-30, 10% resolved, 5% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Title was 'US federal debt limit standoff'. Changed to say only what is confirmed. Conditions and forecasts unchanged."
+}
+],
+"unconfirmed_facts": [
+"Bank forecasts (limit reached as early as February 2027; X-date November 2027) and a downgrade warning: from a magazine article citing bank research; originals not read"
+],
+"condition_reading_notes": {
+"written_on": "2026-11-26",
+"notes": [
+"'Major rating agency' means S&P, Moody's or Fitch. The X-date is read from a Treasury letter to Congress."
+]
+},
+"numeric_criteria": {
+"version": 1,
+"written_on": "2026-11-27",
+"items": [
+{
+"side": "resolved",
+"measure": "1 signed law that raises or suspends the debt limit",
+"latest": "0 of 1",
+"state": "not_met"
+},
+{
+"side": "worsened",
+"measure": "A Treasury letter to Congress gives an X-date fewer than 60 days away, with no law signed",
+"latest": "No X-date published",
+"state": "not_reached"
+},
+{
+"side": "worsened",
+"measure": "1 of 3 agencies (S&P, Moody's, Fitch) downgrades the United States or puts it on negative watch, citing the debt limit",
+"latest": "0 of 3",
+"state": "not_reached"
+},
+{
+"side": "added",
+"measure": "Added gauge: room left under the limit (Daily Treasury Statement). At zero, Treasury has to start extraordinary measures",
+"latest": "About $597 billion on 2026-11-19, of a $41.1 trillion limit",
+"state": "info"
+}
+]
+},
+"counter_view": {
+"written_on": "2026-11-27",
+"text": "There is no X-date yet. With about $597 billion of room and extraordinary measures still unused, any real deadline is probably many months away. This card may be open long before it matters to markets."
+},
+"worsened_when_any": [
+"Treasury announces an X-date less than 60 days away with no law passed",
+"A major rating agency downgrades the US sovereign rating or places it on negative watch citing the debt limit"
+]
+},
+"aids": {
+"links": {
+"technology": {
+"level": "strong",
+"direction": "lagged",
+"factor": "volatility_spike",
+"mean_excess_pct": -0.37,
+"t": -9.1,
+"n": 463,
+"since": "1990"
+},
+"consumer_staples": {
+"level": "strong",
+"direction": "led",
+"factor": "volatility_spike",
+"mean_excess_pct": 0.93,
+"t": 19.0,
+"n": 463,
+"since": "1990"
+},
+"financials": {
+"level": "strong",
+"direction": "lagged",
+"factor": "volatility_spike",
+"mean_excess_pct": -0.4,
+"t": -8.2,
+"n": 463,
+"since": "1990"
+},
+"health_care": {
+"level": "strong",
+"direction": "led",
+"factor": "volatility_spike",
+"mean_excess_pct": 0.41,
+"t": 10.4,
+"n": 463,
+"since": "1990"
+},
+"industrials": {
+"level": "moderate",
+"direction": "lagged",
+"factor": "credit_widening",
+"mean_excess_pct": -0.06,
+"t": -2.7,
+"n": 734,
+"since": "1990"
+},
+"materials": {
+"level": "moderate",
+"direction": "lagged",
+"factor": "credit_widening",
+"mean_excess_pct": -0.07,
+"t": -2.1,
+"n": 734,
+"since": "1990"
+},
+"utilities": {
+"level": "strong",
+"direction": "led",
+"factor": "volatility_spike",
+"mean_excess_pct": 0.91,
+"t": 17.2,
+"n": 463,
+"since": "1990"
+}
+},
+"exposure": [
+"TLT",
+"BIL",
+"SPY"
+],
+"card_factors": [
+"volatility_spike",
+"credit_widening"
+],
+"market": {
+"verdict": "does_not_show",
+"none": null,
+"readings": [
+{
+"en": "1-month Treasury yield minus 3-month",
+"ko": "1개월 국채 금리에서 3개월 금리를 뺀 값",
+"unit": "pt",
+"value": -0.07,
+"as_of": "2026-11-25",
+"percentile_5y": 40,
+"shows": false,
+"rule": "high_in_5y"
+}
+]
+},
+"past": [
+{
+"en": "2011 US debt limit standoff",
+"ko": "2011년 미국 부채 한도 대치",
+"start": "2011-05-16",
+"src": "https://www.gao.gov/assets/600/592835.txt",
+"fall": -18.7,
+"day": 98,
+"rec": 9,
+"end6": -7.6,
+"end": "2011-08-02",
+"days": 78
+},
+{
+"en": "2013 US debt limit standoff",
+"ko": "2013년 미국 부채 한도 대치",
+"start": "2013-05-17",
+"src": "https://www.gao.gov/assets/680/671817.pdf",
+"fall": -4.2,
+"day": 26,
+"rec": 3,
+"end6": 10.5,
+"end": "2013-10-17",
+"days": 153
+}
+]
+}
+}

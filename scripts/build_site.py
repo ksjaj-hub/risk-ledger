@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Bundle records, alerts and event cards into docs/data.json for the public page."""
-import json, pathlib
+import json, pathlib, re
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
@@ -257,9 +257,125 @@ for _e in data["events"]:
             _e[_k].pop("note", None)
 for _k in ("withdrawn", "source_rule", "note"):
     data["hindsight"].pop(_k, None)
-out = ROOT / "docs" / "data.json"
-out.parent.mkdir(exist_ok=True)
-# Korean card text goes in its own file, fetched only when the page is shown in Korean (page weight, 2026-11-28).
-(ROOT / "docs" / "ko.json").write_text(json.dumps(data.pop("ko"), indent=0, ensure_ascii=False) + "\n")
-out.write_text(json.dumps(data, indent=0, ensure_ascii=False) + "\n")  # no indent: keeps one value per line for diffs, smaller file
-print(f"wrote {out.relative_to(ROOT)}: {len(records)} records, {len(data['alerts'])} alerts, {len(data['events'])} events")
+# Page weight, second step (2026-11-28): the first screen carries only what a closed card and the lighter tabs show.
+#   docs/data.json             every tab's numbers and one summary per card (what a closed row shows)
+#   docs/ko.json               Korean summary per card, fetched only in Korean
+#   docs/cards/<id>.json       the rest of a card, fetched when the reader opens it (and <id>.ko.json in Korean)
+#   docs/tabs/past.<lang>.json    hindsight cases, fetched with the Past tab
+#   docs/tabs/method.<lang>.json  glossary and change log, fetched with the Method tab
+# Nothing is dropped: full() below puts the pieces back together, and scripts that need a whole card read it from there.
+import hashlib, shutil
+DOCS = ROOT / "docs"
+SUMMARY = ("id", "title", "markets", "event_started", "status", "forecasts", "selection_mark", "relief_headlines_that_do_not_resolve_it")
+KO_SUMMARY = ("title", "relief", "resolved")
+
+
+def split(data):
+    """Returns {relative path: object} for every file the page reads."""
+    files, aids, ko = {}, dict(data["aids"]), data["ko"]
+    A = {k: aids.get(k) or {} for k in ("links", "waves", "exposure", "card_factors")}
+    market, past = aids.get("market") or {}, aids.get("past") or {}
+    events = []
+    for e in data["events"]:
+        cid = e["id"]
+        its = [x for x in (e.get("numeric_criteria") or {}).get("items", []) if x["side"] == "resolved"]
+        rc = e["resolution_conditions"]
+        s = {k: e[k] for k in SUMMARY if k in e}
+        s["last_date"] = e["history"][-1]["date"]
+        s["resolution_conditions"] = {k: v for k, v in rc.items() if k != "worsened_when_any"}
+        s["nres"] = [sum(x["state"] == "met" for x in its), len(its)]
+        events.append(s)
+        det = {k: v for k, v in e.items() if k not in SUMMARY and k != "resolution_conditions"}
+        det["worsened_when_any"] = rc.get("worsened_when_any", [])
+        ca = {k: A[k][cid] for k in A if cid in A[k]}
+        if cid in market.get("cards", {}):
+            ca["market"] = market["cards"][cid]
+        if cid in past.get("cards", {}):
+            ca["past"] = past["cards"][cid]
+        if cid in past.get("none", {}):
+            ca["past_none"] = past["none"][cid]
+        files[f"cards/{cid}.json"] = {"event": det, "aids": ca}
+        if cid in ko:
+            files[f"cards/{cid}.ko.json"] = ko[cid]
+    aids["links"] = {c: {s: {k: l[k] for k in ("level", "direction") if k in l} for s, l in v.items()} for c, v in A["links"].items()}
+    aids["waves"] = {c: {k: v for k, v in w.items() if k != "series"} for c, w in A["waves"].items()}
+    aids["exposure"], aids["card_factors"] = {}, {}
+    if market:
+        aids["market"] = {**market, "cards": {c: {"verdict": v["verdict"]} for c, v in market["cards"].items()}}
+    if past:
+        aids["past"] = {"base_fall": past.get("base_fall")}
+    one = lambda x, lang: {k: v for k, v in x.items() if k not in ("en", "ko")} | {(lang if lang in x else "en"): x.get(lang, x.get("en"))}
+    for lang in ("en", "ko"):
+        files[f"tabs/past.{lang}.json"] = {"cases": [one(c, lang) for c in data["hindsight"].get("cases", [])]}
+        files[f"tabs/method.{lang}.json"] = {"glossary": {k: one(g, lang) for k, g in (aids.get("glossary") or {}).items()},
+                                             "history": [one(h, lang) for h in aids.get("history") or []]}
+    aids.pop("glossary", None); aids.pop("history", None)
+    files["ko.json"] = {c: {k: v[k] for k in KO_SUMMARY if k in v} for c, v in ko.items()}
+    core = {k: v for k, v in data.items() if k not in ("ko", "hindsight", "events", "aids")} | {"events": events, "aids": aids}
+    files["data.json"] = core
+    return files
+
+
+def dump(obj):
+    return json.dumps(obj, indent=0, ensure_ascii=False) + "\n"  # no indent: keeps one value per line for diffs, smaller file
+
+
+def full(docs=DOCS):
+    """Puts the split files back together: the whole of what the page can show, in the shape the page file had before the split."""
+    rd = lambda f: json.loads((docs / f).read_text(encoding="utf-8"))
+    D = rd("data.json"); D.pop("v", None)
+    A, D["ko"] = D["aids"], {}
+    A["market"] = A.get("market") or {"cards": {}}
+    A["past"] = (A.get("past") or {}) | {"cards": {}, "none": {}}
+    for e in D["events"]:
+        cid = e["id"]; c = rd(f"cards/{cid}.json")
+        e.update(c["event"]); e["resolution_conditions"]["worsened_when_any"] = e.pop("worsened_when_any")
+        for k, v in c["aids"].items():
+            if k == "market": A["market"]["cards"][cid] = v
+            elif k == "past": A["past"]["cards"][cid] = v
+            elif k == "past_none": A["past"]["none"][cid] = v
+            else: A[k][cid] = v
+        if (docs / f"cards/{cid}.ko.json").exists():
+            D["ko"][cid] = rd(f"cards/{cid}.ko.json")
+    P, M = {l: rd(f"tabs/past.{l}.json") for l in ("en", "ko")}, {l: rd(f"tabs/method.{l}.json") for l in ("en", "ko")}
+    D["hindsight"] = {"cases": [a | b for a, b in zip(P["en"]["cases"], P["ko"]["cases"])]}
+    A["glossary"] = {k: g | M["ko"]["glossary"][k] for k, g in M["en"]["glossary"].items()}
+    A["history"] = [a | b for a, b in zip(M["en"]["history"], M["ko"]["history"])]
+    return D
+
+
+def strings_version():
+    """A short mark of the two screen-text files; the page asks for them by this mark so an old copy is never paired with a new page."""
+    return hashlib.sha256(b"".join((DOCS / f"t.{l}.js").read_bytes() for l in ("en", "ko"))).hexdigest()[:8]
+
+
+def stamp_strings(check=False):
+    page = DOCS / "index.html"; src = page.read_text(encoding="utf-8")
+    new = re.sub(r'const TV="[0-9a-f]*"', f'const TV="{strings_version()}"', src, count=1)
+    if check:
+        if new != src:
+            raise SystemExit("docs/t.en.js or docs/t.ko.js changed: run python3 scripts/build_site.py so the page asks for the new copy")
+        return
+    if new != src:
+        page.write_text(new, encoding="utf-8")
+
+
+if __name__ == "__main__":
+    import sys
+    if "--check-strings" in sys.argv:
+        stamp_strings(check=True); print("screen text mark matches"); raise SystemExit
+    if "--full" in sys.argv:  # the files already in docs/, put back together, for scripts that check whole cards
+        print(json.dumps(full(), ensure_ascii=False)); raise SystemExit
+    files = split(data)
+    body = {f: dump(o) for f, o in files.items() if f != "data.json"}
+    # each lazily fetched file is asked for by a mark of its content, so a cached old copy is never paired with new data
+    files["data.json"]["v"] = {f: hashlib.sha256(b.encode()).hexdigest()[:6] for f, b in sorted(body.items())}
+    body["data.json"] = dump(files["data.json"])
+    for d in ("cards", "tabs"):
+        shutil.rmtree(DOCS / d, ignore_errors=True); (DOCS / d).mkdir(parents=True)
+    for f, b in body.items():
+        (DOCS / f).write_text(b, encoding="utf-8")
+    stamp_strings()
+    first = lambda *fs: round(sum((DOCS / f).stat().st_size for f in fs) / 1024)
+    print(f"wrote docs/data.json and {len(body) - 1} more files: {len(records)} records, {len(data['alerts'])} alerts, {len(data['events'])} events")
+    print(f"first screen: {first('index.html', 't.en.js', 'data.json')} KB in English, {first('index.html', 't.ko.js', 'data.json', 'ko.json')} KB in Korean")

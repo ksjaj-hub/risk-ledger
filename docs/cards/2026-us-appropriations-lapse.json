@@ -1,0 +1,182 @@
+{
+"event": {
+"what_happened": "Current federal appropriations run out on 2026-12-11 under Public Law 119-103, during the lame-duck session before the new Congress convenes in January 2027.",
+"how_it_reaches_markets": "A lapse in funding would shut parts of the federal government, delay official economic data used by the Fed and markets, and weigh on confidence.",
+"sourced_facts": [
+{
+"text": "Public Law 119-103 (Continuing Appropriations and Extensions Act, 2027), enacted 2026-09-02: funds are available until regular appropriations are enacted or 'December 11, 2026', whichever comes first (Sec. 106)",
+"url": "https://www.govinfo.gov/content/pkg/PLAW-119publ103/html/PLAW-119publ103.htm",
+"tier": "primary",
+"checked": "2026-11-26"
+},
+{
+"text": "White House, 2026-09-02: the act 'includes a short-term continuing resolution that provides fiscal year 2027 appropriations to Federal agencies through December 11, 2026'",
+"url": "https://www.whitehouse.gov/briefings-statements/2026/09/congressional-bill-h-r-6500-signed-into-law/",
+"tier": "primary",
+"checked": "2026-11-26"
+}
+],
+"sources": [
+"https://www.govinfo.gov/content/pkg/PLAW-119publ103/html/PLAW-119publ103.htm",
+"https://www.whitehouse.gov/briefings-statements/2026/09/congressional-bill-h-r-6500-signed-into-law/"
+],
+"history": [
+{
+"date": "2026-11-26",
+"status": "open",
+"note": "Card opened. Resolution conditions written before the outcome is known."
+},
+{
+"date": "2026-11-26",
+"status": "open",
+"note": "Sources upgraded. The 2026-12-11 expiry is now taken from the text of Public Law 119-103 and the White House signing statement instead of a magazine article."
+},
+{
+"date": "2026-11-26",
+"status": "open",
+"note": "Summary rewritten so that it states only what was confirmed at the listed sources and marks the rest as reported. The first version is kept under superseded_sources. Resolution conditions are unchanged."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Added numeric_criteria (version 1: how each condition is counted, with the latest reading) and counter_view (why this reading may be wrong). Resolution conditions are unchanged."
+},
+{
+"date": "2026-11-27",
+"status": "open",
+"note": "Added forecast 1: by 2026-12-12, 70% resolved, 12% worsened. Scored in public (forecasts/README.md). Conditions unchanged."
+}
+],
+"unconfirmed_facts": [
+"A funding bill needs 60 Senate votes: this is the Senate cloture rule; no primary page stating it has been read"
+],
+"condition_reading_notes": {
+"written_on": "2026-11-26",
+"notes": [
+"Signature is read from the White House list of signed bills or the public law text."
+]
+},
+"numeric_criteria": {
+"version": 1,
+"written_on": "2026-11-27",
+"items": [
+{
+"side": "resolved",
+"measure": "1 signed law that funds the government for at least 30 days beyond 2026-12-11",
+"latest": "0 of 1. 14 days to the deadline on 2026-11-27",
+"state": "not_met"
+},
+{
+"side": "worsened",
+"measure": "Funding lapses: no law in force at 00:00 on 2026-12-12",
+"latest": "Not reached. Funds run through 2026-12-11",
+"state": "not_reached"
+},
+{
+"side": "worsened",
+"measure": "A shutdown lasts more than 14 days",
+"latest": "0 days",
+"state": "not_reached"
+}
+]
+},
+"counter_view": {
+"written_on": "2026-11-27",
+"text": "The date has been known since September, and Congress passed that stopgap without a lapse. A deadline everyone can see is the kind of risk markets tend to deal with early, so the card may overstate a familiar event."
+},
+"worsened_when_any": [
+"Funding lapses and a shutdown begins",
+"A shutdown lasts more than 14 days"
+]
+},
+"aids": {
+"links": {
+"technology": {
+"level": "strong",
+"direction": "lagged",
+"factor": "volatility_spike",
+"mean_excess_pct": -0.37,
+"t": -9.1,
+"n": 463,
+"since": "1990"
+},
+"consumer_staples": {
+"level": "strong",
+"direction": "led",
+"factor": "volatility_spike",
+"mean_excess_pct": 0.93,
+"t": 19.0,
+"n": 463,
+"since": "1990"
+},
+"financials": {
+"level": "strong",
+"direction": "lagged",
+"factor": "volatility_spike",
+"mean_excess_pct": -0.4,
+"t": -8.2,
+"n": 463,
+"since": "1990"
+},
+"health_care": {
+"level": "strong",
+"direction": "led",
+"factor": "volatility_spike",
+"mean_excess_pct": 0.41,
+"t": 10.4,
+"n": 463,
+"since": "1990"
+},
+"utilities": {
+"level": "strong",
+"direction": "led",
+"factor": "volatility_spike",
+"mean_excess_pct": 0.91,
+"t": 17.2,
+"n": 463,
+"since": "1990"
+}
+},
+"exposure": [
+"SPY",
+"TLT"
+],
+"card_factors": [
+"volatility_spike"
+],
+"market": {
+"verdict": "not_checked",
+"none": {
+"en": "Not checked. No price in our sources isolates a funding lapse.",
+"ko": "대조하지 않았습니다. 저희 출처에는 예산 공백만 따로 보여 주는 가격이 없습니다."
+},
+"readings": []
+},
+"past": [
+{
+"en": "2013 US government shutdown",
+"ko": "2013년 미국 정부 셧다운",
+"start": "2013-09-30",
+"src": "https://history.house.gov/Institution/Shutdown/Government-Shutdowns/",
+"fall": -2.2,
+"day": 8,
+"rec": 1,
+"end6": 11.7,
+"end": "2013-10-17",
+"days": 16
+},
+{
+"en": "2018 US government shutdown",
+"ko": "2018년 미국 정부 셧다운",
+"start": "2018-12-21",
+"src": "https://history.house.gov/Institution/Shutdown/Government-Shutdowns/",
+"fall": -4.6,
+"day": 2,
+"rec": 1,
+"end6": 20.7,
+"end": "2019-01-25",
+"days": 34
+}
+]
+}
+}

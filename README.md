@@ -24,7 +24,7 @@ anything, and not investment advice.**
 | `market/` | Whether market prices show the risk on each open card. Readings and rules fixed in advance; a reading aid, not part of the ledger. |
 | `waves/` | What followed similar past events: how long they lasted and how the market moved. Hindsight, kept apart from the ledger. |
 | `backtest/` | Hindsight runs of each rule over past data. Kept apart from the ledger on purpose. |
-| `docs/` | The public page (served by GitHub Pages). `data.json` is rebuilt from the files above. |
+| `docs/` | The public page (served by GitHub Pages). `data.json`, `ko.json`, `cards/` and `tabs/` are rebuilt from the files above by `scripts/build_site.py`; the page fetches a card's detail only when it is opened. Screen text is in `t.en.js` and `t.ko.js`. |
 | `scripts/` | `collect.py` produces records. `verify.py` checks the chain. |
 
 ## How you can check that nothing was changed

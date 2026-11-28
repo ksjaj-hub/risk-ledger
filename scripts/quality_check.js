@@ -2,8 +2,8 @@
 // Measures the content and screen quality bars. Run from the repository root: node scripts/quality_check.js
 // Needs Playwright and python3 (to serve docs/). Writes quality/report.json. Reading aid for the maintainer, not part of the record.
 const fs=require("fs"),path=require("path"),{spawn}=require("child_process"),{chromium}=require("playwright");
-const ROOT=path.resolve(__dirname,".."),D=JSON.parse(fs.readFileSync(path.join(ROOT,"docs/data.json"),"utf8"));
-D.ko=JSON.parse(fs.readFileSync(path.join(ROOT,"docs/ko.json"),"utf8"));  // Korean card text is a separate file, fetched only in Korean
+// The page reads its data in pieces (card details and two tabs are fetched when opened); build_site.py --full puts them back together.
+const ROOT=path.resolve(__dirname,".."),D=JSON.parse(require("child_process").execFileSync("python3",[path.join(ROOT,"scripts/build_site.py"),"--full"],{maxBuffer:64<<20,encoding:"utf8"}));
 const out=[],add=(area,id,pass,now,bar)=>out.push({area,id,pass,now,bar});
 const ev=D.events,live=ev.filter(e=>e.status!=="resolved"),day=864e5,today=Date.now();
 // content
@@ -51,6 +51,8 @@ add("content","advice_wording",hits.length===0,`${hits.length} sentences flagged
       const c=await b.newContext({viewport:{width:w,height:900},locale:loc});const p=await c.newPage();p.on("pageerror",()=>errs++);
       for(const u of ["/","/#risks","/#sectors","/#past","/#record","/#method","/#weekly","/weekly/1.html","/weekly/1.ko.html","/odds.html","/selection.html","/alerts.html","/privacy.html"]){await p.goto("http://localhost:8791"+u);await p.waitForTimeout(500);
         if(u==="/#sectors")await p.evaluate(()=>document.querySelector("#secs button")?.click());
+        if(u==="/#risks"&&w===390){await p.evaluate(()=>document.querySelectorAll("#events button.row").forEach(r=>r.click()));await p.waitForLoadState("networkidle").catch(()=>{});await p.waitForTimeout(300);  // card details arrive when opened
+          const empty=await p.evaluate(()=>[...document.querySelectorAll("#events .det")].filter(d=>!d.querySelector(".closebtn")).length);if(empty)kbd.push(empty+" cards did not open")}
         if(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth))scroll++;
         if(w===390){const r=await p.evaluate(()=>{document.querySelectorAll(".det").forEach(d=>d.hidden=false);document.querySelectorAll("details").forEach(d=>d.open=true);
           const P=s=>s.match(/[\d.]+/g).map(Number),L=c=>{const a=c.map(v=>{v/=255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)});return .2126*a[0]+.7152*a[1]+.0722*a[2]};
@@ -67,7 +69,7 @@ add("content","advice_wording",hits.length===0,`${hits.length} sentences flagged
         for(const h of await p.evaluate(()=>[...document.querySelectorAll("a[href]")].map(a=>a.getAttribute("href")).filter(h=>!/^(https?:|mailto:|#)/.test(h)))){
           const r=await p.request.get(new URL(h,"http://localhost:8791"+u).href);if(!r.ok())broken.push(u+" -> "+h)}}
       if(w===390&&loc==="ko-KR"){await p.goto("http://localhost:8791/");await p.waitForTimeout(400);
-        missing=await p.evaluate(()=>{const f=(o,pre="")=>Object.entries(o).flatMap(([k,v])=>v&&typeof v==="object"&&!Array.isArray(v)?f(v,pre+k+"."):[pre+k]);const a=new Set(f(T.en)),k=new Set(f(T.ko));return [...a].filter(x=>!k.has(x)).map(x=>"ko:"+x).concat([...k].filter(x=>!a.has(x)&&!x.startsWith("comp.")).map(x=>"en:"+x))}).catch(()=>["could not read strings"]);
+        missing=await p.evaluate(async()=>{await Promise.all([loadT("en"),loadT("ko")]);const f=(o,pre="")=>Object.entries(o).flatMap(([k,v])=>v&&typeof v==="object"&&!Array.isArray(v)?f(v,pre+k+"."):[pre+k]);const a=new Set(f(T.en)),k=new Set(f(T.ko));return [...a].filter(x=>!k.has(x)).map(x=>"ko:"+x).concat([...k].filter(x=>!a.has(x)&&!x.startsWith("comp.")).map(x=>"en:"+x))}).catch(()=>["could not read strings"]);
       }
       await c.close()}
   }finally{await b.close();srv.kill()}
@@ -77,8 +79,10 @@ add("content","advice_wording",hits.length===0,`${hits.length} sentences flagged
   add("screen","text_contrast",lowc.length===0,`${lowc.length} texts below the AA contrast ratio${lowc.length?": "+[...new Set(lowc)].slice(0,3).join("; "):""}`,"0 (4.5:1 for normal text, 3:1 for large)");
   add("screen","keyboard_and_labels",kbd.length===0,`${kbd.length} problems${kbd.length?": "+[...new Set(kbd)].slice(0,3).join("; "):""}`,"0 (every card opens by keyboard; inputs, buttons and images are named)");
   add("screen","two_languages_match",missing.length===0,`${missing.length} strings missing${missing.length?": "+missing.slice(0,5).join(", "):""}`,"0");
-  const size=f=>fs.statSync(path.join(ROOT,"docs",f)).size,kb=Math.round((size("index.html")+size("data.json"))/1024),kbKo=Math.round((size("index.html")+size("data.json")+size("ko.json"))/1024);
-  add("screen","page_weight",kb<=300,`${kb} KB in English, ${kbKo} KB in Korean (adds ko.json)`,"300 KB or less in English, the default");
+  const size=f=>fs.statSync(path.join(ROOT,"docs",f)).size,sum=fs_=>Math.round(fs_.reduce((a,f)=>a+size(f),0)/1024),ls=d=>fs.readdirSync(path.join(ROOT,"docs",d)).map(f=>d+"/"+f);
+  const kb=sum(["index.html","t.en.js","data.json"]),kbKo=sum(["index.html","t.ko.js","data.json","ko.json"]),en=f=>!/\.ko\.json$/.test(f);
+  const allEn=sum(["index.html","t.en.js","data.json",...ls("cards").filter(en),...ls("tabs").filter(en)]),allKo=sum(["index.html","t.ko.js","data.json","ko.json",...ls("cards"),...ls("tabs").filter(f=>!en(f))]);
+  add("screen","page_weight",kb<=300&&kbKo<=300,`first screen ${kb} KB in English, ${kbKo} KB in Korean; with every card and tab opened ${allEn} KB and ${allKo} KB`,"300 KB or less on the first screen, in both languages");
   const rep={checked_at_utc:new Date().toISOString().slice(0,16)+"Z",passed:out.filter(x=>x.pass).length,total:out.length,checks:out,
     not_automated:["numbers on cards checked against sources","each resolution condition decidable by one public fact","accessibility contrast and keyboard","friends' feedback bars"]};
   fs.mkdirSync(path.join(ROOT,"quality"),{recursive:true});fs.writeFileSync(path.join(ROOT,"quality/report.json"),JSON.stringify(rep,null,1)+"\n");

@@ -1,0 +1,134 @@
+{
+"cases": [
+{
+"id": "2023-us-debt-ceiling",
+"good_news_date": "2023-05-27",
+"outcome_date": "2023-06-03",
+"outcome": "ok",
+"sources": [
+"https://bidenwhitehouse.archives.gov/briefing-room/statements-releases/2023/05/27/statement-from-president-joe-biden-on-bipartisan-budget-agreement-in-principle/",
+"https://bidenwhitehouse.archives.gov/briefing-room/legislation/2023/06/03/press-release-bills-signed-h-r-346-h-r-3746/"
+],
+"en": {
+"title": "A debt-ceiling deal that did become law.",
+"good_news": "President Biden and Speaker McCarthy struck a deal to raise the debt ceiling.",
+"still_open": "A deal between two leaders is not a law. It still had to pass both chambers and be signed.",
+"outcome": "Biden signed the Fiscal Responsibility Act, which suspended the debt limit until January 2025. The condition was met within a week."
+}
+},
+{
+"id": "2023-first-republic",
+"good_news_date": "2023-03-16",
+"outcome_date": "2023-05-01",
+"outcome": "hit",
+"sources": [
+"https://home.treasury.gov/news/press-releases/jy1349",
+"https://www.fdic.gov/news/press-releases/2023/pr23034.html"
+],
+"en": {
+"title": "Eleven banks put $30 billion into First Republic.",
+"good_news": "Eleven American banks, including JPMorgan Chase, deposited $30 billion with First Republic.",
+"still_open": "Money from other banks did not show that the bank's own customers had stopped leaving, or that it could fund itself without help.",
+"outcome": "The FDIC announced that First Republic had been closed and sold to JPMorgan Chase."
+}
+},
+{
+"id": "2023-credit-suisse",
+"good_news_date": "2023-03-15",
+"outcome_date": "2023-03-19",
+"outcome": "hit",
+"sources": [
+"https://www.finma.ch/en/news/2023/03/20230315-mm-statement",
+"https://www.snb.ch/en/publications/communication/press-releases/2023/pre_20230319_1"
+],
+"en": {
+"title": "Regulators said Credit Suisse met its requirements. Four days later it was sold.",
+"good_news": "The Swiss regulator and central bank said Credit Suisse 'meets the capital and liquidity requirements' and that the central bank would provide liquidity if necessary.",
+"still_open": "Meeting the rules on paper did not show that clients had stopped withdrawing money.",
+"outcome": "UBS announced the takeover of Credit Suisse, backed by central bank liquidity of up to CHF 100 billion."
+}
+},
+{
+"id": "2022-uk-gilt-market",
+"good_news_date": "2022-09-28",
+"outcome_date": "2022-10-14",
+"outcome": "ok",
+"sources": [
+"https://www.bankofengland.co.uk/news/2022/september/bank-of-england-announces-gilt-market-operation",
+"https://www.bankofengland.co.uk/news/2022/october/statement-on-end-of-gilt-market-operations",
+"https://www.bankofengland.co.uk/markets/market-notices/2022/november/unwind-of-financial-stability-gilt-purchases-market-notice-23-november-2022"
+],
+"en": {
+"title": "A temporary rescue of the UK bond market that ended on schedule.",
+"good_news": "The Bank of England began temporary purchases of long-dated government bonds 'to restore orderly market conditions', to run until 14 October.",
+"still_open": "A temporary backstop is not a repair. The test was whether the Bank could stop on the date it had set.",
+"outcome": "The Bank 'terminated these operations and ceased all bond purchases' on the planned date, and began selling the bonds back from 29 November."
+}
+},
+{
+"id": "2020-fed-corporate-credit",
+"good_news_date": "2020-03-23",
+"outcome_date": "2020-12-31",
+"outcome": "ok",
+"sources": [
+"https://www.federalreserve.gov/newsevents/pressreleases/monetary20200323b.htm",
+"https://www.federalreserve.gov/monetarypolicy/pmccf.htm"
+],
+"en": {
+"title": "The Fed's 2020 corporate credit backstop closed on schedule.",
+"good_news": "The Federal Reserve announced two facilities to support credit to large employers, for new bond issuance and for outstanding corporate bonds.",
+"still_open": "An announced backstop is not a working market. The test was whether the emergency support could be withdrawn.",
+"outcome": "The primary market facility 'ceased purchasing eligible assets on December 31, 2020'."
+}
+},
+{
+"id": "2010-greece-first-programme",
+"good_news_date": "2010-05-09",
+"outcome_date": "2012-03-15",
+"outcome": "hit",
+"sources": [
+"https://www.imf.org/en/News/Articles/2015/09/14/01/49/pr10187",
+"https://www.imf.org/en/news/articles/2015/09/28/04/53/socar031512b"
+],
+"en": {
+"title": "Greece received a €110 billion package. It needed another.",
+"good_news": "The IMF approved a €30 billion loan for Greece, part of a €110 billion package with the European Union.",
+"still_open": "New loans covered payments coming due. They did not show that the debt itself could be repaid.",
+"outcome": "The IMF approved a new €28 billion loan, the first arrangement was canceled, and private investors agreed to write down 75 percent of their Greek bond holdings."
+}
+},
+{
+"id": "2008-bear-stearns-lehman",
+"good_news_date": "2008-03-16",
+"outcome_date": "2008-09-15",
+"outcome": "hit",
+"sources": [
+"https://www.federalreserve.gov/newsevents/pressreleases/monetary20080316a.htm",
+"https://www.federalreserve.gov/monetarypolicy/files/129bearstearnsbridgeloan.pdf",
+"https://www.federalreservehistory.org/-/media/Project/FedHistory/FedHistory/Documents/essaysPDFs/Support-for-Specific-Institutions-_-Federal-Reserve-History.pdf"
+],
+"en": {
+"title": "Bear Stearns was rescued. Lehman was not.",
+"good_news": "Bear Stearns was taken over by JPMorgan Chase, after the New York Fed agreed to an emergency loan two days earlier.",
+"still_open": "The takeover dealt with one firm. It did not show that other investment banks were free of the same losses and funding strain.",
+"outcome": "Lehman Brothers filed for Chapter 11 bankruptcy protection."
+}
+},
+{
+"id": "2007-fed-discount-rate",
+"good_news_date": "2007-08-17",
+"outcome_date": "2008-03-16",
+"outcome": "hit",
+"sources": [
+"https://www.federalreserve.gov/newsevents/pressreleases/monetary20070817a.htm",
+"https://www.federalreserve.gov/newsevents/pressreleases/monetary20080316a.htm"
+],
+"en": {
+"title": "The Fed cut its discount rate. The strain kept building.",
+"good_news": "The Federal Reserve cut its discount rate by half a point to 5.75% 'to promote the restoration of orderly conditions in financial markets'.",
+"still_open": "Cheaper emergency loans did not show how large the mortgage losses were or which firms held them.",
+"outcome": "Seven months later the Fed backed the emergency takeover of Bear Stearns."
+}
+}
+]
+}
