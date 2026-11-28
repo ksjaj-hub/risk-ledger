@@ -1,1 +1,2 @@
-analyze
+fetch --round2
+analyze --round2

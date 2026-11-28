@@ -17,7 +17,8 @@ import urllib.error, urllib.parse, urllib.request
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "research" / "disclosure"
-PLAN = json.loads((OUT / "preregistration.json").read_text())
+ROUND = "2" if "--round2" in sys.argv else ""
+PLAN = json.loads((OUT / f"preregistration{ROUND}.json").read_text())
 UA = os.environ.get("SEC_USER_AGENT") or "AFMX risk-ledger AFMX.risk@gmail.com"
 THEMES = list(PLAN["themes"])
 PAT = {k: re.compile(v) for k, v in PLAN["themes"].items()}
@@ -144,7 +145,7 @@ def filing_list(cik):
 
 def fetch():
     from concurrent.futures import ProcessPoolExecutor
-    uni_path, csv_path = OUT / "universe.json", OUT / "filings.csv"
+    uni_path, csv_path = OUT / "universe.json", OUT / f"filings{ROUND}.csv"
     if uni_path.exists():
         uni = json.loads(uni_path.read_text())
     else:
@@ -196,7 +197,7 @@ def fetch():
                 print("time budget reached; run again to continue")
                 ex.shutdown(cancel_futures=True)
                 break
-    (OUT / "fetch_log.json").write_text(json.dumps({"failed": fails, "no_primary_document": no_doc}, indent=1))
+    (OUT / f"fetch_log{ROUND}.json").write_text(json.dumps({"failed": fails, "no_primary_document": no_doc}, indent=1))
     print("done. failed:", len(fails))
 
 
@@ -430,10 +431,161 @@ def analyze(offline=None):
     print(json.dumps({k: res[k] for k in ("data", "M1_market_warning", "R1_overlap")}, indent=1))
     print("V1", n1, "/17  V2", n2, "/17  L1 median days", res["L1_delay"]["median_days"])
 
+# ------------------------------------------------------------------ round 2
+def analyze2(offline=None):
+    """Round 2 (preregistration2.json): per-stock 'raised' flag = new or surge. No market test, no numpy needed."""
+    src = pathlib.Path(offline) if offline else OUT
+    rows = list(csv.DictReader(open(src / "filings2.csv")))
+    by = {}
+    for r in rows:
+        r["d"] = day(r["filed"]); r["words"] = max(int(r["words"]), 1)
+        for k in THEMES:
+            r[k] = int(r[k])
+        by.setdefault(r["cik"], []).append(r)
+    r4 = lambda x: None if x is None else round(float(x), 4)
+
+    def pctl(v, p):  # linear interpolation, as numpy's default
+        v = sorted(v); x = (len(v) - 1) * p / 100; lo = int(x)
+        return v[lo] + (v[min(lo + 1, len(v) - 1)] - v[lo]) * (x - lo)
+    for fs in by.values():
+        fs.sort(key=lambda r: r["d"])
+        for i, r in enumerate(fs):
+            prior = [q for q in fs[:i] if 0 < (r["d"] - q["d"]).days <= 400]
+            same = [q for q in prior if q["form"] == r["form"]]
+            r["eligible"] = len(prior) >= 3
+            r["new"], r["surge"] = {}, {}
+            for k in THEMES:
+                seen = any(q[k] > 0 for q in prior)
+                r["new"][k] = r["eligible"] and r[k] > 0 and not seen
+                m = max((q[k] / q["words"] for q in same), default=None)
+                r["surge"][k] = bool(r["eligible"] and seen and r[k] >= 3 and m is not None and r[k] / r["words"] >= 2 * m)
+            r["raised"] = {k: r["new"][k] or r["surge"][k] for k in THEMES}
+            r["next_same"] = next((q for q in fs[i + 1:] if q["form"] == r["form"] and (q["d"] - r["d"]).days <= 460), None)
+    elig = [r for r in rows if r["eligible"] and r["filed"] >= "2007-04-01"]
+    qs = sorted({quarter(r["d"]) for r in elig})
+    Q = {}
+    for q in qs:
+        inq = [r for r in elig if quarter(r["d"]) == q]
+        n = len({r["cik"] for r in inq})
+        Q[q] = {"n": n}
+        for kind in ("new", "surge", "raised"):
+            for k in THEMES:
+                Q[q][kind + "_" + k] = len({r["cik"] for r in inq if r[kind][k]}) / n
+    good = [q for q in qs if Q[q]["n"] >= 30]
+
+    def overlap(a, b):
+        out, d = [], day(a).replace(day=1)
+        while d <= day(b):
+            if quarter(d) in good and quarter(d) not in out:
+                out.append(quarter(d))
+            d = (d.replace(day=28) + dt.timedelta(days=5)).replace(day=1)
+        return out
+
+    def pairs_test(pairs, kind, floor):
+        out = []
+        for k, a, b in pairs:
+            if k not in THEMES:
+                continue
+            s = [Q[q][kind + "_" + k] for q in good]
+            oq = overlap(a, b)
+            if not oq:
+                out.append({"theme": k, "window": [a, b], "note": "no quarter with data", "pass": False}); continue
+            best = max(oq, key=lambda q: Q[q][kind + "_" + k])
+            top, p90 = Q[best][kind + "_" + k], pctl(s, 90)
+            out.append({"theme": k, "window": [a, b], "peak_quarter": best, "peak_share": r4(top), "p90": r4(p90), "median": r4(pctl(s, 50)),
+                        "rank_from_top": 1 + sum(x > top for x in s), "quarters": len(s), "pass": bool(top >= p90 and top > 0 and top >= floor)})
+        return out
+    p1 = json.loads((OUT / "preregistration.json").read_text())["tests"]["V1_known_events_rank"]["pairs"]
+    v1 = pairs_test(p1, "raised", 0.0)
+    s2 = pairs_test(PLAN["tests"]["S2_saturated_events"]["pairs"], "surge", 0.05)
+    # P1 persistence
+    ev = [(k, r) for r in elig for k in THEMES if r["new"][k] and r["next_same"] is not None]
+    kept = sum(r["next_same"][k] > 0 for k, r in ev)
+    per_k = {k: [sum(r["next_same"][k] > 0 for kk, r in ev if kk == k), sum(kk == k for kk, r in ev)] for k in THEMES}
+    # P2 flag rate
+    yrs = list(range(2015, 2026))
+    per_co = []
+    for cik, fs in by.items():
+        act = [y for y in yrs if any(r["eligible"] and r["d"].year == y for r in fs)]
+        if act:
+            per_co.append(sum(sum(r["raised"].values()) for r in fs if r["eligible"] and r["d"].year in act) / len(act))
+    e15 = [r for r in elig if 2015 <= r["d"].year <= 2025]
+    many = sum(sum(r["raised"].values()) >= 3 for r in e15) / len(e15)
+    anyf = sum(any(r["raised"].values()) for r in e15) / len(e15)
+    med = pctl(per_co, 50)
+    # V3b sample
+    old = {x["url"] for x in json.loads((OUT / "reading_sample.json").read_text())} if (OUT / "reading_sample.json").exists() else set()
+    rng = random.Random(20261129)
+    sample = []
+    for kind in ("new", "surge"):
+        pools = {k: sorted((r for r in elig if r[kind][k] and doc_url(r["cik"], r["acc"], r["doc"]) not in old), key=lambda r: r["acc"]) for k in THEMES}
+        for k in THEMES:
+            rng.shuffle(pools[k])
+        got, depth = [], 0
+        while len(got) < 30 and any(len(pools[k]) > depth for k in THEMES):
+            for k in THEMES:
+                if len(got) < 30 and len(pools[k]) > depth:
+                    got.append((kind, k, pools[k][depth]))
+            depth += 1
+        sample += got
+    sp = OUT / "reading_sample2.json"
+    if not offline and not sp.exists():
+        items = []
+        for kind, k, r in sample:
+            try:
+                t = clean(get(doc_url(r["cik"], r["acc"], r["doc"]), gap=0.3))
+                m = PAT[k].search(t)
+                snip = t[max(0, m.start() - 220): m.end() + 220] if m else None
+            except Exception as e:  # noqa: BLE001
+                snip = f"(could not be read again: {e})"
+            items.append({"kind": kind, "theme": k, "ticker": r["ticker"], "form": r["form"], "filed": r["filed"], "count": r[k],
+                          "url": doc_url(r["cik"], r["acc"], r["doc"]), "snippet": snip})
+        sp.write_text(json.dumps(items, indent=1, ensure_ascii=False))
+    v3 = "not read yet"
+    mp = OUT / "reading_marks2.json"
+    if mp.exists() and sp.exists():
+        marks, items = json.loads(mp.read_text())["marks"], json.loads(sp.read_text())
+        per = {}
+        for it, mk in zip(items, marks):
+            per.setdefault(it["theme"], []).append(bool(mk))
+        tot = sum(marks)
+        v3 = {"read": len(marks), "about_the_risk": tot, "share": r4(tot / len(marks)),
+              "new": [sum(m for it, m in zip(items, marks) if it["kind"] == "new"), sum(it["kind"] == "new" for it in items)],
+              "surge": [sum(m for it, m in zip(items, marks) if it["kind"] == "surge"), sum(it["kind"] == "surge" for it in items)],
+              "per_theme": {k: [sum(v), len(v)] for k, v in per.items()},
+              "themes_removed": [k for k, v in per.items() if len(v) >= 4 and sum(v) / len(v) < 0.7], "pass": bool(tot >= 51)}
+    # latest per company, for a look at what the feature would say
+    latest = []
+    for cik, fs in by.items():
+        r = fs[-1]
+        if r["eligible"] and any(r["raised"].values()):
+            latest.append({"ticker": r["ticker"], "form": r["form"], "filed": r["filed"],
+                           "new": [k for k in THEMES if r["new"][k]], "surge": [k for k in THEMES if r["surge"][k]]})
+    n1, n2 = sum(x["pass"] for x in v1), sum(x["pass"] for x in s2)
+    res = {"computed": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%MZ"), "plan": "research/disclosure/preregistration2.json",
+           "data": {"companies": len(by), "filings": len(rows), "eligible_filings": len(elig)},
+           "V1b_known_events": {"passed_pairs": n1, "needed": 13, "pass": n1 >= 13, "pairs": v1},
+           "S2_saturated_events": {"passed_pairs": n2, "needed": 6, "pass": n2 >= 6, "pairs": s2},
+           "V3b_reading_check": v3,
+           "P1_persistence": {"new_events_with_a_next_filing": len(ev), "still_there": kept, "share": r4(kept / len(ev)), "per_theme": per_k, "pass": kept / len(ev) >= 0.7},
+           "P2_flag_rate": {"median_company_flags_per_year": r4(med), "p10": r4(pctl(per_co, 10)), "p90": r4(pctl(per_co, 90)),
+                            "filings_with_any_flag": r4(anyf), "filings_with_3_or_more": r4(many), "pass": bool(1 <= med <= 8 and many <= 0.2)},
+           "latest_quarter": {"quarter": good[-1], "companies": Q[good[-1]]["n"], "raised": {k: r4(Q[good[-1]]["raised_" + k]) for k in THEMES}},
+           "latest_filing_flags": sorted(latest, key=lambda x: x["filed"], reverse=True)[:40]}
+    dst = src if offline else OUT
+    (dst / "results2.json").write_text(json.dumps(res, indent=1))
+    with open(dst / "quarterly2.csv", "w", newline="") as fh:
+        w = csv.writer(fh)
+        w.writerow(["quarter", "companies"] + [kind + "_" + k for kind in ("new", "surge", "raised") for k in THEMES])
+        for q in qs:
+            w.writerow([q, Q[q]["n"]] + [round(Q[q][kind + "_" + k], 4) for kind in ("new", "surge", "raised") for k in THEMES])
+    print("V1b", n1, "/", len(v1), " S2", n2, "/", len(s2), " P1", res["P1_persistence"]["share"], " P2", res["P2_flag_rate"], " V3b", v3 if isinstance(v3, str) else v3["about_the_risk"])
+
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("stage", choices=["probe", "fetch", "analyze"])
     ap.add_argument("--offline")
+    ap.add_argument("--round2", action="store_true")
     a = ap.parse_args()
-    {"probe": probe, "fetch": fetch, "analyze": lambda: analyze(a.offline)}[a.stage]()
+    {"probe": probe, "fetch": fetch, "analyze": lambda: (analyze2 if ROUND else analyze)(a.offline)}[a.stage]()
