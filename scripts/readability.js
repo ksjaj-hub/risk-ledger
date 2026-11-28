@@ -28,7 +28,7 @@ const JARGON={ko:["SHA-256","OpenTimestamps","블록체인","스프레드","VIX"
         const hs=[...document.querySelectorAll("h1,h2,h3")].filter(vis).map(h=>+h.tagName[1]);let skip=0;for(let i=1;i<hs.length;i++)if(hs[i]>hs[i-1]+1)skip++;
         return {screens:+(document.documentElement.scrollHeight/innerHeight).toFixed(1),chars,small_pct:Math.round(100*small/chars),tiny_pct:Math.round(100*tiny/chars),min_px:min,targets:tg.length,small_targets:lowT.length,small_target_list:[...new Set(lowT)].slice(0,8),jargon:jar,
           h1:hs.filter(x=>x===1).length,heading_skips:skip,first_heading:hs[0]||null,landmarks:["header","nav","main","footer"].filter(x=>document.querySelector(x)).length,skip_link:!!document.querySelector("a.skip"),title:document.title}},JARGON[lang]);
-      if(lang==="ko"&&t==="risks"){await p.click("#events button.row");await p.waitForTimeout(200);res[lang][t].first_card_open_screens=await p.evaluate(()=>+(document.querySelector("#events .det:not([hidden])").getBoundingClientRect().height/innerHeight).toFixed(1))}}
+      if(lang==="ko"&&t==="risks"){await p.click("#events button.row");await p.waitForSelector("#events .det .closebtn");await p.waitForTimeout(200);res[lang][t].first_card_open_screens=await p.evaluate(()=>+(document.querySelector("#events .det:not([hidden])").getBoundingClientRect().height/innerHeight).toFixed(1))}}
     await c.close()}}finally{await b.close();srv.kill()}
   const out={measured_at_utc:new Date().toISOString().slice(0,16)+"Z",label:process.argv[2]||"",viewport:"390x844",tabs:res};
   fs.writeFileSync(path.join(ROOT,"quality/readability.json"),JSON.stringify(out,null,1)+"\n");
