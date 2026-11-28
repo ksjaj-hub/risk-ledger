@@ -1,0 +1,115 @@
+{
+ "note": "AFMX residual risk index, version 1. A sum of AFMX's own judgment on its open cards, not a measurement of the market and not a forecast. Formula, limits and the market test (not run) are in residual/preregistration.json.",
+ "version": 1,
+ "unit": "market-wide open risks",
+ "latest": {
+  "date": "2026-11-27",
+  "index": 5.59,
+  "open_cards": 12,
+  "equal_reach": 13.24,
+  "tilt": 0.04
+ },
+ "max_if_all_worsened": 11.09,
+ "cards": [
+  {
+   "card": "2026-japan-boj-tightening-yen",
+   "reach": 1.0,
+   "stage": 1.25,
+   "part": 1.25,
+   "share": 0.224
+  },
+  {
+   "card": "2026-fed-rate-hikes",
+   "reach": 1.0,
+   "stage": 1.05,
+   "part": 1.05,
+   "share": 0.188
+  },
+  {
+   "card": "2027-us-debt-limit",
+   "reach": 1.0,
+   "stage": 0.95,
+   "part": 0.95,
+   "share": 0.17
+  },
+  {
+   "card": "2026-china-domestic-demand-property",
+   "reach": 0.3636,
+   "stage": 1.57,
+   "part": 0.571,
+   "share": 0.102
+  },
+  {
+   "card": "2026-us-excess-capacity-tariffs",
+   "reach": 0.3636,
+   "stage": 1.25,
+   "part": 0.455,
+   "share": 0.081
+  },
+  {
+   "card": "2026-us-appropriations-lapse",
+   "reach": 1.0,
+   "stage": 0.42,
+   "part": 0.42,
+   "share": 0.075
+  },
+  {
+   "card": "2026-ai-buildout-financing",
+   "reach": 0.2727,
+   "stage": 0.95,
+   "part": 0.259,
+   "share": 0.046
+  },
+  {
+   "card": "2026-us-iran-war-oil",
+   "reach": 0.1818,
+   "stage": 1.15,
+   "part": 0.209,
+   "share": 0.037
+  },
+  {
+   "card": "2026-us-private-credit-defaults",
+   "reach": 0.0909,
+   "stage": 1.43,
+   "part": 0.13,
+   "share": 0.023
+  },
+  {
+   "card": "2026-us-ai-chip-export-rules",
+   "reach": 0.0909,
+   "stage": 1.18,
+   "part": 0.107,
+   "share": 0.019
+  },
+  {
+   "card": "2026-eurozone-inflation-ecb",
+   "reach": 0.0909,
+   "stage": 1.02,
+   "part": 0.093,
+   "share": 0.017
+  },
+  {
+   "card": "2026-nvidia-sec-and-leadership",
+   "reach": 0.0909,
+   "stage": 1.02,
+   "part": 0.093,
+   "share": 0.017
+  }
+ ],
+ "history": [
+  {
+   "date": "2026-11-26",
+   "index": 5.55,
+   "open_cards": 12,
+   "equal_reach": 12.0,
+   "tilt": 0.0
+  },
+  {
+   "date": "2026-11-27",
+   "index": 5.59,
+   "open_cards": 12,
+   "equal_reach": 13.24,
+   "tilt": 0.04
+  }
+ ]
+}
