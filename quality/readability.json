@@ -1,19 +1,21 @@
 {
- "measured_at_utc": "2026-11-27T07:00Z",
- "label": "score bar",
+ "measured_at_utc": "2026-11-28T14:03Z",
+ "label": "inline terms, sticky card title, sectors strip",
  "viewport": "390x844",
  "tabs": {
   "ko": {
    "home": {
-    "screens": 2.1,
-    "chars": 926,
+    "screens": 2.8,
+    "chars": 1349,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
-    "targets": 22,
+    "targets": 30,
     "small_targets": 0,
     "small_target_list": [],
-    "jargon": [],
+    "jargon": [
+     "거래일"
+    ],
     "h1": 1,
     "heading_skips": 0,
     "first_heading": 1,
@@ -22,43 +24,28 @@
     "title": "AFMX: 뉴스가 지나간 뒤에 남은 것"
    },
    "risks": {
-    "screens": 2.4,
-    "chars": 1134,
+    "screens": 3.4,
+    "chars": 2417,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
-    "targets": 24,
+    "targets": 28,
     "small_targets": 0,
     "small_target_list": [],
-    "jargon": [],
+    "jargon": [
+     "거래일"
+    ],
     "h1": 1,
     "heading_skips": 0,
     "first_heading": 1,
     "landmarks": 4,
     "skip_link": true,
     "title": "리스크 · AFMX",
-    "first_card_open_screens": 3.5
+    "first_card_open_screens": 4.3
    },
    "sectors": {
-    "screens": 1.8,
-    "chars": 830,
-    "small_pct": 0,
-    "tiny_pct": 0,
-    "min_px": 13,
-    "targets": 24,
-    "small_targets": 0,
-    "small_target_list": [],
-    "jargon": [],
-    "h1": 1,
-    "heading_skips": 0,
-    "first_heading": 1,
-    "landmarks": 4,
-    "skip_link": true,
-    "title": "섹터 · AFMX"
-   },
-   "past": {
-    "screens": 2.3,
-    "chars": 3135,
+    "screens": 2,
+    "chars": 1024,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
@@ -71,18 +58,50 @@
     "first_heading": 1,
     "landmarks": 4,
     "skip_link": true,
+    "title": "섹터 · AFMX"
+   },
+   "past": {
+    "screens": 2.5,
+    "chars": 3155,
+    "small_pct": 0,
+    "tiny_pct": 0,
+    "min_px": 13,
+    "targets": 30,
+    "small_targets": 0,
+    "small_target_list": [],
+    "jargon": [
+     "스프레드",
+     "VIX",
+     "중간값",
+     "거래일",
+     "변동성",
+     "사후 검증"
+    ],
+    "h1": 1,
+    "heading_skips": 0,
+    "first_heading": 1,
+    "landmarks": 4,
+    "skip_link": true,
     "title": "과거 · AFMX"
    },
    "record": {
-    "screens": 2.9,
-    "chars": 2935,
+    "screens": 3.1,
+    "chars": 2991,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
     "targets": 22,
     "small_targets": 0,
     "small_target_list": [],
-    "jargon": [],
+    "jargon": [
+     "VIX",
+     "%p",
+     "거래일",
+     "금리 곡선",
+     "금융 여건",
+     "낙폭",
+     "변동성"
+    ],
     "h1": 1,
     "heading_skips": 0,
     "first_heading": 1,
@@ -91,14 +110,17 @@
     "title": "기록 · AFMX"
    },
    "method": {
-    "screens": 2.2,
-    "chars": 2723,
+    "screens": 3.2,
+    "chars": 4304,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13.5,
-    "targets": 37,
-    "small_targets": 0,
-    "small_target_list": [],
+    "targets": 44,
+    "small_targets": 2,
+    "small_target_list": [
+     "왜 이 카드들인가: 선정 기준 15",
+     "공식 발표를 두고 미리 말한 확률과  15"
+    ],
     "jargon": [],
     "h1": 1,
     "heading_skips": 0,
@@ -109,11 +131,11 @@
    },
    "weekly": {
     "screens": 1,
-    "chars": 202,
+    "chars": 297,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13.5,
-    "targets": 15,
+    "targets": 16,
     "small_targets": 0,
     "small_target_list": [],
     "jargon": [],
@@ -127,15 +149,17 @@
   },
   "en": {
    "home": {
-    "screens": 2.4,
-    "chars": 1823,
+    "screens": 3.2,
+    "chars": 2641,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
-    "targets": 22,
+    "targets": 31,
     "small_targets": 0,
     "small_target_list": [],
-    "jargon": [],
+    "jargon": [
+     "trading day"
+    ],
     "h1": 1,
     "heading_skips": 0,
     "first_heading": 1,
@@ -144,15 +168,17 @@
     "title": "AFMX: What is left after the news"
    },
    "risks": {
-    "screens": 3,
-    "chars": 2372,
+    "screens": 4,
+    "chars": 4665,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
-    "targets": 24,
+    "targets": 28,
     "small_targets": 0,
     "small_target_list": [],
-    "jargon": [],
+    "jargon": [
+     "trading day"
+    ],
     "h1": 1,
     "heading_skips": 0,
     "first_heading": 1,
@@ -161,12 +187,12 @@
     "title": "Risks · AFMX"
    },
    "sectors": {
-    "screens": 2.1,
-    "chars": 1899,
+    "screens": 2.3,
+    "chars": 2278,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
-    "targets": 24,
+    "targets": 31,
     "small_targets": 0,
     "small_target_list": [],
     "jargon": [],
@@ -178,8 +204,8 @@
     "title": "Sectors · AFMX"
    },
    "past": {
-    "screens": 2.6,
-    "chars": 5821,
+    "screens": 2.7,
+    "chars": 5875,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
@@ -187,7 +213,10 @@
     "small_targets": 0,
     "small_target_list": [],
     "jargon": [
+     "spread",
+     "VIX",
      "median",
+     "trading day",
      "volatility",
      "hindsight"
     ],
@@ -199,8 +228,8 @@
     "title": "Past · AFMX"
    },
    "record": {
-    "screens": 3.2,
-    "chars": 5496,
+    "screens": 3.4,
+    "chars": 5533,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13,
@@ -208,6 +237,8 @@
     "small_targets": 0,
     "small_target_list": [],
     "jargon": [
+     "VIX",
+     "trading day",
      "drawdown",
      "volatility",
      "hindsight"
@@ -220,14 +251,17 @@
     "title": "Record · AFMX"
    },
    "method": {
-    "screens": 2.2,
-    "chars": 5283,
+    "screens": 3.3,
+    "chars": 8313,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13.5,
-    "targets": 37,
-    "small_targets": 0,
-    "small_target_list": [],
+    "targets": 44,
+    "small_targets": 2,
+    "small_target_list": [
+     "Why these cards: sel 15",
+     "Short questions on o 15"
+    ],
     "jargon": [
      "commit"
     ],
@@ -240,11 +274,11 @@
    },
    "weekly": {
     "screens": 1,
-    "chars": 291,
+    "chars": 485,
     "small_pct": 0,
     "tiny_pct": 0,
     "min_px": 13.5,
-    "targets": 15,
+    "targets": 17,
     "small_targets": 0,
     "small_target_list": [],
     "jargon": [],

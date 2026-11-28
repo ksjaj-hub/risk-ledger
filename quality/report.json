@@ -1,5 +1,5 @@
 {
- "checked_at_utc": "2026-11-28T12:55Z",
+ "checked_at_utc": "2026-11-28T14:03Z",
  "passed": 18,
  "total": 18,
  "checks": [
@@ -70,7 +70,7 @@
    "area": "content",
    "id": "glossary",
    "pass": true,
-   "now": "30 terms explained",
+   "now": "31 terms explained",
    "bar": "8 or more terms"
   },
   {
@@ -126,7 +126,7 @@
    "area": "screen",
    "id": "page_weight",
    "pass": true,
-   "now": "first screen 120 KB in English, 128 KB in Korean; with every card and tab opened 228 KB and 280 KB",
+   "now": "first screen 125 KB in English, 133 KB in Korean; with every card and tab opened 233 KB and 285 KB",
    "bar": "300 KB or less on the first screen, in both languages"
   }
  ],
