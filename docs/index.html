@@ -554,11 +554,12 @@ function render(){
     const sr=$("div","src",t.srcs);c.sources.forEach((u,j)=>{const a=$("a",null,new URL(u).hostname.replace(/^www\./,""));a.href=u;a.rel="noopener";if(j)sr.append(", ");sr.append(a)});d.append(sr);cs2.append(d)});
   document.querySelectorAll(".mbtn").forEach(b=>b.remove());foldCloses();document.querySelectorAll("[data-cl]").forEach(e=>{delete e.dataset.cl;e.classList.remove("cl");e.querySelectorAll("a").forEach(x=>x.removeAttribute("tabindex"))});requestAnimationFrame(clampAll);
 }
-document.querySelectorAll("[data-lang]").forEach(b=>b.addEventListener("click",()=>{lang=b.dataset.lang;try{localStorage.setItem("lang",lang)}catch(e){}render()}));
+const loadKo=()=>D&&!D.ko?fetch("ko.json").then(r=>r.json()).then(k=>{D.ko=k}).catch(()=>{}):Promise.resolve();
+document.querySelectorAll("[data-lang]").forEach(b=>b.addEventListener("click",()=>{lang=b.dataset.lang;try{localStorage.setItem("lang",lang)}catch(e){}(lang==="ko"?loadKo():Promise.resolve()).then(render)}));
 addEventListener("hashchange",()=>route(true));
 document.getElementById("skip").addEventListener("click",ev=>{ev.preventDefault();const f=document.getElementById(tab==="home"?"hh":"vh");f.focus();f.scrollIntoView()});
 route();
-fetch("data.json").then(r=>r.json()).then(d=>{D=d;const LW={Low:"0 of 3 steps (Quiet)",Moderate:"1 of 3 steps (Normal)",High:"2 of 3 steps (Strained)"},cw=x=>(/component of this ledger/.test(x)?x.replace(/\b(Low|Moderate|High)\b/g,m=>LW[m]):x).replace(/\blicence/g,"license");(D.events||[]).forEach(e=>{const c=e.resolution_conditions||{};["resolved_when_all","worsened_when_any"].forEach(k=>{if(c[k])c[k]=c[k].map(cw)})});route()}).catch(()=>{document.getElementById("state").textContent=T[lang].fail});
+fetch("data.json").then(r=>r.json()).then(d=>{D=d;const LW={Low:"0 of 3 steps (Quiet)",Moderate:"1 of 3 steps (Normal)",High:"2 of 3 steps (Strained)"},cw=x=>(/component of this ledger/.test(x)?x.replace(/\b(Low|Moderate|High)\b/g,m=>LW[m]):x).replace(/\blicence/g,"license");(D.events||[]).forEach(e=>{const c=e.resolution_conditions||{};["resolved_when_all","worsened_when_any"].forEach(k=>{if(c[k])c[k]=c[k].map(cw)})});return lang==="ko"?loadKo():0}).then(()=>route()).catch(()=>{document.getElementById("state").textContent=T[lang].fail});
 
 (function(){
   const f=document.getElementById("subf"),m=document.getElementById("subm"),st=document.getElementById("subs"),b=f.querySelector("button");

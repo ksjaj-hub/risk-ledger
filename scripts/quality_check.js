@@ -3,6 +3,7 @@
 // Needs Playwright and python3 (to serve docs/). Writes quality/report.json. Reading aid for the maintainer, not part of the record.
 const fs=require("fs"),path=require("path"),{spawn}=require("child_process"),{chromium}=require("playwright");
 const ROOT=path.resolve(__dirname,".."),D=JSON.parse(fs.readFileSync(path.join(ROOT,"docs/data.json"),"utf8"));
+D.ko=JSON.parse(fs.readFileSync(path.join(ROOT,"docs/ko.json"),"utf8"));  // Korean card text is a separate file, fetched only in Korean
 const out=[],add=(area,id,pass,now,bar)=>out.push({area,id,pass,now,bar});
 const ev=D.events,live=ev.filter(e=>e.status!=="resolved"),day=864e5,today=Date.now();
 // content
@@ -76,8 +77,8 @@ add("content","advice_wording",hits.length===0,`${hits.length} sentences flagged
   add("screen","text_contrast",lowc.length===0,`${lowc.length} texts below the AA contrast ratio${lowc.length?": "+[...new Set(lowc)].slice(0,3).join("; "):""}`,"0 (4.5:1 for normal text, 3:1 for large)");
   add("screen","keyboard_and_labels",kbd.length===0,`${kbd.length} problems${kbd.length?": "+[...new Set(kbd)].slice(0,3).join("; "):""}`,"0 (every card opens by keyboard; inputs, buttons and images are named)");
   add("screen","two_languages_match",missing.length===0,`${missing.length} strings missing${missing.length?": "+missing.slice(0,5).join(", "):""}`,"0");
-  const kb=Math.round((fs.statSync(path.join(ROOT,"docs/index.html")).size+fs.statSync(path.join(ROOT,"docs/data.json")).size)/1024);
-  add("screen","page_weight",kb<=300,`${kb} KB`,"300 KB or less");
+  const size=f=>fs.statSync(path.join(ROOT,"docs",f)).size,kb=Math.round((size("index.html")+size("data.json"))/1024),kbKo=Math.round((size("index.html")+size("data.json")+size("ko.json"))/1024);
+  add("screen","page_weight",kb<=300,`${kb} KB in English, ${kbKo} KB in Korean (adds ko.json)`,"300 KB or less in English, the default");
   const rep={checked_at_utc:new Date().toISOString().slice(0,16)+"Z",passed:out.filter(x=>x.pass).length,total:out.length,checks:out,
     not_automated:["numbers on cards checked against sources","each resolution condition decidable by one public fact","accessibility contrast and keyboard","friends' feedback bars"]};
   fs.mkdirSync(path.join(ROOT,"quality"),{recursive:true});fs.writeFileSync(path.join(ROOT,"quality/report.json"),JSON.stringify(rep,null,1)+"\n");

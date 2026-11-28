@@ -6,8 +6,9 @@ One file per event. Each card says what happened, how it reaches markets, and, m
 - `status` is one of `open`, `easing`, `resolved`, `worsened`.
 - Why a risk gets a card at all, and what closes one, is in `selection/criteria.json`. It adds one way to close:
   `withdrawn`, for a card whose founding fact is taken back or never confirmed. No card has used it yet.
-- The original `resolution_conditions` are not rewritten. If they need to change, the change is added to
-  `history` with a date and a reason, so readers can see both versions.
+- The original `resolution_conditions` are never erased. If they need to change, the first wording moves to
+  `conditions_as_first_written` with the date and the reason, `history` quotes what was replaced, and a new forecast
+  is added for the new wording. Forecasts written earlier stay scored on the first wording.
 - `relief_headlines_that_do_not_resolve_it` lists good news that does not meet the conditions.
 - Every status change is a dated entry appended to `history`. Git history shows when each line was written.
 - Facts are limited to what the listed sources state. Where sources disagree, the card says so.

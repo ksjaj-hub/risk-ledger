@@ -112,8 +112,8 @@
   }
  ],
  "never": {
-  "en": "A card is never deleted and its conditions are never rewritten. A closed card stays on the record with its history.",
-  "ko": "카드는 지우지 않고, 조건은 고쳐 쓰지 않습니다. 닫힌 카드도 지나온 기록과 함께 남습니다."
+  "en": "A card is never deleted and its first conditions are never erased. If a condition has to change, the change is dated, gives its reason, keeps the first wording on the card, and the odds already written are still scored on that first wording. A closed card stays on the record with its history.",
+  "ko": "카드는 지우지 않고, 처음 쓴 조건도 지우지 않습니다. 조건을 바꿔야 하면 날짜와 이유를 적고 첫 문구를 카드에 남기며, 이미 적어 둔 확률은 첫 문구대로 채점합니다. 닫힌 카드도 지나온 기록과 함께 남습니다."
  },
  "home_screen": {
   "en": "The home screen shows up to three cards, picked by hand each week: the nearest dated deadline first, then the newest change at a primary source. Being widely followed can keep a card on the home screen. It does not make the card pass these criteria, and such a card carries a mark.",
@@ -262,17 +262,17 @@
      "S1": "met",
      "S2": "met",
      "S3": "met",
-     "S4": "partly",
+     "S4": "met",
      "S5": "partly",
      "S6": "met"
     },
     "gap": {
-     "en": "The main conditions use a rating agency's default rate. Checked again on 2026-11-28: two trade publications give the same number, but we still have not read it at the agency. The trend began before the card opened.",
-     "ko": "핵심 조건은 신용평가사의 부도율에 걸려 있습니다. 2026-11-28에 다시 확인했는데, 업계지 두 곳의 숫자는 같지만 평가사 원문은 여전히 읽지 못했습니다. 이 흐름은 카드를 열기 전부터 있었습니다."
+     "en": "The trend began before the card opened, and two of its conditions were replaced on 2026-11-28, two days after it opened, because the first version used a figure we could not read at its source. The first wording stays on the card.",
+     "ko": "이 흐름은 카드를 열기 전부터 있었습니다. 또 조건 두 개를 카드를 연 지 이틀 뒤인 2026-11-28에 바꿨습니다. 첫 판이 출처에서 직접 읽을 수 없는 숫자를 썼기 때문입니다. 첫 문구는 카드에 그대로 남아 있습니다."
     },
     "fix": {
-     "en": "Read the default rate at the agency, or move the conditions to a figure a public body publishes.",
-     "ko": "부도율을 평가사에서 직접 읽거나, 조건을 공공 기관이 내는 수치로 옮깁니다."
+     "en": "Cannot be fixed afterwards. Forecast 1 stays scored on the first wording.",
+     "ko": "나중에 고칠 수 없습니다. 예측 1번은 첫 문구대로 채점합니다."
     }
    },
    "2026-ai-buildout-financing": {
@@ -330,7 +330,11 @@
   },
   {
    "date": "2026-11-28",
-   "note": "Sources of three cards read again. The AI buildout card now has its index level and meets every criterion. Rechecked: 9 meet every criterion, 2 partly, 1 does not."
+   "note": "Sources of three cards read again. The AI buildout card now has its index level and meets every criterion. The private credit card's default-rate conditions moved from a rating agency's figure to SEC filings. Rechecked: 9 meet every criterion, 2 partly, 1 does not."
+  },
+  {
+   "date": "2026-11-28",
+   "note": "The 'never' sentence said conditions are never rewritten. One card's conditions were changed today, so the sentence now says what we actually hold to: the first wording is never erased and earlier odds are scored on it."
   }
  ],
  "stage": "beta"
