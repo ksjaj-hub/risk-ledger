@@ -91,7 +91,12 @@ def probe():
                     print("OK ", r.status, url.split("/")[2], "|", ua)
                     works = works or ua
             except urllib.error.HTTPError as e:
-                body = re.sub(r"\s+", " ", re.sub(r"(?s)<[^>]*>", " ", e.read().decode("utf-8", "replace")))[:400]
+                raw = e.read()
+                try:
+                    raw = gzip.decompress(raw)
+                except Exception:  # noqa: BLE001
+                    pass
+                body = re.sub(r"\s+", " ", re.sub(r"(?s)<(script|style).*?</\1>|<[^>]*>", " ", raw.decode("utf-8", "replace")))[:900]
                 print("ERR", e.code, url.split("/")[2], "|", ua, "|", body)
     if not works:
         sys.exit("no declared User-Agent was accepted from this network")
