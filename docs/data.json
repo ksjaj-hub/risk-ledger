@@ -4764,8 +4764,8 @@
 "base_fall": -3.8
 },
 "market": {
-"as_of": "2026-11-27",
-"at": "09:28",
+"as_of": "2026-11-28",
+"at": "03:53",
 "cards": {
 "2026-us-iran-war-oil": {
 "verdict": "does_not_show",
@@ -4785,9 +4785,9 @@
 "en": "Inflation priced into 5-year Treasuries",
 "ko": "5년 국채에 반영된 기대 물가",
 "unit": "pct",
-"value": 2.13,
-"as_of": "2026-11-25",
-"percentile_5y": 7,
+"value": 2.16,
+"as_of": "2026-11-27",
+"percentile_5y": 10,
 "shows": false,
 "rule": "high_in_5y"
 }
@@ -4801,8 +4801,8 @@
 "en": "2-year Treasury yield minus the top of the Fed's target range",
 "ko": "2년 국채 금리에서 연준 목표 범위 상단을 뺀 값",
 "unit": "pt",
-"value": 0.63,
-"as_of": "2026-11-24",
+"value": 0.61,
+"as_of": "2026-11-25",
 "percentile_5y": 80,
 "shows": true,
 "rule": "above_zero"
@@ -4811,9 +4811,9 @@
 "en": "Inflation priced into 5-year Treasuries",
 "ko": "5년 국채에 반영된 기대 물가",
 "unit": "pct",
-"value": 2.13,
-"as_of": "2026-11-25",
-"percentile_5y": 7,
+"value": 2.16,
+"as_of": "2026-11-27",
+"percentile_5y": 10,
 "shows": false,
 "rule": "high_in_5y"
 }
@@ -4859,9 +4859,9 @@
 "en": "1-month Treasury yield minus 3-month",
 "ko": "1개월 국채 금리에서 3개월 금리를 뺀 값",
 "unit": "pt",
-"value": -0.15,
-"as_of": "2026-11-24",
-"percentile_5y": 30,
+"value": -0.07,
+"as_of": "2026-11-25",
+"percentile_5y": 40,
 "shows": false,
 "rule": "high_in_5y"
 }
@@ -4874,7 +4874,7 @@
 {
 "en": "High-yield bond spread (AFMX record)",
 "ko": "하이일드 채권 스프레드 (AFMX 기록)",
-"as_of": "2026-11-24",
+"as_of": "2026-11-26",
 "steps": 1,
 "shows": false,
 "rule": "ledger_step_2"
@@ -4888,8 +4888,8 @@
 {
 "en": "Equity volatility, VIX (AFMX record)",
 "ko": "주식 변동성 VIX (AFMX 기록)",
-"value": 26.36,
-"as_of": "2026-11-24",
+"value": 26.8,
+"as_of": "2026-11-26",
 "steps": 2,
 "shows": true,
 "rule": "ledger_step_2"
@@ -4897,7 +4897,7 @@
 {
 "en": "S&P 500 fall from its one-year high (AFMX record)",
 "ko": "S&P 500의 1년 고점 대비 하락 (AFMX 기록)",
-"as_of": "2026-11-24",
+"as_of": "2026-11-25",
 "steps": 1,
 "shows": false,
 "rule": "ledger_step_2"
