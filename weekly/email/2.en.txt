@@ -1,0 +1,32 @@
+AFMX Weekly No. 2: Inflation is at 3.8%. Five-year bonds price in 2.13%.
+
+AFMX Weekly · No. 2 · November 27, 2026
+Watch · 33 out of 100
+
+Inflation is at 3.8%. Five-year bonds price in 2.13%.
+
+All 12 cards are open. None got worse, eased or was resolved since No. 1. One card gained a confirmed fact.
+
+GOOD NEWS THAT LEFT THE RISK IN PLACE
+- Volatility fell. VIX went from 35.89 on November 20 to 26.36 on November 24. The measure it did not move: VIX below 20 for 20 trading days in a row. That count stands at 0 of 20.
+- Nvidia's CEO returned on November 23. The measure it did not move: the next quarterly or annual report filed on time, with no late-filing notice and no notice that earlier statements cannot be relied on. No report has been filed since the card opened.
+
+NEW FACTS THIS WEEK
+- Inflation, now on the Fed card. The PCE price index rose 3.8% in the year to October and 0.3% on the month. Excluding food and energy it rose 3.3%. September was 3.6%. The card's conditions count consumer prices (CPI), so this figure does not change the count. https://www.bea.gov/news/2026/personal-income-and-outlays-october-2026
+- What bond prices show. The 2-year Treasury yield was 0.63 points above the top of the Fed's range on November 24. Above zero means bond prices show rate rises ahead. The inflation priced into 5-year Treasuries was 2.13% on November 25, in the lowest tenth of its last five years. Short-term rate risk shows in prices. Lasting inflation does not. https://github.com/ksjaj-hub/risk-ledger/blob/main/market/README.md
+- Price checks now run by themselves. The check of each card against market prices now runs three times each weekday. Every reading shows the date it is for. https://github.com/ksjaj-hub/risk-ledger/blob/main/market/README.md
+
+DATES AHEAD
+- Tue, Dec 1 10:00 a.m. ET: US job openings for October
+- Fri, Dec 4 8:30 a.m. ET: US jobs report for November
+- Wed, Dec 9 2:00 p.m. ET: Fed decision, with new projections
+- Thu, Dec 10 8:30 a.m. ET: US consumer prices for November
+- Fri, Dec 11: US government funding expires
+- Wed, Dec 23 8:30 a.m. ET: US PCE inflation for November
+
+Read the full note: https://ksjaj-hub.github.io/risk-ledger/weekly/2.html
+
+AFMX describes risk conditions. Nothing here is advice to buy or sell anything.
+You are getting this because you asked for the AFMX weekly note. To stop, reply to this email with the word remove, or use the form on the privacy page.
+https://ksjaj-hub.github.io/risk-ledger/privacy.html
+AFMX.risk@gmail.com
