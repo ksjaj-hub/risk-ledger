@@ -1,0 +1,112 @@
+{
+ "written": "2026-11-28, after round 1 results and before scripts/disclosure_index.py computed any round 2 number",
+ "status": "Fixed. Not edited after results exist. Hindsight study; not part of the ledger; not a forecast.",
+ "round_1_first": "Round 1 (preregistration.json, results.json) failed its reading check, 50 of 60 against a bar of 51, and failed as a market warning (0.459). It was not published. This is a second attempt, and what was already seen is listed below so that nothing seen is counted as fresh evidence.",
+ "already_seen": [
+  "the quarterly new-mention and level series of all 14 round 1 themes, including that all 17 known events ranked in the top decile",
+  "60 sampled snippets and their marks",
+  "that new mentions saturate: about 80 to 90% of companies already mention tariffs, so new mentions are near zero in 2026"
+ ],
+ "not_seen": "Any surge figure, any figure under a 400-day look-back, the next-filing persistence of a new mention, how many flags a company gets per year, and any snippet outside the 60 of round 1.",
+ "what_this_round_is_for": "The likely product use is per stock: 'what did this company newly write, or write much more, about in its latest filing'. The round tests that form. The claim that the count warns of market falls is dropped; round 1 settled it.",
+ "source": "SEC EDGAR: company_tickers.json for the universe, data.sec.gov/submissions for the filing lists, www.sec.gov/Archives for the primary document of each filing. US government publication of company-authored filings; counts and short quoted snippets only are stored, never the filing text. One further run of the same size as round 1, same limits, because one pattern changed and counts cannot be corrected without reading the text again.",
+ "universe": "Exactly the companies and filing lists in research/disclosure/universe.json as read on 2026-11-28. Same survivor bias.",
+ "filings": "Forms 10-K and 10-Q only (amendments excluded), filed 2006-01-01 or later, the first full year in which Item 1A Risk Factors was required. The primary document only; exhibits are not read. 8-K is left out of the hindsight study (most 8-K text is in exhibits and earnings releases) and is listed under 'live use' below.",
+ "text": "HTML tags and the hidden inline-XBRL header are removed, entities decoded, text lower-cased, whitespace collapsed. A theme 'matches' a filing when its pattern occurs at least once.",
+ "themes": {
+  "tariffs": "\\btariffs?\\b",
+  "export_controls": "export controls?|export restrictions?|export licens(?:e|ing) requirements?|entity list",
+  "ukraine": "\\bukraine\\b",
+  "pandemic": "\\bpandemics?\\b|covid-19|coronavirus",
+  "bank_stress": "bank failures?|silicon valley bank|banking (?:sector |industry )?(?:turmoil|crisis|instability)",
+  "debt_ceiling": "debt ceiling|federal debt limit|statutory debt limit",
+  "gov_shutdown": "government shutdowns?|lapse in appropriations",
+  "inflation": "inflationary pressures?|rising inflation|high(?:er)? inflation|elevated inflation",
+  "supply_chain": "supply chain (?:disruptions?|constraints?|shortages?)|supply shortages?",
+  "middle_east": "(?:conflict|war|hostilities|tensions)s? in the middle east|israel-hamas|\\bred sea\\b|strait of hormuz",
+  "recession": "\\brecession(?:s|ary)?\\b",
+  "brexit": "\\bbrexit\\b"
+ },
+ "theme_changes": {
+  "middle_east": "'red sea' now needs word boundaries; in round 1 it matched inside 'acquired Seagen' and 'ordered seasonal'.",
+  "ai and private_credit": "Removed. Both fell under the 70% per-theme floor of round 1 (2 of 4 and 0 of 4), and round 1's plan says such a theme is removed.",
+  "others": "Unchanged, including their known weak spots (a country list can match 'ukraine', a denial can match 'supply shortages')."
+ },
+ "definitions": {
+  "eligible": "A filing with at least 3 other 10-K or 10-Q filings of the company in the 400 days before it. (Round 1 used 365 days, which let an annual report filed 366 days after the last one look new.)",
+  "new": "Eligible, matches theme T, and no 10-K or 10-Q of the company in the previous 400 days matches T.",
+  "surge": "Eligible, not new, T occurs at least 3 times, the company has a filing of the same form in the previous 400 days, and T's density (occurrences per 10,000 words) is at least twice the highest density among those same-form filings (or they have none while the other form does).",
+  "raised": "new or surge. This is the per-stock flag.",
+  "quarterly shares": "For a calendar quarter of filing dates: companies with a new (surge, raised) filing for T in the quarter divided by companies with an eligible filing in the quarter. From 2007Q2."
+ },
+ "tests": {
+  "V1b_known_events": {
+   "what": "Round 1's pairs without the ai pair, on the raised share. Not fresh evidence (the new-mention half was seen); it is a check that the changes broke nothing.",
+   "pass": "At least 13 of 16 pairs: the window's highest quarter is at or above the 90th percentile of the theme's raised series."
+  },
+  "S2_saturated_events": {
+   "what": "Fresh test of the surge measure alone, on events that arrived when many companies already mentioned the theme. Surge share only, new mentions excluded.",
+   "pairs": [
+    [
+     "tariffs",
+     "2019-05-01",
+     "2019-09-30"
+    ],
+    [
+     "tariffs",
+     "2025-02-01",
+     "2025-06-30"
+    ],
+    [
+     "pandemic",
+     "2020-04-01",
+     "2020-08-31"
+    ],
+    [
+     "recession",
+     "2020-03-01",
+     "2020-06-30"
+    ],
+    [
+     "inflation",
+     "2022-04-01",
+     "2022-09-30"
+    ],
+    [
+     "supply_chain",
+     "2022-01-01",
+     "2022-06-30"
+    ],
+    [
+     "export_controls",
+     "2023-10-17",
+     "2024-02-29"
+    ],
+    [
+     "gov_shutdown",
+     "2025-10-01",
+     "2026-02-28"
+    ]
+   ],
+   "pass": "At least 6 of 8 pairs: the window's highest quarter is at or above the 90th percentile of the theme's surge series and at least 5% of companies."
+  },
+  "V3b_reading_check": {
+   "what": "60 raised events drawn with seed 20261129: 30 new and 30 surge, spread over the 12 themes, none from a filing sampled in round 1. 220 characters each side of the first match are saved and read by the maintainer (Claude); each mark is made before any total is counted; snippets and marks are published.",
+   "marking_rule": "1 when the text presents the named thing as a risk, cost, disruption, uncertainty or adverse event for the company, its customers or the economy, including as one item in a list of risks. 0 when it is neutral or favourable description, a denial ('no shortages'), a geographic or product list, an accounting or funding phrase, or a string accident.",
+   "pass": "At least 51 of 60. A theme under 70% on 4 or more samples is removed from any product use whatever the total."
+  },
+  "P1_persistence": {
+   "what": "For every new event that has a later filing of the same form within 460 days: the share whose next same-form filing still matches T. A real addition to a company's risk text stays; an accident disappears.",
+   "pass": "At least 70%."
+  },
+  "P2_flag_rate": {
+   "what": "Raised flags per company per year, 2015 to 2025, over the 12 themes, and how many filings carry 3 or more flags. Too few and there is nothing to alert on; too many and it is noise.",
+   "pass": "The median company averages between 1 and 8 flags a year, and at most 20% of eligible filings carry 3 or more."
+  }
+ },
+ "decision": {
+  "all five pass": "The per-stock flag may be built as a feature ('newly raised in the latest filing'), described as a count of words in filings, with the delay (round 1: median 27 days) and survivor bias stated, and with no sentence that it predicts prices. The aggregate share may be shown as a description.",
+  "any fails": "Not built and not published. Reported as it is. No third round on the same design without the owner asking for it.",
+  "still_not_tested": "Whether a flag is followed by a different return or volatility for that stock. No rights-clean daily price source per company exists here. Until that is tested the feature is a reading aid, not a signal."
+ }
+}
