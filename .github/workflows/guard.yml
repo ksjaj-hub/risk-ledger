@@ -22,7 +22,9 @@ jobs:
           python-version: "3.12"
       - run: python scripts/verify.py
       - name: The arithmetic behind the odds still checks out
-        run: python scripts/forecast_math.py --selftest
+        run: python scripts/forecast_math.py --selftest && python scripts/questions.py --selftest
+      - name: The watch-share count still hides small counts and drops fake signups
+        run: python scripts/worry_index.py --selftest
       - name: The residual risk index arithmetic still checks out, and the published value matches the cards
         run: |
           python scripts/residual.py --selftest
@@ -35,3 +37,4 @@ jobs:
           [ "${{ github.event_name }}" = "pull_request" ] && base="origin/${{ github.base_ref }}"
           if [ -z "$base" ] || ! git cat-file -e "$base^{commit}" 2>/dev/null; then echo "no base commit; skipping"; exit 0; fi
           python scripts/forecast_math.py --guard "$base"
+          python scripts/questions.py --guard "$base"

@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Score the forecasts on event cards (forecasts/README.md). Standard library only. Writes forecasts/scorecard.json.
+Then scores the short questions on scheduled releases the same way (questions/README.md, scripts/questions.py).
 
 A forecast's `outcome` is filled in by hand when a question is settled:
   {"resolved": 0 or 1, "worsened": 0 or 1, "settled_on": "YYYY-MM-DD"}   (a key may be missing while still open)
 """
-import datetime as dt, glob, json, pathlib
+import datetime as dt, glob, json, pathlib, sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
@@ -39,7 +40,9 @@ def main():
             "problems": problems, "rows": rows}
     (ROOT / "forecasts" / "scorecard.json").write_text(json.dumps(card, indent=1) + "\n")
     print(f"{len(rows)} questions, {len(done)} settled, Brier {card['brier']}, next deadline {nxt}; {len(problems)} problems")
-    return 1 if problems else 0
+    sys.path.insert(0, str(ROOT / "scripts"))
+    import questions
+    return 1 if questions.build() or problems else 0
 
 
 if __name__ == "__main__":
