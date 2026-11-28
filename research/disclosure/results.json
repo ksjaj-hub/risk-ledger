@@ -1,5 +1,5 @@
 {
- "computed": "2026-11-28T13:25Z",
+ "computed": "2026-11-28T13:27Z",
  "plan": "research/disclosure/preregistration.json",
  "data": {
   "companies": 150,
@@ -436,7 +436,75 @@
    }
   ]
  },
- "V3_reading_check": "not read yet",
+ "V3_reading_check": {
+  "read": 60,
+  "about_the_risk": 50,
+  "share": 0.8333,
+  "per_theme": {
+   "tariffs": [
+    5,
+    5
+   ],
+   "export_controls": [
+    5,
+    5
+   ],
+   "ukraine": [
+    4,
+    5
+   ],
+   "pandemic": [
+    5,
+    5
+   ],
+   "bank_stress": [
+    4,
+    4
+   ],
+   "debt_ceiling": [
+    4,
+    4
+   ],
+   "gov_shutdown": [
+    4,
+    4
+   ],
+   "inflation": [
+    4,
+    4
+   ],
+   "supply_chain": [
+    3,
+    4
+   ],
+   "middle_east": [
+    2,
+    4
+   ],
+   "recession": [
+    4,
+    4
+   ],
+   "ai": [
+    2,
+    4
+   ],
+   "brexit": [
+    4,
+    4
+   ],
+   "private_credit": [
+    0,
+    4
+   ]
+  },
+  "themes_removed": [
+   "middle_east",
+   "ai",
+   "private_credit"
+  ],
+  "pass": false
+ },
  "M1_market_warning": {
   "days": 4868,
   "from": "2007-02-22",
