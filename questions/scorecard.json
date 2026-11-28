@@ -1,0 +1,81 @@
+{
+ "note": "Brier score, lower is better. One probability per question, never revised. Fewer than about 30 settled questions say very little.",
+ "questions": 6,
+ "settled": 0,
+ "void": 0,
+ "releases_settled": 0,
+ "next_release": "2026-12-04",
+ "brier": null,
+ "always_50pct": null,
+ "no_change": null,
+ "if_exactly_right_all": {
+  "questions": 6,
+  "expected_brier": 0.2171,
+  "always_50pct": 0.25,
+  "expected_no_change": 0.5583,
+  "chance_no_better_than_50pct": 0.301
+ },
+ "rows": [
+  {
+   "id": "2026-12-04-jobs-unemployment",
+   "release": "Employment Situation, November 2026",
+   "release_date": "2026-12-04",
+   "written_on": "2026-11-28",
+   "p": 0.35,
+   "no_change": 0,
+   "void": false,
+   "outcome": null
+  },
+  {
+   "id": "2026-12-04-jobs-payrolls",
+   "release": "Employment Situation, November 2026",
+   "release_date": "2026-12-04",
+   "written_on": "2026-11-28",
+   "p": 0.55,
+   "no_change": 1,
+   "void": false,
+   "outcome": null
+  },
+  {
+   "id": "2026-12-04-jobs-earnings",
+   "release": "Employment Situation, November 2026",
+   "release_date": "2026-12-04",
+   "written_on": "2026-11-28",
+   "p": 0.25,
+   "no_change": 1,
+   "void": false,
+   "outcome": null
+  },
+  {
+   "id": "2026-12-09-fomc-hike",
+   "release": "FOMC statement, December 8-9 meeting",
+   "release_date": "2026-12-09",
+   "written_on": "2026-11-28",
+   "p": 0.8,
+   "no_change": 0,
+   "void": false,
+   "outcome": null
+  },
+  {
+   "id": "2026-12-10-cpi-all-items",
+   "release": "Consumer Price Index, November 2026",
+   "release_date": "2026-12-10",
+   "written_on": "2026-11-28",
+   "p": 0.4,
+   "no_change": 1,
+   "void": false,
+   "outcome": null
+  },
+  {
+   "id": "2026-12-10-cpi-core",
+   "release": "Consumer Price Index, November 2026",
+   "release_date": "2026-12-10",
+   "written_on": "2026-11-28",
+   "p": 0.6,
+   "no_change": 1,
+   "void": false,
+   "outcome": null
+  }
+ ],
+ "problems": []
+}
