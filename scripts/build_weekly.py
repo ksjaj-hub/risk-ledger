@@ -216,6 +216,7 @@ set();
 def checks():
     """Prints the snapshot.checks block for a new issue from the current docs/data.json."""
     D = json.loads((ROOT / "docs" / "data.json").read_text(encoding="utf-8"))
+    D["ko"] = json.loads((ROOT / "docs" / "ko.json").read_text(encoding="utf-8"))
     live = [e for e in D["events"] if e["status"] != "resolved"]
     its = [x for e in live for x in e.get("numeric_criteria", {}).get("items", []) if x["side"] == "resolved"]
     mk = D["aids"].get("market", {}).get("cards", {})

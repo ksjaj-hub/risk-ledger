@@ -3,10 +3,10 @@
  "version": 1,
  "unit": "market-wide open risks",
  "latest": {
-  "date": "2026-11-27",
+  "date": "2026-11-28",
   "index": 5.59,
   "open_cards": 12,
-  "equal_reach": 13.24,
+  "equal_reach": 13.25,
   "tilt": 0.04
  },
  "max_if_all_worsened": 11.09,
@@ -70,8 +70,8 @@
   {
    "card": "2026-us-private-credit-defaults",
    "reach": 0.0909,
-   "stage": 1.43,
-   "part": 0.13,
+   "stage": 1.44,
+   "part": 0.131,
    "share": 0.023
   },
   {
@@ -109,6 +109,13 @@
    "index": 5.59,
    "open_cards": 12,
    "equal_reach": 13.24,
+   "tilt": 0.04
+  },
+  {
+   "date": "2026-11-28",
+   "index": 5.59,
+   "open_cards": 12,
+   "equal_reach": 13.25,
    "tilt": 0.04
   }
  ]

@@ -20,7 +20,8 @@ output and not advice. They may be badly wrong. That is why they are fixed and s
 ## Rules
 
 1. A forecast is never edited. A new view is a new forecast (`n` + 1) with its own date; the old one stays and is
-   still scored.
+   still scored. If a card's conditions change, forecasts written before the change are scored on the wording they
+   were written for (`conditions_as_first_written` on the card).
 2. A question is settled early when its event happens before the deadline (outcome 1), otherwise on the deadline
    (outcome 0). The card's `history` records the date and the source.
 3. Score: the Brier score, (probability - outcome)^2, lower is better. Each card has two questions.

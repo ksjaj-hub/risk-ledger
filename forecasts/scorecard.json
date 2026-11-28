@@ -1,6 +1,6 @@
 {
  "note": "Brier score, lower is better. Headline uses forecast 1 of each deadline only. Fewer than about 30 settled questions say very little.",
- "questions": 24,
+ "questions": 26,
  "settled": 0,
  "next_deadline": "2026-12-12",
  "brier": null,
@@ -248,6 +248,28 @@
    "p": 0.45,
    "outcome": null,
    "first_for_deadline": true,
+   "brier": null
+  },
+  {
+   "card": "2026-us-private-credit-defaults",
+   "n": 2,
+   "question": "resolved",
+   "written_on": "2026-11-28",
+   "deadline": "2027-05-31",
+   "p": 0.01,
+   "outcome": null,
+   "first_for_deadline": false,
+   "brier": null
+  },
+  {
+   "card": "2026-us-private-credit-defaults",
+   "n": 2,
+   "question": "worsened",
+   "written_on": "2026-11-28",
+   "deadline": "2027-05-31",
+   "p": 0.45,
+   "outcome": null,
+   "first_for_deadline": false,
    "brier": null
   },
   {

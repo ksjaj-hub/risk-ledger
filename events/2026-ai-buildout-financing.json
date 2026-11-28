@@ -1,28 +1,40 @@
 {
  "schema": 1,
  "id": "2026-ai-buildout-financing",
- "title": "Debt-funded AI buildout (sell-off reported, not confirmed)",
+ "title": "Debt-funded AI buildout and the November sell-off (the link is press-reported)",
  "category": "sector",
  "markets": [
   "US"
  ],
  "first_recorded": "2026-11-26",
- "event_started": "2026-11 (exact start not established)",
+ "event_started": "2026-11 (Nasdaq Composite fell 11.2% from 2026-11-11 to 2026-11-20)",
  "status": "open",
- "what_happened": "A sell-off concentrated in AI and semiconductor shares, attributed in press reports to doubts about whether the debt-financed AI buildout can earn sufficient returns and to signs of moderating AI spending.",
+ "what_happened": "The Nasdaq Composite fell 11.2% between 2026-11-11 and 2026-11-20, 5.28% of it on the last day. Press reports tie the fall to doubts about whether enthusiasm for AI had peaked, slower data-center expansion and higher borrowing costs. That link is reported, not confirmed. Separately, the Federal Reserve says the buildout is increasingly funded by debt.",
  "how_it_reaches_markets": "Large index weight of AI-linked companies; debt used to fund data centers; possible regulatory opposition to data center construction.",
  "sourced_facts": [
   {
    "text": "Federal Reserve Governor Barr, 2026-11-16: 'the AI buildout has been increasingly funded by debt'; on-balance-sheet debt of the seven largest AI firms 'is expected to exceed $800 billion before year's end'; he adds that he is 'less concerned about direct losses' given the still-limited debt behind the boom",
    "url": "https://www.federalreserve.gov/newsevents/speech/barr20261116a.htm",
    "tier": "primary",
-   "checked": "2026-11-26"
+   "checked": "2026-11-28"
   },
   {
    "text": "Federal Reserve Financial Stability Report (November 2026, data to 2026-10-28): 'Bond issuance by the largest investment-grade firms involved in operating data centers was greater than $150 billion year to date'; 'Measures of equity valuations have remained elevated since the previous report'",
    "url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
    "tier": "primary",
-   "checked": "2026-11-26"
+   "checked": "2026-11-28"
+  },
+  {
+   "text": "Nasdaq Composite closed at 25,466.19 on 2026-11-11, 24,429.88 on 2026-11-18 and 22,617.73 on 2026-11-20 (down 5.28% that day), then 24,129.50 on 2026-11-27 (FRED series NASDAQCOM)",
+   "url": "https://fred.stlouisfed.org/series/NASDAQCOM",
+   "tier": "primary",
+   "checked": "2026-11-28"
+  },
+  {
+   "text": "Governor Barr, same speech: 'Anyone watching the news or their retirement plans these past couple of weeks is aware of the questions that investors have raised about the sustainability of the AI investment boom'",
+   "url": "https://www.federalreserve.gov/newsevents/speech/barr20261116a.htm",
+   "tier": "primary",
+   "checked": "2026-11-28"
   }
  ],
  "resolution_conditions": {
@@ -39,11 +51,12 @@
  },
  "relief_headlines_that_do_not_resolve_it": [
   "Single-day rebounds in AI shares",
-  "One company beating earnings forecasts (Dell beat forecasts on 2026-11-24 and its shares still fell about 7% the next day)"
+  "One company's strong results"
  ],
  "sources": [
   "https://www.federalreserve.gov/newsevents/speech/barr20261116a.htm",
-  "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf"
+  "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
+  "https://fred.stlouisfed.org/series/NASDAQCOM"
  ],
  "history": [
   {
@@ -70,12 +83,18 @@
    "date": "2026-11-27",
    "status": "open",
    "note": "Title was 'Doubts about financing of the AI buildout'. Changed to say only what is confirmed. Conditions and forecasts unchanged."
+  },
+  {
+   "date": "2026-11-28",
+   "status": "open",
+   "note": "Sources read again: both Federal Reserve facts match. The Nasdaq level for the first condition is now read: 25,466.19. Title was 'Debt-funded AI buildout (sell-off reported, not confirmed)'; the fall is confirmed from the index series, its link to AI debt is not. The Dell example was moved to unconfirmed. Conditions unchanged."
   }
  ],
  "note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
  "unconfirmed_facts": [
-  "2026-11-20: S&P 500 -3.70% to 6,910.39; Nasdaq Composite -5.28%; seventh straight S&P 500 decline; Nvidia -14%, AMD -13.3%: from a broker commentary; not confirmed at a primary or wire source",
-  "2026-11-25: Nasdaq 100 briefly 20% below its record closing high: attributed to Reuters in a repost; original not read"
+  "2026-11-20: S&P 500 seventh straight decline; -3.70% to 6,910.39; Nvidia about -14%: Fortune (read directly) reports the seventh straight loss but gives -3.59% to 6,918.45, and a market-wrap site gives -3.70% and Nvidia -13.8%. The two disagree and neither is on our list of accepted sources. AMD -13.3% was not found",
+  "2026-11-25: Nasdaq 100 briefly 20% below its record closing high: not found in anything we read",
+  "Dell beat forecasts on 2026-11-24 and its shares fell about 7% the next day: Dell's release of that date shows record revenue and a higher full-year outlook (read as a repost, not at Dell); the share move was not found"
  ],
  "superseded_sources": {
   "replaced_on": "2026-11-26",
@@ -95,7 +114,7 @@
   "written_on": "2026-11-26",
   "note": "How the conditions above are read. The conditions themselves are unchanged.",
   "notes": [
-   "'The day before the losing streak began' is read as the last Nasdaq Composite close before the run of declines that ended on 2026-11-20, taken from the FRED series NASDAQCOM. The exact level will be written here once the series has been read; until then this condition cannot be marked as met.",
+   "'The day before the losing streak began' is read as 2026-11-11, the last close before the S&P 500's seven straight declines that press reports say ended on 2026-11-20. The Nasdaq Composite closed at 25,466.19 that day (FRED series NASDAQCOM, read 2026-11-28). The Nasdaq itself rose on 2026-11-18, so its own unbroken run of declines began from 24,429.88; the higher level is used because it is harder to meet.",
    "'Largest AI infrastructure spenders' means Microsoft, Alphabet, Amazon, Meta and Oracle. 'Large AI-linked borrower' means one with at least $1 billion of debt outstanding."
   ]
  },
@@ -106,9 +125,9 @@
   "items": [
    {
     "side": "resolved",
-    "measure": "Nasdaq Composite closes above the pre-streak close on 20 trading days in a row",
-    "latest": "0 of 20. The pre-streak close has not been read from the series yet, so no day can be counted",
-    "state": "not_measurable_yet",
+    "measure": "Nasdaq Composite closes above 25,466.19 (its close on 2026-11-11) on 20 trading days in a row",
+    "latest": "0 of 20. Closed at 24,129.50 on 2026-11-27: 5.2% below",
+    "state": "not_met",
     "series": "NASDAQCOM"
    },
    {

@@ -1,38 +1,71 @@
 {
  "schema": 1,
  "id": "2026-us-private-credit-defaults",
- "title": "US private credit: fast growth and redemption limits (default rate reported, not confirmed)",
+ "title": "US private credit: fast growth, redemption limits and more loans not paying interest",
  "category": "credit",
  "markets": [
   "US"
  ],
  "first_recorded": "2026-11-26",
- "event_started": "2026 (default rate at a record 6.0% in April 2026)",
+ "event_started": "2026 (default rate reported at or above 6.0% since April 2026)",
  "status": "open",
- "what_happened": "US private credit has grown to about $1.5 trillion outstanding, up 13.8% in a year. The Federal Reserve reports that some funds kept redemption limits and net flows stayed negative. A Fitch default rate of 6.2% for October has been reported but not yet read at Fitch.",
+ "what_happened": "US private credit has grown to about $1.5 trillion outstanding, up 13.8% in a year. The Federal Reserve reports that some funds kept redemption limits and net flows stayed negative. At the two largest listed lenders, loans that have stopped paying interest stood at 2.4% and 2.9% of the portfolio at cost on 2026-09-30, up from earlier in the year.",
  "how_it_reaches_markets": "Losses at business development companies, banks and insurers that lend to or hold private credit; redemption pressure on non-traded funds; tighter credit for mid-sized companies.",
  "sourced_facts": [
   {
    "text": "Federal Reserve Financial Stability Report (November 2026): private credit outstanding $1,504 billion, up 13.8% from 2025:Q2 to 2026:Q2 (Table 1.1)",
    "url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
    "tier": "primary",
-   "checked": "2026-11-26"
+   "checked": "2026-11-28"
   },
   {
    "text": "Same report: 'Redemption requests at certain business development companies trended lower, though funds maintained redemption limits and net flows remained negative.'",
    "url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
    "tier": "primary",
-   "checked": "2026-11-26"
+   "checked": "2026-11-28"
   },
   {
-   "text": "Federal Reserve staff note, 2026-11-09: US private credit vehicles held about $1.9 trillion in assets at the end of 2025; BDCs 'tend to be more highly levered with an average debt-to-equity ratio around 1'",
+   "text": "Federal Reserve staff note, 2026-11-09: U.S.-domiciled private credit vehicles held about $1.9 trillion in assets at the end of 2025; BDCs 'tend to be more highly levered with an average debt-to-equity ratio around 1'",
    "url": "https://www.federalreserve.gov/econres/notes/feds-notes/u-s-private-credit-vehicles-institutional-structure-and-aggregate-balance-sheets-20261109.html",
    "tier": "primary",
-   "checked": "2026-11-26"
+   "checked": "2026-11-28"
+  },
+  {
+   "text": "Same report (Overview): 'private companies and public firms with lower credit ratings demonstrated weaker debt-servicing capacity'. The report gives no private credit default rate in the part we could read word for word",
+   "url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
+   "tier": "primary",
+   "checked": "2026-11-28"
+  },
+  {
+   "text": "Ares Capital, results for 2026-09-30 (filed with the SEC, 2026-10-27): loans on non-accrual status were 2.4% of total investments at amortized cost (1.4% at fair value), against 1.8% (1.2%) on 2025-12-31; portfolio $29.2 billion at fair value",
+   "url": "https://www.sec.gov/Archives/edgar/data/1287750/000162828026067382/arccq3-2026exhibit991.htm",
+   "tier": "primary",
+   "checked": "2026-11-28"
+  },
+  {
+   "text": "Blue Owl Capital Corporation, results for 2026-09-30 (filed with the SEC, 2026-11-04): investments on non-accrual were 2.9% of the portfolio at cost (0.8% at fair value), against 2.8% (0.8%) on 2026-06-30; portfolio $15.1 billion at fair value",
+   "url": "https://www.sec.gov/Archives/edgar/data/1655888/000165588826000070/exhibit991pressrelease-ann.htm",
+   "tier": "primary",
+   "checked": "2026-11-28"
   }
  ],
  "resolution_conditions": {
   "written_on": "2026-11-26",
+  "resolved_when_all": [
+   "Loans on non-accrual are 1.8% or less of the portfolio at cost at both Ares Capital and Blue Owl Capital Corporation in two quarterly reports in a row",
+   "Credit stress component of this ledger is Moderate or lower throughout the same period"
+  ],
+  "worsened_when_any": [
+   "Loans on non-accrual reach 3.5% or more of the portfolio at cost at either Ares Capital or Blue Owl Capital Corporation",
+   "A large private credit fund suspends or limits redemptions, or a bank discloses a private-credit-related loss above 1 billion dollars",
+   "Credit stress component of this ledger reaches High"
+  ],
+  "revised_on": "2026-11-28"
+ },
+ "conditions_as_first_written": {
+  "written_on": "2026-11-26",
+  "replaced_on": "2026-11-28",
+  "reason": "The two default-rate conditions used a Fitch figure that we could not read at Fitch. They now use figures the lenders file with the SEC. The other conditions are unchanged.",
   "resolved_when_all": [
    "Fitch trailing-12-month private credit default rate below 4.0% for three consecutive monthly readings",
    "Credit stress component of this ledger is Moderate or lower throughout the same period"
@@ -45,11 +78,13 @@
  },
  "relief_headlines_that_do_not_resolve_it": [
   "Record fundraising by private credit managers (new money raised says nothing about existing loans)",
-  "A one-month dip in the default rate (6.3% to 6.2% from September to October 2026)"
+  "A one-quarter dip in non-accrual loans at one lender"
  ],
  "sources": [
   "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
-  "https://www.federalreserve.gov/econres/notes/feds-notes/u-s-private-credit-vehicles-institutional-structure-and-aggregate-balance-sheets-20261109.html"
+  "https://www.federalreserve.gov/econres/notes/feds-notes/u-s-private-credit-vehicles-institutional-structure-and-aggregate-balance-sheets-20261109.html",
+  "https://www.sec.gov/Archives/edgar/data/1287750/000162828026067382/arccq3-2026exhibit991.htm",
+  "https://www.sec.gov/Archives/edgar/data/1655888/000165588826000070/exhibit991pressrelease-ann.htm"
  ],
  "history": [
   {
@@ -81,11 +116,21 @@
    "date": "2026-11-27",
    "status": "open",
    "note": "Title was 'Rising defaults in US private credit'. Changed to say only what is confirmed. Conditions and forecasts unchanged."
+  },
+  {
+   "date": "2026-11-28",
+   "status": "open",
+   "note": "Sources read again: the three Federal Reserve facts match. 'Record 6.0% in April' removed from the start line; nothing we read calls it a record. '90 unique defaulters' was found in a trade publication. Fitch's own report is still unread. Conditions unchanged."
+  },
+  {
+   "date": "2026-11-28",
+   "status": "open",
+   "note": "Conditions changed, with the reason. Was: 'Fitch trailing-12-month private credit default rate below 4.0% for three consecutive monthly readings' (resolved) and 'Fitch default rate above 8.0%' (worsened). We could not read that figure at Fitch. Now: non-accrual loans at Ares Capital and Blue Owl Capital Corporation, from SEC filings. Counting is version 2. Forecast 2 added for the new conditions (1% resolved, 45% worsened by 2027-05-31); forecast 1 stays scored on the first wording. Title was 'US private credit: fast growth and redemption limits (default rate reported, not confirmed)'."
   }
  ],
  "note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
  "unconfirmed_facts": [
-  "Fitch: trailing-12-month default rate 6.2% in October 2026 (6.3% in September); 10.7% for issuers under $25 million EBITDA versus 2.4% above $100 million: matches a trade publication dated 2026-11-17 but has not been read at Fitch. The '90 unique defaulters' figure in the original card was not found",
+  "Fitch (report of 2026-11-16): trailing-12-month default rate 6.2% in October 2026 (6.3% in September), 90 unique defaulters; 10.7% for issuers under $25 million EBITDA versus 2.4% above $100 million: the same in two trade publications (Investment Executive 2026-11-17, ABF Journal 2026-11-18). Fitch's own report has not been read. Neither calls the rate a record",
   "JPMorgan default forecasts and the Moody's figure on bank lending: originals not read"
  ],
  "superseded_sources": {
@@ -107,31 +152,32 @@
   "written_on": "2026-11-26",
   "note": "How the conditions above are read. The conditions themselves are unchanged.",
   "notes": [
-   "The Fitch rate is read from Fitch's own monthly release or a Reuters or Bloomberg report quoting it. 'Large private credit fund' means one with at least $1 billion in assets."
+   "Added 2026-11-28: 'non-accrual' loans are loans on which the lender has stopped booking interest because it doubts it will be paid. The figure is read from each company's quarterly results as filed with the SEC, as a share of the portfolio at amortized cost. Ares Capital and Blue Owl Capital Corporation are used because they are the two largest listed lenders of this kind (business development companies). 1.8% is where Ares stood at the end of 2025. 'Large private credit fund' means one with at least $1 billion in assets.",
+   "The Fitch default rate named in the first version is still listed under unconfirmed facts as background. It no longer decides anything on this card."
   ]
  },
  "numeric_criteria": {
-  "version": 1,
-  "written_on": "2026-11-27",
+  "version": 2,
+  "written_on": "2026-11-28",
   "note": "How each condition is counted, in numbers, with the latest reading known when this was written. Added on 2026-11-27. The resolution conditions above are unchanged and remain the test; where the two could be read differently, the original wording decides. 'latest' is a snapshot and is updated with a dated history line.",
   "items": [
    {
     "side": "resolved",
-    "measure": "Fitch trailing-12-month private credit default rate below 4.0% in 3 monthly readings in a row",
-    "latest": "0 of 3. October is reported at 6.2% (not yet read at Fitch): 2.2 points above",
+    "measure": "Non-accrual loans at cost at 1.8% or less at both Ares Capital and Blue Owl Capital Corporation, in 2 quarterly reports in a row",
+    "latest": "0 of 2. On 2026-09-30: Ares 2.4%, Blue Owl 2.9%",
     "state": "not_met"
    },
    {
     "side": "resolved",
-    "measure": "High-yield bond spread below 5.0 percentage points on every day of those same months (this is what 'Moderate or lower' means under rule v3)",
-    "latest": "1 of 3 steps on 2026-11-24. The count only starts with the first month under 4.0%",
+    "measure": "High-yield bond spread below 5.0 percentage points on every day of those same quarters (this is what 'Moderate or lower' means under rule v3)",
+    "latest": "1 of 3 steps on 2026-11-24. The count only starts with the first quarter at 1.8% or less",
     "state": "holding",
     "series": "BAMLH0A0HYM2"
    },
    {
     "side": "worsened",
-    "measure": "Fitch default rate above 8.0%",
-    "latest": "Reported 6.2%: 1.8 points below",
+    "measure": "Non-accrual loans at cost at 3.5% or more at either company",
+    "latest": "Ares 2.4%, Blue Owl 2.9%: 0.6 points below the line at the nearer one",
     "state": "not_reached"
    },
    {
@@ -152,7 +198,7 @@
  "counter_view": {
   "written_on": "2026-11-27",
   "note": "The strongest reason this card's reading may be wrong. AFMX's own judgment, using the facts listed on the card.",
-  "text": "Stress has not shown up in traded credit: the high-yield spread in this record is at 1 of 3 steps. The Federal Reserve reports that redemption requests have trended lower. The defaults may stay among small borrowers and never reach banks or public markets."
+  "text": "Stress has not shown up in traded credit: the high-yield spread in this record is at 1 of 3 steps. The Federal Reserve reports that redemption requests have trended lower. The two lenders we count are the largest and may be the best run; trouble among small borrowers could stay there, or could be building where these two numbers do not show it."
  },
  "forecasts": [
   {
@@ -162,6 +208,15 @@
    "p_resolved": 0.02,
    "p_worsened": 0.45,
    "basis": "The default rate is reported at 6.2% and would have to be under 4.0% for three months. One fund of $1 billion or more newly limiting redemptions is enough to worsen the card, and limits already exist at some funds.",
+   "outcome": null
+  },
+  {
+   "n": 2,
+   "written_on": "2026-11-28",
+   "deadline": "2027-05-31",
+   "p_resolved": 0.01,
+   "p_worsened": 0.45,
+   "basis": "Written because the default-rate conditions changed on 2026-11-28. Both lenders would need two quarterly reports at 1.8% or less from 2.4% and 2.9%, and at most two reports arrive before the deadline. One fund of $1 billion or more newly limiting redemptions is still enough to worsen the card. Forecast 1 stays scored against the conditions as first written.",
    "outcome": null
   }
  ]

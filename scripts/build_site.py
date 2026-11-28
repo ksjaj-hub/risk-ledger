@@ -250,7 +250,7 @@ if _rp.exists():
 # Page weight: the page file carries only what the page shows. Everything dropped here stays in the source files
 # (events/*.json and hindsight/cases.json), which are the record; docs/data.json is a copy for the screen.
 for _e in data["events"]:
-    for _k in ("superseded_sources", "_path", "schema", "note", "category", "first_recorded"):
+    for _k in ("superseded_sources", "conditions_as_first_written", "_path", "schema", "note", "category", "first_recorded"):
         _e.pop(_k, None)
     for _k in ("numeric_criteria", "counter_view", "condition_reading_notes"):
         if isinstance(_e.get(_k), dict):
@@ -259,5 +259,7 @@ for _k in ("withdrawn", "source_rule", "note"):
     data["hindsight"].pop(_k, None)
 out = ROOT / "docs" / "data.json"
 out.parent.mkdir(exist_ok=True)
+# Korean card text goes in its own file, fetched only when the page is shown in Korean (page weight, 2026-11-28).
+(ROOT / "docs" / "ko.json").write_text(json.dumps(data.pop("ko"), indent=0, ensure_ascii=False) + "\n")
 out.write_text(json.dumps(data, indent=0, ensure_ascii=False) + "\n")  # no indent: keeps one value per line for diffs, smaller file
 print(f"wrote {out.relative_to(ROOT)}: {len(records)} records, {len(data['alerts'])} alerts, {len(data['events'])} events")
