@@ -143,7 +143,7 @@
  ],
  "audit": {
   "checked_on": "2026-11-27",
-  "note": "Each of the 12 cards against version 1. 'partly' means the card stands on confirmed facts but one condition or its timing falls short. Only what is in the card files was used; no new source was read for this check.",
+  "note": "Each of the 12 cards against version 1. 'partly' means the card stands on confirmed facts but one condition or its timing falls short. Only what is in the card files was used; no new source was read for this check. On 2026-11-28 the sources of three cards (oil, private credit, AI buildout) were read again and their lines updated.",
   "cards": {
    "2026-us-appropriations-lapse": {
     "door": "a",
@@ -237,12 +237,12 @@
      "S6": "met"
     },
     "gap": {
-     "en": "The event began in March 2026 and the card opened in November, so its conditions were written eight months in. The conditions also name the United States and Iran, and no government document naming the two sides has been read yet.",
-     "ko": "사건은 2026년 3월에 시작됐는데 카드는 11월에 열어, 조건을 여덟 달이 지난 뒤에 썼습니다. 조건에는 미국과 이란이 적혀 있는데, 두 당사국을 밝힌 정부 문서는 아직 읽지 못했습니다."
+     "en": "The event began on 2026-02-28 and the card opened in November, so its conditions were written nine months in.",
+     "ko": "사건은 2026년 2월 28일에 시작됐는데 카드는 11월에 열어, 조건을 아홉 달이 지난 뒤에 썼습니다."
     },
     "fix": {
-     "en": "Add a government document that names the parties.",
-     "ko": "당사국을 밝힌 정부 문서를 찾아 넣습니다."
+     "en": "Cannot be fixed afterwards. Later cards are opened within the 24-hour rule.",
+     "ko": "나중에 고칠 수 없습니다. 이후 카드는 24시간 안에 엽니다."
     }
    },
    "2027-us-debt-limit": {
@@ -267,8 +267,8 @@
      "S6": "met"
     },
     "gap": {
-     "en": "The main conditions use a rating agency's default rate that we have not read at the agency. The trend began before the card opened.",
-     "ko": "핵심 조건은 신용평가사의 부도율에 걸려 있는데 저희는 그 숫자를 평가사에서 직접 읽지 못했습니다. 이 흐름은 카드를 열기 전부터 있었습니다."
+     "en": "The main conditions use a rating agency's default rate. Checked again on 2026-11-28: two trade publications give the same number, but we still have not read it at the agency. The trend began before the card opened.",
+     "ko": "핵심 조건은 신용평가사의 부도율에 걸려 있습니다. 2026-11-28에 다시 확인했는데, 업계지 두 곳의 숫자는 같지만 평가사 원문은 여전히 읽지 못했습니다. 이 흐름은 카드를 열기 전부터 있었습니다."
     },
     "fix": {
      "en": "Read the default rate at the agency, or move the conditions to a figure a public body publishes.",
@@ -281,17 +281,9 @@
      "S1": "met",
      "S2": "met",
      "S3": "met",
-     "S4": "partly",
+     "S4": "met",
      "S5": "met",
      "S6": "met"
-    },
-    "gap": {
-     "en": "One condition needs an index level that we named but have not yet read, so it cannot be counted.",
-     "ko": "조건 하나는 저희가 출처를 정해 놓고 아직 읽지 않은 지수 수준이 필요해 셀 수 없습니다."
-    },
-    "fix": {
-     "en": "Read the index level and write it on the card.",
-     "ko": "지수 수준을 읽어 카드에 적습니다."
     }
    },
    "2026-nvidia-sec-and-leadership": {
@@ -335,6 +327,10 @@
   {
    "date": "2026-11-27",
    "note": "Six titles changed to say only what is confirmed (each card's history has the old title). Rechecked: 8 meet every criterion, 3 partly, 1 does not."
+  },
+  {
+   "date": "2026-11-28",
+   "note": "Sources of three cards read again. The AI buildout card now has its index level and meets every criterion. Rechecked: 9 meet every criterion, 2 partly, 1 does not."
   }
  ],
  "stage": "beta"

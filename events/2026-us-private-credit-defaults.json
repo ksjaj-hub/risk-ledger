@@ -7,7 +7,7 @@
   "US"
  ],
  "first_recorded": "2026-11-26",
- "event_started": "2026 (default rate at a record 6.0% in April 2026)",
+ "event_started": "2026 (default rate reported at or above 6.0% since April 2026)",
  "status": "open",
  "what_happened": "US private credit has grown to about $1.5 trillion outstanding, up 13.8% in a year. The Federal Reserve reports that some funds kept redemption limits and net flows stayed negative. A Fitch default rate of 6.2% for October has been reported but not yet read at Fitch.",
  "how_it_reaches_markets": "Losses at business development companies, banks and insurers that lend to or hold private credit; redemption pressure on non-traded funds; tighter credit for mid-sized companies.",
@@ -16,19 +16,25 @@
    "text": "Federal Reserve Financial Stability Report (November 2026): private credit outstanding $1,504 billion, up 13.8% from 2025:Q2 to 2026:Q2 (Table 1.1)",
    "url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
    "tier": "primary",
-   "checked": "2026-11-26"
+   "checked": "2026-11-28"
   },
   {
    "text": "Same report: 'Redemption requests at certain business development companies trended lower, though funds maintained redemption limits and net flows remained negative.'",
    "url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
    "tier": "primary",
-   "checked": "2026-11-26"
+   "checked": "2026-11-28"
   },
   {
-   "text": "Federal Reserve staff note, 2026-11-09: US private credit vehicles held about $1.9 trillion in assets at the end of 2025; BDCs 'tend to be more highly levered with an average debt-to-equity ratio around 1'",
+   "text": "Federal Reserve staff note, 2026-11-09: U.S.-domiciled private credit vehicles held about $1.9 trillion in assets at the end of 2025; BDCs 'tend to be more highly levered with an average debt-to-equity ratio around 1'",
    "url": "https://www.federalreserve.gov/econres/notes/feds-notes/u-s-private-credit-vehicles-institutional-structure-and-aggregate-balance-sheets-20261109.html",
    "tier": "primary",
-   "checked": "2026-11-26"
+   "checked": "2026-11-28"
+  },
+  {
+   "text": "Same report (Overview): 'private companies and public firms with lower credit ratings demonstrated weaker debt-servicing capacity'. The report gives no private credit default rate in the part we could read word for word",
+   "url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
+   "tier": "primary",
+   "checked": "2026-11-28"
   }
  ],
  "resolution_conditions": {
@@ -81,11 +87,16 @@
    "date": "2026-11-27",
    "status": "open",
    "note": "Title was 'Rising defaults in US private credit'. Changed to say only what is confirmed. Conditions and forecasts unchanged."
+  },
+  {
+   "date": "2026-11-28",
+   "status": "open",
+   "note": "Sources read again: the three Federal Reserve facts match. 'Record 6.0% in April' removed from the start line; nothing we read calls it a record. '90 unique defaulters' was found in a trade publication. Fitch's own report is still unread. Conditions unchanged."
   }
  ],
  "note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
  "unconfirmed_facts": [
-  "Fitch: trailing-12-month default rate 6.2% in October 2026 (6.3% in September); 10.7% for issuers under $25 million EBITDA versus 2.4% above $100 million: matches a trade publication dated 2026-11-17 but has not been read at Fitch. The '90 unique defaulters' figure in the original card was not found",
+  "Fitch (report of 2026-11-16): trailing-12-month default rate 6.2% in October 2026 (6.3% in September), 90 unique defaulters; 10.7% for issuers under $25 million EBITDA versus 2.4% above $100 million: the same in two trade publications (Investment Executive 2026-11-17, ABF Journal 2026-11-18). Fitch's own report has not been read. Neither calls the rate a record",
   "JPMorgan default forecasts and the Moody's figure on bank lending: originals not read"
  ],
  "superseded_sources": {

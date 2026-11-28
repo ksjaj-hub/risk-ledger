@@ -1,34 +1,46 @@
 {
  "schema": 1,
  "id": "2026-us-iran-war-oil",
- "title": "Middle East military action and disrupted oil shipments through the Strait of Hormuz",
+ "title": "US-Iran conflict and disrupted oil shipments through the Strait of Hormuz",
  "category": "geopolitical",
  "markets": [
   "US"
  ],
  "first_recorded": "2026-11-26",
- "event_started": "2026-03",
+ "event_started": "2026-02-28",
  "status": "open",
- "what_happened": "Military action in the Middle East that began in early March 2026 cut shipments through the Strait of Hormuz and drove oil sharply higher. Brent averaged $124 in October and fell below $100 in early November. New attacks on vessels on 2026-11-24 were reported but are not yet confirmed here.",
+ "what_happened": "The US-Iran conflict that began on 2026-02-28 cut shipments through the Strait of Hormuz and drove oil sharply higher. Brent averaged $124 in October and fell below $100 in early November as flows through the strait recovered. Attacks continue: Reuters reported three vessels struck in the strait on 2026-11-23.",
  "how_it_reaches_markets": "Oil prices feed inflation and therefore rate expectations; shipping disruption; risk-off moves on escalation.",
  "sourced_facts": [
   {
    "text": "EIA, 2026-03-10: Brent 'has risen sharply following the onset of military action in the Middle East' and 'settled at $94 per barrel on March 9'; shipments through the Strait of Hormuz had fallen",
    "url": "https://www.eia.gov/pressroom/releases/press584.php",
    "tier": "primary",
-   "checked": "2026-11-26"
+   "checked": "2026-11-28"
   },
   {
-   "text": "Brent spot averaged $124 a barrel in October 2026 and fell below $100 on 2026-11-04; EIA forecasts about $100 for November and December (Short-Term Energy Outlook, released 2026-11-10)",
-   "url": "https://www.eia.gov/outlooks/steo/report/global_oil.php",
+   "text": "Brent spot averaged $124 a barrel in October 2026 and fell below $100 on 2026-11-04; EIA forecasts about $100 for November and December (Short-Term Energy Outlook, November 2026 edition, released 2026-11-10)",
+   "url": "https://www.eia.gov/outlooks/steo/archives/nov26.pdf",
    "tier": "primary",
-   "checked": "2026-11-26"
+   "checked": "2026-11-28"
   },
   {
    "text": "EIA estimates Middle East production shut-ins at 2.5 million barrels a day in October, down from 10.9 million at the peak in May, and expects exports from Iran to remain constrained through the forecast period",
-   "url": "https://www.eia.gov/outlooks/steo/report/global_oil.php",
+   "url": "https://www.eia.gov/outlooks/steo/archives/nov26.pdf",
    "tier": "primary",
-   "checked": "2026-11-26"
+   "checked": "2026-11-28"
+  },
+  {
+   "text": "Same outlook: 'the U.S.-Iran conflict began on February 28'; attacks on oil tankers continued, and flows through the strait continued 'using ship-to-ship transfers along Oman's coast'",
+   "url": "https://www.eia.gov/outlooks/steo/archives/nov26.pdf",
+   "tier": "primary",
+   "checked": "2026-11-28"
+  },
+  {
+   "text": "EIA, 2026-11-19: oil shipments through the Strait of Hormuz rose in the third quarter and stayed near that level in October; by 2026-11-18 Brent had fallen more than $30 from its October average",
+   "url": "https://www.eia.gov/todayinenergy/detail.php?id=68485",
+   "tier": "primary",
+   "checked": "2026-11-28"
   }
  ],
  "resolution_conditions": {
@@ -48,8 +60,9 @@
   "Single-day falls in oil prices"
  ],
  "sources": [
-  "https://www.eia.gov/outlooks/steo/report/global_oil.php",
-  "https://www.eia.gov/pressroom/releases/press584.php"
+  "https://www.eia.gov/outlooks/steo/archives/nov26.pdf",
+  "https://www.eia.gov/pressroom/releases/press584.php",
+  "https://www.eia.gov/todayinenergy/detail.php?id=68485"
  ],
  "history": [
   {
@@ -86,12 +99,18 @@
    "date": "2026-11-27",
    "status": "open",
    "note": "Title was 'US-Iran war and shipping attacks around the Strait of Hormuz'. Changed to say only what is confirmed. Conditions and forecasts unchanged."
+  },
+  {
+   "date": "2026-11-28",
+   "status": "open",
+   "note": "Sources read again. Start corrected from early March to 2026-02-28 (EIA). Title was 'Middle East military action and disrupted oil shipments through the Strait of Hormuz'; EIA names the US-Iran conflict. The attack reported on 11-24 happened on 11-23. Outlook link moved to the fixed November edition. VIX 31.05 on 2026-03-27 matches the series and was dropped as unneeded. Conditions unchanged."
   }
  ],
  "note": "Not investment advice. Forecasts are AFMX's own judgment, scored in public.",
  "unconfirmed_facts": [
-  "VIX closing high of 31.05 on 2026-03-27: not yet checked against this record's own VIX series",
-  "2026-11-24: Brent settled more than 2% higher after reported attacks on vessels; opened at 90.97 in Asia on 2026-11-25: attributed to Reuters in a repost; original not read"
+  "Reuters, 2026-11-24: three vessels were struck by unidentified projectiles on 2026-11-23 while sailing east through the Strait of Hormuz, citing the UK Maritime Trade Operations office; all crew accounted for. Read as carried by The Jerusalem Post and The Times of Israel, not at Reuters or at the UK office",
+  "2026-11-24: Brent settled more than 2% higher; opened at 90.97 in Asia on 2026-11-25: attributed to Reuters in a repost; original not read",
+  "A US-Iran memorandum of understanding signed in June 2026 and a US naval blockade of Iranian ports: reported by ABC News; no government document read"
  ],
  "superseded_sources": {
   "replaced_on": "2026-11-26",
@@ -111,7 +130,8 @@
   "written_on": "2026-11-26",
   "note": "How the conditions above are read. The conditions themselves are unchanged.",
   "notes": [
-   "'Both governments' means the United States and Iran. Brent is read from the daily spot series published by the EIA (FRED: DCOILBRENTEU). An attack counts when reported by Reuters or AP, or listed by the UK Maritime Trade Operations office."
+   "'Both governments' means the United States and Iran. Brent is read from the daily spot series published by the EIA (FRED: DCOILBRENTEU). An attack counts when reported by Reuters or AP, or listed by the UK Maritime Trade Operations office.",
+   "Added 2026-11-28: the first condition counts a ceasefire or agreement announced on or after 2026-11-26, the day the conditions were written. A memorandum reported for June 2026 did not stop the attacks and is not counted."
   ]
  },
  "numeric_criteria": {
@@ -121,14 +141,14 @@
   "items": [
    {
     "side": "resolved",
-    "measure": "1 ceasefire or agreement announced by both the United States and Iran",
+    "measure": "1 ceasefire or agreement announced by both the United States and Iran on or after 2026-11-26",
     "latest": "0 of 1",
     "state": "not_met"
    },
    {
     "side": "resolved",
     "measure": "60 days in a row with no reported attack on commercial shipping in or around the Strait of Hormuz",
-    "latest": "At most 2 of 60, if the attack reported on 2026-11-24 is confirmed",
+    "latest": "At most 5 of 60 on 2026-11-28. Last counted attack: 2026-11-23 (Reuters)",
     "state": "not_met"
    },
    {
@@ -141,7 +161,7 @@
    {
     "side": "worsened",
     "measure": "The Strait of Hormuz is closed to commercial traffic",
-    "latest": "Not closed. Shipments are reduced",
+    "latest": "Not closed. EIA reports flows rising since the second quarter",
     "state": "not_reached"
    },
    {

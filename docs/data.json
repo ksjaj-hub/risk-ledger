@@ -185,26 +185,38 @@
 "events": [
 {
 "id": "2026-ai-buildout-financing",
-"title": "Debt-funded AI buildout (sell-off reported, not confirmed)",
+"title": "Debt-funded AI buildout and the November sell-off (the link is press-reported)",
 "markets": [
 "US"
 ],
-"event_started": "2026-11 (exact start not established)",
+"event_started": "2026-11 (Nasdaq Composite fell 11.2% from 2026-11-11 to 2026-11-20)",
 "status": "open",
-"what_happened": "A sell-off concentrated in AI and semiconductor shares, attributed in press reports to doubts about whether the debt-financed AI buildout can earn sufficient returns and to signs of moderating AI spending.",
+"what_happened": "The Nasdaq Composite fell 11.2% between 2026-11-11 and 2026-11-20, 5.28% of it on the last day. Press reports tie the fall to doubts about whether enthusiasm for AI had peaked, slower data-center expansion and higher borrowing costs. That link is reported, not confirmed. Separately, the Federal Reserve says the buildout is increasingly funded by debt.",
 "how_it_reaches_markets": "Large index weight of AI-linked companies; debt used to fund data centers; possible regulatory opposition to data center construction.",
 "sourced_facts": [
 {
 "text": "Federal Reserve Governor Barr, 2026-11-16: 'the AI buildout has been increasingly funded by debt'; on-balance-sheet debt of the seven largest AI firms 'is expected to exceed $800 billion before year's end'; he adds that he is 'less concerned about direct losses' given the still-limited debt behind the boom",
 "url": "https://www.federalreserve.gov/newsevents/speech/barr20261116a.htm",
 "tier": "primary",
-"checked": "2026-11-26"
+"checked": "2026-11-28"
 },
 {
 "text": "Federal Reserve Financial Stability Report (November 2026, data to 2026-10-28): 'Bond issuance by the largest investment-grade firms involved in operating data centers was greater than $150 billion year to date'; 'Measures of equity valuations have remained elevated since the previous report'",
 "url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
 "tier": "primary",
-"checked": "2026-11-26"
+"checked": "2026-11-28"
+},
+{
+"text": "Nasdaq Composite closed at 25,466.19 on 2026-11-11, 24,429.88 on 2026-11-18 and 22,617.73 on 2026-11-20 (down 5.28% that day), then 24,129.50 on 2026-11-27 (FRED series NASDAQCOM)",
+"url": "https://fred.stlouisfed.org/series/NASDAQCOM",
+"tier": "primary",
+"checked": "2026-11-28"
+},
+{
+"text": "Governor Barr, same speech: 'Anyone watching the news or their retirement plans these past couple of weeks is aware of the questions that investors have raised about the sustainability of the AI investment boom'",
+"url": "https://www.federalreserve.gov/newsevents/speech/barr20261116a.htm",
+"tier": "primary",
+"checked": "2026-11-28"
 }
 ],
 "resolution_conditions": {
@@ -221,11 +233,12 @@
 },
 "relief_headlines_that_do_not_resolve_it": [
 "Single-day rebounds in AI shares",
-"One company beating earnings forecasts (Dell beat forecasts on 2026-11-24 and its shares still fell about 7% the next day)"
+"One company's strong results"
 ],
 "sources": [
 "https://www.federalreserve.gov/newsevents/speech/barr20261116a.htm",
-"https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf"
+"https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
+"https://fred.stlouisfed.org/series/NASDAQCOM"
 ],
 "history": [
 {
@@ -252,16 +265,22 @@
 "date": "2026-11-27",
 "status": "open",
 "note": "Title was 'Doubts about financing of the AI buildout'. Changed to say only what is confirmed. Conditions and forecasts unchanged."
+},
+{
+"date": "2026-11-28",
+"status": "open",
+"note": "Sources read again: both Federal Reserve facts match. The Nasdaq level for the first condition is now read: 25,466.19. Title was 'Debt-funded AI buildout (sell-off reported, not confirmed)'; the fall is confirmed from the index series, its link to AI debt is not. The Dell example was moved to unconfirmed. Conditions unchanged."
 }
 ],
 "unconfirmed_facts": [
-"2026-11-20: S&P 500 -3.70% to 6,910.39; Nasdaq Composite -5.28%; seventh straight S&P 500 decline; Nvidia -14%, AMD -13.3%: from a broker commentary; not confirmed at a primary or wire source",
-"2026-11-25: Nasdaq 100 briefly 20% below its record closing high: attributed to Reuters in a repost; original not read"
+"2026-11-20: S&P 500 seventh straight decline; -3.70% to 6,910.39; Nvidia about -14%: Fortune (read directly) reports the seventh straight loss but gives -3.59% to 6,918.45, and a market-wrap site gives -3.70% and Nvidia -13.8%. The two disagree and neither is on our list of accepted sources. AMD -13.3% was not found",
+"2026-11-25: Nasdaq 100 briefly 20% below its record closing high: not found in anything we read",
+"Dell beat forecasts on 2026-11-24 and its shares fell about 7% the next day: Dell's release of that date shows record revenue and a higher full-year outlook (read as a repost, not at Dell); the share move was not found"
 ],
 "condition_reading_notes": {
 "written_on": "2026-11-26",
 "notes": [
-"'The day before the losing streak began' is read as the last Nasdaq Composite close before the run of declines that ended on 2026-11-20, taken from the FRED series NASDAQCOM. The exact level will be written here once the series has been read; until then this condition cannot be marked as met.",
+"'The day before the losing streak began' is read as 2026-11-11, the last close before the S&P 500's seven straight declines that press reports say ended on 2026-11-20. The Nasdaq Composite closed at 25,466.19 that day (FRED series NASDAQCOM, read 2026-11-28). The Nasdaq itself rose on 2026-11-18, so its own unbroken run of declines began from 24,429.88; the higher level is used because it is harder to meet.",
 "'Largest AI infrastructure spenders' means Microsoft, Alphabet, Amazon, Meta and Oracle. 'Large AI-linked borrower' means one with at least $1 billion of debt outstanding."
 ]
 },
@@ -271,9 +290,9 @@
 "items": [
 {
 "side": "resolved",
-"measure": "Nasdaq Composite closes above the pre-streak close on 20 trading days in a row",
-"latest": "0 of 20. The pre-streak close has not been read from the series yet, so no day can be counted",
-"state": "not_measurable_yet",
+"measure": "Nasdaq Composite closes above 25,466.19 (its close on 2026-11-11) on 20 trading days in a row",
+"latest": "0 of 20. Closed at 24,129.50 on 2026-11-27: 5.2% below",
+"state": "not_met",
 "series": "NASDAQCOM"
 },
 {
@@ -1418,32 +1437,44 @@
 },
 {
 "id": "2026-us-iran-war-oil",
-"title": "Middle East military action and disrupted oil shipments through the Strait of Hormuz",
+"title": "US-Iran conflict and disrupted oil shipments through the Strait of Hormuz",
 "markets": [
 "US"
 ],
-"event_started": "2026-03",
+"event_started": "2026-02-28",
 "status": "open",
-"what_happened": "Military action in the Middle East that began in early March 2026 cut shipments through the Strait of Hormuz and drove oil sharply higher. Brent averaged $124 in October and fell below $100 in early November. New attacks on vessels on 2026-11-24 were reported but are not yet confirmed here.",
+"what_happened": "The US-Iran conflict that began on 2026-02-28 cut shipments through the Strait of Hormuz and drove oil sharply higher. Brent averaged $124 in October and fell below $100 in early November as flows through the strait recovered. Attacks continue: Reuters reported three vessels struck in the strait on 2026-11-23.",
 "how_it_reaches_markets": "Oil prices feed inflation and therefore rate expectations; shipping disruption; risk-off moves on escalation.",
 "sourced_facts": [
 {
 "text": "EIA, 2026-03-10: Brent 'has risen sharply following the onset of military action in the Middle East' and 'settled at $94 per barrel on March 9'; shipments through the Strait of Hormuz had fallen",
 "url": "https://www.eia.gov/pressroom/releases/press584.php",
 "tier": "primary",
-"checked": "2026-11-26"
+"checked": "2026-11-28"
 },
 {
-"text": "Brent spot averaged $124 a barrel in October 2026 and fell below $100 on 2026-11-04; EIA forecasts about $100 for November and December (Short-Term Energy Outlook, released 2026-11-10)",
-"url": "https://www.eia.gov/outlooks/steo/report/global_oil.php",
+"text": "Brent spot averaged $124 a barrel in October 2026 and fell below $100 on 2026-11-04; EIA forecasts about $100 for November and December (Short-Term Energy Outlook, November 2026 edition, released 2026-11-10)",
+"url": "https://www.eia.gov/outlooks/steo/archives/nov26.pdf",
 "tier": "primary",
-"checked": "2026-11-26"
+"checked": "2026-11-28"
 },
 {
 "text": "EIA estimates Middle East production shut-ins at 2.5 million barrels a day in October, down from 10.9 million at the peak in May, and expects exports from Iran to remain constrained through the forecast period",
-"url": "https://www.eia.gov/outlooks/steo/report/global_oil.php",
+"url": "https://www.eia.gov/outlooks/steo/archives/nov26.pdf",
 "tier": "primary",
-"checked": "2026-11-26"
+"checked": "2026-11-28"
+},
+{
+"text": "Same outlook: 'the U.S.-Iran conflict began on February 28'; attacks on oil tankers continued, and flows through the strait continued 'using ship-to-ship transfers along Oman's coast'",
+"url": "https://www.eia.gov/outlooks/steo/archives/nov26.pdf",
+"tier": "primary",
+"checked": "2026-11-28"
+},
+{
+"text": "EIA, 2026-11-19: oil shipments through the Strait of Hormuz rose in the third quarter and stayed near that level in October; by 2026-11-18 Brent had fallen more than $30 from its October average",
+"url": "https://www.eia.gov/todayinenergy/detail.php?id=68485",
+"tier": "primary",
+"checked": "2026-11-28"
 }
 ],
 "resolution_conditions": {
@@ -1463,8 +1494,9 @@
 "Single-day falls in oil prices"
 ],
 "sources": [
-"https://www.eia.gov/outlooks/steo/report/global_oil.php",
-"https://www.eia.gov/pressroom/releases/press584.php"
+"https://www.eia.gov/outlooks/steo/archives/nov26.pdf",
+"https://www.eia.gov/pressroom/releases/press584.php",
+"https://www.eia.gov/todayinenergy/detail.php?id=68485"
 ],
 "history": [
 {
@@ -1501,16 +1533,23 @@
 "date": "2026-11-27",
 "status": "open",
 "note": "Title was 'US-Iran war and shipping attacks around the Strait of Hormuz'. Changed to say only what is confirmed. Conditions and forecasts unchanged."
+},
+{
+"date": "2026-11-28",
+"status": "open",
+"note": "Sources read again. Start corrected from early March to 2026-02-28 (EIA). Title was 'Middle East military action and disrupted oil shipments through the Strait of Hormuz'; EIA names the US-Iran conflict. The attack reported on 11-24 happened on 11-23. Outlook link moved to the fixed November edition. VIX 31.05 on 2026-03-27 matches the series and was dropped as unneeded. Conditions unchanged."
 }
 ],
 "unconfirmed_facts": [
-"VIX closing high of 31.05 on 2026-03-27: not yet checked against this record's own VIX series",
-"2026-11-24: Brent settled more than 2% higher after reported attacks on vessels; opened at 90.97 in Asia on 2026-11-25: attributed to Reuters in a repost; original not read"
+"Reuters, 2026-11-24: three vessels were struck by unidentified projectiles on 2026-11-23 while sailing east through the Strait of Hormuz, citing the UK Maritime Trade Operations office; all crew accounted for. Read as carried by The Jerusalem Post and The Times of Israel, not at Reuters or at the UK office",
+"2026-11-24: Brent settled more than 2% higher; opened at 90.97 in Asia on 2026-11-25: attributed to Reuters in a repost; original not read",
+"A US-Iran memorandum of understanding signed in June 2026 and a US naval blockade of Iranian ports: reported by ABC News; no government document read"
 ],
 "condition_reading_notes": {
 "written_on": "2026-11-26",
 "notes": [
-"'Both governments' means the United States and Iran. Brent is read from the daily spot series published by the EIA (FRED: DCOILBRENTEU). An attack counts when reported by Reuters or AP, or listed by the UK Maritime Trade Operations office."
+"'Both governments' means the United States and Iran. Brent is read from the daily spot series published by the EIA (FRED: DCOILBRENTEU). An attack counts when reported by Reuters or AP, or listed by the UK Maritime Trade Operations office.",
+"Added 2026-11-28: the first condition counts a ceasefire or agreement announced on or after 2026-11-26, the day the conditions were written. A memorandum reported for June 2026 did not stop the attacks and is not counted."
 ]
 },
 "numeric_criteria": {
@@ -1519,14 +1558,14 @@
 "items": [
 {
 "side": "resolved",
-"measure": "1 ceasefire or agreement announced by both the United States and Iran",
+"measure": "1 ceasefire or agreement announced by both the United States and Iran on or after 2026-11-26",
 "latest": "0 of 1",
 "state": "not_met"
 },
 {
 "side": "resolved",
 "measure": "60 days in a row with no reported attack on commercial shipping in or around the Strait of Hormuz",
-"latest": "At most 2 of 60, if the attack reported on 2026-11-24 is confirmed",
+"latest": "At most 5 of 60 on 2026-11-28. Last counted attack: 2026-11-23 (Reuters)",
 "state": "not_met"
 },
 {
@@ -1539,7 +1578,7 @@
 {
 "side": "worsened",
 "measure": "The Strait of Hormuz is closed to commercial traffic",
-"latest": "Not closed. Shipments are reduced",
+"latest": "Not closed. EIA reports flows rising since the second quarter",
 "state": "not_reached"
 },
 {
@@ -1577,7 +1616,7 @@
 "markets": [
 "US"
 ],
-"event_started": "2026 (default rate at a record 6.0% in April 2026)",
+"event_started": "2026 (default rate reported at or above 6.0% since April 2026)",
 "status": "open",
 "what_happened": "US private credit has grown to about $1.5 trillion outstanding, up 13.8% in a year. The Federal Reserve reports that some funds kept redemption limits and net flows stayed negative. A Fitch default rate of 6.2% for October has been reported but not yet read at Fitch.",
 "how_it_reaches_markets": "Losses at business development companies, banks and insurers that lend to or hold private credit; redemption pressure on non-traded funds; tighter credit for mid-sized companies.",
@@ -1586,19 +1625,25 @@
 "text": "Federal Reserve Financial Stability Report (November 2026): private credit outstanding $1,504 billion, up 13.8% from 2025:Q2 to 2026:Q2 (Table 1.1)",
 "url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
 "tier": "primary",
-"checked": "2026-11-26"
+"checked": "2026-11-28"
 },
 {
 "text": "Same report: 'Redemption requests at certain business development companies trended lower, though funds maintained redemption limits and net flows remained negative.'",
 "url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
 "tier": "primary",
-"checked": "2026-11-26"
+"checked": "2026-11-28"
 },
 {
-"text": "Federal Reserve staff note, 2026-11-09: US private credit vehicles held about $1.9 trillion in assets at the end of 2025; BDCs 'tend to be more highly levered with an average debt-to-equity ratio around 1'",
+"text": "Federal Reserve staff note, 2026-11-09: U.S.-domiciled private credit vehicles held about $1.9 trillion in assets at the end of 2025; BDCs 'tend to be more highly levered with an average debt-to-equity ratio around 1'",
 "url": "https://www.federalreserve.gov/econres/notes/feds-notes/u-s-private-credit-vehicles-institutional-structure-and-aggregate-balance-sheets-20261109.html",
 "tier": "primary",
-"checked": "2026-11-26"
+"checked": "2026-11-28"
+},
+{
+"text": "Same report (Overview): 'private companies and public firms with lower credit ratings demonstrated weaker debt-servicing capacity'. The report gives no private credit default rate in the part we could read word for word",
+"url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
+"tier": "primary",
+"checked": "2026-11-28"
 }
 ],
 "resolution_conditions": {
@@ -1651,10 +1696,15 @@
 "date": "2026-11-27",
 "status": "open",
 "note": "Title was 'Rising defaults in US private credit'. Changed to say only what is confirmed. Conditions and forecasts unchanged."
+},
+{
+"date": "2026-11-28",
+"status": "open",
+"note": "Sources read again: the three Federal Reserve facts match. 'Record 6.0% in April' removed from the start line; nothing we read calls it a record. '90 unique defaulters' was found in a trade publication. Fitch's own report is still unread. Conditions unchanged."
 }
 ],
 "unconfirmed_facts": [
-"Fitch: trailing-12-month default rate 6.2% in October 2026 (6.3% in September); 10.7% for issuers under $25 million EBITDA versus 2.4% above $100 million: matches a trade publication dated 2026-11-17 but has not been read at Fitch. The '90 unique defaulters' figure in the original card was not found",
+"Fitch (report of 2026-11-16): trailing-12-month default rate 6.2% in October 2026 (6.3% in September), 90 unique defaulters; 10.7% for issuers under $25 million EBITDA versus 2.4% above $100 million: the same in two trade publications (Investment Executive 2026-11-17, ABF Journal 2026-11-18). Fitch's own report has not been read. Neither calls the rate a record",
 "JPMorgan default forecasts and the Moody's figure on bank lending: originals not read"
 ],
 "condition_reading_notes": {
@@ -5223,8 +5273,8 @@
 },
 "ko": {
 "2026-ai-buildout-financing": {
-"title": "빚으로 늘어나는 AI 설비 투자 (주가 급락 보도는 미확인)",
-"what": "AI와 반도체 주식에 매도가 몰렸습니다. 언론은 빚으로 지은 AI 설비가 충분한 수익을 낼 수 있느냐는 의심과 AI 지출이 둔화되는 조짐을 원인으로 꼽았습니다.",
+"title": "빚으로 늘어나는 AI 설비 투자와 11월 주가 급락 (둘의 연결은 보도 기준)",
+"what": "나스닥 종합지수는 2026년 11월 11일부터 20일 사이 11.2% 내렸고, 마지막 날 하루에 5.28% 내렸습니다. 언론은 AI 열기가 정점을 지났느냐는 의심, 데이터센터 증설 둔화, 높아진 차입 비용을 원인으로 꼽았습니다. 이 연결은 보도일 뿐 확인된 것은 아닙니다. 이와 별도로 연준은 AI 설비 투자가 점점 빚으로 조달된다고 말했습니다.",
 "channel": "AI 관련 기업이 지수에서 차지하는 비중이 큽니다. 데이터센터 건설에 빚이 쓰였고, 데이터센터 건설에 대한 규제 반대 가능성도 있습니다.",
 "resolved": [
 "나스닥 종합지수가 연속 하락이 시작되기 전날 종가보다 높은 수준에서 20거래일 연속 마감",
@@ -5237,24 +5287,27 @@
 ],
 "relief": [
 "AI 주식의 하루짜리 반등",
-"한 회사의 실적 호조 (델은 2026-11-24에 예상을 웃돌았지만 다음 날 주가가 약 7% 하락)"
+"한 회사의 실적 호조"
 ],
 "facts": [
 "연준 바 이사(2026-11-16): AI 설비 투자가 점점 빚으로 조달되고 있고, AI 대형 7개사의 장부상 부채가 연말 전에 8,000억 달러를 넘을 것으로 예상된다고 말했습니다. 다만 이 붐을 떠받치는 빚이 아직 제한적이어서 직접 손실은 덜 걱정한다고 덧붙였습니다.",
-"연준 금융안정보고서(2026년 11월, 10월 28일까지 자료): 데이터센터를 운영하는 최대 투자등급 기업들의 올해 채권 발행이 1,500억 달러를 넘었고, 주식 가치 지표는 지난 보고서 이후에도 높은 수준이라고 적었습니다."
+"연준 금융안정보고서(2026년 11월, 10월 28일까지 자료): 데이터센터를 운영하는 최대 투자등급 기업들의 올해 채권 발행이 1,500억 달러를 넘었고, 주식 가치 지표는 지난 보고서 이후에도 높은 수준이라고 적었습니다.",
+"나스닥 종합지수 종가는 2026-11-11 25,466.19, 11-18 24,429.88, 11-20 22,617.73(하루 5.28% 하락), 11-27 24,129.50이었습니다(FRED 자료 NASDAQCOM).",
+"바 이사는 같은 연설에서, 지난 몇 주 뉴스나 자기 퇴직 계좌를 본 사람이라면 투자자들이 AI 투자 붐이 이어질 수 있느냐고 묻고 있다는 것을 안다고 말했습니다."
 ],
 "unconfirmed": [
-"2026-11-20 S&P 500 -3.70%(6,910.39), 나스닥 -5.28%, S&P 500 7일 연속 하락, 엔비디아 -14%, AMD -13.3%: 증권사 논평에서 온 숫자로, 1차 출처나 통신사 원문으로 확인하지 못했습니다.",
-"2026-11-25 나스닥 100이 장중 사상 최고 종가보다 20% 낮았다는 내용: 로이터를 인용한 재게재본에서 온 것으로, 원문은 읽지 못했습니다."
+"2026-11-20 S&P 500 7일 연속 하락, -3.70%(6,910.39), 엔비디아 약 -14%: 포천(직접 읽음)은 7일 연속 하락이라고 썼지만 -3.59%(6,918.45)로 적었고, 시황 사이트는 -3.70%, 엔비디아 -13.8%로 적었습니다. 두 곳의 숫자가 다르고, 둘 다 저희가 근거로 인정하는 출처가 아닙니다. AMD -13.3%는 찾지 못했습니다.",
+"2026-11-25 나스닥 100이 장중 사상 최고 종가보다 20% 낮았다는 내용: 저희가 읽은 어디에서도 찾지 못했습니다.",
+"델이 2026-11-24 예상을 웃돌았고 다음 날 주가가 약 7% 내렸다는 내용: 그날 델의 발표에는 사상 최대 매출과 올린 연간 전망이 있습니다(델 원문이 아닌 재게재본으로 읽음). 주가 움직임은 찾지 못했습니다."
 ],
 "reading": [
-"'연속 하락이 시작되기 전날'은 2026-11-20에 끝난 연속 하락 직전의 나스닥 종합지수 종가로 읽고, FRED의 NASDAQCOM 자료에서 가져옵니다. 정확한 수준은 자료를 읽은 뒤 여기에 적으며, 그 전에는 이 조건을 충족으로 표시하지 않습니다.",
+"'연속 하락이 시작되기 전날'은 2026-11-11로 읽습니다. 언론이 2026-11-20에 끝났다고 보도한 S&P 500 7일 연속 하락의 직전 거래일입니다. 그날 나스닥 종합지수 종가는 25,466.19였습니다(FRED 자료 NASDAQCOM, 2026-11-28에 읽음). 나스닥 자체는 2026-11-18에 올랐기 때문에 나스닥만의 연속 하락은 24,429.88에서 시작됩니다. 더 채우기 어려운 높은 쪽을 씁니다.",
 "'AI 설비 투자 규모가 가장 큰 기업'은 마이크로소프트, 알파벳, 아마존, 메타, 오라클을 뜻합니다. '대형 차입 기업'은 부채 잔액이 10억 달러 이상인 곳입니다."
 ],
 "numeric": [
 {
-"m": "나스닥 종합지수 종가가 연속 하락 전 종가보다 높은 날이 20거래일 연속",
-"now": "20일 중 0일. 연속 하락 전 종가를 아직 자료에서 읽지 못해 날짜를 셀 수 없습니다"
+"m": "나스닥 종합지수 종가가 25,466.19(2026-11-11 종가)보다 높은 날이 20거래일 연속",
+"now": "20일 중 0일. 2026-11-27 종가 24,129.50으로 5.2% 아래"
 },
 {
 "m": "VIX 종가가 20 아래인 날이 20거래일 연속 (규칙 v3에서 '평소 이하'의 뜻)",
@@ -5419,8 +5472,8 @@
 "counter": "연준 의사록에 따르면 선물 시장은 연말까지 한 번, 2027년 여름까지 두 번 더 올릴 가능성을 이미 높게 보고 있습니다. 가격에 이미 들어간 인상은 새로운 긴장을 거의 더하지 않을 수 있고, 유가도 10월보다 내려왔습니다."
 },
 "2026-us-iran-war-oil": {
-"title": "중동 군사 행동과 호르무즈 해협 원유 수송 차질",
-"what": "2026년 3월 초 시작된 중동 군사 행동으로 호르무즈 해협 통과 물량이 줄고 유가가 급등했습니다. 브렌트유는 10월 평균 124달러였고 11월 초 100달러 아래로 내려갔습니다. 11월 24일 선박 공격 보도는 아직 확인하지 못했습니다.",
+"title": "미국·이란 분쟁과 호르무즈 해협 원유 수송 차질",
+"what": "2026년 2월 28일 시작된 미국·이란 분쟁으로 호르무즈 해협 통과 물량이 줄고 유가가 급등했습니다. 브렌트유는 10월 평균 124달러였고, 해협 물량이 회복되면서 11월 초 100달러 아래로 내려갔습니다. 공격은 이어지고 있습니다. 로이터는 11월 23일 해협에서 선박 3척이 피격됐다고 보도했습니다.",
 "channel": "유가가 물가를 자극해 금리 전망에 영향을 줍니다. 해운 차질이 생기고, 확전 때 위험 회피 움직임이 나타납니다.",
 "resolved": [
 "양국 정부가 휴전이나 합의를 공식 발표",
@@ -5437,24 +5490,28 @@
 ],
 "facts": [
 "에너지정보청(2026-03-10): 중동 군사 행동이 시작된 뒤 브렌트유가 급등해 3월 9일 배럴당 94달러에 마감했고, 호르무즈 해협 통과 물량이 줄었습니다.",
-"브렌트유 현물은 2026년 10월 평균 124달러였고 11월 4일 100달러 아래로 내려갔습니다. 에너지정보청은 11~12월을 약 100달러로 전망합니다(단기 에너지 전망, 2026-11-10).",
-"에너지정보청은 중동 생산 중단 물량을 10월 하루 250만 배럴로 추정합니다(5월 정점 1,090만 배럴). 이란 수출은 전망 기간 내내 제약될 것으로 봅니다."
+"브렌트유 현물은 2026년 10월 평균 124달러였고 11월 4일 100달러 아래로 내려갔습니다. 에너지정보청은 11~12월을 약 100달러로 전망합니다(단기 에너지 전망 2026년 11월호, 2026-11-10 발표).",
+"에너지정보청은 중동 생산 중단 물량을 10월 하루 250만 배럴로 추정합니다(5월 정점 1,090만 배럴). 이란 수출은 전망 기간 내내 제약될 것으로 봅니다.",
+"같은 전망: 미국·이란 분쟁은 2월 28일에 시작됐다고 적었습니다. 유조선 공격이 이어졌고, 해협 물량은 오만 연안에서 배에서 배로 옮겨 싣는 방식으로 이어졌습니다.",
+"에너지정보청(2026-11-19): 호르무즈 해협 원유 통과 물량은 3분기에 늘었고 10월에도 비슷했습니다. 11월 18일 기준 브렌트유는 10월 평균보다 30달러 넘게 내렸습니다."
 ],
 "unconfirmed": [
-"2026-03-27 VIX 종가 고점 31.05: 이 기록의 VIX 자료와 아직 대조하지 않았습니다.",
-"2026-11-24 선박 공격 보도 뒤 브렌트유 2% 넘게 상승, 11-25 아시아 개장 90.97: 로이터를 인용한 재게재본에서 온 것으로, 원문은 읽지 못했습니다."
+"로이터(2026-11-24): 11월 23일 호르무즈 해협을 동쪽으로 지나던 선박 3척이 정체불명의 발사체에 맞았고 선원은 모두 무사하다고 영국 해사무역기구를 인용해 보도했습니다. 예루살렘포스트와 타임스오브이스라엘에 실린 로이터 기사로 읽었고, 로이터나 영국 기구 원문은 읽지 못했습니다.",
+"2026-11-24 브렌트유 2% 넘게 상승, 11-25 아시아 개장 90.97: 로이터를 인용한 재게재본에서 온 것으로, 원문은 읽지 못했습니다.",
+"2026년 6월 미국과 이란이 양해각서에 서명했고 미국이 이란 항구를 해상 봉쇄하고 있다는 내용: ABC 뉴스 보도이며, 정부 문서는 읽지 못했습니다."
 ],
 "reading": [
-"'양국 정부'는 미국과 이란입니다. 브렌트유는 에너지정보청이 내는 일간 현물 가격(FRED: DCOILBRENTEU)으로 읽습니다. 공격은 로이터나 AP가 보도하거나 영국 해사무역기구가 올린 경우에 셉니다."
+"'양국 정부'는 미국과 이란입니다. 브렌트유는 에너지정보청이 내는 일간 현물 가격(FRED: DCOILBRENTEU)으로 읽습니다. 공격은 로이터나 AP가 보도하거나 영국 해사무역기구가 올린 경우에 셉니다.",
+"2026-11-28 추가: 첫 조건은 조건을 쓴 2026-11-26 이후에 발표된 휴전이나 합의만 셉니다. 2026년 6월에 맺었다고 보도된 양해각서는 공격을 멈추지 못했으므로 세지 않습니다."
 ],
 "numeric": [
 {
-"m": "미국과 이란 양쪽이 발표한 휴전 또는 합의 1건",
+"m": "2026-11-26 이후 미국과 이란 양쪽이 발표한 휴전 또는 합의 1건",
 "now": "1건 중 0건"
 },
 {
 "m": "호르무즈 해협 안팎에서 상선 공격 보도가 없는 날이 60일 연속",
-"now": "2026-11-24 공격 보도가 확인되면 60일 중 많아야 2일"
+"now": "2026-11-28 기준 60일 중 많아야 5일. 마지막으로 센 공격은 2026-11-23(로이터)"
 },
 {
 "m": "브렌트유 현물이 80.00달러 아래인 날이 20거래일 연속",
@@ -5462,7 +5519,7 @@
 },
 {
 "m": "호르무즈 해협에서 상선 통행이 막힘",
-"now": "막히지 않았습니다. 통과 물량은 줄어든 상태입니다"
+"now": "막히지 않았습니다. 에너지정보청은 2분기 이후 물량이 늘고 있다고 보고했습니다"
 },
 {
 "m": "2026-11-26 이후 브렌트유 현물이 하루라도 110.00달러 위",
@@ -5681,10 +5738,11 @@
 "facts": [
 "연준 금융안정보고서(2026년 11월): 사모대출 잔액 1조 5,040억 달러, 2025년 2분기부터 1년간 13.8% 증가(표 1.1)",
 "같은 보고서: 일부 기업성장집합투자기구(BDC)의 환매 요청은 줄었지만, 펀드들은 환매 한도를 유지했고 순유출이 이어졌습니다.",
-"연준 직원 보고서(2026-11-09): 미국 사모대출 기구의 자산은 2025년 말 약 1조 9,000억 달러였고, BDC는 부채 대 자본 비율이 평균 1 안팎으로 더 많이 빚을 씁니다."
+"연준 직원 보고서(2026-11-09): 미국 사모대출 기구의 자산은 2025년 말 약 1조 9,000억 달러였고, BDC는 부채 대 자본 비율이 평균 1 안팎으로 더 많이 빚을 씁니다.",
+"같은 보고서(개요): 비상장 기업과 신용등급이 낮은 상장 기업은 빚을 갚을 여력이 더 약했다고 적었습니다. 저희가 원문 그대로 읽은 범위에는 사모대출 부도율 숫자가 없었습니다."
 ],
 "unconfirmed": [
-"피치: 2026년 10월 최근 12개월 부도율 6.2%(9월 6.3%), EBITDA 2,500만 달러 미만 10.7%, 1억 달러 초과 2.4%: 11월 17일자 업계지 기사와 일치하지만 피치 원문은 읽지 못했습니다. 원래 카드의 '부도 기업 90곳'은 찾지 못했습니다.",
+"피치(2026-11-16 보고서): 2026년 10월 최근 12개월 부도율 6.2%(9월 6.3%), 부도 기업 90곳, EBITDA 2,500만 달러 미만 10.7%, 1억 달러 초과 2.4%: 업계지 두 곳(인베스트먼트 이그제큐티브 11-17, ABF 저널 11-18)의 숫자가 같습니다. 피치 원문은 읽지 못했습니다. 두 곳 모두 이 수치를 사상 최고라고 하지 않았습니다.",
 "JP모건의 부도율 전망과 무디스의 은행 대출 수치: 원문을 읽지 못했습니다."
 ],
 "reading": [
