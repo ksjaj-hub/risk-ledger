@@ -1,0 +1,44 @@
+{
+ "written": "2026-11-28",
+ "status": "Written before a single waitlist answer was counted. The numbers below are fixed in advance so they cannot be loosened once real counts tempt us to publish early. A change needs a new dated file and a line in design.ko.md saying why.",
+ "what_it_is": "Share of people on the AFMX waitlist (later: paying members) who asked for alerts on a sector or stock. These people chose to sign up; they are not a sample of individual investors. It shows what they watch, not what they fear, and not what anyone should buy or sell.",
+ "stage_0": {
+  "name": "Internal only",
+  "from": "now",
+  "use": "Decide which sectors and stocks get cards and alerts first. Nothing is published, not even the number of people."
+ },
+ "stage_1": {
+  "name": "Static table: what members watch",
+  "needs_confirmed_addresses": true,
+  "needs_privacy_notice_line": true,
+  "min_people": 100,
+  "min_people_per_cell": 10,
+  "min_people_per_ticker": 20,
+  "max_tickers_listed": 10,
+  "round_to_points_below_fine": 5,
+  "fine_rounding_from_people": 400,
+  "people_count_step": 50,
+  "min_new_people_between_snapshots": 20,
+  "min_days_between_snapshots": 28,
+  "never_published": ["pairs of picks", "picks by language unless each language has 100 people", "picks by signup date", "exact counts"]
+ },
+ "stage_2": {
+  "name": "A series over time that may be called an index",
+  "counts_only": "paying members with an active membership",
+  "min_people": 300,
+  "min_people_changing_or_joining_per_28_days": 50,
+  "min_snapshots_before_any_claim": 6,
+  "max_rank_correlation_with_baseline": 0.8,
+  "baseline": "Sector shares of the same picks one year earlier once that exists; before that, each sector's count of S&P 500 member companies. If the rank correlation is at or above the limit, the series says nothing the baseline does not, and it stays a table."
+ },
+ "stop": {
+  "date": "2027-08-31",
+  "rule": "If stage 1 has not been reached by this date, the public version is dropped and the count stays internal. No lowering of min_people."
+ },
+ "burst_window_minutes": 10,
+ "burst_same_picks": 5,
+ "domain_cap_share": 0.1,
+ "domain_cap_min": 5,
+ "public_mail_domains": ["gmail.com", "naver.com", "daum.net", "hanmail.net", "kakao.com", "outlook.com", "hotmail.com", "live.com", "yahoo.com", "icloud.com", "me.com", "proton.me", "protonmail.com"],
+ "disposable_domains": ["mailinator.com", "guerrillamail.com", "10minutemail.com", "tempmail.com", "yopmail.com", "trashmail.com", "sharklasers.com"]
+}
