@@ -79,6 +79,23 @@ def count_one(job):
 
 # ------------------------------------------------------------------ probe
 def probe():
+    global UA
+    works = None
+    for ua in (UA, "AFMX risk-ledger 325890826+ksjaj-hub@users.noreply.github.com",
+               "AFMX risk-ledger ksjaj-hub@users.noreply.github.com"):
+        for url in ("https://www.sec.gov/files/company_tickers.json", "https://data.sec.gov/submissions/CIK0000320193.json"):
+            time.sleep(1)
+            req = urllib.request.Request(url, headers={"User-Agent": ua, "Accept-Encoding": "gzip, deflate"})
+            try:
+                with urllib.request.urlopen(req, timeout=60) as r:
+                    print("OK ", r.status, url.split("/")[2], "|", ua)
+                    works = works or ua
+            except urllib.error.HTTPError as e:
+                body = re.sub(r"\s+", " ", re.sub(r"(?s)<[^>]*>", " ", e.read().decode("utf-8", "replace")))[:400]
+                print("ERR", e.code, url.split("/")[2], "|", ua, "|", body)
+    if not works:
+        sys.exit("no declared User-Agent was accepted from this network")
+    UA = works
     tick = json.loads(get("https://www.sec.gov/files/company_tickers.json"))
     first = [tick[str(i)] for i in range(12)]
     print("company_tickers entries:", len(tick), "| first 12:", [(x["ticker"], x["cik_str"]) for x in first])
