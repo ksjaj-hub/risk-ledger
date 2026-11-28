@@ -1,0 +1,95 @@
+{
+  "written": "2026-11-28, before scripts/disclosure_index.py read a single filing",
+  "status": "Fixed. Not edited after results exist. Hindsight study; not part of the ledger; not a forecast.",
+  "asked_for": "The owner asked for an indicator of AFMX's own, built from data nobody else publishes this way. Nine rounds on price-based inputs (research/v4) found nothing better than what is free elsewhere. This round asks a different question: can company filings at the SEC be counted into a 'disclosure risk index', the share of large US companies that newly write about a named risk in their 10-K or 10-Q?",
+  "what_is_claimed_and_what_is_not": "Two separate claims, tested separately. (A) Measurement: the count measures what it says, moves visibly when a known risk arrives, and a human reading the matched sentences agrees. (B) Warning: the count says something about market falls. Only (A) is needed to publish the index as a description. (B) is needed before any sentence suggests the index warns of anything. The expectation written here in advance: (A) may pass, (B) probably fails, because filings arrive weeks after the news.",
+  "source": {
+    "what": "SEC EDGAR: company_tickers.json for the universe, data.sec.gov/submissions for the filing lists, www.sec.gov/Archives for the primary document of each filing. US government publication of company-authored filings; counts and short quoted snippets only are stored, never the filing text.",
+    "access": "Declared User-Agent naming the project and a contact, at most 6 requests per second (SEC fair access allows 10), single run, results cached in research/disclosure/filings.csv so the run is not repeated.",
+    "optional_all_filer_check": "EDGAR full-text search (efts.sec.gov/LATEST/search-index) covers 2001 onward. If the endpoint answers from GitHub Actions, the number of 10-K and 10-Q documents matching each theme per calendar quarter is recorded as S1 below. If it does not answer, S1 is reported as not run."
+  },
+  "universe": {
+    "rule": "The first 150 distinct companies in SEC company_tickers.json, in file order, that have at least one 10-K on file. Companies that file 20-F or 40-F instead are skipped. One entry per CIK.",
+    "known_bias": "This is today's list of the largest companies. Companies that were large in 2008 and later failed or were bought are missing, and companies that listed recently have short histories. The share of companies flagging a risk in past years is therefore measured on survivors and winners. It cannot be removed with this source; it is stated next to every result. S1 (all filers) is the only check on it."
+  },
+  "filings": "Forms 10-K and 10-Q only (amendments excluded), filed 2006-01-01 or later, the first full year in which Item 1A Risk Factors was required. The primary document only; exhibits are not read. 8-K is left out of the hindsight study (most 8-K text is in exhibits and earnings releases) and is listed under 'live use' below.",
+  "text": "HTML tags and the hidden inline-XBRL header are removed, entities decoded, text lower-cased, whitespace collapsed. A theme 'matches' a filing when its pattern occurs at least once.",
+  "themes": {
+    "tariffs": "\\btariffs?\\b",
+    "export_controls": "export controls?|export restrictions?|export licens(?:e|ing) requirements?|entity list",
+    "ukraine": "\\bukraine\\b",
+    "pandemic": "\\bpandemics?\\b|covid-19|coronavirus",
+    "bank_stress": "bank failures?|silicon valley bank|banking (?:sector |industry )?(?:turmoil|crisis|instability)",
+    "debt_ceiling": "debt ceiling|federal debt limit|statutory debt limit",
+    "gov_shutdown": "government shutdowns?|lapse in appropriations",
+    "inflation": "inflationary pressures?|rising inflation|high(?:er)? inflation|elevated inflation",
+    "supply_chain": "supply chain (?:disruptions?|constraints?|shortages?)|supply shortages?",
+    "middle_east": "(?:conflict|war|hostilities|tensions)s? in the middle east|israel-hamas|red sea|strait of hormuz",
+    "recession": "\\brecession(?:s|ary)?\\b",
+    "ai": "artificial intelligence|generative ai",
+    "brexit": "\\bbrexit\\b",
+    "private_credit": "private credit"
+  },
+  "themes_bias": "The theme list was written in 2026 by someone who knows which risks mattered. That is harmless for claim (A) and inflates claim (B). To have one measure free of it, a theme-free pattern is counted too: generic = \\brisks?\\b|\\buncertaint(?:y|ies)\\b|\\buncertain\\b|\\badverse(?:ly)?\\b, per 10,000 words.",
+  "definitions": {
+    "eligible": "A company's filing is eligible when the company has at least 3 other 10-K or 10-Q filings in the 365 days before it.",
+    "D1_new_mention (primary)": "An eligible filing matches theme T and none of the company's 10-K or 10-Q filings in the previous 365 days matches T.",
+    "D2_level": "An eligible filing matches theme T.",
+    "D3_dropped": "An eligible filing does not match T and at least one filing of the company in the previous 365 days does. Reported only; this is the 'risk language removed' side.",
+    "quarterly_share": "For a calendar quarter of filing dates and theme T: companies with a D1 filing in the quarter divided by companies with an eligible filing in the quarter. Series starts 2007Q1.",
+    "daily_share": "For day t and theme T: among companies whose latest eligible filing was filed in the 90 calendar days ending the day before t, the share whose latest filing is D1 for T.",
+    "A1_any_new_theme": "For day t: among the same companies, the share whose latest filing is D1 for at least one of the 14 themes.",
+    "A2_generic_intensity": "For day t: among the same companies, the share whose latest filing has a generic density at least 20% above that of the company's same-form filing closest to one year earlier (between 270 and 460 days earlier)."
+  },
+  "tests": {
+    "V1_known_events_rank": {
+      "what": "For each (theme, filing-date window) pair below, the highest quarterly_share among quarters overlapping the window is compared with the theme's whole quarterly series.",
+      "pairs": [
+        ["recession", "2008-10-01", "2009-03-31"],
+        ["debt_ceiling", "2011-07-15", "2011-11-30"],
+        ["gov_shutdown", "2013-10-01", "2014-02-28"],
+        ["brexit", "2016-06-24", "2016-10-31"],
+        ["tariffs", "2018-03-01", "2018-09-30"],
+        ["gov_shutdown", "2019-01-01", "2019-04-30"],
+        ["pandemic", "2020-02-01", "2020-06-30"],
+        ["supply_chain", "2021-04-01", "2021-11-30"],
+        ["inflation", "2021-07-01", "2022-03-31"],
+        ["ukraine", "2022-02-24", "2022-06-30"],
+        ["export_controls", "2022-10-07", "2023-02-28"],
+        ["ai", "2023-02-01", "2023-08-31"],
+        ["bank_stress", "2023-03-10", "2023-06-30"],
+        ["debt_ceiling", "2023-05-01", "2023-08-31"],
+        ["middle_east", "2023-10-07", "2024-02-29"],
+        ["tariffs", "2025-02-01", "2025-06-30"],
+        ["gov_shutdown", "2025-10-01", "2026-02-28"]
+      ],
+      "pass": "In at least 14 of the 17 pairs (80%) the window's highest value is at or above the 90th percentile of that theme's series."
+    },
+    "V2_visible_size": {
+      "what": "Same pairs. A spike of two companies is not an index.",
+      "pass": "In at least 12 of the 17 pairs (70%) the window's highest quarterly_share is at least 10% of eligible companies and at least 3 times the theme's median quarter."
+    },
+    "V3_reading_check": {
+      "what": "The script draws 60 D1 events at random (fixed seed 20261128, spread over all themes) and saves 200 characters around the first match. They are read by the maintainer (Claude) and marked 'about this risk' or 'not'. The marks are published with the snippets so anyone can disagree.",
+      "pass": "At least 85% (51 of 60) are about the named risk. Per-theme precision under 70% (on 4 or more samples) removes that theme from any published index whatever the total."
+    },
+    "M1_market_warning": {
+      "what": "Daily A1 and A2 against O1 of research/v4 (the market falls 10% or more within the next 63 trading days; French total market return), 2007-01-03 to the last day with an outcome. No parameter is fitted, so the whole period is the test. AUROC with a 63-day moving-block bootstrap, 2,000 draws, 90% range. Comparison with v3 uses research/v4/daily.csv; 'v3 plus candidate' is the average of the two percentile ranks.",
+      "pass": "For A1 or A2: AUROC at least 0.58 with the lower end of the range above 0.50, AND v3 plus the candidate beats v3 alone by at least 0.02 with the range of the difference above 0. Two candidates are tried; a pass by one only is reported as weak.",
+      "expected": "Fail."
+    }
+  },
+  "reported_without_a_bar": {
+    "L1_delay": "For each V1 pair: calendar days from the window's first day to the first day the theme's daily_share reaches the 90th percentile of its own daily history. This is how late the index is. Median and range are reported.",
+    "R1_overlap": "Spearman correlation of daily A1 and A2 with the v3 score and with each other, 2007 onward. Below 0.5 in absolute value is read as a different kind of information from the market score; it says nothing about usefulness.",
+    "B1_noise": "For each theme: median, 90th percentile and maximum of the quarterly series, and the share of quarters at zero.",
+    "S1_all_filers": "If full-text search is reachable: per theme and quarter, matching 10-K and 10-Q documents. For each V1 pair from 2008 on, whether the window's quarter count is at or above the 90th percentile of that theme's quarterly counts. Level, not new mentions, so it is a looser check."
+  },
+  "decision": {
+    "V1, V2 and V3 pass": "The index may be published as a description ('X% of the 150 largest filers newly wrote about tariffs this quarter'), with the survivor bias and the delay stated beside it, and a daily record started. No sentence may say it warns.",
+    "also M1 passes": "A 12-month live shadow record like shadow/breadth.csv before any use in a rule. Hindsight theme choice has to be discounted.",
+    "any of V1, V2, V3 fails": "Not published as an index. The result is reported as it is. A second attempt with different patterns counts as a new round with its own plan, and this round's failure is stated first.",
+    "not_tested_here": "Whether a company's own new mention is followed by a different return or volatility for that company. That is the question closest to 'what does this filing mean for me', and it needs daily prices per company. No rights-clean source for those has been found (rights/README.md)."
+  },
+  "live_use_if_published": "A daily run reads new 10-K, 10-Q and 8-K filings of the universe, appends per-filing theme counts and recomputes daily_share. 8-K text is recorded from day one so that its value can be judged after a year rather than assumed."
+}
