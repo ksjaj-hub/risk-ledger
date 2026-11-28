@@ -564,7 +564,7 @@
   "equity_drawdown": {
    "ofr_part": "Equity valuation",
    "against": "dd",
-   "spearman": 0.654
+   "spearman": 0.653
   },
   "financial_conditions": {
    "ofr_part": "Funding",
