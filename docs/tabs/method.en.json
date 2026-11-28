@@ -1,5 +1,11 @@
 {
 "glossary": {
+"card_status": {
+"en": {
+"term": "Card status (open, easing, worsened, resolved)",
+"def": "Open: the resolution conditions written in advance are not all met yet. Easing: things have moved toward those conditions, but not all are met. Worsened: one of the worsening conditions has happened. Resolved: every resolution condition has become true and the card is closed. Resolved records that the written conditions were met; it is not a view that nothing can go wrong again."
+}
+},
 "risk_state": {
 "en": {
 "term": "Risk state",

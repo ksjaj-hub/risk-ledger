@@ -292,6 +292,16 @@
   }
  ],
  "glossary": {
+  "card_status": {
+   "en": {
+    "term": "Card status (open, easing, worsened, resolved)",
+    "def": "Open: the resolution conditions written in advance are not all met yet. Easing: things have moved toward those conditions, but not all are met. Worsened: one of the worsening conditions has happened. Resolved: every resolution condition has become true and the card is closed. Resolved records that the written conditions were met; it is not a view that nothing can go wrong again."
+   },
+   "ko": {
+    "term": "카드 상태 (진행 중, 완화, 악화, 해소)",
+    "def": "진행 중은 미리 적어 둔 해소 조건이 아직 다 채워지지 않았다는 뜻입니다. 완화는 그 조건 쪽으로 움직였지만 아직 다 채워지지 않은 상태, 악화는 악화 조건 가운데 하나가 일어난 상태입니다. 해소는 해소 조건이 모두 사실이 되어 카드를 닫았다는 뜻입니다. 미리 적은 조건이 채워졌다는 기록이지, 다시는 문제가 없다는 판단이 아닙니다."
+   }
+  },
   "risk_state": {
    "en": {
     "term": "Risk state",

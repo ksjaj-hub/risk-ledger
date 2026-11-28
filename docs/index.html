@@ -188,6 +188,17 @@ button.row:hover{background:var(--hover)}
 .sub form.done input,.sub form.done button{display:none}
 .sub form.done #subs{color:var(--fg);font-size:14px;margin:0}
 #glossary,#history{padding:22px 0 6px}
+.dh{position:sticky;top:45px;z-index:3;height:46px;margin:-14px -14px -32px;visibility:hidden;pointer-events:none}.det.past>.dh{visibility:visible;pointer-events:auto}
+.dh>div{display:flex;align-items:center;gap:10px;height:46px;padding:0 4px 0 14px;background:var(--panel);border-bottom:1px solid var(--line2)}
+.dh b{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:14.5px;font-weight:600}
+.dh button{width:auto;flex:none;min-height:44px;padding:0 10px;color:var(--link);font-size:14px;font-weight:600}
+.det .dh+h3{margin-top:0}
+button.tm{width:auto;display:inline-flex;align-items:center;gap:6px;min-height:44px;margin:-12px 0;font:inherit;color:inherit;letter-spacing:inherit;text-transform:inherit;text-align:left;text-decoration:underline dotted;text-underline-offset:4px;text-decoration-color:var(--muted)}
+button.tm::after{content:"?";flex:none;display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border:1px solid var(--line2);border-radius:50%;font-size:11px;font-weight:700;color:var(--muted);letter-spacing:0}
+button.tm[aria-expanded=true]::after{border-color:var(--fg);color:var(--fg)}
+.tdef{border-left:2px solid var(--line2);padding:6px 0 6px 10px;margin:6px 0 10px;font-size:14px;line-height:1.55;color:var(--fg);max-width:68ch;font-weight:400}.tdef b{font-weight:600}.tdef a{white-space:nowrap}
+.hsec .secs a{display:inline-flex;align-items:center;border:1px solid var(--line2);color:var(--fg);font-size:14px;padding:9px 12px;min-height:44px;text-decoration:none}.hsec .secs a:hover{border-color:var(--muted)}.hsec .secs a small{margin-left:6px;font-size:13px;font-weight:600;color:var(--muted)}.hsec .secs a small.high{color:var(--watch)}.hsh{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:-10px}.hsec .secs{margin-top:0}.hsec{padding-bottom:0}.glk{display:flex;flex-wrap:wrap;gap:0 18px}
+
 ol.verify{color:var(--muted);padding-left:18px;margin:8px 0 0;font-size:14px;max-width:68ch}
 .foot{border-top:1px solid var(--line);color:var(--dim);font-size:13.5px;margin-top:18px}
 .foot .wrap{padding-block:14px 28px}
@@ -218,7 +229,7 @@ main a{text-decoration:underline;text-decoration-thickness:1px;text-underline-of
   <a class="brand" href="#home"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect x=".5" y=".5" width="15" height="15" fill="none" stroke="#e9ebee"/><rect x="0" y="9" width="7" height="7" fill="#e9ebee"/></svg>AFMX</a>
   <div class="r"><a id="srcl" href="https://github.com/ksjaj-hub/risk-ledger" data-t="src">Source and full history</a><div class="lang" id="langg" role="group" aria-label="Language"><button type="button" data-lang="en" lang="en" aria-label="EN (English)">EN</button><button type="button" data-lang="ko" lang="ko">한국어</button></div></div>
 </div></header>
-<nav class="tabs" id="tabs" aria-label="Sections"><div class="wrap"><a href="#home" data-tab="home"></a><a href="#risks" data-tab="risks"></a><a href="#sectors" data-tab="sectors"></a><a href="#past" data-tab="past"></a><a href="#record" data-tab="record"></a><a href="#method" data-tab="method"></a><a href="#weekly" data-tab="weekly"></a></div></nav>
+<nav class="tabs" id="tabs" aria-label="Sections"><div class="wrap"><a href="#home" data-tab="home"></a><a href="#risks" data-tab="risks"></a><a href="#sectors" data-tab="sectors"></a><a href="#past" data-tab="past"></a><a href="#record" data-tab="record"></a><a href="#weekly" data-tab="weekly"></a></div></nav>
 <main class="wrap" id="main">
   <noscript><p class="su">AFMX needs JavaScript to show the live record. Without it you can still read <a href="weekly/1.html">the weekly note</a> (<a href="weekly/1.ko.html">한국어</a>), <a href="odds.html">how the odds are scored</a> and <a href="https://github.com/ksjaj-hub/risk-ledger">the full record on GitHub</a>.</p></noscript>
   <h1 class="sr" id="vh" tabindex="-1" data-v="risks sectors past record method weekly"></h1>
@@ -233,7 +244,8 @@ main a{text-decoration:underline;text-decoration-thickness:1px;text-underline-of
     </div>
     <div class="top1"><h2 class="lbl" data-t="up"></h2><div id="upcoming"></div></div>
   </section>
-  <section class="sec" data-v="home"><h2 data-t="top"></h2><p data-t="topp"></p>
+  <section class="sec hsec" data-v="home"><div class="hsh"><h2 id="hsech"></h2><a class="more" id="hsall" href="#sectors"></a></div><div id="hsecs" class="secs"></div></section>
+  <section class="sec" data-v="home"><h2 data-t="top"></h2>
     <div id="feat"></div>
     <a id="alllink" class="morebtn" href="#risks"></a>
   </section>
@@ -262,7 +274,7 @@ main a{text-decoration:underline;text-decoration-thickness:1px;text-underline-of
   <section class="sec" data-v="method"><h2 data-t="crh"></h2><p data-t="crp"></p><ol id="cread" class="verify"></ol><p><a href="selection.html" data-t="selk"></a></p><p><a href="questions.html" data-t="qsk"></a></p></section>
   <section id="glossary" data-v="method"><h2 data-t="glh"></h2><div id="gl" class="gls"></div></section>
   <section id="history" data-v="method"><details><summary><h2 data-t="hist"></h2></summary><ul id="hist" class="wk"></ul></details></section>
-  <p class="glk" data-v="home risks sectors past record"><a class="more" href="#glossary" data-t="glk"></a></p>
+  <p class="glk" data-v="home risks sectors past record"><a class="more" href="#glossary" data-t="glk"></a><a class="more" href="#method" data-t="mthk"></a></p>
   <section class="sec" data-v="weekly"><h2 data-t="wkh"></h2><p data-t="wkp"></p><ul id="issues" class="iss"></ul></section>
   <section class="sub" data-v="home weekly"><p><b data-t="subh"></b> <span data-t="subp"></span> <a id="subr" href="weekly/1.html" data-t="subr"></a></p><form id="subf" novalidate><input id="subm" type="email" name="email" autocomplete="email" inputmode="email" required aria-label="Email address"><select id="subl" aria-label="Language"><option value="en">English</option><option value="ko">한국어</option></select><button class="btn" type="submit" data-t="subb"></button><span id="subs" role="status" aria-live="polite"></span></form></section>
   <p class="wl" data-v="home weekly"><span data-t="wlp"></span> <a class="more" href="alerts.html" data-t="wlk"></a> · <a class="more" href="privacy.html" data-t="prv"></a></p>
@@ -311,7 +323,14 @@ function head(){const t=T[lang];document.getElementById("vh").textContent=t.nav[
 function mine(){let v="";try{v=localStorage.getItem("sectors")||""}catch(e){v=window._sc||""}return v?v.split(","):[]}
 function setMine(a){window._sc=a.join(",");try{localStorage.setItem("sectors",window._sc)}catch(e){}}
 const fmt=d=>lang==="ko"?d.replaceAll("-","."):new Date(d+"T00:00:00Z").toLocaleDateString(T[lang].loc,{year:"numeric",month:"short",day:"numeric",timeZone:"UTC"});
-function list(title,items){const f=document.createDocumentFragment();if(!items||!items.length)return f;f.append($("h3","lbl",title));const ul=$("ul");items.forEach(i=>ul.append($("li",null,i)));f.append(ul);return f}
+// a term the reader can tap: its meaning opens right under it, read from the same glossary the Method page shows
+function tm(key,label,cls){const b=$("button","tm"+(cls?" "+cls:""),label);b.type="button";b.setAttribute("aria-expanded","false");
+  b.addEventListener("click",ev=>{ev.stopPropagation();const t=T[lang],l=lang,host=b.closest("h3,.tally,.sch")||b,x=host.nextElementSibling;host.querySelectorAll(".tm").forEach(y=>y.setAttribute("aria-expanded","false"));
+    if(x&&x.classList.contains("tdef")){const same=x.dataset.k===key;x.remove();if(same)return}
+    const bx=$("div","tdef",t.ldg);bx.dataset.k=key;bx.setAttribute("role","note");host.after(bx);b.setAttribute("aria-expanded","true");
+    get("tabs/method."+l+".json").then(m=>{const g=m.glossary[key],d=g&&(g[l]||g.en);if(!d)throw 0;const a=$("a",null,t.glall);a.href="#glossary";bx.replaceChildren($("b",null,d.term+". "),d.def+" ",a)}).catch(()=>{bx.textContent=t.ldf})});return b}
+const th=(title,key)=>{const h=$("h3","lbl");h.append(tm(key,title));return h};
+function list(title,items,key){const f=document.createDocumentFragment();if(!items||!items.length)return f;f.append(key?th(title,key):$("h3","lbl",title));const ul=$("ul");items.forEach(i=>ul.append($("li",null,i)));f.append(ul);return f}
 const steps=k=>{const w=$("div","st"),dots=$("span","dots");dots.setAttribute("aria-hidden","true");for(let i=0;i<3;i++){const x=$("i");if(i<k)x.style.background=COLORS[k];dots.append(x)}w.append(dots,$("b","",T[lang].stepn(k)));return w};
 function clampAll(){const t=T[lang];document.querySelectorAll("main p,main div.su").forEach(e=>{
   if(e.dataset.cl||!e.offsetParent||e.closest(".det,a,button,summary,details.case,.gls,form"))return;const cs=getComputedStyle(e),lh=parseFloat(cs.lineHeight)||21;
@@ -434,35 +453,38 @@ function render(){
     if(rich&&e.selection_mark)b.append($("div","su",e.selection_mark[lang]));
     const wv=(A.waves||{})[e.id];if(rich===2&&wv&&e.status!=="resolved")b.append($("div","su",wv.kind==="oil"?t.woOne(wv,sg):t.wtOne(wv.eps[0],wv.eps[1])));
     {const fc1=(e.forecasts||[]).slice(-1)[0],nr=e.nres||[0,0],mv=(((A.market||{}).cards||{})[e.id]||{}).verdict;if(rich&&e.status!=="resolved"&&nr[1])b.append($("div","su",t.rowm(nr[0],nr[1])+(mv?" · "+t.rowk[mv]:"")+(fc1?" · "+t.fcs(fmt(fc1.deadline),Math.round(fc1.p_resolved*100)):"")))}
-    if(rich===2)b.append($("div","su",t.cond+fmt(e.resolution_conditions.written_on)+" · "+t.tap));r.append(b);if(link)return [r];
+r.append(b);if(link)return [r];
     const d=$("div","det");d.id=id;d.hidden=!open.has(e.id);let wb=null;
     // the detail is built when the card is opened, once its file has arrived
     const fill=()=>{const k=kOf(e),wv=(A.waves||{})[e.id];
+    {const h=$("div","dh"),w=$("div"),x=$("button","dhx",t.lessl);x.type="button";x.setAttribute("aria-label",t.lessl+": "+title(e));x.addEventListener("click",shut);const nm=$("b",null,title(e));nm.setAttribute("aria-hidden","true");w.append(nm,x);h.append(w);d.append(h)}
     d.append($("h3","lbl",t.what),$("p",null,k?k.what:e.what_happened));
     d.append($("h3","lbl",t.how),$("p",null,k?k.channel:e.how_it_reaches_markets));
     if(e.selection_mark){const n=$("p","su",e.selection_mark[lang]+" "),a=$("a",null,t.selk);a.href="selection.html#"+e.id;n.append(a);d.append(n)}
-    d.append(list(t.res,k?k.resolved:e.resolution_conditions.resolved_when_all));
-    d.append(list(t.wor,k?k.worse:e.resolution_conditions.worsened_when_any));
-    d.append(list(t.rel,k?k.relief:e.relief_headlines_that_do_not_resolve_it));
+    d.append(list(t.res,k?k.resolved:e.resolution_conditions.resolved_when_all,"resolution_condition"));
+    d.append(list(t.wor,k?k.worse:e.resolution_conditions.worsened_when_any,"worsening_condition"));
+    d.append(list(t.rel,k?k.relief:e.relief_headlines_that_do_not_resolve_it,"relief_headline"));
     {const fc=(e.forecasts||[]).slice(-1)[0];if(fc&&e.status!=="resolved"){const P=x=>Math.round(x*100),n=$("p","su",t.fcn((A.forecast_score||{}).settled||0)),a=$("a",null,t.fck);a.href="odds.html";n.append(a);d.append($("h3","lbl",t.fch),$("p",null,t.fcl(fmt(fc.deadline),P(fc.p_resolved),P(fc.p_worsened))),n)}}
-    if(e.counter_view)d.append($("h3","lbl",t.cv),$("p",null,(k&&k.counter)||e.counter_view.text));
+    if(e.counter_view)d.append(th(t.cv,"counter_view"),$("p",null,(k&&k.counter)||e.counter_view.text));
     {const nc=e.numeric_criteria,its=(nc&&nc.items)||[];if(its.length){const rs=its.filter(x=>x.side==="resolved"),f=$("details","fold nums");f.append($("summary",null,t.num(rs.filter(x=>x.state==="met").length,rs.length)));
       ["resolved","worsened","added"].forEach(g=>{const ul=$("ul","nm");its.forEach((x,i)=>{if(x.side!==g)return;const kk=k&&k.numeric&&k.numeric[i],li=$("li",x.state==="met"||x.state==="reached"?"on":"");li.append($("span",null,(kk&&kk.m)||x.measure));const nw=$("small",null,t.now+((kk&&kk.now)||x.latest));if(t.nst[x.state])nw.append($("i",null,t.nst[x.state]));li.append(nw);ul.append(li)});if(ul.childNodes.length)f.append($("h3","lbl",t.numg[g]),ul)});
       f.append($("p","su",t.numn(fmt(nc.written_on))));d.append(f)}}
-    {const mk=((A.market||{}).cards||{})[e.id];if(mk&&e.status!=="resolved"){d.append($("h3","lbl",t.mkh));const p=$("p",null,mk.verdict==="not_checked"&&mk.none?(mk.none[lang]||mk.none.en):t.mkv[mk.verdict]);d.append(p);
+    {const mk=((A.market||{}).cards||{})[e.id];if(mk&&e.status!=="resolved"){d.append(th(t.mkh,"market_check"));const p=$("p",null,mk.verdict==="not_checked"&&mk.none?(mk.none[lang]||mk.none.en):t.mkv[mk.verdict]);d.append(p);
       if(mk.readings.length){const ul=$("ul","nm");mk.readings.forEach(x=>{const li=$("li",x.shows?"on":"");li.append($("span",null,x[lang]||x.en));const v=x.steps!=null?t.stepn(x.steps):(t.mku[x.unit]?t.mku[x.unit](x.value):String(x.value))+(x.rule==="high_in_5y"?" · "+t.mkr(x.percentile_5y):"");const sm=$("small",null,v+" ("+fmt(x.as_of)+")");sm.append($("i",null,t.mks[x.shows]));li.append(sm);ul.append(li)});d.append(ul);
         const n=$("p","su",t.mkn(fmt(A.market.as_of)+(A.market.at?" "+A.market.at:""))+" ");const a=$("a",null,t.mkl);a.href="https://github.com/ksjaj-hub/risk-ledger/blob/main/market/README.md";a.rel="noopener";n.append(a);d.append(n)}}}
     {const PA=A.past||{},rows=(PA.cards||{})[e.id],none=(PA.none||{})[e.id];if(rows&&!wv){const f=$("details","fold nums");f.append($("summary",null,t.pch(rows.length)));const ul=$("ul","nm");rows.forEach(r=>{const li=$("li");li.append($("span",null,r[lang]||r.en));const sm=$("small",null,t.pcl(r,sg)+" ");const a=$("a",null,t.pcs);a.href=r.src;a.rel="noopener";sm.append(a);li.append(sm);ul.append(li)});f.append(ul,$("p","su",t.pcn(sg(PA.base_fall))));d.append(f)}else if(none&&!wv){d.append($("p","su",none[lang]||none.en))}}
     if(wv){wb=waveBlock(wv,t,lang);d.append(wb)}
     const rn=(k&&k.reading)||(e.condition_reading_notes||{}).notes||[];if(rn.length)d.append(list(t.rdn,rn));
     const fs=(e.sourced_facts||[]).filter(f=>f&&f.url);if(fs.length){d.append($("h3","lbl",t.fct));const ul=$("ul","fx");fs.forEach((f,i)=>{const li=$("li",null,(k&&k.facts&&k.facts[i])||f.text);const a=$("a",null,new URL(f.url).hostname.replace(/^www\./,""));a.href=f.url;a.rel="noopener";a.addEventListener("click",ev=>ev.stopPropagation());li.append(a);ul.append(li)});d.append(ul)}
-    const un=(k&&k.unconfirmed)||e.unconfirmed_facts||[];if(un.length){d.append($("h3","lbl",t.unc));const ul=$("ul","unc");un.forEach(x=>ul.append($("li",null,x)));d.append(ul)}
-    const ls=Object.entries(LK[e.id]||{}).sort((a,b)=>(press(b[1])-press(a[1]))||Math.abs(b[1].t||0)-Math.abs(a[1].t||0));if(ls.length||isMW(e)){d.append($("h3","lbl",t.sect));const ul=$("ul","sl");if(isMW(e))ul.append($("li",null,t.mwl));
-      ls.forEach(([x,l])=>{const li=$("li",tks.includes(x)&&press(l)?"hit":"");li.append($("b",null,sn(x)),$("span","lv "+l.level,t.lv[l.level]));const fn=l.factor&&((A.factor_names||{})[l.factor]||{})[lang];li.append($("span",null,l.factor?t.lfact(fn,l.n,l.since,l.mean_excess_pct):l.case?t.lcase(l["case_"+lang]||l.case_en,l.start,l.end,l.excess_pct):(l.level==="direct"?t.ldir:t.lunc)));ul.append(li)});d.append(ul);const cf=((A.card_factors||{})[e.id]||[]).map(f=>((A.factor_names||{})[f]||{})[lang]||f);if(cf.length)d.append($("p","su",t.cfact+cf.join(", ")+"."))}
+    const un=(k&&k.unconfirmed)||e.unconfirmed_facts||[];if(un.length){d.append(th(t.unc,"unconfirmed_fact"));const ul=$("ul","unc");un.forEach(x=>ul.append($("li",null,x)));d.append(ul)}
+    const ls=Object.entries(LK[e.id]||{}).sort((a,b)=>(press(b[1])-press(a[1]))||Math.abs(b[1].t||0)-Math.abs(a[1].t||0));if(ls.length||isMW(e)){d.append(th(t.sect,"sector_link"));const ul=$("ul","sl");if(isMW(e))ul.append($("li",null,t.mwl));
+      ls.forEach(([x,l])=>{const li=$("li",tks.includes(x)&&press(l)?"hit":"");li.append($("b",null,sn(x)),$("span","lv "+l.level,t.lv[l.level]));const fn=l.factor&&((A.factor_names||{})[l.factor]||{})[lang];li.append($("span",null,l.factor?t.lfact(fn,l.n,l.since,l.mean_excess_pct):l.case?t.lcase(l["case_"+lang]||l.case_en,l.start,l.end,l.excess_pct):(l.level==="direct"?t.ldir:t.lunc)));ul.append(li)});d.append(ul);const cf=((A.card_factors||{})[e.id]||[]).map(f=>((A.factor_names||{})[f]||{})[lang]||f);if(cf.length)d.append($("p","su",t.cfact+cf.join(", ")+"."));
+      {const hs=ls.filter(([x,l])=>press(l)).map(([x])=>x),a=$("a","more",t.tosec);a.href="#sectors";a.addEventListener("click",()=>{if(!mine().length&&hs.length)setMine(hs)});const p=$("p");p.append(a);d.append(p)}}
     const xs=A.exposure[e.id]||[];if(xs.length){d.append($("h3","lbl",t.relt));const c=$("div","tk");xs.forEach(x=>c.append($("i",null,x)));d.append(c)}
     d.append(list(t.log,e.history.map(h=>fmt(h.date)+" · "+(t.status[h.status]||h.status)+" · "+h.note)));
     const s=$("div","src",t.srcs);e.sources.forEach((u,j)=>{const a=$("a",null,new URL(u).hostname.replace(/^www\./,""));a.href=u;a.rel="noopener";if(j)s.append(", ");s.append(a)});d.append(s);
-    {const cb=$("button","closebtn",t.close);cb.type="button";cb.addEventListener("click",()=>{r.click();r.focus({preventScroll:true});r.scrollIntoView({block:"nearest"})});d.append(cb)}};
+    {const cb=$("button","closebtn",t.close);cb.type="button";cb.addEventListener("click",shut);d.append(cb)}};
+    const shut=()=>{r.click();r.focus({preventScroll:true});r.scrollIntoView({block:"nearest"})};
     const show=()=>{if(d._ok){if(wb)wb._draw();return}
       if(cardReady(e.id)){d.replaceChildren();fill();d._ok=1;foldCloses();if(wb)requestAnimationFrame(wb._draw);return}
       d.replaceChildren($("p","su",t.ldg));d.setAttribute("aria-busy","true");
@@ -478,12 +500,15 @@ function render(){
   const feat=tks.length?(mineHits.length?mineHits.slice(0,5):live.filter(isMW)):(A.featured||[]).map(id=>live.find(e=>e.id===id)).filter(Boolean);
   const top=(feat.length?feat:live).slice(0,3);
   top.forEach(e=>ft.append(...mk(e,2,true)));sorted.forEach(e=>ev.append(...mk(e,1,false)));mineHits.forEach(e=>mc.append(...mk(e,0,true)));
+  if(window._io)window._io.disconnect();if("IntersectionObserver" in window){window._io=new IntersectionObserver(es=>es.forEach(x=>{const dd=x.target.nextElementSibling;if(dd)dd.classList.toggle("past",!x.isIntersecting&&x.boundingClientRect.bottom<60)}),{rootMargin:"-45px 0px 0px 0px"});ev.querySelectorAll("button.row").forEach(x=>window._io.observe(x))}
   document.getElementById("alllink").textContent=t.all(live.length);document.getElementById("nopen").textContent=live.length;
   const mm=document.getElementById("minemsg"),sb=document.getElementById("secs");sb.setAttribute("aria-label",t.mine);sb.replaceChildren();
   Object.keys(SN).forEach(x=>{const bt=$("button",null,sn(x));if(SS[x])bt.append($("small","bd "+SS[x].band,t.band[SS[x].band]));bt.type="button";bt.setAttribute("aria-pressed",String(tks.includes(x)));bt.addEventListener("click",()=>{const c=mine();setMine(c.includes(x)?c.filter(y=>y!==x):[...c,x]);render()});sb.append(bt)});
+  {const hb=document.getElementById("hsecs"),hot=Object.keys(SN).filter(x=>SS[x]&&SS[x].band==="high"),sh=tks.length?tks:hot;hb.replaceChildren();document.getElementById("hsech").textContent=tks.length?t.hsecm:t.sechigh;document.getElementById("hsall").textContent=t.hsecall(Object.keys(SN).length);
+   sh.forEach(x=>{const a=$("a",null,sn(x));a.href="#sectors";if(SS[x]&&tks.length)a.append($("small",SS[x].band,t.band[SS[x].band]));if(!tks.length)a.addEventListener("click",()=>setMine([x]));hb.append(a)})}
   const nmw=live.filter(e=>isMW(e)&&!hitsOf(e).length).length, names=tks.map(sn).join(", ");
-  mm.replaceChildren();const show=tks.length?tks:Object.keys(SN).filter(x=>SS[x]&&SS[x].band==="high");if(show.length){const bx=$("div","scs");if(!tks.length)mm.append($("div","lbl mmt",t.sechigh));show.forEach(x=>{const v=SS[x];if(!v)return;const r=$("div","sc");const h=$("div","sch");h.append($("b",null,sn(x)),$("span","num "+v.band,t.band[v.band]));const why=(v.reasons||[]).map(id=>D.events.find(e=>e.id===id)).filter(Boolean).map(title);r.append(h);if(why.length)r.append($("div","why",t.why+why.join(" / ")));r.append($("div","su",t.scline(v.open_cards,v.groups)));bx.append(r)});const K=A.scorecard,g=K?K.graded_months:0;mm.append(bx,$("div","su",t.scnote),$("div","su",g?t.graded(g,K.as_expected_months):t.nograde));if(tks.length)mm.append($("div","mmt",mineHits.length?t.minehit(mineHits.length,nmw,names):t.minenone(nmw,names)))}
-  ["tally","tally1"].forEach(id=>{const el=document.getElementById(id);el.replaceChildren();["open","worsened","easing","resolved"].forEach(k=>{const n=D.events.filter(e=>e.status===k).length;if(!n&&k!=="open")return;if(el.childNodes.length)el.append(" · ");el.append($("span",null,(t.status[k]||k)+" "+n))})});
+  mm.replaceChildren();const show=tks.length?tks:Object.keys(SN).filter(x=>SS[x]&&SS[x].band==="high");if(show.length){const bx=$("div","scs");if(!tks.length)mm.append($("div","lbl mmt",t.sechigh));show.forEach(x=>{const v=SS[x];if(!v)return;const r=$("div","sc");const h=$("div","sch");h.append($("b",null,sn(x)),tm("sector_band",t.band[v.band],"num "+v.band));const why=(v.reasons||[]).map(id=>D.events.find(e=>e.id===id)).filter(Boolean).map(title);r.append(h);if(why.length)r.append($("div","why",t.why+why.join(" / ")));r.append($("div","su",t.scline(v.open_cards,v.groups)));bx.append(r)});const K=A.scorecard,g=K?K.graded_months:0;mm.append(bx,$("div","su",t.scnote),$("div","su",g?t.graded(g,K.as_expected_months):t.nograde));if(tks.length)mm.append($("div","mmt",mineHits.length?t.minehit(mineHits.length,nmw,names):t.minenone(nmw,names)))}
+  ["tally","tally1"].forEach(id=>{const el=document.getElementById(id);el.replaceChildren();["open","worsened","easing","resolved"].forEach(k=>{const n=D.events.filter(e=>e.status===k).length;if(!n&&k!=="open")return;if(el.childNodes.length)el.append(" · ");const w=$("span");if(id==="tally")w.append(tm("card_status",(t.status[k]||k)+" "+n));else w.textContent=(t.status[k]||k)+" "+n;el.append(w)})});
   {const R=A.residual,f=document.getElementById("residual"),r1e=document.getElementById("resid1");f.hidden=!R;r1e.textContent="";if(R){const x=R.index.toFixed(1),bx=document.getElementById("rsd");r1e.textContent=t.rs1(x);document.getElementById("rsm").textContent=t.rsm(x);document.getElementById("rsp").textContent=t.rsp(x,R.open_cards,R.max.toFixed(1));bx.replaceChildren($("div","lbl",t.rsb));const mx=Math.max(...R.cards.map(c=>c[1]));R.cards.forEach(c=>{const e=D.events.find(e=>e.id===c[0]),r=$("div","br"),b=$("i"),w=$("div");b.style.width=Math.max(2,Math.round(100*c[1]/mx))+"%";w.append(b);r.append($("span",null,e?title(e):c[0]),w,$("b",null,Math.round(100*c[1])+"%"));bx.append(r)});bx.append($("div","lbl",t.rsh));const ul=$("ul","wk");R.history.forEach(h=>{const li=$("li"),tm=$("time",null,fmt(h[0]));tm.dateTime=h[0];li.append(tm,$("span",null,h[1].toFixed(2)));ul.append(li)});const nt=$("p","hsnote",t.rsn(R.equal_reach.toFixed(1))+" "),a=$("a","",t.rsl);a.href="https://github.com/ksjaj-hub/risk-ledger/blob/main/residual/README.md";nt.append(a);bx.append(ul,nt)}}
   const hi=document.getElementById("hist");hi.replaceChildren();((TD.method[lang]||{}).history||[]).forEach(h=>{const li=$("li");const tm=$("time",null,fmt(h.date));tm.dateTime=h.date;li.append(tm,$("span",null,h[lang]||h.en));hi.append(li)});
   const gl=document.getElementById("gl");gl.replaceChildren();Object.entries((TD.method[lang]||{}).glossary||{}).forEach(([k,g])=>{const x=g[lang]||g.en,d=$("details");d.open=openG.has(k);d.append($("summary",null,x.term),$("p",null,x.def));d.addEventListener("toggle",()=>{d.open?openG.add(k):openG.delete(k)});gl.append(d)});
