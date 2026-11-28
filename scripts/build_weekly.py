@@ -227,9 +227,85 @@ def checks():
                      indent=1, ensure_ascii=False))
 
 
+# ---- email edition -------------------------------------------------------------------------------------------
+# Mail apps drop <style> blocks, CSS variables, web fonts, scripts and <details>, so the page cannot be mailed as it is.
+# The email is a shorter cut of the same JSON: tables, inline styles, system fonts, one language per file, no folds.
+# The full note with conditions and sources stays on the page; the email links to it.
+ET = {"en": dict(subject=lambda n, t: f"AFMX Weekly No. {n}: {t}", left="Good news that left the risk in place", new="New facts this week",
+                 dates="Dates ahead", sectors="Sectors", full="Read the full note", full_p="Conditions, sources and the briefing for each date are on the page.",
+                 why="You are getting this because you asked for the AFMX weekly note.",
+                 stop="To stop, reply to this email with the word remove, or use the form on the privacy page.",
+                 privacy="Privacy", not_advice="AFMX describes risk conditions. Nothing here is advice to buy or sell anything."),
+      "ko": dict(subject=lambda n, t: f"AFMX 주간 글 {n}호: {t}", left="호재 뒤에 남은 것", new="이번 주 새로 확인한 사실",
+                 dates="다가오는 날짜", sectors="섹터", full="전체 글 읽기", full_p="조건, 출처, 날짜별 브리핑은 페이지에 있습니다.",
+                 why="AFMX 주간 글을 신청하셔서 보내 드립니다.",
+                 stop="그만 받으시려면 이 메일에 remove 라고 답장하시거나 개인정보 안내 페이지의 삭제 요청 칸을 쓰시면 됩니다.",
+                 privacy="개인정보 안내", not_advice="AFMX는 리스크 상태를 설명합니다. 무엇을 사거나 팔라는 조언이 아닙니다.")}
+CONTACT = "AFMX.risk@gmail.com"
+FONT = "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif"
+
+
+def email(I, lang, names):
+    """Returns (subject, html, text) for one language."""
+    t, e, c, s = T[lang], ET[lang], I[lang], I["snapshot"]
+    n, st = I["n"], STATES[lang][s["state_index"]]
+    url = f"{SITE}weekly/{n}{'.ko' if lang == 'ko' else ''}.html"
+    home = SITE + ("?lang=ko" if lang == "ko" else "")
+    kb = "word-break:keep-all;overflow-wrap:anywhere;" if lang == "ko" else ""
+    P = f"{kb}margin:0 0 12px;font:16px/1.6 {FONT};color:#e9ebee"
+    H = f"margin:28px 0 10px;padding-top:18px;border-top:1px solid #2b3139;font:700 13px/1.4 {FONT};color:#8d959e;letter-spacing:.04em"
+    A = "color:#86b4ee;text-decoration:underline"
+    item = lambda h, p, link="": f'<p style="{P}"><b>{E(h)}</b><br>{E(p)}{link}</p>'
+    sec = s["sectors"]
+    o = [f'<p style="margin:0 0 14px;font:13px/1.4 {FONT};color:#8d959e">{t["lbl"](n, fmt(I["date"], lang))}</p>',
+         f'<p style="margin:0 0 4px;font:700 28px/1.15 {FONT};color:#e2a43a">{st} <span style="color:#e9ebee;font-weight:600;font-size:20px">· {s["score"]}</span> <span style="color:#8d959e;font-weight:400;font-size:14px">{t["of"]}</span></p>',
+         f'<p style="margin:0 0 22px;padding-bottom:16px;border-bottom:1px solid #2b3139;font:14px/1.5 {FONT};color:#8d959e">{t["since"](fmt(s["since"], lang), s["typical_days"], st)}</p>',
+         f'<h1 style="{kb}margin:0 0 10px;font:700 24px/1.25 {FONT};color:#e9ebee">{E(c["title"])}</h1>',
+         f'<p style="{P}">{E(c["cards_p"])}</p>',
+         f'<p style="{H}">{e["left"]}</p>'] + [item(r["h"], r["p"]) for r in c["relief"]]
+    o += [f'<p style="{H}">{e["new"]}</p>'] + [item(r["h"], r["p"], f' <a style="{A}" href="{E(r["src"][1])}">{E(r["src"][0])}</a>') for r in c["new"]]
+    o += [f'<p style="{H}">{e["sectors"]}</p>', f'<p style="{P}">{E(c["sectors_p"])}<br><b style="color:#e2a43a">{t["strained"]}</b> {", ".join(names[k][lang] for k in sec["strained"])}<br><b>{t["quiet"]}</b> {", ".join(names[k][lang] for k in sec["quiet"])}</p>',
+          f'<p style="{H}">{e["dates"]}</p>', '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">']
+    for d in c["dates"]:
+        o.append(f'<tr><td valign="top" width="112" style="padding:8px 10px 8px 0;border-bottom:1px solid #1c2026;font:14px/1.45 {FONT};color:#8d959e"><b style="color:#e9ebee">{E(d["d"])}</b><br>{E(d["t"])}</td>'
+                 f'<td valign="top" style="padding:8px 0;border-bottom:1px solid #1c2026;font:600 16px/1.45 {FONT};color:#e9ebee">{E(d["h"])}</td></tr>')
+    o += ["</table>",
+          f'<p style="margin:24px 0 10px;font:14px/1.5 {FONT};color:#8d959e">{e["full_p"]}</p>',
+          f'<table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="#e9ebee" style="background:#e9ebee"><a href="{url}" style="display:inline-block;padding:13px 20px;font:600 16px/1.2 {FONT};color:#07080a;text-decoration:none">{e["full"]}</a></td></tr></table>',
+          f'<p style="margin:30px 0 0;padding-top:16px;border-top:1px solid #2b3139;font:13px/1.6 {FONT};color:#8d959e">{e["not_advice"]}<br>{e["why"]} {e["stop"]}<br>'
+          f'<a style="{A}" href="{SITE}privacy.html">{e["privacy"]}</a> · <a style="{A}" href="{home}">AFMX</a> · <a style="{A}" href="mailto:{CONTACT}">{CONTACT}</a></p>']
+    subject = e["subject"](n, c["title"])
+    html_ = (f'<!doctype html><html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
+             f'<meta name="color-scheme" content="dark"><meta name="supported-color-schemes" content="dark"><title>{E(subject)}</title></head>'
+             f'<body style="margin:0;padding:0;background:#07080a" bgcolor="#07080a"><div style="display:none;max-height:0;overflow:hidden">{E(c["desc"])}</div>'
+             f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#07080a" style="background:#07080a"><tr><td align="center" style="padding:24px 16px">'
+             f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:600px"><tr><td align="left">'
+             f'<p style="margin:0 0 22px;font:700 13px/1 {FONT};color:#e9ebee;letter-spacing:.09em">AFMX</p>' + "\n".join(o) + "</td></tr></table></td></tr></table></body></html>\n")
+    tx = [t["lbl"](n, fmt(I["date"], lang)), f'{st} · {s["score"]} {t["of"]}', "", c["title"], "", c["cards_p"], "", e["left"].upper()]
+    tx += [f'- {r["h"]} {r["p"]}' for r in c["relief"]] + ["", e["new"].upper()] + [f'- {r["h"]} {r["p"]} {r["src"][1]}' for r in c["new"]]
+    tx += ["", e["dates"].upper()] + [f'- {d["d"]} {d["t"]}: {d["h"]}'.replace(" :", ":") for d in c["dates"]]
+    tx += ["", f'{e["full"]}: {url}', "", e["not_advice"], f'{e["why"]} {e["stop"]}', f'{SITE}privacy.html', CONTACT]
+    return subject, html_, "\n".join(tx) + "\n"
+
+
+def emails(n):
+    """Writes weekly/email/N.<lang>.html, .txt and .subject.txt. Not under docs/: these are for sending, not for the site."""
+    I = json.loads((ROOT / "weekly" / f"{n}.json").read_text(encoding="utf-8"))
+    names = json.loads((ROOT / "aids" / "reading.json").read_text(encoding="utf-8"))["sector_names"]
+    out = ROOT / "weekly" / "email"
+    out.mkdir(exist_ok=True)
+    for lang in ("en", "ko"):
+        subject, h, tx = email(I, lang, names)
+        (out / f"{n}.{lang}.html").write_text(h, encoding="utf-8")
+        (out / f"{n}.{lang}.txt").write_text(subject + "\n\n" + tx, encoding="utf-8")
+    print("built email", n)
+
+
 def main():
     if sys.argv[1] == "--checks":
         return checks()
+    if sys.argv[1] == "--email":
+        return emails(sys.argv[2])
     n = sys.argv[1]
     I = json.loads((ROOT / "weekly" / f"{n}.json").read_text(encoding="utf-8"))
     names = json.loads((ROOT / "aids" / "reading.json").read_text(encoding="utf-8"))["sector_names"]
